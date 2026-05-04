@@ -6,19 +6,19 @@
     height: 160px !important;
 
     padding: 30px 100px !important;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 
-    color: #fff;
-    font-size: 26px;
-    line-height: 1.8;
+    color: #ffffff !important;
+    font-size: 26px !important;
+    line-height: 1.8 !important;
 
     background: linear-gradient(
         to top,
         rgba(0,0,0,0.85),
         rgba(0,0,0,0.0)
-    );
+    ) !important;
 
-    z-index: 1001;
+    z-index: 1001 !important;
 
     text-shadow:
         0 0 6px rgba(0,0,0,0.8),
