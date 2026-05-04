@@ -1,8 +1,12 @@
 .message_outer {
     opacity: 1 !important;
+    background-color: transparent !important;
 
-    background-image: url("../fgimage/message_bg.png") !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.7) 30%,
+        rgba(0, 0, 0, 0.3) 60%,
+        rgba(0, 0, 0, 0.0) 100%
+    ) !important;
 }
