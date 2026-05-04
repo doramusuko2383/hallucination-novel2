@@ -36,8 +36,8 @@ tf.intro_line_3 = "足を止めるたび、止めなければよかった気が�
 
 #
 [emb exp="tf.intro_line_1"]
-[emb exp="tf.intro_line_2"][p]
-[emb exp="tf.intro_line_3"][p]
+[emb exp="tf.intro_line_2"][page]
+[emb exp="tf.intro_line_3"][page]
 
 [delay speed="48"]
 
@@ -49,7 +49,7 @@ if (tf.discomfort_tier >= 2) {
     tf.backlog_diff_log = "言い訳はいくつも用意してきた。";
 }
 [endscript]
-[emb exp="tf.backlog_diff_display"][p]
+[emb exp="tf.backlog_diff_display"][page]
 [iscript]
 if (tf.system && tf.system.backlog && tf.system.backlog.length > 0) {
     var _last_log_index = tf.system.backlog.length - 1;
@@ -77,7 +77,7 @@ setTimeout(function () {
 }, tf.rewrite_delay);
 [endscript]
 [l]
-どれも、役に立たない。[p]
+どれも、役に立たない。[page]
 
 ;導入用のシンプルな選択肢（1つだけごく軽い文体ズレ）
 [glink color="black" size="26" x="320" width="640" y="190" text="このまま帰る" target="*intro_choice_leave"]
@@ -99,7 +99,7 @@ tf.choice_result_line_2 = "見つかったのは、戻れない理由だけだ�
 [endscript]
 #
 [emb exp="tf.choice_result_line_1"]
-[emb exp="tf.choice_result_line_2"][p]
+[emb exp="tf.choice_result_line_2"][page]
 @jump target="*intro_outro"
 
 *intro_choice_touch
@@ -123,7 +123,7 @@ tf.choice_result_line_2 = "指先だけが自分のものじゃないみたい�
 [endif]
 [emb exp="tf.choice_result_line_1"]
 [wait time="180"]
-[emb exp="tf.choice_result_line_2"][p]
+[emb exp="tf.choice_result_line_2"][page]
 [delay speed="48"]
 @jump target="*intro_outro"
 
@@ -143,7 +143,7 @@ tf.choice_result_line_2 = "沈黙よりわずかに重かった。";
 [endscript]
 #
 [emb exp="tf.choice_result_line_1"]
-[emb exp="tf.choice_result_line_2"][p]
+[emb exp="tf.choice_result_line_2"][page]
 @jump target="*intro_outro"
 
 *intro_outro
@@ -194,118 +194,118 @@ console.log("[flag-debug] " + f.debug_flags_snapshot);
 その夜、最初の違和感は
 ただの気のせいという顔で、
 [wait time="700"]
-[emb exp="tf.outro_line"][p]
-[emb exp="tf.trace_line"][p]
+[emb exp="tf.outro_line"][page]
+[emb exp="tf.trace_line"][page]
 
 [s]
 
 ;デバッグ確認用（必要時に *debug_flags を jump/call して利用）
 *debug_flags
 #
-現在のフラグ状態：[p]
-[emb exp="f.debug_flags_snapshot"][p]
+現在のフラグ状態：[page]
+[emb exp="f.debug_flags_snapshot"][page]
 @return
 
 *legacy_sample
 [chara_mod  name="akane" face="happy"  ]
 #あかね
-わー。興味あるなんて、嬉しいなー。[p]
+わー。興味あるなんて、嬉しいなー。[page]
 #
-・・・・・[p]
-まぁ、作ってみたい気持ちはあるけど、むずかしいんでしょ？[p]
-プログラミングとかやったことないし、、、[p]
+・・・・・[page]
+まぁ、作ってみたい気持ちはあるけど、むずかしいんでしょ？[page]
+プログラミングとかやったことないし、、、[page]
 
 [chara_mod name="akane" face="default"]
 
 #あかね
-そんな君に、耳寄りな情報があるんだけど[p]
-ききたい？　ききたいよね？[p]
+そんな君に、耳寄りな情報があるんだけど[page]
+ききたい？　ききたいよね？[page]
 #
 いや、べつに
 #あかね
 [cm]
 [font size=40]
 [delay speed=160]
-ティラノスクリプトー[p]
+ティラノスクリプトー[page]
 [delay speed=30]
 [resetfont]
 
 #
-・・・・[p]
+・・・・[page]
 #あかね
-ティラノスクリプトを使うと、簡単に本格的なノベルゲームが簡単に作れてしまうのよ。[p]
+ティラノスクリプトを使うと、簡単に本格的なノベルゲームが簡単に作れてしまうのよ。[page]
 #
-へぇー。それはちょっと興味あるね。[p]
+へぇー。それはちょっと興味あるね。[page]
 
 [chara_mod  name="akane" face="happy"  ]
 #あかね
-ほ、ほんと！？[p]
-このゲームをプレイするだけで、ティラノスクリプトの機能を確認することができるから[p]
-ぜひ、最後までつきあってね[p]
+ほ、ほんと！？[page]
+このゲームをプレイするだけで、ティラノスクリプトの機能を確認することができるから[page]
+ぜひ、最後までつきあってね[page]
 
-まず、ティラノスクリプトの特徴として[font color="red"]「HTML5」[resetfont]で動作するよ[p]
+まず、ティラノスクリプトの特徴として[font color="red"]「HTML5」[resetfont]で動作するよ[page]
 
 
 #
-つ、つまり？[p]
+つ、つまり？[page]
 #あかね
-一度ティラノスクリプトで作ったゲームは多くの環境で動作させることができるってこと！[p]
+一度ティラノスクリプトで作ったゲームは多くの環境で動作させることができるってこと！[page]
 #
-へぇー。それはいいね。[p]
-せっかく作ったらたくさんの人に遊んでもらいたいもんね。[p]
+へぇー。それはいいね。[page]
+せっかく作ったらたくさんの人に遊んでもらいたいもんね。[page]
 
 #あかね
-ウィンドウズ用のPCアプリケーションはもちろん。[p]
-マック用のアプリケーションにだって対応するわよ。[p]
-あと、HTML5だから、ブラウザゲームとしても発表できるわよ。[p]
-ウェブサイトに貼り付けて遊んでもらえるから、気軽にゲームをプレイしてもらうことができるね。[p]
-主要なブラウザはすべてサポートしているから、安心してね。[p]
+ウィンドウズ用のPCアプリケーションはもちろん。[page]
+マック用のアプリケーションにだって対応するわよ。[page]
+あと、HTML5だから、ブラウザゲームとしても発表できるわよ。[page]
+ウェブサイトに貼り付けて遊んでもらえるから、気軽にゲームをプレイしてもらうことができるね。[page]
+主要なブラウザはすべてサポートしているから、安心してね。[page]
 #
-やるなぁ。。[p]
+やるなぁ。。[page]
 
-でも、最近スマホが復旧してて、僕のサイトにもスマホで訪れる人が増えたんだけど[p]
-スマホからは遊べない？[p]
-
-#あかね
-ティラノスクリプトで作ったゲームはスマートフォンからでも遊べるよ！[p]
-アイフォーン、アンドロイドはもちろん。アイパッドとかのタブレットでも問題ないわ。[p]
-#
-おぉー。[p]
+でも、最近スマホが復旧してて、僕のサイトにもスマホで訪れる人が増えたんだけど[page]
+スマホからは遊べない？[page]
 
 #あかね
-AppStoreやGooglePlayに向けてアプリ化して販売することもできるから[p]
+ティラノスクリプトで作ったゲームはスマートフォンからでも遊べるよ！[page]
+アイフォーン、アンドロイドはもちろん。アイパッドとかのタブレットでも問題ないわ。[page]
 #
-おぉぉ、、やっとの貧困生活から脱出できるかも[p]
-#あかね
-まぁ、おもしろいゲームつくらないと、売れもしないけどな！[p]
-#
-くっ。。[p]
+おぉー。[page]
 
 #あかね
-じゃあ、次に場面を移動してみるね[p]
-廊下に移動するよ[p]
+AppStoreやGooglePlayに向けてアプリ化して販売することもできるから[page]
+#
+おぉぉ、、やっとの貧困生活から脱出できるかも[page]
+#あかね
+まぁ、おもしろいゲームつくらないと、売れもしないけどな！[page]
+#
+くっ。。[page]
+
+#あかね
+じゃあ、次に場面を移動してみるね[page]
+廊下に移動するよ[page]
 [bg  time="3000"  method="crossfade" storage="rouka.jpg"  ]
 
 #
-お、廊下に移動したね。[p]
+お、廊下に移動したね。[page]
 
 #あかね
-寒いよぉ〜。はやく教室に戻ろう。[p]
+寒いよぉ〜。はやく教室に戻ろう。[page]
 
 [bg  time="1000" method="slide"  storage="room.jpg" ]
 #
-あれ、今、場面の移動がちょっと違ったね。[p]
+あれ、今、場面の移動がちょっと違ったね。[page]
 #あかね
-うん。急いでたからね。[p]
-ティラノスクリプトでは、いろいろな演出を加える事ができて[p]
-画面を切り替えるだけでも１０種類以上の演出がつかえるよ。[p]
+うん。急いでたからね。[page]
+ティラノスクリプトでは、いろいろな演出を加える事ができて[page]
+画面を切り替えるだけでも１０種類以上の演出がつかえるよ。[page]
 #
-ふむ。便利だ[p]
+ふむ。便利だ[page]
 
 #あかね
-次にメッセージの表示方法を変えてみるね[p]
+次にメッセージの表示方法を変えてみるね[page]
 ティラノスクリプトでは、今みたいなアドベンチャーゲームの他に[r]
-ビジュアルノベルのような全画面表示のゲームもつくれるよ。[p]
+ビジュアルノベルのような全画面表示のゲームもつくれるよ。[page]
 
 #
 
@@ -338,7 +338,7 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 [position vertical=false]
 
 横書きと縦書きをシーンによって使い分けることもできます[r][l]
-じゃあ、アドベンチャー形式に戻しますね[p]
+じゃあ、アドベンチャー形式に戻しますね[page]
 
 ;メッセージボックスを元に戻す
 [position layer="message0" left=160 top=500 width=1000 height=200 page=fore visible=true]
@@ -346,7 +346,7 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 @chara_show name="akane"
 
 #akane
-メッセージボックスは、自分の好きな画像を使うこともできるよ[p]
+メッセージボックスは、自分の好きな画像を使うこともできるよ[page]
 
 
 
@@ -367,11 +367,11 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 
 
 
-どうかな？[p]
-ゲームに合わせて自分の好きなデザインを作ってくださいね[p]
+どうかな？[page]
+ゲームに合わせて自分の好きなデザインを作ってくださいね[page]
 
-あと、デフォルトだとセーブやロードは画面右下のボタンからできるけど[p]
-ウィンドウをカスタマイズすれば、、、、[p]
+あと、デフォルトだとセーブやロードは画面右下のボタンからできるけど[page]
+ウィンドウをカスタマイズすれば、、、、[page]
 
 ;メニューボタン非表示
 @hidemenubutton
@@ -420,8 +420,8 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 ;;ロールボタン追加終わり
 
 
-こんな風にゲームに必要な機能を画面の上に持たせることも簡単にできるよ[p]
-これはロールボタンといって、ボタンに特別な機能を持たせる事ができます。[p]
+こんな風にゲームに必要な機能を画面の上に持たせることも簡単にできるよ[page]
+これはロールボタンといって、ボタンに特別な機能を持たせる事ができます。[page]
 標準で用意されているのは、[l]
 セーブ、[l]
 ロード、[l][cm]
@@ -434,13 +434,13 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 クイックセーブ、
 クイックロード、
 オートモード！
-[p]
+[page]
 
-はぁ、はぁ[p]
+はぁ、はぁ[page]
 
 #
-大丈夫？[p]
-これだけあれば、ゲームを作るには困らなそうだね[p]
+大丈夫？[page]
+これだけあれば、ゲームを作るには困らなそうだね[page]
 
 #あかね
 さて、もちろん音楽を鳴らすこともできるよ[l][cm]
@@ -471,11 +471,11 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 
 #あかね
 ここらで、別のキャラクターに登場してもらいましょうか[l][cm]
-やまとー[p]
+やまとー[page]
 [chara_show name="yamato"]
 
 こんな風に。簡単です。[l][r]
-キャラクターは何人でも登場させることができるから、試してみてね。[p]
+キャラクターは何人でも登場させることができるから、試してみてね。[page]
 
 #yamato
 おい、俺もう、帰っていいかな？[l][cm]
@@ -486,21 +486,21 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 [chara_hide name="yamato"]
 
 #akane
-これでティラノスクリプトの基本機能の説明は終わりだけど[p]
-どうだったかな？[p]
+これでティラノスクリプトの基本機能の説明は終わりだけど[page]
+どうだったかな？[page]
 
 #
-うん、これなら自分でも作れそうな気がしてきたよ[p]
+うん、これなら自分でも作れそうな気がしてきたよ[page]
 
 #あかね
-よかった！[p]
-最初は、ティラノスクリプト公式ページのチュートリアルをやってみると良いと思うよ！[p]
-もちろん、このゲームもティラノスクリプトで動いてるから、参考になると思うし。[p]
-ぜひ、ゲーム制作にチャレンジしてみてね[p]
-プレイしてくれてありがとう。[p]
+よかった！[page]
+最初は、ティラノスクリプト公式ページのチュートリアルをやってみると良いと思うよ！[page]
+もちろん、このゲームもティラノスクリプトで動いてるから、参考になると思うし。[page]
+ぜひ、ゲーム制作にチャレンジしてみてね[page]
+プレイしてくれてありがとう。[page]
 
 最後にティラノスクリプトで役立つ情報へのリンクを表示しておくから
-確認してみてね。[p]
+確認してみてね。[page]
 
 [cm]
 
@@ -527,12 +527,12 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 [font color-"red"]
 「ティラノビルダー」
 [resetfont]
-という無料の開発ツールもあります。[p]
+という無料の開発ツールもあります。[page]
 
 [image layer=1 page=fore visible=true top=10 left=50 width=560 height=400  storage = builder.png]
 
-これは、グラフィカルな画面でノベルゲームを作れるツールです[p]
-スクリプトが苦手な人でもゲーム制作を行うことができるからぜひ試してね。[p]
+これは、グラフィカルな画面でノベルゲームを作れるツールです[page]
+スクリプトが苦手な人でもゲーム制作を行うことができるからぜひ試してね。[page]
 [freeimage layer=1]
 
 @jump target=button_link
@@ -541,8 +541,8 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 *example
 @layopt layer=message0 visible=true
 @layopt layer=fix visible=true
-これまで、ティラノスクリプトを使って沢山のゲームが作成されています。[p]
-一部の制作事例を公式サイトに乗せているのでよければ確認してくださいね。[p]
+これまで、ティラノスクリプトを使って沢山のゲームが作成されています。[page]
+一部の制作事例を公式サイトに乗せているのでよければ確認してくださいね。[page]
 
 [iscript]
 window.open("http://tyrano.jp/home/example");
@@ -556,9 +556,9 @@ window.open("http://tyrano.jp/home/example");
 *tech
 @layopt layer=message0 visible=true
 @layopt layer=fix visible=true
-このサンプルでは、ティラノスクリプトのごく一部の機能しか紹介できていません[p]
-さらに出来ることを知りたい場合、スクリプトを丸ごとダウンロードできるようになっているので[p]
-そのサンプルを触ってみることをオススメします！[p]
+このサンプルでは、ティラノスクリプトのごく一部の機能しか紹介できていません[page]
+さらに出来ることを知りたい場合、スクリプトを丸ごとダウンロードできるようになっているので[page]
+そのサンプルを触ってみることをオススメします！[page]
 
 [iscript]
 window.open("http://tyrano.jp/home/demo");
@@ -570,15 +570,15 @@ window.open("http://tyrano.jp/home/demo");
 *info
 @layopt layer=message0 visible=true
 @layopt layer=fix visible=true
-ティラノスクリプトでわからないことがあったら[p]
-公式掲示板で質問したり、Wikiなどもありますので参考にしてみてください[p]
+ティラノスクリプトでわからないことがあったら[page]
+公式掲示板で質問したり、Wikiなどもありますので参考にしてみてください[page]
 @jump target=button_link
 
 *tagref
 @layopt layer=message0 visible=true
 @layopt layer=fix visible=true
-タグは詳細なリファレンスページが用意されています。[p]
-このページでさらに詳細な使い方を身につけてください[p]
+タグは詳細なリファレンスページが用意されています。[page]
+このページでさらに詳細な使い方を身につけてください[page]
 
 [iscript]
 window.open("http://tyrano.jp/home/tag");
