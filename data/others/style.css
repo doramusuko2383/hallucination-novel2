@@ -10,7 +10,7 @@
 
 
 /* =========================
-   メッセージ背景（シュタゲ風）
+   テキストボックス背景（シュタゲ風）
 ========================= */
 .message_outer {
     opacity: 1 !important;
@@ -19,24 +19,25 @@
     top: auto !important;
     bottom: 0 !important;
 
-    /* 高さ（ここで雰囲気決まる） */
-    height: 240px !important;
+    /* 高さ（ベストバランス） */
+    height: 220px !important;
 
+    /* インライン打ち消し */
     background-color: transparent !important;
 
-    /* ▼重要：下ベタ＋上だけグラデーション */
+    /* ▼下ベタ＋上だけフェード（超重要） */
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.70) 0%,   /* 下：しっかり黒 */
-        rgba(0, 0, 0, 0.70) 70%,  /* 中間まで固定 */
-        rgba(0, 0, 0, 0.40) 85%,  /* 上：フェード開始 */
-        rgba(0, 0, 0, 0.0) 100%   /* 上端：透明 */
+        rgba(0, 0, 0, 0.75) 0%,   /* 下：しっかり黒 */
+        rgba(0, 0, 0, 0.75) 85%,  /* ほぼ固定 */
+        rgba(0, 0, 0, 0.4) 92%,   /* 上だけフェード */
+        rgba(0, 0, 0, 0.0) 100%   /* 透明 */
     ) !important;
 }
 
 
 /* =========================
-   テキスト（明朝・最終調整）
+   地の文（デフォルト）
 ========================= */
 .message_inner,
 .message_inner span,
@@ -44,41 +45,58 @@
 .message_inner .current_span,
 .message_inner .char {
 
-    /* フォント強制適用 */
     font-family: "GenMin", serif !important;
 
-    /* サイズ調整（ここかなり重要） */
     font-size: 26px !important;
-
-    /* 行間（文学感） */
     line-height: 1.9 !important;
+    letter-spacing: 0.04em !important;
 
-    /* 文字間 */
-    letter-spacing: 0.03em !important;
-
-    /* 色 */
     color: #ffffff !important;
 
-    /* 読みやすさ（神設定） */
     text-shadow:
-        0 0 6px rgba(0,0,0,0.85),
+        0 0 6px rgba(0,0,0,0.9),
         0 0 12px rgba(0,0,0,0.7);
 
-    /* 少し浮かせる（重要） */
-    bottom: 40px !important;
-
-    /* 明朝の美しさを出す */
     -webkit-font-smoothing: antialiased;
 }
 
 
 /* =========================
-   クリックアイコン（控えめに）
+   セリフ（将来用）
+========================= */
+.message_inner.serif,
+.message_inner.serif * {
+    font-family: "Noto Sans JP", sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 500 !important;
+}
+
+
+/* =========================
+   クリック待ちアイコン
 ========================= */
 .img_next {
-    opacity: 0.5 !important;
-    transform: scale(0.7);
 
-    bottom: 30px !important;
-    right: 40px !important;
+    position: static !important;
+    display: inline-block;
+
+    margin-left: 10px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background-color: rgba(180, 220, 255, 0.9);
+
+    animation: nextBlink 1.2s ease-in-out infinite;
+
+    vertical-align: middle;
+}
+
+
+/* 点滅アニメーション */
+@keyframes nextBlink {
+    0%   { opacity: 0.2; transform: scale(0.9); }
+    50%  { opacity: 1;   transform: scale(1.2); }
+    100% { opacity: 0.2; transform: scale(0.9); }
 }
