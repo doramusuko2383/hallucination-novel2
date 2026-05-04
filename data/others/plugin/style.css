@@ -1,7 +1,7 @@
 /* =========================
    メッセージウィンドウ全体
 ========================= */
-.message0 {
+.message_outer {
     position: absolute !important;
     left: 0;
     bottom: 0;
