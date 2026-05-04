@@ -1,0 +1,8 @@
+.message_outer {
+    opacity: 1 !important;
+
+    background-image: url("../fgimage/message_bg.png") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
