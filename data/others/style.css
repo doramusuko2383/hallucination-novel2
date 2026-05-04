@@ -1,6 +1,6 @@
 @font-face {
     font-family: "GenMin";
-    src: url("/hallucination-novel2/data/others/font/SourceHanSerif-Regular.otf");
+    src: url("./data/others/font/SourceHanSerif-Regular.otf") format("opentype");
 }
 
 .message_outer {
