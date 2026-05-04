@@ -5,6 +5,7 @@
 [cm]
 [clearfix]
 [start_keyconfig]
+[message_config visible=true]
 
 1章[p]
 「こんな奴、飛び降りて死んでしまえばいい」[p]
