@@ -5,7 +5,10 @@
 [cm]
 [clearfix]
 [start_keyconfig]
-[message_config visible=true]
+[message_config
+    visible=true
+    frame="message_bg.png"
+]
 
 1章[p]
 「こんな奴、飛び降りて死んでしまえばいい」[p]
