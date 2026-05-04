@@ -1,12 +1,21 @@
 .message_outer {
     opacity: 1 !important;
-    background-color: transparent !important;
+
+    /* ←これが重要：下に固定 */
+    top: auto !important;
+    bottom: 0 !important;
+
+    height: 220px !important;
 
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.9) 0%,
         rgba(0, 0, 0, 0.7) 30%,
-        rgba(0, 0, 0, 0.3) 60%,
+        rgba(0, 0, 0, 0.4) 60%,
         rgba(0, 0, 0, 0.0) 100%
     ) !important;
+}
+
+.message_inner {
+    bottom: 20px !important;
 }
