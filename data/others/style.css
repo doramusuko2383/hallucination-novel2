@@ -1,11 +1,22 @@
+@font-face {
+    font-family: "GenMin";
+    src: url("./font/SourceHanSerif-Regular.otf");
+}
+
 .message_outer {
     opacity: 1 !important;
 
+    /* 位置固定（最重要） */
     top: auto !important;
     bottom: 0 !important;
 
+    /* 高さ調整（濃さの印象に直結） */
     height: 240px !important;
 
+    /* インラインstyle打ち消し */
+    background-color: transparent !important;
+
+    /* グラデーション強化 */
     background: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.95) 0%,
@@ -17,6 +28,18 @@
 }
 
 .message_inner {
-    font-size: 24px;   /* 今より少し下げる */
-    line-height: 1.7;  /* 行間調整 */
+    font-family: "GenMin", serif !important;
+
+    font-size: 24px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.03em !important;
+
+    color: #ffffff !important;
+
+    text-shadow:
+        0 0 6px rgba(0,0,0,0.8),
+        0 0 12px rgba(0,0,0,0.6);
+
+    /* 少し上に持ち上げて見やすく */
+    bottom: 20px !important;
 }
