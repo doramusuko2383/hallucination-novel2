@@ -8,6 +8,7 @@
 ;ティラノスクリプトが標準で用意している便利なライブラリ群
 ;コンフィグ、CG、回想モードを使う場合は必須
 @call storage="tyrano.ks"
+[call storage="_macro.ks"]
 [call storage="chara_define.ks"]
 [call storage="chara_auto.ks"]
 
