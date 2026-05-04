@@ -1,44 +1,84 @@
+/* =========================
+   フォント（源ノ明朝）
+========================= */
 @font-face {
     font-family: "GenMin";
     src: url("./data/others/font/SourceHanSerif-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
+
+/* =========================
+   メッセージ背景（シュタゲ風）
+========================= */
 .message_outer {
     opacity: 1 !important;
+
+    /* 下に固定 */
     top: auto !important;
     bottom: 0 !important;
+
+    /* 高さ（ここで雰囲気決まる） */
     height: 240px !important;
 
     background-color: transparent !important;
 
+    /* ▼重要：下ベタ＋上だけグラデーション */
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.85) 25%,
-        rgba(0, 0, 0, 0.6) 50%,
-        rgba(0, 0, 0, 0.2) 75%,
-        rgba(0, 0, 0, 0.0) 100%
+        rgba(0, 0, 0, 0.70) 0%,   /* 下：しっかり黒 */
+        rgba(0, 0, 0, 0.70) 70%,  /* 中間まで固定 */
+        rgba(0, 0, 0, 0.40) 85%,  /* 上：フェード開始 */
+        rgba(0, 0, 0, 0.0) 100%   /* 上端：透明 */
     ) !important;
 }
 
+
+/* =========================
+   テキスト（明朝・最終調整）
+========================= */
 .message_inner,
 .message_inner span,
 .message_inner p,
 .message_inner .current_span,
 .message_inner .char {
+
+    /* フォント強制適用 */
     font-family: "GenMin", serif !important;
 
-    font-size: 24px !important;
-    line-height: 1.8 !important;
+    /* サイズ調整（ここかなり重要） */
+    font-size: 26px !important;
+
+    /* 行間（文学感） */
+    line-height: 1.9 !important;
+
+    /* 文字間 */
     letter-spacing: 0.03em !important;
 
+    /* 色 */
     color: #ffffff !important;
 
+    /* 読みやすさ（神設定） */
     text-shadow:
-        0 0 6px rgba(0,0,0,0.8),
-        0 0 12px rgba(0,0,0,0.6);
+        0 0 6px rgba(0,0,0,0.85),
+        0 0 12px rgba(0,0,0,0.7);
 
-    bottom: 20px !important;
+    /* 少し浮かせる（重要） */
+    bottom: 40px !important;
 
+    /* 明朝の美しさを出す */
     -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================
+   クリックアイコン（控えめに）
+========================= */
+.img_next {
+    opacity: 0.5 !important;
+    transform: scale(0.7);
+
+    bottom: 30px !important;
+    right: 40px !important;
 }
