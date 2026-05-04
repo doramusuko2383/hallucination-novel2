@@ -15,3 +15,8 @@
         rgba(0, 0, 0, 0.0) 100%
     ) !important;
 }
+
+.message_inner {
+    font-size: 24px;   /* 今より少し下げる */
+    line-height: 1.7;  /* 行間調整 */
+}
