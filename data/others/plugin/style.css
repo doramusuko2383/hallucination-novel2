@@ -1,14 +1,16 @@
-.layer.message0_fore {
-    position: relative;
-}
+.message_inner {
+    position: absolute !important;
+    left: 0 !important;
+    top: 540px !important;
+    width: 1280px !important;
+    height: 160px !important;
 
-.layer.message0_fore::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 540px;
-    width: 1280px;
-    height: 160px;
+    padding: 30px 100px !important;
+    box-sizing: border-box;
+
+    color: #fff;
+    font-size: 26px;
+    line-height: 1.8;
 
     background: linear-gradient(
         to top,
@@ -16,8 +18,11 @@
         rgba(0,0,0,0.0)
     );
 
-    pointer-events: none;
-    z-index: 99;
+    z-index: 1001;
+
+    text-shadow:
+        0 0 6px rgba(0,0,0,0.8),
+        0 0 12px rgba(0,0,0,0.6);
 }
 
 
