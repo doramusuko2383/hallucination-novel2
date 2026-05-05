@@ -1,8 +1,10 @@
 *debug_menu
 
 [cm]
+[bg storage="black.png"]
 
 デバッグメニュー
+[cm]
 
 ■スタート
 [glink text="最初から開始" storage="first.ks" target="start"]
