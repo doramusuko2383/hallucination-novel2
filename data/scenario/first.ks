@@ -29,7 +29,6 @@ baseLayer.css("background-color", "#000000");
 
 [glink name="title-choice" color="black" size="34" x="0" y="320" width="1280" text="最初から" target="*title_newgame"]
 [glink name="title-choice" color="black" size="34" x="0" y="390" width="1280" text="続きから" target="*title_continue"]
-[glink name="title-choice" color="black" size="28" x="0" y="460" width="1280" text="デバッグ" storage="debug.ks" target="*debug_menu"]
 [s]
 
 *title_continue
