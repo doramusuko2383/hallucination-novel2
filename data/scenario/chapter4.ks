@@ -1,5 +1,6 @@
 ;第4章
 
+*ch4_start
 *chapter4
 
 4章[p]

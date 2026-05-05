@@ -1,5 +1,6 @@
 ;第3章
 
+*ch3_start
 *chapter3
 
 3章[p]
