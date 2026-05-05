@@ -8,7 +8,7 @@
 [p]
 
 ■スタート
-[glink text="最初から開始" storage="chapter1.ks" target="ch1_start"]
+[glink text="Chapter1 開始" storage="chapter1.ks" target="ch1_start"]
 
 [p]
 
