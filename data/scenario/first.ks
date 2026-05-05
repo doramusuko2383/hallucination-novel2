@@ -60,7 +60,7 @@ if (f.debug_flags_snapshot === undefined) f.debug_flags_snapshot = "";
 
 ;起動直後に本編へ
 [cm]
-[bg storage="bg_classroom_day.webp" time="500"]
+[bg storage="black.png"]
 [position layer="message0" left=0 top=540 width=1280 height=160 page=fore visible=true opacity=0]
 [position layer=message0 page=fore margint="30" marginl="100" marginr="100" marginb="30"]
 @layopt layer=message0 visible=true
