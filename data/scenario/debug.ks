@@ -2,13 +2,20 @@
 
 [cm]
 
-; ▼ここにUI設定入れる
-[position layer="message0" left=0 top=540 width=1280 height=160 page=fore visible=true opacity=0]
-[position layer=message0 page=fore margint="30" marginl="100" marginr="100" marginb="30"]
+; 背景
+[bg storage="black.png"]
+
+; ▼メッセージレイヤー初期化（これ重要）
+[position layer="message0" left=0 top=540 width=1280 height=200 page=fore visible=true opacity=255]
+[position layer=message0 page=fore margint="40" marginl="120" marginr="120" marginb="40"]
+
 @layopt layer=message0 visible=true
+
 [glyph figure="circle" color="0x8ec5e6" anim="flash" marginl="12" marginb="6"]
 
-[bg storage="black.png"]
+[delay speed="42"]
+
+デバッグメニュー
 
 [p]
 
@@ -27,5 +34,3 @@
 [glink text="Chapter7" storage="chapter7.ks" target="ch7_start"]
 
 [s]
-
-
