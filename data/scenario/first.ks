@@ -11,35 +11,31 @@
 
 [chara_config pos_mode="false"]
 
-; メニュー非表示
 [hidemenubutton]
 
 ; -----------------------------
-; デバッグフラグ（ここで切り替え）
+; デバッグフラグ
 [iscript]
-var DEBUG_MODE = true;
+var DEBUG_MODE = true;   ; ← trueでデバッグ / falseで通常
 [endscript]
 ; -----------------------------
+
+; ★ここで即分岐（超重要）
+[if exp="DEBUG_MODE == true"]
+    @jump storage="debug.ks" target="*debug_menu"
+[endif]
 
 *title_menu
 [cm]
 
-; メッセージレイヤー一旦非表示
 @layopt layer=message0 visible=false
 
-; 背景を黒に
 [iscript]
 var baseLayer = TG.layer.getLayer("base", "fore");
 baseLayer.css("background-image", "none");
 baseLayer.css("background-color", "#000000");
 [endscript]
 
-; デバッグモードなら即デバッグ画面へ
-[if exp="DEBUG_MODE"]
-    @jump storage="debug.ks" target="*debug_menu"
-[endif]
-
-; 通常タイトルメニュー
 [glink name="title-choice" color="black" size="34" x="0" y="320" width="1280" text="最初から" target="*title_newgame"]
 [glink name="title-choice" color="black" size="34" x="0" y="390" width="1280" text="続きから" target="*title_continue"]
 
@@ -69,7 +65,6 @@ if (f.has_crossed_line === undefined) f.has_crossed_line = false;
 if (f.debug_flags_snapshot === undefined) f.debug_flags_snapshot = "";
 [endscript]
 
-; 本編へ
 @jump storage="chapter1.ks" target="*ch1_start"
 
 [s]
