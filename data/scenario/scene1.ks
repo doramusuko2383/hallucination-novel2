@@ -91,7 +91,7 @@ f.doubt += 1;
 f.intro_choice = "leave";
 f.intro_choice_label = "このまま帰る";
 
-;行動/心理フラグ更新
+// 行動/心理フラグ更新
 f.feels_guilt = true;
 
 tf.choice_result_line_1 = "帰る理由を探した。";
@@ -108,7 +108,7 @@ f.complicity += 1;
 f.intro_choice = "touch";
 f.intro_choice_label = "扉に触れる";
 
-;行動/心理フラグ更新
+// 行動/心理フラグ更新
 var _was_used_ability_shota = (f.used_ability_shota === true);
 f.used_ability_shota = true;
 tf.should_play_ability_fx = !_was_used_ability_shota;
@@ -134,7 +134,7 @@ f.dependence += 1;
 f.intro_choice = "listen";
 f.intro_choice_label = "少しだけ聞き耳を立てる";
 
-;行動/心理フラグ更新
+// 行動/心理フラグ更新
 f.investigated_ayaka = true;
 f.trust_megumi = true;
 
@@ -174,12 +174,12 @@ if (f.intro_choice === "leave") {
     }
 }
 
-;最小限の連動：心理フラグで語尾だけ変化
+// 最小限の連動：心理フラグで語尾だけ変化
 if (f.has_crossed_line === true) {
     tf.trace_line += " その境目を越えた感覚だけが、妙にはっきり残っている。";
 }
 
-;デバッグ確認用スナップショット（セーブデータにも保持）
+// デバッグ確認用スナップショット（セーブデータにも保持）
 f.debug_flags_snapshot = [
     "used_ability_shota=" + f.used_ability_shota,
     "used_ability_ayaka=" + f.used_ability_ayaka,

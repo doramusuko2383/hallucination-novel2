@@ -16,7 +16,7 @@
 ; -----------------------------
 ; デバッグフラグ
 [iscript]
-var DEBUG_MODE = true;   ; ← trueでデバッグ / falseで通常
+var DEBUG_MODE = true;   // trueでデバッグ / falseで通常
 [endscript]
 ; -----------------------------
 
