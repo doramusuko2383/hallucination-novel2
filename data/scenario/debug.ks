@@ -1,19 +1,7 @@
 *debug_menu
 
 [cm]
-
-; 背景
 [bg storage="black.png"]
-
-; ▼メッセージレイヤー初期化（これ重要）
-[position layer="message0" left=0 top=540 width=1280 height=200 page=fore visible=true opacity=255]
-[position layer=message0 page=fore margint="40" marginl="120" marginr="120" marginb="40"]
-
-@layopt layer=message0 visible=true
-
-[glyph figure="circle" color="0x8ec5e6" anim="flash" marginl="12" marginb="6"]
-
-[delay speed="42"]
 
 デバッグメニュー
 
