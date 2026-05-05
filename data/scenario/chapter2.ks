@@ -1,5 +1,6 @@
 ;第2章
 
+*ch2_start
 *chapter2
 
 2章[p]

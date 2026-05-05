@@ -1,5 +1,6 @@
 ;第5章
 
+*ch5_start
 *chapter5
 
 5章[p]

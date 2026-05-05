@@ -1,5 +1,6 @@
 ;第7章
 
+*ch7_start
 *chapter7
 
 7章[p]

@@ -1,5 +1,6 @@
 ;第6章
 
+*ch6_start
 *chapter6
 
 6章[p]
