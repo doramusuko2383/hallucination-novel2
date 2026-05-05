@@ -9,7 +9,7 @@
 [clearfix]
 [start_keyconfig]
 
-[bg storage="black.jpg"]
+[bg storage="black.png"]
 [wait time=800]
 
 [font speed=80]
