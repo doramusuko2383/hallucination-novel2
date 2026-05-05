@@ -1,9 +1,3 @@
-(cd "$(git rev-parse --show-toplevel)" && git apply <<'EOF'
-diff --git a/data/scenario/first.ks b/data/scenario/first.ks
-index 2767e6d..fixed000 100644
---- a/data/scenario/first.ks
-+++ b/data/scenario/first.ks
-@@
  ;一番最初に呼び出されるファイル
 
  [title name="ハルシネーション"]
