@@ -1,8 +1,5 @@
 *debug_menu
 
-[cm]
-[bg storage="black.png"]
-
 デバッグメニュー
 [cm]
 
