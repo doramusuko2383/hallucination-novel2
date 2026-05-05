@@ -1,10 +1,16 @@
 *debug_menu
 
-デバッグメニュー
 [cm]
+[bg storage="black.png"]
+
+デバッグメニュー
+
+[p]
 
 ■スタート
-[glink text="最初から開始" storage="first.ks" target="start"]
+[glink text="最初から開始" storage="chapter1.ks" target="ch1_start"]
+
+[p]
 
 ■チャプター選択
 [glink text="Chapter1" storage="chapter1.ks" target="ch1_start"]
