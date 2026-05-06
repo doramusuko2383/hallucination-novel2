@@ -118,10 +118,7 @@
 
 *ch1_training
 
-[backlay]
-[image storage="event/ch01_sc01_rooftop_wait.webp" layer=0 page=back folder="bgimage" visible=true]
-[trans time=300 method=crossfade layer=0]
-[wt]
+[bg storage="event/ch01_sc01_rooftop_wait.webp" time=300]
 
 [wait time=800]
 [auto_chara name="龍也"]
@@ -462,10 +459,7 @@
 [wait time=1800]
 
 「お前、なに学校休んでんだよっ！」[l]
-[backlay]
-[image storage="event/ch1_rooftop_shota_threat.webp" layer=1 page=back folder="bgimage" visible=true]
-[trans time=200 method=crossfade layer=1]
-[wt]
+[bg storage="event/ch1_rooftop_shota_threat.webp" time=200]
 
 [wait time=600]
 
