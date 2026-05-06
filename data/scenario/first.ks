@@ -56,6 +56,8 @@ if (f.has_crossed_line === undefined) f.has_crossed_line = false;
 
 ;デバッグ補助（表示用スナップショット）
 if (f.debug_flags_snapshot === undefined) f.debug_flags_snapshot = "";
+; デバッグモード
+if (f.debug_mode === undefined) f.debug_mode = true;
 [endscript]
 
 ;起動直後に本編へ
@@ -69,6 +71,56 @@ if (f.debug_flags_snapshot === undefined) f.debug_flags_snapshot = "";
 
 [delay speed="42"]
 
-@jump storage="chapter1.ks" target="*chapter1"
+[if exp="f.debug_mode==true"]
+    @jump target="*debug_entry"
+[else]
+    @jump storage="chapter1.ks" target="*chapter1"
+[endif]
 
 [s]
+; =========================
+; デバッグ用
+; =========================
+
+*debug_entry
+[cm]
+
+デバッグモード：
+
+[link target="*debug_ch1"]チャプター1ジャンプ[/link]
+[link target="*debug_off"]通常起動に戻る[/link]
+
+[s]
+
+*debug_ch1
+[cm]
+
+チャプター1：
+
+[link target="*dbg_ch1_current"]現在テスト中[/link]
+
+
+[s]
+
+; ===== 現在テスト用（ここだけ毎回書き換える） =====
+*dbg_ch1_current
+@jump storage="chapter1.ks" target="*ch1_debug_current"
+
+
+; ===== 個別ジャンプ =====
+*dbg_ch1_rooftop_01
+@jump storage="chapter1.ks" target="*ch1_rooftop_01"
+
+*dbg_ch1_rooftop_02
+@jump storage="chapter1.ks" target="*ch1_rooftop_02"
+
+*dbg_ch1_home
+@jump storage="chapter1.ks" target="*ch1_home"
+
+*dbg_ch1_after_2days
+@jump storage="chapter1.ks" target="*ch1_after_2days"
+
+
+*debug_off
+[eval exp="f.debug_mode=false"]
+@jump storage="chapter1.ks" target="*chapter1"
