@@ -118,7 +118,7 @@
 
 *ch1_training
 
-[image storage="event/ch01_sc01_rooftop_wait.webp" layer=0 page=fore]
+[image storage="event/ch01_sc01_rooftop_wait.webp" layer=0]
 [trans time=300 method=crossfade layer=0]
 
 [wait time=800]
@@ -460,10 +460,11 @@
 [wait time=1800]
 
 「お前、なに学校休んでんだよっ！」[l]
-[image storage="event/ch1_rooftop_shota_threat.webp" layer=1 page=fore]
+[image storage="event/ch1_rooftop_shota_threat.webp" layer=0]
 [trans time=200 method=crossfade layer=1]
 
 [wait time=600]
+
 龍也が拓海を責め立てる。[p]
 拓海はあの日から、二日間学校を休んだ。[p]
 何とか学校に来られるまで気持ちが回復したと思った矢先、[l]
