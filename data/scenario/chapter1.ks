@@ -460,9 +460,10 @@
 [wait time=1800]
 
 「お前、なに学校休んでんだよっ！」[l]
-[image storage="event/ch1_rooftop_shota_threat.webp" layer=1 page=fore visible=false]
-[trans time=300 method=crossfade layer=base]
-[image storage="event/ch1_rooftop_shota_threat.webp" layer=1 page=fore visible=true]
+[image storage="event/ch1_rooftop_shota_threat.webp" layer=1 page=fore]
+[trans time=200 method=crossfade layer=1]
+
+[wait time=600]
 龍也が拓海を責め立てる。[p]
 拓海はあの日から、二日間学校を休んだ。[p]
 何とか学校に来られるまで気持ちが回復したと思った矢先、[l]
