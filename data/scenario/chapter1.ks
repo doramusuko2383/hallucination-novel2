@@ -10,8 +10,8 @@
 [clearfix]
 [start_keyconfig]
 
-[bg storage="black.png"]
-[wait time=800]
+; [bg] は time 省略時に3秒フェード待ちになるため、黒背景は即時切替にする
+[bg storage="black.png" time=0 wait=false]
 
 [font speed=80]
 「こんな奴、飛び降りて死んでしまえばいい」
@@ -462,6 +462,7 @@
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
 
 [wait time=600]
+
 龍也が拓海を責め立てる。[p]
 拓海はあの日から、二日間学校を休んだ。[p]
 何とか学校に来られるまで気持ちが回復したと思った矢先、[l]
