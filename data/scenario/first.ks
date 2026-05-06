@@ -60,7 +60,8 @@ if (f.debug_flags_snapshot === undefined) f.debug_flags_snapshot = "";
 
 ;起動直後に本編へ
 [cm]
-[bg storage="black.png"]
+; [bg] は time 省略時に3秒フェード待ちになるため、黒背景は即時切替にする
+[bg storage="black.png" time=0 wait=false]
 [position layer="message0" left=0 top=540 width=1280 height=160 page=fore visible=true opacity=0]
 [position layer=message0 page=fore margint="30" marginl="100" marginr="100" marginb="30"]
 @layopt layer=message0 visible=true

@@ -10,8 +10,8 @@
 [clearfix]
 [start_keyconfig]
 
-[bg storage="black.png"]
-[wait time=800]
+; [bg] は time 省略時に3秒フェード待ちになるため、黒背景は即時切替にする
+[bg storage="black.png" time=0 wait=false]
 
 [font speed=80]
 「こんな奴、飛び降りて死んでしまえばいい」
