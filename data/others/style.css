@@ -3,7 +3,8 @@
 ========================= */
 @font-face {
     font-family: "GenMin";
-    src: url("./data/others/font/SourceHanSerif-Regular.otf") format("opentype");
+    src: url("./font/SourceHanSerif-Regular.otf") format("opentype");
+    font-display: swap;
     font-weight: normal;
     font-style: normal;
 }
