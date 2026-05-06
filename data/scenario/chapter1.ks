@@ -118,8 +118,7 @@
 
 *ch1_training
 
-[image storage="event/ch01_sc01_rooftop_wait.webp" layer=0 page=fore]
-[trans time=300 method=crossfade layer=0]
+[bg storage="ch01_sc01_rooftop_wait.webp" time=300]
 
 [wait time=800]
 [auto_chara name="龍也"]
@@ -460,8 +459,7 @@
 [wait time=1800]
 
 「お前、なに学校休んでんだよっ！」[l]
-[image storage="event/ch1_rooftop_shota_threat.webp" layer=1 page=fore]
-[trans time=200 method=crossfade layer=1]
+[bg storage="ch1_rooftop_shota_threat.webp" time=200]
 
 [wait time=600]
 龍也が拓海を責め立てる。[p]
