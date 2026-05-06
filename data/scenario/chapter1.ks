@@ -117,10 +117,11 @@
 雨が染みて濡れるのを嫌がったのだろう。[p]
 
 *ch1_training
-[image storage="event/ch01_sc01_rooftop_wait.webp" layer=1 page=fore visible=false]
-[trans time=300 method=crossfade layer=base]
-[image storage="event/ch01_sc01_rooftop_wait.webp" layer=1 page=fore visible=true]
-[image storage="event/ch01_sc01_rooftop_wait.webp" layer=1 page=fore visible=false]
+
+[image storage="event/ch01_sc01_rooftop_wait.webp" layer=1 page=fore]
+[trans time=300 method=crossfade layer=1]
+
+[wait time=800] ;
 [auto_chara name="龍也"]
 「来たか」[l]三人の中でも一番背の高い、リーダー格の龍也が拓海を見て言う。[p]
 
