@@ -117,7 +117,10 @@
 雨が染みて濡れるのを嫌がったのだろう。[p]
 
 *ch1_training
-
+[image storage="event/ch01_sc01_rooftop_wait.webp" layer=1 page=fore visible=false]
+[trans time=200 method=crossfade]
+[image storage="event/ch01_sc01_rooftop_wait.webp" layer=1 page=fore visible=true]
+[image storage="event/ch01_sc01_rooftop_wait.webp" layer=1 page=fore visible=false]
 [auto_chara name="龍也"]
 「来たか」[l]三人の中でも一番背の高い、リーダー格の龍也が拓海を見て言う。[p]
 
@@ -446,18 +449,24 @@
 まるで実際に体験して来たかの様だった。[p]
 
 [wait time=1000]
-
+[bg storage="black.png"]
 そのあとのことはよく覚えていないが、
 拓海はそのまま授業を受けず家にまっすぐ帰り、[l]
 しばらく恐怖と混乱で動けなかった。[p]
-
+[wait time=1000]
 *ch1_return
+[playse storage=se/school_chime.mp3]
+[wait time=1800]
 
 「お前、なに学校休んでんだよっ！」[l]
+[image storage="event/ch1_rooftop_shota_threat.webp" layer=1 page=fore visible=false]
+[trans time=200 method=crossfade]
+[image storage="event/ch1_rooftop_shota_threat.webp" layer=1 page=fore visible=true]
 龍也が拓海を責め立てる。[p]
 拓海はあの日から、二日間学校を休んだ。[p]
 何とか学校に来られるまで気持ちが回復したと思った矢先、[l]
 昼休みいつも通り屋上に呼び出された。[p]
+[bg storage="bg_rooftop_day.webp" time=200]
 一度「死んだ」屋上には出来れば二度と近寄りたくはなかったが、[l]
 命令だったのでしぶしぶ従った。[p]
 「グローブ片付けずに帰ったろ。雨で濡れてんじゃねえか」[l]
