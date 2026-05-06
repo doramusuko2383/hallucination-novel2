@@ -67,7 +67,6 @@ if (f.debug_flags_snapshot === undefined) f.debug_flags_snapshot = "";
 [glyph figure="circle" color="0x8ec5e6" anim="flash" marginl="12" marginb="6"]
 
 [delay speed="42"]
-[wa]
 
 @jump storage="chapter1.ks" target="*chapter1"
 
