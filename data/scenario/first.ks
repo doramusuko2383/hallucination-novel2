@@ -94,11 +94,10 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 
 *debug_ch1
 [cm]
-
 チャプター1：
 
 [link target="*dbg_ch1_current"]現在テスト中[/link]
-
+[p]
 
 [s]
 
