@@ -8,7 +8,6 @@
 ;ティラノスクリプトが標準で用意している便利なライブラリ群
 ;コンフィグ、CG、回想モードを使う場合は必須
 @call storage="tyrano.ks"
-[call storage="_macro.ks"]
 [call storage="chara_define.ks"]
 [call storage="chara_auto.ks"]
 
@@ -87,17 +86,15 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 [cm]
 
 デバッグモード：
-
-[link target="*debug_ch1"]チャプター1ジャンプ[/link]
-[link target="*debug_off"]通常起動に戻る[/link]
+[glink text="チャプター1ジャンプ" target="*debug_ch1"]
+[glink text="通常起動に戻る" target="*debug_off"]
 
 [s]
 
 *debug_ch1
 [cm]
 チャプター1：
-
-[link target="*dbg_ch1_current"]現在テスト中[/link]
+[glink text="現在テスト中" target="*dbg_ch1_current"]
 [p]
 
 [s]
