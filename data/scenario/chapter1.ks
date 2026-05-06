@@ -118,7 +118,7 @@
 
 *ch1_training
 
-[bg storage="event/ch01_sc01_rooftop_wait.webp" time=300]
+[bg storage="ch01_sc01_rooftop_wait.webp" time=300]
 
 [wait time=800]
 [auto_chara name="龍也"]
@@ -459,7 +459,7 @@
 [wait time=1800]
 
 「お前、なに学校休んでんだよっ！」[l]
-[bg storage="event/ch1_rooftop_shota_threat.webp" time=200]
+[bg storage="ch1_rooftop_shota_threat.webp" time=200]
 
 [wait time=600]
 
