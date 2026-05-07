@@ -96,7 +96,11 @@
 [wait time=400]
 
 屋上までの暗い階段を上がってドアを静かに開ける。[p]
-
+[bgm storage="tension_low.ogg" volume=25 fadein=1500]
+[playse storage=se/footstep_stairs.ogg volume=30]
+[wait time=1400]
+[playse storage=se/roof_door.ogg volume=30]
+[wait time=600]
 *ch1_rooftop
 
 ;------------------------
@@ -104,7 +108,7 @@
 ;------------------------
 [bg storage="bg_rooftop_day.webp" time=600]
 
-;[playse storage=se/wind.mp3 loop=true]
+[playse storage=se/wind_rooftop.ogg volume=30]
 
 九月だというのに外は蒸し暑い。
 [p]
@@ -197,6 +201,13 @@
 
 今日の「トレーニング」も一方的なものだった。[p]
 
+[playse storage=se/punch1.ogg volume=30]
+[wait time=400]
+[playse storage=se/punch2.ogg volume=30]
+[wait time=200]
+[playse storage=se/punch1.ogg volume=30]
+[wait time=300]
+
 打ち返すと更にやり返される事が分かってからは、[l]
 拓海は避けたり、ガードを固めたりすることに徹していた。[p]
 
@@ -231,7 +242,7 @@
 
 [auto_chara name="翔太"]
 「おっと、もう三分だ。これで終わりだ……よっと！」[l]
-
+[playse storage=se/punch3.ogg volume=30]
 [wait time=500]
 
 最後にフェイントで一撃をかましてきた。[l]
@@ -259,7 +270,7 @@
 
 「グローブ……いつものとこにしまっとけ」[l]
 そう言い残して、三人は去っていった。[p]
-
+[stopbgm fadeout=1000]
 [chara_hide_all time=300]
 
 [wait time=900]
@@ -267,7 +278,7 @@
 一人取り残された拓海は、グローブを乱暴に外して傍らに放った。[p]
 
 [wait time=700]
-
+[playse storage="heartbeat.ogg" loop=true volume=30]
 自分がされたことに対する激しい怒りが大きく膨らんでいく。[l]
 そしてそれは、自分自身の無力さに対する怒りでもあった。[p]
 
@@ -312,7 +323,7 @@
 [wait time=900]
 
 気が付くと拓海はフェンスに手をかけてよじ登っていた。[p]
-
+[playse storage="fence_creak.ogg"]
 [wait time=500]
 
 そしてフェンスをまたぎ、[l]
@@ -334,7 +345,9 @@
 [wait time=600]
 
 拓海は、[l]まるで子供が親の胸に飛び込むような自然な動作で、[l]両足をそろえて[l]跳んだ――。[p]
-
+[bg storage="black.png" time=0 wait=false]
+[stopse]
+[stopbgm]
 [wait time=1200]
 
 ジェットコースターの様な浮遊感が一瞬あり、[p]
@@ -408,7 +421,8 @@
 そして、急に――テレビの電源が、ついた・・・[p]
 
 [wait time=1000]
-
+[playse storage=se/wind_rooftop.ogg volume=30]
+[bg storage="bg_rooftop_day.webp" time=600]
 視界が変り、拓海は自分の体を確認した。[p]
 
 血もついていなければ、壊れてもいない。[p]
