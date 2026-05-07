@@ -5,12 +5,8 @@
 
 デバッグメニュー
 
-[p]
-
 ■スタート
 [glink text="Chapter1 開始" storage="chapter1.ks" target="ch1_start"]
-
-[p]
 
 ■チャプター選択
 [glink text="Chapter1" storage="chapter1.ks" target="ch1_start"]

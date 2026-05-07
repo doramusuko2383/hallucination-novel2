@@ -95,8 +95,7 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 [cm]
 チャプター1：
 [glink text="現在テスト中" target="*dbg_ch1_current"]
-[p]
-
+; [glink] は [s] 到達時に自動配置・表示されるため、ここで [p] を挟まない
 [s]
 
 ; ===== 現在テスト用（ここだけ毎回書き換える） =====
