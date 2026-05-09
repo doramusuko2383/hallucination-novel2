@@ -96,7 +96,6 @@
 [wait time=400]
 
 屋上までの暗い階段を上がってドアを静かに開ける。[p]
-[playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
 [playse storage=se/footstep_stairs.ogg volume=30]
 [wait time=1400]
 [playse storage=se/roof_door.ogg volume=30]
@@ -109,7 +108,7 @@
 [bg storage="bg_rooftop_day.webp" time=600]
 
 [playse storage=se/wind_rooftop.ogg volume=30]
-
+[playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
 九月だというのに外は蒸し暑い。
 [p]
 
