@@ -69,7 +69,7 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 @layopt layer=message0 visible=true
 [glyph figure="circle" color="0x8ec5e6" anim="flash" marginl="12" marginb="6"]
 
-[delay speed="42"]
+[configdelay speed="42"]
 
 [if exp="f.debug_mode==true"]
     @jump target="*debug_entry"
