@@ -107,7 +107,7 @@
 ;------------------------
 [bg storage="bg_rooftop_day.webp" time=600]
 
-[playse storage=se/wind_rooftop.ogg volume=30]
+[playse storage=se/wind_rooftop.ogg volume=20]
 [playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
 九月だというのに外は蒸し暑い。
 [p]
@@ -252,7 +252,7 @@
 これが油断していた拓海の腹に炸裂する。[p]
 
 [wait time=900]
-「くっーー」[l]
+「くっ――――」[l]
 拓海は体をくの字に曲げて、膝を着いた。[p]
 
 [wait time=700]
@@ -346,7 +346,7 @@
 生徒たちは皆教室に戻ったようで人の気配はない。[p]
 
 [wait time=600]
-
+[delay speed="60"]
 拓海は、[l]まるで子供が親の胸に飛び込むような自然な動作で、[l]両足をそろえて[p]
 跳んだ――。[p]
 [bg storage="black.png" time=0 wait=false]
@@ -423,8 +423,8 @@
 [wait time=1500]
 
 そして、急に――テレビの電源が、ついた・・・[p]
-
-[playse storage=se/wind_rooftop.ogg volume=30]
+[resetdelay]
+[playse storage=se/wind_rooftop.ogg volume=20]
 [bg storage="bg_rooftop_day.webp"]
 視界が変り、拓海は自分の体を確認した。[p]
 
@@ -478,7 +478,7 @@
 
 「お前、なに学校休んでんだよっ！」[l]
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
-
+[playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
 [wait time=600]
 
 龍也が拓海を責め立てる。[p]
@@ -604,14 +604,15 @@
 むしろ状況を悪化させたようだった。[p]
 どうしようもないので、そこから全速力で逃げようと試みた。[p]
 [auto_chara name="龍也"]
+[playbgm storage="tension_high.ogg" loop=true volume=75 fadein=true time=1500]
 「おっと」龍也は抜群の反射神経で、逃走を企てる獲物の腕を掴んだ。[p]
 「何逃げようとしてんだよ……お前」[l]そう言って龍也は、そのまま拓海を後ろから締め技で地面に押さえつけた。[p]
-[playse storage=se/hold_down.ogg volume=30]
+[playse storage=se/hold_down.ogg volume=40]
 拓海は凄まじい力で抵抗をしているが、体格の違いからか、身動きがほとんどとれない。[p]
 [auto_chara name="翔太"]
 「よし、じゃあ龍也はそのまま押さえてね」[l]
 と言って翔太は、暴れる拓海の腕を押さえ、腕時計を外した。[p]
-[playse storage=se/watch_take_off.ogg volume=30]
+[playse storage=se/watch_take_off.ogg volume=100]
 [auto_chara name="綾香"]
 「何してんのそれ」と綾香が素朴な質問をする。[p]
 [auto_chara name="翔太"]
@@ -630,10 +631,20 @@
 [auto_chara name="翔太"]
 「よーし……それじゃあ、根性見せてくれよ。[l]
 拓海くーん」[p]
-翔太がゆっくりとタバコの火を拓海の手首に近付ける。[p]
+翔太がゆっくりと、[l]
+タバコの火を近付けてくる。[p]
+
+[wait time=800]
+
+赤い火が、[l]
+少しずつ近付く。[p]
+
+[wait time=1200]
+
 龍也は更に強い力で拓海を押さえつけた。[p]
-タバコの先端が拓海の皮膚を焼いた。[p]
-[playse storage=se/fire.ogg volume=30]
+[wait time=800]
+タバコの先端が[l]拓海の皮膚を焼いた。[p]
+[playse storage=se/fire.ogg volume=100]
 「ああっ！」[l]
 [auto_chara name="拓海"]
 あまりの痛みに拓海は思わず大きい声を出した。[p]
@@ -648,7 +659,6 @@
 翔太が訂正を求める。[p]
 [auto_chara name="龍也"]
 「どちらにしても、声を出したからもう一回だ」[l]龍也は拓海を押さえつけながら言う。[p]
-[auto_chara name="翔太"]
 「翔太、もう一回やれよ」[l]
 そう顎で指示を出す。[p]
 [auto_chara name="拓海"]
@@ -659,6 +669,7 @@
 何より、体の自由を奪われていることが、こんなにも屈辱的なことだと初めて知った。[p]
 自分の無力を嫌というほど思い知らせる。[p]
 こいつらは絶対に許さない。[l]
+;ここで挿絵入れたい。復讐を誓うシーン
 同じ目に、[l]いやもっと酷い目に遭わせてやる。[l]
 拓海はそう誓った。[p]
 [auto_chara name="翔太"]
@@ -668,16 +679,19 @@
 利き腕で拓海の腕を力強く握った。[p]
 *ch1_illusion
 
-その瞬間、世界から音が消えた――。[l]
-[bg storage="black.png"]
+その瞬間、世界から音が消えた――。[p]
+[chara_hide_all time=300]
+[bg storage="white.png" time=80]
+[wait time=100]
+[bg storage="black.png" time=300]
 [stopse]
-[stopbgm]
+[stopbgm fadeout=true time=700]
 [wait time=1200]
 拓海は屋上での出来事のあと、あの「幻」についてずっと考えていた。[p]
 まるでわからないことばかりだったが、拓海には何故だか、確信を持っていることがあった。[p]
 それは、あの「妙に現実味のある幻覚」は誰かによって、
 「見させられている」ものだという感覚があったこと。[p]
-もっと言えば、拓海自身の力によるものではないか。[l]
+もっと言えば、拓海自身の力によるものではないか。[p]
 うまく言葉では言い表すことが出来なかったが、昂ぶった感情によって、自分自身の力で「見させられた」ものではないか。[p]
 そんな確信があった。[p]
 多少なりとも根拠はあった。[l]
@@ -694,7 +708,8 @@
 あの「幻」は、その時調べたネットの記事に酷似していた。[p]
 これらのことから、拓海はあの「錯覚」は、自分の力で起こしたものではないかと考えた。[p]
 そして、これは意図して引き起こすことが出来るかもしれないと仮説を立てていた。[p]
-
+[wait time=1200]
+[font color="#CFE8FF"]
 時が止まっている。[l]
 そう拓海が感じるほどのスローな感覚。[l]
 翔太は目を見開いたままその場で固まったように見える。[p]
@@ -741,9 +756,17 @@
 翔太の濁った目の方を押さえつけた。[p]
 龍也がこちらを見て何か言っているようだ。[p]
 口が何やら動いている。[p]
-翔太は、｜見《・》｜え《・》｜る《・》｜方《・》｜の《・》｜目《・》で、[p]
+翔太は、見える方の目で、[p]
 それを読み解いた。[p]
-「コエヲ……[l]ダシタカラ……[l]モウイッカイ」[p]
+[delay speed="90"]
+[font size=40 color="#B8DFFF"]
+コエヲ……[p]
+[wait time=600]
+ダシタカラ……[p]
+[wait time=600]
+モウイッカイ[p]
+[resetdelay]
+[resetfont]
 その瞬間、翔太が両目を押さえながら、[l]
 悲鳴にも似た絶叫を上げて、その場で転がり回った。[p]
 拓海を押さえつけていた龍也も思わず立ち上がり、近付いていく。[p]
@@ -761,5 +784,5 @@
 それが起こったのは幻覚とはいえ、[l]
 自分ではなく翔太だった。[p]
 拓海は自分の「異能」についての仮説を証明出来たのだった。[p]
-
+[wait time=2000]
 @jump storage="chapter2.ks" target="*chapter2"
