@@ -324,7 +324,7 @@
 死ぬより苦しい地獄が待っているかもしれない。[p]
 
 [wait time=900]
-*ch1_debug_current
+
 気が付くと拓海はフェンスに手をかけてよじ登っていた。[p]
 [playse storage=se/fence_creak.ogg volume=30]
 [wait time=500]
@@ -475,7 +475,7 @@
 *ch1_return
 [playse storage=se/school_chime.mp3]
 [wait time=1800]
-
+*ch1_debug_current
 「お前、なに学校休んでんだよっ！」[l]
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
 [playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
@@ -706,6 +706,7 @@
 あの「幻」は、その時調べたネットの記事に酷似していた。[p]
 これらのことから、拓海はあの「錯覚」は、自分の力で起こしたものではないかと考えた。[p]
 そして、これは意図して引き起こすことが出来るかもしれないと仮説を立てていた。[p]
+[bg storage="bg_rooftop_day_hallucination" time=300]
 [wait time=1200]
 [font color="#CFE8FF"]
 時が止まっている。[l]
