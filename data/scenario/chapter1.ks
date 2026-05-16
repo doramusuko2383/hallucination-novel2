@@ -757,7 +757,7 @@
 痛い、[l]辛い、[l]苦しい。[p]
 言葉にならない、うめき声が口から洩れていく。[p]
 何も考えられない。[p]
-[bg storage="bg_rooftop_day_hallucination" time=300]
+[bg storage="bg_rooftop_day_hallucination.webp" time=300]
 突然目の前がパッと明るくなった。[p]
 龍也が翔太の顔面を押さえつけていた左手が、顔から離れたのだ。[p]
 助かったのだろうか。[p]
