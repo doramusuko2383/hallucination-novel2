@@ -475,7 +475,7 @@
 *ch1_return
 [playse storage=se/school_chime.mp3]
 [wait time=1800]
-*ch1_debug_current
+
 「お前、なに学校休んでんだよっ！」[l]
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
 [playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
