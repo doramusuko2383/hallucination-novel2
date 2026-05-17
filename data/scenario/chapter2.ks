@@ -3,6 +3,7 @@
 ; CHAPTER 2 演出版（chapter1準拠）
 ;========================
 
+
 *ch2_start
 *chapter2
 
@@ -19,7 +20,8 @@
 [wait time=800]
 
 [bg storage="bg_station_morning.webp" time=800]
-;[playse storage=se/cicadas_morning.ogg volume=20] ; 提案: 残暑の朝を出す蝉・街路環境音
+[playbgm storage="morning_city.ogg" loop=true volume=45 fadein=true time=300]
+;[playse storage=se/tukutukuboushi.ogg  loop=true volume=45 fadein=true time=300] ; 提案: 残暑の朝を出す蝉・街路環境音
 9月に入ったというのに、まだまだ暑い日が続いている。[l][r]
 シャツの中に着た下着に汗が染み込んでいく。[p]
 
@@ -29,8 +31,10 @@
 校舎まで人目を避けるように歩く。[p]
 
 [wait time=700]
-
+[fadeoutbgm time=800]
+[fadeoutse time=800] 
 [bg storage="bg_classroom_day.webp" time=700]
+[playbgm storage="classroom_ buzzing.ogg" loop=true volume=50 fadein=true]
 拓海の通う黒森学園高校は、県内でも中堅クラスの私立高校である。[p]
 
 中高一貫校だが、[r]
@@ -58,14 +62,14 @@
 その人気が学校の倍率を実力以上に押し上げている様だった。[p]
 
 拓海からしたら、他校と比べてそんなに優れているとも思えない様な、[r]
-ライトグレーのブレザーにシンプルなネクタイの制服だ。[p]
+普通のブレザーにシンプルなネクタイの制服だ。[p]
 
 [wait time=700]
-
+[fadeoutbgm time=800]
 *ch2_hallway
 
 [bg storage="bg_hallway_day.webp" time=700]
-;[playse storage=se/hallway_ambience.ogg volume=18] ; 提案: 休み時間の廊下のざわめき
+[playse storage=se/hallway_ambience.ogg loop=true volume=50 fadein=true]
 拓海は移動教室のために廊下を歩いている。[p]
 
 校舎は古びたコンクリートの建物で、[r]
@@ -77,7 +81,7 @@
 龍也と翔太が談笑している姿が見えた。[p]
 
 [wait time=500]
-
+[fadeoutse time=800] 
 [playbgm storage="tension_low.ogg" loop=true volume=45 fadein=true time=1200]
 あいつらがまだ学校にいるのが、奇跡なんだ。[p]
 
