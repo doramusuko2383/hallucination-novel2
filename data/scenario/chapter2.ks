@@ -21,7 +21,7 @@
 
 [bg storage="bg_station_morning.webp" time=800]
 [playbgm storage="morning_city.ogg" loop=true volume=45 fadein=true time=300]
-;[playse storage=se/tukutukuboushi.ogg  loop=true volume=45 fadein=true time=300] ; 提案: 残暑の朝を出す蝉・街路環境音
+[playse storage=se/tukutukuboushi.ogg  loop=true volume=45 fadein=true time=300]
 9月に入ったというのに、まだまだ暑い日が続いている。[l][r]
 シャツの中に着た下着に汗が染み込んでいく。[p]
 
@@ -165,7 +165,6 @@
 12月の寒い冬の放課後――。[p]
 
 [bg storage="bg_washroom_day.webp" time=800]
-;[playse storage=se/toilet_door.ogg volume=25] ; 提案: トイレのドアが開く音
 トイレに入ると、そこには二人の生徒が立っていた。[p]
 
 片方は、背が高く黒髪の強面。[r]
@@ -465,7 +464,7 @@
 *ch2_planning
 
 [bg storage="bg_takumiroom_night.webp" time=900]
-;[playse storage=se/room_clock.ogg loop=true volume=15] ; 提案: 夜の部屋の時計音
+[playse storage=se/room_noise.ogg volume=15]
 家に帰ると、拓海は静かに机に向かい、パソコンを開いた。[p]
 
 マウスを動かすと、今日殴られた場所が鈍く痛む。[p]
@@ -560,7 +559,7 @@
 
 [wait time=900]
 
-;[playse storage=se/crickets.ogg volume=22] ; 提案: 鈴虫の鳴き声
+[playse storage=se/crickets.ogg volume=22]
 鈴虫の鳴く声が遠くから響いている。[p]
 
 [wait time=800]
@@ -583,7 +582,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 そして、拓海が見せる幻もまた、[r]
 彼の知識と想像に基づく“ハルシネーション”なのだ。[p]
 
-[playse storage=se/writer.ogg volume=25]
+[playse storage=se/keyboard_typing.ogg volume=25]
 彼はパソコンのメモのタイトルに、[r]
 「ハルシネーション」と打ち込み、静かにパソコンを閉じた。[p]
 
@@ -695,7 +694,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 *ch2_megumi_conversation
 
 [bg storage="bg_classroom_day2.webp" time=800]
-;[playse storage=se/classroom_murmur.ogg volume=18] ; 提案: 授業前の教室の小さなざわめき
+[playbgm storage="classroom_ buzzing.ogg" volume=50 fadein=true] 
 早速、動き出すことに決めた翌日のことだ。[p]
 
 拓海は教室の後ろで机に座り、[r]
@@ -869,7 +868,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 [bg storage="bg_takumiroom_night.webp" time=900]
 [playbgm storage="tension_low.ogg" loop=true volume=40 fadein=true time=1200]
-;[playse storage=se/keyboard_typing.ogg volume=18] ; 提案: PC操作・キーボード入力音
+[playse storage=se/keyboard_typing.ogg volume=18] ; 提案: PC操作・キーボード入力音
 家に帰ると、拓海は早速パソコンを開き、[r]
 桜木中学の学区を調べ始めた。[p]
 
