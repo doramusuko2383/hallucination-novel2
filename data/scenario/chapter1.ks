@@ -34,7 +34,7 @@
 [font speed=40]
 
 [bg storage="bg_classroom_day.webp" time=800]
-
+[playbgm storage="classroom_ buzzing.ogg" loop=true volume=50 fadein=true]
 教室の窓から見上げる空は、
 重く、禍々しく、
 [p]
@@ -42,7 +42,7 @@
 拓海の心をゆっくりと押し潰していく。
 [p]
 
-;[stopbgm]
+[fadeoutbgm time=800]
 [wait time=800]
 
 高校二年になった頃から、
@@ -805,7 +805,7 @@
 あまりの状況に声を失う龍也。[l]
 「翔太――」[l]綾香もそれ以上喋ることが出来ないでいる。[p]
 その一方で、拓海は気持ちの高揚を抑えられずにいた。[l]
-[stopbgm]
+[stopbgm fadeout=1000]
 [playse storage=se/heartbeat.ogg loop=true volume=30]
 [wait time=900]
 「一番起こって欲しくない」[l][r]と一瞬想像した未来の姿。[p]
@@ -813,7 +813,7 @@
 それが起こったのは幻覚とはいえ、[l]
 自分ではなく翔太だった。[p]
 拓海は自分の「異能」についての仮説を証明出来たのだった。[p]
-[stopse]
+[stopse fadeout=1000]
 [wait time=1200]
 [playse storage=se/wind_rooftop.ogg volume=18]
 [wait time=2500]
