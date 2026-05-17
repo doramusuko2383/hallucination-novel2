@@ -34,7 +34,7 @@
 [font speed=40]
 
 [bg storage="bg_classroom_day.webp" time=800]
-
+[playbgm storage="classroom_ buzzing.ogg" loop=true volume=50 fadein=true]
 教室の窓から見上げる空は、
 重く、禍々しく、
 [p]
@@ -42,7 +42,7 @@
 拓海の心をゆっくりと押し潰していく。
 [p]
 
-;[stopbgm]
+[fadeoutbgm time=800]
 [wait time=800]
 
 高校二年になった頃から、
