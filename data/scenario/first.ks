@@ -86,7 +86,17 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 [cm]
 
 デバッグモード：
-[glink text="チャプター2ジャンプ" target="*debug_ch2"]
+■チャプター選択
+[glink text="Chapter1 開始" target="*dbg_ch1_start"]
+[glink text="Chapter2 開始" target="*dbg_ch2_start"]
+[glink text="Chapter3 開始" target="*dbg_ch3_start"]
+[glink text="Chapter4 開始" target="*dbg_ch4_start"]
+[glink text="Chapter5 開始" target="*dbg_ch5_start"]
+[glink text="Chapter6 開始" target="*dbg_ch6_start"]
+[glink text="Chapter7 開始" target="*dbg_ch7_start"]
+
+■現在テスト中
+[glink text="Chapter2 現在テスト中" target="*debug_ch2"]
 [glink text="通常起動に戻る" target="*debug_off"]
 
 [s]
@@ -101,6 +111,28 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 ; ===== 現在テスト用（ここだけ毎回書き換える） =====
 *dbg_ch2_current
 @jump storage="chapter2.ks" target="*ch2_debug_current"
+
+; ===== 章冒頭ジャンプ =====
+*dbg_ch1_start
+@jump storage="chapter1.ks" target="*ch1_start"
+
+*dbg_ch2_start
+@jump storage="chapter2.ks" target="*ch2_start"
+
+*dbg_ch3_start
+@jump storage="chapter3.ks" target="*ch3_start"
+
+*dbg_ch4_start
+@jump storage="chapter4.ks" target="*ch4_start"
+
+*dbg_ch5_start
+@jump storage="chapter5.ks" target="*ch5_start"
+
+*dbg_ch6_start
+@jump storage="chapter6.ks" target="*ch6_start"
+
+*dbg_ch7_start
+@jump storage="chapter7.ks" target="*ch7_start"
 
 
 ; ===== 個別ジャンプ =====
