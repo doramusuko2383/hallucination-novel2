@@ -86,21 +86,21 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 [cm]
 
 デバッグモード：
-[glink text="チャプター1ジャンプ" target="*debug_ch1"]
+[glink text="チャプター2ジャンプ" target="*debug_ch2"]
 [glink text="通常起動に戻る" target="*debug_off"]
 
 [s]
 
-*debug_ch1
+*debug_ch2
 [cm]
-チャプター1：
-[glink text="現在テスト中" target="*dbg_ch1_current"]
+チャプター2：
+[glink text="現在テスト中" target="*dbg_ch2_current"]
 ; [glink] は [s] 到達時に自動配置・表示されるため、ここで [p] を挟まない
 [s]
 
 ; ===== 現在テスト用（ここだけ毎回書き換える） =====
-*dbg_ch1_current
-@jump storage="chapter1.ks" target="*ch1_debug_current"
+*dbg_ch2_current
+@jump storage="chapter2.ks" target="*ch2_debug_current"
 
 
 ; ===== 個別ジャンプ =====
