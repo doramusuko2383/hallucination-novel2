@@ -195,7 +195,6 @@
 気になって横を見やると、[r]
 龍也が一万円札をチョキの指で挟んでいた。[p]
 
-[auto_chara name="龍也"]
 「いつもありがとうな」[p]
 
 [chara_hide_all time=300]
@@ -286,12 +285,12 @@
 自分の正義感で行動に出た結果、[r]
 身を犠牲にして他人を救うことになったのだ。[p]
 
-[stopbgm fadeout=1000]
+[stopbgm fadeout=2000]
 [wait time=800]
 
 *ch2_after_rooftop
 
-[bg storage="bg_takumiroom_night.webp" time=900]
+[bg storage="bg_classroom_day2.webp" time=800]
 [playse storage=se/heartbeat.ogg loop=true volume=18]
 腕時計をつけるたびに、タバコの火傷の跡が擦れて痛む。[p]
 
@@ -303,7 +302,6 @@
 [stopse fadeout=800]
 [wait time=700]
 
-[bg storage="bg_classroom_day2.webp" time=800]
 翔太はしばらく学校に姿を見せなかった。[p]
 
 ただでさえ茶髪で目立つ生徒だ。[p]
@@ -465,7 +463,7 @@
 *ch2_planning
 
 [bg storage="bg_takumiroom_night.webp" time=900]
-[playse storage=se/room_noise.ogg volume=15]
+[playse storage=se/room_noise.ogg loop=true volume=50 fadein=true time=1200]
 家に帰ると、拓海は静かに机に向かい、パソコンを開いた。[p]
 
 マウスを動かすと、今日殴られた場所が鈍く痛む。[p]
@@ -480,7 +478,7 @@
 
 しかもその力は、[r]
 自分の想像や知識である程度コントロールできることも分かっていた。[p]
-
+[stopbgm fadeout=1200]
 [wait time=700]
 [playbgm storage="psycho.ogg" loop=true volume=45 fadein=true time=1500]
 
@@ -557,10 +555,10 @@
 彼らが自分を傷つけたことを思い返し、感情を抑え込む。[p]
 
 この決意が、揺るがないように。[p]
-
+[stopbgm fadeout=2000]
 [wait time=900]
 
-[playse storage=se/crickets.ogg volume=22]
+[playse storage=se/crickets.ogg volume=10]
 鈴虫の鳴く声が遠くから響いている。[p]
 
 [wait time=800]
@@ -583,7 +581,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 そして、拓海が見せる幻もまた、[r]
 彼の知識と想像に基づく“ハルシネーション”なのだ。[p]
 
-[playse storage=se/keyboard_typing.ogg volume=25]
+[playse storage=se/keyboard_typing.ogg volume=50]
 彼はパソコンのメモのタイトルに、[r]
 「ハルシネーション」と打ち込み、静かにパソコンを閉じた。[p]
 
@@ -593,7 +591,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 *ch2_target_ayaka
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="tension_low.ogg" loop=true volume=38 fadein=true time=1200]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
 次のターゲットは綾香だ。[p]
 
 拓海は毎日、そのことばかり考えていた。[p]
@@ -695,13 +693,13 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 *ch2_megumi_conversation
 
 [bg storage="bg_classroom_day2.webp" time=800]
-[playbgm storage="classroom_ buzzing.ogg" volume=50 fadein=true] 
+[playbgm storage="classroom_ buzzing.ogg" volume=70 fadein=true] 
 早速、動き出すことに決めた翌日のことだ。[p]
 
 拓海は教室の後ろで机に座り、[r]
 窓の外にぼんやりと視線を向けていた。[p]
 
-どんよりとした曇り空で、今にも雨が降りだしそうだ。[p]
+拓海の心とは裏腹に、鮮やかな太陽が雲の隙間から今にも抜け出さんとしている。[p]
 
 心の中で何度も計画を確認しながら、[r]
 視線を恵の方に移した。[p]
@@ -715,7 +713,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 拓海は心の中でそう決意し、ゆっくりと席を立つ。[p]
 
-[playse storage=se/heartbeat.ogg loop=true volume=20]
+[playse storage=se/heartbeat.ogg loop=true volume=40]
 心臓がやけに早く脈打つのを感じながら、[r]
 静かに恵の方へと歩み寄る。[p]
 
@@ -869,7 +867,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 [bg storage="bg_takumiroom_night.webp" time=900]
 [playbgm storage="tension_low.ogg" loop=true volume=40 fadein=true time=1200]
-[playse storage=se/keyboard_typing.ogg volume=18] ; 提案: PC操作・キーボード入力音
+[playse storage=se/keyboard_typing.ogg volume=40]
 家に帰ると、拓海は早速パソコンを開き、[r]
 桜木中学の学区を調べ始めた。[p]
 
@@ -948,7 +946,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 実際、その仮説は見事に当たっていたのだ。[p]
 
-[stopbgm fadeout=1200]
+[stopbgm fadeout=2000]
 [wait time=1000]
 
 @jump storage="chapter3.ks" target="*chapter3"
