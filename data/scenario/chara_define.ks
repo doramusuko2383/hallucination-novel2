@@ -21,6 +21,8 @@
 [chara_face name="拓海" face="angry" storage="chara/takumi/angry.png"]
 [chara_face name="拓海" face="scared" storage="chara/takumi/scared.png"]
 [chara_face name="拓海" face="laugh" storage="chara/takumi/laugh.png"]
+[chara_face name="拓海" face="convenience" storage="chara/takumi/convenience.png"]
+[chara_face name="拓海" face="normal2" storage="chara/takumi/normal2.png"]
 
 [chara_new name="龍也" storage="chara/ryuya/normal.png" scale=0.5 top=80]
 [chara_face name="龍也" face="normal" storage="chara/ryuya/normal.png"]
@@ -45,6 +47,7 @@
 [chara_face name="綾香" face="angry" storage="chara/ayaka/angry.png"]
 [chara_face name="綾香" face="scared" storage="chara/ayaka/scared.png"]
 [chara_face name="綾香" face="laugh" storage="chara/ayaka/laugh.png"]
+[chara_face name="綾香" face="convenience" storage="chara/ayaka/convenience.png"]
 
 [chara_new name="翔太" storage="chara/shota/normal.png" scale=0.5 top=85]
 [chara_face name="翔太" face="normal" storage="chara/shota/normal.png"]
