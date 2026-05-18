@@ -68,7 +68,7 @@
 マスクまでするのは不自然かもしれない、と一瞬思ったが、[r]
 状況に応じて調整するつもりだった。[p]
 
-;[playse storage=se/convenience_door.ogg volume=25] ; 提案: 入店ベルSE
+[playse storage=se/convenience_door.ogg volume=25] ; 提案: 入店ベルSE
 [wait time=400]
 
 拓海は店内に入り、商品棚を物色するふりをしながら、[r]
@@ -477,7 +477,7 @@
 [chara_hide_all time=300]
 彼女の真剣な視線に、拓海は無言で応じるしかなかった。[p]
 
-;[playse storage=se/knock_door.ogg volume=25] ; 提案: カラオケ個室のノックSE
+;[playse storage=se/knock_door.ogg volume=75] ; 提案: カラオケ個室のノックSE
 [wait time=500]
 
 その時、部屋のドアがノックされ、[r]
@@ -495,7 +495,7 @@
 北川龍也、佐田翔太、上田綾香の3人組でしょ。[r]
 クラスのみんなも、きっと気付いていたけど、誰も触れたくなかったんだと思う」[p]
 
-[auto_chara name="拓海" face="sad"]
+[auto_chara name="拓海" face="normal"]
 「……気付かれていたのか」[p]
 
 久しぶりに口を開いた拓海の声は、[r]
