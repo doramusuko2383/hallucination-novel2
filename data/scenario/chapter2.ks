@@ -3,7 +3,8 @@
 ; CHAPTER 2 演出版（chapter1準拠）
 ;========================
 
-ch1_debug_current
+; ===== 現在テスト用（二章冒頭） =====
+*ch2_debug_current
 *ch2_start
 *chapter2
 
