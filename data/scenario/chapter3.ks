@@ -23,7 +23,7 @@
 
 ; 追加した演出意図: 夜の外気と犯行前の緊張を、夜背景・虫の音・低いBGMで抑えて立ち上げる。
 [bg storage="bg_station_night.webp" time=800]
-[playse storage=se/crickets.ogg volume=18 fadein=true time=1000]
+[playse storage=se/traindoor.ogg volume=40]
 [playbgm storage="tension_low.ogg" loop=true volume=40 fadein=true time=1200]
 数日後の放課後、拓海は一度家に帰り、夕飯を済ませてから、[r]
 「勉強をしてくる」と告げて外に出た。[p]
@@ -105,7 +105,7 @@
 
 髪は短髪で、細く薄くなった毛のせいで、地肌が目立っていた。[p]
 
-制服から除く腕には太い毛がビッシリと生えており、かなり毛深い。[p]
+制服から覗く腕には太い毛がビッシリと生えており、かなり毛深い。[p]
 
 [wait time=500]
 
@@ -134,10 +134,10 @@
 [wait time=500]
 
 ; 追加した演出意図: 実行直前だけ鼓動SEを足し、生活音から内面音へ寄せる。
-[playse storage=se/heartbeat.ogg loop=true volume=22 fadein=true time=500]
+[playse storage=se/heartbeat.ogg loop=true volume=50 fadein=true time=500]
 拓海は小さく息を吸い込み、レジに向かった。[p]
 
-[auto_chara name="綾香" face="normal"]
+[auto_chara name="綾香" face="convenience"]
 綾香は依然として来店客に対して無関心で、[r]
 店内の空気は重い。[p]
 
@@ -149,11 +149,11 @@
 綾香の細い腕が淡々と作業を続ける姿を見て、[r]
 拓海は意を決した。[p]
 
-[auto_chara name="拓海" face="serious"]
+[auto_chara name="拓海" face="convenience"]
 「袋、一番小さいのでお願いします」[l]
 拓海はいつもより低い声で、静かに言った。[p]
 
-[auto_chara name="綾香" face="normal"]
+[auto_chara name="綾香" face="convenience"]
 「承知しました」[p]
 
 綾香は無機質な声で答え、商品をビニール袋に詰め始めた。[p]
@@ -202,7 +202,7 @@
 [bg storage="bg_convenience_store_night.webp" time=900]
 目の前の世界が無音に包まれる。[p]
 
-[auto_chara name="綾香" face="scared"]
+[auto_chara name="綾香" face="convenience"]
 綾香は動きを止め、目を見開いたまま、[r]
 時間が止まったように固まっている。[p]
 
@@ -305,7 +305,7 @@
 声に驚いて顔を上げると、[r]
 恵が緊張した面持ちで横に立っていた。[p]
 
-[auto_chara name="拓海" face="normal"]
+[auto_chara name="拓海" face="normal2"]
 「うん、大丈夫だけど」[p]
 
 [auto_chara name="恵" face="serious"]
@@ -460,8 +460,8 @@
 事態がここまで大きくなっているとは想像もしていなかった。[p]
 
 [auto_chara name="恵" face="sad"]
-「警察の人も、私たちが店長を陥れようとしたんじゃないかって少し疑ってたみたいだけど……[r]
-結局はそれ以上何も起こらなかったわ」[p]
+「警察の人も、私たちが店長を陥れようとしたんじゃないかって少し疑ってたみたいだけど……
+結局はそれ以上何も起こらなかった」[p]
 
 [chara_hide_all time=300]
 拓海は、恵の話に耳を傾けながら、ただ黙り込んでいた。[p]
@@ -477,7 +477,7 @@
 [chara_hide_all time=300]
 彼女の真剣な視線に、拓海は無言で応じるしかなかった。[p]
 
-;[playse storage=se/knock_door.ogg volume=75] ; 提案: カラオケ個室のノックSE
+[playse storage=se/knock_door.ogg volume=75] 
 [wait time=500]
 
 その時、部屋のドアがノックされ、[r]
@@ -534,7 +534,7 @@
 [stopse fadeout=700]
 [wait time=900]
 
-[auto_chara name="拓海" face="serious"]
+[auto_chara name="拓海" face="normal2"]
 「俺がやった。[l]想像の通りだよ」[p]
 
 その言葉が口をついて出た瞬間、[r]
@@ -565,14 +565,14 @@
 [auto_chara name="恵" face="serious"]
 「あれ、じゃあ何で今、力を使わなかったの？」[p]
 
-[auto_chara name="拓海" face="normal"]
+[auto_chara name="拓海" face="normal2"]
 「え？　どういうこと？」[p]
 
 [auto_chara name="恵" face="serious"]
 「私にその力を使って、この場を切り抜けることだってできそうじゃない」[l]
 恵はさらっと恐ろしいことを言う。[p]
 
-[auto_chara name="拓海" face="serious"]
+[auto_chara name="拓海" face="normal2"]
 「いやいや。[l]
 俺だって好き好んで人を傷付けたいわけじゃないんだよ。[r]
 こんな目に遭ってなかったら、あいつらにだってきっと使ってなかったと思う」[p]
@@ -583,7 +583,7 @@
 そのあと、二人はお互いに気になっていたことを質問し合い、[r]
 会話が進む中で、拓海はとうとう核心を突いた。[p]
 
-[auto_chara name="拓海" face="serious"]
+[auto_chara name="拓海" face="normal2"]
 「それで……目的は何なの？[l]
 探偵ごっこが趣味ってわけじゃないでしょ？」[p]
 
@@ -597,7 +597,7 @@
 
 「実は、永山君に助けてもらえるんじゃないかって思ったの」[p]
 
-[auto_chara name="拓海" face="normal"]
+[auto_chara name="拓海" face="normal2"]
 「助ける？　誰を？」[p]
 
 [auto_chara name="恵" face="sad"]
@@ -689,7 +689,7 @@
 今度は他人を救うために使えるかもしれないという思いが、[r]
 次第に大きくなっていく。[p]
 
-[auto_chara name="拓海" face="serious"]
+[auto_chara name="拓海" face="normal2"]
 「なんで、警察に行かないの？[l]
 それか、会社に訴えるとか……[r]
 こんな証拠があるなら、告発すれば済むんじゃ？」[p]
@@ -702,7 +702,7 @@
 でもやらないのは、会社の中で高田が影響力を持っているし、[r]
 お母さんが訴えれば、逆に会社での立場を失う可能性があるからかなって」[p]
 
-[auto_chara name="拓海" face="sad"]
+[auto_chara name="拓海" face="normal2"]
 「そうか……」[l]
 拓海は口には出さなかったが、娘を思う母の優しさなのだと思った。[p]
 
@@ -716,7 +716,7 @@
 
 [wait time=600]
 
-[auto_chara name="拓海" face="serious"]
+[auto_chara name="拓海" face="normal2"]
 「それで、俺に何をしてほしいの？」[p]
 
 拓海の問いに、恵は静かに顔を上げた。[p]
@@ -744,7 +744,7 @@
 
 [wait time=500]
 
-[auto_chara name="拓海" face="serious"]
+[auto_chara name="拓海" face="normal2"]
 「よし、お母さんを助けよう」[p]
 
 [chara_hide_all time=300]
