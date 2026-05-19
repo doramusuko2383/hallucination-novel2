@@ -23,7 +23,7 @@
 
 ; 追加した演出意図: 夜の外気と犯行前の緊張を、夜背景・虫の音・低いBGMで抑えて立ち上げる。
 [bg storage="bg_station_night.webp" time=800]
-[playse storage=se/crickets.ogg loop=true volume=18 fadein=true time=1000]
+[playse storage=se/crickets.ogg volume=18 fadein=true time=1000]
 [playbgm storage="tension_low.ogg" loop=true volume=40 fadein=true time=1200]
 数日後の放課後、拓海は一度家に帰り、夕飯を済ませてから、[r]
 「勉強をしてくる」と告げて外に出た。[p]
@@ -48,7 +48,7 @@
 コンビニのガラス越しに、[r]
 綾香がレジの後ろに立っているのが見えた。[p]
 
-[auto_chara name="綾香" face="normal"]
+[auto_chara name="綾香" face="convenience"]
 彼女は無表情で、どこか気だるそうな様子だ。[p]
 
 何人か客が入っていくのを拓海は見送ったが、[r]
@@ -62,18 +62,18 @@
 
 [chara_hide_all time=300]
 [wait time=400]
-
+[auto_chara name="拓海" face="convenience"]
 準備してきた深めのバケットハットを被り、サングラスをかける。[p]
 
 マスクまでするのは不自然かもしれない、と一瞬思ったが、[r]
 状況に応じて調整するつもりだった。[p]
 
-[playse storage=se/convenience_door.ogg volume=25] ; 提案: 入店ベルSE
+[playse storage=se/convenience_door.ogg volume=25]
 [wait time=400]
-
+[bg storage="bg_convenience_inside_night.webp" time=800]
 拓海は店内に入り、商品棚を物色するふりをしながら、[r]
 綾香の様子を窺った。[p]
-
+[chara_hide_all time=300]
 店内は思いのほか賑わってはいたが、[r]
 あまり長居しても不審がられて目立ってしまうかもしれない。[p]
 
