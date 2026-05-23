@@ -666,21 +666,19 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 [wait time=700]
 
 [bg storage="bg_hallway_day.webp" time=700]
-そんな中、ある日、放課後の校庭でふと目に入った光景が、[r]
+そんな中、ある日、放課後ふと目に入った光景が、[r]
 拓海の胸を騒がせた。[p]
-
+[bg storage="ch2_ayaka_and_megumi.webp.webp" time=700]
 綾香が、同じクラスの菊池恵と一緒に帰っている姿を見かけたのだ。[p]
 
-[auto_chara name="恵"]
 恵は特に親しいわけでもないが、クラスメイトだ。[p]
 
 しめた、と拓海は思った。[p]
 
 彼女なら、自然な流れで綾香のバイト先について聞き出せるかもしれない。[p]
 
-[chara_hide_all time=300]
 [wait time=600]
-
+[bg storage="black.png" time=500]
 これだ……これで計画が動き出す。[p]
 
 拓海は、無意識に頬を緩めた。[p]
