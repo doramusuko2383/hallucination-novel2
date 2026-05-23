@@ -62,7 +62,7 @@
 
 綾香はいつも決まった曜日にバイトをしていたからだ。[p]
 
-そういえば、進学校でもある黒森学園では、アルバイトをしている生徒自体が珍しい。[r][l]
+進学校でもある黒森学園では、アルバイトをしている生徒自体が珍しい。[r][l]
 何か欲しいものでもあるのだろうか。[p]
 
 [auto_chara name="綾香" face="convenience"]
@@ -285,7 +285,7 @@
 ; 追加した演出意図: 場面転換は黒を挟み、事件後の時間経過を淡々と示す。
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="classroom_ buzzing.ogg" loop=true volume=45 fadein=true time=800]
+[playbgm storage="classroom_ buzzing.ogg" loop=true volume=80 fadein=true time=800]
 10月に入り、秋の冷たい風が学校の校庭に吹き始めていた。[p]
 
 朝晩は上着が必要なくらい涼しくなり、[r][l]
@@ -452,7 +452,7 @@
 
 [auto_chara name="恵" face="serious"]
 「それで、永山君がコンビニから出た後、私も店に入ってみたの。[l]
-そしたら、綾香が私を見るなり急に泣き出して……」[r][l]
+そしたら、綾香が私を見るなり急に泣き出して……」[r][p]
 [playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
 [auto_chara name="恵" face="pain"]
 [delay speed="90"]
@@ -460,6 +460,9 @@
 [resetdelay]
 [wait time=2000]
 [chara_hide_all time=300]
+[auto_chara name="拓海" face="normal2"]
+「……。」[p]
+[wait time=2000]
 ここまでは計画通りだ……。[p]
 
 拓海は冷静さを保とうと努めた。[p]
@@ -535,6 +538,7 @@
 [fadeoutbgm time=1000]
 [playse storage=se/knock_door.ogg volume=75] 
 [wait time=500]
+[playse storage=se/roof_door.ogg volume=75] 
 
 その時、部屋のドアがノックされ、[r]
 店員が注文していたアイスコーヒーをテーブルに置いていった。[p]
@@ -571,8 +575,8 @@
 彼女は、ちらっと拓海の方を見てから言葉を続けた。[p]
 
 「それに、佐田君がしばらく学校に来なくなったのも、[r]
-ちょっと話題になったじゃない？[l]
-彼が、『罰が当たった。酷い夢を見たんだ』って周りに言ってたらしくて……[r][l]
+ちょっと話題になったじゃない？」[p]
+「彼が、『罰が当たった。酷い夢を見たんだ』って周りに言ってたらしくて……[r][l]
 それを聞いて、綾香のことと重なって、永山君が何か知ってるに違いないって思ったの」[p]
 
 [chara_hide_all time=300]
@@ -601,7 +605,7 @@
 唇に拳を当てたまま、[r]
 じっと拓海を見つめている。[p]
 
-繰り返し流れるカラオケの宣伝動画が、静かな部屋に響いている。
+繰り返し流れるカラオケの宣伝動画が、静かな部屋に響いている。[p]
 
 [auto_chara name="恵" face="serious"]
 「やっぱりそうなんだね……」[p]
