@@ -175,7 +175,7 @@
 
 彩香は無言でバーコードを通し、[r][l]
 男は「どうも」とだけ言って店を出ていった。[p]
-
+[playse storage=se/convenience_door.ogg volume=25]
 [wait time=700]
 自動ドアの開閉音が遠ざかる。[p]
 [wait time=700]
