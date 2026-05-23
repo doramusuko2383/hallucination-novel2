@@ -406,9 +406,8 @@
 
 *ch3_karaoke
 
-; 追加した演出意図: 密室会話はカラオケ背景と室内ノイズで閉塞感を作り、核心でBGMを薄く戻す。
 [bg storage="ch3_karaoke_talk.webp" time=800]
-[playse storage=se/room_noise.ogg loop=true volume=35 fadein=true time=800]
+[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=1000]
 「実は、この前、綾香がバイトするコンビニに永山君が入っていくのを見かけたの」[p]
 
 駅近くのカラオケの個室に入って席に着くなり、[r]
@@ -539,7 +538,7 @@
 [playse storage=se/knock_door.ogg volume=75] 
 [wait time=500]
 [playse storage=se/roof_door.ogg volume=75] 
-
+[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=1000]
 その時、部屋のドアがノックされ、[r]
 店員が注文していたアイスコーヒーをテーブルに置いていった。[p]
 
