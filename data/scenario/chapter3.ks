@@ -369,7 +369,7 @@
 
 [auto_chara name="恵" face="serious"]
 「綾香の件で、聞きたいことがあるんだ」[p]
-
+[fadeoutbgm time=800]
 彼女からはいつもの柔らかい雰囲気は消え、[r][l]
 何かを決意しているような表情だ。[p]
 
@@ -382,13 +382,12 @@
 
 胸の奥に不安が広がる。[p]
 
-[fadeoutbgm time=800]
+[playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
 [wait time=700]
 
 綾香の件？[l]
 何を聞きたいんだ……？[p]
 
-[playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
 その後の授業は一切頭に入ってこなかった。[p]
 
 何度も悪い想像が頭をよぎり、[r]
@@ -452,6 +451,7 @@
 [auto_chara name="恵" face="serious"]
 「それで、永山君がコンビニから出た後、私も店に入ってみたの。[l]
 そしたら、綾香が私を見るなり急に泣き出して……」[r][p]
+[stopse]
 [playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
 [auto_chara name="恵" face="pain"]
 [delay speed="90"]
@@ -472,7 +472,7 @@
 [auto_chara name="恵" face="sad"]
 「綾香、すごく震えてて……[l]
 とにかく警察を呼ぶしかなかったの」[p]
-
+[fadeoutbgm time=1000]
 [chara_hide_all time=300]
 [wait time=800]
 
@@ -481,7 +481,7 @@
 [wait time=800]
 
 ; 追加した演出意図: 想定外の単語で鼓動を再投入し、音量は控えめにして焦燥だけを出す。
-[playse storage=se/heartbeat.ogg loop=true volume=25 fadein=true time=500]
+[playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=500]
 その言葉に、拓海は顔が青ざめた。[p]
 
 心臓が鼓動を強め、体中に血が駆け巡る。[p]
@@ -538,7 +538,7 @@
 [playse storage=se/knock_door.ogg volume=75] 
 [wait time=500]
 [playse storage=se/roof_door.ogg volume=75] 
-[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=1000]
+[playse storage=se/karaoke_sound2.ogg loop=true volume=100 fadein=true time=1000]
 その時、部屋のドアがノックされ、[r]
 店員が注文していたアイスコーヒーをテーブルに置いていった。[p]
 
@@ -590,7 +590,7 @@
 
 言って楽になってしまいたいという気持ちになっていた。[p]
 
-[stopse fadeout=700]
+[stopse fadeout=1000]
 [wait time=900]
 
 [auto_chara name="拓海" face="normal2"]
@@ -603,7 +603,7 @@
 
 唇に拳を当てたまま、[r]
 じっと拓海を見つめている。[p]
-
+[playse storage=se/karaoke_sound2.ogg loop=true volume=100 fadein=true time=1000  buf=0]
 繰り返し流れるカラオケの宣伝動画が、静かな部屋に響いている。[p]
 
 [auto_chara name="恵" face="serious"]
@@ -809,7 +809,7 @@
 
 「私が小さい頃に亡くなったの。だから、お母さん一人でずっと働いてきたんだ」[p]
 
-[playse storage=se/iced_cofee.ogg volume=75] 
+[playse storage=se/iced_cofee.ogg volume=75 buf=1]
 
 氷が、カランと小さく鳴った。[p]
 
@@ -874,7 +874,7 @@
 どこかの部屋から聞こえてくる下手くそな歌が、[r]
 今度は不思議と心地よく響いていた。[p]
 
-[stopse fadeout=1000]
+[stopse fadeout=1000 buf=0]
 [wait time=800]
 
 @jump storage="chapter4.ks" target="*chapter4"
