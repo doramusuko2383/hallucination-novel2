@@ -17,4 +17,10 @@
 [glink text="Chapter6" storage="chapter6.ks" target="ch6_start"]
 [glink text="Chapter7" storage="chapter7.ks" target="ch7_start"]
 
+■デバッグポイント選択
+; 記述方法:
+; [glink text="表示名" storage="シナリオファイル名.ks" target="ラベル名"]
+; 例: Chapter3のカラオケシーン開始位置
+[glink text="Chapter3 / カラオケ" storage="chapter3.ks" target="ch3_karaoke"]
+
 [s]
