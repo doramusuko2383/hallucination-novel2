@@ -40,6 +40,8 @@
 
 「なるほど……家族がみんな優秀か」[p]
 
+[playse storage=se/pencil.ogg volume=50]
+[wait time=600]
 授業中、ノートにペンを走らせながらも、拓海の思考は龍也に向かっていた。[p]
 優秀な兄と父親を持つ龍也が、家庭でどれほどのプレッシャーを感じているのかを想像した。[p]
 かつてはサッカー部で人気者だったが、退部してからは攻撃的になり、周囲との距離が広がっている。[p]
@@ -52,12 +54,14 @@
 そして、龍也もその悩みを抱えているのではないか……。[p]
 
 思考が深まり、自然と三つ隣の席に座る恵の方に視線が移った。[p]
-
+[wait time=600]
 [auto_chara name="恵" face="normal"]
 その瞬間、何故かわからないが、恵と目が合った。[p]
+[wait time=600]
 彼女はすぐに目を逸らしたが、わずかに口元だけでほほ笑んで見せた。[p]
-
+[wait time=600]
 [auto_chara name="拓海" face="normal2"]
+[wait time=600]
 拓海は再びノートに目を戻し、授業に集中しようと努めた。[p]
 [playse storage=se/smartphone_vibrate.ogg volume=35]
 [wait time=400]
@@ -228,19 +232,27 @@
 
 [chara_hide_all time=300]
 [playse storage=se/restaurant_ambience.ogg volume=18]
+[bg storage="black.png" time=0 wait=false]
+[wait time=1500]
 結局、その日は夜遅くまで作戦会議が続いた。[p]
 店員がラストオーダーを告げに来なければ、もっと長引いていただろう。[p]
-;シャワーの音入れたい。
-帰宅後、湯船に浸かりながら、拓海は久々に心地よい疲れを感じていた。[p]
-
+[wait time=1500]
 [fadeoutbgm time=800]
 [stopse fadeout=800]
-[bg storage="bg_family_restaurant_evening.webp" time=800]
-[playbgm storage="tension_low.ogg" loop=true volume=42 fadein=true time=1200]
+[playse storage=se/shower.ogg volume=50]
+帰宅後、湯船に浸かりながら、拓海は久々に心地よい疲れを感じていた。[p]
+全てが善行だとは決して思ってはいけないのだけれど、[r][i]
+誰かのためになるかもしれないことが嬉しく、[r][i]
+そして楽しくもあった。[p]
+[wait time=2000]
+[fadeoutbgm time=800]
+[stopse fadeout=800]
 
+[playse storage=se/bag_zipper.ogg volume=50]
 土曜日の17時頃、拓海は護身用に刃渡り5センチの園芸用バサミをカバンに入れ、[r]
 いつものファミレスに向かった。[p]
-
+[bg storage="bg_family_restaurant_evening.webp" time=800]
+[playbgm storage="tension_low.ogg" loop=true volume=42 fadein=true time=1200]
 今日は恵の方が先に着いていた。[r]
 恵の母親が、上司を駅まで迎えに行くのが18時だというので、まだ1時間の余裕がある。[p]
 
@@ -312,6 +324,7 @@
 皆どこか品が感じられる気がした。[p]
 
 [wait time=900]
+[playse storage=se/wind_rooftop.ogg volume=18]
 じっと待っていると、夜風が冷たく感じ始めた。[p]
 
 肌寒いな……。[p]
@@ -353,7 +366,7 @@
 [wait time=900]
 だがその瞬間――二人の姿がエントランスに現れた。[p]
 [stopse fadeout=500]
-[playse storage=se/footstep_asphalt.ogg volume=35]
+[playse storage=se/leather_shoes_walk.ogg volume=35]
 
 響子が先導するように歩き、その後ろを恰幅の良い男が追いかける。[p]
 あれが高田か……。[p]
@@ -365,6 +378,7 @@
 高田は駅前のスーパーのビニール袋を持っている。[p]
 中身は見えないが、きっと行きがけに寄り道して、お酒やつまみを買ったのだろう。[p]
 
+[playse storage=se/auto_door.ogg volume=35]
 響子がエントランスのパネルにキーをかざすと、自動ドアが開き、[r]
 二人はマンションの中に消えていった。[p]
 
@@ -404,13 +418,13 @@
 [bg storage="bg_apartment_hallway_night.webp" time=800]
 [playse storage=se/elevator_ding.ogg volume=28]
 
-十分後、二人はインターホンを鳴らさずに、静かに五階の玄関の前まで上がった。[p]
+十分後、二人は、静かに五階の玄関の前まで上がった。[p]
 互いに顔を見合わせ、無言のまま覚悟を確認する。[p]
 拓海は軽く息を吸い込み、気持ちを整えた。[p]
 
 [auto_chara name="恵" face="serious"]
 恵がインターホンを押す。[p]
-[playse storage=se/intercom.ogg volume=30]
+[playse storage=se/interphone.ogg volume=50]
 
 「はい」すぐに響子の声が応えた。[p]
 
@@ -419,6 +433,8 @@
 「今行くわ」[p]
 
 [wait time=600]
+[playse storage=se/door_lock_open.ogg volume=50]
+
 しばらくして、玄関のドアが静かに開いた。[p]
 
 「恵、どうしたの。外にいなさいって言ったでしょ」響子は若干眉をひそめたが、すぐに拓海と目が合った。[p]
