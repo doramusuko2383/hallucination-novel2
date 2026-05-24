@@ -118,7 +118,8 @@
 
 [bg storage="ch01_sc01_rooftop_wait.webp" time=600]
 
-;向き直る靴の音
+[playse storage=se/foot.ogg volume=50]
+
 [wait time=800]
 「来たか」[l]三人の中でも一番背の高い、リーダー格の龍也が拓海を見て言う。[p]
 
@@ -248,7 +249,7 @@
 
 [wait time=900]
 「くっ―――」[l]
-;倒れこむ音入れる
+[playse storage=se/fall_down.ogg volume=50]
 拓海は体をくの字に曲げて、膝を着いた。[p]
 
 [wait time=700]
@@ -264,7 +265,7 @@
 「明日も昼休み来いよ」[l]
 
 と龍也が言って屋上から出ようとすると、[r]残りの二人もぞろぞろと従っていく。[p]
-;三人の靴音
+[playse storage=se/three_walk.ogg volume=50]
 [wait time=500]
 
 「グローブ……いつものとこにしまっとけ」[l][r]
@@ -274,6 +275,7 @@
 
 [wait time=900]
 
+[playse storage=se/throw_globe.ogg volume=50]
 一人取り残された拓海は、グローブを乱暴に外して傍らに放った。[p]
 
 [wait time=700]
@@ -473,6 +475,7 @@
 [wait time=1800]
 
 「お前、なに学校休んでんだよっ！」[l]
+[playse storage=se/punch3.ogg volume=50]
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
 [playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
 [wait time=600]
@@ -487,6 +490,7 @@
 [auto_chara name="龍也"]
 「グローブ片付けずに帰ったろ。雨で濡れてんじゃねえかっ」[l][r]
 そう怒鳴りふくらはぎを回し蹴りしてくる。[l]
+[playse storage=se/punch3.ogg volume=50]
 龍也は以前サッカー部だったのだ。[l]
 そのせいだろうか、手より足が先に出るタイプだ。[p]
 [auto_chara name="翔太"]
