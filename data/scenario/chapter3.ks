@@ -47,6 +47,7 @@
 
 [wait time=400]
 [auto_chara name="拓海" face="convenience"]
+[playse storage=se/megane_and_hat.ogg volume=40]
 準備してきた深めのバケットハットを被り、サングラスをかける。[p]
 
 マスクまでするのは不自然かもしれない、と一瞬思ったが、[r][l]
@@ -175,7 +176,7 @@
 
 彩香は無言でバーコードを通し、[r][l]
 男は「どうも」とだけ言って店を出ていった。[p]
-[playse storage=se/convenience_door.ogg volume=25]
+[playse storage=se/convenience_door.ogg volume=15]
 [wait time=700]
 自動ドアの開閉音が遠ざかる。[p]
 [wait time=700]
@@ -207,22 +208,23 @@
 
 [auto_chara name="綾香" face="convenience"]
 「承知しました」[p]
-
+[playse storage=se/in_plastic_bag.ogg volume=50]
+[wait time=500]
 綾香は無機質な声で答え、商品をビニール袋に詰め始めた。[p]
-
+[wait time=500]
 彼女の手が自然に動くたびに、拓海の心拍は速くなる。[p]
 
 [chara_hide_all time=300]
 [wait time=500]
 
 いよいよだ、と拓海は覚悟を決めた。[p]
-
+[wait time=500]
 翔太の時とは違う。[p]
-
+[wait time=500]
 あれは偶然だった。[p]
-
+[wait time=500]
 だが今回は、自分の意思でやる。[p]
-
+[wait time=500]
 少しの躊躇いはあったが、[r][l]
 自分自身を守るために必要なことなのだ。[p]
 
