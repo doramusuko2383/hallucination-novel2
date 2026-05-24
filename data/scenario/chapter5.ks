@@ -278,8 +278,8 @@
 [playse storage=se/wind_rooftop.ogg loop=true volume=55]
 [playbgm storage="tension_high.ogg" loop=true volume=45 fadein=true time=1000]
 昼休み、呼び出された屋上に向かうと、龍也は屋上の真ん中で腕を組み、入口に背を向けて立っていた。[p]
-;ドアが閉まる音
-ドアが閉まる音に反応し、彼は踵を返した。[p]
+;ドアが開く音
+ドアが開く音に反応し、彼は踵を返した。[p]
 [auto_chara name="龍也" face="angry"]
 「お前、綾香に何をしたんだ！」[p]
 龍也は声を荒げると同時に、いきなり拓海に殴りかかってきた。[p]
