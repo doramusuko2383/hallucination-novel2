@@ -467,7 +467,7 @@
 
 [chara_hide_all time=300]
 [bg storage="bg_megumi_room_night.webp" time=800]
-[playse storage=se/door_close_soft.ogg volume=30]
+[playse storage=se/door_close.ogg volume=30]
 恵の部屋は玄関のすぐ横にあった。[p]
 広さはさほどではないが、整然と片付けられていて、家具の配置にも工夫が見られる。[p]
 カーテンが薄いピンク色でなければ、どこか男の部屋を思わせるようなシンプルさがあった。[p]
@@ -484,7 +484,7 @@
 
 「よろしく」拓海は小さくうなずき、恵が部屋を出て行くのを見送った。[p]
 
-[playse storage=se/room_tone.ogg loop=true volume=18 fadein=true time=800]
+;[playse storage=se/room_tone.ogg loop=true volume=18 fadein=true time=800]
 高田はリビングにいるんだろうが、ここからじゃ何も見えない……。[p]
 彼は耳を澄まし、恵の動きと、高田の様子に集中した。[p]
 
@@ -530,7 +530,7 @@
 恵はホットコーヒーを二つ準備しながら、扉のない食器棚に手を伸ばす瞬間、[r]
 スマホをさりげなく食器の裏に隠して設置した。[p]
 見られているような気がして、どこか動きがぎくしゃくしてしまう。[p]
-
+[playse storage=se/door_close.ogg volume=30]
 急ぎ足で部屋に戻ってきた恵は、ゆっくりと扉を閉めた。[p]
 そして、拓海のイヤホンの片耳を受け取り、二人は再び状況に集中した。[p]
 
@@ -610,12 +610,12 @@
 
 [chara_hide_all time=300]
 [bg storage="bg_station_night.webp" time=900]
-[playse storage=se/train_approach.ogg volume=28]
 響子の見送りの声が聞こえ、高田が玄関を出た。[p]
 駅までは一本道。[p]
 幸い、拓海の顔は高田に割れていない。[p]
 一定の距離を保てば気づかれることはないだろう。[p]
 
+[playse storage=se/train_coming.ogg volume=28]
 高田が改札を抜け、上り電車のホームに並んだ。[p]
 夜も遅く、ホームにはほとんど人がいない。[p]
 
@@ -634,7 +634,11 @@
 感謝されるのも、悪くないな……。[p]
 
 [bg storage="bg_train_inside_night.webp" time=600]
+
+[playse storage=se/traindoor.ogg volume=50]
 電車がホームに滑り込み、拓海は隣の車両に乗り移った。[p]
+[wait time=1000]
+[playse storage=se/train_running.ogg volume=50]
 
 空いている車内を見渡すと、高田は優先席に腰掛け、スマホをいじっている。[p]
 気づかれる様子はない。[p]
@@ -642,13 +646,15 @@
 拓海は車両と車両の間の扉に近い席に座り、斜め向かいから様子を見守ることにした。[p]
 
 高田は7つ目の駅で降りたあと、さらに別の電車に乗り換え、5つ目の駅で再び降りた。[p]
+[wait time=2000]
+[stopse fadeout=2000]
 駅前には大きな商業施設はなかったが、スーパーやカフェ、薬局など、生活に必要な店が揃っている。[p]
 
 住宅街か……家までついていけるな。[p]
 そう判断した拓海は、高田の後ろ100メートルほどの距離を保ちながら、静かに尾行を続けた。[p]
 
 [bg storage="bg_residential_night.webp" time=900]
-[playse storage=se/night_wind.ogg volume=20]
+[playse storage=se/wind_rooftop.ogg volume=20]
 途中で2回ほど角を曲がられたが、幸い見失うことなくついていけた。[p]
 高田は閑静な住宅地に足を踏み入れた。[p]
 
@@ -677,9 +683,5 @@
 
 [fadeoutbgm time=1000]
 [stopse fadeout=800]
-
-; SE素材提案（未所持想定）
-;[playse storage=se/elevator_move.ogg volume=25] ; エレベーター移動中の低い駆動音があると没入感が増す
-;[playse storage=se/key_touch_panel.ogg volume=20] ; オートロックのキー接触音を入れると導入が自然
 
 @jump storage="chapter5.ks" target="*chapter5"
