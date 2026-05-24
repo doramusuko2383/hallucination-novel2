@@ -45,7 +45,7 @@
 特別進学クラスという、難関大学への入学を目指すクラスに在籍していた。[p]
 
 [wait time=500]
-;授業中の黒板に何か書く音
+[playse storage=se/black_board.ogg volume=50]
 英語の授業中、隣の席をちらっと見ると、[r]
 生徒がこっそり古文の問題集を開いている。[p]
 
@@ -164,7 +164,7 @@
 [wait time=700]
 
 12月の寒い冬の放課後――。[p]
-
+[playse storage=se/washroom.ogg volume=50]
 [bg storage="bg_washroom_day.webp" time=800]
 トイレに入ると、そこには二人の生徒が立っていた。[p]
 
@@ -264,13 +264,13 @@
 
 龍也はそう言い残し、トイレを出ていった。[p]
 
-[playse storage=se/footstep_stairs.ogg volume=18]
+[playse storage=se/leather_shoes_walk.ogg volume=50]
 [chara_hide_all time=300]
 [wait time=700]
 
 拓海はその場から動けず、[r]
 体が凍りついたように感じた。[p]
-
+[playse storage=se/run.ogg volume=35]
 気がつくと、もう一人の生徒もその場を逃げ出していた。[p]
 
 目を合わせることさえ避けるように、無言で去っていった。[p]
@@ -709,6 +709,8 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 今がチャンスだ。[p]
 
+[playse storage=se/chair.ogg volume=50]
+[wait time=600]
 拓海は心の中でそう決意し、ゆっくりと席を立つ。[p]
 
 [playse storage=se/heartbeat.ogg loop=true volume=40]
