@@ -23,6 +23,8 @@
 
 拓海は、恵と協力関係を結び、彼女の助けを借りて龍也の身辺調査を進めていた。[p]
 
+;ここ、調査パートみたいに、恵と会話形式で情報開示した方がゲームっぽいかも？
+
 恵の母親・響子の件については、高田の素性がまだ掴めていないため、[r]
 まずは龍也の問題を片づけることにしたのだった。[p]
 
@@ -123,7 +125,7 @@
 [auto_chara name="拓海" face="serious"]
 「でも、やらない選択肢はない。今さら後戻り出来ないし」[p]
 
-拓海は、自分自身に言い聞かせるように言葉を強めた。[r]
+拓海は、自分自身に言い聞かせるように言葉を強めた。[r][i]
 決断が揺らがないように。[p]
 
 [auto_chara name="恵" face="serious"]
@@ -131,7 +133,7 @@
 [playse storage=se/iced_cofee.ogg volume=75]
 恵は頷きながら、注文したドリンクを一口飲んだ。[p]
 
-「こっちの計画については、何か進展があったらまた連絡するよ。[r]
+「こっちの計画については、何か進展があったらまた連絡するよ。[r][i]
 それより……今日の話、別に理由があるんでしょ？」[p]
 
 拓海はテーブルに置かれたコーヒーを見つめながら、本題に入るよう促した。[p]
@@ -178,12 +180,12 @@
 
 [auto_chara name="恵" face="serious"]
 「え？」[l]
-恵は少し驚いてから、くすっと笑った。[r]
+恵は少し驚いてから、くすっと笑った。[p]
 「なんかキャラに合わないこと言うね」[p]
 
 [auto_chara name="拓海" face="normal2"]
-「いたって真剣だよ。[r]
-お母さんは、娘を危険な目に遭わせたくないから外にいろって言ってるんだろうけど、[r]
+「いたって真剣だよ。[r][i]
+お母さんは、娘を危険な目に遭わせたくないから外にいろって言ってるんだろうけど、[r][i]
 俺と一緒なら、その心配もクリアできるんじゃない？」[p]
 
 [auto_chara name="恵" face="serious"]
@@ -231,7 +233,7 @@
 「うん、あらゆる可能性を考えて、どんな展開になっても対応できるようにしておこう」[p]
 
 [chara_hide_all time=300]
-[playse storage=se/restaurant_ambience.ogg volume=18]
+[playse storage=se/restaurant_ambience.ogg volume=30]
 [bg storage="black.png" time=0 wait=false]
 [wait time=1500]
 結局、その日は夜遅くまで作戦会議が続いた。[p]
@@ -301,10 +303,9 @@
 この後に待ち構えている事態を考えて、彼は気を引き締めた。[p]
 
 [chara_hide_all time=300]
-[playse storage=se/door_bell.ogg volume=30]
 [wait time=300]
 [bg storage="bg_mansion_night.webp" time=1000]
-[playse storage=se/night_wind.ogg loop=true volume=25 fadein=true time=1000]
+[playse storage=se/wind_low.ogg volume=30 fadein=true time=1000]
 
 二人は会計を済ませ、店を出た。[p]
 外はすでに暗くなり、空気がひんやりしている。[p]
