@@ -30,7 +30,7 @@
 
 [font speed=40]
 
-[bg storage="bg_classroom_day.webp" time=800]
+[bg storage="bg_classroom_day_ch1.webp" time=800]
 [playbgm storage="classroom_ buzzing.ogg" loop=true volume=50 fadein=true]
 教室の窓から見上げる空は、
 重く、禍々しく、
@@ -88,10 +88,10 @@
 教師にもクラスメイトにも見えないところで行われるこの「日課」を、[r]誰にも相談することができない。[p]
 
 [wait time=400]
-
-屋上までの暗い階段を上がってドアを静かに開ける。[p]
 [playse storage=se/footstep_stairs.ogg volume=30]
 [wait time=2800]
+[bg storage="bg_rooftop_door.webp" time=600]
+屋上までの暗い階段を上がってドアを静かに開ける。[p]
 [playse storage=se/roof_door.ogg volume=30]
 [wait time=600]
 *ch1_rooftop
@@ -99,7 +99,7 @@
 ;------------------------
 ; 屋上
 ;------------------------
-[bg storage="bg_rooftop_day.webp" time=600]
+[bg storage="bg_rooftop_day_ch1.webp" time=600]
 
 [playse storage=se/wind_rooftop.ogg volume=20]
 [playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
@@ -126,7 +126,7 @@
 [wait time=300]
 
 声は淡々としているが、その視線は鋭い。[p]
-[bg storage="bg_rooftop_day.webp" time=600]
+[bg storage="bg_rooftop_day_ch1.webp" time=600]
 [auto_chara name="龍也"]
 「じゃあ、いつものやつやろうぜ」[l]
 
