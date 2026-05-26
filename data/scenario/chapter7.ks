@@ -329,9 +329,13 @@
 「食べてく？」[p]
 [auto_chara name="拓海" face="serious"]
 「そうだね。お言葉に甘えて」[p]
-;料理の音
-;食事の音
+[playse storage=se/cooking.ogg volume=50]
+[wait time=5000]
+[playse storage=se/dinner.ogg volume=50]
+[wait time=3000]
 いつものファミレス以外のところで一緒に食事をしたのは、初めてのことだった。[p]
+
+;※※ここあっさりしているので書き足す
 
 [wait time=500]
 あの出来事のあと聞いたことだが、高田は異動願いを出して別の部署になったそうだ。[p]
@@ -535,7 +539,7 @@
 [bg storage="bg_family_restaurant_night.webp" time=900]
 [playbgm storage="morning_city.ogg" loop=true volume=30 fadein=true time=900]
 「卒業おめでとう！」[p]
-;グラスが触れ合う音
+[playse storage=se/kanpai.ogg volume=100]
 卒業式の夜、拓海と恵はいつものファミレスに集まり、ドリンクバーのグラスで軽く乾杯を交わした。[p]
 
 [auto_chara name="拓海" face="normal"]
