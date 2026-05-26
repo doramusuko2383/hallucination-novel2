@@ -37,11 +37,10 @@
 拓海はマイクをミュートに設定して、やりとりを聞けるようにした。[p]
 
 [bg storage="bg_station_night.webp" time=700]
-[playse storage=se/footstep_stairs.ogg volume=40]
+[playse storage=se/run.ogg volume=100]
 自転車で急げば5分程度の距離だ。[r]
 車を追い越す勢いでペダルを漕いだ。[p]
-;自転車のペダルをこぐ音
-;風の音を混ぜる
+[playse storage=se/bicycle.ogg volume=100]
 その間も、ずっと会話のやりとりを聞いていた。[p]
 
 会話の内容を聞いて、陳腐なドラマみたいだな、と拓海は思った。[p]
@@ -64,20 +63,23 @@
 そうなってくると高田の思う通りになってしまうかもしれない。[r]
 それだけは防がなければ！[p]
 
-[playse storage=se/footstep_stairs.ogg volume=55]
-;ブレーキの音
+[playse storage=se/bicycle_brake.ogg volume=100]
+[wait time=2000]
+[playse storage=se/bicycle_stand.ogg volume=100]
 拓海は恵のマンションの駐輪場に自転車を乗り捨て、壁をよじ登り、裏からマンションに侵入した。[p]
 
 人目を気にしている場合ではない。[r]
 そのまま階段を駆け上がる。[p]
-;階段を駆け上がる音
+
+[playse storage=se/dush.ogg volume=100]
+[wait time=2000]
 [bg storage="bg_megumi_living_night.webp" time=500]
-[playse storage=se/knock_door.ogg volume=20]
+[playse storage=se/door_open_suddenly.ogg volume=100]
 五階の家の玄関に着くと、拓海はドアを勢いよく開けた。[p]
-;勢いよくドアを開ける音
+
 幸いカギはされていなかった。[r]
 玄関からリビングを見やるが誰もいない！[p]
-;部屋をばたばた足音
+[playse storage=se/dush.ogg volume=100]
 拓海は靴を脱ぎ捨てて家に上がる。[r]
 恵はどこだ？[p]
 
@@ -91,7 +93,7 @@
 
 [bg storage="bg_megumi_room_night.webp" time=500]
 [auto_chara name="恵" face="pain"]
-;勢いよくドアを開ける音
+[playse storage=se/door_open_suddenly.ogg volume=100]
 玄関のすぐ隣の部屋のドアを開けた。[r]
 恵は部屋の奥の隅に座り込んで、何かを手に持って構えている。[p]
 
