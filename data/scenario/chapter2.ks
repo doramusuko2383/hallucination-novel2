@@ -668,7 +668,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 [bg storage="bg_hallway_day.webp" time=700]
 そんな中、ある日、放課後ふと目に入った光景が、[r]
 拓海の胸を騒がせた。[p]
-[bg storage="ch2_ayaka_and_megumi.webp.webp" time=700]
+[bg storage="ch2_ayaka_and_megumi.webp" time=700]
 綾香が、同じクラスの菊池恵と一緒に帰っている姿を見かけたのだ。[p]
 
 恵は特に親しいわけでもないが、クラスメイトだ。[p]
