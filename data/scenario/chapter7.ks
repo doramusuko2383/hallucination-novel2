@@ -15,8 +15,7 @@
 
 [bg storage="bg_takumiroom_night.webp" time=800]
 [playbgm storage="tension_low.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/keyboard_typing.ogg volume=25]
-;スマホのバイブ
+[playse storage=se/smartphone_vibrate.ogg volume=50]
 ワックスで髪をセットしているときにスマホが鳴った。[p]
 
 恵からだ。[l][r]
