@@ -554,8 +554,8 @@
 [chara_hide_all]
 まだやらなくてはいけないことが残ってはいるが、たまにはこんな日があってもいいのだ。[p]
 [fadeoutbgm time=700]
-[bg storage="bg_megumi_house_night.webp" time=800]
-[playbgm storage="night_quiet.ogg" loop=true volume=30 fadein=true time=1000]
+[bg storage="bg_megumi_living_night.webp" time=800]
+[playbgm storage="room_noise.ogg" loop=true volume=30 fadein=true time=1000]
 [playse storage=se/interphone.ogg volume=45] ; インターホンSE素材があれば差し替え推奨
 土曜日の夜、インターホンが鳴った。[p]
 約束の時間よりは大分早い。[p]
@@ -672,6 +672,6 @@
 じゃあまずは、[i]服を脱ごうか――」[p]
 [resetdelay]
 [resetfont]
-;[playse storage=se/fence_creak.ogg volume=20] ; 素材があれば、この直前で椅子を引くSEを追加
+;[playse storage=se/chair.ogg volume=20] ; 素材があれば、この直前で椅子を引くSEを追加
 
 @jump storage="chapter7.ks" target="*chapter7"
