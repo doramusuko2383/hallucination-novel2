@@ -363,6 +363,7 @@
 [playbgm storage="psycho.ogg" loop=true volume=45 fadein=true time=1200]
 その日の夜、拓海は悪夢にうなされた。[p]
 突然、黒いスーツを着た何人もの男たちに取り囲まれ、無理やり連行される。[p]
+[bg storage="bg_takumi_nightmare.webp" time=800]
 気がつくと、裁判所の法廷に立たされていた。[p]
 傍聴席に目を向けると、そこには翔太や綾香、そして恵の姿も見える。[p]
 傍聴席からは、「あいつがやったんだ」「同じ目に遭わせろ！」という激しいヤジが飛び交っていた。[p]
