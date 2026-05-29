@@ -34,8 +34,8 @@
 
 [wait time=500]
 拓海はマイクをミュートに設定して、やりとりを聞けるようにした。[p]
-
-[bg storage="bg_station_night.webp" time=700]
+[wait time=1000]
+[bg storage="bg_megumi_mansion_back.webp" time=700]
 [playse storage=se/run.ogg volume=100]
 自転車で急げば5分程度の距離だ。[r]
 車を追い越す勢いでペダルを漕いだ。[p]
@@ -61,6 +61,8 @@
 
 そうなってくると高田の思う通りになってしまうかもしれない。[r]
 それだけは防がなければ！[p]
+
+[bg storage="bg_megumi_mansion_back entrance.webp" time=500]
 
 [playse storage=se/bicycle_brake.ogg volume=100]
 [wait time=2000]
