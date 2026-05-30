@@ -196,7 +196,10 @@
 [auto_chara name="拓海" face="serious"]
 「まったく、最後まで迷惑かけやがって」[r]
 拓海は雑巾を固く絞りながら言った。[p]
-;床を布で拭く音
+
+[playse storage=se/dust_cloth.ogg volume=50]
+[playse storage=se/wipe.ogg volume=50]
+
 [bg storage="bg_megumi_room_night.webp" time=700]
 [playse storage=se/room_noise.ogg loop=true volume=20]
 [auto_chara name="恵" face="normal"]
@@ -335,9 +338,11 @@
 [playse storage=se/dinner.ogg volume=50]
 [wait time=3000]
 いつものファミレス以外のところで一緒に食事をしたのは、初めてのことだった。[p]
+目の前では、恵が何かを話している。[p]
+その内容はもう覚えていない。[p]
+ただ、その時の拓海は不思議なくらい穏やかな気持ちだった。[p]
 
-;※※ここあっさりしているので書き足す
-
+[bg storage="black.png" time=1000]
 [wait time=500]
 あの出来事のあと聞いたことだが、高田は異動願いを出して別の部署になったそうだ。[p]
 
@@ -354,11 +359,13 @@
 正直に言って、勉強に集中できなかったし、成績も落ちていた。[r]
 上位の成績をキープしていた恵とは対照的に、だ。[p]
 
-[bg storage="bg_classroom_day2.webp" time=1000]
-[playse storage=se/school_chime.mp3 volume=25]
 黒森学園は進学校だ。[r]
 二人とも学業に専念することを約束して、残りの高校生活を励まし合って頑張った。[r]
 大学進学という新しい目標もできたのだ。[p]
+
+[wait time=2000]
+[bg storage="bg_classroom_graduation_evening.webp" time=1000]
+[playse storage=se/school_chime.mp3 volume=25]
 
 制服の左胸に付けられた白い花が少し照れくさい。[r]
 でも不思議と嫌な気持ちはしなかった。[p]
@@ -366,19 +373,19 @@
 今日の空は晴れ渡っていて、まるで自分たちを祝福するように明るく照らしている。[r]
 拓海はふと、入学式の日を思い出した。[p]
 
-あの日は酷く冷たい雨が降っていたことを思い出す。[r]
+あの日は酷く冷たい雨が降っていたことを思い出す。[p]
 「これからの学園生活は、あまり良いことがないのかもしれない」と漠然と思ったものだ。[p]
 
-けれど、今こうして迎えた卒業式の日。[r]
+けれど、今こうして迎えた卒業式の日。[p]
 空は青く澄み、心を満たすような陽射しが降り注いでいる。[p]
 
-悪いことばかりじゃなかった。[r]
-苦しみもあれば、救いもあった。[r]
+悪いことばかりじゃなかった。[p]
+苦しみもあれば、救いもあった。[p]
 まるで、神様が最終的にバランスを取ってくれたかのようだ。[p]
 
 今日のこの晴れ間は、有終の美を飾るためのご褒美として、素直に受け入れようと拓海は思った。[p]
 
-[bg storage="bg_hallway_day.webp" time=800]
+[bg storage="bg_graduation_hall_day.webp" time=1000]
 体育館に入ると、紅白の幕で飾られた広い空間が、ひんやりと冷たい空気に包まれている。[p]
 
 正装をした先生たちが、普段とは違う厳粛な雰囲気を漂わせていた。[r]
@@ -400,8 +407,8 @@
 目を左に移すと、小柄でセミロングの後ろ姿が見えた。[r]
 綾香だ。[p]
 
-彼女もまた卒業式に出席している姿に少し安心を覚える。[r]
-彼女は一時、学校に通うことすら難しい状態だったが、少しずつ前を向けるようになった。[p]
+彼女もまた卒業式に出席している姿に少し安心する。[r]
+綾香は一時、学校に通うことすら難しい状態だったが、少しずつ前を向けるようになった。[p]
 
 そして趣味の絵を再び描き始めた。[r]
 絵の専門学校に通い、卒業後は美大を目指して浪人することを決めたようだ。[r]
@@ -421,13 +428,12 @@
 それでも、ひねくれるほど嫌な思い出ばかりだったわけでもない。[r]
 色んなことがあった――そう思うと、自然と胸が温かくなるのを感じた。[p]
 
-[bg storage="bg_classroom_day.webp" time=800]
+[bg storage="bg_classroom_graduation_evening.webp" time=1000]
 卒業式が終わり、教室に戻ると、どこかそわそわした雰囲気が漂っていた。[p]
 
 最後の担任の話に耳を傾ける生徒たちからは、別れの空気が感じられる。[r]
 そんな中、スマホが震えた。[p]
-;スマホのばいぶ音
-;[playse storage=se/keyboard_typing.ogg volume=22]
+[playse storage=se/smartphone_vibrate.ogg volume=50]
 「このあと屋上に来れるか」[p]
 
 龍也からだった。[r]
@@ -450,7 +456,7 @@
 「じゃあ、私も一緒に行ってもいい？」と静かに尋ねた。[p]
 
 [fadeoutbgm time=700]
-[bg storage="bg_rooftop_day.webp" time=900]
+[bg storage="bg_rooftop_day2.webp" time=900]
 [playbgm storage="suspense.ogg" loop=true volume=25 fadein=true time=1200]
 [playse storage=se/wind_rooftop.ogg loop=true volume=30]
 拓海は屋上へと続く階段を一歩一歩上がっていた。[r]
@@ -646,14 +652,9 @@
 [auto_chara name="恵" face="normal"]
 「そうね。高田のときに使えなかったもんね」[p]
 [auto_chara name="拓海" face="normal"]
-「うん……でも、もしかして憎しみ以外の強い感情なら、ひょっとして……使えるんじゃないかって」[p]
+「うん……でも、相手を強く思った時にも使えるのかなって」[p]
 
-[auto_chara name="恵" face="normal"]
-「例えば？」恵が不思議そうに問いかける。[p]
-[auto_chara name="拓海" face="normal"]
-「例えば……『好き』って感情とか」[p]
-
-[wait time=1000]
+[wait time=2000]
 [stopbgm fadeout=1200]
 そう言いながら、拓海はそっと恵の手を両手で包み込むように握った。[p]
 
