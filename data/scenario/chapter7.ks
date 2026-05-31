@@ -101,9 +101,7 @@
 拓海が渡したクマ撃退用スプレーだ。[r]
 それを高田がやめさせようと向かい合っていた。[p]
 
-; 高田立ち絵素材が未実装のため、必要なら以下を追加
-; [chara_show name="高田" face="normal" pos="right"]
-
+[auto_chara name="高田" face="angry"]
 「誰だお前は！」[p]
 
 [auto_chara name="拓海" face="serious"]
@@ -125,15 +123,18 @@
 拓海は激しい怒りが湧いてきた。[r]
 「どういうことだ」高田に詰め寄る。[p]
 
+[auto_chara name="高田" face="anxious"]
 「ちょっと待て、俺は何もしていない」[r]
 高田は手を前に突き出して否定した。[p]
 [auto_chara name="拓海" face="serious"]
 「聞いてたぞ」[p]
 
+[auto_chara name="高田" face="confuse"]
 「何だって？」[p]
 [auto_chara name="拓海" face="serious"]
 「お前が嘘出任せで、『協力』しろとか言ってたのも聞いていた」[p]
 
+[auto_chara name="高田" face="badmood"]
 「何の話だそれは」[r]
 高田はシラを切り通すつもりだ。[p]
 
@@ -144,6 +145,7 @@
 
 [wait time=800]
 ;後ずさる音
+[auto_chara name="高田" face="pale"]
 「なっ……やめろ！」高田は叫んで後ずさった。[p]
 
 [auto_chara name="拓海" face="serious"]
@@ -162,6 +164,7 @@
 「このハサミ、こんなに気に入っているのに、残念だな。[r]
 汚れてしまうなんて」[p]
 
+[auto_chara name="高田" face="angry"]
 「おまえっ！」[p]
 [auto_chara name="拓海" face="serious"]
 「おっと、動くな」[r]
@@ -170,6 +173,7 @@
 「これ、クマ除けのスプレーだ。[r]
 人に使うものじゃないから、どうなるか保証できない」[p]
 
+[auto_chara name="高田" face="anxious"]
 「くっ……」高田は動くのを諦めた。[r]
 「どうして欲しいんだ」[p]
 
@@ -178,6 +182,7 @@
 また響子さんの仕事に一切影響が出ない様にしろ。[r]
 いいな」[p]
 
+[auto_chara name="高田" face="pale"]
 「わかった。約束しよう」高田はうなだれた。[p]
 
 恵の方をちらっと見ると、まだ恐怖に脅えた顔をしている。[p]
