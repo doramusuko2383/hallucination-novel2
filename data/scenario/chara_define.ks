@@ -75,13 +75,14 @@
 
 [chara_new name="高田" storage="chara/takada/normal.png" scale=0.50 top=100]
 [chara_face name="高田" face="normal" storage="chara/takada/normal.png"]
-[chara_face name="高田" face="shout" storage="chara/takada/shout.png"]
-[chara_face name="高田" face="pain" storage="chara/takada/pain.png"]
-[chara_face name="高田" face="serious" storage="chara/takada/serious.png"]
-[chara_face name="高田" face="dark" storage="chara/takada/dark.png"]
-[chara_face name="高田" face="smile" storage="chara/takada/smile.png"]
-[chara_face name="高田" face="sad" storage="chara/takada/sad.png"]
 [chara_face name="高田" face="angry" storage="chara/takada/angry.png"]
+[chara_face name="高田" face="pale" storage="chara/takada/pale.png"]
+[chara_face name="高田" face="badmood" storage="chara/takada/badmood.png"]
+[chara_face name="高田" face="confuse" storage="chara/takada/confuse.png"]
+[chara_face name="高田" face="anxious" storage="chara/takada/anxious.png"]
+[chara_face name="高田" face="nastysmile" storage="chara/nastysmile/dark.png"]
+
+
 [chara_face name="高田" face="scared" storage="chara/takada/scared.png"]
 [chara_face name="高田" face="laugh" storage="chara/takada/laugh.png"]
 [return]
