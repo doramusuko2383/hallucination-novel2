@@ -26,15 +26,9 @@
 
 [chara_new name="龍也" storage="chara/ryuya/normal.webp" scale=0.5 top=80]
 [chara_face name="龍也" face="normal" storage="chara/ryuya/normal.webp"]
-[chara_face name="龍也" face="shout" storage="chara/ryuya/shout.webp"]
-[chara_face name="龍也" face="pain" storage="chara/ryuya/pain.webp"]
-[chara_face name="龍也" face="serious" storage="chara/ryuya/serious.webp"]
-[chara_face name="龍也" face="dark" storage="chara/ryuya/dark.webp"]
 [chara_face name="龍也" face="smile" storage="chara/ryuya/smile.webp"]
-[chara_face name="龍也" face="sad" storage="chara/ryuya/sad.webp"]
 [chara_face name="龍也" face="angry" storage="chara/ryuya/angry.webp"]
-[chara_face name="龍也" face="scared" storage="chara/ryuya/scared.webp"]
-[chara_face name="龍也" face="laugh" storage="chara/ryuya/laugh.webp"]
+[chara_face name="龍也" face="sad" storage="chara/ryuya/sad.webp"]
 
 [chara_new name="綾香" storage="chara/ayaka/normal.webp" scale=0.45 top=105]
 [chara_face name="綾香" face="normal" storage="chara/ayaka/normal.webp"]
