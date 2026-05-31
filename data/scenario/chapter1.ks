@@ -10,7 +10,7 @@
 
 ; [bg] は time 省略時に3秒フェード待ちになるため、黒背景は即時切替にする
 [bg storage="black.png" time=0 wait=false]
-
+[auto_chara name="高田" face="nastysmile"]
 [font speed=80]
 「こんな奴、飛び降りて死んでしまえばいい」
 [p]
