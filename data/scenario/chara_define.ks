@@ -63,15 +63,7 @@
 
 [chara_new name="響子" storage="chara/kyoko/normal.webp" scale=0.45 top=100]
 [chara_face name="響子" face="normal" storage="chara/kyoko/normal.webp"]
-[chara_face name="響子" face="shout" storage="chara/kyoko/shout.webp"]
-[chara_face name="響子" face="pain" storage="chara/kyoko/pain.webp"]
-[chara_face name="響子" face="serious" storage="chara/kyoko/serious.webp"]
-[chara_face name="響子" face="dark" storage="chara/kyoko/dark.webp"]
-[chara_face name="響子" face="smile" storage="chara/kyoko/smile.webp"]
-[chara_face name="響子" face="sad" storage="chara/kyoko/sad.webp"]
-[chara_face name="響子" face="angry" storage="chara/kyoko/angry.webp"]
-[chara_face name="響子" face="scared" storage="chara/kyoko/scared.webp"]
-[chara_face name="響子" face="laugh" storage="chara/kyoko/laugh.webp"]
+[chara_face name="響子" face="confuse" storage="chara/kyoko/confuse.webp"]
 
 [chara_new name="高田" storage="chara/takada/normal.webp" scale=0.50 top=100]
 [chara_face name="高田" face="normal" storage="chara/takada/normal.webp"]
