@@ -186,7 +186,7 @@
 [wait time=1000]
 なんでだ？[p]
 [wait time=1000]
-[auto_chara name="高田" face="normal"]
+[auto_chara name="高田" face="confuse"]
 高田が背中の感触に気付いて振り返ったので、拓海は一瞬で我に返った。[p]
 [auto_chara name="拓海" face="normal"]
 「すみません」と謝り、足早にその場を離れる。[p]

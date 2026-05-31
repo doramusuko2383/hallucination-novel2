@@ -555,7 +555,7 @@
 
 
 [playse storage=se/heartbeat.ogg loop=true volume=45 fadein=true time=700]
-[auto_chara name="高田" face="normal"]
+[auto_chara name="高田" face="nastysmile"]
 「君によく似ている。美人な娘だね」[p]
 
 その瞬間、恵が顔をしかめた。[p]
@@ -568,7 +568,7 @@
 「娘には絶対に手を出さないでくださいよ」響子の声色が、今度は強く響く。[p]
 
 [wait time=1200]
-[auto_chara name="高田" face="normal"]
+[auto_chara name="高田" face="badmood"]
 「君が僕の言うことを聞いてくれるなら、そうしたいと思う」[p]
 
 [stopse fadeout=600]
