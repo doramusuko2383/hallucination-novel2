@@ -357,19 +357,19 @@
 「永山君、今日放課後少し時間ある？」[p]
 
 声に驚いて顔を上げると、[r]
-恵が緊張した面持ちで横に立っていた。[p]
+が緊張した面持ちで横に立っていた。[p]
 
 [auto_chara name="拓海" face="normal2"]
 「うん、大丈夫だけど」[p]
 
-[auto_chara name="恵" face="serious"]
+[auto_chara name="" face="serious"]
 「そっか。ありがとう」[p]
 
 [auto_chara name="拓海" face="normal2"]
 「何か用事だった？」[l]
 一体何の要件なんだろうか。[p]
 
-[auto_chara name="恵" face="serious"]
+[auto_chara name="" face="serious"]
 「綾香の件で、聞きたいことがあるんだ」[p]
 [fadeoutbgm time=800]
 彼女からはいつもの柔らかい雰囲気は消え、[r][l]
@@ -378,7 +378,7 @@
 「放課後、駅前のカラオケで待ち合わせしよう」[p]
 
 [chara_hide_all time=300]
-短い言葉を残して、恵はそのまま教室を出て行った。[p]
+短い言葉を残して、はそのまま教室を出て行った。[p]
 
 拓海はしばらくその場で呆然とした。[p]
 
@@ -624,10 +624,10 @@
 
 拓海は少し俯き、
 ゆっくりと口を開いた。[p]
-
+[auto_chara name="拓海" face="normal2"]
 「最初は、
 俺も何が起きたのかわからなかったんだ」[p]
-
+[chara_hide_all time=300]
 屋上で、自分自身に幻覚を見せてしまったこと。[p]
 
 飛び降りて、
@@ -701,7 +701,7 @@
 
 [wait time=500]
 
-[auto_chara name="恵" face="serious"]
+[auto_chara name="恵" face="surprise"]
 「あれ、じゃあ何で今、力を使わなかったの？」[p]
 
 [auto_chara name="拓海" face="normal2"]
@@ -794,7 +794,7 @@
 「なんで、そこまで我慢してるんだろ」[p]
 [auto_chara name="恵" face="serious"]
 「仕事辞められないから、かな……」[p]
-[auto_chara name="恵" face="normal"]
+[auto_chara name="恵" face="troubled_smile"]
 そこで恵は少し困ったように笑った。[p]
 
 「うち、母子家庭なんだよね」[p]
