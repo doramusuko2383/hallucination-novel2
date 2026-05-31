@@ -174,7 +174,7 @@
 あとから分かったことだが、[r]
 それが龍也だった。[p]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="normal"]
 もう片方は小柄で、明らかに怯えている様子の生徒。[p]
 
 何か険悪な雰囲気が漂っていたが、[r]
@@ -223,7 +223,7 @@
 
 龍也は一瞬、目を細めて拓海を見た。[p]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="angry"]
 「はあ？　お前、何か言ったか？」[p]
 
 龍也の表情が固まり、眉間にしわが寄る。[p]
@@ -239,7 +239,7 @@
 自然に口から出た言葉は、[r]
 冷静に事実を伝えただけだった。[p]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="smile"]
 「こいつは自分から進んで俺に金を貸してんだよ」[p]
 
 龍也は隣の生徒を親指で指し、[r]
@@ -259,7 +259,7 @@
 拓海の心臓が一瞬止まり、[r]
 言葉を飲み込んでしまった。[p]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="angry"]
 「お前、メンドクセーやつ。[l]あとで覚えてろよ」[p]
 
 龍也はそう言い残し、トイレを出ていった。[p]
@@ -337,7 +337,7 @@
 [playse storage=se/wind_rooftop.ogg volume=18]
 [wait time=500]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="angry"]
 「お前……翔太に何をしたんだよ」[p]
 
 いつもの昼下がりの屋上。[p]
@@ -359,7 +359,7 @@
 
 しかし、胸倉を掴まれる感触が、彼の心を揺らしていた。[p]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="angry"]
 「何もなくて、あんな風になるわけないだろ！」[p]
 
 [playse storage=se/punch1.ogg volume=35]
@@ -371,7 +371,7 @@
 [auto_chara name="拓海"]
 「あの時は、押さえつけられてて、動けなかっただろ……」[p]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="angry"]
 「知らねえよ！」[p]
 
 [playse storage=se/punch2.ogg volume=35]
@@ -393,7 +393,7 @@
 
 「証拠はあるのか？」[p]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="angry"]
 「お前がやった証拠もねぇけど、[l]やってねぇ証拠もねぇだろ！」[p]
 
 [playse storage=se/punch3.ogg volume=40]
@@ -418,7 +418,7 @@
 
 拓海はただ嵐が過ぎるのをじっと待つことしか出来なかった。[p]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="sad"]
 「お前以外に動機がねえんだよ」[p]
 
 龍也はさらに詰め寄るが、どこか躊躇いがあった。[p]
@@ -437,7 +437,7 @@
 
 それが全てだった。[p]
 
-[auto_chara name="龍也"]
+[auto_chara name="龍也" face="normal"]
 「何か変なクスリでもやってたのか……？」[p]
 
 龍也は考え込む。[p]
