@@ -51,15 +51,9 @@
 
 [chara_new name="翔太" storage="chara/shota/normal.webp" scale=0.5 top=85]
 [chara_face name="翔太" face="normal" storage="chara/shota/normal.webp"]
-[chara_face name="翔太" face="shout" storage="chara/shota/shout.webp"]
-[chara_face name="翔太" face="pain" storage="chara/shota/pain.webp"]
 [chara_face name="翔太" face="serious" storage="chara/shota/serious.webp"]
-[chara_face name="翔太" face="dark" storage="chara/shota/dark.webp"]
-[chara_face name="翔太" face="smile" storage="chara/shota/smile.webp"]
-[chara_face name="翔太" face="sad" storage="chara/shota/sad.webp"]
-[chara_face name="翔太" face="angry" storage="chara/shota/angry.webp"]
-[chara_face name="翔太" face="scared" storage="chara/shota/scared.webp"]
-[chara_face name="翔太" face="laugh" storage="chara/shota/laugh.webp"]
+[chara_face name="翔太" face="nastysmile" storage="chara/shota/nastysmile.webp"]
+[chara_face name="翔太" face="shysmile" storage="chara/shota/shysmile.webp"]
 
 [chara_new name="響子" storage="chara/kyoko/normal.webp" scale=0.45 top=100]
 [chara_face name="響子" face="normal" storage="chara/kyoko/normal.webp"]
