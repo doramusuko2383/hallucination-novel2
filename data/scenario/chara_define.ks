@@ -80,9 +80,6 @@
 [chara_face name="高田" face="badmood" storage="chara/takada/badmood.png"]
 [chara_face name="高田" face="confuse" storage="chara/takada/confuse.png"]
 [chara_face name="高田" face="anxious" storage="chara/takada/anxious.png"]
-[chara_face name="高田" face="nastysmile" storage="chara/nastysmile/dark.png"]
+[chara_face name="高田" face="nastysmile" storage="chara/nastysmile.webp"]
 
-
-[chara_face name="高田" face="scared" storage="chara/takada/scared.png"]
-[chara_face name="高田" face="laugh" storage="chara/takada/laugh.png"]
 [return]
