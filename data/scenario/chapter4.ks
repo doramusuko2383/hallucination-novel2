@@ -368,6 +368,8 @@
 だがその瞬間――二人の姿がエントランスに現れた。[p]
 [stopse fadeout=500]
 [playse storage=se/leather_shoes_walk.ogg volume=35]
+[wait time=1000]
+[bg storage="ch4_kyoko_takada.webp" time=1000]
 
 響子が先導するように歩き、その後ろを恰幅の良い男が追いかける。[p]
 あれが高田か……。[p]
@@ -382,7 +384,8 @@
 [playse storage=se/auto_door.ogg volume=35]
 響子がエントランスのパネルにキーをかざすと、自動ドアが開き、[r]
 二人はマンションの中に消えていった。[p]
-
+[wait time=900]
+[bg storage="bg_mansion_night.webp" time=1000]
 拓海はその光景を見届けて、すぐに恵に連絡を取る。[p]
 
 しばらくして、息を切らしながら恵が現れた。[p]
