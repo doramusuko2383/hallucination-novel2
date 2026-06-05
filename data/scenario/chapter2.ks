@@ -213,7 +213,7 @@
 そして、気がつくと、[r]
 自分でも驚くほど静かに言葉が出ていた。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level1_normal"]
 「お前……お金返してやれよ」[p]
 
 [chara_hide_all time=300]
@@ -233,7 +233,7 @@
 
 ただ、その生徒の姿がどうしても放っておけなかった。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level1_normal"]
 「嫌がってるだろ」[p]
 
 自然に口から出た言葉は、[r]
@@ -245,7 +245,7 @@
 龍也は隣の生徒を親指で指し、[r]
 軽口を叩くように言った。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level1_normal"]
 「そうは……見えないけど」[p]
 
 拓海は視線を外し、声を落とした。[p]
@@ -352,7 +352,7 @@
 綾香が後ろから声を上げる。[r]
 彼女の声には苛立ちが含まれていた。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level1_pain"]
 「何度も言ってるけど、俺は何もしてない」[p]
 
 拓海は冷静を装いながら弁明する。[p]
@@ -368,7 +368,7 @@
 
 その衝撃に、拓海は息を飲んだ。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level1_pain"]
 「あの時は、押さえつけられてて、動けなかっただろ……」[p]
 
 [auto_chara name="龍也" face="angry"]
@@ -386,7 +386,7 @@
 
 再び龍也の手に力がこもる。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level1_pain"]
 「ちがう……本当に何もやってない」[p]
 
 拓海は必死に息を整える。[p]
@@ -495,7 +495,7 @@
 
 ――証拠が残らない、ということだ。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level1_normal"]
 「擬似的とはいえ、傷つけることができる……[l]しかも、法には触れないで済む」[p]
 
 そう自分に言い聞かせるが、[r]
@@ -517,7 +517,7 @@
 
 敵の考えていることや弱点を探し出すことも必要だろう。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level1_smile"]
 「皮肉だな……[l]知りたくもない相手のことをよく調べなきゃいけないなんて」[p]
 
 拓海は自嘲気味に笑う。[p]
@@ -529,7 +529,7 @@
 拷問やリンチで問い詰められたら、[r]
 耐えられる自信もない。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level1_normal"]
 「こちらから仕掛けるしかない」[p]
 
 拓海は拳を強く握りしめながら考える。[p]
@@ -612,7 +612,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 翔太のタバコは、綾香がバイト先で工面していたのだった。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_normal"]
 「もし、どこのコンビニで働いているか分かれば……」[p]
 
 拓海は手を握りしめた。[p]
@@ -639,7 +639,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 実際に尾行するとなれば、[r]
 緊張で失敗するのが目に見えていた。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_normal"]
 「せめて、住所や最寄り駅がわかれば……」[p]
 
 拓海は深くため息をつく。[p]
@@ -717,7 +717,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 心臓がやけに早く脈打つのを感じながら、[r]
 静かに恵の方へと歩み寄る。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_normal"]
 「菊池さん、ちょっといいかな」[p]
 
 [auto_chara name="恵"]
