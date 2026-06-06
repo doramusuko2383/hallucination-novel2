@@ -717,7 +717,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 心臓がやけに早く脈打つのを感じながら、[r]
 静かに恵の方へと歩み寄る。[p]
 
-[auto_chara name="拓海" face="level2_normal"]
+[auto_chara name="拓海" face="level2_smile"]
 「菊池さん、ちょっといいかな」[p]
 
 [auto_chara name="恵"]
@@ -730,9 +730,9 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 「うん。どうしたの？」[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_normal"]
 一瞬動揺しながらも、拓海はすぐに頭を切り替える。[p]
-
+[auto_chara name="拓海" face="level2_smile"]
 「菊池さん、塾とか行ってるのかなと思ってさ」[p]
 
 勉強の話題なら、高校生同士であれば自然だ。[p]
@@ -746,7 +746,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 恵は穏やかに答える。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_smile"]
 「へえ、準備が早いね」[p]
 
 拓海は、軽く頷きながら続けた。[p]
@@ -758,14 +758,14 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 [auto_chara name="恵"]
 「そんな事ないよ。[l]早い子は一年生から行ってるし」[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_surprise"]
 「そうなんだ！」[p]
 
 拓海は少し驚いた表情を見せ、軽く後ろにのけぞった。[p]
 
 わざとらしくないリアクションを心がけながら、[r]
 次の一手を考える。[p]
-
+[auto_chara name="拓海" face="level2_smile"]
 「最近、勉強に集中できなくて、[l]そろそろ塾でも行こうかなって思ってたんだ」[p]
 
 前半部分だけは本当だ。[p]
@@ -781,7 +781,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 だが、これも計画の一部だ。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_smile"]
 「いやいや、そんなことないよ」[p]
 
 拓海は手を振りながら謙遜した。[p]
@@ -795,7 +795,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 [chara_hide_all time=300]
 会話は思いのほかスムーズに進んでいる。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_smile"]
 「それでさ、いつも優秀な菊池さんが[r]
 どんな塾に通ってるのかなって思って」[p]
 
@@ -814,7 +814,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 ついに本題に入る決意を固めた。[p]
 
 [playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_normal"]
 「ところでさ……」[p]
 
 できるだけ自然な口調を心がける。[p]
@@ -826,7 +826,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 「綾香？　うん、昨日はたまたま一緒に帰ったんだよ。[l]
 中学の時、塾が一緒だったから」[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_normal"]
 「そうなんだ。[l]顔見知りだから、ちょっと気になってさ」[p]
 
 拓海は、何でもない会話を装いながら、[r]
@@ -852,7 +852,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 これ以上長引かせると、何か怪しまれるかもしれない。[p]
 
-[auto_chara name="拓海"]
+[auto_chara name="拓海" face="level2_smile"]
 「そっか、ありがと。[l]塾のこと、参考にしてみるよ」[p]
 
 [chara_hide_all time=300]
