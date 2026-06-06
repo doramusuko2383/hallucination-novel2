@@ -359,13 +359,13 @@
 声に驚いて顔を上げると、[r]
 が緊張した面持ちで横に立っていた。[p]
 
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「うん、大丈夫だけど」[p]
 
 [auto_chara name="" face="serious"]
 「そっか。ありがとう」[p]
 
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「何か用事だった？」[l]
 一体何の要件なんだろうか。[p]
 
@@ -461,7 +461,7 @@
 [resetdelay]
 [wait time=2000]
 [chara_hide_all time=300]
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「……。」[p]
 [wait time=2000]
 ここまでは計画通りだ……。[p]
@@ -556,7 +556,7 @@
 北川龍也、佐田翔太、上田綾香の3人組でしょ。[r][l]
 クラスのみんなも、きっと気付いていたけど、誰も触れたくなかったんだと思う」[p]
 
-[auto_chara name="拓海" face="normal"]
+[auto_chara name="拓海" face="level2_normal"]
 「……気付かれていたのか」[p]
 
 久しぶりに口を開いた拓海の声は、[r]
@@ -595,7 +595,7 @@
 [stopse fadeout=1000]
 [wait time=900]
 
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_depressed"]
 「俺がやった。[l]想像の通りだよ」[p]
 
 その言葉が口をついて出た瞬間、[r]
@@ -625,8 +625,7 @@
 拓海は少し俯き、
 ゆっくりと口を開いた。[p]
 [auto_chara name="拓海" face="normal2"]
-「最初は、
-俺も何が起きたのかわからなかったんだ」[p]
+「最初は、俺も何が起きたのかわからなかったんだ」[p]
 [chara_hide_all time=300]
 屋上で、自分自身に幻覚を見せてしまったこと。[p]
 
@@ -657,7 +656,7 @@
 恵の小さな声が漏れる。[p]
 
 「先生は？」[p]
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_depressed"]
 「気付いてたと思う」[p]
 
 拓海は乾いた笑みを浮かべた。[p]
@@ -704,14 +703,14 @@
 [auto_chara name="恵" face="surprise"]
 「あれ、じゃあ何で今、力を使わなかったの？」[p]
 
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_surprise"]
 「え？　どういうこと？」[p]
 
 [auto_chara name="恵" face="serious"]
 「私にその力を使って、この場を切り抜けることだってできそうじゃない」[r][l]
 恵はさらっと恐ろしいことを言う。[p]
 
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「いやいや。[l]
 俺だって好き好んで人を傷付けたいわけじゃないんだよ。[r][l]
 こんな目に遭ってなかったら、あいつらにだってきっと使ってなかったと思う」[p]
@@ -722,7 +721,7 @@
 そのあと、二人はお互いに気になっていたことを質問し合い、[r]
 会話が進む中で、拓海はとうとう核心を突いた。[p]
 
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「それで……今日呼び出した目的は何なの？[l]
 探偵ごっこが趣味ってわけじゃないでしょ？」[p]
 
@@ -736,7 +735,7 @@
 
 「実は、永山君に助けてもらえるんじゃないかって思ったの」[p]
 
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_surprise"]
 「助ける？　誰を？」[p]
 
 [auto_chara name="恵" face="sad"]
@@ -747,7 +746,7 @@
 「職場の上司から、ずっと酷いことされてるみたいで……」[p]
 
 拓海は眉をひそめた。[p]
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「酷いことって？」[p]
 [chara_hide_all time=300]
 
@@ -762,7 +761,7 @@
 [auto_chara name="恵" face="sad"]
 「身体の関係を迫られてるの」[p]
 
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_surprise"]
 拓海は言葉を失った。[p]
 
 [auto_chara name="恵" face="serious"]
@@ -782,7 +781,7 @@
 『そろそろ観念しろ』[p]
 
 拓海は無言で画面を見つめた。[p]
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「……警察とかには？」[p]
 [auto_chara name="恵" face="serious"]
 「多分無理だと思う」[p]
@@ -790,7 +789,7 @@
 恵は首を横に振る。[p]
 
 「会社の中でも立場がある人みたいだし、お母さんも騒ぎを大きくしたくないんだと思う」[p]
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「なんで、そこまで我慢してるんだろ」[p]
 [auto_chara name="恵" face="serious"]
 「仕事辞められないから、かな……」[p]
@@ -798,7 +797,7 @@
 そこで恵は少し困ったように笑った。[p]
 
 「うち、母子家庭なんだよね」[p]
-[auto_chara name="拓海" face="normal"]
+[auto_chara name="拓海" face="level2_depressed"]
 「……あ」[p]
 
 拓海は思わず視線を逸らした。[p]
@@ -820,7 +819,7 @@
 恵はスマホの画面を見つめながら呟いた。[p]
 [auto_chara name="恵" face="sad"]
 「でも、このままだと本当に壊れちゃいそうで……」[p]
-
+[chara_hide_all time=300]
 その声は、
 今にも消えてしまいそうなくらい小さかった。[p]
 
@@ -829,7 +828,7 @@
 そこに並ぶ言葉には、
 ただの嫌がらせでは済まない、
 粘つくような悪意が滲んでいた。[p]
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「それで、俺に何をしてほしいの？」[p]
 
 恵は静かに顔を上げた。[p]
@@ -857,7 +856,7 @@
 
 [wait time=500]
 
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「よし、お母さんを助けよう」[p]
 
 [chara_hide_all time=300]
