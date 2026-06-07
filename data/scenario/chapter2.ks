@@ -33,9 +33,9 @@
 
 [wait time=700]
 [fadeoutbgm time=800]
-[fadeoutse time=800] 
+[fadeoutse time=800]
 [bg storage="bg_classroom_day.webp" time=700]
-[playbgm storage="classroom_ buzzing.ogg" loop=true volume=50 fadein=true]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true]
 拓海の通う黒森学園高校は、県内でも中堅クラスの私立高校である。[p]
 
 中高一貫校だが、[r]
@@ -82,7 +82,7 @@
 龍也と翔太が談笑している姿が見えた。[p]
 
 [wait time=500]
-[fadeoutse time=800] 
+[fadeoutse time=800]
 [playbgm storage="tension_low.ogg" loop=true volume=45 fadein=true time=1200]
 あいつらがまだ学校にいるのが、奇跡なんだ。[p]
 
@@ -691,7 +691,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 *ch2_megumi_conversation
 
 [bg storage="bg_classroom_day2.webp" time=800]
-[playbgm storage="classroom_ buzzing.ogg" volume=70 fadein=true] 
+[playbgm storage="classroom_buzzing.ogg" volume=70 fadein=true]
 早速、動き出すことに決めた翌日のことだ。[p]
 
 拓海は教室の後ろで机に座り、[r]
@@ -720,7 +720,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 [auto_chara name="拓海" face="level2_smile"]
 「菊池さん、ちょっといいかな」[p]
 
-[auto_chara name="恵"]
+[auto_chara name="恵" face="normal"]
 彼女は顔を上げ、明るい笑顔を浮かべた。[p]
 
 拓海は、そのほほ笑みに少し面食らった。[p]
@@ -740,7 +740,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 自分の声が少し硬いのを感じたが、[r]
 顔には出さないように努めた。[p]
 
-[auto_chara name="恵"]
+[auto_chara name="恵" face="normal"]
 「塾行ってるよ。[l]二年生になってから、そろそろ本格的に準備しないとって思って、[r]
 4月から通い始めたの」[p]
 
@@ -755,7 +755,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 ただ、話を続けるための布石だ。[p]
 
-[auto_chara name="恵"]
+[auto_chara name="恵" face="normal"]
 「そんな事ないよ。[l]早い子は一年生から行ってるし」[p]
 
 [auto_chara name="拓海" face="level2_surprise"]
@@ -770,7 +770,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 前半部分だけは本当だ。[p]
 
-[auto_chara name="恵"]
+[auto_chara name="恵" face="normal"]
 「永山くんは塾も行かずに、[l]あの成績をキープしてるなんて、すごいよ」[p]
 
 恵は感心したように言う。[p]
@@ -822,7 +822,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 「五組の上田さんと友達なの？[l]
 昨日、一緒に帰っているのを見かけたんだけど」[p]
 
-[auto_chara name="恵"]
+[auto_chara name="恵" face="normal"]
 「綾香？　うん、昨日はたまたま一緒に帰ったんだよ。[l]
 中学の時、塾が一緒だったから」[p]
 
@@ -834,7 +834,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 「あれ、菊池さんって上田さんと同じ中学じゃなかったんだ？」[p]
 
-[auto_chara name="恵"]
+[auto_chara name="恵" face="normal"]
 「うん、私は青葉中で、綾香は桜木中だったと思うよ」[p]
 
 [chara_hide_all time=300]

@@ -31,7 +31,7 @@
 [font speed=40]
 
 [bg storage="bg_classroom_day_ch1.webp" time=800]
-[playbgm storage="classroom_ buzzing.ogg" loop=true volume=50 fadein=true]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true]
 教室の窓から見上げる空は、
 重く、禍々しく、
 [p]

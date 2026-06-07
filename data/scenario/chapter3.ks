@@ -46,7 +46,7 @@
 街灯の薄暗さと相まって、異様に目立って見えた。[p]
 
 [wait time=400]
-[auto_chara name="拓海" face="convenience"]
+[auto_chara name="拓海" face="private_normal"]
 [playse storage=se/megane_and_hat.ogg volume=40]
 準備してきた深めのバケットハットを被り、サングラスをかける。[p]
 
@@ -202,7 +202,7 @@
 綾香の細い腕が淡々と作業を続ける姿を見て、[r]
 拓海は意を決した。[p]
 
-[auto_chara name="拓海" face="convenience"]
+[auto_chara name="拓海" face="private_normal"]
 「袋、一番小さいのでお願いします」[l]
 拓海はいつもより低い声で、静かに言った。[p]
 
@@ -287,7 +287,7 @@
 ; 追加した演出意図: 場面転換は黒を挟み、事件後の時間経過を淡々と示す。
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="classroom_ buzzing.ogg" loop=true volume=80 fadein=true time=800]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=80 fadein=true time=800]
 10月に入り、秋の冷たい風が学校の校庭に吹き始めていた。[p]
 
 朝晩は上着が必要なくらい涼しくなり、[r][l]
@@ -624,7 +624,7 @@
 
 拓海は少し俯き、
 ゆっくりと口を開いた。[p]
-[auto_chara name="拓海" face="normal2"]
+[auto_chara name="拓海" face="level2_normal"]
 「最初は、俺も何が起きたのかわからなかったんだ」[p]
 [chara_hide_all time=300]
 屋上で、自分自身に幻覚を見せてしまったこと。[p]
