@@ -18,7 +18,7 @@
 [wait time=800]
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="classroom_ buzzing.ogg" loop=true volume=40 fadein=true time=1000]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=40 fadein=true time=1000]
 あのカラオケでの出来事から、すでに三週間が過ぎようとしていた。[p]
 
 拓海は、恵と協力関係を結び、彼女の助けを借りて龍也の身辺調査を進めていた。[p]
