@@ -313,7 +313,7 @@
 [chara_hide_all time=300]
 [wait time=300]
 [bg storage="bg_mansion_night.webp" time=1000]
-[playse storage=se/wind_low.ogg volume=30 fadein=true time=1000]
+[playse storage=se/wind_rooftop.ogg volume=30 fadein=true time=1000]
 
 二人は会計を済ませ、店を出た。[p]
 外はすでに暗くなり、空気がひんやりしている。[p]
