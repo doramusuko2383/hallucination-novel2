@@ -33,7 +33,7 @@
 規則では立ち入り禁止だったが、そこは人目を気にせず、ゆっくりとスケッチを楽しむことができる秘密の場所だった。[p]
 [fadeoutbgm time=700]
 [stopse fadeout=700]
-[bg storage="bg_school_rooftop_day2.webp" time=900]
+[bg storage="bg_rooftop_day2.webp" time=900]
 [playbgm storage="memory_light.ogg" loop=true volume=40 fadein=true time=900]
 [playse storage=se/drawing.ogg volume=50]
 その日も、いつものようにスケッチブックを広げ、風に吹かれる校庭の木々を描いていた。[p]
