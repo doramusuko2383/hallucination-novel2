@@ -559,9 +559,9 @@
 [auto_chara name="高田" face="normal"]
 「こんな大きい娘さんがいたんだね」高田の声が、しっかりとスマホに拾われてイヤホンから聞こえてくる。[p]
 
+[auto_chara name="響子" face="confuse"]
 「ええ、17歳になります。夫が亡くなってからずっと一人で育ててきました」[p]
 響子の声は、少し遠くてかすかにしか聞こえない。スマホを設置した位置がリビングから遠いのだろう。[p]
-
 
 [playse storage=se/heartbeat.ogg loop=true volume=45 fadein=true time=700]
 [auto_chara name="高田" face="nastysmile"]
@@ -574,16 +574,19 @@
 まるで、娘でさえも……性的な目で見ているのか？[p]
 そんな思いが胸をかき乱した。[p]
 
+[auto_chara name="響子" face="confuse"]
 「娘には絶対に手を出さないでくださいよ」響子の声色が、今度は強く響く。[p]
 
 [wait time=1200]
 [auto_chara name="高田" face="badmood"]
 「君が僕の言うことを聞いてくれるなら、そうしたいと思う」[p]
 
+[chara_hide_all time=300]
 [stopse fadeout=600]
 [fadeoutbgm time=700]
 [wait time=1200]
 
+[bg storage="ch4_takumi_megumi.webp" time=2000]
 高田の言葉が耳に届いた瞬間、拓海は心臓が一瞬止まるような感覚に襲われた。[p]
 
 これが証拠だ……。[p]
@@ -594,6 +597,7 @@
 二人はその決定的な発言を聞いて、思考が一瞬止まってしまった。[p]
 
 [wait time=1000]
+
 その後もスマホからは断片的な会話が続くが、二人の耳にはほとんど入ってこない。[p]
 頭の中は高田の言葉で埋め尽くされていた。[p]
 
@@ -601,7 +605,7 @@
 
 [playbgm storage="tension_low.ogg" loop=true volume=38 fadein=true time=1000]
 このままだと、住所が聞けないな……。[p]
-
+[bg storage="bg_megumi_room_night.webp" time=800]
 拓海は冷静さを取り戻し、恵に伝えた。[p]
 彼女は無言で頷いたが、まだどこか落ち着きを取り戻せない様子だった。[p]
 
