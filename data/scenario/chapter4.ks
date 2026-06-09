@@ -566,7 +566,7 @@
 [playse storage=se/heartbeat.ogg loop=true volume=45 fadein=true time=700]
 [auto_chara name="高田" face="nastysmile"]
 「君によく似ている。美人な娘だね」[p]
-[auto_chara name="恵" face="private_disgust"]
+[auto_chara name="恵" face="private_confuse"]
 その瞬間、恵が顔をしかめた。[p]
 嫌悪感が走る。こんな相手に褒められたくなんかない……。[p]
 
