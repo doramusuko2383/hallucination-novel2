@@ -416,7 +416,7 @@
 [auto_chara name="拓海" face="private_normal"]
 「極端に悪人面ってわけじゃなさそうだったよ。二人の仲は、よそよそしいように見えた」[p]
 
-[auto_chara name="恵" face="serious"]
+[auto_chara name="恵" face="private_serious"]
 「本当に？」[p]
 
 恵は一瞬ホッとしたように見えたが、すぐにまた張りつめた顔に戻った。[p]
