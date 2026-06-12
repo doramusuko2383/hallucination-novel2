@@ -78,7 +78,7 @@
 
 [wait time=500]
 
-廊下から中庭を見やると、[r]
+廊下から中庭を見ると、[r]
 龍也と翔太が談笑している姿が見えた。[p]
 
 [wait time=500]
@@ -134,7 +134,7 @@
 結果的に、その嫌がらせの証拠が考慮され、[r]
 龍也は退学を免れた。[p]
 
-1ヶ月の停学処分になり、サッカー部は退部になった。[r]
+1ヶ月の停学処分になり、サッカー部は退部になった。[p]
 その頃から二人はよくつるむようになった。[p]
 
 [wait time=700]
@@ -192,7 +192,7 @@
 
 小さな声が聞こえてきた。[p]
 
-気になって横を見やると、[r]
+気になって横を見ると、[r]
 龍也が一万円札をチョキの指で挟んでいた。[p]
 
 「いつもありがとうな」[p]
@@ -285,7 +285,7 @@
 自分の正義感で行動に出た結果、[r]
 身を犠牲にして他人を救うことになったのだ。[p]
 
-[stopbgm fadeout=2000]
+[stopbgm fadeout=4000]
 [wait time=800]
 
 *ch2_after_rooftop
@@ -346,7 +346,7 @@
 
 その目には、激しい感情が宿っていた。[p]
 
-[auto_chara name="綾香" face="serious"]
+[auto_chara name="綾香" face="angry"]
 「翔太、屋上に来なくなったじゃない！」[p]
 
 綾香が後ろから声を上げる。[r]
@@ -418,7 +418,7 @@
 
 拓海はただ嵐が過ぎるのをじっと待つことしか出来なかった。[p]
 
-[auto_chara name="龍也" face="sad"]
+[auto_chara name="龍也" face="normal"]
 「お前以外に動機がねえんだよ」[p]
 
 龍也はさらに詰め寄るが、どこか躊躇いがあった。[p]
@@ -437,7 +437,6 @@
 
 それが全てだった。[p]
 
-[auto_chara name="龍也" face="normal"]
 「何か変なクスリでもやってたのか……？」[p]
 
 龍也は考え込む。[p]
@@ -451,13 +450,13 @@
 綾香は、小さな声で足元を見つめてつぶやいた。[p]
 
 その声には、不安と戸惑いが滲んでいた。[p]
-
+[auto_chara name="綾香" face="angry"]
 「あんた、何か知ってんじゃないの？」[p]
 
 綾香は顔を上げ、怪訝そうな表情で拓海を睨みつけた。[p]
 
 [chara_hide_all time=300]
-[stopbgm fadeout=1200]
+[stopbgm fadeout=4000]
 [wait time=900]
 
 *ch2_planning
@@ -555,7 +554,7 @@
 彼らが自分を傷つけたことを思い返し、感情を抑え込む。[p]
 
 この決意が、揺るがないように。[p]
-[stopbgm fadeout=2000]
+[stopbgm fadeout=4000]
 [wait time=900]
 
 [playse storage=se/crickets.ogg volume=10]
@@ -685,7 +684,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 今度こそ、次の一手が見つかったのだ。[p]
 
-[stopbgm fadeout=1000]
+[stopbgm fadeout=4000]
 [wait time=900]
 
 *ch2_megumi_conversation
@@ -856,7 +855,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 「そっか、ありがと。[l]塾のこと、参考にしてみるよ」[p]
 
 [chara_hide_all time=300]
-[stopbgm fadeout=1000]
+[stopbgm fadeout=4000]
 拓海は静かに席に戻り、机に戻った後も冷静を装っていた。[p]
 
 しかし、その内心では計画が大きく一歩前進した感覚があった。[p]
@@ -946,7 +945,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 実際、その仮説は見事に当たっていたのだ。[p]
 
-[stopbgm fadeout=2000]
+[stopbgm fadeout=4000]
 [wait time=1000]
 
 @jump storage="chapter3.ks" target="*chapter3"
