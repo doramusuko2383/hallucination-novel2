@@ -92,8 +92,7 @@
 「永山くん！　助けて！」[r]
 恵の部屋からだ。[p]
 
-[bg storage="bg_megumi_room_night.webp" time=500]
-[auto_chara name="恵" face="private_help"]
+[bg storage="ch7_battle.webp" time=800]
 [playse storage=se/door_open_suddenly.ogg volume=100]
 玄関のすぐ隣の部屋のドアを開けた。[r]
 恵は部屋の奥の隅に座り込んで、何かを手に持って構えている。[p]
@@ -101,9 +100,9 @@
 拓海が渡したクマ撃退用スプレーだ。[r]
 それを高田がやめさせようと向かい合っていた。[p]
 
-[auto_chara name="高田" face="angry"]
 「誰だお前は！」[p]
 
+[bg storage="bg_megumi_room_night_dark.webp" time=500]
 [auto_chara name="拓海" face="private2_anxiety"]
 「菊池さん、いったんそれを下ろそうか」[r]
 拓海は高田を無視して恵に駆け寄り、スプレーを引き受けた。[p]
@@ -529,14 +528,14 @@
 
 驚いたことに、龍也も同じ大学に進学することになっていたのだ。[r]
 また同級生だ。[p]
-[auto_chara name="拓海" face="level3_shysmile"]
+[bg storage="ch7_shakehands.webp" time=500]
 「うん、よろしく」拓海も手を差し出し、二人の手が固く握られた。[r]
 あのとき、出来なかった握手。[r]
 今度はしっかりと、彼らの間にあったわだかまりが消え去っていくようだった。[p]
-[auto_chara name="龍也" face="normal"]
 「じゃあ……お前もケジメつけないとな」[r]
 龍也が小声で拓海に耳打ちした。[r]
 恵に聞こえないように配慮しているのが分かる。[p]
+[bg storage="bg_rooftop_day2.webp" time=900]
 [auto_chara name="拓海" face="level3_question"]
 「何を？」拓海が思わず問い返す。[p]
 [auto_chara name="龍也" face="smile"]
@@ -666,11 +665,12 @@
 [stopbgm fadeout=1200]
 そう言いながら、拓海はそっと恵の手を両手で包み込むように握った。[p]
 
+[bg storage="ch7_last1.webp" time=900]
+
 その瞬間、二人の周囲の時間がゆっくりと止まったようになる。[r]
 店内のBGMが遠のいていく。[r]
 そこに拓海と恵、二人だけの静かな空間が広がっていった。[p]
 
-[bg storage="white.png" time=900]
 視界に浮かんでくるのは、拓海の記憶の中に刻まれた恵の姿だ。[p]
 
 （……これは、私の顔？）と恵は戸惑いながらも、その記憶の中の自分をじっと見つめる。[p]
@@ -684,13 +684,11 @@
 拓海の思い出の中にある自分が、こんなに「いい顔」をしているだなんて……[r]
 恵はそのことに驚き、そして拓海の真意を理解して静かに胸が温かくなった。[p]
 
-[bg storage="bg_family_restaurant_night.webp" time=900]
 [playbgm storage="morning_city.ogg" loop=true volume=24 fadein=true time=1200]
 現実に戻った時、涙がこみ上げ、視界がぼやけていた。[r]
 拓海が穏やかな笑みを浮かべ、静かにこちらを見つめている。[p]
-
-[auto_chara name="恵" face="sad"]
 恵は、涙をぬぐいながら小さく微笑み返し、静かに呟いた。[r]
+[bg storage="ch7_last2.webp" time=900]
 「ありがとう……拓海」[p]
 
 [s]
