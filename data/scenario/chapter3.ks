@@ -47,7 +47,7 @@
 
 [wait time=400]
 [auto_chara name="拓海" face="convenience"]
-[playse storage=se/megane_and_hat.ogg volume=40]
+[playse storage=se/megane_and_hat.ogg volume=80]
 準備してきた深めのバケットハットを被り、サングラスをかける。[p]
 
 マスクまでするのは不自然かもしれない、と一瞬思ったが、[r][l]
@@ -614,7 +614,6 @@
 
 唇に拳を当てたまま、[r]
 じっと拓海を見つめている。[p]
-[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
 繰り返し流れるカラオケの宣伝動画が、静かな部屋に響いている。[p]
 
 [auto_chara name="恵" face="serious"]
