@@ -14,8 +14,8 @@
 [wait time=600]
 
 [bg storage="bg_takumiroom_night.webp" time=800]
-[playbgm storage="tension_low.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/smartphone_vibrate.ogg volume=50]
+[playbgm storage="chase.ogg" loop=true volume=35 fadein=true time=1000]
+[playse storage=se/smartphone_vibrate.ogg volume=100]
 ワックスで髪をセットしているときにスマホが鳴った。[p]
 
 恵からだ。[l][r]
@@ -83,7 +83,7 @@
 [playse storage=se/dush.ogg volume=100]
 拓海は靴を脱ぎ捨てて家に上がる。[r]
 恵はどこだ？[p]
-
+[fadeoutbgm time=4000]
 [playbgm storage="tension_high.ogg" loop=true volume=45 fadein=true time=600]
 [wait time=500]
 [auto_chara name="拓海" face="private2_shout"]
