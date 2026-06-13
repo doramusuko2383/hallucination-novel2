@@ -46,7 +46,7 @@
 街灯の薄暗さと相まって、異様に目立って見えた。[p]
 
 [wait time=400]
-[auto_chara name="拓海" face="private_normal"]
+[auto_chara name="拓海" face="convenience"]
 [playse storage=se/megane_and_hat.ogg volume=40]
 準備してきた深めのバケットハットを被り、サングラスをかける。[p]
 
@@ -202,7 +202,7 @@
 綾香の細い腕が淡々と作業を続ける姿を見て、[r]
 拓海は意を決した。[p]
 
-[auto_chara name="拓海" face="private_normal"]
+[auto_chara name="拓海" face="convenience"]
 「袋、一番小さいのでお願いします」[l]
 拓海はいつもより低い声で、静かに言った。[p]
 
@@ -244,8 +244,13 @@
 ; 追加した演出意図: 力の発動は無音化を主役にするため、BGM/SEを止めて黒フェードで一拍置く。
 [stopse fadeout=600]
 [fadeoutbgm time=700]
-[bg storage="black.png" time=500]
-[wait time=900]
+[bg storage="white.png" time=50]
+[wait time=40]
+[bg storage="black.png" time=70]
+[wait time=40]
+[bg storage="white.png" time=30]
+[wait time=30]
+[bg storage="black.png" time=300]
 
 その瞬間、世界が静まり返った。[p]
 
@@ -357,19 +362,19 @@
 「永山君、今日放課後少し時間ある？」[p]
 
 声に驚いて顔を上げると、[r]
-が緊張した面持ちで横に立っていた。[p]
+恵が緊張した面持ちで横に立っていた。[p]
 
 [auto_chara name="拓海" face="level2_normal"]
 「うん、大丈夫だけど」[p]
 
-[auto_chara name="" face="serious"]
+[auto_chara name="恵" face="serious"]
 「そっか。ありがとう」[p]
 
 [auto_chara name="拓海" face="level2_normal"]
 「何か用事だった？」[l]
 一体何の要件なんだろうか。[p]
 
-[auto_chara name="" face="serious"]
+[auto_chara name="恵" face="serious"]
 「綾香の件で、聞きたいことがあるんだ」[p]
 [fadeoutbgm time=800]
 彼女からはいつもの柔らかい雰囲気は消え、[r][l]
@@ -378,7 +383,7 @@
 「放課後、駅前のカラオケで待ち合わせしよう」[p]
 
 [chara_hide_all time=300]
-短い言葉を残して、はそのまま教室を出て行った。[p]
+短い言葉を残して、恵はそのまま教室を出て行った。[p]
 
 拓海はしばらくその場で呆然とした。[p]
 
@@ -408,7 +413,8 @@
 *ch3_karaoke
 
 [bg storage="ch3_karaoke_talk.webp" time=800]
-[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=1000]
+[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=10 fadein=true time=1000]
 「実は、この前、綾香がバイトするコンビニに永山君が入っていくのを見かけたの」[p]
 
 駅近くのカラオケの個室に入って席に着くなり、[r]
@@ -483,6 +489,7 @@
 [wait time=800]
 
 ; 追加した演出意図: 想定外の単語で鼓動を再投入し、音量は控えめにして焦燥だけを出す。
+[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
 [playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=500]
 その言葉に、拓海は顔が青ざめた。[p]
 
@@ -540,7 +547,8 @@
 [playse storage=se/knock_door.ogg volume=75] 
 [wait time=500]
 [playse storage=se/roof_door.ogg volume=75] 
-[playse storage=se/karaoke_sound2.ogg loop=true volume=100 fadein=true time=1000]
+[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
+[playse storage=se/karaoke_sound2.ogg loop=true volume=10 fadein=true time=1000]
 その時、部屋のドアがノックされ、[r]
 店員が注文していたアイスコーヒーをテーブルに置いていった。[p]
 
@@ -605,7 +613,8 @@
 
 唇に拳を当てたまま、[r]
 じっと拓海を見つめている。[p]
-[playse storage=se/karaoke_sound2.ogg loop=true volume=100 fadein=true time=1000  buf=0]
+[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
+[playse storage=se/karaoke_sound2.ogg loop=true volume=10 fadein=true time=1000  buf=0]
 繰り返し流れるカラオケの宣伝動画が、静かな部屋に響いている。[p]
 
 [auto_chara name="恵" face="serious"]
