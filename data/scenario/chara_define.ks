@@ -25,6 +25,7 @@
 [chara_face name="恵" face="private_surprise" storage="chara/megumi/private_surprise.webp"]
 
 [chara_new name="拓海" storage="chara/takumi/level1_normal.webp" scale=0.5 top=90]
+[chara_face name="拓海" face="convenience" storage="chara/takumi/convenience.webp"]
 [chara_face name="拓海" face="level1_normal" storage="chara/takumi/level1_normal.webp"]
 [chara_face name="拓海" face="level1_pain" storage="chara/takumi/level1_pain.webp"]
 [chara_face name="拓海" face="level1_shout" storage="chara/takumi/level1_shout.webp"]
