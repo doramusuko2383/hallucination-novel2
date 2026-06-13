@@ -24,7 +24,7 @@
 ; 追加した演出意図: 夜の外気と犯行前の緊張を、夜背景・虫の音・低いBGMで抑えて立ち上げる。
 [bg storage="bg_station_night.webp" time=800]
 [playse storage=se/traindoor.ogg volume=40]
-[playbgm storage="tension_low.ogg" loop=true volume=40 fadein=true time=1200]
+[playbgm storage="tension_low.ogg" loop=true volume=30 fadein=true time=1200]
 数日後の放課後、拓海は一度家に帰り、夕飯を済ませてから、[r]
 「勉強をしてくる」と告げて外に出た。[p]
 
@@ -187,6 +187,7 @@
 [wait time=500]
 
 ; 追加した演出意図: 実行直前だけ鼓動SEを足し、生活音から内面音へ寄せる。
+[fadeoutbgm time=700]
 [playse storage=se/heartbeat.ogg loop=true volume=50 fadein=true time=500]
 拓海は小さく息を吸い込み、レジに向かった。[p]
 
@@ -292,7 +293,7 @@
 ; 追加した演出意図: 場面転換は黒を挟み、事件後の時間経過を淡々と示す。
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="classroom_buzzing.ogg" loop=true volume=80 fadein=true time=800]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=30 fadein=true time=800]
 10月に入り、秋の冷たい風が学校の校庭に吹き始めていた。[p]
 
 朝晩は上着が必要なくらい涼しくなり、[r][l]
@@ -376,7 +377,7 @@
 
 [auto_chara name="恵" face="serious"]
 「綾香の件で、聞きたいことがあるんだ」[p]
-[fadeoutbgm time=800]
+[fadeoutbgm time=4000]
 彼女からはいつもの柔らかい雰囲気は消え、[r][l]
 何かを決意しているような表情だ。[p]
 
@@ -407,14 +408,15 @@
 自分にそう言い聞かせても、[r]
 不安は完全に拭い去れなかった。[p]
 
-[stopbgm fadeout=1000]
-[wait time=900]
+[stopbgm fadeout=4000]
+[wait time=4000]
 
 *ch3_karaoke
 
 [bg storage="ch3_karaoke_talk.webp" time=800]
 [playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/karaoke_sound.ogg loop=true volume=10 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
+
 「実は、この前、綾香がバイトするコンビニに永山君が入っていくのを見かけたの」[p]
 
 駅近くのカラオケの個室に入って席に着くなり、[r]
@@ -459,13 +461,13 @@
 [auto_chara name="恵" face="serious"]
 「それで、永山君がコンビニから出た後、私も店に入ってみたの。[l]
 そしたら、綾香が私を見るなり急に泣き出して……」[r][p]
+[stopbgm]
 [stopse]
 [playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
 [auto_chara name="恵" face="pain"]
 [delay speed="90"]
 「店長にレイプされたって言ったのよ」[p]
 [resetdelay]
-[wait time=2000]
 [chara_hide_all time=300]
 [auto_chara name="拓海" face="level2_normal"]
 「……。」[p]
@@ -480,7 +482,7 @@
 [auto_chara name="恵" face="sad"]
 「綾香、すごく震えてて……[l]
 とにかく警察を呼ぶしかなかったの」[p]
-[fadeoutbgm time=1000]
+[fadeoutbgm time=4000]
 [chara_hide_all time=300]
 [wait time=800]
 
@@ -548,7 +550,6 @@
 [wait time=500]
 [playse storage=se/roof_door.ogg volume=75] 
 [playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/karaoke_sound2.ogg loop=true volume=10 fadein=true time=1000]
 その時、部屋のドアがノックされ、[r]
 店員が注文していたアイスコーヒーをテーブルに置いていった。[p]
 
@@ -560,9 +561,9 @@
 [wait time=600]
 
 [auto_chara name="恵" face="sad"]
-「私、永山君が、綾香たちのグループにいいようにされていること、知ってたよ。[r][l]
-北川龍也、佐田翔太、上田綾香の3人組でしょ。[r][l]
-クラスのみんなも、きっと気付いていたけど、誰も触れたくなかったんだと思う」[p]
+「私、永山君が、綾香たちのグループにいいようにされていること、知ってたよ。」[p]
+「北川龍也、佐田翔太、上田綾香の3人組でしょ。」[p]
+「クラスのみんなも、きっと気付いていたけど、誰も触れたくなかったんだと思う」[p]
 
 [auto_chara name="拓海" face="level2_normal"]
 「……気付かれていたのか」[p]
@@ -614,7 +615,6 @@
 唇に拳を当てたまま、[r]
 じっと拓海を見つめている。[p]
 [playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/karaoke_sound2.ogg loop=true volume=10 fadein=true time=1000  buf=0]
 繰り返し流れるカラオケの宣伝動画が、静かな部屋に響いている。[p]
 
 [auto_chara name="恵" face="serious"]
@@ -769,7 +769,7 @@
 
 [auto_chara name="恵" face="sad"]
 「身体の関係を迫られてるの」[p]
-
+[playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
 [auto_chara name="拓海" face="level2_surprise"]
 拓海は言葉を失った。[p]
 
@@ -804,7 +804,7 @@
 「仕事辞められないから、かな……」[p]
 [auto_chara name="恵" face="troubled_smile"]
 そこで恵は少し困ったように笑った。[p]
-
+[fadeoutbgm time=4000]
 「うち、母子家庭なんだよね」[p]
 [auto_chara name="拓海" face="level2_depressed"]
 「……あ」[p]
@@ -856,7 +856,7 @@
 今までのように復讐心から力を使うのではなく、[r]
 誰かを助けるために。[p]
 
-[fadeoutbgm time=1000]
+[fadeoutbgm time=4000]
 [wait time=1000]
 
 しばらくの沈黙の後、拓海は深く息を吐いた。[p]
@@ -884,7 +884,6 @@
 どこかの部屋から聞こえてくる下手くそな歌が、[r]
 今度は不思議と心地よく響いていた。[p]
 
-[stopse fadeout=1000 buf=0]
 [wait time=800]
 
 @jump storage="chapter4.ks" target="*chapter4"
