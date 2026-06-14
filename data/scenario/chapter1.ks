@@ -87,10 +87,10 @@
 
 教師にもクラスメイトにも見えないところで行われるこの「日課」を、[r]誰にも相談することができない。[p]
 
+[bg storage="bg_rooftop_door.webp" time=600]
 [wait time=400]
 [playse storage=se/footstep_stairs.ogg volume=30]
 [wait time=2800]
-[bg storage="bg_rooftop_door.webp" time=600]
 屋上までの暗い階段を上がってドアを静かに開ける。[p]
 [playse storage=se/roof_door.ogg volume=30]
 [wait time=600]
