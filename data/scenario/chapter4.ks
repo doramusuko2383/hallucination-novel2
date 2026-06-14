@@ -67,7 +67,7 @@
 拓海は再びノートに目を戻し、授業に集中しようと努めた。[p]
 [playse storage=se/smartphone_vibrate.ogg volume=35]
 [wait time=400]
-
+[chara_hide_all time=300]
 「今日、放課後時間ある？」[p]
 恵からスマホにメッセージが届いた。[p]
 
@@ -76,14 +76,12 @@
 「じゃあ、いつものファミレスで」[p]
 「了解」[p]
 
-[chara_hide_all time=300]
 [fadeoutbgm time=700]
 [bg storage="bg_family_restaurant_night.webp" time=900]
-;[playbgm storage="daily_night.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/restaurant_ambience.ogg loop=true volume=25 fadein=true time=1000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=15 fadein=true time=1000]
 
 二人が連絡先を交換してから気づいたことだが、実はお互いの家は意外と近い場所にあった。[p]
-最寄り駅こそ違うものの、私鉄が並走している区間に位置し、[i]二人の自宅は1キロほどしか離れていなかった。[p]
+最寄り駅こそ違うものの、私鉄が並走している区間に位置し、[r][l]二人の自宅は1キロほどしか離れていなかった。[p]
 そのため、一度帰宅してから、中間地点にあるファミレスで落ち合うのが恒例になっていた。[p]
 正確には、少しだけ恵の自宅に近いのだが。[p]
 
@@ -94,7 +92,7 @@
 上着を脱いで、薄手のカットソーの袖を直しながら席に座る。[p]
 彼女の白い肌がちらりと見え、拓海はさっと目をそらした。[p]
 
-[auto_chara name="拓海" face="private_normal"]
+[auto_chara name="拓海" face="private_smile"]
 「いや、全然大丈夫だよ」[p]
 
 拓海はダークグレーのパーカにジーンズといういつもの格好だ。[p]
@@ -126,7 +124,7 @@
 [auto_chara name="拓海" face="private_normal"]
 「でも、やらない選択肢はない。今さら後戻り出来ないし」[p]
 
-拓海は、自分自身に言い聞かせるように言葉を強めた。[r][i]
+拓海は、自分自身に言い聞かせるように言葉を強めた。[r][l]
 決断が揺らがないように。[p]
 
 [auto_chara name="恵" face="private_serious"]
@@ -135,13 +133,13 @@
 恵は頷きながら、注文したドリンクを一口飲んだ。[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「こっちの計画については、何か進展があったらまた連絡するよ。[r][i]
+「こっちの計画については、何か進展があったらまた連絡するよ。[r][l]
 それより……今日の話、別に理由があるんでしょ？」[p]
 
 拓海はテーブルに置かれたコーヒーを見つめながら、本題に入るよう促した。[p]
 
 [wait time=500]
-[fadeoutbgm time=700]
+[fadeoutbgm time=4000]
 [playbgm storage="tension_low.ogg" loop=true volume=38 fadein=true time=1000]
 [stopse fadeout=700]
 
@@ -158,17 +156,17 @@
 「本当に？　一体どうやって？」[p]
 
 [auto_chara name="恵" face="private_serious"]
-「お母さんが、今週の土曜日に会社の人を家に呼ぶって言うの。[r]
-だから、その日は家にいるなって、外でご飯を食べてきなさいって言われたの」[p]
+「お母さんが、今週の土曜日に会社の人を家に呼ぶって言うの。」[p]
+「だから、その日は家にいるなって、[r][l]外でご飯を食べてきなさいって言われたの」[p]
 [auto_chara name="拓海" face="private_normal"]
 「それが高田だっていう確証は？」[p]
 [auto_chara name="恵" face="private_serious"]
-「100％じゃないけど、確率は高いと思う。[r]
-お母さん、すごくピリピリしてるし、部屋の片付けも全然進んでないんだよ。[r]
-おもてなしって感じじゃなくて……何かが違うの」[p]
+「100％じゃないけど、確率は高いと思う。」[p]
+「お母さん、すごくピリピリしてるし、部屋の片付けも全然進んでないんだよ。」[p]
+「おもてなしって感じじゃなくて……何かが違うの」[p]
 [auto_chara name="拓海" face="private_normal"]
-「なるほど……確かに不自然だな。[p]
-それで、土曜日はどうするつもり？」[p]
+「なるほど……確かに不自然だな。」[p]
+「それで、土曜日はどうするつもり？」[p]
 [auto_chara name="恵" face="private_serious"]
 「正直、危険かもしれないけど、お母さんが外にいろって言うし」[p]
 
@@ -182,7 +180,9 @@
 
 深く息を吐いて、思いついたアイデアを口にする。[p]
 
-「わかった、こうしよう。俺が男友達として、土曜日に無理やり家に上がり込むってのはどう？」[p]
+「わかった、こうしよう。」[p]
+[auto_chara name="拓海" face="private_normal"]
+「俺が男友達として、土曜日に無理やり家に上がり込むってのはどう？」[p]
 
 [auto_chara name="恵" face="private_serious"]
 「え？」[l]
@@ -191,8 +191,8 @@
 「なんかキャラに合わないこと言うね」[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「いたって真剣だよ。[r][i]
-お母さんは、娘を危険な目に遭わせたくないから外にいろって言ってるんだろうけど、[r][i]
+「いたって真剣だよ。」[p]
+「お母さんは、娘を危険な目に遭わせたくないから外にいろって言ってるんだろうけど、[r][l]
 俺と一緒なら、その心配もクリアできるんじゃない？」[p]
 
 [auto_chara name="恵" face="private_serious"]
@@ -206,7 +206,7 @@
 「私たちの計画が進むってことね」[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「その通り」拓海は人差し指を立てた。[r][i]
+「その通り」拓海は人差し指を立てた。[r][l]
 「でも、その場では『力』は使わない」[p]
 
 [auto_chara name="恵" face="private_serious"]
@@ -216,7 +216,7 @@
 「まずは本当に敵かどうかを見極める必要がある」[p]
 
 [auto_chara name="恵" face="private_serious"]
-「なるほど」その言葉に少し引っ掛かったが恵はそのまま流した。[p]
+「なるほど」[l]その言葉に少し引っ掛かったが恵はそのまま流した。[p]
 
 [auto_chara name="拓海" face="private_normal"]
 「何より、その場で使ったら俺がやったってバレちゃうだろ」[p]
@@ -225,11 +225,12 @@
 「そっか！」恵は感心した表情を浮かべた。[p]
 「永山君って本当に頭がいいね」[p]
 
-[auto_chara name="拓海" face="private_normal"]
+[auto_chara name="拓海" face="private_smile"]
 「いや、自分の身を守るために必死なだけだよ」[p]
 
 拓海は謙遜しながらも、褒められたことに少し心地よさを感じていた。[p]
 
+[auto_chara name="拓海" face="private_normal"]
 「だから、やるのは後日でいい。土曜日は、まず高田と適当に会話して、[r]
 住所とかの情報をさりげなく聞き出したいんだ」[p]
 
@@ -238,20 +239,20 @@
 
 [auto_chara name="拓海" face="private_normal"]
 「うん、あらゆる可能性を考えて、どんな展開になっても対応できるようにしておこう」[p]
-
+[fadeoutbgm time=4000]
 [chara_hide_all time=300]
-[playse storage=se/restaurant_ambience.ogg volume=30]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=15 fadein=true time=1000]
 [bg storage="black.png" time=0 wait=false]
 [wait time=1500]
 結局、その日は夜遅くまで作戦会議が続いた。[p]
 店員がラストオーダーを告げに来なければ、もっと長引いていただろう。[p]
 [wait time=1500]
-[fadeoutbgm time=800]
-[stopse fadeout=800]
+[fadeoutbgm time=4000]
+[stopse fadeout=4000]
 [playse storage=se/shower.ogg volume=50]
 帰宅後、湯船に浸かりながら、拓海は久々に心地よい疲れを感じていた。[p]
-全てが善行だとは決して思ってはいけないのだけれど、[r][i]
-誰かのためになるかもしれないことが嬉しく、[r][i]
+全てが善行だとは決して思ってはいけないのだけれど、[r][l]
+誰かのためになるかもしれないことが嬉しく、[r][l]
 そして楽しくもあった。[p]
 [wait time=2000]
 [fadeoutbgm time=800]
@@ -262,7 +263,7 @@
 いつものファミレスに向かった。[p]
 [bg storage="bg_family_restaurant_evening.webp" time=800]
 [playbgm storage="tension_low.ogg" loop=true volume=42 fadein=true time=1200]
-今日は恵の方が先に着いていた。[r]
+今日は恵の方が先に着いていた。[p]
 恵の母親が、上司を駅まで迎えに行くのが18時だというので、まだ1時間の余裕がある。[p]
 
 [auto_chara name="恵" face="private_anxiety"]
@@ -275,28 +276,30 @@
 カバンの中にある園芸用バサミの存在がやけに気になっていた。[p]
 普段は気にしないような軽い道具なのに、今はその存在を重く感じる。[p]
 
-「念のため、これを渡しておくよ」拓海はカバンから小さなスプレーを取り出した。[p]
+「念のため、これを渡しておくよ」[p]
+
+拓海はカバンから小さなスプレーを取り出した。[p]
 
 [auto_chara name="恵" face="private_serious"]
 「何これ、怪しいパッケージね」[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「クマ撃退用スプレーだよ。父親の山道具から拝借してきたんだ」[p]
+「クマ撃退用スプレーだよ。[l]父親の山道具から拝借してきたんだ」[p]
 
 [auto_chara name="恵" face="private_serious"]
 「ちょっと、こんなの人に使って大丈夫なの？」[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「多分ダメだと思う。ちゃんと『人に向けて使うな』って書いてあるし」[p]
+「多分ダメだと思う。[l]ちゃんと『人に向けて使うな』って書いてあるし」[p]
 
 [auto_chara name="恵" face="private_serious"]
 「じゃあ、使えないじゃない」[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「いや、逆にこう考えよう。このスプレーを使わざるを得ないような相手は、人ではないってこと」[p]
+「いや、逆にこう考えよう。[l]このスプレーを使わざるを得ないような相手は、人ではないってこと」[p]
 
 [auto_chara name="恵" face="private_laugh"]
-「凄い屁理屈ね。高田がクマみたいな男でないことを祈るわ」[p]
+「凄い屁理屈ね。[l]高田がクマみたいな男でないことを祈るわ」[p]
 
 [auto_chara name="拓海" face="private_smile"]
 「同感だ」[p]
@@ -304,6 +307,7 @@
 気がつくと、17時30分を過ぎていた。[p]
 
 [wait time=700]
+[auto_chara name="拓海" face="private_normal"]
 もうこんな時間か……。[p]
 
 拓海は心の中で呟いた。[p]
@@ -353,9 +357,11 @@
 拓海は、万が一の場合に備えるため、慎重に周囲を観察していた。[p]
 しかし、心の奥底では別の懸念がくすぶっていることに気付いていた。[p]
 
+[auto_chara name="拓海" face="private_think"]
 もしかしたら、恵の勘違いってこともあるんじゃないか？[p]
 ひょっとすると、響子さんは本当は高田を嫌がっていないかもしれない。[p]
 ただの部下と上司以上の関係で、大人の事情で会っているだけかもしれない。[p]
+[chara_hide_all time=300]
 
 もし二人が親しげに手をつないで現れでもしたら……それを見たら、恵にとっては辛いだろう。[p]
 拓海はその可能性を考えつつも、感情的に動くことなく、冷静に状況を見極めるべきだと自らに言い聞かせた。[p]
@@ -402,7 +408,9 @@
 「どんな男だった？」慌てて尋ねる。[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「うーん、遠巻きにしか見えなかったから、あまりよくわからなかったな。ちょっと太ってて……ああ、そうだ」[p]
+「うーん、遠巻きにしか見えなかったから、あまりよくわからなかったな。ちょっと太ってて……」[p]
+
+「ああ、そうだ」[p]
 
 [auto_chara name="拓海" face="private_smile"]
 拓海は少し考える素振りをして、「クマではなかったかな」と冗談を飛ばした。[p]
@@ -410,11 +418,12 @@
 [auto_chara name="恵" face="private_laugh"]
 「こんな時に冗談言わないでよ」[p]
 
-恵は言いながらも、少し笑みを浮かべた。[r]
+恵は言いながらも、少し笑みを浮かべた。[p]
+
 その一瞬、彼女のこわばりが少しだけ緩んだようだった。[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「極端に悪人面ってわけじゃなさそうだったよ。二人の仲は、よそよそしいように見えた」[p]
+「極端に悪人面ってわけじゃなさそうだったよ。[r][l]二人の仲は、よそよそしいように見えた」[p]
 
 [auto_chara name="恵" face="private_serious"]
 「本当に？」[p]
@@ -439,7 +448,9 @@
 恵がインターホンを押す。[p]
 [playse storage=se/interphone.ogg volume=50]
 
-「はい」すぐに響子の声が応えた。[p]
+「はい」[p]
+
+すぐに響子の声が応えた。[p]
 
 「お母さん、ちょっと来客中悪いんだけど、玄関まで来てくれる？」[p]
 
@@ -460,7 +471,7 @@
 
 恵は、緊張を隠しつつも考えた言い訳を口にする。[p]
 彼女の部屋には、珍しい昇降式の学習机がある。[p]
-拓海も、話を合わせるためにそのことを知っていた。[p]
+拓海も、話を合わせるためにそのことを教えてもらっていた。[p]
 [auto_chara name="恵" face="private_laugh"]
 「どうしても一度見てみたいって聞かなくて……」恵は笑いながら肩をすくめた。[p]
 
@@ -476,9 +487,11 @@
 
 拓海はその笑顔にどこか安心感を覚えつつも、響子の視線が少しだけ鋭く感じられた。[p]
 [auto_chara name="響子" face="confuse"]
-「恵たちは部屋にいなさいね」響子は困惑した様子を見せつつも、了承してくれた。[p]
+「恵たちは部屋にいなさいね」[p]
+響子は困惑した様子を見せつつも、了承してくれた。[p]
 [auto_chara name="拓海" face="private_smile"]
-「お邪魔します」拓海は心の中で息をつきながら、恵の後に続いた。[p]
+「お邪魔します」[p]
+拓海は心の中で息をつきながら、恵の後に続いた。[p]
 
 [chara_hide_all time=300]
 [bg storage="bg_megumi_room_night.webp" time=800]
@@ -488,7 +501,8 @@
 カーテンが薄いピンク色でなければ、どこか男の部屋を思わせるようなシンプルさがあった。[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「とりあえず入れたね」拓海は小声で言った。[p]
+「とりあえず入れたね」[p]
+拓海は小声で言った。[p]
 
 [auto_chara name="恵" face="private_serious"]
 「うん、じゃあ何か飲み物取ってくるわ」[p]
@@ -497,8 +511,10 @@
 そして拓海に電話をかけ、彼はすぐにイヤホンを装着し、マイクをミュートにして、恵が拾ってくる音声を静かに聞き取る準備をした。[p]
 これは、スマホを盗聴器みたいにして使うという、拓海のアイデアだ。[p]
 
-「よろしく」拓海は小さくうなずき、恵が部屋を出て行くのを見送った。[p]
-
+[auto_chara name="拓海" face="private_normal"]
+「よろしく」[p]
+拓海は小さくうなずき、恵が部屋を出て行くのを見送った。[p]
+[chara_hide_all time=300]
 ;[playse storage=se/room_tone.ogg loop=true volume=18 fadein=true time=800]
 高田はリビングにいるんだろうが、ここからじゃ何も見えない……。[p]
 彼は耳を澄まし、恵の動きと、高田の様子に集中した。[p]
@@ -523,7 +539,8 @@
 [auto_chara name="恵" face="private_normal"]
 「はい、黒森学園の二年生です」[p]
 [auto_chara name="高田" face="normal"]
-「知ってるよ、サッカー部が強いとこだよね。偏差値も高いし、優秀だね」高田のトーンは終始穏やかだ。[p]
+「知ってるよ、サッカー部が強いとこだよね。偏差値も高いし、優秀だね」[p]
+高田のトーンは終始穏やかだ。[p]
 [auto_chara name="恵" face="private_serious"]
 「いえいえ、必死で勉強しないと皆に付いて行けなくて大変です」[p]
 恵は、淡々と返しながらも、会話を引き延ばしているのが拓海にも分かった。[p]
@@ -535,12 +552,13 @@
 高田の声はさらに柔らかくなったが、何となく気持ち悪い。[p]
 それに、このままでは情報が足りない……もう少し何か引き出せないか？[p]
 [auto_chara name="恵" face="private_normal"]
-「今日はゆっくりしていってください」恵がそう言ったとき、彼女の限界が近いことが分かった。[p]
+「今日はゆっくりしていってください」[p]
+恵がそう言ったとき、彼女の限界が近いことが分かった。[p]
 
 [bg storage="bg_megumi_room_night.webp" time=800]
 [auto_chara name="拓海" face="private_normal"]
-拓海はイヤホン越しに、恵がしっかりとコミュニケーションを取っていることに内心感心しながらも、[r]
-状況がまだ掴みきれないことに焦りを感じた。[p]
+拓海はイヤホン越しに、恵がしっかりとコミュニケーションを取っていることに内心感心した。[p]
+だが、状況がまだ掴みきれないことに焦りを感じた。[p]
 
 すごいな……だけど、まだ足りない。[p]
 高田が本当に何を考えているのか……もっと時間が欲しい。[p]
@@ -548,37 +566,41 @@
 そう思いながら、彼は恵に次の動きを託すことにした。[p]
 [chara_hide_all time=300]
 
+[bg storage="ch4_smartphone.webp" time=2000]
 恵はホットコーヒーを二つ準備しながら、扉のない食器棚に手を伸ばす瞬間、[r]
 スマホをさりげなく食器の裏に隠して設置した。[p]
 見られているような気がして、どこか動きがぎくしゃくしてしまう。[p]
-[playse storage=se/door_close.ogg volume=30]
+
 急ぎ足で部屋に戻ってきた恵は、ゆっくりと扉を閉めた。[p]
+[playse storage=se/door_close.ogg volume=30]
+[bg storage="bg_megumi_room_night.webp" time=800]
 そして、拓海のイヤホンの片耳を受け取り、二人は再び状況に集中した。[p]
 
 [wait time=800]
-[auto_chara name="高田" face="normal"]
-「こんな大きい娘さんがいたんだね」高田の声が、しっかりとスマホに拾われてイヤホンから聞こえてくる。[p]
+「あんな大きい娘さんがいたんだね」[p]
+高田の声が、しっかりとスマホに拾われてイヤホンから聞こえてくる。[p]
 
-[auto_chara name="響子" face="confuse"]
 「ええ、17歳になります。夫が亡くなってからずっと一人で育ててきました」[p]
-響子の声は、少し遠くてかすかにしか聞こえない。スマホを設置した位置がリビングから遠いのだろう。[p]
+響子の声は、少し遠くてかすかにしか聞こえない。[p]
+スマホを設置した位置がテーブルから遠いのだろう。[p]
 
 [playse storage=se/heartbeat.ogg loop=true volume=45 fadein=true time=700]
-[auto_chara name="高田" face="nastysmile"]
+
 「君によく似ている。美人な娘だね」[p]
 [auto_chara name="恵" face="private_confuse"]
 その瞬間、恵が顔をしかめた。[p]
-嫌悪感が走る。こんな相手に褒められたくなんかない……。[p]
+強い嫌悪感を覚える。[p]
+こんな相手に褒められたくなんかない……。[p]
 
+[auto_chara name="拓海" face="private_surprise"]
 拓海もその言葉を不快に思った。[p]
 まるで、娘でさえも……性的な目で見ているのか？[p]
 そんな思いが胸をかき乱した。[p]
 
-[auto_chara name="響子" face="confuse"]
-「娘には絶対に手を出さないでくださいよ」響子の声色が、今度は強く響く。[p]
+「娘には絶対に手を出さないでくださいよ！」[p]
+響子の声色が、今度は強く響く。[p]
 
 [wait time=1200]
-[auto_chara name="高田" face="badmood"]
 「君が僕の言うことを聞いてくれるなら、そうしたいと思う」[p]
 
 [chara_hide_all time=300]
@@ -613,10 +635,12 @@
 あまり詮索すれば、響子に余計な心配をかけることにもなりかねないし、親子関係に影響を与える可能性もあった。[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「俺が尾行するよ」拓海は決断した。恵を心配させないように出来るだけ言い切った。[p]
+「俺が尾行するよ」[p]
+拓海は決断した。恵を心配させないように出来るだけ言い切った。[p]
 
 [auto_chara name="恵" face="private_anxiety"]
-「大丈夫なの？」恵の声には、不安がにじんでいる。[p]
+「大丈夫なの？」[p]
+恵の声には、不安がにじんでいる。[p]
 
 [auto_chara name="拓海" face="private_normal"]
 「上手くやるよ。それに、あいつ酔っ払ってるし」[p]
@@ -679,10 +703,10 @@
 [stopse fadeout=2000]
 駅前には大きな商業施設はなかったが、スーパーやカフェ、薬局など、生活に必要な店が揃っている。[p]
 
+[bg storage="bg_residential_night.webp" time=900]
 住宅街か……家までついていけるな。[p]
 そう判断した拓海は、高田の後ろ100メートルほどの距離を保ちながら、静かに尾行を続けた。[p]
 
-[bg storage="bg_residential_night.webp" time=900]
 [playse storage=se/wind_rooftop.ogg volume=20]
 途中で2回ほど角を曲がられたが、幸い見失うことなくついていけた。[p]
 高田は閑静な住宅地に足を踏み入れた。[p]
@@ -703,7 +727,8 @@
 [bg storage="black.png" time=900]
 高田には家族が……子供もいるのか？[p]
 
-拓海は驚いた。響子はこのことを知っているのだろうか？[p]
+拓海は驚いた。[p]
+響子はこのことを知っているのだろうか？[p]
 その疑問が頭を巡った。[p]
 
 拓海は、恵に連絡を入れるか迷ったが、時刻も遅い。[p]
