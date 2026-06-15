@@ -103,12 +103,13 @@
 
 [playse storage=se/wind_rooftop.ogg volume=20]
 [playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
+[wait time=2000]
 九月だというのに外は蒸し暑い。
 [p]
 
 屋上は朝方降った雨が床のコンクリートに染み込み、少し濡れていた。[p]
 
-[wait time=400]
+[wait time=800]
 
 いつもの三人は、今日は地面に座らず、フェンスにもたれかかっている。[l]
 
