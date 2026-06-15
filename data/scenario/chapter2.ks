@@ -32,7 +32,7 @@
 校舎まで人目を避けるように歩く。[p]
 
 [wait time=700]
-[fadeoutbgm time=800]
+[fadeoutbgm time=3000]
 [fadeoutse time=800]
 [bg storage="bg_classroom_day.webp" time=700]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true]
@@ -66,7 +66,7 @@
 普通のブレザーにシンプルなネクタイの制服だ。[p]
 
 [wait time=700]
-[fadeoutbgm time=800]
+[fadeoutbgm time=3000]
 *ch2_hallway
 
 [bg storage="bg_hallway_day.webp" time=700]
@@ -138,7 +138,7 @@
 その頃から二人はよくつるむようになった。[p]
 
 [wait time=700]
-[stopbgm fadeout=1000]
+[fadeoutbgm time=3000]
 [bg storage="bg_hallway_day.webp" time=700]
 黒森学園の特進クラスは、目立たない生徒が多い。[p]
 
@@ -285,7 +285,7 @@
 自分の正義感で行動に出た結果、[r]
 身を犠牲にして他人を救うことになったのだ。[p]
 
-[stopbgm fadeout=4000]
+[fadeoutbgm time=4000]
 [wait time=800]
 
 *ch2_after_rooftop
@@ -456,7 +456,7 @@
 綾香は顔を上げ、怪訝そうな表情で拓海を睨みつけた。[p]
 
 [chara_hide_all time=300]
-[stopbgm fadeout=4000]
+[fadeoutbgm time=4000]
 [wait time=900]
 
 *ch2_planning
@@ -477,7 +477,7 @@
 
 しかもその力は、[r]
 自分の想像や知識である程度コントロールできることも分かっていた。[p]
-[stopbgm fadeout=1200]
+[fadeoutbgm time=3000]
 [wait time=700]
 [playbgm storage="psycho.ogg" loop=true volume=45 fadein=true time=1500]
 
@@ -554,7 +554,7 @@
 彼らが自分を傷つけたことを思い返し、感情を抑え込む。[p]
 
 この決意が、揺るがないように。[p]
-[stopbgm fadeout=4000]
+[fadeoutbgm time=4000]
 [wait time=900]
 
 [playse storage=se/crickets.ogg volume=10]
@@ -584,7 +584,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 彼はパソコンのメモのタイトルに、[r]
 「ハルシネーション」と打ち込み、静かにパソコンを閉じた。[p]
 
-[stopbgm fadeout=1200]
+[fadeoutbgm time=3000]
 [wait time=1000]
 
 *ch2_target_ayaka
@@ -684,7 +684,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 今度こそ、次の一手が見つかったのだ。[p]
 
-[stopbgm fadeout=4000]
+[fadeoutbgm time=4000]
 [wait time=900]
 
 *ch2_megumi_conversation
@@ -855,7 +855,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 「そっか、ありがと。[l]塾のこと、参考にしてみるよ」[p]
 
 [chara_hide_all time=300]
-[stopbgm fadeout=4000]
+[fadeoutbgm time=4000]
 拓海は静かに席に戻り、机に戻った後も冷静を装っていた。[p]
 
 しかし、その内心では計画が大きく一歩前進した感覚があった。[p]
@@ -912,7 +912,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 違和感が胸にわき上がってくる。[p]
 
-[stopbgm fadeout=700]
+[fadeoutbgm time=3000]
 [wait time=500]
 
 南口のコンビニは桜木中の学区のど真ん中にある。[p]
@@ -945,7 +945,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 実際、その仮説は見事に当たっていたのだ。[p]
 
-[stopbgm fadeout=4000]
+[fadeoutbgm time=4000]
 [wait time=1000]
 
 @jump storage="chapter3.ks" target="*chapter3"

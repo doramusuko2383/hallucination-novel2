@@ -187,7 +187,7 @@
 [wait time=500]
 
 ; 追加した演出意図: 実行直前だけ鼓動SEを足し、生活音から内面音へ寄せる。
-[fadeoutbgm time=700]
+[fadeoutbgm time=3000]
 [playse storage=se/heartbeat.ogg loop=true volume=50 fadein=true time=500]
 拓海は小さく息を吸い込み、レジに向かった。[p]
 
@@ -244,7 +244,7 @@
 
 ; 追加した演出意図: 力の発動は無音化を主役にするため、BGM/SEを止めて黒フェードで一拍置く。
 [stopse fadeout=600]
-[fadeoutbgm time=700]
+[fadeoutbgm time=3000]
 [bg storage="white.png" time=50]
 [wait time=40]
 [bg storage="black.png" time=70]
@@ -408,7 +408,7 @@
 自分にそう言い聞かせても、[r]
 不安は完全に拭い去れなかった。[p]
 
-[stopbgm fadeout=4000]
+[fadeoutbgm time=4000]
 [wait time=4000]
 
 *ch3_karaoke
@@ -545,7 +545,7 @@
 [chara_hide_all time=300]
 彼女の真剣な視線に、拓海は無言で応じるしかなかった。[p]
 [wait time=1000]
-[fadeoutbgm time=1000]
+[fadeoutbgm time=3000]
 [playse storage=se/knock_door.ogg volume=75] 
 [wait time=500]
 [playse storage=se/roof_door.ogg volume=75] 

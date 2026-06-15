@@ -194,7 +194,7 @@
 拓海はハサミを持つ手を思いきり振りかぶった――。[p]
 
 [stopse fadeout=500]
-[fadeoutbgm time=700]
+[fadeoutbgm time=3000]
 [bg storage="black.png" time=400]
 [wait time=1200]
 [auto_chara name="拓海" face="private2_normal"]
@@ -320,7 +320,7 @@
 何となく照れ臭くて拓海は間を埋めるように思ったことを口に出した。[r]
 「なんかお腹空いてきたな」[p]
 
-[fadeoutbgm time=700]
+[fadeoutbgm time=3000]
 [auto_chara name="恵" face="private_normal"]
 「ほんとだね。でも今から出掛けるとちょっと遅いよね」[p]
 
@@ -460,7 +460,7 @@
 [auto_chara name="恵" face="normal"]
 「じゃあ、私も一緒に行ってもいい？」と静かに尋ねた。[p]
 
-[fadeoutbgm time=700]
+[fadeoutbgm time=3000]
 [bg storage="bg_rooftop_day2.webp" time=900]
 [playbgm storage="suspense.ogg" loop=true volume=25 fadein=true time=1200]
 [playse storage=se/wind_rooftop.ogg loop=true volume=30]
@@ -548,7 +548,7 @@
 その背中がだんだんと遠ざかるのを見つめながら、拓海はなんとなく、彼との新しい関係が始まるような予感を抱いた。[p]
 
 [stopse fadeout=800]
-[fadeoutbgm time=800]
+[fadeoutbgm time=3000]
 [bg storage="bg_family_restaurant_night.webp" time=900]
 [playbgm storage="morning_city.ogg" loop=true volume=30 fadein=true time=900]
 「卒業おめでとう！」[p]
@@ -652,7 +652,7 @@
 「え、何？」恵が少し身を乗り出す。[p]
 
 [wait time=700]
-[fadeoutbgm time=900]
+[fadeoutbgm time=3000]
 [playbgm storage="suspense.ogg" loop=true volume=20 fadein=true time=1000]
 [auto_chara name="拓海" face="level3_normal"]
 「俺のあの力。強い憎しみを抱いた相手にしか使えなかったじゃん」[p]
@@ -662,7 +662,7 @@
 「うん……でも、相手を強く思った時にも使えるのかなって」[p]
 
 [wait time=2000]
-[stopbgm fadeout=1200]
+[fadeoutbgm time=3000]
 そう言いながら、拓海はそっと恵の手を両手で包み込むように握った。[p]
 
 [bg storage="ch7_last1.webp" time=900]

@@ -76,7 +76,7 @@
 「じゃあ、いつものファミレスで」[p]
 「了解」[p]
 
-[fadeoutbgm time=700]
+[fadeoutbgm time=3000]
 [bg storage="bg_family_restaurant_night.webp" time=900]
 [playbgm storage="restaurant_ambience.ogg" loop=true volume=15 fadein=true time=1000]
 
@@ -255,7 +255,7 @@
 誰かのためになるかもしれないことが嬉しく、[r][l]
 そして楽しくもあった。[p]
 [wait time=2000]
-[fadeoutbgm time=800]
+[fadeoutbgm time=3000]
 [stopse fadeout=800]
 
 [playse storage=se/bag_zipper.ogg volume=50]
@@ -605,7 +605,7 @@
 
 [chara_hide_all time=300]
 [stopse fadeout=600]
-[fadeoutbgm time=700]
+[fadeoutbgm time=3000]
 [wait time=1200]
 
 [bg storage="ch4_takumi_megumi.webp" time=2000]
@@ -736,7 +736,7 @@
 
 そう決断し、静かに駅に戻った。[p]
 
-[fadeoutbgm time=1000]
+[fadeoutbgm time=3000]
 [stopse fadeout=800]
 
 @jump storage="chapter5.ks" target="*chapter5"
