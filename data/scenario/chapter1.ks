@@ -192,6 +192,7 @@
 
 こんな調子だから、ルールなんて、有ってないようなものなのである。[p]
 
+[auto_chara name="龍也" face="normal" left=0]
 今日の「トレーニング」も一方的なものだった。[p]
 
 [playse storage=se/punch1.ogg volume=30]
@@ -200,7 +201,7 @@
 [wait time=200]
 [playse storage=se/punch1.ogg volume=30]
 [wait time=300]
-
+[chara_hide_all time=300]
 打ち返すと更にやり返される事が分かってからは、[l]
 拓海は避けたり、ガードを固めたりすることに徹していた。[p]
 
@@ -210,7 +211,8 @@
 
 蓄積していく痛みは、いつだって拓海の気持ちをへし折っていく。[p]
 
-三分経った。[l]
+三分経った。[p]
+[auto_chara name="翔太" face="normal" left=300]
 龍也からグローブを受けとった翔太が、パーマのかかった茶髪を揺らしながら、
 その場でトントンと軽くジャンプをする。[p]
 
