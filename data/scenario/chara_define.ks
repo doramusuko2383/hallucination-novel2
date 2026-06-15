@@ -62,7 +62,10 @@
 
 [chara_new name="綾香" storage="chara/ayaka/normal.webp" scale=0.45 top=105]
 [chara_face name="綾香" face="normal" storage="chara/ayaka/normal.webp"]
+[chara_face name="綾香" face="angry" storage="chara/ayaka/angry.webp"]
 [chara_face name="綾香" face="anxiety" storage="chara/ayaka/anxiety.webp"]
+[chara_face name="綾香" face="sad" storage="chara/ayaka/sad.webp"]
+[chara_face name="綾香" face="shy" storage="chara/ayaka/shy.webp"]
 [chara_face name="綾香" face="private_normal" storage="chara/ayaka/private_normal.webp"]
 [chara_face name="綾香" face="private_smile" storage="chara/ayaka/private_smile.webp"]
 [chara_face name="綾香" face="private_shy" storage="chara/ayaka/private_shy.webp"]
