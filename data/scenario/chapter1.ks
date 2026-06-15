@@ -39,7 +39,7 @@
 拓海の心をゆっくりと押し潰していく。
 [p]
 
-[fadeoutbgm time=800]
+[fadeoutbgm time=3000]
 [wait time=800]
 
 高校二年になった頃から、
@@ -270,7 +270,7 @@
 
 「グローブ……いつものとこにしまっとけ」[l][r]
 そう言い残して、三人は去っていった。[p]
-[stopbgm fadeout=1000]
+[fadeoutbgm time=3000]
 [chara_hide_all time=300]
 
 [wait time=2000]
@@ -682,7 +682,7 @@
 [wait time=100]
 [bg storage="black.png" time=300]
 [stopse]
-[stopbgm fadeout=true time=700]
+[fadeoutbgm time=3000]
 その瞬間、世界から音が消えた――。[p]
 [wait time=1200]
 拓海は屋上での出来事のあと、あの「幻」についてずっと考えていた。[p]
@@ -805,7 +805,7 @@
 あまりの状況に声を失う龍也。[l]
 「翔太――」[l]綾香もそれ以上喋ることが出来ないでいる。[p]
 その一方で、拓海は気持ちの高揚を抑えられずにいた。[p]
-[stopbgm fadeout=1000]
+[fadeoutbgm time=3000]
 [playse storage=se/heartbeat.ogg loop=true volume=30]
 [wait time=900]
 「一番起こって欲しくない」[l][r]と一瞬想像した未来の姿。[p]

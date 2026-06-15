@@ -17,7 +17,7 @@
 @layopt layer=message0 visible=true
 
 ;無音寄りの立ち上がり
-@stopbgm fadeout="1000"
+@fadeoutbgm time=3000
 
 ;将来のログ改変を見据え、一部文を変数経由で表示
 [iscript]
