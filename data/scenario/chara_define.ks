@@ -79,6 +79,7 @@
 [chara_face name="翔太" face="serious" storage="chara/shota/serious.webp"]
 [chara_face name="翔太" face="nastysmile" storage="chara/shota/nastysmile.webp"]
 [chara_face name="翔太" face="shysmile" storage="chara/shota/shysmile.webp"]
+[chara_face name="翔太" face="shysmile" storage="chara/shota/sulk.webp"]
 
 [chara_new name="響子" storage="chara/kyoko/normal.webp" scale=0.45 top=100]
 [chara_face name="響子" face="normal" storage="chara/kyoko/normal.webp"]
