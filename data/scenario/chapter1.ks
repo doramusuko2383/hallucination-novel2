@@ -128,7 +128,7 @@
 
 声は淡々としているが、その視線は鋭い。[p]
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
-[auto_chara name="龍也" face="normal" left=430]
+[auto_chara name="龍也" face="normal" left=0]
 「じゃあ、いつものやつやろうぜ」[l]
 
 龍也はどこから手に入れたのかわからない、ボクシンググローブを手にはめながら言った。[p]
@@ -143,12 +143,12 @@
 
 これが日常になってしまっている自分が情けない。[p]
 
-[auto_chara name="翔太" face="nastysmile" left=430]
+[auto_chara name="翔太" face="nastysmile" left=100]
 「三分で次、俺に交代してよ」[l]
 
 悪友の翔太がニヤニヤと笑いながら言う。[p]
 
-[auto_chara name="綾香" face="normal" left=430]
+[auto_chara name="綾香" face="normal" left=200]
 「やめなよ、かわいそうじゃーん」[l]
 
 仲間の綾香が、薄ら笑いを浮かべながら表面的な言葉を口にする。[p]
@@ -240,7 +240,7 @@
 
 [wait time=800]
 
-[auto_chara name="翔太" face="nastysmile" left=430]
+[auto_chara name="翔太" face="nastysmile" left=300]
 「おっと、もう三分だ。これで終わりだ……よっと！」[l][r]
 [playse storage=se/punch3.ogg volume=30]
 [wait time=500]
@@ -255,7 +255,7 @@
 
 [wait time=700]
 
-[auto_chara name="綾香" face="serious" left=430]
+[auto_chara name="綾香" face="serious" left=400]
 「あんた弱いねえ。私でも勝てちゃいそう」[l][r]
 
 綾香が黒髪のロングヘアを指でいじりながら吐き捨てる。[p]
