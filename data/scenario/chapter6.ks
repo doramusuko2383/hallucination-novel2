@@ -14,9 +14,11 @@
 
 6章[p]
 病室は酷く殺風景で、何も書かれていない真っ白なキャンパスを彷彿とさせた。[p]
-[chara_show name="綾香" face="hospital" left=0 top=-20 width=520 time=300 wait=false]
+[chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=300 wait=false]
 [wait time=1000]
+[chara_show name="綾香" face="hospital" left=250 top=-20 width=520 time=300 wait=false]
 綾香が目を開けると、天井の蛍光灯がぼんやりと目に入ってくる。[p]
+[chara_show name="綾香" face="hospital" left=350 top=-20 width=520 time=300 wait=false]
 シーツは冷たく、何日経っても枕の固さがしっくりこない感じがする。[p]
 体が少し重くて気だるい。[p]
 [wait time=1000]
