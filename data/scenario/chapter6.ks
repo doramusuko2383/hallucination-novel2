@@ -433,7 +433,27 @@
 そして、差し出した手で龍也を助け起こそうとした。[p]
 しかし、龍也はその手に恐怖を感じ、後ずさりする。[p]
 [auto_chara name="拓海" face="level3_surprise"]
-「そんなつもりはないんだ……」[l]拓海が焦りながら言ったが、龍也はそれでも一言も発さず、震えていた。[p]
+「そんなつもりはないんだ……」[p]
+拓海が焦りながら言ったが、龍也はそれでも一言も発さず、震えている。[p]
+
+拓海と恵は龍也を屋上に残し、静かにその場を離れた。[p]
+
+[auto_chara name="恵" face="sad"]
+「大丈夫かな……」[p]
+[wait time=1000]
+
+[auto_chara name="拓海" face="level3_normal"]
+「大丈夫だよ」[p]
+[wait time=1000]
+
+「きっと、あいつなら」[p]
+[wait time=1000]
+
+[bg storage="black.png" time=1000]
+
+それから数週間後――[p]
+[wait time=2000]
+
 [chara_hide_all]
 [wait time=3000]
 [fadeoutbgm time=3000]
