@@ -37,16 +37,10 @@
             e.stopPropagation();
         });
         $("#menu_menu_wrapper .menu_backlog").on("click", (e) => {
-            TYRANO.kag.layer.getMenuLayer().empty().hide();
-            if (TYRANO.kag.stat.visible_menu_button == 1) $(".button_menu").show();
-            TYRANO.kag.key_mouse.backlog();
-            e.stopPropagation();
+            openSubMenu(e, () => TYRANO.kag.menu.displayLog());
         });
         $("#menu_menu_wrapper .menu_config").on("click", (e) => {
-            TYRANO.kag.layer.getMenuLayer().empty().hide();
-            if (TYRANO.kag.stat.visible_menu_button == 1) $(".button_menu").show();
-            TYRANO.kag.ftag.startTag("sleepgame", { storage: "config.ks" });
-            e.stopPropagation();
+            openSubMenu(e, () => TYRANO.kag.ftag.startTag("sleepgame", { storage: "config.ks" }));
         });
     </script>
 </div>
