@@ -89,10 +89,11 @@
 [cm]
 
 ;	コンフィグ用の背景を読み込んでトランジション
-	[bg storage="&tf.img_path +'bg_config.png'" time="100"]
+	[bg storage="black.png" time="100"]
+[layermode color="0x05080d" opacity="180" time="100" wait="true"]
 
 ;	画面右上の「Back」ボタン
-	[button fix="true" graphic="&tf.img_path + 'c_btn_back.png'" enterimg="&tf.img_path + 'c_btn_back2.png'" target="*backtitle" x="1160" y="20"]
+	[glink fix="true" text="× CLOSE" target="*backtitle" size="12" width="96" height="32" x="1150" y="24" color="0xdde6ec" font_color="0xdde6ec" graphic="" enterimg="" name="quiet_system_button"]
 
 [jump target="*config_page"]
 

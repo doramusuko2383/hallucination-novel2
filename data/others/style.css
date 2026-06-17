@@ -101,3 +101,200 @@
     50%  { opacity: 1;   transform: scale(1.2); }
     100% { opacity: 0.2; transform: scale(0.9); }
 }
+
+/* =========================
+   サスペンス調 標準UI
+========================= */
+#menu_menu_wrapper,
+#menu_save_wrapper,
+#menu_load_wrapper,
+#menu_backlog_wrapper {
+    position: absolute;
+    inset: 0;
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    color: rgba(238, 244, 248, 0.92);
+    background:
+        radial-gradient(circle at 50% 18%, rgba(47, 63, 82, 0.22), transparent 46%),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.72) 0%, rgba(4, 8, 14, 0.72) 48%, rgba(10, 18, 30, 0.72) 100%) !important;
+    font-family: "GenMin", serif;
+}
+
+#menu_menu_wrapper .img_bg_base,
+#menu_menu_wrapper .img_label,
+#menu_save_wrapper .img_bg_base,
+#menu_save_wrapper .img_label,
+#menu_load_wrapper .img_bg_base,
+#menu_load_wrapper .img_label,
+#menu_backlog_wrapper .img_bg_base,
+#menu_backlog_wrapper .img_label {
+    display: none !important;
+}
+
+.suspense_close {
+    position: absolute;
+    top: 24px;
+    right: 34px;
+    z-index: 5;
+    min-width: 96px;
+    height: 32px;
+    padding: 0 14px;
+    border: 1px solid rgba(214, 228, 238, 0.46);
+    border-radius: 4px;
+    color: rgba(236, 242, 247, 0.86);
+    background: rgba(0, 0, 0, 0.28);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    cursor: pointer;
+}
+
+.suspense_close:hover,
+.suspense_menu_button:hover {
+    color: #ffffff;
+    border-color: rgba(226, 238, 246, 0.78);
+    background: rgba(117, 143, 162, 0.16);
+    box-shadow: 0 0 12px rgba(156, 185, 204, 0.18);
+}
+
+.suspense_menu_nav {
+    position: absolute;
+    top: 162px;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    width: 320px;
+    transform: translateX(-50%);
+    flex-direction: column;
+    gap: 12px;
+}
+
+.suspense_menu_button {
+    width: 320px;
+    height: 44px;
+    border: 1px solid rgba(207, 222, 232, 0.38);
+    border-radius: 5px;
+    color: rgba(235, 241, 245, 0.9);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.18), rgba(22, 31, 44, 0.34));
+    font-size: 15px;
+    letter-spacing: 0.22em;
+    cursor: pointer;
+    transition: background 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+/* 右下のCSS製メニューアイコン */
+.button_menu {
+    top: auto !important;
+    right: 22px !important;
+    bottom: 18px !important;
+    left: auto !important;
+    width: 48px !important;
+    height: 32px !important;
+    border: 1px solid rgba(235, 242, 246, 0.5) !important;
+    border-radius: 5px !important;
+    background: rgba(0, 0, 0, 0.48) !important;
+    box-sizing: border-box;
+    opacity: 0.72;
+    transition: opacity 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.button_menu img {
+    display: none !important;
+}
+
+.button_menu::before {
+    content: "MENU";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: rgba(235, 242, 246, 0.86);
+    font-family: "GenMin", serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+}
+
+.button_menu:hover {
+    opacity: 0.96;
+    border-color: rgba(235, 242, 246, 0.82) !important;
+    box-shadow: 0 0 12px rgba(158, 188, 208, 0.26);
+}
+
+/* テキストエリア周辺のCSSテキストボタン */
+.quiet_system_button,
+.glink_button.quiet_system_button {
+    border: 1px solid rgba(225, 236, 243, 0.42) !important;
+    border-radius: 3px !important;
+    color: rgba(232, 238, 243, 0.86) !important;
+    background: rgba(0, 0, 0, 0.26) !important;
+    background-image: none !important;
+    font-family: "GenMin", serif !important;
+    font-size: 13px !important;
+    letter-spacing: 0.12em !important;
+    line-height: 24px !important;
+    opacity: 0.55 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    transition: opacity 140ms ease, border-color 140ms ease, background 140ms ease !important;
+}
+
+.quiet_system_button:hover,
+.glink_button.quiet_system_button:hover {
+    opacity: 0.95 !important;
+    border-color: rgba(235, 242, 246, 0.72) !important;
+    background: rgba(105, 128, 145, 0.15) !important;
+}
+
+.suspense_screen_title {
+    position: absolute;
+    top: 44px;
+    left: 68px;
+    color: rgba(235, 242, 246, 0.88);
+    font-size: 24px;
+    letter-spacing: 0.22em;
+}
+
+.area_save_list,
+#menu_backlog_wrapper .log_body {
+    position: absolute !important;
+    top: 96px !important;
+    left: 92px !important;
+    width: 1096px !important;
+    height: 560px !important;
+    color: rgba(232, 238, 243, 0.9) !important;
+}
+
+.save_display_area {
+    border: 1px solid rgba(202, 218, 229, 0.24) !important;
+    border-radius: 6px !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.34), rgba(22, 32, 46, 0.32)) !important;
+    color: rgba(232, 238, 243, 0.9) !important;
+}
+
+.save_display_area:hover {
+    border-color: rgba(220, 234, 242, 0.56) !important;
+    background: rgba(90, 112, 130, 0.18) !important;
+}
+
+.save_list_item_date,
+.save_list_item_text,
+#menu_backlog_wrapper .log_body {
+    color: rgba(232, 238, 243, 0.9) !important;
+    text-shadow: none !important;
+}
+
+.quiet_system_button::before {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: rgba(232, 238, 243, 0.86);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+}
+.quiet_save::before { content: "SAVE"; }
+.quiet_load::before { content: "LOAD"; }
+.quiet_log::before { content: "LOG"; }
+.quiet_auto::before { content: "AUTO"; }
+.quiet_skip::before { content: "SKIP"; }
+.quiet_config::before { content: "CONFIG"; }
