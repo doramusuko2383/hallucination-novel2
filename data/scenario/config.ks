@@ -95,15 +95,15 @@
 	[glink fix="true" text="× CLOSE" target="*backtitle" size="12" width="96" height="32" x="1150" y="24" color="0xdde6ec" font_color="0xdde6ec" graphic="" enterimg="" name="quiet_system_button"]
 
 ;	黒ガラス調CONFIG見出し・項目ラベル
-	[ptext fix="true" name="config_title_text config_label_text" text="CONFIG" x="68" y="44" size="24" color="0xf0f6fa"]
-	[ptext fix="true" name="config_panel_note config_label_text" text="" x="260" y="116" size="1" color="0xf0f6fa"]
-	[ptext fix="true" name="config_label_text" text="BGM VOLUME" x="302" y="202" size="16" color="0xf0f6fa"]
-	[ptext fix="true" name="config_label_text" text="SE VOLUME" x="302" y="262" size="16" color="0xf0f6fa"]
-	[ptext fix="true" name="config_label_text" text="TEXT SPEED" x="302" y="337" size="16" color="0xf0f6fa"]
-	[ptext fix="true" name="config_label_text" text="AUTO SPEED" x="302" y="397" size="16" color="0xf0f6fa"]
-	[ptext fix="true" name="config_label_text" text="UNREAD SKIP" x="302" y="482" size="16" color="0xf0f6fa"]
-	[ptext fix="true" name="config_label_text" text="OFF" x="462" y="482" size="13" color="0xdde6ec"]
-	[ptext fix="true" name="config_label_text" text="ON" x="650" y="482" size="13" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_title_text config_label_text" text="CONFIG" x="68" y="44" size="24" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_panel_note config_label_text" text="" x="260" y="116" size="1" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="BGM VOLUME" x="302" y="202" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="SE VOLUME" x="302" y="262" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="TEXT SPEED" x="302" y="337" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="AUTO SPEED" x="302" y="397" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="UNREAD SKIP" x="302" y="482" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="462" y="482" size="13" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="650" y="482" size="13" color="0xdde6ec"]
 
 [jump target="*config_page"]
 
