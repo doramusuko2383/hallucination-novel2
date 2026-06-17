@@ -16,6 +16,20 @@
     </section>
 
     <script>
+
+        const openSubMenu = (e, opener) => {
+            const layerMenu = TYRANO.kag.layer.getMenuLayer();
+            layerMenu.empty().show();
+            opener();
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+        };
+        $("#menu_menu_wrapper .menu_save").on("click", (e) => {
+            openSubMenu(e, () => TYRANO.kag.menu.displaySave());
+        });
+        $("#menu_menu_wrapper .menu_load").on("click", (e) => {
+            openSubMenu(e, () => TYRANO.kag.menu.displayLoad());
+        });
         $("#menu_menu_wrapper .menu_auto").on("click", (e) => {
             TYRANO.kag.layer.getMenuLayer().empty().hide();
             if (TYRANO.kag.stat.visible_menu_button == 1) $(".button_menu").show();
