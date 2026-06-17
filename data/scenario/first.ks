@@ -69,6 +69,16 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 @layopt layer=message0 visible=true
 [glyph figure="circle" color="0x8ec5e6" anim="flash" marginl="12" marginb="6"]
 
+; 本編中のティラノ標準導線を復旧
+[showmenubutton]
+[button fix="true" name="system_save" role="save" graphic="button/save.png" enterimg="button/save2.png" x="240" y="690"]
+[button fix="true" name="system_load" role="load" graphic="button/load.png" enterimg="button/load2.png" x="340" y="690"]
+[button fix="true" name="system_auto" role="auto" graphic="button/auto.png" enterimg="button/auto2.png" x="440" y="690"]
+[button fix="true" name="system_skip" role="skip" graphic="button/skip.png" enterimg="button/skip2.png" x="540" y="690"]
+[button fix="true" name="system_backlog" role="backlog" graphic="button/log.png" enterimg="button/log2.png" x="640" y="690"]
+[button fix="true" name="system_config" role="sleepgame" graphic="button/sleep.png" enterimg="button/sleep2.png" storage="config.ks" x="840" y="690"]
+[button fix="true" name="system_menu" role="menu" graphic="button/menu.png" enterimg="button/menu2.png" x="940" y="690"]
+
 [configdelay speed="42"]
 
 [if exp="f.debug_mode==true"]
