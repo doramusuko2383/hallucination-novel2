@@ -71,13 +71,12 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 
 ; 本編中のティラノ標準導線を復旧
 [showmenubutton]
-[button fix="true" name="system_save" role="save" graphic="button/save.png" enterimg="button/save2.png" x="240" y="690"]
-[button fix="true" name="system_load" role="load" graphic="button/load.png" enterimg="button/load2.png" x="340" y="690"]
-[button fix="true" name="system_auto" role="auto" graphic="button/auto.png" enterimg="button/auto2.png" x="440" y="690"]
-[button fix="true" name="system_skip" role="skip" graphic="button/skip.png" enterimg="button/skip2.png" x="540" y="690"]
-[button fix="true" name="system_backlog" role="backlog" graphic="button/log.png" enterimg="button/log2.png" x="640" y="690"]
-[button fix="true" name="system_config" role="sleepgame" graphic="button/sleep.png" enterimg="button/sleep2.png" storage="config.ks" x="840" y="690"]
-[button fix="true" name="system_menu" role="menu" graphic="button/menu.png" enterimg="button/menu2.png" x="940" y="690"]
+[button fix="true" name="system_save quiet_system_button quiet_save" role="save" graphic="" width="54" height="24" x="748" y="520"]
+[button fix="true" name="system_load quiet_system_button quiet_load" role="load" graphic="" width="54" height="24" x="808" y="520"]
+[button fix="true" name="system_backlog quiet_system_button quiet_log" role="backlog" graphic="" width="48" height="24" x="868" y="520"]
+[button fix="true" name="system_auto quiet_system_button quiet_auto" role="auto" graphic="" width="54" height="24" x="922" y="520"]
+[button fix="true" name="system_skip quiet_system_button quiet_skip" role="skip" graphic="" width="54" height="24" x="982" y="520"]
+[button fix="true" name="system_config quiet_system_button quiet_config" role="sleepgame" storage="config.ks" graphic="" width="72" height="24" x="1042" y="520"]
 
 [configdelay speed="42"]
 
