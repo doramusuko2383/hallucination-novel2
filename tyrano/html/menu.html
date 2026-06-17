@@ -1,16 +1,19 @@
 <div id="menu_menu_wrapper" class="suspense_menu_screen">
     <button type="button" class="menu_close suspense_close">× CLOSE</button>
 
-    <nav class="suspense_menu_nav" aria-label="Game menu">
-        <button type="button" class="menu_item menu_save suspense_menu_button">SAVE</button>
-        <button type="button" class="menu_item menu_load suspense_menu_button">LOAD</button>
-        <button type="button" class="menu_item menu_backlog suspense_menu_button">BACKLOG</button>
-        <button type="button" class="menu_item menu_config suspense_menu_button">CONFIG</button>
-        <button type="button" class="menu_item menu_window_close suspense_menu_button">HIDE MESSAGE</button>
-        <button type="button" class="menu_item menu_skip suspense_menu_button">SKIP</button>
-        <button type="button" class="menu_item menu_auto suspense_menu_button">AUTO</button>
-        <button type="button" class="menu_item menu_back_title suspense_menu_button">TITLE</button>
-    </nav>
+    <section class="suspense_menu_panel" aria-label="Game menu">
+        <h1 class="suspense_menu_title">MENU</h1>
+        <nav class="suspense_menu_nav">
+            <button type="button" class="menu_item menu_save suspense_menu_button">SAVE</button>
+            <button type="button" class="menu_item menu_load suspense_menu_button">LOAD</button>
+            <button type="button" class="menu_item menu_backlog suspense_menu_button">BACKLOG</button>
+            <button type="button" class="menu_item menu_config suspense_menu_button">CONFIG</button>
+            <button type="button" class="menu_item menu_window_close suspense_menu_button">HIDE MESSAGE</button>
+            <button type="button" class="menu_item menu_skip suspense_menu_button">SKIP</button>
+            <button type="button" class="menu_item menu_auto suspense_menu_button">AUTO</button>
+            <button type="button" class="menu_item menu_back_title suspense_menu_button">TITLE</button>
+        </nav>
+    </section>
 
     <script>
         $("#menu_menu_wrapper .menu_auto").on("click", (e) => {
