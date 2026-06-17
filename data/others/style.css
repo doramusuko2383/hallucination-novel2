@@ -565,3 +565,164 @@
     font-size: 13px !important;
     letter-spacing: 0.14em !important;
 }
+
+/* =========================
+   SAVE/LOAD 追加調整: メニュー残像・標準パーツ除去
+========================= */
+#menu_save_wrapper,
+#menu_load_wrapper {
+    background:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.82), rgba(3, 7, 13, 0.9) 52%, rgba(6, 12, 21, 0.84)),
+        radial-gradient(circle at 50% 18%, rgba(54, 73, 96, 0.14), transparent 46%) !important;
+}
+
+#menu_save_wrapper ~ #menu_menu_wrapper,
+#menu_load_wrapper ~ #menu_menu_wrapper,
+.layer_menu:has(#menu_save_wrapper) #menu_menu_wrapper,
+.layer_menu:has(#menu_load_wrapper) #menu_menu_wrapper {
+    display: none !important;
+}
+
+#menu_save_wrapper .suspense_close,
+#menu_load_wrapper .suspense_close {
+    display: inline-flex !important;
+}
+
+#menu_save_wrapper .button_arrow_up,
+#menu_save_wrapper .button_arrow_down,
+#menu_load_wrapper .button_arrow_up,
+#menu_load_wrapper .button_arrow_down {
+    display: none !important;
+}
+
+#menu_save_wrapper .area_save_list,
+#menu_load_wrapper .area_save_list {
+    top: 104px !important;
+    left: 86px !important;
+    width: 1108px !important;
+    height: 536px !important;
+    padding: 16px !important;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.88), rgba(4, 9, 16, 0.82)) !important;
+}
+
+#menu_save_wrapper .save_display_area,
+#menu_load_wrapper .save_display_area {
+    min-height: 98px !important;
+    padding: 12px 18px !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.64), rgba(15, 24, 35, 0.54)) !important;
+}
+
+#menu_save_wrapper .save_list_item_thumb,
+#menu_load_wrapper .save_list_item_thumb {
+    flex: 0 0 128px !important;
+    width: 128px !important;
+    min-width: 128px !important;
+    max-width: 128px !important;
+    height: 72px !important;
+    background: rgba(0, 0, 0, 0.38) !important;
+    background-image: none !important;
+}
+
+#menu_save_wrapper .save_list_item_thumb:empty::before,
+#menu_load_wrapper .save_list_item_thumb:empty::before {
+    content: "" !important;
+}
+
+#menu_save_wrapper .save_list_item_area,
+#menu_load_wrapper .save_list_item_area {
+    align-self: stretch !important;
+    justify-content: center !important;
+    background: none !important;
+    background-image: none !important;
+}
+
+#menu_save_wrapper .area_save_list::-webkit-scrollbar,
+#menu_load_wrapper .area_save_list::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+/* =========================
+   CONFIG 黒ガラス調UI
+========================= */
+.layer_menu .quiet_config_panel,
+.quiet_config_panel {
+    position: absolute;
+    left: 260px;
+    top: 116px;
+    width: 760px;
+    height: 438px;
+    border: 1px solid rgba(220, 235, 245, 0.2);
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(5, 8, 13, 0.84), rgba(0, 0, 0, 0.76));
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.42);
+}
+
+.config_label_text {
+    color: rgba(238, 244, 248, 0.88) !important;
+    font-family: "GenMin", serif !important;
+    font-size: 16px !important;
+    letter-spacing: 0.16em !important;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.72) !important;
+}
+
+img.bgmvol,
+img.sevol,
+img.ch,
+img.auto,
+img.unread_off,
+img.unread_on {
+    box-sizing: border-box !important;
+    border: 1px solid rgba(210, 225, 235, 0.24) !important;
+    border-radius: 999px !important;
+    background: rgba(0, 0, 0, 0.34) !important;
+    object-fit: fill !important;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3C/svg%3E") !important;
+}
+
+img.bgmvol:hover,
+img.sevol:hover,
+img.ch:hover,
+img.auto:hover,
+img.unread_off:hover,
+img.unread_on:hover {
+    border-color: rgba(226, 238, 246, 0.68) !important;
+    box-shadow: 0 0 12px rgba(156, 185, 204, 0.16) !important;
+}
+
+img.bgmvol[src$='c_set.png'],
+img.sevol[src$='c_set.png'],
+img.ch[src$='c_set.png'],
+img.auto[src$='c_set.png'],
+img.unread_off[src$='c_skipoff.png'],
+img.unread_on[src$='c_skipon.png'] {
+    border-color: rgba(190, 220, 235, 0.78) !important;
+    background: rgba(142, 174, 196, 0.28) !important;
+    box-shadow: 0 0 14px rgba(150, 196, 220, 0.32), inset 0 0 10px rgba(210, 235, 248, 0.12) !important;
+}
+
+img.unread_off,
+img.unread_on {
+    border-radius: 4px !important;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='45'%3E%3C/svg%3E") !important;
+}
+
+img.unread_off::after,
+img.unread_on::after { display: none !important; }
+
+.config_panel_note {
+    position: absolute !important;
+    left: 260px !important;
+    top: 116px !important;
+    width: 760px !important;
+    height: 438px !important;
+    display: block !important;
+    border: 1px solid rgba(220, 235, 245, 0.2) !important;
+    border-radius: 8px !important;
+    background: linear-gradient(180deg, rgba(5, 8, 13, 0.84), rgba(0, 0, 0, 0.76)) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.42) !important;
+}
+
+.config_title_text {
+    font-size: 24px !important;
+    letter-spacing: 0.22em !important;
+}
