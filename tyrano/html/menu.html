@@ -16,23 +16,44 @@
     </section>
 
     <script>
-        $("#menu_menu_wrapper .menu_auto").on("click", (e) => {
-            TYRANO.kag.layer.getMenuLayer().empty().hide();
-            if (TYRANO.kag.stat.visible_menu_button == 1) $(".button_menu").show();
-            TYRANO.kag.key_mouse.auto();
-            e.stopPropagation();
-        });
-        $("#menu_menu_wrapper .menu_backlog").on("click", (e) => {
-            TYRANO.kag.layer.getMenuLayer().empty().hide();
-            if (TYRANO.kag.stat.visible_menu_button == 1) $(".button_menu").show();
-            TYRANO.kag.key_mouse.backlog();
-            e.stopPropagation();
-        });
-        $("#menu_menu_wrapper .menu_config").on("click", (e) => {
-            TYRANO.kag.layer.getMenuLayer().empty().hide();
-            if (TYRANO.kag.stat.visible_menu_button == 1) $(".button_menu").show();
-            TYRANO.kag.ftag.startTag("sleepgame", { storage: "config.ks" });
-            e.stopPropagation();
-        });
+        (function () {
+            var openSubMenu = function (e, opener) {
+                var layerMenu = TYRANO.kag.layer.getMenuLayer();
+                layerMenu.empty().show();
+                opener(layerMenu);
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+            };
+
+            $("#menu_menu_wrapper .menu_save").on("click", function (e) {
+                openSubMenu(e, function () {
+                    TYRANO.kag.menu.displaySave();
+                });
+            });
+            $("#menu_menu_wrapper .menu_load").on("click", function (e) {
+                openSubMenu(e, function () {
+                    TYRANO.kag.menu.displayLoad();
+                });
+            });
+            $("#menu_menu_wrapper .menu_auto").on("click", function (e) {
+                var layerMenu = TYRANO.kag.layer.getMenuLayer();
+                layerMenu.empty().hide();
+                if (TYRANO.kag.stat.visible_menu_button == 1) $(".button_menu").show();
+                TYRANO.kag.key_mouse.auto();
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+            });
+            $("#menu_menu_wrapper .menu_backlog").on("click", function (e) {
+                openSubMenu(e, function () {
+                    TYRANO.kag.menu.displayLog();
+                });
+            });
+            $("#menu_menu_wrapper .menu_config").on("click", function (e) {
+                TYRANO.kag.layer.getMenuLayer().show();
+                TYRANO.kag.ftag.startTag("sleepgame", { storage: "config.ks" });
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+            });
+        }());
     </script>
 </div>
