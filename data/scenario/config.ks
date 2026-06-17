@@ -98,10 +98,23 @@
 	[ptext layer="fix" fix="true" name="config_title_text config_label_text" text="CONFIG" x="68" y="44" size="24" color="0xf0f6fa"]
 	[ptext layer="fix" fix="true" name="config_panel_note config_label_text" text="" x="260" y="116" size="1" color="0xf0f6fa"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="BGM VOLUME" x="302" y="202" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_help_text" text="MUSIC VOLUME" x="304" y="224" size="9" color="0xaeb8c0"]
+	[ptext layer="fix" fix="true" name="config_scale_line" text="────────────────────────" x="404" y="215" size="10" color="0x8fa1ad"]
+	[ptext layer="fix" fix="true" name="config_bgm_value config_value_text" text="" x="932" y="202" size="14" color="0xdde6ec"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="SE VOLUME" x="302" y="262" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_help_text" text="SOUND EFFECT VOLUME" x="304" y="284" size="9" color="0xaeb8c0"]
+	[ptext layer="fix" fix="true" name="config_scale_line" text="────────────────────────" x="404" y="275" size="10" color="0x8fa1ad"]
+	[ptext layer="fix" fix="true" name="config_se_value config_value_text" text="" x="932" y="262" size="14" color="0xdde6ec"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="TEXT SPEED" x="302" y="337" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_help_text" text="MESSAGE DISPLAY SPEED" x="304" y="359" size="9" color="0xaeb8c0"]
+	[ptext layer="fix" fix="true" name="config_scale_line" text="SLOW ───────── NORMAL ───────── FAST" x="404" y="350" size="9" color="0x8fa1ad"]
+	[ptext layer="fix" fix="true" name="config_ch_value config_value_text" text="" x="932" y="337" size="14" color="0xdde6ec"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="AUTO SPEED" x="302" y="397" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_help_text" text="AUTO ADVANCE WAIT" x="304" y="419" size="9" color="0xaeb8c0"]
+	[ptext layer="fix" fix="true" name="config_scale_line" text="SLOW ───────── NORMAL ───────── FAST" x="404" y="410" size="9" color="0x8fa1ad"]
+	[ptext layer="fix" fix="true" name="config_auto_value config_value_text" text="" x="932" y="397" size="14" color="0xdde6ec"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="UNREAD SKIP" x="302" y="482" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_help_text" text="SKIP UNREAD TEXT" x="304" y="504" size="9" color="0xaeb8c0"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="462" y="482" size="13" color="0xdde6ec"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="650" y="482" size="13" color="0xdde6ec"]
 
@@ -188,12 +201,16 @@
 	[iscript]
 
 	$(".bgmvol_"+tf.current_bgm_vol).attr("src","data/image/config/c_set.png");
+	$(".config_bgm_value").text(tf.current_bgm_vol);
 
 	$(".sevol_"+tf.current_se_vol).attr("src","data/image/config/c_set.png");
+	$(".config_se_value").text(tf.current_se_vol);
 
 	$(".ch_"+tf.current_ch_speed).attr("src","data/image/config/c_set.png");
+	$(".config_ch_value").text(tf.current_ch_speed <= 10 ? "FAST" : (tf.current_ch_speed <= 40 ? "NORMAL" : "SLOW"));
 
 	$(".auto_"+tf.current_auto_speed).attr("src","data/image/config/c_set.png");
+	$(".config_auto_value").text(tf.current_auto_speed <= 1300 ? "FAST" : (tf.current_auto_speed <= 3000 ? "NORMAL" : "SLOW"));
 
 	if(tf.text_skip == 'OFF'){
 		$(".unread_off").attr("src","./data/image/config/c_skipoff.png");
@@ -242,6 +259,7 @@
 [iscript]
 	$(".bgmvol").attr("src","data/image/config/c_btn.png");
 	$(".bgmvol_"+tf.current_bgm_vol).attr("src","data/image/config/c_set.png");
+	$(".config_bgm_value").text(tf.current_bgm_vol);
 [endscript]
 
 [bgmopt volume="&tf.current_bgm_vol"]
@@ -256,6 +274,7 @@
 [iscript]
 	$(".sevol").attr("src","data/image/config/c_btn.png");
 	$(".sevol_"+tf.current_se_vol).attr("src","data/image/config/c_set.png");
+	$(".config_se_value").text(tf.current_se_vol);
 [endscript]
 
 [seopt volume="&tf.current_se_vol"]
@@ -272,6 +291,7 @@
 	$(".ch").attr("src","data/image/config/c_btn.png");
 	$(".ch_"+tf.set_ch_speed).attr("src","data/image/config/c_set.png");
 	tf.current_ch_speed = tf.set_ch_speed;
+	$(".config_ch_value").text(tf.current_ch_speed <= 10 ? "FAST" : (tf.current_ch_speed <= 40 ? "NORMAL" : "SLOW"));
 
 	[endscript]
 
@@ -308,6 +328,7 @@
 
 	$(".auto").attr("src","data/image/config/c_btn.png");
 	$(".auto_"+tf.set_auto_speed).attr("src","data/image/config/c_set.png");
+	$(".config_auto_value").text(tf.set_auto_speed <= 1300 ? "FAST" : (tf.set_auto_speed <= 3000 ? "NORMAL" : "SLOW"));
 
 	[endscript]
 	[autoconfig speed="&tf.set_auto_speed"]
