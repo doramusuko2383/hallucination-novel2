@@ -238,6 +238,16 @@
     transition: opacity 140ms ease, border-color 140ms ease, background 140ms ease !important;
 }
 
+
+.glink_button.quiet_system_button {
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    line-height: 32px !important;
+}
+
 .quiet_system_button:hover,
 .glink_button.quiet_system_button:hover {
     opacity: 0.95 !important;
@@ -674,26 +684,6 @@
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7) !important;
     opacity: 0.82 !important;
     pointer-events: none !important;
-}
-
-.config_value_text {
-    min-width: 72px !important;
-    text-align: right !important;
-    color: rgba(230, 238, 244, 0.9) !important;
-}
-
-.config_scale_line {
-    opacity: 0.28 !important;
-    pointer-events: none !important;
-}
-
-.config_help_text,
-.config_value_text,
-.config_scale_line {
-    font-family: "GenMin", serif !important;
-    letter-spacing: 0.12em !important;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7) !important;
-    opacity: 0.82 !important;
 }
 
 .config_value_text {
