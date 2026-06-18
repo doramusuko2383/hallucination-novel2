@@ -50,7 +50,7 @@
             });
             $("#menu_menu_wrapper .menu_config").on("click", function (e) {
                 var layerMenu = TYRANO.kag.layer.getMenuLayer();
-                layerMenu.empty().show();
+                layerMenu.empty().hide();
                 TYRANO.kag.ftag.startTag("sleepgame", { storage: "config.ks" });
                 e.stopImmediatePropagation();
                 e.stopPropagation();
