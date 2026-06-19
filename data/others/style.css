@@ -708,6 +708,17 @@
     pointer-events: none !important;
 }
 
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line {
+    pointer-events: none !important;
+}
+
 img.bgmvol,
 img.sevol,
 img.ch,
