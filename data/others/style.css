@@ -779,16 +779,6 @@ img.unread_on::after { display: none !important; }
     pointer-events: none;
 }
 
-.title_logo_text {
-    font-family: "GenMin", serif !important;
-    letter-spacing: 0.16em;
-    z-index: 99999998 !important;
-    pointer-events: none;
-    text-shadow:
-        0 0 8px rgba(0, 0, 0, 0.95),
-        0 0 22px rgba(24, 42, 58, 0.85);
-}
-
 .glink_button.title-choice {
     box-sizing: border-box;
     display: flex !important;

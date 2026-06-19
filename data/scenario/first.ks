@@ -32,7 +32,6 @@ baseLayer.css("background-color", "#000000");
 [bgmovie storage="title_sky.webm" loop="true" mute="true" time=0 stop="false"]
 [image layer=0 page=fore name="title_rooftop_foreground" storage="title_rooftop.png" folder="bgimage" x=0 y=0 width=1280 height=720]
 
-[ptext layer="free" name="title_logo_text" text="ハルシネーション" x=90 y=95 size=54 color="0xe8eef4" edge="0x101820" shadow="0x000000"]
 [glink name="title-choice title-start" color="black" size="30" x="860" y="300" width="260" height="42" text="START" target="*title_newgame"]
 [glink name="title-choice title-load" color="black" size="30" x="860" y="354" width="260" height="42" text="LOAD" target="*title_continue"]
 [glink name="title-choice title-config" color="black" size="30" x="860" y="408" width="260" height="42" text="CONFIG" target="*title_config"]
