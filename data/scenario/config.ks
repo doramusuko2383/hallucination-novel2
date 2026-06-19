@@ -11,6 +11,11 @@
 ;	キーコンフィグの無効化
 	[stop_keyconfig]
 
+;	CONFIG内のfixボタンは内部的にcallボタンとして動くため、
+;	本編側のcallスタックが残っているとクリックが無視される。
+;	sleepgameの復帰データには元のスタックが保存されているので、CONFIG側だけ空にする。
+	[clearstack stack="call"]
+
 ;	レイヤーモードの解放
 	[free_layermode time="100" wait="true"]
 
@@ -94,6 +99,16 @@
 ;	画面右上の「Back」ボタン
 	[glink fix="true" text="× CLOSE" target="*backtitle" size="12" width="96" height="32" x="1150" y="24" color="0xdde6ec" font_color="0xdde6ec" graphic="" enterimg="" name="quiet_system_button"]
 
+	[iscript]
+	// CONFIGのCLOSEはfree layer上に出るため、free layer全面がfixボタンを覆わないようにする
+	$(".layer_menu").empty().hide();
+	$(".layer_blend_mode, .blendlayer").css("pointer-events", "none");
+	$(".config_label_text").css("pointer-events", "none");
+	$(".config_help_text, .config_value_text, .config_scale_line").remove();
+	$(".layer_free").css("pointer-events", "none");
+	$(".layer_free .glink_button, .layer_free .event-setting-element").css("pointer-events", "auto");
+	[endscript]
+
 ;	黒ガラス調CONFIG見出し・項目ラベル
 	[ptext layer="fix" fix="true" name="config_title_text config_label_text" text="CONFIG" x="68" y="44" size="24" color="0xf0f6fa"]
 	[ptext layer="fix" fix="true" name="config_panel_note config_label_text" text="" x="260" y="116" size="1" color="0xf0f6fa"]
@@ -104,6 +119,12 @@
 	[ptext layer="fix" fix="true" name="config_label_text" text="UNREAD SKIP" x="302" y="482" size="16" color="0xf0f6fa"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="462" y="482" size="13" color="0xdde6ec"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="650" y="482" size="13" color="0xdde6ec"]
+
+	[iscript]
+	// 古いCONFIG補助表示が混在しても、操作レイヤーを塞がないようにする
+	$(".config_label_text").css("pointer-events", "none");
+	$(".config_help_text, .config_value_text, .config_scale_line").remove();
+	[endscript]
 
 [jump target="*config_page"]
 
@@ -212,6 +233,7 @@
 
 	[iscript]
 	TG.config.alreadyReadTextColor = tf.user_setting; // 既読テキストの文字色を復帰
+	$(".layer_free").css("pointer-events", "auto");
 	[endscript]
 
 ;	テキスト速度のサンプル表示に使用していたメッセージレイヤを非表示に
