@@ -665,12 +665,25 @@
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.72) !important;
 }
 
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line {
+    pointer-events: none !important;
+}
+
 img.bgmvol,
 img.sevol,
 img.ch,
 img.auto,
 img.unread_off,
 img.unread_on {
+    z-index: 1000000002 !important;
+    pointer-events: auto !important;
     box-sizing: border-box !important;
     border: 1px solid rgba(210, 225, 235, 0.24) !important;
     border-radius: 999px !important;
