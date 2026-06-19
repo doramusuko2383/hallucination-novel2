@@ -767,6 +767,7 @@ img.unread_on::after { display: none !important; }
 #bgmovie {
     width: 1280px !important;
     height: 720px !important;
+    top: -288px !important;
     object-fit: cover;
     pointer-events: none;
 }
@@ -789,7 +790,9 @@ img.unread_on::after { display: none !important; }
     justify-content: flex-start;
     padding-left: 0;
     border: 0 !important;
+    border-radius: 0 !important;
     background: transparent !important;
+    box-shadow: none !important;
     color: rgba(238, 244, 248, 0.95) !important;
     font-family: "GenMin", serif !important;
     letter-spacing: 0.16em;

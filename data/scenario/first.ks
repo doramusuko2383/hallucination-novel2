@@ -30,6 +30,17 @@ baseLayer.css("background-color", "#000000");
 
 ; タイトル専用背景。動画は最背面でミュート・ループ再生し、前景PNGはUI操作を妨げないように固定表示する。
 [bgmovie storage="title_sky.webm" loop="true" mute="true" time=0 stop="false"]
+[iscript]
+(function setTitleMovieSpeed() {
+    var video = document.getElementById("bgmovie");
+    if (!video) {
+        setTimeout(setTitleMovieSpeed, 50);
+        return;
+    }
+    video.defaultPlaybackRate = 0.2;
+    video.playbackRate = 0.2;
+})();
+[endscript]
 [image layer=0 page=fore visible=true name="title_rooftop_foreground" storage="title_rooftop.png" folder="bgimage" x=0 y=0 width=1280 height=720 zindex=1]
 
 [glink name="title-logo" color="black" size="54" x="90" y="95" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
