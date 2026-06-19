@@ -22,9 +22,9 @@
 ;	カメラのリセット
 	[reset_camera time="100" wait="true"]
 	
-;	前景レイヤの中身をすべて空に
+;	背景を残すためcamera layerは消さず、再生中の背景動画だけ外す
 	[iscript]
-	$(".layer_camera").empty();
+	// 背景まで消えるケースがあるため、camera layer自体は空にしない
 	$("#bgmovie").remove();
 	[endscript]
 
@@ -94,7 +94,7 @@
 [cm]
 
 ;	本編背景を暗く透かす黒ガラス調オーバーレイ
-[layermode color="0x05080d" opacity="205" time="100" wait="true"]
+[layermode color="0x05080d" opacity="145" time="100" wait="true"]
 
 ;	画面右上の「Back」ボタン
 	[glink fix="true" text="× CLOSE" target="*backtitle" size="12" width="96" height="32" x="1150" y="24" color="0xdde6ec" font_color="0xdde6ec" graphic="" enterimg="" name="quiet_system_button"]
@@ -102,6 +102,8 @@
 	[iscript]
 	// CONFIGのCLOSEはfree layer上に出るため、free layer全面がfixボタンを覆わないようにする
 	$(".layer_menu").empty().hide();
+	$(".layer_blend_mode, .blendlayer").css("pointer-events", "none");
+	$(".config_label_text").css("pointer-events", "none");
 	$(".config_help_text, .config_value_text, .config_scale_line").remove();
 	$(".layer_free").css("pointer-events", "none");
 	$(".layer_free .glink_button, .layer_free .event-setting-element").css("pointer-events", "auto");
@@ -130,6 +132,12 @@
 	[ptext layer="fix" fix="true" name="config_help_text" text="SKIP UNREAD TEXT" x="304" y="504" size="9" color="0xaeb8c0"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="462" y="482" size="13" color="0xdde6ec"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="650" y="482" size="13" color="0xdde6ec"]
+
+	[iscript]
+	// 古いCONFIG補助表示が混在しても、操作レイヤーを塞がないようにする
+	$(".config_label_text").css("pointer-events", "none");
+	$(".config_help_text, .config_value_text, .config_scale_line").remove();
+	[endscript]
 
 [jump target="*config_page"]
 
