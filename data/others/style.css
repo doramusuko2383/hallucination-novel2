@@ -238,6 +238,16 @@
     transition: opacity 140ms ease, border-color 140ms ease, background 140ms ease !important;
 }
 
+
+.glink_button.quiet_system_button {
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    line-height: 32px !important;
+}
+
 .quiet_system_button:hover,
 .glink_button.quiet_system_button:hover {
     opacity: 0.95 !important;
@@ -663,6 +673,28 @@
     font-size: 16px !important;
     letter-spacing: 0.16em !important;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.72) !important;
+    pointer-events: none !important;
+}
+
+.config_help_text,
+.config_value_text,
+.config_scale_line {
+    font-family: "GenMin", serif !important;
+    letter-spacing: 0.12em !important;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7) !important;
+    opacity: 0.82 !important;
+    pointer-events: none !important;
+}
+
+.config_value_text {
+    min-width: 72px !important;
+    text-align: right !important;
+    color: rgba(230, 238, 244, 0.9) !important;
+}
+
+.config_scale_line {
+    opacity: 0.28 !important;
+    pointer-events: none !important;
 }
 
 img.bgmvol,
@@ -671,6 +703,8 @@ img.ch,
 img.auto,
 img.unread_off,
 img.unread_on {
+    position: relative !important;
+    z-index: 5 !important;
     box-sizing: border-box !important;
     border: 1px solid rgba(210, 225, 235, 0.24) !important;
     border-radius: 999px !important;
@@ -695,9 +729,9 @@ img.ch[src$='c_set.png'],
 img.auto[src$='c_set.png'],
 img.unread_off[src$='c_skipoff.png'],
 img.unread_on[src$='c_skipon.png'] {
-    border-color: rgba(190, 220, 235, 0.78) !important;
-    background: rgba(142, 174, 196, 0.28) !important;
-    box-shadow: 0 0 14px rgba(150, 196, 220, 0.32), inset 0 0 10px rgba(210, 235, 248, 0.12) !important;
+    border-color: rgba(224, 244, 255, 0.94) !important;
+    background: rgba(196, 224, 242, 0.42) !important;
+    box-shadow: 0 0 20px rgba(178, 220, 244, 0.5), inset 0 0 14px rgba(235, 248, 255, 0.2) !important;
 }
 
 img.unread_off,
@@ -725,4 +759,54 @@ img.unread_on::after { display: none !important; }
 .config_title_text {
     font-size: 24px !important;
     letter-spacing: 0.22em !important;
+}
+
+/* =========================
+   タイトル画面（動画背景＋前景PNG＋UI）
+========================= */
+#bgmovie {
+    width: 1280px !important;
+    height: 720px !important;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.title_rooftop_foreground {
+    width: 1280px !important;
+    height: 720px !important;
+    left: 0 !important;
+    top: 0 !important;
+    pointer-events: none;
+}
+
+.title_logo_text {
+    font-family: "GenMin", serif !important;
+    letter-spacing: 0.16em;
+    z-index: 99999998 !important;
+    pointer-events: none;
+    text-shadow:
+        0 0 8px rgba(0, 0, 0, 0.95),
+        0 0 22px rgba(24, 42, 58, 0.85);
+}
+
+.glink_button.title-choice {
+    box-sizing: border-box;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(221, 230, 236, 0.42);
+    background: rgba(4, 9, 16, 0.48) !important;
+    color: rgba(238, 244, 248, 0.92) !important;
+    font-family: "GenMin", serif !important;
+    letter-spacing: 0.18em;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+    z-index: 99999999 !important;
+    pointer-events: auto !important;
+}
+
+.glink_button.title-choice:hover,
+.glink_button.title-choice:focus {
+    border-color: rgba(232, 238, 244, 0.78);
+    background: rgba(16, 30, 44, 0.68) !important;
+    color: #ffffff !important;
 }
