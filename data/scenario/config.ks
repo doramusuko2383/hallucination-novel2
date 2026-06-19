@@ -22,9 +22,9 @@
 ;	カメラのリセット
 	[reset_camera time="100" wait="true"]
 	
-;	前景レイヤの中身をすべて空に
+;	背景を残すためcamera layerは消さず、再生中の背景動画だけ外す
 	[iscript]
-	$(".layer_camera").empty();
+	// 背景まで消えるケースがあるため、camera layer自体は空にしない
 	$("#bgmovie").remove();
 	[endscript]
 
@@ -94,7 +94,7 @@
 [cm]
 
 ;	本編背景を暗く透かす黒ガラス調オーバーレイ
-[layermode color="0x05080d" opacity="205" time="100" wait="true"]
+[layermode color="0x05080d" opacity="145" time="100" wait="true"]
 
 ;	画面右上の「Back」ボタン
 	[glink fix="true" text="× CLOSE" target="*backtitle" size="12" width="96" height="32" x="1150" y="24" color="0xdde6ec" font_color="0xdde6ec" graphic="" enterimg="" name="quiet_system_button"]
