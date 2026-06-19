@@ -11,6 +11,11 @@
 ;	キーコンフィグの無効化
 	[stop_keyconfig]
 
+;	CONFIG内のfixボタンは内部的にcallボタンとして動くため、
+;	本編側のcallスタックが残っているとクリックが無視される。
+;	sleepgameの復帰データには元のスタックが保存されているので、CONFIG側だけ空にする。
+	[clearstack stack="call"]
+
 ;	レイヤーモードの解放
 	[free_layermode time="100" wait="true"]
 
