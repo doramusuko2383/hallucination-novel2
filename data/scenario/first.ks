@@ -32,7 +32,7 @@ baseLayer.css("background-color", "#000000");
 [bg storage="title_rooftop.webp" time=0]
 
 [glink name="title-logo" color="black" size="54" x="330" y="145" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
-[ptext layer=0 page=fore name="title-subtitle" text="HALLUCINATION" x="440" y="235" size="20" color="0xeef4f8" zindex="99999998"]
+[glink name="title-subtitle" color="black" size="20" x="440" y="235" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
 [glink name="title-choice title-start title-primary" color="black" size="24" x="520" y="395" width="240" height="34" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="20" x="520" y="445" width="240" height="30" text="CONTINUE" target="*title_continue"]
 [glink name="title-choice" color="black" size="20" x="520" y="493" width="240" height="30" text="LOAD" target="*title_continue"]

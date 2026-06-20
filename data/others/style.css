@@ -860,6 +860,7 @@ img.se_mute_on::after { display: none !important; }
     box-shadow: none !important;
     color: rgba(246, 249, 253, 0.96) !important;
     font-family: "GenMin", "Times New Roman", serif !important;
+    font-size: 54px !important;
     letter-spacing: 0.24em;
     text-shadow:
         0 0 4px rgba(255, 255, 255, 0.45),
@@ -869,31 +870,48 @@ img.se_mute_on::after { display: none !important; }
     pointer-events: none !important;
 }
 
-.title-subtitle {
+.glink_button.title-subtitle {
+    box-sizing: border-box;
     width: 400px !important;
-    text-align: center;
+    height: 28px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: rgba(238, 244, 248, 0.82) !important;
     font-family: "GenMin", "Times New Roman", serif !important;
+    font-size: 20px !important;
     letter-spacing: 0.62em;
-    color: rgba(238, 244, 248, 0.86) !important;
+    position: relative;
+    overflow: visible !important;
     text-shadow:
-        0 0 8px rgba(255, 255, 255, 0.34),
-        0 0 16px rgba(0, 0, 0, 0.68);
+        0 0 7px rgba(255, 255, 255, 0.28),
+        0 0 14px rgba(0, 0, 0, 0.62);
+    z-index: 99999998 !important;
     pointer-events: none !important;
 }
 
-.title-subtitle::before,
-.title-subtitle::after {
+.glink_button.title-subtitle::before,
+.glink_button.title-subtitle::after {
     content: "";
-    display: inline-block;
-    width: 110px;
+    position: absolute;
+    top: 50%;
+    width: 126px;
     height: 1px;
-    margin: 0 24px 6px 0;
-    background: linear-gradient(90deg, transparent, rgba(238, 244, 248, 0.62));
+    background: linear-gradient(90deg, transparent, rgba(238, 244, 248, 0.66));
 }
 
-.title-subtitle::after {
-    margin: 0 0 6px 24px;
-    background: linear-gradient(90deg, rgba(238, 244, 248, 0.62), transparent);
+.glink_button.title-subtitle::before {
+    right: calc(50% + 190px);
+}
+
+.glink_button.title-subtitle::after {
+    left: calc(50% + 165px);
+    background: linear-gradient(90deg, rgba(238, 244, 248, 0.66), transparent);
 }
 
 .glink_button.title-choice {
@@ -908,8 +926,11 @@ img.se_mute_on::after { display: none !important; }
     box-shadow: none !important;
     color: rgba(246, 249, 253, 0.9) !important;
     font-family: "GenMin", "Times New Roman", serif !important;
+    font-size: 20px !important;
     font-weight: 600;
     letter-spacing: 0.34em;
+    position: relative;
+    overflow: visible !important;
     text-shadow:
         0 0 7px rgba(0, 0, 0, 0.9),
         0 0 14px rgba(22, 32, 54, 0.8);
@@ -918,7 +939,30 @@ img.se_mute_on::after { display: none !important; }
 }
 
 .glink_button.title-choice.title-primary {
+    font-size: 24px !important;
     letter-spacing: 0.42em;
+}
+
+.glink_button.title-choice::before,
+.glink_button.title-choice::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+    transition: width 160ms ease, opacity 160ms ease;
+}
+
+.glink_button.title-choice::before {
+    right: calc(50% + 76px);
+    background: linear-gradient(90deg, transparent, rgba(92, 178, 255, 0.58), rgba(238, 248, 255, 0.8));
+}
+
+.glink_button.title-choice::after {
+    left: calc(50% + 62px);
+    background: linear-gradient(90deg, rgba(238, 248, 255, 0.8), rgba(92, 178, 255, 0.58), transparent);
 }
 
 .glink_button.title-choice:hover,
@@ -926,8 +970,14 @@ img.se_mute_on::after { display: none !important; }
     background: transparent !important;
     color: #ffffff !important;
     text-shadow:
-        -58px 0 12px rgba(102, 185, 255, 0.72),
-        58px 0 12px rgba(102, 185, 255, 0.72),
-        0 0 5px rgba(232, 248, 255, 0.98),
-        0 0 16px rgba(72, 160, 255, 0.75);
+        0 0 4px rgba(232, 248, 255, 0.9),
+        0 0 12px rgba(72, 160, 255, 0.52);
+}
+
+.glink_button.title-choice:hover::before,
+.glink_button.title-choice:focus::before,
+.glink_button.title-choice:hover::after,
+.glink_button.title-choice:focus::after {
+    width: 118px;
+    opacity: 1;
 }
