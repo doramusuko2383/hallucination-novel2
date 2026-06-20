@@ -35,7 +35,7 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
 [glink name="title-choice title-start title-primary" color="black" size="22" x="520" y="395" width="240" height="34" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="17" x="520" y="445" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_load"]
+[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_continue"]
 [glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
@@ -48,6 +48,7 @@ baseLayer.css("background-color", "#000000");
         "ﾊﾙｼﾈｰｼｮﾝ"
     ];
     var timerKey = "__titleLogoGlitchTimer";
+    var seKey = "__titleLogoGlitchSe";
     var logo = $(".glink_button.title-logo").last();
 
     if (window[timerKey]) {
@@ -61,20 +62,24 @@ baseLayer.css("background-color", "#000000");
         return min + Math.floor(Math.random() * (max - min + 1));
     }
 
-    function playGlitchSe(duration) {
-        TYRANO.kag.ftag.startTag("playse", {
-            storage: "se/short_glitch.ogg",
-            volume: "14",
-            buf: "title_glitch",
-            stop: "true"
-        });
-
-        setTimeout(function () {
-            TYRANO.kag.ftag.startTag("stopse", {
-                buf: "title_glitch",
-                stop: "true"
+    function getGlitchSe() {
+        if (!window[seKey]) {
+            window[seKey] = new Howl({
+                src: [$.parseStorage("se/short_glitch.ogg", "sound")],
+                volume: 0.16,
+                preload: true
             });
-        }, duration + 40);
+        }
+
+        return window[seKey];
+    }
+
+    function playGlitchSe() {
+        TYRANO.kag.readyAudio();
+        var sound = getGlitchSe();
+        sound.stop();
+        sound.volume(0.16);
+        sound.play();
     }
 
     function schedule(isFirst) {
@@ -86,7 +91,7 @@ baseLayer.css("background-color", "#000000");
 
             var glitchText = glitchTexts[Math.floor(Math.random() * glitchTexts.length)];
             var duration = 80 + Math.floor(Math.random() * 71);
-            playGlitchSe(duration);
+            playGlitchSe();
             logo.text(glitchText);
             logo.addClass("title-logo-glitching");
 
