@@ -110,6 +110,10 @@ baseLayer.css("background-color", "#000000");
 [s]
 
 *title_continue
+[continue_latest]
+@jump target="*title_menu"
+
+*title_load
 [showload]
 @jump target="*title_menu"
 
