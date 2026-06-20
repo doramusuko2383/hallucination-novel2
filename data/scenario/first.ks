@@ -35,7 +35,7 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
 [glink name="title-choice title-start title-primary" color="black" size="22" x="520" y="395" width="240" height="34" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="17" x="520" y="445" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_continue"]
+[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_load"]
 [glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
@@ -89,6 +89,10 @@ baseLayer.css("background-color", "#000000");
 [s]
 
 *title_continue
+[continue_latest]
+@jump target="*title_menu"
+
+*title_load
 [showload]
 @jump target="*title_menu"
 
