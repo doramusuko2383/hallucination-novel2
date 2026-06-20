@@ -69,12 +69,12 @@
 	tf.btn_h = 46; // 高さ
 
 	// ボタンを表示する座標（[0]はBGM/SEミュート用。TEXT/AUTOは[1]から使用）
-	tf.config_x       = [994, 454, 508, 562, 616, 670, 724, 778, 832, 886, 940]; // X座標（共通）
+	tf.config_x       = [979, 439, 493, 547, 601, 655, 709, 763, 817, 871, 925]; // X座標（共通）
 
 	tf.config_y_bgm   = 190; // BGMのY座標
-	tf.config_y_se    = 250; // SEのY座標
-	tf.config_y_ch    = 325; // テキスト速度のY座標
-	tf.config_y_auto  = 385; // オート速度のY座標
+	tf.config_y_se    = 260; // SEのY座標
+	tf.config_y_ch    = 330; // テキスト速度のY座標
+	tf.config_y_auto  = 400; // オート速度のY座標
 
 	// 上記の配列変数の添字を格納しておく変数。選択した音量や速度に対応。
 	tf.config_num_bgm;  // BGM
@@ -115,36 +115,30 @@
 	[ptext layer="fix" fix="true" name="config_title_text config_label_text" text="CONFIG" x="68" y="44" size="24" color="0xf0f6fa"]
 	[ptext layer="fix" fix="true" name="config_panel_note config_label_text" text="" x="260" y="116" size="1" color="0xf0f6fa"]
 	[ptext layer="fix" fix="true" name="config_label_text" text="BGM VOLUME" x="292" y="202" size="16" color="0xf0f6fa"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="MIN" x="456" y="174" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="MAX" x="932" y="174" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="MUTE" x="1038" y="174" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="1025" y="202" size="10" color="0xdde6ec"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="1104" y="202" size="10" color="0xdde6ec"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="SE VOLUME" x="292" y="262" size="16" color="0xf0f6fa"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="MIN" x="456" y="234" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="MAX" x="932" y="234" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="MUTE" x="1038" y="234" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="1025" y="262" size="10" color="0xdde6ec"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="1104" y="262" size="10" color="0xdde6ec"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="TEXT SPEED" x="292" y="337" size="16" color="0xf0f6fa"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="SLOW" x="456" y="309" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="FAST" x="930" y="309" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="AUTO SPEED" x="292" y="397" size="16" color="0xf0f6fa"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="SLOW" x="456" y="369" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_hint_text" text="FAST" x="930" y="369" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="UNREAD SKIP" x="292" y="482" size="16" color="0xf0f6fa"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="478" y="482" size="13" color="0xdde6ec"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="638" y="482" size="13" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="MIN" x="439" y="174" width="46" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="MAX" x="925" y="174" width="46" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="MUTE" x="997" y="174" width="138" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="997" y="203" width="64" align="center" size="10" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="1071" y="203" width="64" align="center" size="10" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="SE VOLUME" x="292" y="272" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="MIN" x="439" y="244" width="46" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="MAX" x="925" y="244" width="46" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="MUTE" x="997" y="244" width="138" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="997" y="273" width="64" align="center" size="10" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="1071" y="273" width="64" align="center" size="10" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="TEXT SPEED" x="292" y="342" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="SLOW" x="439" y="314" width="46" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="FAST" x="925" y="314" width="46" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="AUTO SPEED" x="292" y="412" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="SLOW" x="439" y="384" width="46" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_hint_text" text="FAST" x="925" y="384" width="46" align="center" size="8" color="0xb8c2c9"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="UNREAD SKIP" x="292" y="492" size="16" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="430" y="492" width="150" align="center" size="13" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="590" y="492" width="150" align="center" size="13" color="0xdde6ec"]
 
 	[iscript]
 	// 古いCONFIG補助表示が混在しても、操作レイヤーを塞がないようにする
 	$(".config_label_text, .config_hint_text").css("pointer-events", "none");
-	$(".config_help_text, .config_value_text, .config_scale_line").remove();
-	[endscript]
-
-	[iscript]
-	// 古いCONFIG補助表示が混在しても、操作レイヤーを塞がないようにする
-	$(".config_label_text").css("pointer-events", "none");
 	$(".config_help_text, .config_value_text, .config_scale_line").remove();
 	[endscript]
 
@@ -167,8 +161,8 @@
 	[button name="bgmvol,bgmvol_100" fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="&tf.btn_w" height="&tf.btn_h" x="&tf.config_x[10]" y="&tf.config_y_bgm" exp="tf.current_bgm_vol = 100; tf.config_num_bgm = 10"]
 
 ;	BGMミュート
-	[button name="bgm_mute_off" fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="64" height="34" x="1012" y="196" exp="if(tf.current_bgm_vol == 0){tf.current_bgm_vol = tf.prev_bgm_vol || 100;} tf.config_num_bgm = Math.ceil(tf.current_bgm_vol / 10)"]
-	[button name="bgm_mute_on"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="64" height="34" x="1086" y="196" exp="if(tf.current_bgm_vol > 0){tf.prev_bgm_vol = tf.current_bgm_vol;} tf.current_bgm_vol = 0; tf.config_num_bgm = 0"]
+	[button name="bgm_mute_off" fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="64" height="34" x="997" y="196" exp="if(tf.current_bgm_vol == 0){tf.current_bgm_vol = tf.prev_bgm_vol || 100;} tf.config_num_bgm = Math.ceil(tf.current_bgm_vol / 10)"]
+	[button name="bgm_mute_on"  fix="true" target="*vol_bgm_change" graphic="&tf.btn_path_off" width="64" height="34" x="1071" y="196" exp="if(tf.current_bgm_vol > 0){tf.prev_bgm_vol = tf.current_bgm_vol;} tf.current_bgm_vol = 0; tf.config_num_bgm = 0"]
 
 ;------------------------------------------------------------------------------------------------------
 ; SE音量
@@ -185,8 +179,8 @@
 	[button name="sevol,sevol_100" fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="&tf.btn_w" height="&tf.btn_h" x="&tf.config_x[10]" y="&tf.config_y_se" exp="tf.current_se_vol = 100; tf.config_num_se = 10"]
 
 ;	SEミュート
-	[button name="se_mute_off" fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="64" height="34" x="1012" y="256" exp="if(tf.current_se_vol == 0){tf.current_se_vol = tf.prev_se_vol || 100;} tf.config_num_se = Math.ceil(tf.current_se_vol / 10)"]
-	[button name="se_mute_on"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="64" height="34" x="1086" y="256" exp="if(tf.current_se_vol > 0){tf.prev_se_vol = tf.current_se_vol;} tf.current_se_vol = 0; tf.config_num_se = 0"]
+	[button name="se_mute_off" fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="64" height="34" x="997" y="266" exp="if(tf.current_se_vol == 0){tf.current_se_vol = tf.prev_se_vol || 100;} tf.config_num_se = Math.ceil(tf.current_se_vol / 10)"]
+	[button name="se_mute_on"  fix="true" target="*vol_se_change" graphic="&tf.btn_path_off" width="64" height="34" x="1071" y="266" exp="if(tf.current_se_vol > 0){tf.prev_se_vol = tf.current_se_vol;} tf.current_se_vol = 0; tf.config_num_se = 0"]
 
 ;------------------------------------------------------------------------------------------------------
 ; テキスト速度
@@ -221,10 +215,10 @@
 ;------------------------------------------------------------------------------------------------------
 
 ;	未読スキップ-OFF
-	[button name="unread_off" fix="true" target="*skip_off" graphic="&tf.btn_path_off" width="150" height="42" x="430" y="470"]
+	[button name="unread_off" fix="true" target="*skip_off" graphic="&tf.btn_path_off" width="150" height="42" x="430" y="480"]
 
 ;	未読スキップ-ON
-	[button name="unread_on"  fix="true" target="*skip_on"  graphic="&tf.btn_path_off" width="150" height="42" x="590" y="470"]
+	[button name="unread_on"  fix="true" target="*skip_on"  graphic="&tf.btn_path_off" width="150" height="42" x="590" y="480"]
 
 ;------------------------------------------------------------------------------------------------------
 ; コンフィグ起動時の画面更新
