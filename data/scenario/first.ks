@@ -20,6 +20,7 @@
 
 *title_menu
 [cm]
+@freeimage layer=0 page=fore
 @layopt layer=message0 visible=false
 [iscript]
 var baseLayer = TG.layer.getLayer("base", "fore");
@@ -27,15 +28,46 @@ baseLayer.css("background-image", "none");
 baseLayer.css("background-color", "#000000");
 [endscript]
 
-[glink name="title-choice" color="black" size="34" x="0" y="320" width="1280" text="最初から" target="*title_newgame"]
-[glink name="title-choice" color="black" size="34" x="0" y="390" width="1280" text="続きから" target="*title_continue"]
+; タイトル専用背景。動画は最背面でミュート・ループ再生し、前景PNGはUI操作を妨げないように固定表示する。
+[bgmovie storage="title_sky.webm" loop="true" mute="true" time=0 stop="false"]
+[iscript]
+(function setTitleMovieSpeed() {
+    var video = document.getElementById("bgmovie");
+    if (!video) {
+        setTimeout(setTitleMovieSpeed, 50);
+        return;
+    }
+    video.defaultPlaybackRate = 0.2;
+    video.playbackRate = 0.2;
+})();
+[endscript]
+[image layer=0 page=fore visible=true name="title_rooftop_foreground" storage="title_rooftop.png" folder="bgimage" x=0 y=0 width=1280 height=720 zindex=1]
+
+[glink name="title-logo" color="black" size="54" x="90" y="95" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
+[glink name="title-choice title-start" color="black" size="30" x="860" y="300" width="260" height="42" text="START" target="*title_newgame"]
+[glink name="title-choice title-load" color="black" size="30" x="860" y="354" width="260" height="42" text="LOAD" target="*title_continue"]
+[glink name="title-choice title-config" color="black" size="30" x="860" y="408" width="260" height="42" text="CONFIG" target="*title_config"]
+[glink name="title-choice title-extra" color="black" size="30" x="860" y="462" width="260" height="42" text="EXTRA" storage="cg.ks"]
+[glink name="title-choice title-quit" color="black" size="30" x="860" y="516" width="260" height="42" text="QUIT" target="*title_quit"]
 [s]
 
 *title_continue
 [showload]
 @jump target="*title_menu"
 
+*title_config
+[sleepgame storage="config.ks"]
+@jump target="*title_menu"
+
+*title_quit
+[iscript]
+window.close();
+[endscript]
+@jump target="*title_menu"
+
 *title_newgame
+[stop_bgmovie time=300 wait=true]
+@freeimage layer=0 page=fore
 
 ;導入で使用する隠しパラメータの初期化（UI表示なし）
 [iscript]
