@@ -132,9 +132,9 @@
 	[ptext layer="fix" fix="true" name="config_label_text" text="AUTO SPEED" x="292" y="412" size="16" color="0xf0f6fa"]
 	[ptext layer="fix" fix="true" name="config_hint_text" text="SLOW" x="439" y="384" width="46" align="center" size="8" color="0xb8c2c9"]
 	[ptext layer="fix" fix="true" name="config_hint_text" text="FAST" x="925" y="384" width="46" align="center" size="8" color="0xb8c2c9"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="UNREAD SKIP" x="292" y="492" size="16" color="0xf0f6fa"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="430" y="492" width="150" align="center" size="13" color="0xdde6ec"]
-	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="590" y="492" width="150" align="center" size="13" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="UNREAD SKIP" x="292" y="493" size="15" color="0xf0f6fa"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="OFF" x="439" y="493" width="120" align="center" size="12" color="0xdde6ec"]
+	[ptext layer="fix" fix="true" name="config_label_text" text="ON" x="569" y="493" width="120" align="center" size="12" color="0xdde6ec"]
 
 	[iscript]
 	// 古いCONFIG補助表示が混在しても、操作レイヤーを塞がないようにする
@@ -215,10 +215,10 @@
 ;------------------------------------------------------------------------------------------------------
 
 ;	未読スキップ-OFF
-	[button name="unread_off" fix="true" target="*skip_off" graphic="&tf.btn_path_off" width="150" height="42" x="430" y="480"]
+	[button name="unread_off" fix="true" target="*skip_off" graphic="&tf.btn_path_off" width="120" height="34" x="439" y="486"]
 
 ;	未読スキップ-ON
-	[button name="unread_on"  fix="true" target="*skip_on"  graphic="&tf.btn_path_off" width="150" height="42" x="590" y="480"]
+	[button name="unread_on"  fix="true" target="*skip_on"  graphic="&tf.btn_path_off" width="120" height="34" x="569" y="486"]
 
 ;------------------------------------------------------------------------------------------------------
 ; コンフィグ起動時の画面更新
