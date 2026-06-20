@@ -28,27 +28,64 @@ baseLayer.css("background-image", "none");
 baseLayer.css("background-color", "#000000");
 [endscript]
 
-; タイトル専用背景。動画は最背面でミュート・ループ再生し、前景PNGはUI操作を妨げないように固定表示する。
-[bgmovie storage="title_sky.webm" loop="true" mute="true" time=0 stop="false"]
+; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
+[bg storage="title_rooftop.webp" time=0]
+
+[glink name="title-logo" color="black" size="60" x="330" y="175" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
+[glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
+[glink name="title-choice title-start title-primary" color="black" size="22" x="520" y="395" width="240" height="34" text="NEW GAME" target="*title_newgame"]
+[glink name="title-choice" color="black" size="17" x="520" y="445" width="240" height="30" text="CONTINUE" target="*title_continue"]
+[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_continue"]
+[glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
+[glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
-(function setTitleMovieSpeed() {
-    var video = document.getElementById("bgmovie");
-    if (!video) {
-        setTimeout(setTitleMovieSpeed, 50);
-        return;
+(function setupTitleLogoGlitch() {
+    var originalTitle = "ハルシネーション";
+    var glitchTexts = [
+        "ハﾉﾚシネーション",
+        "ハルシネーショソ",
+        "ハルシネ一ション",
+        "ﾊﾙｼﾈｰｼｮﾝ",
+        "HALLUCINATION"
+    ];
+    var timerKey = "__titleLogoGlitchTimer";
+    var logo = $(".glink_button.title-logo").last();
+
+    if (window[timerKey]) {
+        clearTimeout(window[timerKey]);
+        window[timerKey] = null;
     }
-    video.defaultPlaybackRate = 0.2;
-    video.playbackRate = 0.2;
+
+    function getDelay(isFirst) {
+        var min = isFirst ? 3000 : 7000;
+        var max = isFirst ? 5000 : 12000;
+        return min + Math.floor(Math.random() * (max - min + 1));
+    }
+
+    function schedule(isFirst) {
+        window[timerKey] = setTimeout(function () {
+            if (!logo.length || !$.contains(document, logo.get(0))) {
+                window[timerKey] = null;
+                return;
+            }
+
+            var glitchText = glitchTexts[Math.floor(Math.random() * glitchTexts.length)];
+            var duration = 100 + Math.floor(Math.random() * 101);
+            logo.text(glitchText);
+            logo.addClass("title-logo-glitching");
+
+            setTimeout(function () {
+                logo.text(originalTitle);
+                logo.removeClass("title-logo-glitching");
+                schedule(false);
+            }, duration);
+        }, getDelay(isFirst));
+    }
+
+    logo.text(originalTitle);
+    schedule(true);
 })();
 [endscript]
-[image layer=0 page=fore visible=true name="title_rooftop_foreground" storage="title_rooftop.png" folder="bgimage" x=0 y=0 width=1280 height=720 zindex=1]
-
-[glink name="title-logo" color="black" size="54" x="90" y="95" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
-[glink name="title-choice title-start" color="black" size="30" x="860" y="300" width="260" height="42" text="START" target="*title_newgame"]
-[glink name="title-choice title-load" color="black" size="30" x="860" y="354" width="260" height="42" text="LOAD" target="*title_continue"]
-[glink name="title-choice title-config" color="black" size="30" x="860" y="408" width="260" height="42" text="CONFIG" target="*title_config"]
-[glink name="title-choice title-extra" color="black" size="30" x="860" y="462" width="260" height="42" text="EXTRA" storage="cg.ks"]
-[glink name="title-choice title-quit" color="black" size="30" x="860" y="516" width="260" height="42" text="QUIT" target="*title_quit"]
 [s]
 
 *title_continue
@@ -66,7 +103,6 @@ window.close();
 @jump target="*title_menu"
 
 *title_newgame
-[stop_bgmovie time=300 wait=true]
 @freeimage layer=0 page=fore
 
 ;導入で使用する隠しパラメータの初期化（UI表示なし）
