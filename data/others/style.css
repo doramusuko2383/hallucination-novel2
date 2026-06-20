@@ -238,6 +238,16 @@
     transition: opacity 140ms ease, border-color 140ms ease, background 140ms ease !important;
 }
 
+
+.glink_button.quiet_system_button {
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    line-height: 32px !important;
+}
+
 .quiet_system_button:hover,
 .glink_button.quiet_system_button:hover {
     opacity: 0.95 !important;
@@ -663,6 +673,50 @@
     font-size: 16px !important;
     letter-spacing: 0.16em !important;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.72) !important;
+    pointer-events: none !important;
+}
+
+.config_help_text,
+.config_value_text,
+.config_scale_line {
+    font-family: "GenMin", serif !important;
+    letter-spacing: 0.12em !important;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7) !important;
+    opacity: 0.82 !important;
+    pointer-events: none !important;
+}
+
+.config_value_text {
+    min-width: 72px !important;
+    text-align: right !important;
+    color: rgba(230, 238, 244, 0.9) !important;
+}
+
+.config_scale_line {
+    opacity: 0.28 !important;
+    pointer-events: none !important;
+}
+
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line {
+    pointer-events: none !important;
+}
+
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line {
+    pointer-events: none !important;
 }
 
 
@@ -763,4 +817,68 @@ img.se_mute_on::after { display: none !important; }
 .config_title_text {
     font-size: 24px !important;
     letter-spacing: 0.22em !important;
+}
+
+/* =========================
+   タイトル画面（動画背景＋前景PNG＋UI）
+========================= */
+#bgmovie {
+    width: 1280px !important;
+    height: 720px !important;
+    top: -288px !important;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.title_rooftop_foreground {
+    width: 1280px !important;
+    height: 720px !important;
+    left: 0 !important;
+    top: 0 !important;
+    pointer-events: none;
+}
+
+
+.glink_button.title-logo {
+    box-sizing: border-box;
+    width: 620px !important;
+    height: 86px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: rgba(238, 244, 248, 0.95) !important;
+    font-family: "GenMin", serif !important;
+    letter-spacing: 0.16em;
+    text-shadow:
+        0 0 8px rgba(0, 0, 0, 0.95),
+        0 0 22px rgba(24, 42, 58, 0.85);
+    z-index: 99999998 !important;
+    pointer-events: none !important;
+}
+
+.glink_button.title-choice {
+    box-sizing: border-box;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(221, 230, 236, 0.42);
+    background: rgba(4, 9, 16, 0.48) !important;
+    color: rgba(238, 244, 248, 0.92) !important;
+    font-family: "GenMin", serif !important;
+    letter-spacing: 0.18em;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+    z-index: 99999999 !important;
+    pointer-events: auto !important;
+}
+
+.glink_button.title-choice:hover,
+.glink_button.title-choice:focus {
+    border-color: rgba(232, 238, 244, 0.78);
+    background: rgba(16, 30, 44, 0.68) !important;
+    color: #ffffff !important;
 }
