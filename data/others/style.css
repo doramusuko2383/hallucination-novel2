@@ -238,6 +238,16 @@
     transition: opacity 140ms ease, border-color 140ms ease, background 140ms ease !important;
 }
 
+
+.glink_button.quiet_system_button {
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    line-height: 32px !important;
+}
+
 .quiet_system_button:hover,
 .glink_button.quiet_system_button:hover {
     opacity: 0.95 !important;
@@ -663,6 +673,74 @@
     font-size: 16px !important;
     letter-spacing: 0.16em !important;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.72) !important;
+    pointer-events: none !important;
+}
+
+.config_help_text,
+.config_value_text,
+.config_scale_line {
+    font-family: "GenMin", serif !important;
+    letter-spacing: 0.12em !important;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7) !important;
+    opacity: 0.82 !important;
+    pointer-events: none !important;
+}
+
+.config_value_text {
+    min-width: 72px !important;
+    text-align: right !important;
+    color: rgba(230, 238, 244, 0.9) !important;
+}
+
+.config_scale_line {
+    opacity: 0.28 !important;
+    pointer-events: none !important;
+}
+
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line {
+    pointer-events: none !important;
+}
+
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line {
+    pointer-events: none !important;
+}
+
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line,
+.config_hint_text {
+    pointer-events: none !important;
+}
+
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line,
+.config_hint_text {
+    pointer-events: none !important;
 }
 
 
@@ -763,4 +841,93 @@ img.se_mute_on::after { display: none !important; }
 .config_title_text {
     font-size: 24px !important;
     letter-spacing: 0.22em !important;
+}
+
+/* =========================
+   タイトル画面（静止画背景＋文字主体UI）
+========================= */
+.glink_button.title-logo {
+    box-sizing: border-box;
+    width: 620px !important;
+    height: 86px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: rgba(246, 249, 253, 0.96) !important;
+    font-family: "GenMin", "Times New Roman", serif !important;
+    letter-spacing: 0.24em;
+    text-shadow:
+        0 0 4px rgba(255, 255, 255, 0.45),
+        0 0 18px rgba(26, 38, 68, 0.72),
+        0 2px 12px rgba(0, 0, 0, 0.85);
+    z-index: 99999998 !important;
+    pointer-events: none !important;
+}
+
+.title-subtitle {
+    width: 400px !important;
+    text-align: center;
+    font-family: "GenMin", "Times New Roman", serif !important;
+    letter-spacing: 0.62em;
+    color: rgba(238, 244, 248, 0.86) !important;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.34),
+        0 0 16px rgba(0, 0, 0, 0.68);
+    pointer-events: none !important;
+}
+
+.title-subtitle::before,
+.title-subtitle::after {
+    content: "";
+    display: inline-block;
+    width: 110px;
+    height: 1px;
+    margin: 0 24px 6px 0;
+    background: linear-gradient(90deg, transparent, rgba(238, 244, 248, 0.62));
+}
+
+.title-subtitle::after {
+    margin: 0 0 6px 24px;
+    background: linear-gradient(90deg, rgba(238, 244, 248, 0.62), transparent);
+}
+
+.glink_button.title-choice {
+    box-sizing: border-box;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: rgba(246, 249, 253, 0.9) !important;
+    font-family: "GenMin", "Times New Roman", serif !important;
+    font-weight: 600;
+    letter-spacing: 0.34em;
+    text-shadow:
+        0 0 7px rgba(0, 0, 0, 0.9),
+        0 0 14px rgba(22, 32, 54, 0.8);
+    z-index: 99999999 !important;
+    pointer-events: auto !important;
+}
+
+.glink_button.title-choice.title-primary {
+    letter-spacing: 0.42em;
+}
+
+.glink_button.title-choice:hover,
+.glink_button.title-choice:focus {
+    background: transparent !important;
+    color: #ffffff !important;
+    text-shadow:
+        -58px 0 12px rgba(102, 185, 255, 0.72),
+        58px 0 12px rgba(102, 185, 255, 0.72),
+        0 0 5px rgba(232, 248, 255, 0.98),
+        0 0 16px rgba(72, 160, 255, 0.75);
 }
