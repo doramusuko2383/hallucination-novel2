@@ -870,6 +870,23 @@ img.se_mute_on::after { display: none !important; }
     pointer-events: none !important;
 }
 
+.glink_button.title-logo.title-logo-glitching {
+    animation: title-logo-glitch-shift 150ms steps(2, end);
+    text-shadow:
+        -1px 0 0 rgba(255, 82, 82, 0.45),
+        1px 0 0 rgba(74, 176, 255, 0.48),
+        0 0 4px rgba(255, 255, 255, 0.5),
+        0 0 18px rgba(26, 38, 68, 0.72),
+        0 2px 12px rgba(0, 0, 0, 0.85);
+}
+
+@keyframes title-logo-glitch-shift {
+    0% { transform: translateX(0); }
+    35% { transform: translateX(-2px); }
+    70% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+
 .glink_button.title-subtitle {
     box-sizing: border-box;
     width: 400px !important;

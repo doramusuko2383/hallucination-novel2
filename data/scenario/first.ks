@@ -38,6 +38,54 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_continue"]
 [glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
+[iscript]
+(function setupTitleLogoGlitch() {
+    var originalTitle = "ハルシネーション";
+    var glitchTexts = [
+        "ハﾉﾚシネーション",
+        "ハルシネーショソ",
+        "ハルシネ一ション",
+        "ﾊﾙｼﾈｰｼｮﾝ",
+        "HALLUCINATION"
+    ];
+    var timerKey = "__titleLogoGlitchTimer";
+    var logo = $(".glink_button.title-logo").last();
+
+    if (window[timerKey]) {
+        clearTimeout(window[timerKey]);
+        window[timerKey] = null;
+    }
+
+    function getDelay(isFirst) {
+        var min = isFirst ? 3000 : 7000;
+        var max = isFirst ? 5000 : 12000;
+        return min + Math.floor(Math.random() * (max - min + 1));
+    }
+
+    function schedule(isFirst) {
+        window[timerKey] = setTimeout(function () {
+            if (!logo.length || !$.contains(document, logo.get(0))) {
+                window[timerKey] = null;
+                return;
+            }
+
+            var glitchText = glitchTexts[Math.floor(Math.random() * glitchTexts.length)];
+            var duration = 100 + Math.floor(Math.random() * 101);
+            logo.text(glitchText);
+            logo.addClass("title-logo-glitching");
+
+            setTimeout(function () {
+                logo.text(originalTitle);
+                logo.removeClass("title-logo-glitching");
+                schedule(false);
+            }, duration);
+        }, getDelay(isFirst));
+    }
+
+    logo.text(originalTitle);
+    schedule(true);
+})();
+[endscript]
 [s]
 
 *title_continue
