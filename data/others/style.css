@@ -998,3 +998,45 @@ img.se_mute_on::after { display: none !important; }
     width: 118px;
     opacity: 1;
 }
+
+/* =========================
+   SAVE/LOAD 3段表示・AUTO枠
+========================= */
+#menu_save_wrapper .save_list_item_area,
+#menu_load_wrapper .save_list_item_area {
+    gap: 4px !important;
+}
+
+.save_list_item_auto {
+    display: inline-block !important;
+    width: fit-content !important;
+    margin-bottom: 2px !important;
+    padding: 2px 8px !important;
+    border: 1px solid rgba(180, 210, 230, 0.5) !important;
+    border-radius: 999px !important;
+    color: rgba(230, 245, 255, 0.9) !important;
+    background: rgba(90, 130, 160, 0.16) !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.18em !important;
+}
+
+.save_list_item_scene_title {
+    display: block !important;
+    overflow: hidden !important;
+    color: rgba(255, 255, 255, 0.96) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7) !important;
+}
+
+.save_list_item_text {
+    display: -webkit-box !important;
+    overflow: hidden !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 2 !important;
+    line-height: 1.45 !important;
+}

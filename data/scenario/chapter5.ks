@@ -2,6 +2,7 @@
 
 *ch5_start
 *chapter5
+[scene_title title="第5章"]
 
 [cm]
 [chara_hide_all]

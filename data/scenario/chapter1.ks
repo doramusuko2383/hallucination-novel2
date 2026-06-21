@@ -1,6 +1,7 @@
 
 *ch1_start
 *chapter1
+[scene_title title="第1章"]
 
 ;第1章
 

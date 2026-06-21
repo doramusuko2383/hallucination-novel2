@@ -2,6 +2,7 @@
 
 *ch7_start
 *chapter7
+[scene_title title="第7章"]
 
 [cm]
 [chara_hide_all]
