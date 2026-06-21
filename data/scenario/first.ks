@@ -45,10 +45,10 @@ baseLayer.css("background-color", "#000000");
         "ハﾉﾚシネーション",
         "ハルシネーショソ",
         "ハルシネ一ション",
-        "ﾊﾙｼﾈｰｼｮﾝ",
-        "HALLUCINATION"
+        "ﾊﾙｼﾈｰｼｮﾝ"
     ];
     var timerKey = "__titleLogoGlitchTimer";
+    var seKey = "__titleLogoGlitchSe";
     var logo = $(".glink_button.title-logo").last();
 
     if (window[timerKey]) {
@@ -57,9 +57,29 @@ baseLayer.css("background-color", "#000000");
     }
 
     function getDelay(isFirst) {
-        var min = isFirst ? 3000 : 7000;
-        var max = isFirst ? 5000 : 12000;
+        var min = isFirst ? 5000 : 15000;
+        var max = isFirst ? 10000 : 30000;
         return min + Math.floor(Math.random() * (max - min + 1));
+    }
+
+    function getGlitchSe() {
+        if (!window[seKey]) {
+            window[seKey] = new Howl({
+                src: [$.parseStorage("se/short_glitch.ogg", "sound")],
+                volume: 0.16,
+                preload: true
+            });
+        }
+
+        return window[seKey];
+    }
+
+    function playGlitchSe() {
+        TYRANO.kag.readyAudio();
+        var sound = getGlitchSe();
+        sound.stop();
+        sound.volume(0.16);
+        sound.play();
     }
 
     function schedule(isFirst) {
@@ -70,7 +90,8 @@ baseLayer.css("background-color", "#000000");
             }
 
             var glitchText = glitchTexts[Math.floor(Math.random() * glitchTexts.length)];
-            var duration = 100 + Math.floor(Math.random() * 101);
+            var duration = 80 + Math.floor(Math.random() * 71);
+            playGlitchSe();
             logo.text(glitchText);
             logo.addClass("title-logo-glitching");
 

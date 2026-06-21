@@ -871,13 +871,15 @@ img.se_mute_on::after { display: none !important; }
 }
 
 .glink_button.title-logo.title-logo-glitching {
-    animation: title-logo-glitch-shift 150ms steps(2, end);
+    animation: title-logo-glitch-shift 120ms steps(2, end);
     text-shadow:
-        -1px 0 0 rgba(255, 82, 82, 0.45),
-        1px 0 0 rgba(74, 176, 255, 0.48),
-        0 0 4px rgba(255, 255, 255, 0.5),
+        -2px 0 0 rgba(255, 64, 86, 0.72),
+        2px 0 0 rgba(54, 178, 255, 0.76),
+        -1px 0 4px rgba(255, 64, 86, 0.42),
+        1px 0 4px rgba(54, 178, 255, 0.46),
+        0 0 4px rgba(255, 255, 255, 0.55),
         0 0 18px rgba(26, 38, 68, 0.72),
-        0 2px 12px rgba(0, 0, 0, 0.85);
+        0 2px 12px rgba(0, 0, 0, 0.85) !important;
 }
 
 @keyframes title-logo-glitch-shift {
