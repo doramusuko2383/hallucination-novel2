@@ -867,15 +867,29 @@ img.se_mute_on::after { display: none !important; }
     letter-spacing: 0.22em !important;
 }
 
-/* SAVE overwrite confirmation and chapter label */
-.remodal_title .save_overwrite_confirm_title,
-.save_overwrite_confirm_title {
-    display: block;
-    color: rgba(244, 248, 251, 0.94);
-    font-size: 19px;
-    font-weight: normal;
-    letter-spacing: 0.08em;
-    line-height: 1.6;
+
+/* タイトルUIはTyranoのfree layerに生成されるため、背景レイヤーより必ず前面に出す */
+.layer_free {
+    z-index: 1000000000 !important;
+}
+
+.layer_free:has(.title-logo),
+.layer_free:has(.title-subtitle),
+.layer_free:has(.title-choice) {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.layer_free .glink_button.title-logo,
+.layer_free .glink_button.title-subtitle,
+.layer_free .glink_button.title-choice {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* =========================
+   タイトル画面（静止画背景＋文字主体UI）
 }
 
 .remodal_title .save_overwrite_confirm_note,
