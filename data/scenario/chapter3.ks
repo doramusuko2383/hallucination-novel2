@@ -5,6 +5,7 @@
 
 *ch3_start
 *chapter3
+[scene_title title="第3章"]
 
 [cm]
 [chara_hide_all]

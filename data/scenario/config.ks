@@ -235,8 +235,10 @@
 	$(".se_mute_on").attr("src", tf.current_se_vol == 0 ? "./data/image/config/c_skipon.png" : "data/image/config/c_btn.gif");
 
 	$(".ch_"+tf.current_ch_speed).attr("src","data/image/config/c_set.png");
+	$(".config_ch_value").text(tf.current_ch_speed <= 10 ? "FAST" : (tf.current_ch_speed <= 40 ? "NORMAL" : "SLOW"));
 
 	$(".auto_"+tf.current_auto_speed).attr("src","data/image/config/c_set.png");
+	$(".config_auto_value").text(tf.current_auto_speed <= 1300 ? "FAST" : (tf.current_auto_speed <= 3000 ? "NORMAL" : "SLOW"));
 
 	if(tf.text_skip == 'OFF'){
 		$(".unread_off").attr("src","./data/image/config/c_skipoff.png");
@@ -320,6 +322,7 @@
 	$(".ch").attr("src","data/image/config/c_btn.png");
 	$(".ch_"+tf.set_ch_speed).attr("src","data/image/config/c_set.png");
 	tf.current_ch_speed = tf.set_ch_speed;
+	$(".config_ch_value").text(tf.current_ch_speed <= 10 ? "FAST" : (tf.current_ch_speed <= 40 ? "NORMAL" : "SLOW"));
 
 	[endscript]
 
@@ -356,6 +359,7 @@
 
 	$(".auto").attr("src","data/image/config/c_btn.png");
 	$(".auto_"+tf.set_auto_speed).attr("src","data/image/config/c_set.png");
+	$(".config_auto_value").text(tf.set_auto_speed <= 1300 ? "FAST" : (tf.set_auto_speed <= 3000 ? "NORMAL" : "SLOW"));
 
 	[endscript]
 	[autoconfig speed="&tf.set_auto_speed"]

@@ -20,6 +20,7 @@
 
 *title_menu
 [cm]
+@freeimage layer=0 page=fore
 @layopt layer=message0 visible=false
 [iscript]
 var baseLayer = TG.layer.getLayer("base", "fore");
@@ -27,15 +28,189 @@ baseLayer.css("background-image", "none");
 baseLayer.css("background-color", "#000000");
 [endscript]
 
-[glink name="title-choice" color="black" size="34" x="0" y="320" width="1280" text="最初から" target="*title_newgame"]
-[glink name="title-choice" color="black" size="34" x="0" y="390" width="1280" text="続きから" target="*title_continue"]
+; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
+[bg storage="title_rooftop.webp" time=0]
+[iscript]
+(function setupTitleBackgroundBreath() {
+    var styleId = "title-background-breath-style";
+    var className = "title-background-breath";
+    var baseLayer = TG.layer.getLayer("base", "fore");
+
+    if (!document.getElementById(styleId)) {
+        var style = document.createElement("style");
+        style.id = styleId;
+        style.textContent = [
+            "@keyframes titleBackgroundBreath {",
+            "  0% { background-size: 100% 100%; }",
+            "  50% { background-size: 102% 102%; }",
+            "  100% { background-size: 100% 100%; }",
+            "}",
+            "." + className + " {",
+            "  background-position: center center;",
+            "  animation: titleBackgroundBreath 120s ease-in-out infinite;",
+            "}"
+        ].join("\n");
+        document.head.appendChild(style);
+    }
+
+    baseLayer.removeClass(className);
+    baseLayer.css("background-position", "center center");
+    baseLayer.addClass(className);
+})();
+[endscript]
+; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
+[playbgm storage="nature_wind.ogg" loop=true volume=50 fadein=true time=800]
+
+[glink name="title-logo" color="black" size="60" x="330" y="175" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
+[glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
+[glink name="title-choice title-start title-primary" color="black" size="22" x="520" y="395" width="240" height="34" text="NEW GAME" target="*title_newgame"]
+[glink name="title-choice" color="black" size="17" x="520" y="445" width="240" height="30" text="CONTINUE" target="*title_continue"]
+[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_load"]
+[glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
+[glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
+[iscript]
+(function setupTitleLogoGlitch() {
+    var originalTitle = "ハルシネーション";
+    var glitchTexts = [
+        "ハﾉﾚシネーション",
+        "ハルシネーショソ",
+        "ハルシネ一ション",
+        "ﾊﾙｼﾈｰｼｮﾝ"
+    ];
+    var timerKey = "__titleLogoGlitchTimer";
+    var seKey = "__titleLogoGlitchSe";
+    var logo = $(".glink_button.title-logo").last();
+
+    if (window[timerKey]) {
+        clearTimeout(window[timerKey]);
+        window[timerKey] = null;
+    }
+
+    function getDelay(isFirst) {
+        var min = isFirst ? 2000 : 5000;
+        var max = isFirst ? 4000 : 10000;
+        return min + Math.floor(Math.random() * (max - min + 1));
+    }
+
+    function getGlitchSe() {
+        if (!window[seKey]) {
+            window[seKey] = new Howl({
+                src: [$.parseStorage("se/short_glitch.ogg", "sound")],
+                volume: 0.13,
+                preload: true
+            });
+        }
+
+        return window[seKey];
+    }
+
+    function playGlitchSe() {
+        TYRANO.kag.readyAudio();
+        var sound = getGlitchSe();
+        sound.stop();
+        sound.volume(0.13);
+        sound.play();
+    }
+
+    function pickGlitchText() {
+        return glitchTexts[Math.floor(Math.random() * glitchTexts.length)];
+    }
+
+    function isLogoAlive() {
+        return logo.length && $.contains(document, logo.get(0));
+    }
+
+    function resetLogo() {
+        if (!isLogoAlive()) return;
+        logo.text(originalTitle);
+        logo.attr("data-text", originalTitle);
+        logo.removeClass("title-logo-glitching");
+    }
+
+    function runGlitchBurst(activeDuration) {
+        if (!isLogoAlive()) return;
+        logo.removeClass("title-logo-glitching");
+        logo.get(0).offsetWidth;
+        var glitchText = pickGlitchText();
+        logo.text(glitchText);
+        logo.attr("data-text", glitchText);
+        logo.addClass("title-logo-glitching");
+
+        setTimeout(resetLogo, activeDuration);
+    }
+
+    function runGlitchSequence() {
+        if (!isLogoAlive()) {
+            window[timerKey] = null;
+            return;
+        }
+
+        var duration = 220 + Math.floor(Math.random() * 141);
+        var burstCount = duration >= 320 ? 4 : duration >= 270 ? 3 : 2;
+        var activeDuration = 58 + Math.floor(Math.random() * 21);
+        var interval = Math.floor((duration - activeDuration) / (burstCount - 1));
+
+        playGlitchSe();
+
+        for (var i = 0; i < burstCount; i++) {
+            setTimeout(function () {
+                runGlitchBurst(activeDuration);
+            }, interval * i);
+        }
+
+        setTimeout(function () {
+            resetLogo();
+            if (isLogoAlive()) schedule(false);
+        }, duration);
+    }
+
+    function schedule(isFirst) {
+        window[timerKey] = setTimeout(function () {
+            if (!isLogoAlive()) {
+                window[timerKey] = null;
+                return;
+            }
+
+            runGlitchSequence();
+        }, getDelay(isFirst));
+    }
+
+    resetLogo();
+    schedule(true);
+})();
+[endscript]
 [s]
 
 *title_continue
+[iscript]
+TG.layer.getLayer("base", "fore").removeClass("title-background-breath");
+[endscript]
+[continue_latest]
+@jump target="*title_menu"
+
+*title_load
+[iscript]
+TG.layer.getLayer("base", "fore").removeClass("title-background-breath");
+[endscript]
 [showload]
 @jump target="*title_menu"
 
+*title_config
+[sleepgame storage="config.ks"]
+@jump target="*title_menu"
+
+*title_quit
+[iscript]
+window.close();
+[endscript]
+@jump target="*title_menu"
+
 *title_newgame
+[fadeoutbgm time=500]
+[iscript]
+TG.layer.getLayer("base", "fore").removeClass("title-background-breath");
+[endscript]
+@freeimage layer=0 page=fore
 
 ;導入で使用する隠しパラメータの初期化（UI表示なし）
 [iscript]
@@ -56,6 +231,7 @@ if (f.has_crossed_line === undefined) f.has_crossed_line = false;
 
 ;デバッグ補助（表示用スナップショット）
 if (f.debug_flags_snapshot === undefined) f.debug_flags_snapshot = "";
+if (f.save_scene_title === undefined) f.save_scene_title = "";
 ; デバッグモード
 if (f.debug_mode === undefined) f.debug_mode = true;
 [endscript]
