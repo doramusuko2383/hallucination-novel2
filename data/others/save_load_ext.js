@@ -9,10 +9,37 @@
         return String(value).replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
     }
 
+    function toJapaneseNumber(num) {
+        var ones = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
+        num = parseInt(num, 10);
+        if (!num) return "";
+        if (num < 10) return ones[num];
+        if (num === 10) return "十";
+        if (num < 20) return "十" + ones[num - 10];
+        if (num < 100) return ones[Math.floor(num / 10)] + "十" + ones[num % 10];
+        return String(num);
+    }
+
+    function normalizeChapterTitle(text, sceneTitle) {
+        text = safeText(text);
+        var chapterMatch = text.match(/^第([0-9０-９一二三四五六七八九十百千]+)章\s*/);
+        if (!chapterMatch && sceneTitle) {
+            chapterMatch = safeText(sceneTitle).match(/^第([0-9０-９一二三四五六七八九十百千]+)章\s*/);
+            if (chapterMatch && text.indexOf(safeText(sceneTitle)) !== 0) return text;
+        }
+        if (!chapterMatch) return text;
+        var rawNumber = chapterMatch[1].replace(/[０-９]/g, function (ch) {
+            return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0);
+        });
+        var chapter = /^\d+$/.test(rawNumber) ? "第" + toJapaneseNumber(rawNumber) + "章" : "第" + rawNumber + "章";
+        var rest = text.slice(chapterMatch[0].length).replace(/^\s+/, "");
+        return rest ? chapter + "　" + rest : chapter;
+    }
+
     function buildSaveDisplay(data) {
         data = data || {};
         var title = safeText(data.scene_title || (data.stat && data.stat.f && data.stat.f.save_scene_title));
-        var text = safeText(data.title);
+        var text = normalizeChapterTitle(data.title, title);
         data.display_scene_title = title;
         data.display_text = text;
         return data;
@@ -162,29 +189,41 @@
                 var j_save = $(html_str);
                 j_save.find(".save_list").css("font-family", that.kag.config.userFace);
                 var layer_menu = that.kag.layer.getMenuLayer();
+                function saveToSlot(num) {
+                    that.snap = null;
+                    that.doSave(num, function (save_data) {
+                        buildSaveDisplay(save_data);
+                        var j_slot = layer_menu.find("[data-num='" + num + "']");
+                        if (save_data.img_data) {
+                            if (j_slot.find(".save_list_item_thumb img").get(0)) {
+                                j_slot.find(".save_list_item_thumb img").attr("src", save_data.img_data);
+                            } else {
+                                j_slot.find(".save_list_item_thumb").css("background-image", "").append("<img>").find("img").attr("src", save_data.img_data);
+                            }
+                        }
+                        j_slot.find(".save_list_item_date").html(save_data.save_date || "");
+                        j_slot.find(".save_list_item_scene_title").remove();
+                        if (save_data.display_scene_title) {
+                            j_slot.find(".save_list_item_date").after('<span class="save_list_item_scene_title"></span>');
+                            j_slot.find(".save_list_item_scene_title").text(save_data.display_scene_title);
+                        }
+                        j_slot.find(".save_list_item_text").text(save_data.display_text || save_data.title || "");
+                        if (cb) cb();
+                    });
+                }
                 j_save.find(".save_display_area").each(function () {
-                    $(this).click(function () {
+                    $(this).click(function (e) {
                         var num = $(this).attr("data-num");
-                        that.snap = null;
-                        that.doSave(num, function (save_data) {
-                            buildSaveDisplay(save_data);
-                            var j_slot = layer_menu.find("[data-num='" + num + "']");
-                            if (save_data.img_data) {
-                                if (j_slot.find(".save_list_item_thumb img").get(0)) {
-                                    j_slot.find(".save_list_item_thumb img").attr("src", save_data.img_data);
-                                } else {
-                                    j_slot.find(".save_list_item_thumb").css("background-image", "").append("<img>").find("img").attr("src", save_data.img_data);
-                                }
-                            }
-                            j_slot.find(".save_list_item_date").html(save_data.save_date || "");
-                            j_slot.find(".save_list_item_scene_title").remove();
-                            if (save_data.display_scene_title) {
-                                j_slot.find(".save_list_item_date").after('<span class="save_list_item_scene_title"></span>');
-                                j_slot.find(".save_list_item_scene_title").text(save_data.display_scene_title);
-                            }
-                            j_slot.find(".save_list_item_text").text(save_data.display_text || save_data.title || "");
-                            if (cb) cb();
-                        });
+                        var target = array[num];
+                        if (target && target.save_date) {
+                            $.confirm(
+                                '<span class="save_overwrite_confirm_title">このスロットに上書きしますか？</span><span class="save_overwrite_confirm_note">上書きすると、以前のセーブデータは復元できません。</span>',
+                                function () { saveToSlot(num); }
+                            );
+                        } else {
+                            saveToSlot(num);
+                        }
+                        e.stopPropagation();
                     }).focusable();
                 });
                 that.setMenuScrollEvents(j_save, { target: ".area_save_list", move: 160 });
