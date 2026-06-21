@@ -30,6 +30,34 @@ baseLayer.css("background-color", "#000000");
 
 ; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
 [bg storage="title_rooftop.webp" time=0]
+[iscript]
+(function setupTitleBackgroundBreath() {
+    var styleId = "title-background-breath-style";
+    var className = "title-background-breath";
+    var baseLayer = TG.layer.getLayer("base", "fore");
+
+    if (!document.getElementById(styleId)) {
+        var style = document.createElement("style");
+        style.id = styleId;
+        style.textContent = [
+            "@keyframes titleBackgroundBreath {",
+            "  0% { background-size: 100% 100%; }",
+            "  50% { background-size: 102% 102%; }",
+            "  100% { background-size: 100% 100%; }",
+            "}",
+            "." + className + " {",
+            "  background-position: center center;",
+            "  animation: titleBackgroundBreath 120s ease-in-out infinite;",
+            "}"
+        ].join("\n");
+        document.head.appendChild(style);
+    }
+
+    baseLayer.removeClass(className);
+    baseLayer.css("background-position", "center center");
+    baseLayer.addClass(className);
+})();
+[endscript]
 ; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
 [playbgm storage="nature_wind.ogg" loop=true volume=24 fadein=true time=800]
 
@@ -154,10 +182,16 @@ baseLayer.css("background-color", "#000000");
 [s]
 
 *title_continue
+[iscript]
+TG.layer.getLayer("base", "fore").removeClass("title-background-breath");
+[endscript]
 [continue_latest]
 @jump target="*title_menu"
 
 *title_load
+[iscript]
+TG.layer.getLayer("base", "fore").removeClass("title-background-breath");
+[endscript]
 [showload]
 @jump target="*title_menu"
 
@@ -173,6 +207,9 @@ window.close();
 
 *title_newgame
 [fadeoutbgm time=500]
+[iscript]
+TG.layer.getLayer("base", "fore").removeClass("title-background-breath");
+[endscript]
 @freeimage layer=0 page=fore
 
 ;導入で使用する隠しパラメータの初期化（UI表示なし）
