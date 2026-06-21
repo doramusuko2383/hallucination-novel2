@@ -7,6 +7,7 @@
 *ch2_debug_current
 *ch2_start
 *chapter2
+[scene_title title="第2章"]
 
 [cm]
 [chara_hide_all]
