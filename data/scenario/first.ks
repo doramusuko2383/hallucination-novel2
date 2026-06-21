@@ -33,29 +33,48 @@ baseLayer.css("background-color", "#000000");
 [iscript]
 (function setupTitleBackgroundBreath() {
     var styleId = "title-background-breath-style";
-    var className = "title-background-breath";
+    var className = "title-background-breath-image";
     var baseLayer = TG.layer.getLayer("base", "fore");
+    var backgroundUrl = "./data/bgimage/title_rooftop.webp";
 
     if (!document.getElementById(styleId)) {
         var style = document.createElement("style");
         style.id = styleId;
         style.textContent = [
             "@keyframes titleBackgroundBreath {",
-            "  0% { background-size: 100% 100%; }",
-            "  50% { background-size: 102% 102%; }",
-            "  100% { background-size: 100% 100%; }",
+            "  0% { transform: scale(1); }",
+            "  50% { transform: scale(1.02); }",
+            "  100% { transform: scale(1); }",
             "}",
             "." + className + " {",
+            "  position: absolute;",
+            "  inset: 0;",
+            "  z-index: 0;",
+            "  pointer-events: none;",
             "  background-position: center center;",
+            "  background-repeat: no-repeat;",
+            "  background-size: 100% 100%;",
+            "  transform-origin: center center;",
             "  animation: titleBackgroundBreath 120s ease-in-out infinite;",
+            "  animation-fill-mode: both;",
             "}"
         ].join("\n");
         document.head.appendChild(style);
     }
 
-    baseLayer.removeClass(className);
-    baseLayer.css("background-position", "center center");
-    baseLayer.addClass(className);
+    baseLayer.removeClass("title-background-breath");
+    baseLayer.css({
+        "position": "relative",
+        "overflow": "hidden",
+        "background-image": "none",
+        "background-color": "#000000"
+    });
+    baseLayer.children("." + className).remove();
+    baseLayer.prepend(
+        $("<div></div>")
+            .addClass(className)
+            .css("background-image", "url(" + backgroundUrl + ")")
+    );
 })();
 [endscript]
 ; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
