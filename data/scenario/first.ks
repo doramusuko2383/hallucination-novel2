@@ -59,7 +59,7 @@ baseLayer.css("background-color", "#000000");
 })();
 [endscript]
 ; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
-[playbgm storage="nature_wind.ogg" loop=true volume=24 fadein=true time=800]
+[playbgm storage="nature_wind.ogg" loop=true volume=30 fadein=true time=800]
 
 [glink name="title-logo" color="black" size="60" x="330" y="175" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
@@ -96,7 +96,7 @@ baseLayer.css("background-color", "#000000");
         if (!window[seKey]) {
             window[seKey] = new Howl({
                 src: [$.parseStorage("se/short_glitch.ogg", "sound")],
-                volume: 0.16,
+                volume: 0.13,
                 preload: true
             });
         }
@@ -108,7 +108,7 @@ baseLayer.css("background-color", "#000000");
         TYRANO.kag.readyAudio();
         var sound = getGlitchSe();
         sound.stop();
-        sound.volume(0.16);
+        sound.volume(0.13);
         sound.play();
     }
 
