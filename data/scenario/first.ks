@@ -120,60 +120,6 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
-(function setupTitleBackgroundBreath() {
-    var styleId = "title-background-breath-style";
-    var className = "title-background-breath-image";
-    var baseLayer = TG.layer.getLayer("base", "fore");
-    var backgroundUrl = "./data/bgimage/title_rooftop.webp";
-
-    var style = document.getElementById(styleId);
-    if (!style) {
-        style = document.createElement("style");
-        style.id = styleId;
-        document.head.appendChild(style);
-    }
-
-    style.textContent = [
-            "@keyframes titleBackgroundBreath {",
-            "  0% { transform: scale(1); }",
-            "  50% { transform: scale(1.02); }",
-            "  100% { transform: scale(1); }",
-            "}",
-            "." + className + " {",
-            "  position: absolute;",
-            "  left: 0;",
-            "  top: 0;",
-            "  width: 100%;",
-            "  height: 100%;",
-            "  z-index: 0;",
-            "  pointer-events: none;",
-            "  background-position: center center;",
-            "  background-repeat: no-repeat;",
-            "  background-size: 100% 100%;",
-            "  transform-origin: center center;",
-            "  animation: titleBackgroundBreath 120s ease-in-out infinite;",
-            "  animation-fill-mode: both;",
-            "}",
-            ".glink_button.title-logo,",
-            ".glink_button.title-subtitle,",
-            ".glink_button.title-choice {",
-            "  position: relative;",
-            "  z-index: 1 !important;",
-            "}"
-        ].join("\n");
-
-    baseLayer.removeClass("title-background-breath");
-    baseLayer.css("position", "relative");
-    baseLayer.css("overflow", "hidden");
-    baseLayer.children("." + className).remove();
-
-    var breathImage = $("<div></div>");
-    breathImage.addClass(className);
-    breathImage.css("background-image", "url(" + backgroundUrl + ")");
-    baseLayer.prepend(breathImage);
-})();
-[endscript]
-[iscript]
 (function setupTitleLogoGlitch() {
     var originalTitle = "ハルシネーション";
     var glitchTexts = [
@@ -287,16 +233,10 @@ baseLayer.css("background-color", "#000000");
 [s]
 
 *title_continue
-[iscript]
-TG.layer.getLayer("base", "fore").removeClass("title-background-breath");
-[endscript]
 [continue_latest]
 @jump target="*title_menu"
 
 *title_load
-[iscript]
-TG.layer.getLayer("base", "fore").removeClass("title-background-breath");
-[endscript]
 [showload]
 @jump target="*title_menu"
 
@@ -312,9 +252,6 @@ window.close();
 
 *title_newgame
 [fadeoutbgm time=500]
-[iscript]
-TG.layer.getLayer("base", "fore").removeClass("title-background-breath");
-[endscript]
 @freeimage layer=0 page=fore
 
 ;導入で使用する隠しパラメータの初期化（UI表示なし）
