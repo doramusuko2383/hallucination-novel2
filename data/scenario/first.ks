@@ -137,6 +137,10 @@ baseLayer.css("background-color", "#000000");
 [s]
 
 *title_continue
+[continue_latest]
+@jump target="*title_menu"
+
+*title_load
 [showload]
 @jump target="*title_menu"
 
@@ -172,6 +176,7 @@ if (f.has_crossed_line === undefined) f.has_crossed_line = false;
 
 ;デバッグ補助（表示用スナップショット）
 if (f.debug_flags_snapshot === undefined) f.debug_flags_snapshot = "";
+if (f.save_scene_title === undefined) f.save_scene_title = "";
 ; デバッグモード
 if (f.debug_mode === undefined) f.debug_mode = true;
 [endscript]

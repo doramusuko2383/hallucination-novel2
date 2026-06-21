@@ -2,6 +2,7 @@
 
 *ch6_start
 *chapter6
+[scene_title title="第6章"]
 
 [cm]
 [chara_hide_all]
