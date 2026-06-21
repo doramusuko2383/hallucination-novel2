@@ -649,7 +649,7 @@
     position: absolute;
     left: 260px;
     top: 116px;
-    width: 760px;
+    width: 900px;
     height: 438px;
     border: 1px solid rgba(220, 235, 245, 0.2);
     border-radius: 8px;
@@ -665,14 +665,32 @@
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.72) !important;
 }
 
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line,
+.config_hint_text {
+    pointer-events: none !important;
+}
+
 img.bgmvol,
 img.sevol,
 img.ch,
 img.auto,
 img.unread_off,
-img.unread_on {
+img.unread_on,
+img.bgm_mute_off,
+img.bgm_mute_on,
+img.se_mute_off,
+img.se_mute_on {
+    z-index: 1000000002 !important;
+    pointer-events: auto !important;
     box-sizing: border-box !important;
-    border: 1px solid rgba(210, 225, 235, 0.24) !important;
+    border: 1px solid rgba(220, 235, 245, 0.34) !important;
     border-radius: 999px !important;
     background: rgba(0, 0, 0, 0.34) !important;
     object-fit: fill !important;
@@ -684,7 +702,11 @@ img.sevol:hover,
 img.ch:hover,
 img.auto:hover,
 img.unread_off:hover,
-img.unread_on:hover {
+img.unread_on:hover,
+img.bgm_mute_off:hover,
+img.bgm_mute_on:hover,
+img.se_mute_off:hover,
+img.se_mute_on:hover {
     border-color: rgba(226, 238, 246, 0.68) !important;
     box-shadow: 0 0 12px rgba(156, 185, 204, 0.16) !important;
 }
@@ -694,26 +716,42 @@ img.sevol[src$='c_set.png'],
 img.ch[src$='c_set.png'],
 img.auto[src$='c_set.png'],
 img.unread_off[src$='c_skipoff.png'],
-img.unread_on[src$='c_skipon.png'] {
-    border-color: rgba(190, 220, 235, 0.78) !important;
-    background: rgba(142, 174, 196, 0.28) !important;
-    box-shadow: 0 0 14px rgba(150, 196, 220, 0.32), inset 0 0 10px rgba(210, 235, 248, 0.12) !important;
+img.unread_on[src$='c_skipon.png'],
+img.bgm_mute_off[src$='c_skipoff.png'],
+img.bgm_mute_on[src$='c_skipon.png'],
+img.se_mute_off[src$='c_skipoff.png'],
+img.se_mute_on[src$='c_skipon.png'] {
+    border-color: rgba(226, 246, 255, 0.95) !important;
+    background: rgba(174, 208, 230, 0.38) !important;
+    box-shadow: 0 0 18px rgba(178, 220, 244, 0.45), inset 0 0 13px rgba(235, 248, 255, 0.18) !important;
 }
 
 img.unread_off,
 img.unread_on {
     border-radius: 4px !important;
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='45'%3E%3C/svg%3E") !important;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='34'%3E%3C/svg%3E") !important;
+}
+
+img.bgm_mute_off,
+img.bgm_mute_on,
+img.se_mute_off,
+img.se_mute_on {
+    border-radius: 4px !important;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='34'%3E%3C/svg%3E") !important;
 }
 
 img.unread_off::after,
-img.unread_on::after { display: none !important; }
+img.unread_on::after,
+img.bgm_mute_off::after,
+img.bgm_mute_on::after,
+img.se_mute_off::after,
+img.se_mute_on::after { display: none !important; }
 
 .config_panel_note {
     position: absolute !important;
     left: 260px !important;
     top: 116px !important;
-    width: 760px !important;
+    width: 900px !important;
     height: 438px !important;
     display: block !important;
     border: 1px solid rgba(220, 235, 245, 0.2) !important;
@@ -725,4 +763,39 @@ img.unread_on::after { display: none !important; }
 .config_title_text {
     font-size: 24px !important;
     letter-spacing: 0.22em !important;
+}
+
+/* SAVE overwrite confirmation and chapter label */
+.remodal_title .save_overwrite_confirm_title,
+.save_overwrite_confirm_title {
+    display: block;
+    color: rgba(244, 248, 251, 0.94);
+    font-size: 19px;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+}
+
+.remodal_title .save_overwrite_confirm_note,
+.save_overwrite_confirm_note {
+    display: block;
+    margin-top: 8px;
+    color: rgba(220, 230, 238, 0.66);
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+}
+
+.save_chapter_label {
+    display: inline-block;
+    margin-right: 12px;
+    color: rgba(214, 226, 236, 0.68);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    vertical-align: baseline;
+}
+
+.save_title_text {
+    color: rgba(244, 248, 251, 0.92);
 }
