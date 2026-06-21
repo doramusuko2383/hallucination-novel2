@@ -59,7 +59,7 @@ baseLayer.css("background-color", "#000000");
 })();
 [endscript]
 ; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
-[playbgm storage="nature_wind.ogg" loop=true volume=30 fadein=true time=800]
+[playbgm storage="nature_wind.ogg" loop=true volume=50 fadein=true time=800]
 
 [glink name="title-logo" color="black" size="60" x="330" y="175" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
