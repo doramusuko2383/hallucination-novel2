@@ -30,34 +30,6 @@ baseLayer.css("background-color", "#000000");
 
 ; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
 [bg storage="title_rooftop.webp" time=0]
-[iscript]
-(function setupTitleBackgroundBreath() {
-    var styleId = "title-background-breath-style";
-    var className = "title-background-breath";
-    var baseLayer = TG.layer.getLayer("base", "fore");
-
-    if (!document.getElementById(styleId)) {
-        var style = document.createElement("style");
-        style.id = styleId;
-        style.textContent = [
-            "@keyframes titleBackgroundBreath {",
-            "  0% { background-size: 100% 100%; }",
-            "  50% { background-size: 102% 102%; }",
-            "  100% { background-size: 100% 100%; }",
-            "}",
-            "." + className + " {",
-            "  background-position: center center;",
-            "  animation: titleBackgroundBreath 120s ease-in-out infinite;",
-            "}"
-        ].join("\n");
-        document.head.appendChild(style);
-    }
-
-    baseLayer.removeClass(className);
-    baseLayer.css("background-position", "center center");
-    baseLayer.addClass(className);
-})();
-[endscript]
 ; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
 [playbgm storage="nature_wind.ogg" loop=true volume=50 fadein=true time=800]
 
@@ -68,6 +40,60 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_load"]
 [glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
+[iscript]
+(function setupTitleBackgroundBreath() {
+    var styleId = "title-background-breath-style";
+    var className = "title-background-breath-image";
+    var baseLayer = TG.layer.getLayer("base", "fore");
+    var backgroundUrl = "./data/bgimage/title_rooftop.webp";
+
+    var style = document.getElementById(styleId);
+    if (!style) {
+        style = document.createElement("style");
+        style.id = styleId;
+        document.head.appendChild(style);
+    }
+
+    style.textContent = [
+            "@keyframes titleBackgroundBreath {",
+            "  0% { transform: scale(1); }",
+            "  50% { transform: scale(1.02); }",
+            "  100% { transform: scale(1); }",
+            "}",
+            "." + className + " {",
+            "  position: absolute;",
+            "  left: 0;",
+            "  top: 0;",
+            "  width: 100%;",
+            "  height: 100%;",
+            "  z-index: 0;",
+            "  pointer-events: none;",
+            "  background-position: center center;",
+            "  background-repeat: no-repeat;",
+            "  background-size: 100% 100%;",
+            "  transform-origin: center center;",
+            "  animation: titleBackgroundBreath 120s ease-in-out infinite;",
+            "  animation-fill-mode: both;",
+            "}",
+            ".glink_button.title-logo,",
+            ".glink_button.title-subtitle,",
+            ".glink_button.title-choice {",
+            "  position: relative;",
+            "  z-index: 1 !important;",
+            "}"
+        ].join("\n");
+
+    baseLayer.removeClass("title-background-breath");
+    baseLayer.css("position", "relative");
+    baseLayer.css("overflow", "hidden");
+    baseLayer.children("." + className).remove();
+
+    var breathImage = $("<div></div>");
+    breathImage.addClass(className);
+    breathImage.css("background-image", "url(" + backgroundUrl + ")");
+    baseLayer.prepend(breathImage);
+})();
+[endscript]
 [iscript]
 (function setupTitleLogoGlitch() {
     var originalTitle = "ハルシネーション";
