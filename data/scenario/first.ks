@@ -30,12 +30,14 @@ baseLayer.css("background-color", "#000000");
 
 ; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
 [bg storage="title_rooftop.webp" time=0]
+; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
+[playbgm storage="nature_wind.ogg" loop=true volume=24 fadein=true time=800]
 
 [glink name="title-logo" color="black" size="60" x="330" y="175" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
 [glink name="title-choice title-start title-primary" color="black" size="22" x="520" y="395" width="240" height="34" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="17" x="520" y="445" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_continue"]
+[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_load"]
 [glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
@@ -86,7 +88,19 @@ baseLayer.css("background-color", "#000000");
         return glitchTexts[Math.floor(Math.random() * glitchTexts.length)];
     }
 
+    function isLogoAlive() {
+        return logo.length && $.contains(document, logo.get(0));
+    }
+
+    function resetLogo() {
+        if (!isLogoAlive()) return;
+        logo.text(originalTitle);
+        logo.attr("data-text", originalTitle);
+        logo.removeClass("title-logo-glitching");
+    }
+
     function runGlitchBurst(activeDuration) {
+        if (!isLogoAlive()) return;
         logo.removeClass("title-logo-glitching");
         logo.get(0).offsetWidth;
         var glitchText = pickGlitchText();
@@ -94,14 +108,15 @@ baseLayer.css("background-color", "#000000");
         logo.attr("data-text", glitchText);
         logo.addClass("title-logo-glitching");
 
-        setTimeout(function () {
-            logo.text(originalTitle);
-            logo.attr("data-text", originalTitle);
-            logo.removeClass("title-logo-glitching");
-        }, activeDuration);
+        setTimeout(resetLogo, activeDuration);
     }
 
     function runGlitchSequence() {
+        if (!isLogoAlive()) {
+            window[timerKey] = null;
+            return;
+        }
+
         var duration = 220 + Math.floor(Math.random() * 141);
         var burstCount = duration >= 320 ? 4 : duration >= 270 ? 3 : 2;
         var activeDuration = 58 + Math.floor(Math.random() * 21);
@@ -116,16 +131,14 @@ baseLayer.css("background-color", "#000000");
         }
 
         setTimeout(function () {
-            logo.text(originalTitle);
-            logo.attr("data-text", originalTitle);
-            logo.removeClass("title-logo-glitching");
-            schedule(false);
+            resetLogo();
+            if (isLogoAlive()) schedule(false);
         }, duration);
     }
 
     function schedule(isFirst) {
         window[timerKey] = setTimeout(function () {
-            if (!logo.length || !$.contains(document, logo.get(0))) {
+            if (!isLogoAlive()) {
                 window[timerKey] = null;
                 return;
             }
@@ -134,8 +147,7 @@ baseLayer.css("background-color", "#000000");
         }, getDelay(isFirst));
     }
 
-    logo.text(originalTitle);
-    logo.attr("data-text", originalTitle);
+    resetLogo();
     schedule(true);
 })();
 [endscript]
@@ -160,6 +172,7 @@ window.close();
 @jump target="*title_menu"
 
 *title_newgame
+[fadeoutbgm time=500]
 @freeimage layer=0 page=fore
 
 ;導入で使用する隠しパラメータの初期化（UI表示なし）
