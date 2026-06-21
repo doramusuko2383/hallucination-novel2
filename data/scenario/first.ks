@@ -114,9 +114,6 @@ baseLayer.css("background-color", "#000000");
 
 ; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
 [bg storage="title_rooftop.webp" time=1]
-; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
-[playbgm storage="nature_wind.ogg" loop=true volume=24 fadein=true time=800]
-
 [glink name="title-logo" color="black" size="60" x="330" y="175" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
 [glink name="title-choice title-start title-primary" color="black" size="22" x="520" y="395" width="240" height="34" text="NEW GAME" target="*title_newgame"]
@@ -124,6 +121,13 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_load"]
 [glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
+[iscript]
+TG.layer.getFreeLayer().show().css("z-index", 1000000000);
+$(".glink_button.title-logo, .glink_button.title-subtitle, .glink_button.title-choice").css("z-index", 1000000001);
+[endscript]
+; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
+[playbgm storage="nature_wind.ogg" loop=true volume=24 fadein=true time=800]
+
 [iscript]
 (function setupTitleLogoGlitch() {
     var originalTitle = "ハルシネーション";
