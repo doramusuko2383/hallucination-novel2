@@ -47,7 +47,10 @@ baseLayer.css("background-color", "#000000");
             "}",
             "." + className + " {",
             "  background-position: center center;",
+            "  background-repeat: no-repeat;",
+            "  background-size: 100% 100%;",
             "  animation: titleBackgroundBreath 120s ease-in-out infinite;",
+            "  animation-fill-mode: both;",
             "}"
         ].join("\n");
         document.head.appendChild(style);
@@ -55,6 +58,7 @@ baseLayer.css("background-color", "#000000");
 
     baseLayer.removeClass(className);
     baseLayer.css("background-position", "center center");
+    baseLayer.css("background-repeat", "no-repeat");
     baseLayer.addClass(className);
 })();
 [endscript]
