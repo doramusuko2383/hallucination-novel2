@@ -103,6 +103,11 @@
 @layopt layer=message0 visible=false
 [iscript]
 var baseLayer = TG.layer.getLayer("base", "fore");
+$("#title-background-breath-style").remove();
+baseLayer.removeClass("title-background-breath");
+baseLayer.children(".title-background-breath-image").remove();
+baseLayer.css("position", "");
+baseLayer.css("overflow", "");
 baseLayer.css("background-image", "none");
 baseLayer.css("background-color", "#000000");
 [endscript]
