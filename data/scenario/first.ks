@@ -113,7 +113,7 @@ baseLayer.css("background-color", "#000000");
 [endscript]
 
 ; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
-[bg storage="title_rooftop.webp" time=0]
+[bg storage="title_rooftop.webp" time=1]
 ; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
 [playbgm storage="nature_wind.ogg" loop=true volume=24 fadein=true time=800]
 
