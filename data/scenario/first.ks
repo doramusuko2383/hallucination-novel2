@@ -57,8 +57,8 @@ baseLayer.css("background-color", "#000000");
     }
 
     function getDelay(isFirst) {
-        var min = isFirst ? 3000 : 8000;
-        var max = isFirst ? 5000 : 16000;
+        var min = isFirst ? 2000 : 5000;
+        var max = isFirst ? 4000 : 10000;
         return min + Math.floor(Math.random() * (max - min + 1));
     }
 
@@ -89,19 +89,22 @@ baseLayer.css("background-color", "#000000");
     function runGlitchBurst(activeDuration) {
         logo.removeClass("title-logo-glitching");
         logo.get(0).offsetWidth;
-        logo.text(pickGlitchText());
+        var glitchText = pickGlitchText();
+        logo.text(glitchText);
+        logo.attr("data-text", glitchText);
         logo.addClass("title-logo-glitching");
 
         setTimeout(function () {
             logo.text(originalTitle);
+            logo.attr("data-text", originalTitle);
             logo.removeClass("title-logo-glitching");
         }, activeDuration);
     }
 
     function runGlitchSequence() {
-        var duration = 160 + Math.floor(Math.random() * 101);
-        var burstCount = duration >= 220 ? 3 : 2;
-        var activeDuration = 54 + Math.floor(Math.random() * 15);
+        var duration = 220 + Math.floor(Math.random() * 141);
+        var burstCount = duration >= 320 ? 4 : duration >= 270 ? 3 : 2;
+        var activeDuration = 58 + Math.floor(Math.random() * 21);
         var interval = Math.floor((duration - activeDuration) / (burstCount - 1));
 
         playGlitchSe();
@@ -114,6 +117,7 @@ baseLayer.css("background-color", "#000000");
 
         setTimeout(function () {
             logo.text(originalTitle);
+            logo.attr("data-text", originalTitle);
             logo.removeClass("title-logo-glitching");
             schedule(false);
         }, duration);
@@ -131,6 +135,7 @@ baseLayer.css("background-color", "#000000");
     }
 
     logo.text(originalTitle);
+    logo.attr("data-text", originalTitle);
     schedule(true);
 })();
 [endscript]

@@ -874,6 +874,8 @@ img.se_mute_on::after { display: none !important; }
     font-family: "GenMin", "Times New Roman", serif !important;
     font-size: 60px !important;
     letter-spacing: 0.252em;
+    position: relative;
+    overflow: visible !important;
     text-shadow:
         0 0 4px rgba(255, 255, 255, 0.45),
         0 0 18px rgba(26, 38, 68, 0.72),
@@ -882,8 +884,34 @@ img.se_mute_on::after { display: none !important; }
     pointer-events: none !important;
 }
 
+.glink_button.title-logo::before,
+.glink_button.title-logo::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: inherit;
+    letter-spacing: inherit;
+    mix-blend-mode: screen;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.glink_button.title-logo::before {
+    color: rgba(255, 64, 86, 0.68);
+    transform: translate(-6px, 0);
+}
+
+.glink_button.title-logo::after {
+    color: rgba(54, 178, 255, 0.72);
+    transform: translate(6px, 0);
+}
+
 .glink_button.title-logo.title-logo-glitching {
-    animation: title-logo-glitch-shift 68ms steps(2, end);
+    animation: title-logo-glitch-shift 76ms steps(2, end);
+    color: rgba(255, 255, 255, 0.99) !important;
     text-shadow:
         -3px 0 0 rgba(255, 64, 86, 0.78),
         3px 0 0 rgba(54, 178, 255, 0.82),
@@ -892,6 +920,11 @@ img.se_mute_on::after { display: none !important; }
         0 0 4px rgba(255, 255, 255, 0.55),
         0 0 18px rgba(26, 38, 68, 0.72),
         0 2px 12px rgba(0, 0, 0, 0.85) !important;
+}
+
+.glink_button.title-logo.title-logo-glitching::before,
+.glink_button.title-logo.title-logo-glitching::after {
+    opacity: 1;
 }
 
 @keyframes title-logo-glitch-shift {
