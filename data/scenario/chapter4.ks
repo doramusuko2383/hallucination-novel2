@@ -5,6 +5,7 @@
 
 *ch4_start
 *chapter4
+[scene_title title="第4章"]
 
 [cm]
 [chara_hide_all]

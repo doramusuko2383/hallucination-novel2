@@ -221,20 +221,28 @@
 
         TYRANO.kag.config.configSaveSlotNum = MANUAL_SLOT_COUNT;
 
+        TYRANO.kag.tag.scene_title = {
+            vital: [],
+            pm: { title: "", next: "true" },
+            start: function (pm) {
+                TYRANO.kag.stat.f.save_scene_title = safeText(pm.title);
+                if (pm.next !== "false") TYRANO.kag.ftag.nextOrder();
+            }
+        };
         TYRANO.kag.tag.autosave_scene = {
             vital: [],
             pm: { title: "" },
             start: function (pm) {
-                if (pm.title) TYRANO.kag.stat.f.save_scene_title = pm.title;
+                if (pm.title) TYRANO.kag.stat.f.save_scene_title = safeText(pm.title);
                 TYRANO.kag.tag.autosave.start.call(this, pm);
             }
         };
         TYRANO.kag.tag.continue_latest = { pm: {}, start: function () { if (TYRANO.kag.menu.loadLatestSave() === false) TYRANO.kag.ftag.nextOrder(); } };
         if (TYRANO.kag.ftag && TYRANO.kag.ftag.master_tag) {
-            TYRANO.kag.ftag.master_tag.autosave_scene = $.extend(true, {}, TYRANO.kag.tag.autosave_scene);
-            TYRANO.kag.ftag.master_tag.autosave_scene.kag = TYRANO.kag;
-            TYRANO.kag.ftag.master_tag.continue_latest = $.extend(true, {}, TYRANO.kag.tag.continue_latest);
-            TYRANO.kag.ftag.master_tag.continue_latest.kag = TYRANO.kag;
+            ["scene_title", "autosave_scene", "continue_latest"].forEach(function (tag_name) {
+                TYRANO.kag.ftag.master_tag[tag_name] = $.extend(true, {}, TYRANO.kag.tag[tag_name]);
+                TYRANO.kag.ftag.master_tag[tag_name].kag = TYRANO.kag;
+            });
         }
     }
 
