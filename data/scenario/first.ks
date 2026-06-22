@@ -69,6 +69,35 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
+(function normalizeTitleGlinkClasses() {
+    var titleItems = [
+        { text: "ハルシネーション", classes: "title-logo" },
+        { text: "HALLUCINATION", classes: "title-subtitle" },
+        { text: "NEW GAME", classes: "title-choice title-start title-primary" },
+        { text: "CONTINUE", classes: "title-choice" },
+        { text: "LOAD", classes: "title-choice" },
+        { text: "CONFIG", classes: "title-choice" },
+        { text: "EXIT", classes: "title-choice" }
+    ];
+
+    titleItems.forEach(function (item) {
+        var button = $(".glink_button").filter(function () {
+            return $.trim($(this).text()) === item.text;
+        }).last();
+
+        button.addClass(item.classes);
+        button.removeClass("black");
+        button.css("background", "transparent");
+        button.css("background-image", "none");
+        button.css("border", "0");
+        button.css("box-shadow", "none");
+        if (item.classes.indexOf("title-logo") !== -1) {
+            button.attr("data-text", item.text);
+        }
+    });
+})();
+[endscript]
+[iscript]
 (function setupTitleLogoGlitch() {
     var originalTitle = "ハルシネーション";
     var glitchTexts = [
