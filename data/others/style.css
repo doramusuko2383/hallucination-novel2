@@ -932,16 +932,17 @@ img.se_mute_on::after { display: none !important; }
 }
 
 .layer_free .glink_button.title-choice {
-    transition: color 150ms ease, text-shadow 150ms ease, background 150ms ease, box-shadow 150ms ease !important;
+    transition: color 150ms ease, text-shadow 150ms ease, background 150ms ease, box-shadow 150ms ease, letter-spacing 150ms ease !important;
     white-space: nowrap !important;
 }
 
 .layer_free .glink_button.title-choice:hover,
 .layer_free .glink_button.title-choice:focus {
     color: #ffffff !important;
-    background: linear-gradient(90deg, transparent 3%, rgba(42, 174, 255, 0.08) 22%, rgba(111, 210, 255, 0.28) 50%, rgba(42, 174, 255, 0.08) 78%, transparent 97%) !important;
-    box-shadow: 0 0 0 1px rgba(115, 210, 255, 0.08), 0 0 18px rgba(74, 188, 255, 0.28), inset 0 0 16px rgba(80, 190, 255, 0.1) !important;
-    text-shadow: 0 0 7px rgba(255,255,255,0.65), 0 0 16px rgba(74,188,255,0.7), 0 0 26px rgba(74,188,255,0.35) !important;
+    letter-spacing: 0.42em !important;
+    background: linear-gradient(90deg, transparent 0%, rgba(42, 174, 255, 0.16) 18%, rgba(142, 224, 255, 0.46) 50%, rgba(42, 174, 255, 0.16) 82%, transparent 100%) !important;
+    box-shadow: 0 0 0 1px rgba(140, 225, 255, 0.22), 0 0 28px rgba(74, 188, 255, 0.48), 0 0 48px rgba(155, 218, 255, 0.2), inset 0 0 22px rgba(100, 205, 255, 0.22) !important;
+    text-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 18px rgba(118,210,255,0.9), 0 0 34px rgba(74,188,255,0.58) !important;
     transform: none !important;
 }
 
@@ -949,12 +950,12 @@ img.se_mute_on::after { display: none !important; }
 .layer_free .glink_button.title-choice:focus::before {
     content: "";
     position: absolute;
-    left: 20px;
-    right: 20px;
+    left: 8px;
+    right: 8px;
     top: 50%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(116, 214, 255, 0.92), transparent);
-    box-shadow: 0 0 10px rgba(116, 214, 255, 0.86);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(166, 235, 255, 1), transparent);
+    box-shadow: 0 0 14px rgba(116, 214, 255, 1), 0 0 26px rgba(116, 214, 255, 0.58);
     pointer-events: none;
 }
 

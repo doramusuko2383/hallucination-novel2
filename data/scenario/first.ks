@@ -28,6 +28,7 @@
 [hidemenubutton]
 [iscript]
 (function setupSplashPreload() {
+    $(".button_menu").hide();
     var baseLayer = TG.layer.getLayer("base", "fore");
     var preload = window.__titlePreload = window.__titlePreload || {};
 
@@ -102,6 +103,7 @@
 @freeimage layer=0 page=fore
 @layopt layer=message0 visible=false
 [iscript]
+$(".button_menu").hide();
 var baseLayer = TG.layer.getLayer("base", "fore");
 baseLayer.css("background-image", "none");
 baseLayer.css("background-color", "#000000");
@@ -113,8 +115,8 @@ baseLayer.css("background-color", "#000000");
 ; [playbgm] は未操作時のブラウザ音声制限でクリック待ちになるため、
 ; タイトル文字の生成後に Howl で非同期再生して表示をブロックしない。
 
-[glink name="title-logo" color="black" size="76" x="224" y="168" width="832" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
-[glink name="title-subtitle" color="black" size="18" x="390" y="270" width="500" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
+[glink name="title-logo" color="black" size="76" x="330" y="168" width="620" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
+[glink name="title-subtitle" color="black" size="18" x="440" y="270" width="400" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
 [glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue"]
 [glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load"]
@@ -215,7 +217,7 @@ baseLayer.css("background-color", "#000000");
         volume: 0
     });
     window[key].once("play", function () {
-        window[key].fade(0, 0.24, 800);
+        window[key].fade(0, 0.42, 800);
     });
     window[key].play();
 })();
