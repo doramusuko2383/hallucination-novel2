@@ -868,6 +868,9 @@ img.se_mute_on::after { display: none !important; }
 }
 
 
+/* =========================
+   タイトル画面（静止画背景＋文字主体UI）
+
 /* タイトルUIはTyranoのfree layerに生成されるため、背景レイヤーより必ず前面に出す */
 .layer_free {
     z-index: 1000000000 !important;
