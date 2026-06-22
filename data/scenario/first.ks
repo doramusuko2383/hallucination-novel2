@@ -18,6 +18,30 @@
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
 
+*opening_logo
+[cm]
+@freeimage layer=0 page=fore
+@layopt layer=message0 visible=false
+[iscript]
+(function preloadTitleAssets() {
+    var titleImage = new Image();
+    titleImage.src = $.parseStorage("bgimage/title_rooftop.webp", "image");
+    if (!window.__hlTitleWindPreload) {
+        window.__hlTitleWindPreload = new Howl({
+            src: [$.parseStorage("nature_wind.ogg", "bgm")],
+            preload: true,
+            volume: 0
+        });
+    }
+})();
+[endscript]
+[bg storage="black.png" time=0 wait=false]
+[ptext name="opening-brand" layer=0 page=fore text="プロ山ゲームズ" x=0 y=324 width=1280 size=34 color="0xf5f7fb" align="center" face="GenMin, Times New Roman, serif" opacity=0]
+[anim name="opening-brand" opacity=255 time=650 wait=true]
+[wait time=550]
+[anim name="opening-brand" opacity=0 time=650 wait=true]
+[free name="opening-brand" layer=0 page=fore]
+
 *title_menu
 [cm]
 @freeimage layer=0 page=fore
@@ -33,13 +57,13 @@ baseLayer.css("background-color", "#000000");
 ; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
 [playbgm storage="nature_wind.ogg" loop=true volume=24 fadein=true time=800]
 
-[glink name="title-logo" color="black" size="60" x="330" y="175" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
-[glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
-[glink name="title-choice title-start title-primary" color="black" size="22" x="520" y="395" width="240" height="34" text="NEW GAME" target="*title_newgame"]
-[glink name="title-choice" color="black" size="17" x="520" y="445" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_load"]
-[glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
-[glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
+[glink name="title-logo" color="black" size="76" x="224" y="168" width="832" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
+[glink name="title-subtitle" color="black" size="18" x="390" y="270" width="500" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
+[glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame"]
+[glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue"]
+[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load"]
+[glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config"]
+[glink name="title-choice" color="black" size="16" x="520" y="612" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
 (function normalizeTitleGlinkClasses() {
     function important(button, styles) {
@@ -61,9 +85,12 @@ baseLayer.css("background-color", "#000000");
         "background": "transparent",
         "background-image": "none",
         "box-shadow": "none",
-        "font-family": "GenMin, Times New Roman, serif",
+        "font-family": "GenMin, 'Times New Roman', serif",
         "position": "absolute",
-        "overflow": "visible"
+        "overflow": "visible",
+        "opacity": "1",
+        "visibility": "visible",
+        "transform": "none"
     };
 
     function findTitleButton(text) {
@@ -81,33 +108,35 @@ baseLayer.css("background-color", "#000000");
     }
 
     styleButton("ハルシネーション", "title-logo", {
-        "width": "620px",
-        "height": "86px",
-        "color": "rgba(246, 249, 253, 0.96)",
-        "font-size": "60px",
-        "letter-spacing": "0.252em",
-        "text-shadow": "0 0 4px rgba(255,255,255,0.45), 0 0 18px rgba(26,38,68,0.72), 0 2px 12px rgba(0,0,0,0.85)",
+        "width": "832px",
+        "height": "96px",
+        "color": "rgba(250, 250, 255, 0.98)",
+        "font-size": "76px",
+        "letter-spacing": "0.2em",
+        "line-height": "1",
+        "text-shadow": "0 0 5px rgba(255,255,255,0.75), 0 0 18px rgba(204,190,255,0.45), 0 0 34px rgba(150,120,255,0.24), 0 3px 14px rgba(0,0,0,0.86)",
         "z-index": "99999998",
         "pointer-events": "none"
     }).attr("data-text", "ハルシネーション");
 
     styleButton("HALLUCINATION", "title-subtitle", {
-        "width": "400px",
-        "height": "28px",
-        "color": "rgba(238, 244, 248, 0.82)",
-        "font-size": "20px",
-        "letter-spacing": "0.62em",
-        "text-shadow": "0 0 7px rgba(255,255,255,0.28), 0 0 14px rgba(0,0,0,0.62)",
+        "width": "500px",
+        "height": "32px",
+        "color": "rgba(239, 242, 247, 0.88)",
+        "font-size": "18px",
+        "letter-spacing": "0.68em",
+        "line-height": "1",
+        "text-shadow": "0 0 8px rgba(255,255,255,0.24), 0 0 14px rgba(0,0,0,0.64)",
         "z-index": "99999998",
         "pointer-events": "none"
     });
 
     ["NEW GAME", "CONTINUE", "LOAD", "CONFIG", "EXIT"].forEach(function (text, index) {
         styleButton(text, index === 0 ? "title-choice title-start title-primary" : "title-choice", {
-            "color": "rgba(246, 249, 253, 0.9)",
-            "font-size": index === 0 ? "22px" : "17px",
+            "color": "rgba(248, 250, 255, 0.94)",
+            "font-size": "16px",
             "font-weight": "600",
-            "letter-spacing": index === 0 ? "0.42em" : "0.34em",
+            "letter-spacing": "0.34em",
             "text-shadow": "0 0 7px rgba(0,0,0,0.9), 0 0 14px rgba(22,32,54,0.8)",
             "z-index": "99999999",
             "pointer-events": "auto"
@@ -143,7 +172,7 @@ baseLayer.css("background-color", "#000000");
         if (!window[seKey]) {
             window[seKey] = new Howl({
                 src: [$.parseStorage("se/short_glitch.ogg", "sound")],
-                volume: 0.16,
+                volume: 0.08,
                 preload: true
             });
         }
@@ -155,7 +184,7 @@ baseLayer.css("background-color", "#000000");
         TYRANO.kag.readyAudio();
         var sound = getGlitchSe();
         sound.stop();
-        sound.volume(0.16);
+        sound.volume(0.08);
         sound.play();
     }
 
@@ -192,9 +221,9 @@ baseLayer.css("background-color", "#000000");
             return;
         }
 
-        var duration = 220 + Math.floor(Math.random() * 141);
-        var burstCount = duration >= 320 ? 4 : duration >= 270 ? 3 : 2;
-        var activeDuration = 58 + Math.floor(Math.random() * 21);
+        var duration = 110 + Math.floor(Math.random() * 81);
+        var burstCount = 2;
+        var activeDuration = 34 + Math.floor(Math.random() * 17);
         var interval = Math.floor((duration - activeDuration) / (burstCount - 1));
 
         playGlitchSe();
