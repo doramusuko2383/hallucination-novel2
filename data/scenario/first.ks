@@ -18,25 +18,25 @@
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
 
+*start
+@jump target="*splash"
+
 *splash
 [cm]
 @freeimage layer=0 page=fore
 @layopt layer=message0 visible=false
+[hidemenubutton]
 [iscript]
-(function preloadTitleAssets() {
-    window.__titlePreload = window.__titlePreload || {};
+(function setupSplashPreload() {
+    var baseLayer = TG.layer.getLayer("base", "fore");
+    var preload = window.__titlePreload = window.__titlePreload || {};
 
-    if (!window.__titlePreload.titleBg) {
-        window.__titlePreload.titleBg = new Image();
-        window.__titlePreload.titleBg.src = $.parseStorage("bgimage/title_rooftop.webp", "image");
-    }
+    baseLayer.css("background-image", "none");
+    baseLayer.css("background-color", "#000000");
 
-    if (!window.__titlePreload.titleWindBgm) {
-        window.__titlePreload.titleWindBgm = new Howl({
-            src: [$.parseStorage("nature_wind.ogg", "bgm")],
-            preload: true,
-            volume: 0
-        });
+    if (!preload.titleBg) {
+        preload.titleBg = new Image();
+        preload.titleBg.src = "./data/bgimage/title_rooftop.webp";
     }
 
     if (!window.__titleLogoGlitchSe) {
@@ -46,14 +46,56 @@
             preload: true
         });
     }
+
+    if (!preload.titleWindBgm) {
+        preload.titleWindBgm = new Howl({
+            src: [$.parseStorage("nature_wind.ogg", "bgm")],
+            volume: 0,
+            preload: true
+        });
+    }
+
+    $("#proyama-splash").remove();
+
+    var splash = $("<div></div>").attr("id", "proyama-splash");
+    splash.css({
+        position: "absolute",
+        left: 0,
+        top: 0,
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#000000",
+        color: "rgba(255, 255, 255, 0.9)",
+        fontFamily: "'Times New Roman', 'Yu Mincho', 'Hiragino Mincho ProN', serif",
+        fontSize: "24px",
+        letterSpacing: "0.28em",
+        fontWeight: "400",
+        lineHeight: "1",
+        opacity: 0,
+        zIndex: 999999,
+        pointerEvents: "none"
+    });
+    splash.text("PROYAMA GAMES");
+    baseLayer.append(splash);
+    splash.animate({ opacity: 1 }, 500);
 })();
 [endscript]
-[bg storage="black.png" time=0 wait=false]
-[ptext name="splash-brand" layer=0 page=fore text="PROYAMA GAMES" x=0 y=326 width=1280 size=26 color="0xf5f7fb" align="center" face="GenMin, Times New Roman, serif" opacity=0]
-[anim name="splash-brand" opacity=255 time=500 wait=true]
-[wait time=1000]
-[anim name="splash-brand" opacity=0 time=500 wait=true]
-[free name="splash-brand" layer=0 page=fore]
+[wait time=1500]
+[iscript]
+(function fadeOutSplash() {
+    var splash = $("#proyama-splash");
+    if (!splash.length) return;
+
+    splash.stop(true, true).animate({ opacity: 0 }, 500, function () {
+        splash.remove();
+    });
+})();
+[endscript]
+[wait time=500]
+@jump target="*title_menu"
 
 *title_menu
 [cm]
