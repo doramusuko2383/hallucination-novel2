@@ -110,7 +110,8 @@ baseLayer.css("background-color", "#000000");
 ; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
 [bg storage="title_rooftop.webp" time=0]
 ; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
-[playbgm storage="nature_wind.ogg" loop=true volume=24 fadein=true time=800]
+; [playbgm] は未操作時のブラウザ音声制限でクリック待ちになるため、
+; タイトル文字の生成後に Howl で非同期再生して表示をブロックしない。
 
 [glink name="title-logo" color="black" size="76" x="224" y="168" width="832" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="18" x="390" y="270" width="500" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
@@ -163,25 +164,25 @@ baseLayer.css("background-color", "#000000");
     }
 
     styleButton("ハルシネーション", "title-logo", {
-        "width": "832px",
-        "height": "96px",
-        "color": "rgba(250, 250, 255, 0.98)",
-        "font-size": "76px",
-        "letter-spacing": "0.2em",
+        "width": "620px",
+        "height": "86px",
+        "color": "rgba(246, 249, 253, 0.96)",
+        "font-size": "60px",
+        "letter-spacing": "0.252em",
         "line-height": "1",
-        "text-shadow": "0 0 5px rgba(255,255,255,0.75), 0 0 18px rgba(204,190,255,0.45), 0 0 34px rgba(150,120,255,0.24), 0 3px 14px rgba(0,0,0,0.86)",
+        "text-shadow": "0 0 4px rgba(255,255,255,0.45), 0 0 18px rgba(26,38,68,0.72), 0 2px 12px rgba(0,0,0,0.85)",
         "z-index": "99999998",
         "pointer-events": "none"
     }).attr("data-text", "ハルシネーション");
 
     styleButton("HALLUCINATION", "title-subtitle", {
-        "width": "500px",
-        "height": "32px",
-        "color": "rgba(239, 242, 247, 0.88)",
-        "font-size": "18px",
-        "letter-spacing": "0.68em",
+        "width": "400px",
+        "height": "28px",
+        "color": "rgba(238, 244, 248, 0.82)",
+        "font-size": "20px",
+        "letter-spacing": "0.62em",
         "line-height": "1",
-        "text-shadow": "0 0 8px rgba(255,255,255,0.24), 0 0 14px rgba(0,0,0,0.64)",
+        "text-shadow": "0 0 7px rgba(255,255,255,0.28), 0 0 14px rgba(0,0,0,0.62)",
         "z-index": "99999998",
         "pointer-events": "none"
     });
@@ -197,6 +198,26 @@ baseLayer.css("background-color", "#000000");
             "pointer-events": "auto"
         });
     });
+})();
+[endscript]
+[iscript]
+(function startTitleWindWithoutBlockingTitle() {
+    var key = "__hlTitleWind";
+    var src = $.parseStorage("nature_wind.ogg", "bgm");
+    if (window[key]) {
+        window[key].stop();
+        window[key].unload();
+    }
+    window[key] = new Howl({
+        src: [src],
+        loop: true,
+        preload: true,
+        volume: 0
+    });
+    window[key].once("play", function () {
+        window[key].fade(0, 0.24, 800);
+    });
+    window[key].play();
 })();
 [endscript]
 [iscript]
@@ -313,6 +334,18 @@ baseLayer.css("background-color", "#000000");
 [s]
 
 *title_continue
+[iscript]
+if (window.__hlTitleWind) {
+    window.__hlTitleWind.fade(window.__hlTitleWind.volume(), 0, 500);
+    setTimeout(function () {
+        if (window.__hlTitleWind) {
+            window.__hlTitleWind.stop();
+            window.__hlTitleWind.unload();
+            window.__hlTitleWind = null;
+        }
+    }, 520);
+}
+[endscript]
 [continue_latest]
 @jump target="*title_menu"
 
@@ -332,6 +365,18 @@ window.close();
 
 *title_newgame
 [fadeoutbgm time=500]
+[iscript]
+if (window.__hlTitleWind) {
+    window.__hlTitleWind.fade(window.__hlTitleWind.volume(), 0, 500);
+    setTimeout(function () {
+        if (window.__hlTitleWind) {
+            window.__hlTitleWind.stop();
+            window.__hlTitleWind.unload();
+            window.__hlTitleWind = null;
+        }
+    }, 520);
+}
+[endscript]
 @freeimage layer=0 page=fore
 
 ;導入で使用する隠しパラメータの初期化（UI表示なし）
