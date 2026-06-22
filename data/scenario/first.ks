@@ -18,6 +18,85 @@
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
 
+*start
+@jump target="*splash"
+
+*splash
+[cm]
+@freeimage layer=0 page=fore
+@layopt layer=message0 visible=false
+[hidemenubutton]
+[iscript]
+(function setupSplashPreload() {
+    var baseLayer = TG.layer.getLayer("base", "fore");
+    var preload = window.__titlePreload = window.__titlePreload || {};
+
+    baseLayer.css("background-image", "none");
+    baseLayer.css("background-color", "#000000");
+
+    if (!preload.titleBg) {
+        preload.titleBg = new Image();
+        preload.titleBg.src = "./data/bgimage/title_rooftop.webp";
+    }
+
+    if (!window.__titleLogoGlitchSe) {
+        window.__titleLogoGlitchSe = new Howl({
+            src: [$.parseStorage("se/short_glitch.ogg", "sound")],
+            volume: 0.08,
+            preload: true
+        });
+    }
+
+    if (!preload.titleWindBgm) {
+        preload.titleWindBgm = new Howl({
+            src: [$.parseStorage("nature_wind.ogg", "bgm")],
+            volume: 0,
+            preload: true
+        });
+    }
+
+    $("#proyama-splash").remove();
+
+    var splash = $("<div></div>").attr("id", "proyama-splash");
+    splash.css({
+        position: "absolute",
+        left: 0,
+        top: 0,
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#000000",
+        color: "rgba(255, 255, 255, 0.9)",
+        fontFamily: "'Times New Roman', 'Yu Mincho', 'Hiragino Mincho ProN', serif",
+        fontSize: "24px",
+        letterSpacing: "0.28em",
+        fontWeight: "400",
+        lineHeight: "1",
+        opacity: 0,
+        zIndex: 999999,
+        pointerEvents: "none"
+    });
+    splash.text("PROYAMA GAMES");
+    baseLayer.append(splash);
+    splash.animate({ opacity: 1 }, 500);
+})();
+[endscript]
+[wait time=1500]
+[iscript]
+(function fadeOutSplash() {
+    var splash = $("#proyama-splash");
+    if (!splash.length) return;
+
+    splash.stop(true, true).animate({ opacity: 0 }, 500, function () {
+        splash.remove();
+    });
+})();
+[endscript]
+[wait time=500]
+@jump target="*title_menu"
+
 *title_menu
 [cm]
 @freeimage layer=0 page=fore
@@ -34,13 +113,13 @@ baseLayer.css("background-color", "#000000");
 ; [playbgm] は未操作時のブラウザ音声制限でクリック待ちになるため、
 ; タイトル文字の生成後に Howl で非同期再生して表示をブロックしない。
 
-[glink name="title-logo" color="black" size="60" x="330" y="175" width="620" height="86" text="ハルシネーション" target="*title_menu" cm="false"]
-[glink name="title-subtitle" color="black" size="20" x="440" y="265" width="400" height="28" text="HALLUCINATION" target="*title_menu" cm="false"]
-[glink name="title-choice title-start title-primary" color="black" size="22" x="520" y="395" width="240" height="34" text="NEW GAME" target="*title_newgame"]
-[glink name="title-choice" color="black" size="17" x="520" y="445" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="17" x="520" y="493" width="240" height="30" text="LOAD" target="*title_load"]
-[glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
-[glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
+[glink name="title-logo" color="black" size="76" x="224" y="168" width="832" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
+[glink name="title-subtitle" color="black" size="18" x="390" y="270" width="500" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
+[glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame"]
+[glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue"]
+[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load"]
+[glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config"]
+[glink name="title-choice" color="black" size="16" x="520" y="612" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
 (function normalizeTitleGlinkClasses() {
     function important(button, styles) {
@@ -110,10 +189,10 @@ baseLayer.css("background-color", "#000000");
 
     ["NEW GAME", "CONTINUE", "LOAD", "CONFIG", "EXIT"].forEach(function (text, index) {
         styleButton(text, index === 0 ? "title-choice title-start title-primary" : "title-choice", {
-            "color": "rgba(246, 249, 253, 0.9)",
-            "font-size": index === 0 ? "22px" : "17px",
+            "color": "rgba(248, 250, 255, 0.94)",
+            "font-size": "16px",
             "font-weight": "600",
-            "letter-spacing": index === 0 ? "0.42em" : "0.34em",
+            "letter-spacing": "0.34em",
             "text-shadow": "0 0 7px rgba(0,0,0,0.9), 0 0 14px rgba(22,32,54,0.8)",
             "z-index": "99999999",
             "pointer-events": "auto"
@@ -169,7 +248,7 @@ baseLayer.css("background-color", "#000000");
         if (!window[seKey]) {
             window[seKey] = new Howl({
                 src: [$.parseStorage("se/short_glitch.ogg", "sound")],
-                volume: 0.16,
+                volume: 0.08,
                 preload: true
             });
         }
@@ -181,7 +260,7 @@ baseLayer.css("background-color", "#000000");
         TYRANO.kag.readyAudio();
         var sound = getGlitchSe();
         sound.stop();
-        sound.volume(0.16);
+        sound.volume(0.08);
         sound.play();
     }
 
@@ -218,9 +297,9 @@ baseLayer.css("background-color", "#000000");
             return;
         }
 
-        var duration = 220 + Math.floor(Math.random() * 141);
-        var burstCount = duration >= 320 ? 4 : duration >= 270 ? 3 : 2;
-        var activeDuration = 58 + Math.floor(Math.random() * 21);
+        var duration = 110 + Math.floor(Math.random() * 81);
+        var burstCount = 2;
+        var activeDuration = 34 + Math.floor(Math.random() * 17);
         var interval = Math.floor((duration - activeDuration) / (burstCount - 1));
 
         playGlitchSe();
