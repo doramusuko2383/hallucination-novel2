@@ -767,6 +767,18 @@
     pointer-events: none !important;
 }
 
+
+.layer_blend_mode,
+.blendlayer,
+.config_label_text,
+.config_panel_note,
+.config_help_text,
+.config_value_text,
+.config_scale_line,
+.config_hint_text {
+    pointer-events: none !important;
+}
+
 img.bgmvol,
 img.sevol,
 img.ch,
@@ -858,192 +870,51 @@ img.se_mute_on::after { display: none !important; }
 
 /* =========================
    タイトル画面（静止画背景＋文字主体UI）
-========================= */
-.glink_button.title-logo {
-    box-sizing: border-box;
-    width: 620px !important;
-    height: 86px !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: 0 !important;
-    border-radius: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    color: rgba(246, 249, 253, 0.96) !important;
-    font-family: "GenMin", "Times New Roman", serif !important;
-    font-size: 60px !important;
-    letter-spacing: 0.252em;
-    position: relative;
-    overflow: visible !important;
-    text-shadow:
-        0 0 4px rgba(255, 255, 255, 0.45),
-        0 0 18px rgba(26, 38, 68, 0.72),
-        0 2px 12px rgba(0, 0, 0, 0.85);
-    z-index: 99999998 !important;
-    pointer-events: none !important;
+
+/* タイトルUIはTyranoのfree layerに生成されるため、背景レイヤーより必ず前面に出す */
+.layer_free {
+    z-index: 1000000000 !important;
 }
 
-.glink_button.title-logo::before,
-.glink_button.title-logo::after {
-    content: attr(data-text);
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font: inherit;
-    letter-spacing: inherit;
-    mix-blend-mode: screen;
-    opacity: 0;
-    pointer-events: none;
+.layer_free:has(.title-logo),
+.layer_free:has(.title-subtitle),
+.layer_free:has(.title-choice) {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-.glink_button.title-logo::before {
-    color: rgba(255, 64, 86, 0.68);
-    transform: translate(-6px, 0);
+.layer_free .glink_button.title-logo,
+.layer_free .glink_button.title-subtitle,
+.layer_free .glink_button.title-choice {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-.glink_button.title-logo::after {
-    color: rgba(54, 178, 255, 0.72);
-    transform: translate(6px, 0);
+/* =========================
+   タイトル画面（静止画背景＋文字主体UI）
 }
 
-.glink_button.title-logo.title-logo-glitching {
-    animation: title-logo-glitch-shift 76ms steps(2, end);
-    color: rgba(255, 255, 255, 0.99) !important;
-    text-shadow:
-        -3px 0 0 rgba(255, 64, 86, 0.78),
-        3px 0 0 rgba(54, 178, 255, 0.82),
-        -2px 0 5px rgba(255, 64, 86, 0.46),
-        2px 0 5px rgba(54, 178, 255, 0.5),
-        0 0 4px rgba(255, 255, 255, 0.55),
-        0 0 18px rgba(26, 38, 68, 0.72),
-        0 2px 12px rgba(0, 0, 0, 0.85) !important;
+.remodal_title .save_overwrite_confirm_note,
+.save_overwrite_confirm_note {
+    display: block;
+    margin-top: 8px;
+    color: rgba(220, 230, 238, 0.66);
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
 }
 
-.glink_button.title-logo.title-logo-glitching::before,
-.glink_button.title-logo.title-logo-glitching::after {
-    opacity: 1;
+.save_chapter_label {
+    display: inline-block;
+    margin-right: 12px;
+    color: rgba(214, 226, 236, 0.68);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    vertical-align: baseline;
 }
 
-@keyframes title-logo-glitch-shift {
-    0% { transform: translateX(0); }
-    30% { transform: translate(-5px, 1px); }
-    65% { transform: translate(5px, 0); }
-    85% { transform: translate(-3px, -1px); }
-    100% { transform: translateX(0); }
-}
-
-.glink_button.title-subtitle {
-    box-sizing: border-box;
-    width: 400px !important;
-    height: 28px !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: 0 !important;
-    border-radius: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    color: rgba(238, 244, 248, 0.82) !important;
-    font-family: "GenMin", "Times New Roman", serif !important;
-    font-size: 20px !important;
-    letter-spacing: 0.62em;
-    position: relative;
-    overflow: visible !important;
-    text-shadow:
-        0 0 7px rgba(255, 255, 255, 0.28),
-        0 0 14px rgba(0, 0, 0, 0.62);
-    z-index: 99999998 !important;
-    pointer-events: none !important;
-}
-
-.glink_button.title-subtitle::before,
-.glink_button.title-subtitle::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 100px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(238, 244, 248, 0.66));
-}
-
-.glink_button.title-subtitle::before {
-    right: calc(50% + 190px);
-}
-
-.glink_button.title-subtitle::after {
-    left: calc(50% + 165px);
-    background: linear-gradient(90deg, rgba(238, 244, 248, 0.66), transparent);
-}
-
-.glink_button.title-choice {
-    box-sizing: border-box;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    color: rgba(246, 249, 253, 0.9) !important;
-    font-family: "GenMin", "Times New Roman", serif !important;
-    font-size: 17px !important;
-    font-weight: 600;
-    letter-spacing: 0.34em;
-    position: relative;
-    overflow: visible !important;
-    text-shadow:
-        0 0 7px rgba(0, 0, 0, 0.9),
-        0 0 14px rgba(22, 32, 54, 0.8);
-    z-index: 99999999 !important;
-    pointer-events: auto !important;
-}
-
-.glink_button.title-choice.title-primary {
-    font-size: 22px !important;
-    letter-spacing: 0.42em;
-}
-
-.glink_button.title-choice::before,
-.glink_button.title-choice::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 0;
-    height: 1px;
-    opacity: 0;
-    pointer-events: none;
-    transition: width 160ms ease, opacity 160ms ease;
-}
-
-.glink_button.title-choice::before {
-    right: calc(50% + 76px);
-    background: linear-gradient(90deg, transparent, rgba(46, 157, 255, 0.66), rgba(178, 226, 255, 0.86));
-}
-
-.glink_button.title-choice::after {
-    left: calc(50% + 62px);
-    background: linear-gradient(90deg, rgba(178, 226, 255, 0.86), rgba(46, 157, 255, 0.66), transparent);
-}
-
-.glink_button.title-choice:hover,
-.glink_button.title-choice:focus {
-    background: transparent !important;
-    color: #ffffff !important;
-    text-shadow:
-        0 0 4px rgba(232, 248, 255, 0.9),
-        0 0 12px rgba(36, 148, 255, 0.58);
-}
-
-.glink_button.title-choice:hover::before,
-.glink_button.title-choice:focus::before,
-.glink_button.title-choice:hover::after,
-.glink_button.title-choice:focus::after {
-    width: 118px;
-    opacity: 1;
+.save_title_text {
+    color: rgba(244, 248, 251, 0.92);
 }
