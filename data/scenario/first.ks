@@ -18,29 +18,42 @@
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
 
-*opening_logo
+*splash
 [cm]
 @freeimage layer=0 page=fore
 @layopt layer=message0 visible=false
 [iscript]
 (function preloadTitleAssets() {
-    var titleImage = new Image();
-    titleImage.src = $.parseStorage("bgimage/title_rooftop.webp", "image");
-    if (!window.__hlTitleWindPreload) {
-        window.__hlTitleWindPreload = new Howl({
+    window.__titlePreload = window.__titlePreload || {};
+
+    if (!window.__titlePreload.titleBg) {
+        window.__titlePreload.titleBg = new Image();
+        window.__titlePreload.titleBg.src = $.parseStorage("bgimage/title_rooftop.webp", "image");
+    }
+
+    if (!window.__titlePreload.titleWindBgm) {
+        window.__titlePreload.titleWindBgm = new Howl({
             src: [$.parseStorage("nature_wind.ogg", "bgm")],
             preload: true,
             volume: 0
         });
     }
+
+    if (!window.__titleLogoGlitchSe) {
+        window.__titleLogoGlitchSe = new Howl({
+            src: [$.parseStorage("se/short_glitch.ogg", "sound")],
+            volume: 0.08,
+            preload: true
+        });
+    }
 })();
 [endscript]
 [bg storage="black.png" time=0 wait=false]
-[ptext name="opening-brand" layer=0 page=fore text="プロ山ゲームズ" x=0 y=324 width=1280 size=34 color="0xf5f7fb" align="center" face="GenMin, Times New Roman, serif" opacity=0]
-[anim name="opening-brand" opacity=255 time=650 wait=true]
-[wait time=550]
-[anim name="opening-brand" opacity=0 time=650 wait=true]
-[free name="opening-brand" layer=0 page=fore]
+[ptext name="splash-brand" layer=0 page=fore text="PROYAMA GAMES" x=0 y=326 width=1280 size=26 color="0xf5f7fb" align="center" face="GenMin, Times New Roman, serif" opacity=0]
+[anim name="splash-brand" opacity=255 time=500 wait=true]
+[wait time=1000]
+[anim name="splash-brand" opacity=0 time=500 wait=true]
+[free name="splash-brand" layer=0 page=fore]
 
 *title_menu
 [cm]
