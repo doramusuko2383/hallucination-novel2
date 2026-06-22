@@ -42,30 +42,76 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
 (function normalizeTitleGlinkClasses() {
-    var titleItems = [
-        { text: "ハルシネーション", classes: "title-logo" },
-        { text: "HALLUCINATION", classes: "title-subtitle" },
-        { text: "NEW GAME", classes: "title-choice title-start title-primary" },
-        { text: "CONTINUE", classes: "title-choice" },
-        { text: "LOAD", classes: "title-choice" },
-        { text: "CONFIG", classes: "title-choice" },
-        { text: "EXIT", classes: "title-choice" }
-    ];
+    function important(button, styles) {
+        var element = button.get(0);
+        if (!element) return;
+        Object.keys(styles).forEach(function (key) {
+            element.style.setProperty(key, styles[key], "important");
+        });
+    }
 
-    titleItems.forEach(function (item) {
-        var button = $(".glink_button").filter(function () {
-            return $.trim($(this).text()) === item.text;
+    var baseTextStyle = {
+        "display": "flex",
+        "align-items": "center",
+        "justify-content": "center",
+        "box-sizing": "border-box",
+        "padding": "0",
+        "border": "0",
+        "border-radius": "0",
+        "background": "transparent",
+        "background-image": "none",
+        "box-shadow": "none",
+        "font-family": "GenMin, Times New Roman, serif",
+        "position": "absolute",
+        "overflow": "visible"
+    };
+
+    function findTitleButton(text) {
+        return $(".glink_button").filter(function () {
+            return $.trim($(this).text()) === text;
         }).last();
+    }
 
-        button.addClass(item.classes);
+    function styleButton(text, classes, styles) {
+        var button = findTitleButton(text);
+        button.addClass(classes);
         button.removeClass("black");
-        button.css("background", "transparent");
-        button.css("background-image", "none");
-        button.css("border", "0");
-        button.css("box-shadow", "none");
-        if (item.classes.indexOf("title-logo") !== -1) {
-            button.attr("data-text", item.text);
-        }
+        important(button, $.extend({}, baseTextStyle, styles));
+        return button;
+    }
+
+    styleButton("ハルシネーション", "title-logo", {
+        "width": "620px",
+        "height": "86px",
+        "color": "rgba(246, 249, 253, 0.96)",
+        "font-size": "60px",
+        "letter-spacing": "0.252em",
+        "text-shadow": "0 0 4px rgba(255,255,255,0.45), 0 0 18px rgba(26,38,68,0.72), 0 2px 12px rgba(0,0,0,0.85)",
+        "z-index": "99999998",
+        "pointer-events": "none"
+    }).attr("data-text", "ハルシネーション");
+
+    styleButton("HALLUCINATION", "title-subtitle", {
+        "width": "400px",
+        "height": "28px",
+        "color": "rgba(238, 244, 248, 0.82)",
+        "font-size": "20px",
+        "letter-spacing": "0.62em",
+        "text-shadow": "0 0 7px rgba(255,255,255,0.28), 0 0 14px rgba(0,0,0,0.62)",
+        "z-index": "99999998",
+        "pointer-events": "none"
+    });
+
+    ["NEW GAME", "CONTINUE", "LOAD", "CONFIG", "EXIT"].forEach(function (text, index) {
+        styleButton(text, index === 0 ? "title-choice title-start title-primary" : "title-choice", {
+            "color": "rgba(246, 249, 253, 0.9)",
+            "font-size": index === 0 ? "22px" : "17px",
+            "font-weight": "600",
+            "letter-spacing": index === 0 ? "0.42em" : "0.34em",
+            "text-shadow": "0 0 7px rgba(0,0,0,0.9), 0 0 14px rgba(22,32,54,0.8)",
+            "z-index": "99999999",
+            "pointer-events": "auto"
+        });
     });
 })();
 [endscript]
