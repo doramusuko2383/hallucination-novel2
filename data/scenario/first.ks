@@ -69,6 +69,18 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-choice" color="black" size="17" x="520" y="541" width="240" height="30" text="CONFIG" target="*title_config"]
 [glink name="title-choice" color="black" size="17" x="520" y="589" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
+(function normalizeTitleGlinkClasses() {
+    var buttons = $(".glink_button").slice(-7);
+    buttons.eq(0).addClass("title-logo").attr("data-text", "ハルシネーション");
+    buttons.eq(1).addClass("title-subtitle");
+    buttons.eq(2).addClass("title-choice title-start title-primary");
+    buttons.eq(3).addClass("title-choice");
+    buttons.eq(4).addClass("title-choice");
+    buttons.eq(5).addClass("title-choice");
+    buttons.eq(6).addClass("title-choice");
+})();
+[endscript]
+[iscript]
 (function setupTitleLogoGlitch() {
     var originalTitle = "ハルシネーション";
     var glitchTexts = [
