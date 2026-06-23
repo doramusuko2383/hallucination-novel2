@@ -364,20 +364,49 @@ window.close();
 @jump target="*title_menu"
 
 *title_newgame
+; NEW GAME選択時は、決定音の余韻を置いてから風音と同時に静かに暗転する。
+[playse storage=se/click.ogg volume=100]
+[wait time=200]
 [fadeoutbgm time=500]
+[playse storage=se/openingwind.ogg volume=75]
 [iscript]
-if (window.__hlTitleWind) {
-    window.__hlTitleWind.fade(window.__hlTitleWind.volume(), 0, 500);
-    setTimeout(function () {
-        if (window.__hlTitleWind) {
-            window.__hlTitleWind.stop();
-            window.__hlTitleWind.unload();
-            window.__hlTitleWind = null;
-        }
-    }, 520);
-}
+(function startNewGameOpeningFade() {
+    if (window.__hlTitleWind) {
+        window.__hlTitleWind.fade(window.__hlTitleWind.volume(), 0, 500);
+        setTimeout(function () {
+            if (window.__hlTitleWind) {
+                window.__hlTitleWind.stop();
+                window.__hlTitleWind.unload();
+                window.__hlTitleWind = null;
+            }
+        }, 520);
+    }
+
+    var overlayRoot = $("#tyrano_base");
+    if (!overlayRoot.length) overlayRoot = TG.layer.getLayer("base", "fore");
+    var overlay = $("<div></div>").attr("id", "new-game-opening-fade");
+    overlay.css({
+        position: "absolute",
+        left: 0,
+        top: 0,
+        width: "100%",
+        height: "100%",
+        background: "#000000",
+        opacity: 0,
+        zIndex: 999999999,
+        pointerEvents: "none"
+    });
+    $("#new-game-opening-fade").remove();
+    overlayRoot.append(overlay);
+    overlay.animate({ opacity: 1 }, 2200);
+})();
 [endscript]
+[wait time=2200]
 @freeimage layer=0 page=fore
+[bg storage="black.png" time=0 wait=false]
+[iscript]
+$("#new-game-opening-fade").remove();
+[endscript]
 
 ;導入で使用する隠しパラメータの初期化（UI表示なし）
 [iscript]
