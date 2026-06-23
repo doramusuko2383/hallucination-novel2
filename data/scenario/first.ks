@@ -113,7 +113,25 @@ baseLayer.css("background-color", "#000000");
 [bg storage="title_rooftop.webp" time=0]
 ; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
 ; [playbgm] は未操作時のブラウザ音声制限でクリック待ちになるため、
-; タイトル文字の生成後に Howl で非同期再生して表示をブロックしない。
+; タイトル表示開始時に Howl で非同期再生して表示をブロックしない。
+
+[iscript]
+(function startTitleWindWithoutBlockingTitle() {
+    var key = "__hlTitleWind";
+    var src = $.parseStorage("nature_wind.ogg", "bgm");
+    if (window[key]) {
+        window[key].stop();
+        window[key].unload();
+    }
+    window[key] = new Howl({
+        src: [src],
+        loop: true,
+        preload: true,
+        volume: 0.68
+    });
+    window[key].play();
+})();
+[endscript]
 
 [glink name="title-logo" color="black" size="76" x="330" y="168" width="620" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="18" x="440" y="270" width="400" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
@@ -200,26 +218,6 @@ baseLayer.css("background-color", "#000000");
             "pointer-events": "auto"
         });
     });
-})();
-[endscript]
-[iscript]
-(function startTitleWindWithoutBlockingTitle() {
-    var key = "__hlTitleWind";
-    var src = $.parseStorage("nature_wind.ogg", "bgm");
-    if (window[key]) {
-        window[key].stop();
-        window[key].unload();
-    }
-    window[key] = new Howl({
-        src: [src],
-        loop: true,
-        preload: true,
-        volume: 0
-    });
-    window[key].once("play", function () {
-        window[key].fade(0, 0.42, 800);
-    });
-    window[key].play();
 })();
 [endscript]
 [iscript]
