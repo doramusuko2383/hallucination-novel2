@@ -56,6 +56,19 @@
         });
     }
 
+    if (!preload.titleClickSe) {
+        preload.titleClickSe = new Howl({
+            src: [$.parseStorage("se/click.ogg", "sound")],
+            volume: 1,
+            preload: true
+        });
+    }
+
+    if (document.fonts && document.fonts.load) {
+        document.fonts.load('600 16px GenMin');
+        document.fonts.load('400 60px GenMin');
+    }
+
     $("#proyama-splash").remove();
 
     var splash = $("<div></div>").attr("id", "proyama-splash");
@@ -150,6 +163,17 @@ baseLayer.css("background-color", "#000000");
         });
     }
 
+    if (!$("#title-menu-initial-font-style").length) {
+        $("head").append(
+            '<style id="title-menu-initial-font-style">' +
+            '.glink_button.title-logo,.glink_button.title-subtitle,.glink_button.title-choice{' +
+            'font-family: GenMin, \'Times New Roman\', serif !important;' +
+            'font-synthesis: none;' +
+            '}' +
+            '</style>'
+        );
+    }
+
     var baseTextStyle = {
         "display": "flex",
         "align-items": "center",
@@ -218,6 +242,23 @@ baseLayer.css("background-color", "#000000");
             "pointer-events": "auto"
         });
     });
+
+    $(document)
+        .off("click.titleMenuClickSe", ".glink_button.title-choice:not(.title-start)")
+        .on("click.titleMenuClickSe", ".glink_button.title-choice:not(.title-start)", function () {
+            TYRANO.kag.readyAudio();
+            var preload = window.__titlePreload = window.__titlePreload || {};
+            if (!preload.titleClickSe) {
+                preload.titleClickSe = new Howl({
+                    src: [$.parseStorage("se/click.ogg", "sound")],
+                    volume: 1,
+                    preload: true
+                });
+            }
+            preload.titleClickSe.stop();
+            preload.titleClickSe.volume(1);
+            preload.titleClickSe.play();
+        });
 })();
 [endscript]
 [iscript]
