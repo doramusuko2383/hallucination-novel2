@@ -11,12 +11,8 @@
 [chara_hide_all]
 [clearfix]
 [start_keyconfig]
+[chapter_title number="第四章" title="共犯"]
 [font speed=50]
-
-[bg storage="black.png" time=0 wait=false]
-
-第4章[p]
-[wait time=800]
 
 [bg storage="bg_classroom_day.webp" time=800]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=40 fadein=true time=1000]

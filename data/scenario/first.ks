@@ -10,6 +10,7 @@
 @call storage="tyrano.ks"
 [call storage="chara_define.ks"]
 [call storage="chara_auto.ks"]
+[call storage="macro.ks"]
 
 [chara_config pos_mode="false"]
 
