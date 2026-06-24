@@ -104,12 +104,6 @@
 
     function playClickSound() {
         try {
-            if (!window.TYRANO || !TYRANO.kag) return;
-            if (TYRANO.kag.readyAudio) TYRANO.kag.readyAudio();
-            if (TYRANO.kag.playSound) {
-                TYRANO.kag.playSound("se/click.ogg");
-                return;
-            }
             if (window.Howl) {
                 window.__hl_menu_click_howl = window.__hl_menu_click_howl || new Howl({
                     src: [$.parseStorage("se/click.ogg", "sound")],
@@ -118,7 +112,11 @@
                 });
                 window.__hl_menu_click_howl.stop();
                 window.__hl_menu_click_howl.play();
+                return;
             }
+            if (!window.TYRANO || !TYRANO.kag) return;
+            if (TYRANO.kag.readyAudio) TYRANO.kag.readyAudio();
+            if (TYRANO.kag.playSound) TYRANO.kag.playSound("se/click.ogg");
         } catch (e) {
             if (window.console) console.warn("Failed to play menu click sound", e);
         }
@@ -127,8 +125,8 @@
     function installClickSoundEvents() {
         window.__hlPlayClickSe = playClickSound;
         $(document)
-            .off("mousedown.hlMenuClickSe touchstart.hlMenuClickSe", ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .layer_free .glink_button.title-choice:not(.title-start)")
-            .on("mousedown.hlMenuClickSe touchstart.hlMenuClickSe", ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .layer_free .glink_button.title-choice:not(.title-start)", function (e) {
+            .off("mousedown.hlMenuClickSe touchstart.hlMenuClickSe", ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .glink_button.title-choice:not(.title-start), .quiet_system_button")
+            .on("mousedown.hlMenuClickSe touchstart.hlMenuClickSe", ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .glink_button.title-choice:not(.title-start), .quiet_system_button", function (e) {
                 if (e.type === "mousedown" && e.which && e.which !== 1) return;
                 var now = Date.now();
                 var last = $(this).data("hlClickSeAt") || 0;
@@ -150,11 +148,20 @@
         });
     }
 
+    function stopGlobalHowlsExceptSystemSe() {
+        if (!window.Howler || !Array.isArray(Howler._howls)) return;
+        Howler._howls.slice().forEach(function (howl) {
+            if (!howl || howl === window.__hl_menu_click_howl || howl === window.__titleLogoGlitchSe) return;
+            try { howl.stop(); } catch (e) {}
+        });
+    }
+
     function stopTransientAudio() {
         if (!window.TYRANO || !TYRANO.kag) return;
         var kag = TYRANO.kag;
         stopHowlMap(kag.tmp && kag.tmp.map_bgm);
         stopHowlMap(kag.tmp && kag.tmp.map_se);
+        stopGlobalHowlsExceptSystemSe();
         if (kag.tmp) {
             kag.tmp.is_bgm_play = false;
             kag.tmp.is_bgm_play_wait = false;
