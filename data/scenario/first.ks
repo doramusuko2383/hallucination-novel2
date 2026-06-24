@@ -152,7 +152,6 @@ baseLayer.css("background-color", "#000000");
     if (!window.Howler || Howler.ctx && Howler.ctx.state === "running") {
         playTitleWind();
     } else {
-        Howler.once("unlock", playTitleWind);
         $(document).one("pointerdown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind", playTitleWind);
     }
 })();
