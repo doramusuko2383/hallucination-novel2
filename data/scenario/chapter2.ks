@@ -14,12 +14,8 @@
 [clearfix]
 [start_keyconfig]
 
-[bg storage="black.png" time=0 wait=false]
+[chapter_title number="第二章" title="報復"]
 [font speed=50]
-
-第2章[p]
-
-[wait time=800]
 
 [bg storage="bg_station_morning.webp" time=800]
 [playbgm storage="morning_city.ogg" loop=true volume=45 fadein=true time=300]
