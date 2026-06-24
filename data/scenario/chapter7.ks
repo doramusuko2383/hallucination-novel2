@@ -8,11 +8,8 @@
 [chara_hide_all]
 [clearfix]
 [start_keyconfig]
+[chapter_title number="第七章" title="未来"]
 [font speed=50]
-
-[bg storage="black.png" time=0 wait=false]
-7章[p]
-[wait time=600]
 
 [bg storage="bg_takumiroom_night.webp" time=800]
 [playbgm storage="chase.ogg" loop=true volume=35 fadein=true time=1000]

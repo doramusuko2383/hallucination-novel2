@@ -8,12 +8,12 @@
 [chara_hide_all]
 [clearfix]
 [start_keyconfig]
+[chapter_title number="第六章" title="赦し"]
 [font speed=50]
 
 [bg storage="bg_hospital_room_day.webp" time=800]
 [playse storage=se/air_noise.ogg loop=true volume=20]
 
-6章[p]
 病室は酷く殺風景で、何も書かれていない真っ白なキャンパスを彷彿とさせた。[p]
 [chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=300 wait=false]
 [wait time=1000]
