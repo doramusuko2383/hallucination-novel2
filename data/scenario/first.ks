@@ -143,7 +143,18 @@ baseLayer.css("background-color", "#000000");
         preload: true,
         volume: 0.68
     });
-    window[key].play();
+
+    function playTitleWind() {
+        if (!window[key] || window[key].playing()) return;
+        window[key].play();
+    }
+
+    if (!window.Howler || Howler.ctx && Howler.ctx.state === "running") {
+        playTitleWind();
+    } else {
+        Howler.once("unlock", playTitleWind);
+        $(document).one("pointerdown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind", playTitleWind);
+    }
 })();
 [endscript]
 
