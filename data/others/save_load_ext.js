@@ -101,11 +101,50 @@
         })[0];
     }
 
+
+    function playClickSound() {
+        try {
+            if (!window.TYRANO || !TYRANO.kag) return;
+            if (TYRANO.kag.readyAudio) TYRANO.kag.readyAudio();
+            if (TYRANO.kag.playSound) {
+                TYRANO.kag.playSound("se/click.ogg");
+                return;
+            }
+            if (window.Howl) {
+                window.__hl_menu_click_howl = window.__hl_menu_click_howl || new Howl({
+                    src: [$.parseStorage("se/click.ogg", "sound")],
+                    volume: 1,
+                    preload: true
+                });
+                window.__hl_menu_click_howl.stop();
+                window.__hl_menu_click_howl.play();
+            }
+        } catch (e) {
+            if (window.console) console.warn("Failed to play menu click sound", e);
+        }
+    }
+
+    function installClickSoundEvents() {
+        window.__hlPlayClickSe = playClickSound;
+        $(document)
+            .off("mousedown.hlMenuClickSe touchstart.hlMenuClickSe", ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .layer_free .glink_button.title-choice:not(.title-start)")
+            .on("mousedown.hlMenuClickSe touchstart.hlMenuClickSe", ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .layer_free .glink_button.title-choice:not(.title-start)", function (e) {
+                if (e.type === "mousedown" && e.which && e.which !== 1) return;
+                var now = Date.now();
+                var last = $(this).data("hlClickSeAt") || 0;
+                if (now - last < 80) return;
+                $(this).data("hlClickSeAt", now);
+                playClickSound();
+            });
+    }
+
     function install() {
         if (!window.TYRANO || !TYRANO.kag || !TYRANO.kag.menu) {
             setTimeout(install, 50);
             return;
         }
+
+        installClickSoundEvents();
 
         var menu = TYRANO.kag.menu;
         if (menu.__hl_save_load_ext_installed) return;

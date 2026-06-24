@@ -243,23 +243,6 @@ baseLayer.css("background-color", "#000000");
             "pointer-events": "auto"
         });
     });
-
-    $(document)
-        .off("click.titleMenuClickSe", ".glink_button.title-choice:not(.title-start)")
-        .on("click.titleMenuClickSe", ".glink_button.title-choice:not(.title-start)", function () {
-            TYRANO.kag.readyAudio();
-            var preload = window.__titlePreload = window.__titlePreload || {};
-            if (!preload.titleClickSe) {
-                preload.titleClickSe = new Howl({
-                    src: [$.parseStorage("se/click.ogg", "sound")],
-                    volume: 1,
-                    preload: true
-                });
-            }
-            preload.titleClickSe.stop();
-            preload.titleClickSe.volume(1);
-            preload.titleClickSe.play();
-        });
 })();
 [endscript]
 [iscript]
