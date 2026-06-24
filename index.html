@@ -118,6 +118,28 @@
         <script src="./tyrano/libs/textillate/jquery.textillate.js"></script>
         <script src="./tyrano/libs/jquery.touchSwipe.min.js"></script>
         <script src="./tyrano/libs/howler.js"></script>
+        <script>
+            (function () {
+                if (!window.Howler || typeof window.Howler.once === "function") return;
+
+                window.Howler.once = function (eventName, callback) {
+                    if (typeof callback !== "function") return window.Howler;
+                    if (eventName !== "unlock") return window.Howler;
+
+                    function runCallback() {
+                        callback();
+                    }
+
+                    if (!window.Howler.ctx || window.Howler.ctx.state === "running") {
+                        setTimeout(runCallback, 0);
+                    } else {
+                        $(document).one("pointerdown.hlHowlerUnlockOnce keydown.hlHowlerUnlockOnce touchstart.hlHowlerUnlockOnce click.hlHowlerUnlockOnce", runCallback);
+                    }
+
+                    return window.Howler;
+                };
+            })();
+        </script>
         <script src="./tyrano/libs/jsQR.js"></script>
         <script src="./tyrano/libs/anime.min.js"></script>
         <script src="./tyrano/libs/lz-string.min.js"></script>
