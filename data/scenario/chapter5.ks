@@ -8,11 +8,8 @@
 [chara_hide_all]
 [clearfix]
 [start_keyconfig]
-[bg storage="black.png" time=0 wait=false]
+[chapter_title number="第五章" title="代償"]
 [font speed=50]
-
-第5章[p]
-[wait time=800]
 
 [bg storage="bg_takumiroom_morning.webp" time=800]
 [playse storage=se/teroren.ogg volume=80]

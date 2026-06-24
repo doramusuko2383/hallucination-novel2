@@ -475,6 +475,7 @@
 しばらく恐怖と混乱で動けなかった。[p]
 [wait time=1000]
 *ch1_return
+[chapter_title number="第一章" title="覚醒"]
 [playse storage=se/school_chime.mp3]
 [wait time=1800]
 

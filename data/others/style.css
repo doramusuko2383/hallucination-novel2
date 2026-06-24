@@ -982,3 +982,50 @@ img.se_mute_on::after { display: none !important; }
 .save_title_text {
     color: rgba(244, 248, 251, 0.92);
 }
+
+
+/* =========================
+   章タイトル演出
+========================= */
+#chapter-title-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1280px;
+    height: 720px;
+    background: #000000;
+    color: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    font-family: "GenMin", serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.chapter-title-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    text-align: center;
+}
+
+.chapter-title-number,
+.chapter-title-name {
+    opacity: 0;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+.chapter-title-number {
+    font-size: 34px;
+}
+
+.chapter-title-name {
+    font-size: 52px;
+}

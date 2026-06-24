@@ -12,13 +12,8 @@
 [clearfix]
 [start_keyconfig]
 
-; 追加した演出意図: 章冒頭は黒背景と短い待ちで、前章からの余韻を残して静かに始める。
-[bg storage="black.png" time=0 wait=false]
+[chapter_title number="第三章" title="邂逅"]
 [font speed=50]
-
-第3章[p]
-
-[wait time=800]
 
 *ch3_convenience_store
 
