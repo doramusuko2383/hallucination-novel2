@@ -138,6 +138,67 @@
             });
     }
 
+
+    function stopHowlMap(map) {
+        if (!map) return;
+        Object.keys(map).forEach(function (key) {
+            var howl = map[key];
+            if (!howl) return;
+            try { howl.stop(); } catch (e) {}
+            try { howl.unload(); } catch (e) {}
+            delete map[key];
+        });
+    }
+
+    function stopTransientAudio() {
+        if (!window.TYRANO || !TYRANO.kag) return;
+        var kag = TYRANO.kag;
+        stopHowlMap(kag.tmp && kag.tmp.map_bgm);
+        stopHowlMap(kag.tmp && kag.tmp.map_se);
+        if (kag.tmp) {
+            kag.tmp.is_bgm_play = false;
+            kag.tmp.is_bgm_play_wait = false;
+            kag.tmp.is_se_play = false;
+            kag.tmp.is_se_play_wait = false;
+            kag.tmp.is_vo_play = false;
+            kag.tmp.is_vo_play_wait = false;
+        }
+        if (kag.stat) {
+            kag.stat.current_bgm = "";
+            kag.stat.current_bgm_vol = "";
+            kag.stat.current_bgm_pause_seek = "";
+            kag.stat.current_se = {};
+            kag.stat.play_speak = false;
+        }
+        if (window.speechSynthesis && window.speechSynthesis.cancel) {
+            window.speechSynthesis.cancel();
+        }
+        if (kag.popopo) {
+            clearInterval(kag.popopo_timer);
+            if (kag.popopo.oscillatorNode) {
+                try {
+                    var node = kag.popopo.oscillatorNode;
+                    (node.source || node).stop(0);
+                    if (node.source && node.source.disconnect) node.source.disconnect();
+                    if (node.gain && node.gain.disconnect) node.gain.disconnect();
+                } catch (e) {}
+                kag.popopo.oscillatorNode = null;
+            }
+        }
+    }
+
+    function clearTransientVisuals() {
+        $("#chapter-title-overlay, #proyama-splash").remove();
+        $(".tyrano-anim, .chara-mod-animation").stop(true, true);
+        $(".layer_menu").hide().empty();
+        $(".layer_event_click").hide();
+    }
+
+    function resetRuntimeBeforeSceneSwitch() {
+        stopTransientAudio();
+        clearTransientVisuals();
+    }
+
     function install() {
         if (!window.TYRANO || !TYRANO.kag || !TYRANO.kag.menu) {
             setTimeout(install, 50);
@@ -155,6 +216,8 @@
         menu.__hl_original_doSave = menu.doSave;
         menu.__hl_original_snapSave = menu.snapSave;
         menu.__hl_original_loadGame = menu.loadGame;
+        menu.__hl_original_loadGameData = menu.loadGameData;
+        TYRANO.kag.__hl_original_backTitle = TYRANO.kag.backTitle;
 
         menu.getSaveData = function () {
             return normalizeSaveData(this);
@@ -194,6 +257,16 @@
             var data = getAutoSaveData(this)[0];
             if (!data) return false;
             this.loadGameData($.extend(true, {}, data), { auto_next: "yes" });
+        };
+
+        menu.loadGameData = function (data, options) {
+            resetRuntimeBeforeSceneSwitch();
+            return this.__hl_original_loadGameData.call(this, data, options);
+        };
+
+        TYRANO.kag.backTitle = function () {
+            resetRuntimeBeforeSceneSwitch();
+            return TYRANO.kag.__hl_original_backTitle.apply(this, arguments);
         };
 
         menu.loadGame = function (num) {
