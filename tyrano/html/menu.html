@@ -51,7 +51,16 @@
             $("#menu_menu_wrapper .menu_config").on("click", function (e) {
                 var layerMenu = TYRANO.kag.layer.getMenuLayer();
                 layerMenu.empty().hide();
-                TYRANO.kag.ftag.startTag("sleepgame", { storage: "config.ks" });
+                if (window.__hlOpenConfigOverlay) window.__hlOpenConfigOverlay();
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+            });
+            $("#menu_menu_wrapper .menu_back_title").on("click", function (e) {
+                var layerMenu = TYRANO.kag.layer.getMenuLayer();
+                layerMenu.empty().hide();
+                $(".button_menu").hide();
+                TYRANO.kag.stat.visible_menu_button = false;
+                TYRANO.kag.ftag.startTag("call", { storage: "back_title_confirm.ks", target: "*confirm" });
                 e.stopImmediatePropagation();
                 e.stopPropagation();
             });
