@@ -137,10 +137,24 @@ baseLayer.css("background-color", "#000000");
         window[key].stop();
         window[key].unload();
     }
+
+    var audioId = "hl-title-wind-audio";
+    $("#" + audioId).remove();
+    var titleAudio = document.createElement("audio");
+    titleAudio.id = audioId;
+    titleAudio.src = src;
+    titleAudio.loop = true;
+    titleAudio.autoplay = true;
+    titleAudio.preload = "auto";
+    titleAudio.volume = 0.68;
+    titleAudio.setAttribute("playsinline", "");
+    document.body.appendChild(titleAudio);
+    titleAudio.play().catch(function () {});
     window[key] = new Howl({
         src: [src],
         loop: true,
         preload: true,
+        html5: true,
         volume: 0.68
     });
 
@@ -149,11 +163,9 @@ baseLayer.css("background-color", "#000000");
         window[key].play();
     }
 
-    if (!window.Howler || Howler.ctx && Howler.ctx.state === "running") {
-        playTitleWind();
-    } else {
-        $(document).one("pointerdown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind", playTitleWind);
-    }
+    playTitleWind();
+    $(document).one("pointerdown.hlTitleWind mousedown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind click.hlTitleWind", playTitleWind);
+    $(document).one("readyaudio.hlTitleWind", playTitleWind);
 })();
 [endscript]
 
@@ -386,11 +398,11 @@ if (window.__hlTitleWind) {
 
 *title_load
 [showload]
-@jump target="*title_menu"
+[s]
 
 *title_config
-[sleepgame storage="config.ks"]
-@jump target="*title_menu"
+[sleepgame storage="config.ks" next="false"]
+[s]
 
 *title_quit
 [iscript]
@@ -483,7 +495,7 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 [button fix="true" name="system_backlog quiet_system_button quiet_log" role="backlog" graphic="" width="48" height="24" x="868" y="520"]
 [button fix="true" name="system_auto quiet_system_button quiet_auto" role="auto" graphic="" width="54" height="24" x="922" y="520"]
 [button fix="true" name="system_skip quiet_system_button quiet_skip" role="skip" graphic="" width="54" height="24" x="982" y="520"]
-[button fix="true" name="system_config quiet_system_button quiet_config" role="sleepgame" storage="config.ks" graphic="" width="72" height="24" x="1042" y="520"]
+[button fix="true" name="system_config quiet_system_button quiet_config" role="sleepgame" storage="config.ks" next="false" graphic="" width="72" height="24" x="1042" y="520"]
 
 [configdelay speed="42"]
 
