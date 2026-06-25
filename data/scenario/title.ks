@@ -4,4 +4,6 @@
 @clearstack
 @hidemenubutton
 @stop_bgmovie time=0 wait=true
+[stopse]
+[stopbgm time=0]
 @jump storage="first.ks" target="*title_menu"
