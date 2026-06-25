@@ -212,7 +212,7 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-subtitle" color="black" size="18" x="440" y="270" width="400" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
 [glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load"]
+[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load" cm="false"]
 [glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config" cm="false"]
 [glink name="title-choice" color="black" size="16" x="520" y="612" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
@@ -453,6 +453,14 @@ window.close();
 
 *title_newgame
 ; NEW GAME選択時は、決定音の余韻を置いてから風音と同時に静かに暗転する。
+[iscript]
+(function stopTitleWindBeforeNewGame() {
+    if (!window.__hlTitleWind) return;
+    window.__hlTitleWind.stop();
+    window.__hlTitleWind.unload();
+    window.__hlTitleWind = null;
+})();
+[endscript]
 [playse storage=se/click.ogg volume=100]
 [wait time=200]
 [fadeoutbgm time=500]

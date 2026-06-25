@@ -220,6 +220,8 @@
             var unreadSkip = config.unReadTextSkip === "true";
 
             $("#hl-config-overlay").remove();
+            var hiddenTitleElements = $(".glink_button.title-logo, .glink_button.title-subtitle, .glink_button.title-choice").filter(":visible");
+            hiddenTitleElements.css("visibility", "hidden");
 
             function playClick() {
                 if (window.__hlPlayClickSe) window.__hlPlayClickSe();
@@ -286,8 +288,8 @@
                 $("head").append(
                     '<style id="hl-config-overlay-style">' +
                     '#hl-config-overlay{position:absolute;inset:0;z-index:100000010;pointer-events:auto;font-family:GenMin,serif;color:rgba(238,244,248,.94)}' +
-                    '#hl-config-overlay .hl-config-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.48)}' +
-                    '#hl-config-overlay .hl-config-panel{position:absolute;left:260px;top:116px;width:900px;min-height:438px;box-sizing:border-box;padding:34px 48px;border:1px solid rgba(220,235,245,.22);border-radius:8px;background:linear-gradient(180deg,rgba(5,8,13,.9),rgba(0,0,0,.82));box-shadow:0 20px 60px rgba(0,0,0,.45)}' +
+                    '#hl-config-overlay .hl-config-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78)}' +
+                    '#hl-config-overlay .hl-config-panel{position:absolute;left:260px;top:116px;width:900px;min-height:438px;box-sizing:border-box;padding:34px 48px;border:1px solid rgba(220,235,245,.22);border-radius:8px;background:linear-gradient(180deg,rgba(5,8,13,.98),rgba(0,0,0,.96));box-shadow:0 20px 60px rgba(0,0,0,.45)}' +
                     '#hl-config-overlay h1{margin:0 0 28px;font-size:24px;letter-spacing:.18em;font-weight:600}' +
                     '#hl-config-overlay .hl-config-close{position:absolute;right:24px;top:20px;width:96px;height:32px;border:1px solid rgba(221,230,236,.42);background:transparent;color:#dde6ec;font-size:12px;letter-spacing:.12em;cursor:pointer}' +
                     '#hl-config-overlay .hl-config-row{display:grid;grid-template-columns:150px 1fr 72px;align-items:center;gap:22px;margin:18px 0;letter-spacing:.12em}' +
@@ -337,12 +339,15 @@
             addOptions("skip", [0, 1], function (value) { setUnreadSkip(value === 1); }, function (value) { return value === 1 ? "ON" : "OFF"; });
 
             overlay.on("click mousedown touchstart pointerdown pointerup", function (event) {
+                event.stopImmediatePropagation();
                 event.stopPropagation();
             });
             overlay.find(".hl-config-close").on("click", function (event) {
                 event.stopPropagation();
                 playClick();
+                hiddenTitleElements.css("visibility", "");
                 overlay.remove();
+                if (kag.stat.visible_menu_button == 1) $(".button_menu").show();
             });
 
             root.append(overlay);
@@ -391,6 +396,7 @@
             }
 
             overlay.on("click mousedown touchstart pointerdown pointerup", function (event) {
+                event.stopImmediatePropagation();
                 event.stopPropagation();
             });
             overlay.find(".hl-back-title-no").on("click", function (event) {
@@ -401,6 +407,7 @@
             overlay.find(".hl-back-title-yes").on("click", function (event) {
                 event.stopPropagation();
                 playClick();
+                stopTransientAudio();
                 resetRuntimeBeforeSceneSwitch();
                 kag.layer.getMenuLayer().hide().empty();
                 $(".button_menu").hide();
