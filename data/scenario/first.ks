@@ -171,11 +171,11 @@ baseLayer.css("background-color", "#000000");
 
 [glink name="title-logo" color="black" size="76" x="330" y="168" width="620" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="18" x="440" y="270" width="400" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
-[glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame"]
-[glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load"]
-[glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config"]
-[glink name="title-choice" color="black" size="16" x="520" y="612" width="240" height="30" text="EXIT" target="*title_quit"]
+[glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame" clickse="se/click.ogg"]
+[glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue" clickse="se/click.ogg"]
+[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load" clickse="se/click.ogg"]
+[glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config" clickse="se/click.ogg"]
+[glink name="title-choice" color="black" size="16" x="520" y="612" width="240" height="30" text="EXIT" target="*title_quit" clickse="se/click.ogg"]
 [iscript]
 (function normalizeTitleGlinkClasses() {
     function important(button, styles) {
