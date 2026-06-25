@@ -213,7 +213,8 @@
 
 
     function installConfigOverlay() {
-        window.__hlOpenConfigOverlay = function () {
+        window.__hlOpenConfigOverlay = function (options) {
+            options = options || {};
             var kag = TYRANO.kag;
             var config = kag.config;
             var root = $("#tyrano_base");
@@ -347,6 +348,10 @@
                 event.stopPropagation();
                 playClick();
                 overlay.remove();
+                if (typeof options.onClose === "function") {
+                    options.onClose();
+                    return;
+                }
                 if (kag.stat.visible_menu_button == 1) $(".button_menu").show();
             });
 

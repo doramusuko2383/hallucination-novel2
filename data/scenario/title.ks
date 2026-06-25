@@ -6,4 +6,5 @@
 @stop_bgmovie time=0 wait=true
 [stopse]
 [stopbgm time=0]
+[call storage="macro.ks"]
 @jump storage="first.ks" target="*title_menu"

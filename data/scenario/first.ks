@@ -49,14 +49,6 @@
         });
     }
 
-    if (!preload.titleWindBgm) {
-        preload.titleWindBgm = new Howl({
-            src: [$.parseStorage("nature_wind.ogg", "bgm")],
-            volume: 0,
-            preload: true
-        });
-    }
-
     if (!preload.titleClickSe) {
         preload.titleClickSe = new Howl({
             src: [$.parseStorage("se/click.ogg", "sound")],
@@ -164,49 +156,10 @@ baseLayer.css("background-color", "#000000");
 
 ; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
 [bg storage="title_rooftop.webp" time=0]
-; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
-; [playbgm] は未操作時のブラウザ音声制限でクリック待ちになるため、
-; タイトル表示開始時に Howl で非同期再生して表示をブロックしない。
-
-[iscript]
-(function startTitleWindWithoutBlockingTitle() {
-    var key = "__hlTitleWind";
-    var src = $.parseStorage("nature_wind.ogg", "bgm");
-    if (window[key]) {
-        window[key].stop();
-        window[key].unload();
-    }
-
-    var audioId = "hl-title-wind-audio";
-    $("#" + audioId).remove();
-    var titleAudio = document.createElement("audio");
-    titleAudio.id = audioId;
-    titleAudio.src = src;
-    titleAudio.loop = true;
-    titleAudio.autoplay = true;
-    titleAudio.preload = "auto";
-    titleAudio.volume = 0.68;
-    titleAudio.setAttribute("playsinline", "");
-    document.body.appendChild(titleAudio);
-    titleAudio.play().catch(function () {});
-    window[key] = new Howl({
-        src: [src],
-        loop: true,
-        preload: true,
-        html5: true,
-        volume: 0.68
-    });
-
-    function playTitleWind() {
-        if (!window[key] || window[key].playing()) return;
-        window[key].play();
-    }
-
-    playTitleWind();
-    $(document).one("pointerdown.hlTitleWind mousedown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind click.hlTitleWind", playTitleWind);
-    $(document).one("readyaudio.hlTitleWind", playTitleWind);
-})();
-[endscript]
+; タイトル画面の環境音はTyranoScriptのBGM管理に任せる。
+; Howlerを直接鳴らすとLOAD/CLOSEやタイトル復帰後に残留しやすいため、
+; [stopbgm] / [fadeoutbgm] で制御できる通常BGMとして再生する。
+[playbgm storage="nature_wind.ogg" loop=true volume=68 fadein=true time=300]
 
 [glink name="title-logo" color="black" size="76" x="330" y="168" width="620" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="18" x="440" y="270" width="400" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
@@ -420,18 +373,7 @@ baseLayer.css("background-color", "#000000");
 [s]
 
 *title_continue
-[iscript]
-if (window.__hlTitleWind) {
-    window.__hlTitleWind.fade(window.__hlTitleWind.volume(), 0, 500);
-    setTimeout(function () {
-        if (window.__hlTitleWind) {
-            window.__hlTitleWind.stop();
-            window.__hlTitleWind.unload();
-            window.__hlTitleWind = null;
-        }
-    }, 520);
-}
-[endscript]
+[fadeoutbgm time=300]
 [continue_latest]
 @jump target="*title_menu"
 
@@ -441,7 +383,6 @@ if (window.__hlTitleWind) {
 [free_layermode time=0 wait=true]
 [bg storage="title_rooftop.webp" time=0]
 [layermode color="0x05080d" opacity="165" time="100" wait="true"]
-[ptext layer="fix" fix="true" name="title_load_heading" text="LOAD" x="72" y="48" size="28" color="0xf0f6fa"]
 [showload]
 [free_layermode time="100" wait="true"]
 @jump target="*title_menu"
@@ -471,17 +412,6 @@ window.close();
 [playse storage=se/openingwind.ogg volume=75]
 [iscript]
 (function startNewGameOpeningFade() {
-    if (window.__hlTitleWind) {
-        window.__hlTitleWind.fade(window.__hlTitleWind.volume(), 0, 500);
-        setTimeout(function () {
-            if (window.__hlTitleWind) {
-                window.__hlTitleWind.stop();
-                window.__hlTitleWind.unload();
-                window.__hlTitleWind = null;
-            }
-        }, 520);
-    }
-
     var overlayRoot = $("#tyrano_base");
     if (!overlayRoot.length) overlayRoot = TG.layer.getLayer("base", "fore");
     var overlay = $("<div></div>").attr("id", "new-game-opening-fade");

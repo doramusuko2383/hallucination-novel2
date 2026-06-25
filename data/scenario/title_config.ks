@@ -1,5 +1,9 @@
 ; タイトル画面専用CONFIG。
+<<<<<<< codex-6cd76m
+; タイトルメニューへ重ねず、専用画面上で本編CONFIGと同じUIを表示する。
+=======
 ; タイトルメニューへ重ねず、タイトル背景＋グレー透過スクリーンの専用画面として表示する。
+>>>>>>> main
 
 *title_config
 [cm]
@@ -8,6 +12,20 @@
 [bg storage="title_rooftop.webp" time=0]
 [layermode color="0x05080d" opacity="165" time="100" wait="true"]
 [iscript]
+<<<<<<< codex-6cd76m
+(function openTitleConfigScreen() {
+    if (!window.__hlOpenConfigOverlay) {
+        TYRANO.kag.ftag.startTag("jump", { storage: "title_config.ks", target: "*title_config_close" });
+        return;
+    }
+    window.__hlOpenConfigOverlay({
+        onClose: function () {
+            TYRANO.kag.ftag.startTag("jump", { storage: "title_config.ks", target: "*title_config_close" });
+        }
+    });
+})();
+[endscript]
+=======
 (function setupTitleConfigScreen() {
     var config = TG.config;
     window.__hlTitleConfigSet = function (kind, value) {
@@ -79,6 +97,7 @@
 [ptext layer="fix" fix="true" name="title_config_value" text="&tf.title_cfg_skip" x="1050" y="492" width="120" align="right" size="14" color="0xf0f6fa"]
 [glink fix="true" text="OFF" target="*title_config" exp="window.__hlTitleConfigSet('skip', 0)" x="440" y="480" width="56" height="34" size="10" color="black"]
 [glink fix="true" text="ON" target="*title_config" exp="window.__hlTitleConfigSet('skip', 1)" x="510" y="480" width="56" height="34" size="10" color="black"]
+>>>>>>> main
 [s]
 
 *title_config_close
