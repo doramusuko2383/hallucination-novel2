@@ -210,11 +210,11 @@ baseLayer.css("background-color", "#000000");
 
 [glink name="title-logo" color="black" size="76" x="330" y="168" width="620" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="18" x="440" y="270" width="400" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
-[glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame" clickse="se/click.ogg"]
-[glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue" clickse="se/click.ogg"]
-[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load" clickse="se/click.ogg"]
-[glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config" clickse="se/click.ogg"]
-[glink name="title-choice" color="black" size="16" x="520" y="612" width="240" height="30" text="EXIT" target="*title_quit" clickse="se/click.ogg"]
+[glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame"]
+[glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue"]
+[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load"]
+[glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config" cm="false"]
+[glink name="title-choice" color="black" size="16" x="520" y="612" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
 (function normalizeTitleGlinkClasses() {
     function important(button, styles) {
@@ -440,7 +440,9 @@ if (window.__hlTitleWind) {
 [s]
 
 *title_config
-[sleepgame storage="config.ks" next="false"]
+[iscript]
+if (window.__hlOpenConfigOverlay) window.__hlOpenConfigOverlay();
+[endscript]
 [s]
 
 *title_quit
@@ -534,7 +536,7 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 [button fix="true" name="system_backlog quiet_system_button quiet_log" role="backlog" graphic="" width="48" height="24" x="868" y="520"]
 [button fix="true" name="system_auto quiet_system_button quiet_auto" role="auto" graphic="" width="54" height="24" x="922" y="520"]
 [button fix="true" name="system_skip quiet_system_button quiet_skip" role="skip" graphic="" width="54" height="24" x="982" y="520"]
-[button fix="true" name="system_config quiet_system_button quiet_config" role="sleepgame" storage="config.ks" next="false" graphic="" width="72" height="24" x="1042" y="520"]
+[button fix="true" name="system_config quiet_system_button quiet_config" role="menu" graphic="" width="72" height="24" x="1042" y="520"]
 
 [configdelay speed="42"]
 

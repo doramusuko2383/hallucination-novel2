@@ -405,8 +405,8 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 ;フルスクリーン切替ボタン
 [button name="role_button" role="fullscreen" graphic="button/screen.png" enterimg="button/screen2.png" x="740" y="690"]
 
-;コンフィグボタン（※sleepgame を使用して config.ks を呼び出しています）
-[button name="role_button" role="sleepgame" graphic="button/sleep.png" enterimg="button/sleep2.png" storage="config.ks" x="840" y="690"]
+;コンフィグボタン（メニューを開き、CONFIGはオーバーレイで表示します）
+[button name="role_button" role="menu" graphic="button/sleep.png" enterimg="button/sleep2.png" x="840" y="690"]
 
 ;メニュー呼び出しボタン（※ロールボタンを使うなら不要）
 [button name="role_button" role="menu" graphic="button/menu.png" enterimg="button/menu2.png" x="940" y="690"]
