@@ -56,8 +56,11 @@
                 e.stopPropagation();
             });
             $("#menu_menu_wrapper .menu_back_title").on("click", function (e) {
-                if (!window.__hlOpenBackTitleConfirm) return;
-                window.__hlOpenBackTitleConfirm();
+                var layerMenu = TYRANO.kag.layer.getMenuLayer();
+                layerMenu.empty().hide();
+                $(".button_menu").hide();
+                TYRANO.kag.stat.visible_menu_button = false;
+                TYRANO.kag.ftag.startTag("call", { storage: "back_title_confirm.ks", target: "*confirm" });
                 e.stopImmediatePropagation();
                 e.stopPropagation();
             });

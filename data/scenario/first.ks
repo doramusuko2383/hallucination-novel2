@@ -436,22 +436,18 @@ if (window.__hlTitleWind) {
 @jump target="*title_menu"
 
 *title_load
-[iscript]
-$("body").addClass("hl-title-modal-open");
-if (window.__hlSetTitleMenuHidden) window.__hlSetTitleMenuHidden(true);
-[endscript]
+[cm]
+[clearfix]
+[free_layermode time=0 wait=true]
+[bg storage="title_rooftop.webp" time=0]
+[layermode color="0x05080d" opacity="165" time="100" wait="true"]
+[ptext layer="fix" fix="true" name="title_load_heading" text="LOAD" x="72" y="48" size="28" color="0xf0f6fa"]
 [showload]
-[iscript]
-$("body").removeClass("hl-title-modal-open");
-if (window.__hlSetTitleMenuHidden) window.__hlSetTitleMenuHidden(false);
-[endscript]
-[s]
+[free_layermode time="100" wait="true"]
+@jump target="*title_menu"
 
 *title_config
-[iscript]
-if (window.__hlOpenConfigOverlay) window.__hlOpenConfigOverlay();
-[endscript]
-[s]
+@jump storage="title_config.ks" target="*title_config"
 
 *title_quit
 [iscript]
