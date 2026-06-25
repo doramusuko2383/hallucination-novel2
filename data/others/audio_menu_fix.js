@@ -1,8 +1,7 @@
 (function () {
     "use strict";
 
-    var CLICK_SE_PATH = "se/click.ogg";
-    var SUPPRESS_CLICK_MS = 450;
+    var SUPPRESS_CLICK_MS = 1000;
 
     if (window.Howler) {
         Howler.autoSuspend = false;
@@ -18,18 +17,6 @@
         return window.TYRANO && window.TYRANO.kag;
     }
 
-    function getClickHowl() {
-        if (!window.Howl || !window.$ || !$.parseStorage) return null;
-        if (!window.__hl_menu_click_howl) {
-            window.__hl_menu_click_howl = new Howl({
-                src: [$.parseStorage(CLICK_SE_PATH, "sound")],
-                volume: 1,
-                preload: true
-            });
-        }
-        return window.__hl_menu_click_howl;
-    }
-
     function resumeHowlerContext() {
         if (window.Howler) {
             Howler.autoSuspend = false;
@@ -39,8 +26,15 @@
         }
     }
 
+    function resumeTitleAudioElement() {
+        var audio = document.getElementById("hl-title-wind-audio");
+        if (!audio || !audio.paused) return;
+        audio.play().catch(function () {});
+    }
+
     function resumeKnownBgm() {
         var kag = getKag();
+        resumeTitleAudioElement();
         if (window.__hlTitleWind && !window.__hlTitleWind.playing()) {
             window.__hlTitleWind.play();
         }
@@ -59,43 +53,29 @@
         resumeKnownBgm();
     }
 
-    function playClickSe() {
-        unlockAudio();
-        var kag = getKag();
-        if (kag && kag.stat && kag.stat.play_se === false) return;
-        var sound = getClickHowl();
-        if (sound) {
-            sound.stop();
-            sound.play();
-            return;
-        }
-        if (kag && kag.playSound) kag.playSound(CLICK_SE_PATH);
+    function shouldSuppressScenarioClick(event) {
+        if (!window.__hlSuppressNextScenarioClick || Date.now() >= window.__hlSuppressNextScenarioClick) return false;
+        return $(event.target).closest(".layer_event_click").length > 0;
     }
+
+    document.addEventListener("pointerup", function (event) {
+        if (!shouldSuppressScenarioClick(event)) return;
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        window.__hlSuppressNextScenarioClick = 0;
+    }, true);
+
+    document.addEventListener("click", function (event) {
+        if (!shouldSuppressScenarioClick(event)) return;
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        window.__hlSuppressNextScenarioClick = 0;
+    }, true);
 
     $(document).on("pointerdown.hlAudioUnlock mousedown.hlAudioUnlock click.hlAudioUnlock keydown.hlAudioUnlock touchstart.hlAudioUnlock", unlockAudio);
     $(window).on("focus.hlAudioUnlock pageshow.hlAudioUnlock", unlockAudio);
     $(document).on("visibilitychange.hlAudioUnlock", function () {
         if (document.visibilityState === "visible") unlockAudio();
-    });
-
-    $(document)
-        .off("pointerdown.hlMenuClickSe mousedown.hlMenuClickSe touchstart.hlMenuClickSe")
-        .on("pointerdown.hlMenuClickSe mousedown.hlMenuClickSe touchstart.hlMenuClickSe", ".button_menu, .suspense_menu_button, .suspense_close, .menu_item, .menu_close, .quiet_system_button, .button_arrow_up, .button_arrow_down, .save_display_area, .glink_button.title-choice", function (event) {
-            if (event.type === "mousedown" && event.which && event.which !== 1) return;
-            var now = Date.now();
-            var last = $(this).data("hlClickSeAt") || 0;
-            if (now - last < 80) return;
-            $(this).data("hlClickSeAt", now);
-            playClickSe();
-        });
-
-    $(document).on("click.hlSuppressAwakeClick pointerup.hlSuppressAwakeClick", ".layer_event_click", function (event) {
-        if (window.__hlSuppressNextScenarioClick && Date.now() < window.__hlSuppressNextScenarioClick) {
-            event.stopImmediatePropagation();
-            event.preventDefault();
-            window.__hlSuppressNextScenarioClick = 0;
-            return false;
-        }
     });
 
     function restoreAfterTitleCancel() {
@@ -114,6 +94,14 @@
         window.__hlSuppressNextScenarioClick = Date.now() + SUPPRESS_CLICK_MS;
         unlockAudio();
         return false;
+    }
+
+    function goBackTitleWithConfirm(event) {
+        if (!$(event.target).closest(".menu_back_title").length) return;
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        var kag = getKag();
+        if (kag) kag.backTitle();
     }
 
     function installBackTitlePatch() {
@@ -141,14 +129,7 @@
         return true;
     }
 
-    $(document).on("click.hlBackTitleStop", ".menu_back_title", function (event) {
-        event.stopImmediatePropagation();
-        event.preventDefault();
-        playClickSe();
-        var kag = getKag();
-        if (kag) kag.backTitle();
-        return false;
-    });
+    document.addEventListener("click", goBackTitleWithConfirm, true);
 
     if (!installBackTitlePatch()) {
         $(window).on("load.hlBackTitlePatch", installBackTitlePatch);

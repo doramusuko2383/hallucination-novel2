@@ -258,7 +258,7 @@
 	[iscript]
 	TG.config.alreadyReadTextColor = tf.user_setting; // 既読テキストの文字色を復帰
 	$(".layer_free").css("pointer-events", "auto");
-	window.__hlSuppressNextScenarioClick = Date.now() + 450;
+	window.__hlSuppressNextScenarioClick = Date.now() + 1000;
 	[endscript]
 
 ;	テキスト速度のサンプル表示に使用していたメッセージレイヤを非表示に

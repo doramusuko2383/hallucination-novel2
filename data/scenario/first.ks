@@ -137,6 +137,19 @@ baseLayer.css("background-color", "#000000");
         window[key].stop();
         window[key].unload();
     }
+
+    var audioId = "hl-title-wind-audio";
+    $("#" + audioId).remove();
+    var titleAudio = document.createElement("audio");
+    titleAudio.id = audioId;
+    titleAudio.src = src;
+    titleAudio.loop = true;
+    titleAudio.autoplay = true;
+    titleAudio.preload = "auto";
+    titleAudio.volume = 0.68;
+    titleAudio.setAttribute("playsinline", "");
+    document.body.appendChild(titleAudio);
+    titleAudio.play().catch(function () {});
     window[key] = new Howl({
         src: [src],
         loop: true,
@@ -385,11 +398,11 @@ if (window.__hlTitleWind) {
 
 *title_load
 [showload]
-@jump target="*title_menu"
+[s]
 
 *title_config
 [sleepgame storage="config.ks" next="false"]
-@jump target="*title_menu"
+[s]
 
 *title_quit
 [iscript]
