@@ -415,7 +415,7 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 [button name="role_button" role="window" graphic="button/close.png" enterimg="button/close2.png" x="1040" y="690"]
 
 ;タイトルに戻るボタン
-[button name="role_button" role="title" graphic="button/title.png" enterimg="button/title2.png" x="1140" y="690"]
+[button name="role_button" role="menu" graphic="button/title.png" enterimg="button/title2.png" x="1140" y="690"]
 
 ;;ロールボタン追加終わり
 

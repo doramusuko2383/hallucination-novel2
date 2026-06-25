@@ -350,6 +350,69 @@
         };
     }
 
+
+
+    function installBackTitleOverlay() {
+        window.__hlOpenBackTitleConfirm = function () {
+            var kag = TYRANO.kag;
+            var root = $("#tyrano_base");
+            $("#hl-back-title-confirm").remove();
+
+            function playClick() {
+                if (window.__hlPlayClickSe) window.__hlPlayClickSe();
+            }
+
+            var overlay = $('<div id="hl-back-title-confirm" class="hl-back-title-confirm"></div>');
+            overlay.html(
+                '<div class="hl-back-title-backdrop"></div>' +
+                '<section class="hl-back-title-panel" aria-label="Back to title confirmation">' +
+                    '<h1>TITLE</h1>' +
+                    '<p>タイトルへ戻りますか？</p>' +
+                    '<div class="hl-back-title-actions">' +
+                        '<button type="button" class="hl-back-title-yes">YES</button>' +
+                        '<button type="button" class="hl-back-title-no">NO</button>' +
+                    '</div>' +
+                '</section>'
+            );
+
+            if (!$("#hl-back-title-confirm-style").length) {
+                $("head").append(
+                    '<style id="hl-back-title-confirm-style">' +
+                    '#hl-back-title-confirm{position:absolute;inset:0;z-index:100000020;pointer-events:auto;font-family:GenMin,serif;color:rgba(238,244,248,.95)}' +
+                    '#hl-back-title-confirm .hl-back-title-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.58)}' +
+                    '#hl-back-title-confirm .hl-back-title-panel{position:absolute;left:390px;top:218px;width:500px;box-sizing:border-box;padding:42px 48px;border:1px solid rgba(220,235,245,.24);border-radius:8px;background:linear-gradient(180deg,rgba(5,8,13,.94),rgba(0,0,0,.86));box-shadow:0 20px 60px rgba(0,0,0,.48);text-align:center}' +
+                    '#hl-back-title-confirm h1{margin:0 0 18px;font-size:24px;letter-spacing:.22em;font-weight:600}' +
+                    '#hl-back-title-confirm p{margin:0 0 30px;font-size:15px;letter-spacing:.14em}' +
+                    '#hl-back-title-confirm .hl-back-title-actions{display:flex;justify-content:center;gap:20px}' +
+                    '#hl-back-title-confirm button{width:128px;height:38px;border:1px solid rgba(221,230,236,.42);background:rgba(255,255,255,.04);color:#dde6ec;font-size:13px;letter-spacing:.18em;cursor:pointer}' +
+                    '#hl-back-title-confirm button:hover{border-color:rgba(248,250,255,.86);background:rgba(180,205,235,.18)}' +
+                    '</style>'
+                );
+            }
+
+            overlay.on("click mousedown touchstart pointerdown pointerup", function (event) {
+                event.stopPropagation();
+            });
+            overlay.find(".hl-back-title-no").on("click", function (event) {
+                event.stopPropagation();
+                playClick();
+                overlay.remove();
+            });
+            overlay.find(".hl-back-title-yes").on("click", function (event) {
+                event.stopPropagation();
+                playClick();
+                resetRuntimeBeforeSceneSwitch();
+                kag.layer.getMenuLayer().hide().empty();
+                $(".button_menu").hide();
+                kag.stat.visible_menu_button = false;
+                overlay.remove();
+                kag.ftag.startTag("jump", { storage: "title.ks" });
+            });
+
+            root.append(overlay);
+        };
+    }
+
     function install() {
         if (!window.TYRANO || !TYRANO.kag || !TYRANO.kag.menu) {
             setTimeout(install, 50);
@@ -522,6 +585,7 @@
         };
 
         installConfigOverlay();
+        installBackTitleOverlay();
 
         TYRANO.kag.config.configSaveSlotNum = MANUAL_SLOT_COUNT;
 
