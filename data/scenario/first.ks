@@ -141,6 +141,7 @@ baseLayer.css("background-color", "#000000");
         src: [src],
         loop: true,
         preload: true,
+        html5: true,
         volume: 0.68
     });
 
@@ -149,11 +150,9 @@ baseLayer.css("background-color", "#000000");
         window[key].play();
     }
 
-    if (!window.Howler || Howler.ctx && Howler.ctx.state === "running") {
-        playTitleWind();
-    } else {
-        $(document).one("pointerdown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind click.hlTitleWind", playTitleWind);
-    }
+    playTitleWind();
+    $(document).one("pointerdown.hlTitleWind mousedown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind click.hlTitleWind", playTitleWind);
+    $(document).one("readyaudio.hlTitleWind", playTitleWind);
 })();
 [endscript]
 
