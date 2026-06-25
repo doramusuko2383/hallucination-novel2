@@ -110,10 +110,49 @@
 })();
 [endscript]
 [wait time=500]
-@jump target="*title_menu"
+@jump target="*audio_start"
+
+*audio_start
+[cm]
+@freeimage layer=0 page=fore
+@layopt layer=message0 visible=false
+[hidemenubutton]
+[iscript]
+(function setupAudioStartGate() {
+    $(".button_menu").hide();
+    var baseLayer = TG.layer.getLayer("base", "fore");
+    baseLayer.css("background-image", "none");
+    baseLayer.css("background-color", "#000000");
+})();
+[endscript]
+[glink name="audio-start-button" color="black" size="18" x="440" y="326" width="400" height="44" text="CLICK / TAP TO START" target="*title_menu" clickse="se/click.ogg" exp="TYRANO.kag.readyAudio(); if(window.Howler && Howler.ctx && Howler.ctx.state === 'suspended'){ Howler.ctx.resume(); }"]
+[ptext layer="fix" fix="true" name="audio-start-note" text="音声を有効にして開始" x="440" y="382" width="400" align="center" size="12" color="0xb8c2c9"]
+[iscript]
+(function styleAudioStartGate() {
+    var button = $(".glink_button.audio-start-button").last();
+    button.css({
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "transparent",
+        backgroundImage: "none",
+        border: "1px solid rgba(238, 244, 248, 0.55)",
+        borderRadius: "0",
+        boxShadow: "0 0 18px rgba(160, 190, 230, 0.16)",
+        color: "rgba(248, 250, 255, 0.94)",
+        fontFamily: "GenMin, 'Times New Roman', serif",
+        fontWeight: "600",
+        letterSpacing: "0.28em",
+        textShadow: "0 0 8px rgba(255,255,255,0.28), 0 0 14px rgba(0,0,0,0.85)",
+        padding: "0"
+    });
+})();
+[endscript]
+[s]
 
 *title_menu
 [cm]
+[clearfix]
 @freeimage layer=0 page=fore
 @layopt layer=message0 visible=false
 [iscript]
