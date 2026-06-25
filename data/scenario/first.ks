@@ -438,10 +438,12 @@ if (window.__hlTitleWind) {
 *title_load
 [iscript]
 $("body").addClass("hl-title-modal-open");
+if (window.__hlSetTitleMenuHidden) window.__hlSetTitleMenuHidden(true);
 [endscript]
 [showload]
 [iscript]
 $("body").removeClass("hl-title-modal-open");
+if (window.__hlSetTitleMenuHidden) window.__hlSetTitleMenuHidden(false);
 [endscript]
 [s]
 

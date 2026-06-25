@@ -210,6 +210,20 @@
 
 
 
+
+
+    function installTitleMenuVisibilityHelper() {
+        window.__hlSetTitleMenuHidden = function (hidden) {
+            var visibility = hidden ? "hidden" : "visible";
+            $(".glink_button.title-logo, .glink_button.title-subtitle, .glink_button.title-choice").each(function () {
+                this.style.setProperty("visibility", visibility, "important");
+                if (hidden) this.style.setProperty("pointer-events", "none", "important");
+                else if ($(this).hasClass("title-choice")) this.style.setProperty("pointer-events", "auto", "important");
+                else this.style.setProperty("pointer-events", "none", "important");
+            });
+        };
+    }
+
     function installTitleModalStyle() {
         if ($("#hl-title-modal-style").length) return;
         $("head").append(
@@ -232,7 +246,10 @@
 
             $("#hl-config-overlay").remove();
             var hidesTitleMenu = $(".glink_button.title-logo, .glink_button.title-subtitle, .glink_button.title-choice").length > 0;
-            if (hidesTitleMenu) $("body").addClass("hl-title-modal-open");
+            if (hidesTitleMenu) {
+                $("body").addClass("hl-title-modal-open");
+                if (window.__hlSetTitleMenuHidden) window.__hlSetTitleMenuHidden(true);
+            }
 
             function playClick() {
                 if (window.__hlPlayClickSe) window.__hlPlayClickSe();
@@ -357,7 +374,10 @@
             overlay.find(".hl-config-close").on("click", function (event) {
                 event.stopPropagation();
                 playClick();
-                if (hidesTitleMenu) $("body").removeClass("hl-title-modal-open");
+                if (hidesTitleMenu) {
+                    $("body").removeClass("hl-title-modal-open");
+                    if (window.__hlSetTitleMenuHidden) window.__hlSetTitleMenuHidden(false);
+                }
                 overlay.remove();
                 if (kag.stat.visible_menu_button == 1) $(".button_menu").show();
             });
@@ -439,6 +459,7 @@
         }
 
         installClickSoundEvents();
+        installTitleMenuVisibilityHelper();
         installTitleModalStyle();
 
         var menu = TYRANO.kag.menu;
