@@ -56,7 +56,8 @@
                 e.stopPropagation();
             });
             $("#menu_menu_wrapper .menu_back_title").on("click", function (e) {
-                if (window.__hlOpenBackTitleConfirm) window.__hlOpenBackTitleConfirm();
+                if (!window.__hlOpenBackTitleConfirm) return;
+                window.__hlOpenBackTitleConfirm();
                 e.stopImmediatePropagation();
                 e.stopPropagation();
             });

@@ -436,7 +436,13 @@ if (window.__hlTitleWind) {
 @jump target="*title_menu"
 
 *title_load
+[iscript]
+$("body").addClass("hl-title-modal-open");
+[endscript]
 [showload]
+[iscript]
+$("body").removeClass("hl-title-modal-open");
+[endscript]
 [s]
 
 *title_config
