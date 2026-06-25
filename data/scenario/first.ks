@@ -176,10 +176,24 @@ baseLayer.css("background-color", "#000000");
         window[key].stop();
         window[key].unload();
     }
+
+    var audioId = "hl-title-wind-audio";
+    $("#" + audioId).remove();
+    var titleAudio = document.createElement("audio");
+    titleAudio.id = audioId;
+    titleAudio.src = src;
+    titleAudio.loop = true;
+    titleAudio.autoplay = true;
+    titleAudio.preload = "auto";
+    titleAudio.volume = 0.68;
+    titleAudio.setAttribute("playsinline", "");
+    document.body.appendChild(titleAudio);
+    titleAudio.play().catch(function () {});
     window[key] = new Howl({
         src: [src],
         loop: true,
         preload: true,
+        html5: true,
         volume: 0.68
     });
 
@@ -188,11 +202,9 @@ baseLayer.css("background-color", "#000000");
         window[key].play();
     }
 
-    if (!window.Howler || Howler.ctx && Howler.ctx.state === "running") {
-        playTitleWind();
-    } else {
-        $(document).one("pointerdown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind", playTitleWind);
-    }
+    playTitleWind();
+    $(document).one("pointerdown.hlTitleWind mousedown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind click.hlTitleWind", playTitleWind);
+    $(document).one("readyaudio.hlTitleWind", playTitleWind);
 })();
 [endscript]
 
@@ -200,8 +212,8 @@ baseLayer.css("background-color", "#000000");
 [glink name="title-subtitle" color="black" size="18" x="440" y="270" width="400" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
 [glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load"]
-[glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config"]
+[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load" cm="false"]
+[glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config" cm="false"]
 [glink name="title-choice" color="black" size="16" x="520" y="612" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
 (function normalizeTitleGlinkClasses() {
