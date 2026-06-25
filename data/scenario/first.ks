@@ -176,10 +176,24 @@ baseLayer.css("background-color", "#000000");
         window[key].stop();
         window[key].unload();
     }
+
+    var audioId = "hl-title-wind-audio";
+    $("#" + audioId).remove();
+    var titleAudio = document.createElement("audio");
+    titleAudio.id = audioId;
+    titleAudio.src = src;
+    titleAudio.loop = true;
+    titleAudio.autoplay = true;
+    titleAudio.preload = "auto";
+    titleAudio.volume = 0.68;
+    titleAudio.setAttribute("playsinline", "");
+    document.body.appendChild(titleAudio);
+    titleAudio.play().catch(function () {});
     window[key] = new Howl({
         src: [src],
         loop: true,
         preload: true,
+        html5: true,
         volume: 0.68
     });
 
@@ -188,11 +202,9 @@ baseLayer.css("background-color", "#000000");
         window[key].play();
     }
 
-    if (!window.Howler || Howler.ctx && Howler.ctx.state === "running") {
-        playTitleWind();
-    } else {
-        $(document).one("pointerdown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind", playTitleWind);
-    }
+    playTitleWind();
+    $(document).one("pointerdown.hlTitleWind mousedown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind click.hlTitleWind", playTitleWind);
+    $(document).one("readyaudio.hlTitleWind", playTitleWind);
 })();
 [endscript]
 
@@ -425,7 +437,7 @@ if (window.__hlTitleWind) {
 
 *title_load
 [showload]
-@jump target="*title_menu"
+[s]
 
 *title_config
 [iscript]
