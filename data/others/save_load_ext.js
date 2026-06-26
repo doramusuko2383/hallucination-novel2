@@ -223,6 +223,7 @@
             var currentText = parseInt(config.chSpeed || 30, 10);
             var currentAuto = parseInt(config.autoSpeed || 3000, 10);
             var unreadSkip = config.unReadTextSkip === "true";
+            var DEFAULT_CONFIG = { bgm: 60, se: 60, text: 42, auto: 5000, skip: true };
 
             $("#hl-config-overlay").remove();
             function playClick() {
@@ -233,6 +234,7 @@
                 currentBgm = volume;
                 config.defaultBgmVolume = String(volume);
                 kag.ftag.startTag("bgmopt", { volume: String(volume), next: "false" });
+                saveSystemConfig();
                 renderValues();
             }
 
@@ -240,6 +242,7 @@
                 currentSe = volume;
                 config.defaultSeVolume = String(volume);
                 kag.ftag.startTag("seopt", { volume: String(volume), next: "false" });
+                saveSystemConfig();
                 renderValues();
             }
 
@@ -283,6 +286,7 @@
                     '<div class="hl-config-row" data-kind="text"><span>TEXT SPEED</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
                     '<div class="hl-config-row" data-kind="auto"><span>AUTO SPEED</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
                     '<div class="hl-config-row" data-kind="skip"><span>UNREAD SKIP</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
+                    '<div class="hl-config-actions"><button type="button" class="hl-config-default">DEFAULT</button></div>' +
                 '</section>'
             );
 
@@ -291,15 +295,18 @@
                     '<style id="hl-config-overlay-style">' +
                     '#hl-config-overlay{position:absolute;inset:0;z-index:100000010;pointer-events:auto;font-family:GenMin,serif;color:rgba(238,244,248,.94)}' +
                     '#hl-config-overlay .hl-config-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78)}' +
-                    '#hl-config-overlay .hl-config-panel{position:absolute;left:260px;top:116px;width:900px;min-height:438px;box-sizing:border-box;padding:34px 48px;border:1px solid rgba(220,235,245,.22);border-radius:8px;background:linear-gradient(180deg,rgba(5,8,13,.98),rgba(0,0,0,.96));box-shadow:0 20px 60px rgba(0,0,0,.45)}' +
+                    '#hl-config-overlay .hl-config-panel{position:absolute;left:250px;top:96px;width:940px;min-height:520px;box-sizing:border-box;padding:36px 54px;border:1px solid rgba(220,235,245,.24);border-radius:8px;background:linear-gradient(180deg,rgba(5,8,13,.96),rgba(0,0,0,.92));box-shadow:0 24px 70px rgba(0,0,0,.55),0 0 30px rgba(120,160,190,.08)}' +
                     '#hl-config-overlay h1{margin:0 0 28px;font-size:24px;letter-spacing:.18em;font-weight:600}' +
-                    '#hl-config-overlay .hl-config-close{position:absolute;right:24px;top:20px;width:96px;height:32px;border:1px solid rgba(221,230,236,.42);background:transparent;color:#dde6ec;font-size:12px;letter-spacing:.12em;cursor:pointer}' +
-                    '#hl-config-overlay .hl-config-row{display:grid;grid-template-columns:150px 1fr 72px;align-items:center;gap:22px;margin:18px 0;letter-spacing:.12em}' +
+                    '#hl-config-overlay .hl-config-close{position:absolute;right:30px;top:24px;width:112px;height:34px;border:1px solid rgba(220,235,245,.25);border-radius:4px;background:rgba(5,10,16,.35);color:#dde6ec;font-size:12px;letter-spacing:.14em;cursor:pointer}' +
+                    '#hl-config-overlay .hl-config-row{display:grid;grid-template-columns:160px 500px 96px;align-items:center;gap:34px;margin:22px 0;letter-spacing:.12em}' +
                     '#hl-config-overlay .hl-config-row span{font-size:15px}' +
-                    '#hl-config-overlay .hl-config-options{display:flex;gap:8px;flex-wrap:wrap}' +
-                    '#hl-config-overlay .hl-config-option{min-width:42px;height:30px;border:1px solid rgba(221,230,236,.24);background:rgba(255,255,255,.04);color:#dde6ec;cursor:pointer;font-size:11px}' +
-                    '#hl-config-overlay .hl-config-option.is-active{border-color:rgba(248,250,255,.86);background:rgba(180,205,235,.2)}' +
-                    '#hl-config-overlay .hl-config-value{font-size:12px;text-align:right;font-weight:400}' +
+                    '#hl-config-overlay .hl-config-options{display:flex;gap:8px;flex-wrap:wrap;align-items:center}' +
+                    '#hl-config-overlay .hl-config-option{min-width:52px;height:34px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(220,235,245,.25);border-radius:4px;background:rgba(5,10,16,.35);color:#dde6ec;cursor:pointer;font-size:11px;line-height:1;text-align:center;letter-spacing:.08em}' +
+                    '#hl-config-overlay .hl-config-option.is-active{border-color:rgba(235,245,255,.75);background:rgba(210,230,240,.20);box-shadow:0 0 12px rgba(210,235,255,.25)}' +
+                    '#hl-config-overlay .hl-config-value{font-size:13px;text-align:left;font-weight:500;letter-spacing:.1em}' +
+                    '#hl-config-overlay .hl-config-actions{display:flex;justify-content:flex-end;margin:30px 92px 0 0}' +
+                    '#hl-config-overlay .hl-config-default{width:150px;height:36px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(220,235,245,.25);border-radius:4px;background:rgba(5,10,16,.35);color:#dde6ec;cursor:pointer;font-size:12px;letter-spacing:.16em}' +
+                    '#hl-config-overlay .hl-config-default:hover,#hl-config-overlay .hl-config-close:hover{border-color:rgba(235,245,255,.75);background:rgba(210,230,240,.20);box-shadow:0 0 12px rgba(210,235,255,.25)}' +
                     '</style>'
                 );
             }
@@ -334,11 +341,25 @@
                 overlay.find('[data-kind="skip"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + (unreadSkip ? 1 : 0) + '"]').addClass("is-active");
             }
 
+            function resetDefault() {
+                setBgm(DEFAULT_CONFIG.bgm);
+                setSe(DEFAULT_CONFIG.se);
+                setText(DEFAULT_CONFIG.text);
+                setAuto(DEFAULT_CONFIG.auto);
+                setUnreadSkip(DEFAULT_CONFIG.skip);
+                renderValues();
+            }
+
             addOptions("bgm", [0, 20, 40, 60, 80, 100], setBgm, function (value) { return value === 0 ? "MUTE" : String(value); });
             addOptions("se", [0, 20, 40, 60, 80, 100], setSe, function (value) { return value === 0 ? "MUTE" : String(value); });
-            addOptions("text", [100, 50, 30, 20, 10, 5], setText);
+            addOptions("text", [100, 70, 50, 42, 30, 20, 10], setText);
             addOptions("auto", [5000, 4000, 3000, 2000, 1000, 500], setAuto);
             addOptions("skip", [0, 1], function (value) { setUnreadSkip(value === 1); }, function (value) { return value === 1 ? "ON" : "OFF"; });
+            overlay.find(".hl-config-default").on("click", function (event) {
+                event.stopPropagation();
+                playClick();
+                resetDefault();
+            });
 
             overlay.on("click mousedown touchstart pointerdown pointerup", function (event) {
                 event.stopImmediatePropagation();
@@ -348,8 +369,10 @@
                 event.stopPropagation();
                 playClick();
                 overlay.remove();
-                if (typeof options.onClose === "function") {
-                    options.onClose();
+                var onClose = typeof options.onClose === "function" ? options.onClose : window.__hlConfigOverlayOnClose;
+                window.__hlConfigOverlayOnClose = null;
+                if (typeof onClose === "function") {
+                    onClose();
                     return;
                 }
                 if (kag.stat.visible_menu_button == 1) $(".button_menu").show();
