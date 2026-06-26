@@ -49,14 +49,6 @@
         });
     }
 
-    if (!preload.titleWindBgm) {
-        preload.titleWindBgm = new Howl({
-            src: [$.parseStorage("nature_wind.ogg", "bgm")],
-            volume: 0,
-            preload: true
-        });
-    }
-
     if (!preload.titleClickSe) {
         preload.titleClickSe = new Howl({
             src: [$.parseStorage("se/click.ogg", "sound")],
@@ -110,10 +102,49 @@
 })();
 [endscript]
 [wait time=500]
-@jump target="*title_menu"
+@jump target="*audio_start"
+
+*audio_start
+[cm]
+@freeimage layer=0 page=fore
+@layopt layer=message0 visible=false
+[hidemenubutton]
+[iscript]
+(function setupAudioStartGate() {
+    $(".button_menu").hide();
+    var baseLayer = TG.layer.getLayer("base", "fore");
+    baseLayer.css("background-image", "none");
+    baseLayer.css("background-color", "#000000");
+})();
+[endscript]
+[glink name="audio-start-button" color="black" size="18" x="440" y="326" width="400" height="44" text="CLICK / TAP TO START" target="*title_menu" clickse="se/click.ogg" exp="TYRANO.kag.readyAudio(); if(window.Howler && Howler.ctx && Howler.ctx.state === 'suspended'){ Howler.ctx.resume(); }"]
+[ptext layer="fix" fix="true" name="audio-start-note" text="音声を有効にして開始" x="440" y="382" width="400" align="center" size="12" color="0xb8c2c9"]
+[iscript]
+(function styleAudioStartGate() {
+    var button = $(".glink_button.audio-start-button").last();
+    button.css({
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "transparent",
+        backgroundImage: "none",
+        border: "1px solid rgba(238, 244, 248, 0.55)",
+        borderRadius: "0",
+        boxShadow: "0 0 18px rgba(160, 190, 230, 0.16)",
+        color: "rgba(248, 250, 255, 0.94)",
+        fontFamily: "GenMin, 'Times New Roman', serif",
+        fontWeight: "600",
+        letterSpacing: "0.28em",
+        textShadow: "0 0 8px rgba(255,255,255,0.28), 0 0 14px rgba(0,0,0,0.85)",
+        padding: "0"
+    });
+})();
+[endscript]
+[s]
 
 *title_menu
 [cm]
+[clearfix]
 @freeimage layer=0 page=fore
 @layopt layer=message0 visible=false
 [iscript]
@@ -125,37 +156,10 @@ baseLayer.css("background-color", "#000000");
 
 ; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
 [bg storage="title_rooftop.webp" time=0]
-; タイトル画面では環境音をグリッチSEより少し大きめにループ再生する。
-; [playbgm] は未操作時のブラウザ音声制限でクリック待ちになるため、
-; タイトル表示開始時に Howl で非同期再生して表示をブロックしない。
-
-[iscript]
-(function startTitleWindWithoutBlockingTitle() {
-    var key = "__hlTitleWind";
-    var src = $.parseStorage("nature_wind.ogg", "bgm");
-    if (window[key]) {
-        window[key].stop();
-        window[key].unload();
-    }
-    window[key] = new Howl({
-        src: [src],
-        loop: true,
-        preload: true,
-        volume: 0.68
-    });
-
-    function playTitleWind() {
-        if (!window[key] || window[key].playing()) return;
-        window[key].play();
-    }
-
-    if (!window.Howler || Howler.ctx && Howler.ctx.state === "running") {
-        playTitleWind();
-    } else {
-        $(document).one("pointerdown.hlTitleWind keydown.hlTitleWind touchstart.hlTitleWind", playTitleWind);
-    }
-})();
-[endscript]
+; タイトル画面の環境音はTyranoScriptのBGM管理に任せる。
+; Howlerを直接鳴らすとLOAD/CLOSEやタイトル復帰後に残留しやすいため、
+; [stopbgm] / [fadeoutbgm] で制御できる通常BGMとして再生する。
+[playbgm storage="nature_wind.ogg" loop=true volume=68 fadein=true time=300]
 
 [glink name="title-logo" color="black" size="76" x="330" y="168" width="620" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
 [glink name="title-subtitle" color="black" size="18" x="440" y="270" width="400" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
@@ -369,28 +373,22 @@ baseLayer.css("background-color", "#000000");
 [s]
 
 *title_continue
-[iscript]
-if (window.__hlTitleWind) {
-    window.__hlTitleWind.fade(window.__hlTitleWind.volume(), 0, 500);
-    setTimeout(function () {
-        if (window.__hlTitleWind) {
-            window.__hlTitleWind.stop();
-            window.__hlTitleWind.unload();
-            window.__hlTitleWind = null;
-        }
-    }, 520);
-}
-[endscript]
+[fadeoutbgm time=300]
 [continue_latest]
 @jump target="*title_menu"
 
 *title_load
+[cm]
+[clearfix]
+[free_layermode time=0 wait=true]
+[bg storage="title_rooftop.webp" time=0]
+[layermode color="0x05080d" opacity="165" time="100" wait="true"]
 [showload]
+[free_layermode time="100" wait="true"]
 @jump target="*title_menu"
 
 *title_config
-[sleepgame storage="config.ks"]
-@jump target="*title_menu"
+@jump storage="title_config.ks" target="*title_config"
 
 *title_quit
 [iscript]
@@ -406,17 +404,6 @@ window.close();
 [playse storage=se/openingwind.ogg volume=75]
 [iscript]
 (function startNewGameOpeningFade() {
-    if (window.__hlTitleWind) {
-        window.__hlTitleWind.fade(window.__hlTitleWind.volume(), 0, 500);
-        setTimeout(function () {
-            if (window.__hlTitleWind) {
-                window.__hlTitleWind.stop();
-                window.__hlTitleWind.unload();
-                window.__hlTitleWind = null;
-            }
-        }, 520);
-    }
-
     var overlayRoot = $("#tyrano_base");
     if (!overlayRoot.length) overlayRoot = TG.layer.getLayer("base", "fore");
     var overlay = $("<div></div>").attr("id", "new-game-opening-fade");
@@ -483,7 +470,7 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 [button fix="true" name="system_backlog quiet_system_button quiet_log" role="backlog" graphic="" width="48" height="24" x="868" y="520"]
 [button fix="true" name="system_auto quiet_system_button quiet_auto" role="auto" graphic="" width="54" height="24" x="922" y="520"]
 [button fix="true" name="system_skip quiet_system_button quiet_skip" role="skip" graphic="" width="54" height="24" x="982" y="520"]
-[button fix="true" name="system_config quiet_system_button quiet_config" role="sleepgame" storage="config.ks" graphic="" width="72" height="24" x="1042" y="520"]
+[button fix="true" name="system_config quiet_system_button quiet_config" role="menu" graphic="" width="72" height="24" x="1042" y="520"]
 
 [configdelay speed="42"]
 

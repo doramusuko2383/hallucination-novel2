@@ -206,6 +206,185 @@
         clearTransientVisuals();
     }
 
+
+
+
+
+
+
+    function installConfigOverlay() {
+        window.__hlOpenConfigOverlay = function (options) {
+            options = options || {};
+            var kag = TYRANO.kag;
+            var config = kag.config;
+            var root = $("#tyrano_base");
+            var currentBgm = parseInt(config.defaultBgmVolume || 100, 10);
+            var currentSe = parseInt(config.defaultSeVolume || 100, 10);
+            var currentText = parseInt(config.chSpeed || 30, 10);
+            var currentAuto = parseInt(config.autoSpeed || 3000, 10);
+            var unreadSkip = config.unReadTextSkip === "true";
+            var DEFAULT_CONFIG = { bgm: 60, se: 60, text: 42, auto: 5000, skip: true };
+
+            $("#hl-config-overlay").remove();
+            function playClick() {
+                if (window.__hlPlayClickSe) window.__hlPlayClickSe();
+            }
+
+            function setBgm(volume) {
+                currentBgm = volume;
+                config.defaultBgmVolume = String(volume);
+                kag.ftag.startTag("bgmopt", { volume: String(volume), next: "false" });
+                saveSystemConfig();
+                renderValues();
+            }
+
+            function setSe(volume) {
+                currentSe = volume;
+                config.defaultSeVolume = String(volume);
+                kag.ftag.startTag("seopt", { volume: String(volume), next: "false" });
+                saveSystemConfig();
+                renderValues();
+            }
+
+            function saveSystemConfig() {
+                if (kag.saveSystemVariable) kag.saveSystemVariable();
+            }
+
+            function setText(speed) {
+                currentText = speed;
+                config.chSpeed = String(speed);
+                kag.stat.ch_speed = "";
+                kag.variable.sf._config_ch_speed = speed;
+                saveSystemConfig();
+                renderValues();
+            }
+
+            function setAuto(speed) {
+                currentAuto = speed;
+                config.autoSpeed = String(speed);
+                kag.variable.sf._system_config_auto_speed = speed;
+                saveSystemConfig();
+                renderValues();
+            }
+
+            function setUnreadSkip(enabled) {
+                unreadSkip = enabled;
+                config.unReadTextSkip = enabled ? "true" : "false";
+                kag.variable.sf._system_config_unread_text_skip = enabled ? "true" : "false";
+                saveSystemConfig();
+                renderValues();
+            }
+
+            var overlay = $('<div id="hl-config-overlay" class="hl-config-overlay"></div>');
+            overlay.html(
+                '<div class="hl-config-backdrop"></div>' +
+                '<section class="hl-config-panel" aria-label="CONFIG">' +
+                    '<button type="button" class="hl-config-close">× CLOSE</button>' +
+                    '<h1>CONFIG</h1>' +
+                    '<div class="hl-config-row" data-kind="bgm"><span>BGM VOLUME</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
+                    '<div class="hl-config-row" data-kind="se"><span>SE VOLUME</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
+                    '<div class="hl-config-row" data-kind="text"><span>TEXT SPEED</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
+                    '<div class="hl-config-row" data-kind="auto"><span>AUTO SPEED</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
+                    '<div class="hl-config-row" data-kind="skip"><span>UNREAD SKIP</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
+                    '<div class="hl-config-actions"><button type="button" class="hl-config-default">DEFAULT</button></div>' +
+                '</section>'
+            );
+
+            if (!$("#hl-config-overlay-style").length) {
+                $("head").append(
+                    '<style id="hl-config-overlay-style">' +
+                    '#hl-config-overlay{position:absolute;inset:0;z-index:100000010;pointer-events:auto;font-family:GenMin,serif;color:rgba(238,244,248,.94)}' +
+                    '#hl-config-overlay .hl-config-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78)}' +
+                    '#hl-config-overlay .hl-config-panel{position:absolute;left:250px;top:96px;width:940px;min-height:520px;box-sizing:border-box;padding:36px 54px;border:1px solid rgba(220,235,245,.24);border-radius:8px;background:linear-gradient(180deg,rgba(5,8,13,.96),rgba(0,0,0,.92));box-shadow:0 24px 70px rgba(0,0,0,.55),0 0 30px rgba(120,160,190,.08)}' +
+                    '#hl-config-overlay h1{margin:0 0 28px;font-size:24px;letter-spacing:.18em;font-weight:600}' +
+                    '#hl-config-overlay .hl-config-close{position:absolute;right:30px;top:24px;width:112px;height:34px;border:1px solid rgba(220,235,245,.25);border-radius:4px;background:rgba(5,10,16,.35);color:#dde6ec;font-size:12px;letter-spacing:.14em;cursor:pointer}' +
+                    '#hl-config-overlay .hl-config-row{display:grid;grid-template-columns:160px 500px 96px;align-items:center;gap:34px;margin:22px 0;letter-spacing:.12em}' +
+                    '#hl-config-overlay .hl-config-row span{font-size:15px}' +
+                    '#hl-config-overlay .hl-config-options{display:flex;gap:8px;flex-wrap:wrap;align-items:center}' +
+                    '#hl-config-overlay .hl-config-option{min-width:52px;height:34px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(220,235,245,.25);border-radius:4px;background:rgba(5,10,16,.35);color:#dde6ec;cursor:pointer;font-size:11px;line-height:1;text-align:center;letter-spacing:.08em}' +
+                    '#hl-config-overlay .hl-config-option.is-active{border-color:rgba(235,245,255,.75);background:rgba(210,230,240,.20);box-shadow:0 0 12px rgba(210,235,255,.25)}' +
+                    '#hl-config-overlay .hl-config-value{font-size:13px;text-align:left;font-weight:500;letter-spacing:.1em}' +
+                    '#hl-config-overlay .hl-config-actions{display:flex;justify-content:flex-end;margin:30px 92px 0 0}' +
+                    '#hl-config-overlay .hl-config-default{width:150px;height:36px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(220,235,245,.25);border-radius:4px;background:rgba(5,10,16,.35);color:#dde6ec;cursor:pointer;font-size:12px;letter-spacing:.16em}' +
+                    '#hl-config-overlay .hl-config-default:hover,#hl-config-overlay .hl-config-close:hover{border-color:rgba(235,245,255,.75);background:rgba(210,230,240,.20);box-shadow:0 0 12px rgba(210,235,255,.25)}' +
+                    '</style>'
+                );
+            }
+
+            function addOptions(kind, values, setter, formatter) {
+                var row = overlay.find('[data-kind="' + kind + '"]');
+                var options = row.find(".hl-config-options");
+                options.empty();
+                values.forEach(function (value) {
+                    var button = $('<button type="button" class="hl-config-option"></button>');
+                    button.text(formatter ? formatter(value) : String(value));
+                    button.attr("data-value", value);
+                    button.on("click", function (event) {
+                        event.stopPropagation();
+                        playClick();
+                        setter(value);
+                    });
+                    options.append(button);
+                });
+            }
+
+            function renderValues() {
+                overlay.find('[data-kind="bgm"] .hl-config-value').text(currentBgm + "%");
+                overlay.find('[data-kind="se"] .hl-config-value').text(currentSe + "%");
+                overlay.find('[data-kind="text"] .hl-config-value').text(currentText);
+                overlay.find('[data-kind="auto"] .hl-config-value').text(currentAuto);
+                overlay.find('[data-kind="skip"] .hl-config-value').text(unreadSkip ? "ON" : "OFF");
+                overlay.find('[data-kind="bgm"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentBgm + '"]').addClass("is-active");
+                overlay.find('[data-kind="se"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentSe + '"]').addClass("is-active");
+                overlay.find('[data-kind="text"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentText + '"]').addClass("is-active");
+                overlay.find('[data-kind="auto"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentAuto + '"]').addClass("is-active");
+                overlay.find('[data-kind="skip"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + (unreadSkip ? 1 : 0) + '"]').addClass("is-active");
+            }
+
+            function resetDefault() {
+                setBgm(DEFAULT_CONFIG.bgm);
+                setSe(DEFAULT_CONFIG.se);
+                setText(DEFAULT_CONFIG.text);
+                setAuto(DEFAULT_CONFIG.auto);
+                setUnreadSkip(DEFAULT_CONFIG.skip);
+                renderValues();
+            }
+
+            addOptions("bgm", [0, 20, 40, 60, 80, 100], setBgm, function (value) { return value === 0 ? "MUTE" : String(value); });
+            addOptions("se", [0, 20, 40, 60, 80, 100], setSe, function (value) { return value === 0 ? "MUTE" : String(value); });
+            addOptions("text", [100, 70, 50, 42, 30, 20, 10], setText);
+            addOptions("auto", [5000, 4000, 3000, 2000, 1000, 500], setAuto);
+            addOptions("skip", [0, 1], function (value) { setUnreadSkip(value === 1); }, function (value) { return value === 1 ? "ON" : "OFF"; });
+            overlay.find(".hl-config-default").on("click", function (event) {
+                event.stopPropagation();
+                playClick();
+                resetDefault();
+            });
+
+            overlay.on("click mousedown touchstart pointerdown pointerup", function (event) {
+                event.stopImmediatePropagation();
+                event.stopPropagation();
+            });
+            overlay.find(".hl-config-close").on("click", function (event) {
+                event.stopPropagation();
+                playClick();
+                overlay.remove();
+                var onClose = typeof options.onClose === "function" ? options.onClose : window.__hlConfigOverlayOnClose;
+                window.__hlConfigOverlayOnClose = null;
+                if (typeof onClose === "function") {
+                    onClose();
+                    return;
+                }
+                if (kag.stat.visible_menu_button == 1) $(".button_menu").show();
+            });
+
+            root.append(overlay);
+            renderValues();
+        };
+    }
+
+
+
     function install() {
         if (!window.TYRANO || !TYRANO.kag || !TYRANO.kag.menu) {
             setTimeout(install, 50);
@@ -213,7 +392,6 @@
         }
 
         installClickSoundEvents();
-
         var menu = TYRANO.kag.menu;
         if (menu.__hl_save_load_ext_installed) return;
         menu.__hl_save_load_ext_installed = true;
@@ -224,7 +402,6 @@
         menu.__hl_original_snapSave = menu.snapSave;
         menu.__hl_original_loadGame = menu.loadGame;
         menu.__hl_original_loadGameData = menu.loadGameData;
-        TYRANO.kag.__hl_original_backTitle = TYRANO.kag.backTitle;
 
         menu.getSaveData = function () {
             return normalizeSaveData(this);
@@ -271,10 +448,6 @@
             return this.__hl_original_loadGameData.call(this, data, options);
         };
 
-        TYRANO.kag.backTitle = function () {
-            resetRuntimeBeforeSceneSwitch();
-            return TYRANO.kag.__hl_original_backTitle.apply(this, arguments);
-        };
 
         menu.loadGame = function (num) {
             if (String(num).indexOf("auto:") === 0) {
@@ -377,6 +550,7 @@
             });
         };
 
+        installConfigOverlay();
         TYRANO.kag.config.configSaveSlotNum = MANUAL_SLOT_COUNT;
 
         TYRANO.kag.tag.scene_title = {
