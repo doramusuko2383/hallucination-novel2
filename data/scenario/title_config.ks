@@ -1,5 +1,4 @@
 ; タイトル画面専用CONFIG。
-; タイトルメニューへ重ねず、専用画面上で本編CONFIGと同じUIを表示する。
 
 *title_config
 [cm]
@@ -14,6 +13,18 @@
     };
     if (window.__hlOpenConfigOverlay) window.__hlOpenConfigOverlay();
     else TYRANO.kag.ftag.startTag("jump", { storage: "title_config.ks", target: "*title_config_close" });
+})();
+[endscript]
+(function openTitleConfigScreen() {
+    if (!window.__hlOpenConfigOverlay) {
+        TYRANO.kag.ftag.startTag("jump", { storage: "title_config.ks", target: "*title_config_close" });
+        return;
+    }
+    window.__hlOpenConfigOverlay({
+        onClose: function () {
+            TYRANO.kag.ftag.startTag("jump", { storage: "title_config.ks", target: "*title_config_close" });
+        }
+    });
 })();
 [endscript]
 [s]
