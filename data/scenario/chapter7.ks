@@ -89,6 +89,7 @@
 「菊池さん！」[p]
 ;[auto_chara name="恵" face="private_help"]
 「永山くん！　助けて！」[p]
+
 恵の部屋からだ。[p]
 
 [bg storage="ch7_battle.webp" time=800]
@@ -104,11 +105,13 @@
 [bg storage="bg_megumi_room_night_dark.webp" time=500]
 [auto_chara name="拓海" face="private2_anxiety"]
 「菊池さん、いったんそれを下ろそうか」[p]
+
 拓海は高田を無視して恵に駆け寄り、スプレーを引き受けた。[p]
 「何があったのか教えて」[p]
 
 [auto_chara name="恵" face="private_cry"]
 「えっと、急に、襲われそうになって……それで」[p]
+
 恵はかろうじて声を出した。[p]
 [auto_chara name="拓海" face="private2_anxiety"]
 「怪我はない？　何かされた？」[p]
@@ -119,10 +122,12 @@
 [auto_chara name="拓海" face="private2_angry"]
 拓海は激しい怒りが湧いてきた。[p]
 「どういうことだ」[p]
+
 高田に詰め寄る。[p]
 
 [auto_chara name="高田" face="anxious"]
 「ちょっと待て、俺は何もしていない」[p]
+
 高田は手を前に突き出して否定した。[p]
 [auto_chara name="拓海" face="private2_angry"]
 「聞いてたぞ」[p]
@@ -134,17 +139,21 @@
 
 [auto_chara name="高田" face="badmood"]
 「何の話だそれは」[p]
+
 高田はシラを切り通すつもりだ。[p]
 
 [playse storage=se/writer.ogg volume=40]
 [auto_chara name="拓海" face="private2_angry"]
 「響子さんだけじゃなく、菊池さんにも……」[p]
+
 拓海はカバンからハサミを出して高田に向けた。[p]
 
 [wait time=800]
 ;後ずさる音
 [auto_chara name="高田" face="pale"]
-「なっ……やめろ！」高田は叫んで後ずさった。[p]
+「なっ……やめろ！」[p]
+
+高田は叫んで後ずさった。[p]
 
 [auto_chara name="拓海" face="private2_angry"]
 「刺したりはしない。」[p]
@@ -155,6 +164,7 @@
 
 [auto_chara name="恵" face="private_scream"]
 「永山君……やめてっ」[p]
+
 恵の悲痛な叫びが部屋にじんわり響いた。[p]
 
 [wait time=1000]
@@ -167,12 +177,15 @@
 「おまえっ！」[p]
 [auto_chara name="拓海" face="private2_normal"]
 「おっと、動くな」[p]
+
 高田が動こうとしたので、スプレーを顔に向ける。[p]
 「これは、クマ除けのスプレーだ。」[p]
 「人に使うものじゃないから、どうなるか保証できない」[p]
 
 [auto_chara name="高田" face="anxious"]
-「くっ……」高田は動くのを諦めた。[p]
+「くっ……」[p]
+
+高田は動くのを諦めた。[p]
 「どうして欲しいんだ」[p]
 
 [auto_chara name="拓海" face="private2_normal"]
@@ -181,7 +194,9 @@
 「また響子さんの仕事に一切影響が出ない様にしろ。[r]いいな」[p]
 
 [auto_chara name="高田" face="anxious"]
-「わかった。約束しよう」高田はうなだれた。[p]
+「わかった。約束しよう」[p]
+
+高田はうなだれた。[p]
 
 恵の方をちらっと見ると、まだ恐怖に脅えた顔をしている。[p]
 
@@ -198,7 +213,8 @@
 [bg storage="black.png" time=400]
 [wait time=1200]
 [auto_chara name="拓海" face="private2_normal"]
-「まったく、最後まで迷惑かけやがって」[r]
+「まったく、最後まで迷惑かけやがって」[p]
+
 拓海は雑巾を固く絞りながら言った。[p]
 
 [playse storage=se/dust_cloth.ogg volume=50]
@@ -218,7 +234,9 @@
 その高田は、逃げるように帰っていった。[p]
 
 [auto_chara name="恵" face="private_anxiety"]
-「本当にこれで良かったのかな」恵がポツリと漏らす。[p]
+「本当にこれで良かったのかな」[p]
+
+恵がポツリと漏らす。[p]
 
 [auto_chara name="拓海" face="private2_normal"]
 「ああ……いいんだよこれで。[r]
@@ -240,14 +258,18 @@
 [auto_chara name="恵" face="private_anxiety"]
 「そっか……」[p]
 [auto_chara name="拓海" face="private2_normal"]
-「というか」拓海は続けた。[p]
+「というか」[p]
+
+拓海は続けた。[p]
 「綾香の時みたいに、精神的に追い詰めるようなことはしてない」[p]
 [auto_chara name="恵" face="private_question"]
 「そうなの？」[p]
 [auto_chara name="拓海" face="private2_smile"]
 「うん。今回は直接的に……物理的に攻撃するイメージを送っただけ」[p]
 [auto_chara name="恵" face="private_question"]
-「物理的に？」恵はオウム返しする。[p]
+「物理的に？」[p]
+
+恵はオウム返しする。[p]
 [auto_chara name="拓海" face="private2_normal"]
 「あー。でもまあ。精神的にも来るかなあ」[p]
 [auto_chara name="恵" face="private_question"]
@@ -257,7 +279,9 @@
 「拓海は言いながら、チョキで挟むジェスチャーをした。[p]
 
 [auto_chara name="恵" face="private_confuse"]
-「うわあ」[p]恵は眉をひそめた。[p]
+「うわあ」[p]
+
+恵は眉をひそめた。[p]
 [auto_chara name="拓海" face="private2_angry"]
 「あいつは菊池さんに酷いことをした」[p]
 [auto_chara name="恵" face="private_anxiety"]
@@ -267,20 +291,28 @@
 あのときは冷静じゃなかったのかもしれない」[p]
 [auto_chara name="恵" face="private_angry"]
 「もう、本当に刺しちゃうかと思って焦ったんだから」[p]
+
 恵が非難する。[p]
 [auto_chara name="拓海" face="private2_normal"]
-「それは大丈夫」拓海は片手を上げる。[p]
+「それは大丈夫」[p]
+
+拓海は片手を上げる。[p]
 「あれ演技だよ。直接対峙することもあるだろうと思って、シミュレーションしてたから」[p]
 [auto_chara name="恵" face="private_question"]
-「え？　ああなるって予想してたの？」恵が目を丸くする。[p]
+「え？　ああなるって予想してたの？」[p]
+
+恵が目を丸くする。[p]
 [auto_chara name="拓海" face="private2_normal"]
 拓海は頷く。[p]
 [auto_chara name="拓海" face="private2_smile"]
 「確率はかなり低いと思ってたけど。一応脅しのセリフとかも考えてた」[p]
+
 拓海が悪い顔をする。[p]
 「想定通りにいくもんで驚いたよ」[p]
 [auto_chara name="恵" face="private_surprise"]
-「それは……驚いたな」恵は言葉を失う。[p]
+「それは……驚いたな」[p]
+
+恵は言葉を失う。[p]
 [auto_chara name="拓海" face="private2_normal"]
 「あいつは響子さんに固執してたから。[p]
 菊池さんにも興味を持つんではないかと思っていたよ」[p]
@@ -305,21 +337,28 @@
 「いいよ、そんなこと。結局色々上手くいったし」[p]
 [auto_chara name="拓海" face="private2_sorry"]
 「まあ……ね。一度失敗してるから上手くいくかわからなかったけど」[p]
+
 拓海は駅で高田の背中に触れた時のことを思い出した。[p]
 [auto_chara name="拓海" face="private_surprise"]
-「あれ？」拓海が急に変な声を上げる。[p]
+「あれ？」[p]
+
+拓海が急に変な声を上げる。[p]
 [auto_chara name="恵" face="private_question"]
 「どうかした？」[p]
 [auto_chara name="拓海" face="private2_smile"]
 「そういえば……力、使えたなと思って。ほら　『他人事』じゃなかった」[p]
 [auto_chara name="恵" face="private_laugh"]
-「それ……まだ気にしてたんだ」恵が呆れて笑う。[p]
+「それ……まだ気にしてたんだ」[p]
+
+恵が呆れて笑う。[p]
 [auto_chara name="拓海" face="private2_normal"]
 「今は、他人だなんて思ってないよ」[p]
+
 拓海が真剣な顔をする。[p]
 
 [auto_chara name="恵" face="private_happy"]
 「うん、分かってるよ……守ってくれてありがとう」[p]
+
 恵が少し恥ずかしそうに言う。[p]
 [auto_chara name="拓海" face="private2_smile"]
 何となく照れ臭くて拓海は間を埋めるように思ったことを口に出した。[p]
@@ -337,7 +376,9 @@
 [auto_chara name="拓海" face="private2_smile"]
 「え、菊池さん料理出来たんだ」[p]
 [auto_chara name="恵" face="private_normal"]
-「実は……そうなんです」恵は得意気だ。[p]
+「実は……そうなんです」[p]
+
+恵は得意気だ。[p]
 「食べてく？」[p]
 [auto_chara name="拓海" face="private2_smile"]
 「そうだね。お言葉に甘えて」[p]
@@ -432,7 +473,9 @@
 その後、校長の式辞が始まる。[p]
 
 拓海は話の内容をなんとなく頭の片隅で聞き流しつつ、脳内AIに要約させた。[p]
-「仲間と一緒に学んだ3年間を誇りに思いましょう」……まあ、そんなことを言っていた。[p]
+「仲間と一緒に学んだ3年間を誇りに思いましょう」[p]
+
+……まあ、そんなことを言っていた。[p]
 
 周りには涙ぐむ生徒の姿もあったが、拓海はどこか冷静にそれを眺めていた。[p]
 
@@ -456,6 +499,7 @@
 
 教室では、別れを惜しんで、思い出話があちらこちらから聞こえてくる。[p]
 「卒業おめでとう」「元気でな」[p]
+
 なんて恥ずかしいセリフをお互い言い合ったりしている。[p]
 
 拓海もそんな空気に包まれながら、席を立とうとすると、ふと背後から恵の声がした。[p]
@@ -469,7 +513,9 @@
 [auto_chara name="恵" face="surprise"]
 恵は一瞬驚いた表情を見せるが、すぐに小さく微笑んで、[p]
 [auto_chara name="恵" face="normal"]
-「じゃあ、私も一緒に行ってもいい？」と静かに尋ねた。[p]
+「じゃあ、私も一緒に行ってもいい？」[p]
+
+と静かに尋ねた。[p]
 [chara_hide_all]
 
 [fadeoutbgm time=3000]
@@ -484,26 +530,33 @@
 
 [auto_chara name="龍也" face="normal"]
 
-「よう。来たか」龍也が手を上げて挨拶する。[p]
+「よう。来たか」[p]
+
+龍也が手を上げて挨拶する。[p]
 「……なんだお前、彼女も連れてきたのか？」[p]
 
 [auto_chara name="恵" face="normal"]
 「ごめんね、龍也君」[p]
+
 恵が微笑んで応える。[p]
 「邪魔しないようにするから」[p]
 
 [auto_chara name="拓海" face="level3_shysmile"]
 「彼女……っていうか、なんというか」[p]
+
 拓海は少し照れたように視線を逸らす。[p]
 好きだとか、付き合っているとか、一度も言葉にしたことが無かった。[p]
 [auto_chara name="龍也" face="smile"]
 「あれ、お前らって付き合ってるわけじゃなかったの？」[p]
+
 龍也が不思議そうに尋ねると、恵は隣で吹き出している。[p]
 [auto_chara name="恵" face="laugh"]
 「うーん、どうなんだろうね」[p]
+
 恵が言いながら、少し楽しそうに笑う。[p]
 [auto_chara name="龍也" face="smile"]
 「なんだよそれ」[p]
+
 龍也は少し呆れたように肩をすくめたが、どこかホッとした表情を浮かべる。[p]
 そして、真剣な顔に戻ると、ゆっくりと言葉を紡いだ。[p]
 [auto_chara name="龍也" face="normal"]
@@ -512,6 +565,7 @@
 
 [auto_chara name="拓海" face="level3_question"]
 「ケジメ……？」[p]
+
 拓海が不思議そうに聞き返すと、龍也は視線を落とし、深く頭を下げた。[p]
 [auto_chara name="龍也" face="apologize"]
 [wait time=1000]
@@ -528,6 +582,7 @@
 「なんだ、そんなこと。いいよ、もう気にしてないから」[p]
 [auto_chara name="龍也" face="smile"]
 「ありがとう……お前、本当に雰囲気変わったよな」[p]
+
 龍也が拓海をじっと見つめ、ぽつりと言う。[p]
 [auto_chara name="拓海" face="level3_smile"]
 「そうだね。……一回、死んだからかな」[p]
@@ -536,37 +591,49 @@
 「お前がそんな冗談を言えるなんてな」[p]
 [auto_chara name="拓海" face="level3_smile2"]
 「謝ってくれて、嬉しいよ」[p]
+
 拓海は素直な気持ちでそう告げた。[p]
 [auto_chara name="龍也" face="smile"]
-「そうか」龍也も少し照れくさそうに笑みを浮かべた。[p]
+「そうか」[p]
+
+龍也も少し照れくさそうに笑みを浮かべた。[p]
 [auto_chara name="拓海" face="level3_smile"]
 ふと、拓海の口から自然と「卒業おめでとう」という言葉がこぼれた。[p]
 自分でも驚いたが、それが本心だと思えた。[p]
 [auto_chara name="龍也" face="smile"]
 「おお、ありがとうな。お前も、卒業おめでとう」[p]
+
 龍也もぎこちない笑顔を返し、少し躊躇した後に「これからよろしくな」と、手を差し出してきた。[p]
 [chara_hide_all]
 驚いたことに、龍也も同じ大学に進学することになっていたのだ。[p]
 また同級生だ。[p]
 [bg storage="ch7_shakehands.webp" time=500]
 「うん、よろしく」[p]
+
 拓海も手を差し出し、二人の手が固く握られた。[p]
 あのとき、出来なかった握手。[p]
 今度はしっかりと、彼らの間にあったわだかまりが消え去っていくようだった。[p]
 「じゃあ……お前もケジメつけないとな」[p]
+
 龍也が小声で拓海に耳打ちした。[p]
 恵に聞こえないように配慮しているのが分かる。[p]
 [bg storage="bg_rooftop_day2.webp" time=900]
 [auto_chara name="拓海" face="level3_question"]
-「何を？」拓海が思わず問い返す。[p]
+「何を？」[p]
+
+拓海が思わず問い返す。[p]
 [auto_chara name="龍也" face="smile"]
-「お前らの関係性だよ」龍也はニヤリと笑った。[p]
+「お前らの関係性だよ」[p]
+
+龍也はニヤリと笑った。[p]
 [auto_chara name="拓海" face="level3_wonder"]
 「ええ！」[p]
+
 拓海は思わず驚き、恵の方をチラリと見た。[p]
 何も知らない様子の恵は不思議そうにこちらを見返してくる。[p]
 [auto_chara name="龍也" face="smile"]
 「じゃあ、またな。大学で会おうぜ」[p]
+
 龍也はそう言い残し、手を軽く振って去っていった。[p]
 その背中がだんだんと遠ざかるのを見つめながら、拓海はなんとなく、彼との新しい関係が始まるような予感を抱いた。[p]
 
@@ -580,34 +647,41 @@
 
 [auto_chara name="拓海" face="level3_smile"]
 「とは言っても、まだ全然実感が湧かないな」[p]
+
 拓海は笑いながら呟く。[p]
 
 [auto_chara name="恵" face="normal"]
 「そうね……もう、この制服を着ることもないんだなって思うと、不思議な感じ」[p]
+
 恵は擦れて少しくたびれたブレザーの袖を眺めながら、懐かしそうに微笑んだ。[p]
 [auto_chara name="拓海" face="level3_smile2"]
 「そうだね。もう、あのクラスで一緒に授業を受けることもなくなる」[p]
 [auto_chara name="恵" face="happy"]
 「うん……そう考えると少し寂しいかもね」[p]
+
 恵はふと目を伏せ、しみじみと三年間の出来事に思いを馳せるようだった。[p]
 [chara_hide_all]
 [wait time=2000]
 二人とも、何度も行き交った校舎や教室、そしてクラスメイトたちとの思い出が頭に浮かび、しばらく黙っていた。[p]
 [auto_chara name="恵" face="normal"]
 「あ、そういえば……龍也くんも同じ大学に行くんだね」[p]
+
 恵が思い出したように話題を変える。[p]
 [auto_chara name="拓海" face="level3_smile"]
 「そうなんだよ。学部は違うけど、もしかしたら選択科目で同じ講義を受けることがあるかもね」[p]
 [auto_chara name="恵" face="laugh"]
 「へえ、楽しそう。そういうの、ちょっと羨ましいかも」[p]
+
 恵が微笑んだ。[p]
 [auto_chara name="拓海" face="level3_smile"]
 「恵も羨ましいよ。J大学なんて、本当に頑張ったんだなって思うよ」[p]
 [auto_chara name="恵" face="normal"]
 「ありがとう。必死に勉強した甲斐があったよ」[p]
+
 恵は少し照れくさそうに笑みを浮かべた。[p]
 [auto_chara name="拓海" face="level3_smile"]
 「しかも法学部なんてさ」[p]
+
 拓海は感心したように続ける。[p]
 
 恵が法学部を目指すと話し始めたのは、高田の事件が一段落してからのことだった。[p]
@@ -620,6 +694,7 @@
 「やっぱり、発展途上国における貧困問題の根本的な解決には教育の水準をあげるのが必要不可欠であり……」[p]
 [auto_chara name="恵" face="laugh"]
 「はいはい……いいからそういうのは。本当は？」[p]
+
 恵に軽く流されてしまった。[p]
 [auto_chara name="拓海" face="level3_normal"]
 「気付いてあげたい。と思ったんだよね」[p]
@@ -630,15 +705,20 @@
 そういう子たちに気付いて、少しでも力になれる先生になれたらなって」[p]
 [auto_chara name="恵" face="happy"]
 「そっか……拓海なら、本当にいい先生になれると思う」[p]
+
 恵は優しい笑顔を浮かべ、しっかりと彼を見つめて言った。[p]
 [auto_chara name="拓海" face="level3_smile2"]
 「ありがとう。なんか、そう言ってもらえると自信が出てくるよ」[p]
+
 拓海も自然と笑顔がこぼれ、恵に感謝の気持ちを込めた視線を送った。[p]
 
 [auto_chara name="恵" face="normal"]
-「ところで……今日、龍也くんに謝ってもらえたね」恵が静かに切り出した。[p]
+「ところで……今日、龍也くんに謝ってもらえたね」[p]
+
+恵が静かに切り出した。[p]
 [auto_chara name="拓海" face="level3_smile"]
 「うん。高校生活の最後に、ケジメをつけるってさ」[p]
+
 拓海は、ふとあの時の龍也の真剣な表情を思い返し、少し微笑んだ。[p]
 [auto_chara name="恵" face="normal"]
 「スッキリ終われて、本当に良かったね」[p]
@@ -651,34 +731,44 @@
 「あれ……何かいま急に卒業の実感湧いてきた」[p]
 [auto_chara name="恵" face="laugh"]
 「何それ、急に湧いてくるものなの？」[p]
+
 恵がくすっと笑うと、その笑い声が人も少なくなった店内に心地よく響いた。[p]
 しばらくして、恵が少し思わせぶりに尋ねた。[p]
 [auto_chara name="恵" face="tease"]
 「ねえ、最後に龍也くんと二人で何か話してなかった？」[p]
 [auto_chara name="拓海" face="level3_shysmile"]
-「ああ……聞こえてた？」拓海が少し驚いて尋ねる。[p]
+「ああ……聞こえてた？」[p]
+
+拓海が少し驚いて尋ねる。[p]
 [auto_chara name="恵" face="tease"]
 「いや、ケジメがどうとか言ってたような気がしたんだけど」[p]
+
 恵がいたずらっぽい顔で見つめる。[p]
 [auto_chara name="拓海" face="level3_smile"]
 （聞こえてるじゃないか）と拓海は心の中で苦笑するが、やがて少し照れくさそうに口を開いた。[p]
 「あはは……お前もケジメつけろって言われたんだよ」[p]
 
 [auto_chara name="恵" face="laugh"]
-「何それ、どういう意味？教えてよ」恵は目を輝かせ、ますます興味津々だ。[p]
+「何それ、どういう意味？教えてよ」[p]
+
+恵は目を輝かせ、ますます興味津々だ。[p]
 [auto_chara name="拓海" face="level3_shysmile"]
 「ちょっと……ファミレスでは恥ずかしいかな。人も見てるし」[p]
+
 拓海がモゴモゴと言葉を濁すと、恵は冗談めかして拗ねた顔をする。[p]
 
 [auto_chara name="恵" face="tease"]
 「なんだ、そんなことじゃ私の卒業の実感、まだ湧いてこないわね」[p]
 [auto_chara name="拓海" face="level3_smile2"]
-「うーん……」拓海は少し考え込み、やがて決意したように顔を上げた。[p]
+「うーん……」[p]
+
+拓海は少し考え込み、やがて決意したように顔を上げた。[p]
 [auto_chara name="拓海" face="level3_smile"]
 「実は……一つ、試したいけど試せなかったことがあって」[p]
 
 [auto_chara name="恵" face="laugh"]
 「え、何？」[p]
+
 恵が少し身を乗り出す。[p]
 
 [wait time=700]
