@@ -16,18 +16,18 @@
 「こんな奴、飛び降りて死んでしまえばいい」
 [p]
 
-[wait time=1500]
+[wait time=2000]
 
 [font speed=50]
 それは――
 [p]
 
-[wait time=600]
+[wait time=500]
 
 自分自身に対して思う。
 [p]
 
-[wait time=800]
+[wait time=1000]
 
 [font speed=40]
 
@@ -41,7 +41,7 @@
 [p]
 
 [fadeoutbgm time=3000]
-[wait time=800]
+[wait time=1000]
 
 高校二年になった頃から、
 いつの間にか始まったいじめ。
@@ -53,18 +53,18 @@
 不甲斐なさに何度も辟易した。
 [p]
 
-[wait time=700]
+[wait time=500]
 
 [font speed=80]
 一体――
 [p]
 
-[wait time=700]
+[wait time=500]
 
 いつまでこんな苦しみが続くのか――。
 [p]
 
-[wait time=900]
+[wait time=1000]
 
 [font speed=40]
 
@@ -72,29 +72,29 @@
 胸が張り裂けそうだった。
 [p]
 
-[wait time=800]
+[wait time=1000]
 
 [playse storage=se/school_chime.mp3]
-[wait time=1800]
+[wait time=2000]
 
-[wait time=1200]
+[wait time=1000]
 
 お昼を知らせる、憂鬱なチャイム。
 [p]
 
-[wait time=600]
+[wait time=500]
 
 昼休みになると、校舎の屋上に来るように命じられている。[p]
 
 教師にもクラスメイトにも見えないところで行われるこの「日課」を、[r]誰にも相談することができない。[p]
 
 [bg storage="bg_rooftop_door.webp" time=600]
-[wait time=400]
+[wait time=500]
 [playse storage=se/footstep_stairs.ogg volume=30]
-[wait time=2800]
+[wait time=3000]
 屋上までの暗い階段を上がってドアを静かに開ける。[p]
 [playse storage=se/roof_door.ogg volume=30]
-[wait time=600]
+[wait time=500]
 *ch1_rooftop
 
 ;------------------------
@@ -110,7 +110,7 @@
 
 屋上は朝方降った雨が床のコンクリートに染み込み、少し濡れていた。[p]
 
-[wait time=800]
+[wait time=1000]
 
 いつもの三人は、今日は地面に座らず、フェンスにもたれかかっている。[l]
 
@@ -122,12 +122,12 @@
 
 [playse storage=se/foot.ogg volume=50]
 
-[wait time=800]
+[wait time=1000]
 「来たか」[p]
 
 三人の中でも一番背の高い、リーダー格の龍也が拓海を見て言う。[p]
 
-[wait time=300]
+[wait time=500]
 
 声は淡々としているが、その視線は鋭い。[p]
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
@@ -138,7 +138,7 @@
 
 それで拓海をサンドバッグにするのが、彼らの「トレーニング」だった。[p]
 
-[wait time=300]
+[wait time=500]
 
 拓海は無言のまま、用意されたグローブを手に取る。[p]
 
@@ -162,13 +162,13 @@
 
 それは、拓海を憐れんでいるわけではない。[p]
 
-[wait time=300]
+[wait time=500]
 
 自分が汗をかくのも嫌だし、何かあった時に責任を負いたくないからだ。[p]
 
 「トレーニング」と称されたこのボクシングの真似事のルールはこうだ。[p]
 
-[wait time=300]
+[wait time=500]
 
 三分一ラウンド[l][r]
 顔は殴らない、[l][r]
@@ -177,7 +177,7 @@
 
 だが、ルールは都合よく変わるものだ。[p]
 
-[wait time=400]
+[wait time=500]
 
 以前、拓海が余りに何も打ち返さないので、[l]
 龍也が「少しは打ってこいよ」と煽ってくることがあった。[p]
@@ -185,12 +185,12 @@
 そのとき言われるがまま打ったパンチは、運が悪い事に龍也のみぞおちに、[r]
 吸い込まれる様に入っていった。[p]
 
-[wait time=600]
+[wait time=500]
 
 思わぬ痛みに顔を歪めた龍也は、それがよっぽど気に食わなかったのか、[l][r]
 大きく振りかぶって、蹴りをお腹に入れてきた。[p]
 
-[wait time=800]
+[wait time=1000]
 
 こんな調子だから、ルールなんて、有ってないようなものなのである。[p]
 
@@ -198,16 +198,16 @@
 今日の「トレーニング」も一方的なものだった。[p]
 
 [playse storage=se/punch1.ogg volume=30]
-[wait time=400]
+[wait time=500]
 [playse storage=se/punch2.ogg volume=30]
-[wait time=200]
+[wait time=500]
 [playse storage=se/punch1.ogg volume=30]
-[wait time=300]
+[wait time=500]
 [chara_hide_all time=300]
 打ち返すと更にやり返される事が分かってからは、[l]
 拓海は避けたり、ガードを固めたりすることに徹していた。[p]
 
-[wait time=400]
+[wait time=500]
 
 痛みには、決して慣れることは無かった。[p]
 
@@ -218,31 +218,31 @@
 龍也からグローブを受けとった翔太が、パーマのかかった茶髪を揺らしながら、
 その場でトントンと軽くジャンプをする。[p]
 
-[wait time=400]
+[wait time=500]
 
 ボクサーの真似事だ。[l]翔太のパンチは達也ほど重くはない。[p]
 
-[wait time=400]
+[wait time=500]
 
 だが、こちらのガードのタイミングをずらすようなフェイントを入れて来たり、[l][r]
 的確に急所を狙ってきたりと、とにかく意地が悪い。[l][r]
 翔太のずる賢い性格を反映したような立ち回りだった。[p]
 
-[wait time=600]
+[wait time=500]
 
 [playse storage=se/punch2.ogg volume=30]
-[wait time=800]
+[wait time=1000]
 [playse storage=se/punch1.ogg volume=30]
-[wait time=400]
+[wait time=500]
 [playse storage=se/punch2.ogg volume=30]
-[wait time=300]
+[wait time=500]
 
 人を三分間殴り続けるのも、かなり疲れるものなのだろう。[p]
 
 時間が経つにつれて、大振りになって打撃が雑になるのがわかる。[p]
 もう……そろそろ三分経つのだろうか。[p]
 
-[wait time=800]
+[wait time=1000]
 
 [auto_chara name="翔太" face="nastysmile" left=180]
 「おっと、もう三分だ。これで終わりだ……よっと！」[l][r]
@@ -252,19 +252,19 @@
 最後にフェイントで一撃をかましてきた。[l]
 これが油断していた拓海の腹に炸裂する。[p]
 
-[wait time=900]
+[wait time=1000]
 「くっ―――」[l]
 [playse storage=se/fall_down.ogg volume=50]
 拓海は体をくの字に曲げて、膝を着いた。[p]
 
-[wait time=700]
+[wait time=500]
 
 [auto_chara name="綾香" face="serious" left=300]
 「あんた弱いねえ。私でも勝てちゃいそう」[l][r]
 
 綾香が黒髪のロングヘアを指でいじりながら吐き捨てる。[p]
 
-[wait time=600]
+[wait time=500]
 
 [auto_chara name="龍也" face="normal" left=50]
 「明日も昼休み来いよ」[l]
@@ -284,16 +284,16 @@
 [playse storage=se/throw_globe.ogg volume=50]
 一人取り残された拓海は、グローブを乱暴に外して傍らに放った。[p]
 
-[wait time=700]
+[wait time=500]
 [playse storage=se/heartbeat.ogg loop=true volume=30]
 自分がされたことに対する激しい怒りが大きく膨らんでいく。[l][r]
 そしてそれは、自分自身の無力さに対する怒りでもあった。[p]
 
-[wait time=800]
+[wait time=1000]
 
 次第にその怒りは形を変え、自分に刃を向けていく。[p]
 
-[wait time=900]
+[wait time=1000]
 
 絶望の気持ちが怒りを生むのか、怒りが絶望に変わるのか、[l]
 もはや区別がつかない。[p]
@@ -303,12 +303,12 @@
 ふと視線がフェンスに向く。[l][r]
 転落防止を想定した、最低限の高さのフェンスだ。[p]
 
-[wait time=700]
+[wait time=500]
 
 よじ登ろうとする人間を諦めさせる高さには設計されていない。[l][r]
 登ろうと思えば簡単に登れてしまえる高さだ。[p]
 
-[wait time=900]
+[wait time=1000]
 *ch1_jump
 
 拓海は「屋上から飛び降りたらどうなるのか」ということについて、[r]興味を持ち始めていた。[p]
@@ -317,17 +317,17 @@
 
 実際、それについて、調べたりもした。[p]
 
-[wait time=400]
+[wait time=500]
 
 この三階の屋上の高さは地上から約10メートルになり、[l]
 ここから固い地面に衝突すれば、高い確率で助からないだろう。[p]
 
-[wait time=700]
+[wait time=500]
 
 仮に助かったとしても、重度の障害が残り、[l]
 死ぬより苦しい地獄が待っているかもしれない。[p]
 
-[wait time=900]
+[wait time=1000]
 
 気が付くと拓海はフェンスに手をかけてよじ登っていた。[p]
 [playse storage=se/fence_creak.ogg volume=30]
@@ -336,11 +336,11 @@
 そしてフェンスをまたぎ、[l]
 屋上のふちにゆっくりと足を降ろした。[p]
 
-[wait time=700]
+[wait time=500]
 [bg storage="ch01_sc01_jumping_off.webp" time=600]
 首を下に向けると、色鮮やかに花が咲く正門前の花壇が見える。[p]
 
-[wait time=600]
+[wait time=500]
 
 もうすぐ昼休みも終わり、[l]
 5限目が始まる。[p]
@@ -349,22 +349,22 @@
 
 生徒たちは皆教室に戻ったようで人の気配はない。[p]
 
-[wait time=600]
+[wait time=500]
 [delay speed="60"]
 拓海は、[l]まるで子供が親の胸に飛び込むような自然な動作で、[l]両足をそろえて[p]
 跳んだ――。[p]
 [bg storage="black.png" time=0 wait=false]
 [stopse]
 [stopbgm]
-[wait time=1200]
+[wait time=1000]
 
 ジェットコースターの様な浮遊感が一瞬あり、[p]
 
-[wait time=300]
+[wait time=500]
 
 すぐに物凄い勢いで地面に向かって加速する――[l]はずだった。[p]
 
-[wait time=900]
+[wait time=1000]
 
 しかし、[p]
 
@@ -373,12 +373,12 @@
 回りの景色がスローモーションになって、[l]
 ゆっくりと落ちていく様に感じる。[p]
 
-[wait time=800]
+[wait time=1000]
 
 これが走馬灯か。[p]
 拓海は冷静に受け止めていた。[p]
 
-[wait time=900]
+[wait time=1000]
 
 足から地面に衝突する。[p]
 爆発した様な衝撃が足の裏から頭まで駆け抜ける。[p]
@@ -388,7 +388,7 @@
 足首から膝までの骨は粉砕され、[l]
 膝小僧が弾け飛んだ。[p]
 
-[wait time=900]
+[wait time=1000]
 
 太ももの骨は太いのか、なかなか折れずに、[l]
 そのまま内臓に突き刺さっていく。[p]
@@ -398,33 +398,33 @@
 衝撃は骨盤に達し、粉砕された骨盤の衝撃で内臓が破裂し、[l]
 大量の血が噴き出した。[p]
 
-[wait time=1100]
+[wait time=1000]
 
 肋骨と背骨が下から次々と折れて肺に突き刺さり息が出来なくなる。[p]
 
-[wait time=1100]
+[wait time=1000]
 
 すると、[l]地面がどんどん近づいてくるように感じた。[p]
 
-[wait time=600]
+[wait time=500]
 
 そう、[l]顔面が地面に激突しようとしていた。[p]
 
-[wait time=900]
+[wait time=1000]
 
 顎の骨が砕け、[l]歯は弾け飛び、[l]
 顔面の骨が崩壊したところで、[l]
 衝撃は止まった。[p]
 
-[wait time=1800]
+[wait time=2000]
 
 テレビの画面を切ったように目の前が真っ暗になった。[p]
 
-[wait time=1200]
+[wait time=1000]
 
 「これが死というものか」と拓海は思った――。[p]
 
-[wait time=1500]
+[wait time=2000]
 
 そして、急に――テレビの電源が、ついた・・・[p]
 [resetdelay]
@@ -436,37 +436,37 @@
 
 隣を見ると放り投げたグローブが見える。[p]
 
-[wait time=600]
+[wait time=500]
 
 さっきいた屋上から一歩も動いていないのだ。[p]
 
-[wait time=700]
+[wait time=500]
 
 時計の針を見る限り、時間は経っていない様だった。[p]
 
 夢を見て寝ていたわけでもないらしい。[p]
 
-[wait time=600]
+[wait time=500]
 
 「幻」を見たのか、[l]と思考を巡らしている内に、
 混乱が少し和らいできた。[p]
 
-[wait time=700]
+[wait time=500]
 
 それと同時に、先ほどの飛び降りの恐怖が急に込み上げてきた。[p]
 [playse storage=se/heartbeat.ogg loop=true volume=30]
-[wait time=900]
+[wait time=1000]
 
 体がガタガタと震えだす。[l]
 額から汗が流れ出る。[p]
 
-[wait time=800]
+[wait time=1000]
 
 足の骨が粉々に砕ける感覚や、[l]
 内臓に骨が突き刺さる痛みを、[l]
 体が知っている様に感じた。[p]
 
-[wait time=900]
+[wait time=1000]
 
 まるで実際に体験して来たかの様だった。[p]
 [stopse]
@@ -479,13 +479,13 @@
 *ch1_return
 [chapter_title number="第一章" title="覚醒"]
 [playse storage=se/school_chime.mp3]
-[wait time=1800]
+[wait time=2000]
 
 「お前、なに学校休んでんだよっ！」[l]
 [playse storage=se/punch3.ogg volume=50]
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
 [playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
-[wait time=600]
+[wait time=500]
 
 龍也が拓海を責め立てる。[p]
 拓海はあの日から、二日間学校を休んだ。[p]
@@ -646,7 +646,7 @@
 
 綾香も笑いながら抗議のフリをする。[p]
 [chara_hide_all time=300]
-[wait time=600]
+[wait time=500]
 拓海はこの賭けをやめさせることに失敗した。[l]
 むしろ状況を悪化させたようだった。[p]
 どうしようもないので、そこから全速力で逃げようと試みた。[p]
@@ -691,15 +691,15 @@
 翔太がゆっくりと、[l]
 タバコの火を近付けてくる。[p]
 
-[wait time=800]
+[wait time=1000]
 
 赤い火が、[l]
 少しずつ近付く。[p]
 
-[wait time=1200]
+[wait time=1000]
 
 龍也は更に強い力で拓海を押さえつけた。[p]
-[wait time=800]
+[wait time=1000]
 タバコの先端が[l]拓海の皮膚を焼いた。[p]
 [playse storage=se/fire.ogg volume=100]
 [auto_chara name="拓海" face="level1_shout" left=120]
@@ -748,12 +748,12 @@
 *ch1_illusion
 [chara_hide_all time=300]
 [bg storage="white.png" time=80]
-[wait time=100]
+[wait time=500]
 [bg storage="black.png" time=300]
 [stopse]
 [fadeoutbgm time=3000]
 その瞬間、世界から音が消えた――。[p]
-[wait time=1200]
+[wait time=1000]
 拓海は屋上での出来事のあと、あの「幻」についてずっと考えていた。[p]
 まるでわからないことばかりだったが、拓海には何故だか、確信を持っていることがあった。[p]
 それは、あの「妙に現実味のある幻覚」は誰かによって、
@@ -780,7 +780,7 @@
 これらのことから、拓海はあの「錯覚」は、自分の力で起こしたものではないかと考えた。[p]
 そして、これは意図して引き起こすことが出来るかもしれないと仮説を立てていた。[p]
 [bg storage="bg_rooftop_day_hallucination.webp" time=300]
-[wait time=1200]
+[wait time=1000]
 [font color="#CFE8FF"]
 時が止まっている。[l]
 そう拓海が感じるほどのスローな感覚。[l]
@@ -808,11 +808,11 @@
 遂に叶わなかった。[p]
 [playse storage=se/fire.ogg volume=100]
 [bg storage="white.png" time=50]
-[wait time=40]
+[wait time=500]
 [bg storage="black.png" time=70]
-[wait time=40]
+[wait time=500]
 [bg storage="white.png" time=30]
-[wait time=30]
+[wait time=500]
 [bg storage="black.png" time=300]
 卵で目玉焼きを作るとき、[l]
 熱されたフライパンに生卵を割り、落とす。[p]
@@ -822,7 +822,7 @@
 白くなった部分がもう元に戻ることはない。[p]
 目の角膜は主にタンパク質で構成されている。[l]
 熱されたタバコの先端は900度にまで達するそうだ。[p]
-[wait time=1200]
+[wait time=1000]
 「うぐぅぅぅ―――――――――――」[p]
 
 脳天を突き抜けるような痛みが翔太を襲った。[p]
@@ -846,15 +846,15 @@
 翔太は、見える方の目で、[p]
 それを読み解いた。[p]
 [bg storage="white.png" time=80]
-[wait time=100]
+[wait time=500]
 [bg storage="black.png" time=300]
 [delay speed="90"]
 [font size=40 color="#B8DFFF"]
 コエヲ……[p]
-[wait time=600]
+[wait time=500]
 [font size=46 color="#B8DFFF"]
 ダシタカラ……[p]
-[wait time=600]
+[wait time=500]
 [font size=52 color="#B8DFFF"]
 [quake time=300 hmax=2 vmax=10]
 モウイッカイ[p]
@@ -863,7 +863,7 @@
 [wait time=500]
 [bg storage="bg_rooftop_day.webp" time=600]
 [playse storage=se/wind_rooftop.ogg volume=20]
-[wait time=700]
+[wait time=500]
 「うわあああああああああああああああああ」[l][r]
 [quake time=1200 hmax=8 vmax=30]
 [playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
@@ -884,14 +884,14 @@
 その一方で、拓海は気持ちの高揚を抑えられずにいた。[p]
 [fadeoutbgm time=3000]
 [playse storage=se/heartbeat.ogg loop=true volume=30]
-[wait time=900]
+[wait time=1000]
 「一番起こって欲しくない」と一瞬想像した未来の姿。[p]
 目を焼かれるという恐れていた事態。[p]
 それが起こったのは幻覚とはいえ、[l]
 自分ではなく翔太だった。[p]
 拓海は自分の「異能」についての仮説を証明出来たのだった。[p]
 [stopse fadeout=1000]
-[wait time=1200]
+[wait time=1000]
 [playse storage=se/wind_rooftop.ogg volume=18]
-[wait time=2500]
+[wait time=3000]
 @jump storage="chapter2.ks" target="*chapter2"

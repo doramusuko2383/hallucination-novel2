@@ -31,7 +31,7 @@
 女子のネットワークの強さには、改めて感心させられる。[p]
 彼女の協力がなければ、ここまで迅速に進めることはできなかっただろう。[p]
 
-[wait time=400]
+[wait time=500]
 集まった情報によると、龍也には三歳年上の兄がいて、黒森学園の卒業生だという。[p]
 
 現在は有名大学に進学し、サッカーも続けているらしい。[p]
@@ -40,12 +40,12 @@
 「なるほど……家族がみんな優秀か」[p]
 
 [playse storage=se/pencil.ogg volume=50]
-[wait time=600]
+[wait time=500]
 授業中、ノートにペンを走らせながらも、拓海の思考は龍也に向かっていた。[p]
 優秀な兄と父親を持つ龍也が、家庭でどれほどのプレッシャーを感じているのかを想像した。[p]
 かつてはサッカー部で人気者だったが、退部してからは攻撃的になり、周囲との距離が広がっている。[p]
 
-[wait time=600]
+[wait time=500]
 もしかしたら、龍也も自分の「こうありたい姿」と現実とのギャップに苦しんでいるのかもしれない……。[p]
 
 拓海はふと、ペンを止めて考え込んだ。[p]
@@ -53,17 +53,17 @@
 そして、龍也もその悩みを抱えているのではないか……。[p]
 
 思考が深まり、自然と三つ隣の席に座る恵の方に視線が移った。[p]
-[wait time=600]
+[wait time=500]
 [auto_chara name="恵" face="normal"]
 その瞬間、何故かわからないが、恵と目が合った。[p]
-[wait time=600]
+[wait time=500]
 彼女はすぐに目を逸らしたが、わずかに口元だけでほほ笑んで見せた。[p]
-[wait time=600]
+[wait time=500]
 [auto_chara name="拓海" face="level2_shysmile"]
-[wait time=600]
+[wait time=500]
 拓海は再びノートに目を戻し、授業に集中しようと努めた。[p]
 [playse storage=se/smartphone_vibrate.ogg volume=35]
-[wait time=400]
+[wait time=500]
 [chara_hide_all time=300]
 「今日、放課後時間ある？」[p]
 
@@ -170,7 +170,7 @@
 
 「どうしたらいいか迷ってて……」[p]
 
-[wait time=700]
+[wait time=500]
 [auto_chara name="拓海" face="private_think"]
 「・・・。」[p]
 [wait time=2000]
@@ -250,10 +250,10 @@
 [chara_hide_all time=300]
 [playbgm storage="restaurant_ambience.ogg" loop=true volume=15 fadein=true time=1000]
 [bg storage="black.png" time=0 wait=false]
-[wait time=1500]
+[wait time=2000]
 結局、その日は夜遅くまで作戦会議が続いた。[p]
 店員がラストオーダーを告げに来なければ、もっと長引いていただろう。[p]
-[wait time=1500]
+[wait time=2000]
 [fadeoutbgm time=4000]
 [stopse fadeout=4000]
 [playse storage=se/shower.ogg volume=50]
@@ -314,7 +314,7 @@
 拓海も軽く笑い返したが、その笑みはすぐに消え、時計の針に目をやる。[p]
 気がつくと、17時30分を過ぎていた。[p]
 
-[wait time=700]
+[wait time=500]
 [auto_chara name="拓海" face="private_normal"]
 もうこんな時間か……。[p]
 
@@ -323,7 +323,7 @@
 この後に待ち構えている事態を考えて、彼は気を引き締めた。[p]
 
 [chara_hide_all time=300]
-[wait time=300]
+[wait time=500]
 [bg storage="bg_mansion_night.webp" time=1000]
 [playse storage=se/wind_rooftop.ogg volume=30 fadein=true time=1000]
 
@@ -344,7 +344,7 @@
 拓海がエントランスを見張っている間、何人か住人の出入りがあったが、[r]
 皆どこか品が感じられる気がした。[p]
 
-[wait time=900]
+[wait time=1000]
 [playse storage=se/wind_rooftop.ogg volume=18]
 じっと待っていると、夜風が冷たく感じ始めた。[p]
 
@@ -354,7 +354,7 @@
 高田が車で来る可能性も考慮しているが、徒歩でも車でも、必ずマンションのエントランスは通るはずだ。[p]
 ここで待つのが正解なはずだ。[p]
 
-[wait time=900]
+[wait time=1000]
 でも、こんな待ち伏せをしなくても、適当な時間に家へ上がり込めば良かったのかもしれない。[p]
 18時を過ぎてから、強引にでも訪問すれば済む話だ。[p]
 
@@ -377,7 +377,7 @@
 まずは状況を把握して、行動するしかないな……。[p]
 拓海は腕組みをしながら、次第に強くなる冷たい風を感じていた。[p]
 
-[wait time=1200]
+[wait time=1000]
 [playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=800]
 時刻はもう18時30分を回っていた。[p]
 予定よりもかなり遅れている。[p]
@@ -386,7 +386,7 @@
 そう考えると、何かがずれているような感覚が広がっていく。[p]
 胸の奥で小さな不安がささやく。[p]
 
-[wait time=900]
+[wait time=1000]
 だがその瞬間――二人の姿がエントランスに現れた。[p]
 [stopse fadeout=500]
 [playse storage=se/leather_shoes_walk.ogg volume=35]
@@ -406,7 +406,7 @@
 [playse storage=se/auto_door.ogg volume=35]
 響子がエントランスのパネルにキーをかざすと、自動ドアが開き、[r]
 二人はマンションの中に消えていった。[p]
-[wait time=900]
+[wait time=1000]
 [bg storage="bg_mansion_night.webp" time=1000]
 拓海はその光景を見届けて、すぐに恵に連絡を取る。[p]
 
@@ -446,7 +446,7 @@
 二人は出来るだけ冷静になるよう努めて、次の行動を考え始めた。[p]
 
 [chara_hide_all time=300]
-[wait time=900]
+[wait time=1000]
 [bg storage="bg_apartment_hallway_night.webp" time=800]
 [playse storage=se/elevator_ding.ogg volume=28]
 
@@ -466,7 +466,7 @@
 
 「今行くわ」[p]
 
-[wait time=600]
+[wait time=500]
 [playse storage=se/door_lock_open.ogg volume=50]
 
 しばらくして、玄関のドアが静かに開いた。[p]
@@ -540,7 +540,7 @@
 高田はリビングにいるんだろうが、ここからじゃ何も見えない……。[p]
 彼は耳を澄まし、恵の動きと、高田の様子に集中した。[p]
 
-[wait time=700]
+[wait time=500]
 [bg storage="bg_megumi_living_night.webp" time=2000]
 イヤホンから、恵の挨拶が聞こえてきた。[p]
 [auto_chara name="恵" face="private_normal" left=0]
@@ -571,7 +571,7 @@
 恵は、淡々と返しながらも、会話を引き延ばしているのが拓海にも分かった。[p]
 高田の様子をもう少し探る必要がある。[p]
 
-[wait time=700]
+[wait time=500]
 [auto_chara name="高田" face="normal"]
 「そうか、勉強に励んでいて偉いね」[p]
 
@@ -603,7 +603,7 @@
 [bg storage="bg_megumi_room_night.webp" time=800]
 そして、拓海のイヤホンの片耳を受け取り、二人は再び状況に集中した。[p]
 
-[wait time=800]
+[wait time=1000]
 「あんな大きい娘さんがいたんだね」[p]
 
 高田の声が、しっかりとスマホに拾われてイヤホンから聞こえてくる。[p]
@@ -630,13 +630,13 @@
 
 響子の声色が、今度は強く響く。[p]
 
-[wait time=1200]
+[wait time=1000]
 「君が僕の言うことを聞いてくれるなら、そうしたいと思う」[p]
 
 [chara_hide_all time=300]
 [stopse fadeout=600]
 [fadeoutbgm time=3000]
-[wait time=1200]
+[wait time=1000]
 
 [bg storage="ch4_takumi_megumi.webp" time=2000]
 高田の言葉が耳に届いた瞬間、拓海は心臓が一瞬止まるような感覚に襲われた。[p]

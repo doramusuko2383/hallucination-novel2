@@ -90,7 +90,7 @@
     splash.animate({ opacity: 1 }, 500);
 })();
 [endscript]
-[wait time=1500]
+[wait time=2000]
 [iscript]
 (function fadeOutSplash() {
     var splash = $("#proyama-splash");
@@ -407,7 +407,7 @@ window.close();
 })();
 [endscript]
 [playse storage=se/click.ogg volume=100]
-[wait time=200]
+[wait time=500]
 [fadeoutbgm time=500]
 [playse storage=se/openingwind.ogg volume=75]
 [iscript]
@@ -431,7 +431,7 @@ window.close();
     overlay.animate({ opacity: 1 }, 2200);
 })();
 [endscript]
-[wait time=2200]
+[wait time=2000]
 @freeimage layer=0 page=fore
 [bg storage="black.png" time=0 wait=false]
 [iscript]

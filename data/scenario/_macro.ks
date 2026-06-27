@@ -51,6 +51,6 @@
     }, 2800);
 })();
 [endscript]
-[wait time=3800]
+[wait time=3000]
 [layopt layer=message0 visible=true]
 [endmacro]
