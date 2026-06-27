@@ -28,7 +28,7 @@
 朝の強い日差しの中、[r]
 校舎まで人目を避けるように歩く。[p]
 
-[wait time=700]
+[wait time=500]
 [fadeoutbgm time=3000]
 [fadeoutse time=800]
 [bg storage="bg_classroom_day.webp" time=700]
@@ -62,7 +62,7 @@
 拓海からしたら、他校と比べてそんなに優れているとも思えない様な、[r]
 普通のブレザーにシンプルなネクタイの制服だ。[p]
 
-[wait time=700]
+[wait time=500]
 [fadeoutbgm time=3000]
 *ch2_hallway
 
@@ -88,7 +88,7 @@
 生徒の大半は、大学進学を目指して日々の授業やクラブ活動に勤しんでいるが、[r]
 学年に何人かは問題を起こす生徒もいた。[p]
 
-[wait time=700]
+[wait time=500]
 
 龍也もそんな生徒のうちの一人だった。[p]
 
@@ -105,7 +105,7 @@
 
 だが、それをよく思わなかった上級生から嫌がらせをされるようになった。[p]
 
-[wait time=600]
+[wait time=500]
 [bg storage="ch2_tatsuya_past.webp" time=700]
 あるとき、試合中にパスを寄こさなかった先輩に殴り掛かり、[r]
 止めに入ったサッカー部員も含め、三人に怪我を負わせた。[p]
@@ -134,7 +134,7 @@
 1ヶ月の停学処分になり、サッカー部は退部になった。[p]
 その頃から二人はよくつるむようになった。[p]
 
-[wait time=700]
+[wait time=500]
 [fadeoutbgm time=3000]
 [bg storage="bg_hallway_day.webp" time=700]
 黒森学園の特進クラスは、目立たない生徒が多い。[p]
@@ -147,7 +147,7 @@
 むしろ、一人の時間は考え事をするのにちょうど良く、[r]
 夢想にふけるのが心地よかった。[p]
 
-[wait time=900]
+[wait time=1000]
 
 *ch2_flashback_toilet
 
@@ -158,7 +158,7 @@
 そんな拓海の静かな日常が一変したのは、[r]
 一年生の頃だった。[p]
 
-[wait time=700]
+[wait time=500]
 
 12月の寒い冬の放課後――。[p]
 [playse storage=se/washroom.ogg volume=50]
@@ -179,7 +179,7 @@
 
 便器に向かいながらも、二人の様子をうかがっている。[p]
 
-[wait time=600]
+[wait time=500]
 
 すると――[p]
 
@@ -214,7 +214,7 @@
 「お前……お金返してやれよ」[p]
 
 [chara_hide_all time=300]
-[wait time=400]
+[wait time=500]
 
 その一言が、場の空気を一変させた。[p]
 
@@ -247,7 +247,7 @@
 
 拓海は視線を外し、声を落とした。[p]
 
-[wait time=400]
+[wait time=500]
 
 [playse storage=se/hold_down.ogg volume=35]
 [quake time=250 hmax=4 vmax=12]
@@ -263,7 +263,7 @@
 
 [playse storage=se/leather_shoes_walk.ogg volume=50]
 [chara_hide_all time=300]
-[wait time=700]
+[wait time=500]
 
 拓海はその場から動けず、[r]
 体が凍りついたように感じた。[p]
@@ -274,7 +274,7 @@
 
 拓海は、余計なことをしてしまったのだろうかと思った。[p]
 
-[wait time=900]
+[wait time=1000]
 
 [bg storage="black.png" time=700]
 そして、それ以来、いじめの矛先はあの生徒から拓海へと移った。[p]
@@ -283,7 +283,7 @@
 身を犠牲にして他人を救うことになったのだ。[p]
 
 [fadeoutbgm time=4000]
-[wait time=800]
+[wait time=1000]
 
 *ch2_after_rooftop
 
@@ -297,7 +297,7 @@
 三人の関係は大きく変わっていった。[p]
 
 [stopse fadeout=800]
-[wait time=700]
+[wait time=500]
 
 翔太はしばらく学校に姿を見せなかった。[p]
 
@@ -312,7 +312,7 @@
 
 むしろ、二人を避けているように見えた。[p]
 
-[wait time=700]
+[wait time=500]
 
 拓海は内心、少しだけほっとしていた。[p]
 
@@ -323,7 +323,7 @@
 
 そんな淡い希望も抱いた。[p]
 
-[wait time=900]
+[wait time=1000]
 
 [playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=1200]
 だが、それはすぐに打ち砕かれた。[p]
@@ -454,7 +454,7 @@
 
 [chara_hide_all time=300]
 [fadeoutbgm time=4000]
-[wait time=900]
+[wait time=1000]
 
 *ch2_planning
 
@@ -475,7 +475,7 @@
 しかもその力は、[r]
 自分の想像や知識である程度コントロールできることも分かっていた。[p]
 [fadeoutbgm time=3000]
-[wait time=700]
+[wait time=500]
 [playbgm storage="psycho.ogg" loop=true volume=45 fadein=true time=1500]
 
 強い憎悪と恐ろしい幻。[p]
@@ -487,7 +487,7 @@
 
 そして、この力には一つの大きな利点があった。[p]
 
-[wait time=800]
+[wait time=1000]
 
 ――証拠が残らない、ということだ。[p]
 
@@ -538,11 +538,11 @@
 心のどこかで、ためらいが完全に消えない。[p]
 
 [chara_hide_all time=300]
-[wait time=600]
+[wait time=500]
 
 人を傷つけるのは正しいことだろうか？[p]
 
-[wait time=700]
+[wait time=500]
 
 その言葉が浮かんできて邪魔をする。[p]
 
@@ -552,18 +552,18 @@
 
 この決意が、揺るがないように。[p]
 [fadeoutbgm time=4000]
-[wait time=900]
+[wait time=1000]
 
 [playse storage=se/crickets.ogg volume=10]
 鈴虫の鳴く声が遠くから響いている。[p]
 
-[wait time=800]
+[wait time=1000]
 
 本当に傷つけるわけじゃない。[p]
 
 ただ、残酷な嘘を見せるだけだ。[p]
 
-[wait time=700]
+[wait time=500]
 
 その時、拓海は思い出した。[p]
 
@@ -600,7 +600,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 何度も頭の中でシミュレーションを繰り返すが、[r]
 決定的な方法が見つからなかった。[p]
 
-[wait time=700]
+[wait time=500]
 
 ある日、綾香の情報を整理している時、ふと思い出した。[p]
 
@@ -659,7 +659,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 だが、今は自分の力だけで何とかするしかない。[p]
 
-[wait time=700]
+[wait time=500]
 
 [bg storage="bg_hallway_day.webp" time=700]
 そんな中、ある日、放課後ふと目に入った光景が、[r]
@@ -673,7 +673,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 彼女なら、自然な流れで綾香のバイト先について聞き出せるかもしれない。[p]
 
-[wait time=600]
+[wait time=500]
 [bg storage="black.png" time=500]
 これだ……これで計画が動き出す。[p]
 
@@ -682,7 +682,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 今度こそ、次の一手が見つかったのだ。[p]
 
 [fadeoutbgm time=4000]
-[wait time=900]
+[wait time=1000]
 
 *ch2_megumi_conversation
 
@@ -701,12 +701,12 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 彼女は三時限目の授業開始前、[r]
 黙々と数学の教科書を広げていた。[p]
 
-[wait time=600]
+[wait time=500]
 
 今がチャンスだ。[p]
 
 [playse storage=se/chair.ogg volume=50]
-[wait time=600]
+[wait time=500]
 拓海は心の中でそう決意し、ゆっくりと席を立つ。[p]
 
 [playse storage=se/heartbeat.ogg loop=true volume=40]
@@ -875,7 +875,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 拓海は画面に映る地図を見つめながら、[r]
 綾香の自宅の大まかな位置と最寄り駅を割り出した。[p]
 
-[wait time=600]
+[wait time=500]
 
 次はバイト先だ……。[p]
 
@@ -891,7 +891,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 途中下車してまで、他の駅でバイトするとは考えづらいからだ。[p]
 
-[wait time=600]
+[wait time=500]
 
 そう頭の中で整理しながら、[r]
 最寄り駅の北口と南口にある2件のコンビニに絞り込んだ。[p]
@@ -903,7 +903,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 部屋の静けさが、彼の集中力を研ぎ澄ませる。[p]
 
-[wait time=700]
+[wait time=500]
 
 だが、そこで拓海は手を止め、画面をじっと見つめた。[p]
 
@@ -920,7 +920,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 そんな場所で働くのは気が散るし、気まず過ぎる。[p]
 
-[wait time=800]
+[wait time=1000]
 [playbgm storage="suspense.ogg" loop=true volume=40 fadein=true time=1000]
 
 じゃあ、反対方向にある北口のコンビニか……。[p]
@@ -931,7 +931,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 画面上の地図と頭の中の推理がぴったりと合致した瞬間、[r]
 拓海の胸の奥で小さな達成感が広がった。[p]
 
-[wait time=700]
+[wait time=500]
 
 [font speed=70]
 これでいける。[p]

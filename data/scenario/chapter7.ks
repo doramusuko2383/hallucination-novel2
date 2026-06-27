@@ -118,7 +118,7 @@
 [auto_chara name="恵" face="private_cry"]
 「服は脱がされそうになったけど……大丈夫だった」[p]
 
-[wait time=700]
+[wait time=500]
 [auto_chara name="拓海" face="private2_angry"]
 拓海は激しい怒りが湧いてきた。[p]
 「どういうことだ」[p]
@@ -148,7 +148,7 @@
 
 拓海はカバンからハサミを出して高田に向けた。[p]
 
-[wait time=800]
+[wait time=1000]
 ;後ずさる音
 [auto_chara name="高田" face="pale"]
 「なっ……やめろ！」[p]
@@ -211,7 +211,7 @@
 [stopse fadeout=500]
 [fadeoutbgm time=3000]
 [bg storage="black.png" time=400]
-[wait time=1200]
+[wait time=1000]
 [auto_chara name="拓海" face="private2_normal"]
 「まったく、最後まで迷惑かけやがって」[p]
 
@@ -319,7 +319,7 @@
 [auto_chara name="恵" face="private_surprise"]
 「そういえば前に言ってたね。あの時は……冗談だと思ってた」[p]
 [auto_chara name="拓海" face="private2_sorry"]
-[wait time=600]
+[wait time=500]
 「それに関してなんだけど……本当にごめん」[p]
 [auto_chara name="恵" face="private_question"]
 「何が？」[p]
@@ -384,7 +384,7 @@
 「そうだね。お言葉に甘えて」[p]
 [chara_hide_all]
 [playse storage=se/cooking.ogg volume=50]
-[wait time=5000]
+[wait time=3000]
 [playse storage=se/dinner.ogg volume=50]
 [wait time=3000]
 いつものファミレス以外のところで一緒に食事をしたのは、初めてのことだった。[p]
@@ -771,7 +771,7 @@
 
 恵が少し身を乗り出す。[p]
 
-[wait time=700]
+[wait time=500]
 [fadeoutbgm time=3000]
 [playbgm storage="suspense.ogg" loop=true volume=20 fadein=true time=1000]
 [auto_chara name="拓海" face="level3_normal"]

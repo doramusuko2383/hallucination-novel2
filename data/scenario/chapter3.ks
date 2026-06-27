@@ -29,12 +29,12 @@
 夜の空気はひんやりと冷たく、[r]
 彼の心臓は次第に高鳴っていく。[p]
 
-[wait time=600]
+[wait time=500]
 
 自分がこれから行おうとしていることの重大さが、[r]
 徐々に実感として迫ってきていた。[p]
 
-[wait time=700]
+[wait time=500]
 
 [bg storage="bg_convenience_store_night.webp" time=800]
 綾香のバイト先の北口のコンビニに着いた頃、[r][l]
@@ -43,7 +43,7 @@
 住宅街の小さなコンビニは、[r]
 街灯の薄暗さと相まって、異様に目立って見えた。[p]
 
-[wait time=400]
+[wait time=500]
 [auto_chara name="拓海" face="convenience"]
 [playse storage=se/megane_and_hat.ogg volume=80]
 準備してきた深めのバケットハットを被り、サングラスをかける。[p]
@@ -84,7 +84,7 @@
 これならバレる心配はなさそうだ。[p]
 [chara_hide_all time=300]
 [playse storage=se/convenience_door.ogg volume=25]
-[wait time=400]
+[wait time=500]
 [bg storage="bg_convenience_inside_night.webp" time=800]
 拓海は店内に入り、商品棚を物色するふりをしながら、[r]
 綾香の様子を窺った。[p]
@@ -114,13 +114,13 @@
 彼はカゴいっぱいの商品を持ち、補充を始めた。[p]
 
 ; 追加した演出意図: 嫌悪のきっかけは大きな音ではなく、短い間で不快感を強める。
-[wait time=600]
+[wait time=500]
 
 強烈な汗の匂いが漂い、拓海は思わず眉をひそめた。[p]
 
 マスクをしてこなかったことを後悔するほどだった。[p]
 
-[wait time=600]
+[wait time=500]
 
 綾香が嫌悪する理由もわかってしまうな……。[p]
 
@@ -154,34 +154,34 @@
 拓海はその店長を目の端で捉えながら、[r][l]
 頭の中で綾香へ見せる「幻」のイメージをさらに膨らませた。[p]
 
-[wait time=600]
+[wait time=500]
 
 これは彼女にとって、最も不快で、おぞましい結果をもたらすだろう。[p]
 
-[wait time=700]
+[wait time=500]
 
 10分程度待っただろうか。[p]
 店内の客も残り一人になった。[p]
-[wait time=700]
+[wait time=500]
 スーツ姿の男が、缶チューハイを二本と、[r]
 小さなショートケーキをレジに置いた。[p]
-[wait time=700]
+[wait time=500]
 年齢は三十代前半くらいだろうか。[r][l]
 疲れた顔をしているが、どこか足取りは軽い。[p]
-[wait time=700]
+[wait time=500]
 
 恋人と酒でも飲むのだろうか。[p]
 
-[wait time=700]
+[wait time=500]
 
 彩香は無言でバーコードを通し、[r][l]
 男は「どうも」とだけ言って店を出ていった。[p]
 [playse storage=se/convenience_door.ogg volume=15]
-[wait time=700]
+[wait time=500]
 自動ドアの開閉音が遠ざかる。[p]
-[wait time=700]
+[wait time=500]
 店内が静かになる。[p]
-[wait time=700]
+[wait time=500]
 今ならいける……。[p]
 
 [wait time=500]
@@ -230,7 +230,7 @@
 少しの躊躇いはあったが、[r][l]
 自分自身を守るために必要なことなのだ。[p]
 
-[wait time=700]
+[wait time=500]
 
 やるしかない――。[p]
 
@@ -238,7 +238,7 @@
 
 拓海は全神経を集中させた。[p]
 
-[wait time=600]
+[wait time=500]
 
 綾香の手が袋を差し出す時、[r][l]
 拓海は意図的に彼女の手に軽く触れた。[p]
@@ -247,20 +247,20 @@
 [stopse fadeout=600]
 [fadeoutbgm time=3000]
 [bg storage="white.png" time=50]
-[wait time=40]
+[wait time=500]
 [bg storage="black.png" time=70]
-[wait time=40]
+[wait time=500]
 [bg storage="white.png" time=30]
-[wait time=30]
+[wait time=500]
 [bg storage="black.png" time=300]
 
 その瞬間、世界が静まり返った。[p]
 
-[wait time=900]
+[wait time=1000]
 
 やった……成功だ。[p]
 
-[wait time=700]
+[wait time=500]
 
 目の前の世界が無音に包まれる。[p]
 
@@ -268,26 +268,26 @@
 綾香は動きを止め、目を見開いたまま、[r][l]
 時間が止まったように固まっている。[p]
 
-[wait time=900]
+[wait time=1000]
 
 そして、その無音の世界の中で、[r][l]
 店長がゆっくりと綾香の方へ近づき始める。[p]
 
 ここは綾香と店長だけの世界だ。[p]
 
-[wait time=800]
+[wait time=1000]
 
 店長は、じっと綾香を見つめながら、[r][l]
 ゆっくりとその手を伸ばした。[p]
 
 [bg storage="white.png" time=80]
-[wait time=100]
+[wait time=500]
 [bg storage="black.png" time=300]
 [wait time=1000]
 拓海はその光景を見つめながら、[r][l]
 自分が作り出したこの幻覚の中に、確かな力を感じていた。[p]
 
-[wait time=900]
+[wait time=1000]
 
 *ch3_classroom_after
 
@@ -302,7 +302,7 @@
 
 あの日以来、綾香は学校に姿を見せていない。[p]
 
-[wait time=600]
+[wait time=500]
 
 だが、不思議なことに、大きな噂話にもなっていなかった。[p]
 
@@ -325,7 +325,7 @@
 どうせ次はお前だ。[l]
 何も問題はない。[p]
 
-[wait time=700]
+[wait time=500]
 
 拓海は自分の中で何かが変わったことを感じていた。[p]
 
@@ -342,7 +342,7 @@
 
 この居心地、悪くないな……。[p]
 
-[wait time=600]
+[wait time=500]
 
 拓海は一瞬、自分がこのままクラスでの居場所を確保できるような気がした。[p]
 
@@ -393,7 +393,7 @@
 胸の奥に不安が広がる。[p]
 
 [playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
-[wait time=700]
+[wait time=500]
 
 綾香の件？[l]
 何を聞きたいんだ……？[p]
@@ -411,7 +411,7 @@
 不安は完全に拭い去れなかった。[p]
 
 [fadeoutbgm time=4000]
-[wait time=4000]
+[wait time=3000]
 
 *ch3_karaoke
 
@@ -431,17 +431,17 @@
 永山君、変装してたでしょ？」[p]
 
 [chara_hide_all time=300]
-[wait time=700]
+[wait time=500]
 
 拓海は何も応えられず、ただ黙っていた。[p]
 
 思いもよらない言葉が、頭の中でこだまする。[p]
 
-[wait time=700]
+[wait time=500]
 
 見られていた……？[p]
 
-[wait time=700]
+[wait time=500]
 
 [auto_chara name="恵" face="serious"]
 「でも、すぐに歩き方でわかったよ。[l]
@@ -458,7 +458,7 @@
 
 彼女の言葉が鋭く響いた。[p]
 
-[wait time=600]
+[wait time=500]
 
 [auto_chara name="恵" face="serious"]
 「それで、永山君がコンビニから出た後、私も店に入ってみたの。[l]
@@ -486,11 +486,11 @@
 とにかく警察を呼ぶしかなかったの」[p]
 [fadeoutbgm time=4000]
 [chara_hide_all time=300]
-[wait time=800]
+[wait time=1000]
 
 警察……？[p]
 
-[wait time=800]
+[wait time=1000]
 
 ; 追加した演出意図: 想定外の単語で鼓動を再投入し、音量は控えめにして焦燥だけを出す。
 [playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
@@ -508,7 +508,7 @@
 [chara_hide_all time=300]
 くそっ……監視カメラか！[p]
 
-[wait time=600]
+[wait time=500]
 
 拓海は胸の中で叫んだ。[p]
 
@@ -539,7 +539,7 @@
 彼女が何を知っているのか、[r][l]
 どこまで理解しているのか、答えを見つけられない。[p]
 
-[wait time=700]
+[wait time=500]
 
 [auto_chara name="恵" face="serious"]
 「永山君、何か知ってるんじゃないの？」[p]
@@ -560,7 +560,7 @@
 どこかの部屋から聞こえてくる下手な歌声が、[r][l]
 静かな空間に響いている。[p]
 
-[wait time=600]
+[wait time=500]
 
 [auto_chara name="恵" face="sad"]
 「私、永山君が、綾香たちのグループにいいようにされていること、知ってたよ。」[p]
@@ -604,7 +604,7 @@
 言って楽になってしまいたいという気持ちになっていた。[p]
 
 [stopse fadeout=1000]
-[wait time=900]
+[wait time=1000]
 
 [auto_chara name="拓海" face="level2_depressed"]
 「俺がやった。[l]想像の通りだよ」[p]
@@ -739,7 +739,7 @@
 [auto_chara name="恵" face="laugh"]
 恵は「案外好きかもよ」と言って大袈裟に笑って見せた。[p]
 
-[wait time=400]
+[wait time=500]
 
 [auto_chara name="恵" face="serious"]
 そして、真っすぐ拓海を見て言った。[p]
@@ -881,11 +881,11 @@
 彼を静かに満たしていった。[p]
 
 ; 追加した演出意図: 重い会話の終わりに環境音だけを残し、日常へ戻る微かな救いを出す。
-[wait time=700]
+[wait time=500]
 
 どこかの部屋から聞こえてくる下手くそな歌が、[r]
 今度は不思議と心地よく響いていた。[p]
 
-[wait time=800]
+[wait time=1000]
 
 @jump storage="chapter4.ks" target="*chapter4"
