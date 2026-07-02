@@ -226,7 +226,7 @@
 [auto_chara name="恵" face="private_normal"]
 「永山君、手袋した方がいいよ」[p]
 [auto_chara name="拓海" face="private2_normal"]
-「いいって、すぐ終わるから。[r]
+「いいって、すぐ終わるから。[r][l]
 汚さないようにやるし」[p]
 
 二人はフローリングを掃除している。[p]
@@ -636,7 +636,9 @@
 何も知らない様子の恵は不思議そうにこちらを見返してくる。[p]
 [auto_chara name="龍也" face="smile"]
 「じゃあ、またな。大学で会おうぜ」[p]
-
+[playse storage=se/leather_shoes.ogg volume=100]
+[wait time=2000]
+[chara_hide_all]
 龍也はそう言い残し、手を軽く振って去っていった。[p]
 その背中がだんだんと遠ざかるのを見つめながら、拓海はなんとなく、彼との新しい関係が始まるような予感を抱いた。[p]
 
