@@ -495,10 +495,32 @@
     gap: 10px !important;
 }
 
+.save_list_item_meta {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    min-height: 24px !important;
+}
+
 .save_list_item_date {
     color: rgba(220, 230, 238, 0.62) !important;
     font-size: 13px !important;
     letter-spacing: 0.08em !important;
+}
+
+.save_list_item_scene_title {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 22px !important;
+    padding: 1px 10px !important;
+    border: 1px solid rgba(175, 210, 232, 0.28) !important;
+    border-radius: 999px !important;
+    background: rgba(120, 170, 210, 0.1) !important;
+    color: rgba(230, 240, 248, 0.78) !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.12em !important;
+    line-height: 1.4 !important;
 }
 
 .save_list_item_text,

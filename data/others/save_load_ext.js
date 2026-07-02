@@ -20,28 +20,31 @@
         return String(num);
     }
 
-    function normalizeChapterTitle(text, sceneTitle) {
-        text = safeText(text);
-        var chapterMatch = text.match(/^第([0-9０-９一二三四五六七八九十百千]+)章\s*/);
-        if (!chapterMatch && sceneTitle) {
-            chapterMatch = safeText(sceneTitle).match(/^第([0-9０-９一二三四五六七八九十百千]+)章\s*/);
-            if (chapterMatch && text.indexOf(safeText(sceneTitle)) !== 0) return text;
-        }
-        if (!chapterMatch) return text;
-        var rawNumber = chapterMatch[1].replace(/[０-９]/g, function (ch) {
+    function chapterInfoFromText(value) {
+        var text = safeText(value);
+        var match = text.match(/^第([0-9０-９一二三四五六七八九十百千]+)章\s*/);
+        if (!match) return null;
+        var rawNumber = match[1].replace(/[０-９]/g, function (ch) {
             return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0);
         });
         var chapter = /^\d+$/.test(rawNumber) ? "第" + toJapaneseNumber(rawNumber) + "章" : "第" + rawNumber + "章";
-        var rest = text.slice(chapterMatch[0].length).replace(/^\s+/, "");
-        return rest ? chapter + "　" + rest : chapter;
+        return {
+            chapter: chapter,
+            rest: text.slice(match[0].length).replace(/^[\s　]+/, "")
+        };
     }
 
     function buildSaveDisplay(data) {
         data = data || {};
-        var title = safeText(data.scene_title || (data.stat && data.stat.f && data.stat.f.save_scene_title));
-        var text = normalizeChapterTitle(data.title, title);
-        data.display_scene_title = title;
-        data.display_text = text;
+        var sceneTitle = safeText(data.scene_title || (data.stat && data.stat.f && data.stat.f.save_scene_title));
+        var rawTitle = safeText(data.title);
+        var titleChapter = chapterInfoFromText(rawTitle);
+        var sceneChapter = chapterInfoFromText(sceneTitle);
+        var chapter = titleChapter ? titleChapter.chapter : (sceneChapter ? sceneChapter.chapter : sceneTitle);
+        var text = titleChapter ? titleChapter.rest : rawTitle;
+
+        data.display_scene_title = chapter;
+        data.display_text = text || rawTitle || chapter;
         return data;
     }
 
@@ -602,10 +605,15 @@
                             }
                         }
                         j_slot.find(".save_list_item_date").html(save_data.save_date || "");
-                        j_slot.find(".save_list_item_scene_title").remove();
+                        var j_meta = j_slot.find(".save_list_item_meta");
+                        if (!j_meta.length) {
+                            j_slot.find(".save_list_item_date").wrap('<span class="save_list_item_meta"></span>');
+                            j_meta = j_slot.find(".save_list_item_meta");
+                        }
+                        j_meta.find(".save_list_item_scene_title").remove();
                         if (save_data.display_scene_title) {
-                            j_slot.find(".save_list_item_date").after('<span class="save_list_item_scene_title"></span>');
-                            j_slot.find(".save_list_item_scene_title").text(save_data.display_scene_title);
+                            j_meta.append('<span class="save_list_item_scene_title"></span>');
+                            j_meta.find(".save_list_item_scene_title").text(save_data.display_scene_title);
                         }
                         j_slot.find(".save_list_item_text").text(save_data.display_text || save_data.title || "");
                         if (cb) cb();

@@ -20,8 +20,10 @@
                 </span>
                 <span class="save_list_item_area">
                     {{if is_auto}}<span class="save_list_item_auto">AUTO</span>{{/if}}
-                    <span class="save_list_item_date">{{:save_date}}</span>
-                    {{if display_scene_title}}<span class="save_list_item_scene_title">{{:display_scene_title}}</span>{{/if}}
+                    <span class="save_list_item_meta">
+                        <span class="save_list_item_date">{{:save_date}}</span>
+                        {{if display_scene_title}}<span class="save_list_item_scene_title">{{:display_scene_title}}</span>{{/if}}
+                    </span>
                     <span class="save_list_item_text">{{:display_text || title}}</span>
                 </span>
             </li>
