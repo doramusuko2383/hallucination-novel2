@@ -778,7 +778,6 @@
 
 [wait time=500]
 [fadeoutbgm time=3000]
-[playbgm storage="suspense.ogg" loop=true volume=20 fadein=true time=1000]
 [auto_chara name="拓海" face="level3_normal"]
 「俺のあの力。強い憎しみを抱いた相手にしか使えなかったじゃん」[p]
 [auto_chara name="恵" face="normal"]
