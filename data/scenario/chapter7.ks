@@ -87,6 +87,7 @@
 [wait time=500]
 [auto_chara name="拓海" face="private2_shout"]
 「菊池さん！」[p]
+[chara_hide_all]
 ;[auto_chara name="恵" face="private_help"]
 「永山くん！　助けて！」[p]
 
@@ -211,8 +212,8 @@
 [stopse fadeout=500]
 [fadeoutbgm time=3000]
 [bg storage="black.png" time=400]
-[wait time=1000]
-[auto_chara name="拓海" face="private2_normal"]
+[wait time=3000]
+
 「まったく、最後まで迷惑かけやがって」[p]
 
 拓海は雑巾を固く絞りながら言った。[p]
@@ -485,7 +486,9 @@
 それでも、ひねくれるほど嫌な思い出ばかりだったわけでもない。[p]
 色んなことがあった――そう思うと、自然と胸が温かくなるのを感じた。[p]
 
+[wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true]
 卒業式が終わり、教室に戻ると、どこかそわそわした雰囲気が漂っていた。[p]
 
 最後の担任の話に耳を傾ける生徒たちからは、別れの空気が感じられる。[p]
@@ -521,7 +524,7 @@
 [fadeoutbgm time=3000]
 [bg storage="bg_rooftop_day2.webp" time=900]
 [playse storage=se/wind_rooftop.ogg loop=true volume=20]
-拓海は屋上へと続く階段を一歩一歩上がっていた。[r]
+拓海は屋上へと続く階段を一歩一歩上がっていた。[p]
 「もう久しくここを登ってないな」と思いながら、ふと懐かしさが込み上げてくる。[p]
 
 この場所は、彼にとっても、龍也にとっても様々な思いが交錯する場所だった。[p]
