@@ -384,6 +384,114 @@
     }
 
 
+    function installEndingTag() {
+        TYRANO.kag.tag.hl_ending = {
+            vital: [],
+            pm: {},
+            start: function () {
+                var kag = TYRANO.kag;
+                var images = [
+                    { storage: "ch01_sc01_rooftop_wait.webp", hold: 9000, sepia: true },
+                    { storage: "ch2_ayaka_and_megumi.webp", hold: 9000 },
+                    { storage: "ch3_karaoke_talk.webp", hold: 10000 },
+                    { storage: "ch4_takumi_megumi.webp", hold: 10000 },
+                    { storage: "ch5_rooftop_tatsuya_cry.webp", hold: 11000 },
+                    { storage: "ch6_5members.webp", hold: 11000 },
+                    { storage: "ch6_ayaka_episode.webp", hold: 10000 },
+                    { storage: "ch6_ayaka_memory.webp", hold: 10000 },
+                    { storage: "ch7_shakehands.webp", hold: 12000 },
+                    { storage: "ch7_ending.webp", hold: 15000, final: true }
+                ];
+                var credits = [
+                    ["Scenario", "プロ山"],
+                    ["Direction", "プロ山"],
+                    ["Programming", "プロ山"],
+                    ["Illustration", "ChatGPT"],
+                    ["Music", "BGMer：http://bgmer.net"]
+                ];
+                var ending = $("<div></div>").attr("id", "hl-ending");
+                var photo = $("<img>").addClass("hl-ending-photo").attr("alt", "");
+                var shade = $("<div></div>").addClass("hl-ending-shade");
+                var credit = $("<div></div>").addClass("hl-ending-credit");
+                var endText = $("<div></div>").addClass("hl-ending-end").text("END");
+                var timers = [];
+
+                function later(ms, fn) {
+                    timers.push(setTimeout(fn, ms));
+                }
+                function setCredit(index) {
+                    if (index >= credits.length) {
+                        credit.removeClass("is-visible");
+                        return;
+                    }
+                    credit.html('<div class="hl-ending-credit-role"></div><div class="hl-ending-credit-name"></div>');
+                    credit.find(".hl-ending-credit-role").text(credits[index][0]);
+                    credit.find(".hl-ending-credit-name").text(credits[index][1]);
+                    credit.addClass("is-visible");
+                }
+                function cleanupAndNext() {
+                    timers.forEach(clearTimeout);
+                    kag.setSkip(false);
+                    kag.stat.is_skip = false;
+                    ending.remove();
+                    kag.ftag.nextOrder();
+                }
+                function showImage(index) {
+                    var item = images[index];
+                    photo.removeClass("hl-ending-sepia hl-ending-sepia-to-color");
+                    photo.attr("src", "./data/bgimage/" + item.storage);
+                    shade.addClass("is-black");
+                    later(80, function () {
+                        shade.removeClass("is-black");
+                        if (item.sepia) {
+                            photo.addClass("hl-ending-sepia");
+                            later(120, function () { photo.addClass("hl-ending-sepia-to-color"); });
+                        }
+                        if (item.final) {
+                            credit.removeClass("is-visible");
+                            later(5000, function () { endText.addClass("is-visible"); });
+                        }
+                    });
+                    later(item.hold, function () {
+                        if (index < images.length - 1) {
+                            shade.addClass("is-black");
+                            later(1000, function () { showImage(index + 1); });
+                            return;
+                        }
+                        later(1000, function () {
+                            shade.addClass("is-black");
+                            later(2000, function () {
+                                endText.removeClass("is-visible");
+                                later(2000, cleanupAndNext);
+                            });
+                        });
+                    });
+                }
+
+                kag.setSkip(false);
+                kag.stat.is_skip = false;
+                $(document).trigger("mouseup");
+                $(".button_menu").hide();
+                kag.layer.hideMessageLayers();
+                kag.layer.getLayer("base", "fore").css("background-color", "#000");
+                ending.on("click mousedown mouseup touchstart touchend pointerdown pointerup wheel contextmenu", function (event) {
+                    event.preventDefault();
+                    event.stopImmediatePropagation();
+                    event.stopPropagation();
+                    return false;
+                });
+                ending.append(photo, shade, credit, endText);
+                $("#tyrano_base").append(ending);
+                credits.forEach(function (_, i) { later(i * 19000 + 7000, function () { setCredit(i); }); });
+                showImage(0);
+            }
+        };
+        if (TYRANO.kag.ftag && TYRANO.kag.ftag.master_tag) {
+            TYRANO.kag.ftag.master_tag.hl_ending = $.extend(true, {}, TYRANO.kag.tag.hl_ending);
+            TYRANO.kag.ftag.master_tag.hl_ending.kag = TYRANO.kag;
+        }
+    }
+
 
     function install() {
         if (!window.TYRANO || !TYRANO.kag || !TYRANO.kag.menu) {
@@ -551,6 +659,7 @@
         };
 
         installConfigOverlay();
+        installEndingTag();
         TYRANO.kag.config.configSaveSlotNum = MANUAL_SLOT_COUNT;
 
         TYRANO.kag.tag.scene_title = {

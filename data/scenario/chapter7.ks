@@ -813,4 +813,4 @@
 [bg storage="ch7_last2.webp" time=900]
 「ありがとう……拓海」[p]
 
-[s]
+[jump storage="ending.ks"]
