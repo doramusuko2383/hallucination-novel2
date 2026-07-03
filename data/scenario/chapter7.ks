@@ -816,5 +816,5 @@
 恵は、涙をぬぐいながら小さく微笑み返し、静かに呟いた。[p]
 [bg storage="ch7_last2.webp" time=900]
 「ありがとう……拓海」[p]
-
+[wait time=3000]
 [jump storage="ending.ks"]
