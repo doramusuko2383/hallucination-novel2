@@ -395,15 +395,15 @@
                 var kag = TYRANO.kag;
                 var images = [
                     { storage: "ch01_sc01_rooftop_wait.webp", hold: 9000, sepia: true },
-                    { storage: "ch2_ayaka_and_megumi.webp", hold: 9000 },
-                    { storage: "ch3_karaoke_talk.webp", hold: 10000 },
-                    { storage: "ch4_takumi_megumi.webp", hold: 10000 },
-                    { storage: "ch5_rooftop_tatsuya_cry.webp", hold: 11000 },
-                    { storage: "ch6_5members.webp", hold: 11000 },
-                    { storage: "ch6_ayaka_episode.webp", hold: 10000 },
-                    { storage: "ch6_ayaka_memory.webp", hold: 10000 },
-                    { storage: "ch7_shakehands.webp", hold: 12000 },
-                    { storage: "ch7_ending.webp", hold: 15000, final: true }
+                    { storage: "ch2_ayaka_and_megumi.webp", hold: 9000, sepia: true },
+                    { storage: "ch3_karaoke_talk.webp", hold: 10000, sepia: true },
+                    { storage: "ch4_takumi_megumi.webp", hold: 10000, sepia: true },
+                    { storage: "ch5_rooftop_tatsuya_cry.webp", hold: 11000, sepia: true },
+                    { storage: "ch6_5members.webp", hold: 11000, sepia: true },
+                    { storage: "ch6_ayaka_episode.webp", hold: 10000, sepia: true },
+                    { storage: "ch6_ayaka_memory.webp", hold: 10000, sepia: true },
+                    { storage: "ch7_shakehands.webp", hold: 12000, sepia: true },
+                    { storage: "ch7_ending.webp", hold: 15000, sepia: true, final: true }
                 ];
                 var credits = [
                     ["Scenario", "プロ山"],
@@ -433,9 +433,16 @@
                     credit.addClass("is-visible");
                 }
                 function cleanupAndNext() {
+                    var baseLayer = kag.layer.getLayer("base", "fore");
+
                     timers.forEach(clearTimeout);
                     kag.setSkip(false);
                     kag.stat.is_skip = false;
+                    baseLayer.empty();
+                    baseLayer.css({
+                        "background-image": "none",
+                        "background-color": "#000000"
+                    });
                     ending.remove();
                     kag.ftag.nextOrder();
                 }
