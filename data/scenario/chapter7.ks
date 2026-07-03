@@ -787,8 +787,11 @@
 
 [chara_hide_all]
 [wait time=1000]
-[glink text="前へ進む" target=*next]
+[glink text="前へ進む" target="*next"]
+[s]
+
 *next
+[cm]
 [wait time=1000]
 [fadeoutbgm time=3000]
 そう言いながら、拓海はそっと恵の手を両手で包み込むように握った。[p]
