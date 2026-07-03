@@ -1,0 +1,11 @@
+*start
+[cm]
+[clearfix]
+[hidemenubutton]
+[layopt layer="message0" visible=false]
+[stop_keyconfig]
+[stopbgm time=0]
+[playbgm storage="ending.ogg" loop=false volume=55 fadein=false]
+[hl_ending]
+[stopbgm time=0]
+[jump storage="title.ks"]
