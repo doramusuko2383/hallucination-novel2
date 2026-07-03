@@ -464,13 +464,13 @@
                 }
                 function showImage(index) {
                     var item = images[index];
-                    setShadeBlackInstant();
-                    photo.removeClass("hl-ending-sepia hl-ending-sepia-to-color");
-                    photo.attr("src", "./data/bgimage/" + item.storage);
-                    if (item.sepia) {
-                        photo.addClass("hl-ending-sepia");
-                    }
-                    later(120, function () {
+                    var revealed = false;
+
+                    function revealPreparedImage() {
+                        if (revealed) return;
+                        revealed = true;
+                        photo.off("load.hlEnding error.hlEnding");
+                        photo.removeClass("is-hidden");
                         revealImageInstant();
                         if (item.sepia) {
                             later(120, function () { photo.addClass("hl-ending-sepia-to-color"); });
@@ -479,11 +479,24 @@
                             credit.removeClass("is-visible");
                             later(5000, function () { endText.addClass("is-visible"); });
                         }
-                    });
+                    }
+
+                    setShadeBlackInstant();
+                    photo.addClass("is-hidden");
+                    photo.removeClass("hl-ending-sepia hl-ending-sepia-to-color");
+                    photo.one("load.hlEnding error.hlEnding", function () { later(80, revealPreparedImage); });
+                    photo.attr("src", "./data/bgimage/" + item.storage);
+                    if (item.sepia) {
+                        photo.addClass("hl-ending-sepia");
+                    }
+                    if (photo.get(0).complete) {
+                        later(80, revealPreparedImage);
+                    }
                     later(item.hold, function () {
                         if (index < images.length - 1) {
                             fadeToBlack();
-                            later(1150, function () { showImage(index + 1); });
+                            later(1050, function () { photo.addClass("is-hidden"); });
+                            later(1200, function () { showImage(index + 1); });
                             return;
                         }
                         later(1000, function () {

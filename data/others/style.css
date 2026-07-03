@@ -1168,3 +1168,7 @@ img.se_mute_on::after { display: none !important; }
 #hl-ending .hl-ending-intro.is-visible {
     opacity: 0.9;
 }
+
+#hl-ending .hl-ending-photo.is-hidden {
+    visibility: hidden;
+}
