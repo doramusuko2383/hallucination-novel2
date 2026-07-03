@@ -464,13 +464,15 @@
                 }
                 function showImage(index) {
                     var item = images[index];
-                    photo.removeClass("hl-ending-sepia hl-ending-sepia-to-color");
                     setShadeBlackInstant();
+                    photo.removeClass("hl-ending-sepia hl-ending-sepia-to-color");
                     photo.attr("src", "./data/bgimage/" + item.storage);
+                    if (item.sepia) {
+                        photo.addClass("hl-ending-sepia");
+                    }
                     later(120, function () {
                         revealImageInstant();
                         if (item.sepia) {
-                            photo.addClass("hl-ending-sepia");
                             later(120, function () { photo.addClass("hl-ending-sepia-to-color"); });
                         }
                         if (item.final) {
