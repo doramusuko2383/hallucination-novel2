@@ -1178,7 +1178,7 @@ img.se_mute_on::after { display: none !important; }
    - TyranoScript標準の立体グラデーションを上書き
    - サスペンス作品に溶け込む静かなフラットデザイン
 ========================= */
-.glink_button:not(.title-logo):not(.title-subtitle) {
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice) {
     box-sizing: border-box !important;
     overflow: hidden;
     min-width: 220px;
@@ -1208,7 +1208,7 @@ img.se_mute_on::after { display: none !important; }
         transform 160ms ease;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle)::before {
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice)::before {
     content: "";
     position: absolute;
     top: 9px;
@@ -1221,8 +1221,8 @@ img.se_mute_on::after { display: none !important; }
     pointer-events: none;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):hover,
-.glink_button:not(.title-logo):not(.title-subtitle):focus-visible {
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):hover,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):focus-visible {
     color: #ffffff !important;
     border-color: rgba(225, 238, 246, 0.72) !important;
     background: rgba(18, 28, 40, 0.82) !important;
@@ -1230,42 +1230,42 @@ img.se_mute_on::after { display: none !important; }
     text-decoration: none !important;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):hover::before,
-.glink_button:not(.title-logo):not(.title-subtitle):focus-visible::before {
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):hover::before,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):focus-visible::before {
     background: rgba(225, 238, 246, 0.78);
     opacity: 1;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):active {
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):active {
     position: absolute !important;
     color: rgba(219, 232, 239, 0.82) !important;
     background: rgba(2, 6, 11, 0.86) !important;
     transform: translateY(1px);
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle).black,
-.glink_button:not(.title-logo):not(.title-subtitle).gray,
-.glink_button:not(.title-logo):not(.title-subtitle).white,
-.glink_button:not(.title-logo):not(.title-subtitle).orange,
-.glink_button:not(.title-logo):not(.title-subtitle).blue,
-.glink_button:not(.title-logo):not(.title-subtitle).rosy,
-.glink_button:not(.title-logo):not(.title-subtitle).green,
-.glink_button:not(.title-logo):not(.title-subtitle).pink,
-.glink_button:not(.title-logo):not(.title-subtitle).red {
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).black,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).gray,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).white,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).orange,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).blue,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).rosy,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).green,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).pink,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).red {
     color: rgba(238, 244, 248, 0.92) !important;
     border-color: rgba(210, 225, 235, 0.38) !important;
     background: rgba(5, 10, 17, 0.72) !important;
     filter: none !important;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle).small,
-.glink_button:not(.title-logo):not(.title-subtitle).medium,
-.glink_button:not(.title-logo):not(.title-subtitle).bigrounded {
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).small,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).medium,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).bigrounded {
     border-radius: 4px !important;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle).quiet_system_button,
-.glink_button:not(.title-logo):not(.title-subtitle).suspense_close {
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).quiet_system_button,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice).suspense_close {
     min-width: 96px;
     min-height: 32px;
     padding: 7px 14px 6px !important;
