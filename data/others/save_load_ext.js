@@ -394,16 +394,16 @@
             start: function () {
                 var kag = TYRANO.kag;
                 var images = [
-                    { storage: "ch01_sc01_rooftop_wait.webp", hold: 9000, sepia: true },
-                    { storage: "ch2_ayaka_and_megumi.webp", hold: 9000, sepia: true },
-                    { storage: "ch3_karaoke_talk.webp", hold: 10000, sepia: true },
-                    { storage: "ch4_takumi_megumi.webp", hold: 10000, sepia: true },
-                    { storage: "ch5_rooftop_tatsuya_cry.webp", hold: 11000, sepia: true },
-                    { storage: "ch6_5members.webp", hold: 11000, sepia: true },
-                    { storage: "ch6_ayaka_episode.webp", hold: 10000, sepia: true },
-                    { storage: "ch6_ayaka_memory.webp", hold: 10000, sepia: true },
-                    { storage: "ch7_shakehands.webp", hold: 12000, sepia: true },
-                    { storage: "ch7_ending.webp", hold: 15000, sepia: true, final: true }
+                    { storage: "ch01_sc01_rooftop_wait.webp", hold: 8500, sepia: true },
+                    { storage: "ch2_ayaka_and_megumi.webp", hold: 8500, sepia: true },
+                    { storage: "ch3_karaoke_talk.webp", hold: 9500, sepia: true },
+                    { storage: "ch4_takumi_megumi.webp", hold: 9500, sepia: true },
+                    { storage: "ch5_rooftop_tatsuya_cry.webp", hold: 10500, sepia: true },
+                    { storage: "ch6_5members.webp", hold: 10500, sepia: true },
+                    { storage: "ch6_ayaka_episode.webp", hold: 9500, sepia: true },
+                    { storage: "ch6_ayaka_memory.webp", hold: 9500, sepia: true },
+                    { storage: "ch7_shakehands.webp", hold: 11500, sepia: true },
+                    { storage: "ch7_ending.webp", hold: 14500, sepia: true, final: true }
                 ];
                 var credits = [
                     ["Scenario", "プロ山"],
@@ -415,6 +415,7 @@
                 var ending = $("<div></div>").attr("id", "hl-ending");
                 var photo = $("<img>").addClass("hl-ending-photo").attr("alt", "");
                 var shade = $("<div></div>").addClass("hl-ending-shade");
+                var introText = $("<div></div>").addClass("hl-ending-intro").text("思い出アルバム");
                 var credit = $("<div></div>").addClass("hl-ending-credit");
                 var endText = $("<div></div>").addClass("hl-ending-end").text("END");
                 var timers = [];
@@ -431,6 +432,21 @@
                     credit.find(".hl-ending-credit-role").text(credits[index][0]);
                     credit.find(".hl-ending-credit-name").text(credits[index][1]);
                     credit.addClass("is-visible");
+                }
+                function setShadeBlackInstant() {
+                    shade.addClass("hl-ending-no-transition is-black");
+                    shade[0].offsetHeight;
+                    shade.removeClass("hl-ending-no-transition");
+                }
+                function revealImageInstant() {
+                    shade.addClass("hl-ending-no-transition");
+                    shade.removeClass("is-black");
+                    shade[0].offsetHeight;
+                    shade.removeClass("hl-ending-no-transition");
+                }
+                function fadeToBlack() {
+                    shade.removeClass("hl-ending-no-transition");
+                    shade.addClass("is-black");
                 }
                 function cleanupAndNext() {
                     var baseLayer = kag.layer.getLayer("base", "fore");
@@ -449,10 +465,10 @@
                 function showImage(index) {
                     var item = images[index];
                     photo.removeClass("hl-ending-sepia hl-ending-sepia-to-color");
+                    setShadeBlackInstant();
                     photo.attr("src", "./data/bgimage/" + item.storage);
-                    shade.addClass("is-black");
-                    later(80, function () {
-                        shade.removeClass("is-black");
+                    later(120, function () {
+                        revealImageInstant();
                         if (item.sepia) {
                             photo.addClass("hl-ending-sepia");
                             later(120, function () { photo.addClass("hl-ending-sepia-to-color"); });
@@ -464,12 +480,12 @@
                     });
                     later(item.hold, function () {
                         if (index < images.length - 1) {
-                            shade.addClass("is-black");
-                            later(1000, function () { showImage(index + 1); });
+                            fadeToBlack();
+                            later(1150, function () { showImage(index + 1); });
                             return;
                         }
                         later(1000, function () {
-                            shade.addClass("is-black");
+                            fadeToBlack();
                             later(2000, function () {
                                 endText.removeClass("is-visible");
                                 later(2000, cleanupAndNext);
@@ -490,10 +506,15 @@
                     event.stopPropagation();
                     return false;
                 });
-                ending.append(photo, shade, credit, endText);
+                ending.append(photo, shade, introText, credit, endText);
                 $("#tyrano_base").append(ending);
+                setShadeBlackInstant();
+                introText.addClass("is-visible");
                 credits.forEach(function (_, i) { later(i * 19000 + 7000, function () { setCredit(i); }); });
-                showImage(0);
+                later(5000, function () {
+                    introText.removeClass("is-visible");
+                    showImage(0);
+                });
             }
         };
         if (TYRANO.kag.ftag && TYRANO.kag.ftag.master_tag) {

@@ -1144,3 +1144,27 @@ img.se_mute_on::after { display: none !important; }
 #hl-ending .hl-ending-end.is-visible {
     opacity: 0.95;
 }
+
+#hl-ending .hl-ending-shade.hl-ending-no-transition {
+    transition: none;
+}
+
+#hl-ending .hl-ending-intro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 24px;
+    letter-spacing: 0.18em;
+    text-indent: 0.18em;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 1200ms ease-in-out;
+    pointer-events: none;
+}
+
+#hl-ending .hl-ending-intro.is-visible {
+    opacity: 0.9;
+}
