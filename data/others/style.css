@@ -1172,3 +1172,152 @@ img.se_mute_on::after { display: none !important; }
 #hl-ending .hl-ending-photo.is-hidden {
     visibility: hidden;
 }
+
+/* =========================
+   作品専用 選択肢UI
+   - TyranoScript標準の立体グラデーションを上書き
+   - サスペンス作品に溶け込む静かなフラットデザイン
+========================= */
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button) {
+    box-sizing: border-box !important;
+    overflow: hidden;
+    min-width: 220px;
+    min-height: 42px;
+    padding: 11px 28px 10px !important;
+    border: 1px solid rgba(210, 225, 235, 0.38) !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    color: rgba(238, 244, 248, 0.92) !important;
+    background: rgba(5, 10, 17, 0.72) !important;
+    box-shadow: none !important;
+    filter: none !important;
+    font-family: "GenMin", "Yu Mincho", serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0.16em !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.82) !important;
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        color 160ms ease,
+        opacity 160ms ease,
+        transform 160ms ease;
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button)::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    bottom: 9px;
+    left: 12px;
+    width: 1px;
+    background: rgba(180, 214, 232, 0.48);
+    opacity: 0.72;
+    transition: opacity 160ms ease, background-color 160ms ease;
+    pointer-events: none;
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):hover,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):focus-visible {
+    color: #ffffff !important;
+    border-color: rgba(225, 238, 246, 0.72) !important;
+    background: rgba(18, 28, 40, 0.82) !important;
+    box-shadow: 0 0 14px rgba(137, 173, 197, 0.18) !important;
+    text-decoration: none !important;
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):hover::before,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):focus-visible::before {
+    background: rgba(225, 238, 246, 0.78);
+    opacity: 1;
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):active {
+    position: absolute !important;
+    color: rgba(219, 232, 239, 0.82) !important;
+    background: rgba(2, 6, 11, 0.86) !important;
+    transform: translateY(1px);
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).black,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).gray,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).white,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).orange,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).blue,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).rosy,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).green,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).pink,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).red {
+    color: rgba(238, 244, 248, 0.92) !important;
+    border-color: rgba(210, 225, 235, 0.38) !important;
+    background: rgba(5, 10, 17, 0.72) !important;
+    filter: none !important;
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).small,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).medium,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).bigrounded {
+    border-radius: 4px !important;
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).quiet_system_button,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).suspense_close {
+    min-width: 96px;
+    min-height: 32px;
+    padding: 7px 14px 6px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.16em !important;
+}
+
+
+/* タイトル／起動ゲートは作品内選択肢UIの対象外にする */
+.layer_free .glink_button.title-logo,
+.layer_free .glink_button.title-subtitle,
+.layer_free .glink_button.title-choice,
+.layer_free .glink_button.audio-start-button {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    filter: none !important;
+    overflow: visible !important;
+}
+
+.layer_free .glink_button.title-choice {
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: rgba(248, 250, 255, 0.94) !important;
+    font-family: "GenMin", "Times New Roman", serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.34em !important;
+    text-shadow: 0 0 7px rgba(0,0,0,0.9), 0 0 14px rgba(22,32,54,0.8) !important;
+}
+
+.layer_free .glink_button.audio-start-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid rgba(238, 244, 248, 0.55) !important;
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: 0 0 18px rgba(160, 190, 230, 0.16) !important;
+    color: rgba(248, 250, 255, 0.94) !important;
+    font-family: "GenMin", "Times New Roman", serif !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.28em !important;
+    text-shadow: 0 0 8px rgba(255,255,255,0.28), 0 0 14px rgba(0,0,0,0.85) !important;
+}
+
+.layer_free .glink_button.title-logo::before,
+.layer_free .glink_button.title-logo::after,
+.layer_free .glink_button.audio-start-button::before,
+.layer_free .glink_button.audio-start-button::after {
+    content: none;
+}
