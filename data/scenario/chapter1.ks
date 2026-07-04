@@ -655,7 +655,7 @@
 [wait time=500]
 拓海はこの賭けをやめさせることに失敗した。[l]
 むしろ状況を悪化させたようだった。[p]
-どうしようもない。このままじゃ、本当に焼かれる――。[p]
+どうしようもない。このままじゃ、本当に焼かれる――。
 
 [glink text="出口へ走る" target="*run" x="510" y="250" width="260" height="44" size="20" clickse="se/click.ogg"]
 [glink text="龍也に挑む" target="*fight" x="510" y="330" width="260" height="44" size="20" clickse="se/click.ogg"]
