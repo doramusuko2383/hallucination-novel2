@@ -88,7 +88,7 @@
 
 教師にもクラスメイトにも見えないところで行われるこの「日課」を、[r]誰にも相談することができない。[p]
 [wait time=1000]
-[glink text="屋上へ向かう" target="*next" clickse="se/click.ogg"]
+[glink text="屋上へ向かう" target="*next" x="510" y="360" width="260" height="44" size="20" clickse="se/click.ogg"]
 [s]
 
 *next
@@ -657,9 +657,9 @@
 むしろ状況を悪化させたようだった。[p]
 どうしようもない。このままじゃ、本当に焼かれる――。[p]
 
-[glink text="出口へ走る" target="*run" clickse="se/click.ogg"]
-[glink text="龍也に挑む" target="*fight" clickse="se/click.ogg"]
-[glink text="彩香の横を抜ける" target="*ayaka" clickse="se/click.ogg"]
+[glink text="出口へ走る" target="*run" x="510" y="250" width="260" height="44" size="20" clickse="se/click.ogg"]
+[glink text="龍也に挑む" target="*fight" x="510" y="330" width="260" height="44" size="20" clickse="se/click.ogg"]
+[glink text="彩香の横を抜ける" target="*ayaka" x="510" y="410" width="260" height="44" size="20" clickse="se/click.ogg"]
 [s]
 
 *run
