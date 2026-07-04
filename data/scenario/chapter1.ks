@@ -87,6 +87,12 @@
 昼休みになると、校舎の屋上に来るように命じられている。[p]
 
 教師にもクラスメイトにも見えないところで行われるこの「日課」を、[r]誰にも相談することができない。[p]
+[wait time=1000]
+[glink text="屋上へ向かう" target="*next"]
+[s]
+
+*next
+[cm]
 
 [bg storage="bg_rooftop_door.webp" time=600]
 [wait time=500]
@@ -649,17 +655,92 @@
 [wait time=500]
 拓海はこの賭けをやめさせることに失敗した。[l]
 むしろ状況を悪化させたようだった。[p]
-どうしようもないので、そこから全速力で逃げようと試みた。[p]
+どうしようもない。このままじゃ、本当に焼かれる――。[p]
+
+[glink text="出口へ走る" target="*run"]
+[glink text="龍也に挑む" target="*fight"]
+[glink text="彩香の横を抜ける" target="*ayaka"]
+[s]
+
+*run
+[cm]
+
+[auto_chara name="拓海" face="level1_normal" left=120]
+拓海は翔太の横をすり抜け、一気に出口へ駆け出した。[p]
+
+[auto_chara name="翔太" face="normal" left=180]
+「おっ！逃げる気か？」[p]
+
 [auto_chara name="龍也" face="angry" left=50]
+
 [playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=1500]
+
 「おっと」[p]
 
-龍也は抜群の反射神経で、逃走を企てる獲物の腕を掴んだ。[p]
+龍也は素早く回り込み、逃げようとした拓海の腕を掴んだ。[p]
+
+[jump target="*caught"]
+
+
+*fight
+[cm]
+
+[auto_chara name="拓海" face="level1_normal" left=120]
+拓海は覚悟を決め、龍也へ拳を振り上げた。[p]
+
+[auto_chara name="龍也" face="normal" left=50]
+しかし龍也は軽く首を傾けるだけでかわした。[p]
+
+「やっと反抗する気になったか」[p]
+
+[auto_chara name="拓海" face="level1_normal" left=120]
+敵わないと思った拓海は、諦めてそこから逃走を図る[p]
+
+[auto_chara name="龍也" face="angry" left=50]
+
+「おっと」[p]
+
+龍也は一瞬で拓海との距離を詰め、その腕を掴んだ。[p]
+
+[playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=1500]
+
+[jump target="*caught"]
+
+
+*ayaka
+[cm]
+
+[auto_chara name="拓海" face="level1_normal" left=120]
+拓海は彩香を押しのけ、その隙に逃げようと踏み出した。[p]
+
+[auto_chara name="綾香" face="serious" left=300]
+しかし彩香は一歩下がっただけだった。[p]
+
+「龍也」[p]
+
+その一言だけ。[p]
+
+次の瞬間には龍也が腕を掴んでいた。[p]
+
+[auto_chara name="龍也" face="angry" left=50]
+
+[playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=1500]
+
+[jump target="*caught"]
+
+
+*caught
+
 「何逃げようとしてんだよ……お前」[p]
 
+[playse storage="se/hold_down.ogg" volume=40]
+
 そう言って龍也は、そのまま拓海を後ろから締め技で地面に押さえつけた。[p]
-[playse storage=se/hold_down.ogg volume=40]
-拓海は凄まじい力で抵抗をしているが、体格の違いからか、身動きがほとんどとれない。[p]
+
+[auto_chara name="拓海" face="pain"]
+
+拓海は凄まじい力で抵抗をしているが、体格の違いからか、身動きがほとんど取れない。[p]
+
 [auto_chara name="翔太" face="serious" left=180]
 「よし、じゃあ龍也はそのまま押さえてね」[p]
 
