@@ -713,6 +713,18 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 心臓がやけに早く脈打つのを感じながら、[r]
 静かに恵の方へと歩み寄る。[p]
 
+*ch2_choice_megumi_approach
+[cm]
+[free layer="fix" name="ch2_bad_end_number"]
+[free layer="fix" name="ch2_bad_end_title"]
+[bg storage="bg_classroom_day2.webp" time=0]
+[playbgm storage="classroom_buzzing.ogg" volume=70 fadein=true]
+[glink text="塾の話から切り出す" target="*ch2_megumi_approach_good" x="470" y="300" width="340" height="44" size="20" clickse="se/click.ogg"]
+[glink text="いきなり彩香のことを聞く" target="*ch2_megumi_approach_bad" x="470" y="380" width="340" height="44" size="20" clickse="se/click.ogg"]
+[s]
+
+*ch2_megumi_approach_good
+[cm]
 [auto_chara name="拓海" face="level2_smile"]
 「菊池さん、ちょっといいかな」[p]
 
@@ -946,3 +958,63 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 [wait time=1000]
 
 @jump storage="chapter3.ks" target="*chapter3"
+
+*ch2_megumi_approach_bad
+[cm]
+[auto_chara name="拓海" face="level2_normal"]
+「五組の上田さんと友達だよね？」[p]
+
+[auto_chara name="恵" face="normal"]
+恵は、少しだけ不思議そうに目を丸くした。[p]
+
+「え……急にどうしたの？」[p]
+
+[auto_chara name="拓海" face="level2_surprise"]
+しまった。[p]
+
+早すぎた。[p]
+
+まだ普通に話せる関係ですらない相手に、[r]
+いきなり彩香の名前を出すべきではなかった。[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「いや……なんでもない」[p]
+
+[auto_chara name="恵" face="normal"]
+「そう……？」[p]
+
+恵はそれ以上追及しなかった。[r]
+けれど、その表情には小さな警戒が残っていた。[p]
+
+その後、拓海は自然に会話を続けることができなかった。[p]
+
+彩香の中学も、住んでいる地域も、バイト先の手がかりも。[r]
+何ひとつ掴めないまま、時間だけが過ぎていった。[p]
+
+復讐の計画は、そこで止まった。[p]
+
+龍也たちのいじめは終わらない。[p]
+
+明日も、明後日も、[r]
+変わらない日常が続いていく――[p]
+
+*ch2_megumi_approach_continue
+[fadeoutbgm time=2000]
+[fadeoutse time=1000]
+[chara_hide_all time=300]
+[wait time=2000]
+[bg storage="black.png" time=1000]
+[wait time=2000]
+[ptext layer="fix" name="ch2_bad_end_number" text="BAD END 01" x="390" y="290" width="500" align="center" size="44" color="0xf0f6fa" time="1000"]
+[wait time=1600]
+[ptext layer="fix" name="ch2_bad_end_title" text="変えられなかった日常" x="390" y="360" width="500" align="center" size="26" color="0xdde6ec" time="1000"]
+[wait time=1600]
+[glink text="この選択肢からやり直す" target="*ch2_choice_megumi_approach" x="470" y="470" width="340" height="44" size="18" clickse="se/click.ogg"]
+[glink text="タイトルへ戻る" target="*ch2_megumi_approach_title" x="470" y="540" width="340" height="44" size="18" clickse="se/click.ogg"]
+[s]
+
+*ch2_megumi_approach_title
+[cm]
+[free layer="fix" name="ch2_bad_end_number"]
+[free layer="fix" name="ch2_bad_end_title"]
+@jump storage="first.ks" target="*title_menu"
