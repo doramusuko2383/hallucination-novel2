@@ -34,6 +34,14 @@
 	top: 1px;
 }
 
+/* Auto-placed choices must keep their measured button size inside the flex wrapper.
+   Without this, a small available area can shrink them until they overlap and
+   become difficult to click. */
+.glink_auto_place_wrapper > .glink_button,
+.glink_auto_place_wrapper > .button_graphic {
+	flex: 0 0 auto;
+}
+
 
 .button_graphic {
 	display: inline-block;
