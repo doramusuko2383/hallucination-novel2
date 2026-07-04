@@ -694,7 +694,7 @@
 「やっと反抗する気になったか」[p]
 
 [auto_chara name="拓海" face="level1_normal" left=120]
-敵わないと思った拓海は、諦めてそこから逃走を図る[p]
+敵わないと思った拓海は、諦めてそこから逃走を図る。[p]
 
 [auto_chara name="龍也" face="angry" left=50]
 
@@ -737,7 +737,7 @@
 
 そう言って龍也は、そのまま拓海を後ろから締め技で地面に押さえつけた。[p]
 
-[auto_chara name="拓海" face="pain"]
+[auto_chara name="拓海" face="level1_shout" left=120]
 
 拓海は凄まじい力で抵抗をしているが、体格の違いからか、身動きがほとんど取れない。[p]
 
