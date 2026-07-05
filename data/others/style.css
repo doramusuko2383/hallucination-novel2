@@ -1283,7 +1283,7 @@ img.se_mute_on::after { display: none !important; }
     border-radius: 0 !important;
     outline: none !important;
     color: rgba(255, 255, 255, 0.92) !important;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.34) 18%, rgba(0, 0, 0, 0.30) 70%, rgba(0, 0, 0, 0)) !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.10), rgba(10, 10, 10, 0.76) 18%, rgba(18, 18, 18, 0.70) 70%, rgba(0, 0, 0, 0.08)) !important;
     box-shadow: none !important;
     filter: none !important;
     font-family: "GenMin", "Yu Mincho", "Hiragino Mincho ProN", serif !important;
@@ -1332,7 +1332,7 @@ img.se_mute_on::after { display: none !important; }
 .glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):hover,
 .glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):focus-visible {
     color: rgba(255, 255, 255, 0.99) !important;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(10, 14, 18, 0.42) 18%, rgba(10, 14, 18, 0.36) 70%, rgba(0, 0, 0, 0)) !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.14), rgba(18, 22, 27, 0.86) 18%, rgba(24, 28, 34, 0.78) 70%, rgba(0, 0, 0, 0.10)) !important;
     box-shadow: none !important;
     text-decoration: none !important;
 }
@@ -1365,7 +1365,7 @@ img.se_mute_on::after { display: none !important; }
 .glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).red {
     color: rgba(255, 255, 255, 0.92) !important;
     border: 0 !important;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.34) 18%, rgba(0, 0, 0, 0.30) 70%, rgba(0, 0, 0, 0)) !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.10), rgba(10, 10, 10, 0.76) 18%, rgba(18, 18, 18, 0.70) 70%, rgba(0, 0, 0, 0.08)) !important;
     filter: none !important;
 }
 
