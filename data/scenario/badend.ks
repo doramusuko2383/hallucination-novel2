@@ -23,6 +23,7 @@
 [playbgm storage="badend.ogg" loop=false volume=55 fadein=true time=400]
 [iscript]
 (function prepareBadEndUi() {
+    $("body").addClass("badend-active");
     $(".button_menu, .role_button, .quiet_system_button").hide();
 })();
 [endscript]
@@ -37,7 +38,7 @@ $(".bad_end_number").updatePText(f.bad_end_no || "");
 [iscript]
 $(".bad_end_title").updatePText(f.bad_end_title || "");
 [endscript]
-[ptext layer="fix" name="bad_end_light,badend-title-light" text=" " x="315" y="382" width="650" height="20" size="1" color="0xffffff" time="600"]
+[ptext layer="fix" name="bad_end_light,badend-title-light" text=" " x="230" y="270" width="820" height="145" size="1" color="0xffffff" time="600"]
 [wait time=550]
 [iscript]
 (function runBadEndGlitch() {
@@ -52,7 +53,7 @@ $(".bad_end_title").updatePText(f.bad_end_title || "");
 
     function pulse() {
         if (window.TYRANO && TYRANO.kag && TYRANO.kag.ftag) {
-            TYRANO.kag.ftag.startTag("playse", { storage: "se/short_glitch.ogg", volume: 28 });
+            TYRANO.kag.ftag.startTag("playse", { storage: "se/short_glitch.ogg", volume: 18 });
         }
         targets.each(function () {
             var target = $(this);
@@ -63,12 +64,12 @@ $(".bad_end_title").updatePText(f.bad_end_title || "");
         targets.addClass("badend-glitching");
         setTimeout(function () {
             targets.removeClass("badend-glitching");
-        }, 260);
+        }, 320);
     }
 
     pulse();
     clearInterval(window.__badEndGlitchTimer);
-    window.__badEndGlitchTimer = setInterval(pulse, 3600);
+    window.__badEndGlitchTimer = setInterval(pulse, 3800);
 })();
 [endscript]
 [wait time=300]
@@ -81,6 +82,7 @@ $(".bad_end_title").updatePText(f.bad_end_title || "");
 [iscript]
 clearInterval(window.__badEndGlitchTimer);
 window.__badEndGlitchTimer = null;
+$("body").removeClass("badend-active");
 $(".button_menu, .role_button, .quiet_system_button").show();
 [endscript]
 [showmenubutton]
@@ -97,6 +99,7 @@ $(".button_menu, .role_button, .quiet_system_button").show();
 [iscript]
 clearInterval(window.__badEndGlitchTimer);
 window.__badEndGlitchTimer = null;
+$("body").removeClass("badend-active");
 $(".button_menu, .role_button, .quiet_system_button").show();
 [endscript]
 [showmenubutton]
