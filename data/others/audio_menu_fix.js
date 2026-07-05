@@ -27,19 +27,41 @@
         "choice_ch7_next"
     ];
 
-    function clearChoiceButtons() {
-        CHOICE_BUTTON_NAMES.forEach(function (name) {
-            $("." + name).remove();
-        });
-        $(".layer_free").find(".glink_button, .button_graphic[data-event-tag='glink']").remove();
-        $(".glink_button_clicked, .glink_button_not_clicked, .glink_button.hidden").remove();
+    function getChoiceButtons() {
+        var selector = CHOICE_BUTTON_NAMES.map(function (name) {
+            return "." + name;
+        }).join(",");
+        return $(selector)
+            .add($(".layer_free").find(".glink_button, .button_graphic[data-event-tag='glink']"))
+            .add(".glink_button_clicked, .glink_button_not_clicked, .glink_button.hidden");
     }
 
-    function keepMenuButtonOnTop() {
+    function suspendChoiceButtonsForMenu() {
+        getChoiceButtons().addClass("hl_choice_suspended_for_menu").css({
+            "visibility": "hidden",
+            "pointer-events": "none"
+        });
+    }
+
+    function restoreChoiceButtonsAfterMenu() {
+        $(".hl_choice_suspended_for_menu").removeClass("hl_choice_suspended_for_menu").css({
+            "visibility": "",
+            "pointer-events": ""
+        });
+    }
+
+    function keepMenuLayersOnTop() {
         $(".button_menu").css({
-            "z-index": 2147483647,
+            "z-index": 2147483646,
             "pointer-events": "auto"
         });
+        var kag = getKag();
+        if (kag && kag.layer) {
+            kag.layer.getMenuLayer().css({
+                "z-index": 2147483647,
+                "pointer-events": "auto"
+            });
+        }
     }
 
     function getKag() {
@@ -166,11 +188,31 @@
         kag.menu.__hlChoiceMenuPatched = true;
         var originalShowMenu = kag.menu.showMenu;
         kag.menu.showMenu = function () {
-            clearChoiceButtons();
-            keepMenuButtonOnTop();
-            return originalShowMenu.apply(this, arguments);
+            suspendChoiceButtonsForMenu();
+            keepMenuLayersOnTop();
+            var result = originalShowMenu.apply(this, arguments);
+            var layerMenu = this.kag.layer.getMenuLayer();
+            layerMenu.off("transitionend.hlChoiceMenu animationend.hlChoiceMenu");
+            layerMenu.on("transitionend.hlChoiceMenu animationend.hlChoiceMenu", function () {
+                if (!layerMenu.is(":visible") || layerMenu.children().length === 0) {
+                    restoreChoiceButtonsAfterMenu();
+                    layerMenu.off("transitionend.hlChoiceMenu animationend.hlChoiceMenu");
+                }
+            });
+            var hasShownMenu = false;
+            setTimeout(function watchMenuClosed() {
+                if (layerMenu.is(":visible") && layerMenu.children().length > 0) {
+                    hasShownMenu = true;
+                }
+                if (hasShownMenu && (!layerMenu.is(":visible") || layerMenu.children().length === 0)) {
+                    restoreChoiceButtonsAfterMenu();
+                    return;
+                }
+                setTimeout(watchMenuClosed, 100);
+            }, 100);
+            return result;
         };
-        keepMenuButtonOnTop();
+        keepMenuLayersOnTop();
         return true;
     }
 

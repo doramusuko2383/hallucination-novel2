@@ -53,10 +53,15 @@ body {
 /* メニューを開くボタン */
 .button_menu {
     position: absolute;
-    z-index: 2147483647;
+    z-index: 2147483646;
     pointer-events: auto;
     top: 20px;
     cursor: pointer;
+}
+
+.layer_menu {
+    z-index: 2147483647;
+    pointer-events: auto;
 }
 
 /* クリック待ちグリフ */
