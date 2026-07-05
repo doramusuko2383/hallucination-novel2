@@ -24,5 +24,5 @@
 [clearfix]
 [free_layermode time="100" wait="true"]
 [stopse]
-[stopbgm time=0]
+[stopbgm time=0 buf_all="true"]
 @jump storage="title.ks"

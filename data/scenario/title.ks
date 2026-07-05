@@ -5,6 +5,6 @@
 @hidemenubutton
 @stop_bgmovie time=0 wait=true
 [stopse]
-[stopbgm time=0]
+[stopbgm time=0 buf_all="true"]
 [call storage="macro.ks"]
 @jump storage="first.ks" target="*title_menu"
