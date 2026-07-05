@@ -16,9 +16,9 @@
 [free layer="fix" name="bad_end_divider"]
 [free layer="fix" name="bad_end_retry"]
 [free layer="fix" name="bad_end_title_return"]
-[fadeoutbgm time=800]
-[fadeoutse time=800]
-[chara_hide_all time=300]
+[fadeoutbgm time=600]
+[fadeoutse time=600]
+[chara_hide_all time=220]
 [bg storage="black.png" time=0]
 [iscript]
 (function prepareBadEndUi() {
@@ -26,19 +26,18 @@
 })();
 [endscript]
 [ptext layer="fix" name="bad_end_bg,badend-screen" text=" " x="0" y="0" width="1280" height="720" size="1" color="0xffffff" time="0"]
-[wait time=1200]
-[ptext layer="fix" name="bad_end_number,badend-kicker" text="" x="0" y="262" width="1280" align="center" size="18" color="0xe9edf2" time="800"]
+[wait time=700]
+[ptext layer="fix" name="bad_end_number,badend-kicker" text="" x="0" y="262" width="1280" align="center" size="18" color="0xe9edf2" time="600"]
 [iscript]
 $(".bad_end_number").updatePText(f.bad_end_no || "");
 [endscript]
-[wait time=320]
-[playse storage=se/short_glitch.ogg volume=28]
-[ptext layer="fix" name="bad_end_title,badend-title-glitch" text="" x="0" y="304" width="1280" align="center" size="54" color="0xf7f8fa" time="900"]
+[wait time=200]
+[ptext layer="fix" name="bad_end_title,badend-title-glitch" text="" x="0" y="304" width="1280" align="center" size="54" color="0xf7f8fa" time="700"]
 [iscript]
 $(".bad_end_title").updatePText(f.bad_end_title || "");
 [endscript]
-[ptext layer="fix" name="bad_end_light,badend-title-light" text=" " x="315" y="382" width="650" height="20" size="1" color="0xffffff" time="800"]
-[wait time=900]
+[ptext layer="fix" name="bad_end_light,badend-title-light" text=" " x="315" y="382" width="650" height="20" size="1" color="0xffffff" time="600"]
+[wait time=550]
 [iscript]
 (function runBadEndGlitch() {
     var targets = $(".badend-title-glitch");
@@ -51,6 +50,9 @@ $(".bad_end_title").updatePText(f.bad_end_title || "");
     });
 
     function pulse() {
+        if (window.TYRANO && TYRANO.kag && TYRANO.kag.ftag) {
+            TYRANO.kag.ftag.startTag("playse", { storage: "se/short_glitch.ogg", volume: 28 });
+        }
         targets.each(function () {
             var target = $(this);
             target.attr("data-text", target.text());
@@ -68,9 +70,9 @@ $(".bad_end_title").updatePText(f.bad_end_title || "");
     window.__badEndGlitchTimer = setInterval(pulse, 3600);
 })();
 [endscript]
-[wait time=520]
+[wait time=300]
 [glink name="bad_end_retry,badend-choice" text="この選択肢からやり直す" target="*bad_end_retry" x="440" y="474" width="400" height="42" size="18" clickse="se/click.ogg"]
-[ptext layer="fix" name="bad_end_divider,badend-choice-divider" text=" " x="410" y="540" width="460" height="1" size="1" color="0xffffff" time="700"]
+[ptext layer="fix" name="bad_end_divider,badend-choice-divider" text=" " x="440" y="540" width="400" height="1" size="1" color="0xffffff" time="500"]
 [glink name="bad_end_title_return,badend-choice" text="タイトルへ戻る" target="*bad_end_to_title" x="440" y="576" width="400" height="42" size="18" clickse="se/click.ogg"]
 [s]
 
