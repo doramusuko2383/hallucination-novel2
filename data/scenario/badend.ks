@@ -31,7 +31,7 @@
 [wait time=700]
 [ptext layer="fix" name="bad_end_number,badend-kicker" text="" x="0" y="262" width="1280" align="center" size="18" color="0xe9edf2" time="600"]
 [iscript]
-$(".bad_end_number").updatePText(f.bad_end_no || "");
+$(".bad_end_number").updatePText(f.bad_end_no || "").addClass("badend-kicker-ready");
 [endscript]
 [wait time=200]
 [ptext layer="fix" name="bad_end_title,badend-title-glitch" text="" x="0" y="304" width="1280" align="center" size="54" color="0xf7f8fa" time="700"]
