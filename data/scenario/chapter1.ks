@@ -88,10 +88,11 @@
 
 教師にもクラスメイトにも見えないところで行われるこの「日課」を、[r]誰にも相談することができない。[p]
 [wait time=1000]
-[glink text="屋上へ向かう" target="*next" x="510" y="360" width="260" height="44" size="20" clickse="se/click.ogg"]
+[glink name="choice_ch1_go_rooftop" text="屋上へ向かう" target="*next" x="510" y="360" width="260" height="44" size="20" clickse="se/click.ogg"]
 [s]
 
 *next
+[clear_choice_buttons]
 [cm]
 
 [bg storage="bg_rooftop_door.webp" time=600]
@@ -657,12 +658,13 @@
 むしろ状況を悪化させたようだった。[p]
 どうしようもない。このままじゃ、本当に焼かれる――。
 
-[glink text="出口へ走る" target="*run" x="510" y="250" width="260" height="44" size="20" clickse="se/click.ogg"]
-[glink text="龍也に挑む" target="*fight" x="510" y="330" width="260" height="44" size="20" clickse="se/click.ogg"]
-[glink text="彩香の横を抜ける" target="*ayaka" x="510" y="410" width="260" height="44" size="20" clickse="se/click.ogg"]
+[glink name="choice_ch1_rooftop_run" text="出口へ走る" target="*run" x="510" y="250" width="260" height="44" size="20" clickse="se/click.ogg"]
+[glink name="choice_ch1_rooftop_fight" text="龍也に挑む" target="*fight" x="510" y="330" width="260" height="44" size="20" clickse="se/click.ogg"]
+[glink name="choice_ch1_rooftop_ayaka" text="彩香の横を抜ける" target="*ayaka" x="510" y="410" width="260" height="44" size="20" clickse="se/click.ogg"]
 [s]
 
 *run
+[clear_choice_buttons]
 [cm]
 
 [auto_chara name="拓海" face="level1_normal" left=120]
@@ -683,6 +685,7 @@
 
 
 *fight
+[clear_choice_buttons]
 [cm]
 
 [auto_chara name="拓海" face="level1_normal" left=120]
@@ -708,6 +711,7 @@
 
 
 *ayaka
+[clear_choice_buttons]
 [cm]
 
 [auto_chara name="拓海" face="level1_normal" left=120]

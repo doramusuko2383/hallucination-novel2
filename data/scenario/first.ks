@@ -498,24 +498,24 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 
 デバッグモード：
 ■チャプター選択
-[glink text="Chapter1 開始" target="*dbg_ch1_start"]
-[glink text="Chapter2 開始" target="*dbg_ch2_start"]
-[glink text="Chapter3 開始" target="*dbg_ch3_start"]
-[glink text="Chapter4 開始" target="*dbg_ch4_start"]
-[glink text="Chapter5 開始" target="*dbg_ch5_start"]
-[glink text="Chapter6 開始" target="*dbg_ch6_start"]
-[glink text="Chapter7 開始" target="*dbg_ch7_start"]
+[glink name="debug_choice_ch1_start" text="Chapter1 開始" target="*dbg_ch1_start"]
+[glink name="debug_choice_ch2_start" text="Chapter2 開始" target="*dbg_ch2_start"]
+[glink name="debug_choice_ch3_start" text="Chapter3 開始" target="*dbg_ch3_start"]
+[glink name="debug_choice_ch4_start" text="Chapter4 開始" target="*dbg_ch4_start"]
+[glink name="debug_choice_ch5_start" text="Chapter5 開始" target="*dbg_ch5_start"]
+[glink name="debug_choice_ch6_start" text="Chapter6 開始" target="*dbg_ch6_start"]
+[glink name="debug_choice_ch7_start" text="Chapter7 開始" target="*dbg_ch7_start"]
 
 ■現在テスト中
-[glink text="Chapter2 現在テスト中" target="*debug_ch2"]
-[glink text="通常起動に戻る" target="*debug_off"]
+[glink name="debug_choice_ch2_current_start" text="Chapter2 現在テスト中" target="*debug_ch2"]
+[glink name="debug_choice_off" text="通常起動に戻る" target="*debug_off"]
 
 [s]
 
 *debug_ch2
 [cm]
 チャプター2：
-[glink text="現在テスト中" target="*dbg_ch2_current"]
+[glink name="debug_choice_current" text="現在テスト中" target="*dbg_ch2_current"]
 ; [glink] は [s] 到達時に自動配置・表示されるため、ここで [p] を挟まない
 [s]
 

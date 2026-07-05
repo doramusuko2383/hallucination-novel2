@@ -53,7 +53,8 @@ body {
 /* メニューを開くボタン */
 .button_menu {
     position: absolute;
-    z-index: 99999;
+    z-index: 2147483647;
+    pointer-events: auto;
     top: 20px;
     cursor: pointer;
 }
