@@ -92,7 +92,6 @@
 [s]
 
 *next
-[clear_choice_buttons]
 [cm]
 
 [bg storage="bg_rooftop_door.webp" time=600]
@@ -664,7 +663,6 @@
 [s]
 
 *run
-[clear_choice_buttons]
 [cm]
 
 [auto_chara name="拓海" face="level1_normal" left=120]
@@ -685,7 +683,6 @@
 
 
 *fight
-[clear_choice_buttons]
 [cm]
 
 [auto_chara name="拓海" face="level1_normal" left=120]
@@ -711,7 +708,6 @@
 
 
 *ayaka
-[clear_choice_buttons]
 [cm]
 
 [auto_chara name="拓海" face="level1_normal" left=120]

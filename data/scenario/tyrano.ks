@@ -77,30 +77,6 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 
 
 
-; 選択肢 glink がメニューや次シーンに残らないよう共通で除去する
-[macro name="clear_choice_buttons"]
-[iscript]
-(function () {
-    var names = [
-        "choice_intro_leave",
-        "choice_intro_touch",
-        "choice_intro_listen",
-        "choice_ch1_go_rooftop",
-        "choice_ch1_rooftop_run",
-        "choice_ch1_rooftop_fight",
-        "choice_ch1_rooftop_ayaka",
-        "choice_ch2_megumi_good",
-        "choice_ch2_megumi_bad",
-        "choice_ch7_next"
-    ];
-    names.forEach(function (name) {
-        $("." + name).remove();
-    });
-    $(".glink_button_clicked, .glink_button_not_clicked, .glink_button.hidden").remove();
-    $(".layer_free").find(".glink_button, .button_graphic[data-event-tag='glink']").remove();
-}());
-[endscript]
-[endmacro]
 
 ;/////////////拡張 CGモードなどを利用するための設定
 
