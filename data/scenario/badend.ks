@@ -20,7 +20,7 @@
 [fadeoutse time=600]
 [chara_hide_all time=220]
 [bg storage="black.png" time=0]
-[playbgm storage="badend.ogg" loop=false volume=55 fadein=true time=400]
+[playbgm storage="badend.ogg" loop=true volume=55 fadein=true time=400]
 [iscript]
 (function prepareBadEndUi() {
     $("body").addClass("badend-active");
@@ -93,6 +93,7 @@ $(".button_menu, .role_button, .quiet_system_button").show();
 [free layer="fix" name="bad_end_divider"]
 [free layer="fix" name="bad_end_retry"]
 [free layer="fix" name="bad_end_title_return"]
+[stopbgm time=0]
 [jump storage=&f.bad_end_retry_storage target=&f.bad_end_retry_target]
 
 *bad_end_to_title
@@ -110,4 +111,5 @@ $(".button_menu, .role_button, .quiet_system_button").show();
 [free layer="fix" name="bad_end_divider"]
 [free layer="fix" name="bad_end_retry"]
 [free layer="fix" name="bad_end_title_return"]
+[stopbgm time=0]
 [jump storage="first.ks" target="*title_menu"]
