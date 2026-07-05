@@ -88,7 +88,8 @@
 
 教師にもクラスメイトにも見えないところで行われるこの「日課」を、[r]誰にも相談することができない。[p]
 [wait time=1000]
-[glink name="choice_ch1_go_rooftop" text="屋上へ向かう" target="*next" x="510" y="360" width="260" height="44" size="20" clickse="se/click.ogg"]
+[choice_start count=1 y=360]
+[choice name="choice_ch1_go_rooftop" text="屋上へ向かう" target="*next"]
 [s]
 
 *next
@@ -657,9 +658,10 @@
 むしろ状況を悪化させたようだった。[p]
 どうしようもない。このままじゃ、本当に焼かれる――。
 
-[glink name="choice_ch1_rooftop_run" text="出口へ走る" target="*run" x="510" y="250" width="260" height="44" size="20" clickse="se/click.ogg"]
-[glink name="choice_ch1_rooftop_fight" text="龍也に挑む" target="*fight" x="510" y="330" width="260" height="44" size="20" clickse="se/click.ogg"]
-[glink name="choice_ch1_rooftop_ayaka" text="彩香の横を抜ける" target="*ayaka" x="510" y="410" width="260" height="44" size="20" clickse="se/click.ogg"]
+[choice_start count=3]
+[choice name="choice_ch1_rooftop_run" text="出口へ走る" target="*run"]
+[choice name="choice_ch1_rooftop_fight" text="龍也に挑む" target="*fight"]
+[choice name="choice_ch1_rooftop_ayaka" text="彩香の横を抜ける" target="*ayaka"]
 [s]
 
 *run

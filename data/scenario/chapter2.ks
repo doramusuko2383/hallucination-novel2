@@ -719,8 +719,9 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 [free layer="fix" name="bad_end_title"]
 [bg storage="bg_classroom_day2.webp" time=0]
 [playbgm storage="classroom_buzzing.ogg" volume=70 fadein=true]
-[glink name="choice_ch2_megumi_good" text="塾の話から切り出す" target="*ch2_megumi_approach_good" x="470" y="300" width="340" height="44" size="20" clickse="se/click.ogg"]
-[glink name="choice_ch2_megumi_bad" text="いきなり彩香のことを聞く" target="*ch2_megumi_approach_bad" x="470" y="380" width="340" height="44" size="20" clickse="se/click.ogg"]
+[choice_start count=2]
+[choice name="choice_ch2_megumi_good" text="塾の話から切り出す" target="*ch2_megumi_approach_good"]
+[choice name="choice_ch2_megumi_bad" text="いきなり彩香のことを聞く" target="*ch2_megumi_approach_bad"]
 [s]
 
 *ch2_megumi_approach_good
