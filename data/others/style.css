@@ -1449,7 +1449,8 @@ img.se_mute_on::after { display: none !important; }
 
 .badend-kicker {
     position: relative !important;
-    z-index: 2 !important;
+    z-index: 1000000 !important;
+    pointer-events: none !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1473,7 +1474,8 @@ img.se_mute_on::after { display: none !important; }
 
 .badend-title-glitch {
     position: relative !important;
-    z-index: 2 !important;
+    z-index: 1000000 !important;
+    pointer-events: none !important;
     font-family: "GenMin", "Yu Mincho", "Hiragino Mincho ProN", serif !important;
     font-weight: 400 !important;
     font-size: 54px !important;
@@ -1489,7 +1491,7 @@ img.se_mute_on::after { display: none !important; }
 }
 
 .badend-title-light {
-    z-index: 1 !important;
+    z-index: 1000000 !important;
     pointer-events: none !important;
     background: linear-gradient(90deg, transparent 0%, rgba(180, 205, 225, 0.05) 25%, rgba(255, 255, 255, 0.5) 50%, rgba(180, 205, 225, 0.05) 75%, transparent 100%) !important;
     filter: blur(6px) !important;
@@ -1540,7 +1542,8 @@ img.se_mute_on::after { display: none !important; }
 }
 
 .badend-choice-divider {
-    z-index: 2 !important;
+    z-index: 1000000 !important;
+    pointer-events: none !important;
     background: linear-gradient(90deg, transparent, rgba(235, 242, 248, 0.22), transparent) !important;
     box-shadow: 0 0 12px rgba(220, 230, 240, 0.08) !important;
 }
