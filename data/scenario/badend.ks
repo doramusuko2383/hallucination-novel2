@@ -20,6 +20,7 @@
 [fadeoutse time=600]
 [chara_hide_all time=220]
 [bg storage="black.png" time=0]
+[playbgm storage="badend.ogg" loop=false volume=55 fadein=true time=400]
 [iscript]
 (function prepareBadEndUi() {
     $(".button_menu, .role_button, .quiet_system_button").hide();
