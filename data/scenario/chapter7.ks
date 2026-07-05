@@ -787,10 +787,11 @@
 
 [chara_hide_all]
 [wait time=1000]
-[glink text="前へ進む" target="*next"]
+[glink name="choice_ch7_next" text="前へ進む" target="*next"]
 [s]
 
 *next
+[clear_choice_buttons]
 [cm]
 [wait time=1000]
 [fadeoutbgm time=3000]

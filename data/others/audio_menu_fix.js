@@ -13,6 +13,57 @@
         }
     }, true);
 
+
+    var CHOICE_BUTTON_NAMES = [
+        "choice_intro_leave",
+        "choice_intro_touch",
+        "choice_intro_listen",
+        "choice_ch1_go_rooftop",
+        "choice_ch1_rooftop_run",
+        "choice_ch1_rooftop_fight",
+        "choice_ch1_rooftop_ayaka",
+        "choice_ch2_megumi_good",
+        "choice_ch2_megumi_bad",
+        "choice_ch7_next"
+    ];
+
+    function getChoiceButtons() {
+        var selector = CHOICE_BUTTON_NAMES.map(function (name) {
+            return "." + name;
+        }).join(",");
+        return $(selector)
+            .add($(".layer_free").find(".glink_button, .button_graphic[data-event-tag='glink']"))
+            .add(".glink_button_clicked, .glink_button_not_clicked, .glink_button.hidden");
+    }
+
+    function suspendChoiceButtonsForMenu() {
+        getChoiceButtons().addClass("hl_choice_suspended_for_menu").css({
+            "visibility": "hidden",
+            "pointer-events": "none"
+        });
+    }
+
+    function restoreChoiceButtonsAfterMenu() {
+        $(".hl_choice_suspended_for_menu").removeClass("hl_choice_suspended_for_menu").css({
+            "visibility": "",
+            "pointer-events": ""
+        });
+    }
+
+    function keepMenuLayersOnTop() {
+        $(".button_menu").css({
+            "z-index": 2147483646,
+            "pointer-events": "auto"
+        });
+        var kag = getKag();
+        if (kag && kag.layer) {
+            kag.layer.getMenuLayer().css({
+                "z-index": 2147483647,
+                "pointer-events": "auto"
+            });
+        }
+    }
+
     function getKag() {
         return window.TYRANO && window.TYRANO.kag;
     }
@@ -130,6 +181,48 @@
     }
 
     document.addEventListener("click", goBackTitleWithConfirm, true);
+
+    function installMenuChoicePatch() {
+        var kag = getKag();
+        if (!kag || !kag.menu || kag.menu.__hlChoiceMenuPatched) return false;
+        kag.menu.__hlChoiceMenuPatched = true;
+        var originalShowMenu = kag.menu.showMenu;
+        kag.menu.showMenu = function () {
+            suspendChoiceButtonsForMenu();
+            keepMenuLayersOnTop();
+            var result = originalShowMenu.apply(this, arguments);
+            var layerMenu = this.kag.layer.getMenuLayer();
+            layerMenu.off("transitionend.hlChoiceMenu animationend.hlChoiceMenu");
+            layerMenu.on("transitionend.hlChoiceMenu animationend.hlChoiceMenu", function () {
+                if (!layerMenu.is(":visible") || layerMenu.children().length === 0) {
+                    restoreChoiceButtonsAfterMenu();
+                    layerMenu.off("transitionend.hlChoiceMenu animationend.hlChoiceMenu");
+                }
+            });
+            var hasShownMenu = false;
+            setTimeout(function watchMenuClosed() {
+                if (layerMenu.is(":visible") && layerMenu.children().length > 0) {
+                    hasShownMenu = true;
+                }
+                if (hasShownMenu && (!layerMenu.is(":visible") || layerMenu.children().length === 0)) {
+                    restoreChoiceButtonsAfterMenu();
+                    return;
+                }
+                setTimeout(watchMenuClosed, 100);
+            }, 100);
+            return result;
+        };
+        keepMenuLayersOnTop();
+        return true;
+    }
+
+    if (!installMenuChoicePatch()) {
+        $(window).on("load.hlMenuChoicePatch", installMenuChoicePatch);
+        var menuChoicePatchTimer = setInterval(function () {
+            if (installMenuChoicePatch()) clearInterval(menuChoicePatchTimer);
+        }, 100);
+        setTimeout(function () { clearInterval(menuChoicePatchTimer); }, 10000);
+    }
 
     if (!installBackTitlePatch()) {
         $(window).on("load.hlBackTitlePatch", installBackTitlePatch);
