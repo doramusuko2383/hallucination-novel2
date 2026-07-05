@@ -791,7 +791,6 @@
 [s]
 
 *next
-[clear_choice_buttons]
 [cm]
 [wait time=1000]
 [fadeoutbgm time=3000]

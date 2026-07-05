@@ -86,7 +86,6 @@ setTimeout(function () {
 [s]
 
 *intro_choice_leave
-[clear_choice_buttons]
 [iscript]
 f.doubt += 1;
 f.intro_choice = "leave";
@@ -104,7 +103,6 @@ tf.choice_result_line_2 = "見つかったのは、戻れない理由だけだ�
 @jump target="*intro_outro"
 
 *intro_choice_touch
-[clear_choice_buttons]
 [iscript]
 f.complicity += 1;
 f.intro_choice = "touch";
@@ -130,7 +128,6 @@ tf.choice_result_line_2 = "指先だけが自分のものじゃないみたい�
 @jump target="*intro_outro"
 
 *intro_choice_listen
-[clear_choice_buttons]
 [iscript]
 f.fear += 1;
 f.dependence += 1;

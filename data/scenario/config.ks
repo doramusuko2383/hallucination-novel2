@@ -102,13 +102,16 @@
 	[glink fix="true" text="× CLOSE" target="*backtitle" size="12" width="96" height="32" x="1150" y="24" color="0xdde6ec" font_color="0xdde6ec" graphic="" enterimg="" name="quiet_system_button"]
 
 	[iscript]
-	// CONFIGのCLOSEはfree layer上に出るため、free layer全面がfixボタンを覆わないようにする
+	// CONFIG表示中は本編のfree layer（選択肢など）を背面に下げる。
+	// 選択肢の表示制御は行わず、CONFIG側のfix/layer z-indexだけで重なりを避ける。
 	$(".layer_menu").empty().hide();
-	$(".layer_blend_mode, .blendlayer").css("pointer-events", "none");
+	$(".layer_free").data("hl-config-z-index", $(".layer_free").css("z-index"));
+	$(".layer_fix").data("hl-config-z-index", $(".layer_fix").css("z-index"));
+	$(".layer_blend_mode, .blendlayer").css({ "z-index": 900000, "pointer-events": "none" });
+	$(".layer_free").css({ "z-index": 1, "pointer-events": "none" });
+	$(".layer_fix").css({ "z-index": 900001, "pointer-events": "auto" });
 	$(".config_label_text, .config_hint_text").css("pointer-events", "none");
 	$(".config_help_text, .config_value_text, .config_scale_line").remove();
-	$(".layer_free").css("pointer-events", "none");
-	$(".layer_free .glink_button, .layer_free .event-setting-element").css("pointer-events", "auto");
 	[endscript]
 
 ;	黒ガラス調CONFIG見出し・項目ラベル
@@ -257,7 +260,18 @@
 
 	[iscript]
 	TG.config.alreadyReadTextColor = tf.user_setting; // 既読テキストの文字色を復帰
-	$(".layer_free").css("pointer-events", "auto");
+	$(".layer_free").css({
+		"z-index": $(".layer_free").data("hl-config-z-index") || "",
+		"pointer-events": ""
+	});
+	$(".layer_fix").css({
+		"z-index": $(".layer_fix").data("hl-config-z-index") || "",
+		"pointer-events": ""
+	});
+	$(".layer_blend_mode, .blendlayer").css({
+		"z-index": "",
+		"pointer-events": ""
+	});
 	window.__hlSuppressNextScenarioClick = Date.now() + 1000;
 	[endscript]
 

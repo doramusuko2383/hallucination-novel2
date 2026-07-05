@@ -724,7 +724,6 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 [s]
 
 *ch2_megumi_approach_good
-[clear_choice_buttons]
 [cm]
 [auto_chara name="拓海" face="level2_smile"]
 「菊池さん、ちょっといいかな」[p]
@@ -961,7 +960,6 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 @jump storage="chapter3.ks" target="*chapter3"
 
 *ch2_megumi_approach_bad
-[clear_choice_buttons]
 [cm]
 [auto_chara name="拓海" face="level2_normal"]
 「五組の上田さんと友達だよね？」[p]
