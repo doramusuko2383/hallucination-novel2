@@ -13,6 +13,35 @@
         }
     }, true);
 
+
+    var CHOICE_BUTTON_NAMES = [
+        "choice_intro_leave",
+        "choice_intro_touch",
+        "choice_intro_listen",
+        "choice_ch1_go_rooftop",
+        "choice_ch1_rooftop_run",
+        "choice_ch1_rooftop_fight",
+        "choice_ch1_rooftop_ayaka",
+        "choice_ch2_megumi_good",
+        "choice_ch2_megumi_bad",
+        "choice_ch7_next"
+    ];
+
+    function clearChoiceButtons() {
+        CHOICE_BUTTON_NAMES.forEach(function (name) {
+            $("." + name).remove();
+        });
+        $(".layer_free").find(".glink_button, .button_graphic[data-event-tag='glink']").remove();
+        $(".glink_button_clicked, .glink_button_not_clicked, .glink_button.hidden").remove();
+    }
+
+    function keepMenuButtonOnTop() {
+        $(".button_menu").css({
+            "z-index": 2147483647,
+            "pointer-events": "auto"
+        });
+    }
+
     function getKag() {
         return window.TYRANO && window.TYRANO.kag;
     }
@@ -130,6 +159,28 @@
     }
 
     document.addEventListener("click", goBackTitleWithConfirm, true);
+
+    function installMenuChoicePatch() {
+        var kag = getKag();
+        if (!kag || !kag.menu || kag.menu.__hlChoiceMenuPatched) return false;
+        kag.menu.__hlChoiceMenuPatched = true;
+        var originalShowMenu = kag.menu.showMenu;
+        kag.menu.showMenu = function () {
+            clearChoiceButtons();
+            keepMenuButtonOnTop();
+            return originalShowMenu.apply(this, arguments);
+        };
+        keepMenuButtonOnTop();
+        return true;
+    }
+
+    if (!installMenuChoicePatch()) {
+        $(window).on("load.hlMenuChoicePatch", installMenuChoicePatch);
+        var menuChoicePatchTimer = setInterval(function () {
+            if (installMenuChoicePatch()) clearInterval(menuChoicePatchTimer);
+        }, 100);
+        setTimeout(function () { clearInterval(menuChoicePatchTimer); }, 10000);
+    }
 
     if (!installBackTitlePatch()) {
         $(window).on("load.hlBackTitlePatch", installBackTitlePatch);

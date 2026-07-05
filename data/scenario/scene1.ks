@@ -80,12 +80,13 @@ setTimeout(function () {
 どれも、役に立たない。[page]
 
 ;導入用のシンプルな選択肢（1つだけごく軽い文体ズレ）
-[glink color="black" size="26" x="320" width="640" y="190" text="このまま帰る" target="*intro_choice_leave"]
-[glink color="black" size="26" x="320" width="640" y="280" text="扉に触れる" target="*intro_choice_touch"]
-[glink color="black" size="26" x="320" width="640" y="370" text="少しだけ聞き耳を立てる。" target="*intro_choice_listen"]
+[glink name="choice_intro_leave" color="black" size="26" x="320" width="640" y="190" text="このまま帰る" target="*intro_choice_leave"]
+[glink name="choice_intro_touch" color="black" size="26" x="320" width="640" y="280" text="扉に触れる" target="*intro_choice_touch"]
+[glink name="choice_intro_listen" color="black" size="26" x="320" width="640" y="370" text="少しだけ聞き耳を立てる。" target="*intro_choice_listen"]
 [s]
 
 *intro_choice_leave
+[clear_choice_buttons]
 [iscript]
 f.doubt += 1;
 f.intro_choice = "leave";
@@ -103,6 +104,7 @@ tf.choice_result_line_2 = "見つかったのは、戻れない理由だけだ�
 @jump target="*intro_outro"
 
 *intro_choice_touch
+[clear_choice_buttons]
 [iscript]
 f.complicity += 1;
 f.intro_choice = "touch";
@@ -128,6 +130,7 @@ tf.choice_result_line_2 = "指先だけが自分のものじゃないみたい�
 @jump target="*intro_outro"
 
 *intro_choice_listen
+[clear_choice_buttons]
 [iscript]
 f.fear += 1;
 f.dependence += 1;
@@ -511,11 +514,11 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 [anim name="akane" left=600 time=1000]
 
 ;リンクボタンを表示
-[glink text="ティラノビルダーの紹介" size=20 width=500 x=30 y=100 color=blue target=tyranobuilder ]
-[glink text="制作事例" size=20 width=500 x=30 y=160 color=blue target=example ]
-[glink text="応用テクニック" size=20 width=500 x=30 y=220 color=blue target=tech ]
-[glink text="役に立つ情報源" size=20 width=500 x=30 y=280 color=blue target=info ]
-[glink text="タグリファレンス" size=20 width=500 x=30 y=340 color=blue target=tagref ]
+[glink name="sample_choice_tyranobuilder" text="ティラノビルダーの紹介" size=20 width=500 x=30 y=100 color=blue target=tyranobuilder ]
+[glink name="sample_choice_example" text="制作事例" size=20 width=500 x=30 y=160 color=blue target=example ]
+[glink name="sample_choice_tech" text="応用テクニック" size=20 width=500 x=30 y=220 color=blue target=tech ]
+[glink name="sample_choice_info" text="役に立つ情報源" size=20 width=500 x=30 y=280 color=blue target=info ]
+[glink name="sample_choice_tagref" text="タグリファレンス" size=20 width=500 x=30 y=340 color=blue target=tagref ]
 
 [s]
 
