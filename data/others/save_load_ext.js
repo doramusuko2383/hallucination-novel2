@@ -387,6 +387,109 @@
     }
 
 
+
+    var DEFAULT_CHOICE_CONFIG = {
+        x: 510,
+        y: 250,
+        width: 260,
+        height: 44,
+        size: 20,
+        gap: 80,
+        clickse: "se/click.ogg",
+        layouts: {
+            "2": { x: 470, y: 300, width: 340 },
+            "3": { x: 510, y: 250, width: 260 }
+        }
+    };
+
+    function toChoiceInt(value, fallback) {
+        var parsed = parseInt(value, 10);
+        return isNaN(parsed) ? fallback : parsed;
+    }
+
+    function installChoiceTags() {
+        var kag = TYRANO.kag;
+        if (kag.__hl_choice_tags_installed) return;
+        kag.__hl_choice_tags_installed = true;
+
+        kag.tag.choice_start = {
+            vital: [],
+            pm: {
+                count: "",
+                x: "",
+                y: "",
+                width: "",
+                height: "",
+                size: "",
+                gap: "",
+                clickse: ""
+            },
+            start: function (pm) {
+                var count = toChoiceInt(pm.count, 0);
+                var layout = DEFAULT_CHOICE_CONFIG.layouts[String(count)] || {};
+                kag.tmp.hl_choice = {
+                    index: 0,
+                    count: count,
+                    x: toChoiceInt(pm.x, layout.x || DEFAULT_CHOICE_CONFIG.x),
+                    y: toChoiceInt(pm.y, layout.y || DEFAULT_CHOICE_CONFIG.y),
+                    width: toChoiceInt(pm.width, layout.width || DEFAULT_CHOICE_CONFIG.width),
+                    height: toChoiceInt(pm.height, layout.height || DEFAULT_CHOICE_CONFIG.height),
+                    size: toChoiceInt(pm.size, DEFAULT_CHOICE_CONFIG.size),
+                    gap: toChoiceInt(pm.gap, DEFAULT_CHOICE_CONFIG.gap),
+                    clickse: pm.clickse || DEFAULT_CHOICE_CONFIG.clickse
+                };
+                kag.ftag.nextOrder();
+            }
+        };
+
+        kag.tag.choice = {
+            vital: ["text", "target"],
+            pm: {
+                name: "",
+                text: "",
+                target: "",
+                storage: null,
+                x: "",
+                y: "",
+                width: "",
+                height: "",
+                size: "",
+                clickse: "",
+                color: "black"
+            },
+            start: function (pm) {
+                var state = kag.tmp.hl_choice || {
+                    index: 0,
+                    x: DEFAULT_CHOICE_CONFIG.x,
+                    y: DEFAULT_CHOICE_CONFIG.y,
+                    width: DEFAULT_CHOICE_CONFIG.width,
+                    height: DEFAULT_CHOICE_CONFIG.height,
+                    size: DEFAULT_CHOICE_CONFIG.size,
+                    gap: DEFAULT_CHOICE_CONFIG.gap,
+                    clickse: DEFAULT_CHOICE_CONFIG.clickse
+                };
+                var glinkPm = $.extend(true, {}, pm, {
+                    x: toChoiceInt(pm.x, state.x),
+                    y: toChoiceInt(pm.y, state.y + state.index * state.gap),
+                    width: toChoiceInt(pm.width, state.width),
+                    height: toChoiceInt(pm.height, state.height),
+                    size: toChoiceInt(pm.size, state.size),
+                    clickse: pm.clickse || state.clickse
+                });
+                state.index += 1;
+                kag.tmp.hl_choice = state;
+                kag.ftag.startTag("glink", glinkPm);
+            }
+        };
+
+        if (kag.ftag && kag.ftag.master_tag) {
+            ["choice_start", "choice"].forEach(function (tagName) {
+                kag.ftag.master_tag[tagName] = $.extend(true, {}, kag.tag[tagName]);
+                kag.ftag.master_tag[tagName].kag = kag;
+            });
+        }
+    }
+
     function installEndingTag() {
         TYRANO.kag.tag.hl_ending = {
             vital: [],
@@ -710,6 +813,7 @@
         };
 
         installConfigOverlay();
+        installChoiceTags();
         installEndingTag();
         TYRANO.kag.config.configSaveSlotNum = MANUAL_SLOT_COUNT;
 
