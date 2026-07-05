@@ -184,6 +184,8 @@
 
 /* 右下のCSS製メニューアイコン */
 .button_menu {
+    z-index: 2147483646 !important;
+    pointer-events: auto !important;
     top: auto !important;
     right: 22px !important;
     bottom: 18px !important;
@@ -890,17 +892,35 @@ img.se_mute_on::after { display: none !important; }
 }
 
 
+
+/* =========================
+   常設MENUボタンの入力優先度
+   ========================= */
+.layer_event_click {
+    z-index: 900000000 !important;
+}
+
+.layer_free {
+    pointer-events: auto;
+}
+
+.layer_menu {
+    z-index: 2147483647 !important;
+    pointer-events: auto !important;
+}
+
 /* =========================
    タイトル画面（静止画背景＋文字主体UI）
    ========================= */
 
 .layer_free {
-    z-index: 1000000000 !important;
+    z-index: 1000000000;
 }
 
 .layer_free:has(.title-logo),
 .layer_free:has(.title-subtitle),
 .layer_free:has(.title-choice) {
+    z-index: 1000000000 !important;
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
