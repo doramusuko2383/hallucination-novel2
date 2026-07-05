@@ -1536,7 +1536,10 @@ img.se_mute_on::after { display: none !important; }
     z-index: 3 !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
+    padding-left: 74px !important;
+    text-align: left !important;
     border: 0 !important;
     border-radius: 0 !important;
     background: transparent !important;
@@ -1553,7 +1556,8 @@ img.se_mute_on::after { display: none !important; }
 
 .glink_button.badend-choice::before {
     content: "＞";
-    margin-right: 26px;
+    flex: 0 0 48px;
+    margin-right: 0;
     color: rgba(245, 248, 250, 0.84);
     font-size: 32px;
     line-height: 1;
