@@ -1510,10 +1510,17 @@ body.badend-active .glink_button.quiet_system_button {
 .badend-kicker::after {
     content: "";
     display: block;
+    opacity: 0;
+    transition: opacity 220ms ease;
     width: 96px;
     height: 1px;
     background: linear-gradient(90deg, transparent 0%, rgba(195, 208, 220, 0.12) 18%, rgba(232, 236, 240, 0.52) 50%, rgba(195, 208, 220, 0.12) 82%, transparent 100%);
     box-shadow: 0 0 9px rgba(220, 230, 240, 0.16);
+}
+
+.badend-kicker.badend-kicker-ready::before,
+.badend-kicker.badend-kicker-ready::after {
+    opacity: 1;
 }
 
 .badend-title-glitch {
