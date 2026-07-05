@@ -54,7 +54,12 @@
         resumeKnownBgm();
     }
 
+    function isMenuUiClick(event) {
+        return $(event.target).closest(".button_menu, .layer_menu").length > 0;
+    }
+
     function shouldSuppressScenarioClick(event) {
+        if (isMenuUiClick(event)) return false;
         if (!window.__hlSuppressNextScenarioClick || Date.now() >= window.__hlSuppressNextScenarioClick) return false;
         return $(event.target).closest(".layer_event_click").length > 0;
     }
