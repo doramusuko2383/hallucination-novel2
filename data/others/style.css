@@ -1254,92 +1254,125 @@ img.se_mute_on::after { display: none !important; }
 /* =========================
    作品専用 選択肢UI
    - TyranoScript標準の立体グラデーションを上書き
-   - サスペンス作品に溶け込む静かなフラットデザイン
+   - 罫線と余白だけで見せる、背景に溶け込むミニマルデザイン
 ========================= */
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button) {
-    box-sizing: border-box !important;
-    overflow: hidden;
-    min-width: 220px;
-    min-height: 42px;
-    padding: 11px 28px 10px !important;
-    border: 1px solid rgba(210, 225, 235, 0.38) !important;
-    border-radius: 4px !important;
-    outline: none !important;
-    color: rgba(238, 244, 248, 0.92) !important;
-    background: rgba(5, 10, 17, 0.72) !important;
-    box-shadow: none !important;
-    filter: none !important;
-    font-family: "GenMin", "Yu Mincho", serif !important;
-    font-size: 15px !important;
-    font-weight: 400 !important;
-    line-height: 1.35 !important;
-    letter-spacing: 0.16em !important;
-    text-align: center !important;
-    text-decoration: none !important;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.82) !important;
-    transition:
-        background-color 160ms ease,
-        border-color 160ms ease,
-        box-shadow 160ms ease,
-        color 160ms ease,
-        opacity 160ms ease,
-        transform 160ms ease;
+@keyframes hlChoiceFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button)::before {
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close) {
+    box-sizing: border-box !important;
+    overflow: hidden;
+    position: absolute !important;
+    left: 50% !important;
+    width: min(520px, calc(100vw - 48px)) !important;
+    min-width: 0 !important;
+    max-width: 520px !important;
+    height: 60px !important;
+    min-height: 56px !important;
+    padding: 14px 30px 13px 58px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.18) 18%, rgba(0, 0, 0, 0.14) 70%, rgba(0, 0, 0, 0)) !important;
+    box-shadow: none !important;
+    filter: none !important;
+    font-family: "GenMin", "Yu Mincho", "Hiragino Mincho ProN", serif !important;
+    font-size: clamp(24px, 2.2vw, 28px) !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0.12em !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    white-space: nowrap;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.55) !important;
+    transform: translate(-50%, 0);
+    animation: hlChoiceFadeIn 180ms ease-out both;
+    transition:
+        background 150ms ease,
+        color 150ms ease,
+        opacity 150ms ease,
+        text-shadow 150ms ease;
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close)::before {
     content: "";
     position: absolute;
-    top: 9px;
-    bottom: 9px;
-    left: 12px;
-    width: 1px;
-    background: rgba(180, 214, 232, 0.48);
-    opacity: 0.72;
-    transition: opacity 160ms ease, background-color 160ms ease;
+    top: 14px;
+    bottom: 16px;
+    left: 34px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.48);
+    opacity: 0.82;
+    transition: background-color 150ms ease, opacity 150ms ease;
     pointer-events: none;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):hover,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):focus-visible {
-    color: #ffffff !important;
-    border-color: rgba(225, 238, 246, 0.72) !important;
-    background: rgba(18, 28, 40, 0.82) !important;
-    box-shadow: 0 0 14px rgba(137, 173, 197, 0.18) !important;
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+    left: 34px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.24) 62%, rgba(255, 255, 255, 0));
+    transition: background 150ms ease, opacity 150ms ease;
+    pointer-events: none;
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):hover,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):focus-visible {
+    color: rgba(255, 255, 255, 0.99) !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(18, 24, 31, 0.25) 18%, rgba(18, 24, 31, 0.19) 70%, rgba(0, 0, 0, 0)) !important;
+    box-shadow: none !important;
     text-decoration: none !important;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):hover::before,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):focus-visible::before {
-    background: rgba(225, 238, 246, 0.78);
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):hover::before,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):focus-visible::before {
+    background: rgba(255, 255, 255, 0.76);
     opacity: 1;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):active {
-    position: absolute !important;
-    color: rgba(219, 232, 239, 0.82) !important;
-    background: rgba(2, 6, 11, 0.86) !important;
-    transform: translateY(1px);
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):hover::after,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):focus-visible::after {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.34) 62%, rgba(255, 255, 255, 0));
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).black,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).gray,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).white,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).orange,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).blue,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).rosy,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).green,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).pink,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).red {
-    color: rgba(238, 244, 248, 0.92) !important;
-    border-color: rgba(210, 225, 235, 0.38) !important;
-    background: rgba(5, 10, 17, 0.72) !important;
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):active {
+    position: absolute !important;
+    color: rgba(255, 255, 255, 0.86) !important;
+    transform: translate(-50%, 1px);
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).black,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).gray,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).white,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).orange,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).blue,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).rosy,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).green,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).pink,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).red {
+    color: rgba(255, 255, 255, 0.92) !important;
+    border: 0 !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.18) 18%, rgba(0, 0, 0, 0.14) 70%, rgba(0, 0, 0, 0)) !important;
     filter: none !important;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).small,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).medium,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).bigrounded {
-    border-radius: 4px !important;
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).small,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).medium,
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).bigrounded {
+    border-radius: 0 !important;
 }
 
 .glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button).quiet_system_button,
