@@ -952,7 +952,7 @@ img.se_mute_on::after { display: none !important; }
 
 .badend-glitch.badend-glitching,
 .badend-title-glitch.badend-glitching {
-    animation: badendSubtleGlitch 100ms steps(2, end) 1 !important;
+    animation: badendSubtleGlitch 260ms steps(3, end) 1 !important;
 }
 
 .badend-glitch.badend-glitching::before,
@@ -963,22 +963,23 @@ img.se_mute_on::after { display: none !important; }
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.38;
+    opacity: 0.62;
     overflow: hidden;
+    mix-blend-mode: screen;
 }
 
 .badend-glitch.badend-glitching::before,
 .badend-title-glitch.badend-glitching::before {
     color: rgba(110, 190, 255, 0.58);
-    transform: translate(1px, -0.5px);
-    clip-path: inset(12% 0 55% 0);
+    transform: translate(11px, -0.5px);
+    clip-path: inset(10% 0 52% 0);
 }
 
 .badend-glitch.badend-glitching::after,
 .badend-title-glitch.badend-glitching::after {
     color: rgba(255, 130, 180, 0.44);
-    transform: translate(-1px, 0.5px);
-    clip-path: inset(56% 0 16% 0);
+    transform: translate(-13px, 0.5px);
+    clip-path: inset(54% 0 14% 0);
 }
 
 @keyframes badendSubtleGlitch {
@@ -988,12 +989,12 @@ img.se_mute_on::after { display: none !important; }
         text-shadow: 0 0 8px rgba(255,255,255,0.22), 0 0 18px rgba(0,0,0,0.85);
     }
     45% {
-        transform: translate3d(1px, 0, 0);
+        transform: translate3d(7px, 0, 0);
         filter: drop-shadow(1px 0 0 rgba(110, 190, 255, 0.35));
         text-shadow: 1px 0 0 rgba(95,180,255,0.34), -1px 0 0 rgba(255,130,180,0.24), 0 0 12px rgba(230,235,255,0.2);
     }
     70% {
-        transform: translate3d(-1px, 0, 0);
+        transform: translate3d(-6px, 0, 0);
         filter: drop-shadow(-1px 0 0 rgba(255, 130, 180, 0.24));
     }
 }
@@ -1377,4 +1378,167 @@ img.se_mute_on::after { display: none !important; }
 .layer_free .glink_button.audio-start-button::before,
 .layer_free .glink_button.audio-start-button::after {
     content: none;
+}
+
+/* =========================
+   BAD END: quiet luxury title card
+========================= */
+.badend-screen {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 1280px !important;
+    height: 720px !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    background:
+        radial-gradient(ellipse at 50% 49%, rgba(58, 68, 76, 0.34) 0%, rgba(12, 17, 22, 0.24) 26%, rgba(0, 0, 0, 0) 57%),
+        radial-gradient(ellipse at 50% 52%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0.86) 100%),
+        linear-gradient(180deg, #010204 0%, #05080c 48%, #000102 100%) !important;
+}
+
+.badend-screen::before,
+.badend-screen::after {
+    content: "";
+    position: absolute;
+    inset: -8%;
+    display: block;
+    pointer-events: none;
+}
+
+.badend-screen::before {
+    opacity: 0.22;
+    background:
+        radial-gradient(circle at 22% 28%, rgba(180, 205, 225, 0.16) 0 1px, transparent 2px),
+        radial-gradient(circle at 74% 35%, rgba(125, 190, 220, 0.12) 0 1px, transparent 2px),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 3px),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.014) 0 1px, transparent 1px 4px);
+    background-size: 280px 220px, 360px 260px, 100% 3px, 4px 100%;
+    mix-blend-mode: screen;
+    animation: badendGrain 9s steps(2, end) infinite;
+}
+
+.badend-screen::after {
+    opacity: 0.34;
+    background:
+        linear-gradient(104deg, transparent 0%, rgba(86, 104, 116, 0.055) 38%, transparent 62%),
+        radial-gradient(ellipse at 43% 48%, rgba(185, 205, 220, 0.09), transparent 30%),
+        radial-gradient(ellipse at 58% 45%, rgba(120, 150, 170, 0.06), transparent 34%);
+    filter: blur(14px);
+    animation: badendSmoke 14s ease-in-out infinite alternate;
+}
+
+.badend-kicker {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    font-family: "GenMin", serif !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    letter-spacing: 0.38em !important;
+    text-shadow: 0 0 12px rgba(235, 242, 248, 0.18), 0 2px 16px rgba(0, 0, 0, 0.9) !important;
+}
+
+.badend-kicker::before,
+.badend-kicker::after {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(232, 236, 240, 0.6), transparent);
+    box-shadow: 0 0 9px rgba(220, 230, 240, 0.16);
+}
+
+.badend-title-glitch {
+    position: relative !important;
+    z-index: 2 !important;
+    font-family: "GenMin", "Yu Mincho", "Hiragino Mincho ProN", serif !important;
+    font-weight: 400 !important;
+    font-size: 54px !important;
+    letter-spacing: 0.17em !important;
+    line-height: 1.1 !important;
+    color: rgba(248, 249, 250, 0.96) !important;
+    text-shadow:
+        1px 0 0 rgba(85, 190, 230, 0.22),
+        -1px 0 0 rgba(235, 90, 130, 0.18),
+        0 0 8px rgba(255, 255, 255, 0.2),
+        0 8px 24px rgba(0, 0, 0, 0.95) !important;
+    animation: badendTitleFloat 7s ease-in-out infinite !important;
+}
+
+.badend-title-light {
+    z-index: 1 !important;
+    pointer-events: none !important;
+    background: linear-gradient(90deg, transparent 0%, rgba(180, 205, 225, 0.05) 25%, rgba(255, 255, 255, 0.5) 50%, rgba(180, 205, 225, 0.05) 75%, transparent 100%) !important;
+    filter: blur(6px) !important;
+    opacity: 0.58 !important;
+}
+
+.layer_free .glink_button.badend-choice,
+.glink_button.badend-choice {
+    z-index: 3 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    color: rgba(232, 236, 240, 0.75) !important;
+    font-family: "GenMin", serif !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.18em !important;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.86) !important;
+    transition: color 220ms ease, opacity 220ms ease, text-shadow 220ms ease !important;
+}
+
+.glink_button.badend-choice::before {
+    content: "＞";
+    margin-right: 26px;
+    color: rgba(245, 248, 250, 0.84);
+    font-size: 32px;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(-1px);
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.glink_button.badend-choice:hover,
+.glink_button.badend-choice:focus {
+    color: rgba(255, 255, 255, 0.98) !important;
+    text-shadow: 0 0 10px rgba(235, 242, 248, 0.24), 0 0 18px rgba(0, 0, 0, 0.9) !important;
+}
+
+.glink_button.badend-choice:hover::before,
+.glink_button.badend-choice:focus::before {
+    opacity: 1;
+    transform: translate(3px, -1px);
+}
+
+.badend-choice-divider {
+    z-index: 2 !important;
+    background: linear-gradient(90deg, transparent, rgba(235, 242, 248, 0.22), transparent) !important;
+    box-shadow: 0 0 12px rgba(220, 230, 240, 0.08) !important;
+}
+
+@keyframes badendGrain {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    25% { transform: translate3d(-1.5%, 1%, 0); }
+    50% { transform: translate3d(1%, -1.5%, 0); }
+    75% { transform: translate3d(1.5%, 1%, 0); }
+}
+
+@keyframes badendSmoke {
+    from { transform: translate3d(-1.5%, 0, 0) scale(1); opacity: 0.18; }
+    to { transform: translate3d(1.5%, -1%, 0) scale(1.04); opacity: 0.3; }
+}
+
+@keyframes badendTitleFloat {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    48% { transform: translate3d(0.4px, -0.3px, 0); }
+    52% { transform: translate3d(-0.4px, 0.2px, 0); }
 }
