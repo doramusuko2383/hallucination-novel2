@@ -7,20 +7,35 @@
 
 *bad_end
 [cm]
+[clearfix]
+[hidemenubutton]
+[free layer="fix" name="bad_end_bg"]
 [free layer="fix" name="bad_end_number"]
 [free layer="fix" name="bad_end_title"]
+[free layer="fix" name="bad_end_light"]
+[free layer="fix" name="bad_end_divider"]
+[free layer="fix" name="bad_end_retry"]
+[free layer="fix" name="bad_end_title_return"]
 [fadeoutbgm time=800]
 [fadeoutse time=800]
 [chara_hide_all time=300]
 [bg storage="black.png" time=0]
-[wait time=2000]
-[ptext layer="fix" name="bad_end_number,badend-glitch" text=&f.bad_end_no x="390" y="290" width="500" align="center" size="44" color="0xf0f6fa" time="1000"]
-[wait time=900]
-[ptext layer="fix" name="bad_end_title,badend-title-glitch" text=&f.bad_end_title x="390" y="360" width="500" align="center" size="26" color="0xdde6ec" time="1000"]
-[wait time=1100]
 [iscript]
-(function runBadEndGlitchOnce() {
-    var targets = $(".badend-glitch, .badend-title-glitch");
+(function prepareBadEndUi() {
+    $(".button_menu, .role_button, .quiet_system_button").hide();
+})();
+[endscript]
+[ptext layer="fix" name="bad_end_bg,badend-screen" text=" " x="0" y="0" width="1280" height="720" size="1" color="0xffffff" time="0"]
+[wait time=1200]
+[ptext layer="fix" name="bad_end_number,badend-kicker" text=&f.bad_end_no x="0" y="262" width="1280" align="center" size="18" color="0xe9edf2" time="800"]
+[wait time=320]
+[playse storage=se/short_glitch.ogg volume=28]
+[ptext layer="fix" name="bad_end_title,badend-title-glitch" text=&f.bad_end_title x="0" y="304" width="1280" align="center" size="54" color="0xf7f8fa" time="900"]
+[ptext layer="fix" name="bad_end_light,badend-title-light" text=" " x="315" y="382" width="650" height="20" size="1" color="0xffffff" time="800"]
+[wait time=900]
+[iscript]
+(function runBadEndGlitch() {
+    var targets = $(".badend-title-glitch");
     if (!targets.length) return;
 
     targets.each(function () {
@@ -29,26 +44,58 @@
         target.removeClass("badend-glitching");
     });
 
-    if (window.__titleLogoGlitchSe) {
-        TYRANO.kag.readyAudio();
-        window.__titleLogoGlitchSe.stop();
-        window.__titleLogoGlitchSe.volume(0.035);
-        window.__titleLogoGlitchSe.play();
-    }
-
-    targets.get(0).offsetWidth;
-    targets.addClass("badend-glitching");
-
-    setTimeout(function () {
-        targets.removeClass("badend-glitching");
+    function pulse() {
         targets.each(function () {
             var target = $(this);
             target.attr("data-text", target.text());
+            target.removeClass("badend-glitching");
         });
-    }, 110);
+        targets.get(0).offsetWidth;
+        targets.addClass("badend-glitching");
+        setTimeout(function () {
+            targets.removeClass("badend-glitching");
+        }, 260);
+    }
+
+    pulse();
+    clearInterval(window.__badEndGlitchTimer);
+    window.__badEndGlitchTimer = setInterval(pulse, 3600);
 })();
 [endscript]
-[wait time=180]
-[glink text="この選択肢からやり直す" storage=&f.bad_end_retry_storage target=&f.bad_end_retry_target x="470" y="470" width="340" height="44" size="18" clickse="se/click.ogg"]
-[glink text="タイトルへ戻る" storage="first.ks" target="*title_menu" x="470" y="540" width="340" height="44" size="18" clickse="se/click.ogg"]
+[wait time=520]
+[glink name="bad_end_retry,badend-choice" text="この選択肢からやり直す" target="*bad_end_retry" x="440" y="474" width="400" height="42" size="18" clickse="se/click.ogg"]
+[ptext layer="fix" name="bad_end_divider,badend-choice-divider" text=" " x="410" y="540" width="460" height="1" size="1" color="0xffffff" time="700"]
+[glink name="bad_end_title_return,badend-choice" text="タイトルへ戻る" target="*bad_end_to_title" x="440" y="576" width="400" height="42" size="18" clickse="se/click.ogg"]
 [s]
+
+*bad_end_retry
+[iscript]
+clearInterval(window.__badEndGlitchTimer);
+window.__badEndGlitchTimer = null;
+$(".button_menu, .role_button, .quiet_system_button").show();
+[endscript]
+[showmenubutton]
+[free layer="fix" name="bad_end_bg"]
+[free layer="fix" name="bad_end_number"]
+[free layer="fix" name="bad_end_title"]
+[free layer="fix" name="bad_end_light"]
+[free layer="fix" name="bad_end_divider"]
+[free layer="fix" name="bad_end_retry"]
+[free layer="fix" name="bad_end_title_return"]
+[jump storage=&f.bad_end_retry_storage target=&f.bad_end_retry_target]
+
+*bad_end_to_title
+[iscript]
+clearInterval(window.__badEndGlitchTimer);
+window.__badEndGlitchTimer = null;
+$(".button_menu, .role_button, .quiet_system_button").show();
+[endscript]
+[showmenubutton]
+[free layer="fix" name="bad_end_bg"]
+[free layer="fix" name="bad_end_number"]
+[free layer="fix" name="bad_end_title"]
+[free layer="fix" name="bad_end_light"]
+[free layer="fix" name="bad_end_divider"]
+[free layer="fix" name="bad_end_retry"]
+[free layer="fix" name="bad_end_title_return"]
+[jump storage="first.ks" target="*title_menu"]
