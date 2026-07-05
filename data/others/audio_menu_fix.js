@@ -33,6 +33,17 @@
         audio.play().catch(function () {});
     }
 
+    function isEndedNonLoopBgm(kag, howl) {
+        if (!howl || howl._loop) return false;
+        if (kag && kag.tmp && kag.tmp.is_bgm_play === true) return false;
+        if (Array.isArray(howl._sounds)) {
+            for (var i = 0; i < howl._sounds.length; i++) {
+                if (howl._sounds[i] && howl._sounds[i]._ended === true) return true;
+            }
+        }
+        return true;
+    }
+
     function resumeKnownBgm() {
         var kag = getKag();
         resumeTitleAudioElement();
@@ -43,6 +54,7 @@
         Object.keys(kag.tmp.map_bgm).forEach(function (key) {
             var howl = kag.tmp.map_bgm[key];
             if (!howl || howl.playing && howl.playing()) return;
+            if (isEndedNonLoopBgm(kag, howl)) return;
             try { howl.play(); } catch (e) {}
         });
     }
