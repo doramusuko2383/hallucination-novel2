@@ -178,6 +178,40 @@
 
 深く息を吐いて、思いついたアイデアを口にする。[p]
 
+[choice_start count=3]
+[choice name="ch4_enter_as_friend" text="男友達として上がり込む" target="*ch4_enter_as_friend"]
+[choice name="ch4_enter_as_delivery" text="宅配業者のフリをする" target="*ch4_enter_as_delivery"]
+[choice name="ch4_enter_as_water" text="水道局の点検員になる" target="*ch4_enter_as_water"]
+[s]
+
+*ch4_enter_as_friend
+[jump target="*ch4_enter_return"]
+
+*ch4_enter_as_delivery
+[auto_chara name="恵" face="private_normal"]
+「宅配業者って……荷物はどうするの？」[p]
+[auto_chara name="拓海" face="private_normal"]
+「空の段ボールを持っていくとか」[p]
+[auto_chara name="恵" face="private_smile"]
+「それ、中身を聞かれた瞬間に終わるやつだよ」[p]
+[auto_chara name="拓海" face="private_normal"]
+「……確かに」[p]
+[jump target="*ch4_enter_return"]
+
+*ch4_enter_as_water
+[auto_chara name="拓海" face="private_normal"]
+「水道局の点検員として行くのはどうかな」[p]
+[auto_chara name="恵" face="private_normal"]
+「制服も身分証もないのに？」[p]
+[auto_chara name="拓海" face="private_normal"]
+「……点検に来ました、って言えば」[p]
+[auto_chara name="恵" face="private_smile"]
+「永山君、たまに真面目に変なこと言うよね」[p]
+[auto_chara name="拓海" face="private_normal"]
+「否定できない」[p]
+[jump target="*ch4_enter_return"]
+
+*ch4_enter_return
 「わかった、こうしよう。」[p]
 [auto_chara name="拓海" face="private_normal"]
 「俺が男友達として、土曜日に無理やり家に上がり込むってのはどう？」[p]
