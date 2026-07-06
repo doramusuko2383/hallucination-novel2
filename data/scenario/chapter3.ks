@@ -604,6 +604,68 @@
 [auto_chara name="恵" face="serious"]
 「永山君、何か知ってるんじゃないの？」[p]
 
+*ch3_choice_megumi_truth
+[choice_start count=2]
+[choice name="choice_ch3_stay_silent" text="黙る" target="*ch3_megumi_stay_silent"]
+[choice name="choice_ch3_play_dumb" text="とぼける" target="*ch3_megumi_play_dumb_bad"]
+[s]
+
+*ch3_megumi_truth_retry
+[cm]
+[bg storage="bg_karaoke.webp" time=0]
+[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
+[playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=500]
+[auto_chara name="恵" face="serious"]
+@jump target="*ch3_choice_megumi_truth"
+
+*ch3_megumi_play_dumb_bad
+[cm]
+[auto_chara name="拓海" face="level2_normal"]
+「……何のこと？」[p]
+
+拓海は、できるだけ平静を装って答えた。[p]
+
+「コンビニなんて行ってないよ」[p]
+
+[auto_chara name="恵" face="sad"]
+恵は少しだけ目を伏せ、小さく頷いた。[p]
+
+「……そっか」[p]
+
+[chara_hide_all time=300]
+それ以上、何も聞いてはこなかった。[p]
+
+そのまま部屋には重い沈黙だけが流れる。[p]
+
+やがて恵は静かに立ち上がった。[p]
+
+[auto_chara name="恵" face="sad"]
+「ごめんね。変なこと聞いちゃって」[p]
+
+[chara_hide_all time=300]
+そう言い残し、部屋を出ていく。[p]
+
+拓海は引き止めることもできず、その背中を見送るしかなかった。[p]
+
+あの日。[p]
+
+唯一、自分を理解してくれようとしていた人に、嘘をついた。[p]
+
+その結果、恵と協力することはなく、高田を止めることもできなかった。[p]
+
+龍也の暴力も終わらない。[p]
+
+何も変わらない毎日だけが続いていく。[p]
+
+[eval exp="f.bad_end_no = 'BAD END 03'"]
+[eval exp="f.bad_end_title = '孤立'"]
+[eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
+[eval exp="f.bad_end_retry_target = '*ch3_megumi_truth_retry'"]
+@jump storage="badend.ks" target="*bad_end"
+
+*ch3_megumi_stay_silent
+[cm]
 [chara_hide_all time=300]
 彼女の真剣な視線に、拓海は無言で応じるしかなかった。[p]
 [wait time=1000]
