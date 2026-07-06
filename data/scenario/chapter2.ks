@@ -914,14 +914,58 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 普通に考えれば、[r]
 南口のコンビニで働いていると考えるのが自然だった。[p]
 
+[wait time=500]
+
+だが、決めつけるのはまだ早い。[p]
+
+まずは、どちらのコンビニを調べるべきだろうか。[p]
+
+[choice_start count=2]
+[choice name="choice_ch2_store_north" text="北口のコンビニを調べる" target="*ch2_store_north"]
+[choice name="choice_ch2_store_south" text="南口のコンビニを調べる" target="*ch2_store_south"]
+[s]
+
+*ch2_store_north
+[cm]
+拓海は北口のコンビニの情報を開いた。[p]
+
+自宅とは反対側だが、[r]
+だからこそ知り合いに会う可能性は低い。[p]
+
+もし自分が綾香の立場なら――。[p]
+
+人目を避けられる店を選ぶ。[p]
+
+その方が自然な気がした。[p]
+
 部屋の静けさが、彼の集中力を研ぎ澄ませる。[p]
 
 [wait time=500]
 
-だが、そこで拓海は手を止め、画面をじっと見つめた。[p]
+画面を見つめながら、[r]
+頭の中で点と点が一本の線になっていく。[p]
+
+@jump target="*ch2_store_common_route"
+
+*ch2_store_south
+[cm]
+拓海は南口のコンビニを開いた。[p]
+
+やはり自宅から近い。[p]
+
+通勤時間を考えれば、[r]
+この店が一番有力に思える。[p]
+
+部屋の静けさが、彼の集中力を研ぎ澄ませる。[p]
+
+[wait time=500]
+
+だが、そこで拓海は手を止め、[r]
+画面をじっと見つめた。[p]
 
 違和感が胸にわき上がってくる。[p]
 
+*ch2_store_common_route
 [fadeoutbgm time=3000]
 [wait time=500]
 
