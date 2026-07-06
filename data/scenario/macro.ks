@@ -20,6 +20,7 @@
 [macro name=chapter_title]
 [cm]
 [chara_hide_all]
+[bg storage="black.png" time=0]
 [layopt layer=message0 visible=false]
 [iscript]
 (function showChapterTitle() {
