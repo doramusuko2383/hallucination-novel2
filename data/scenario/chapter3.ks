@@ -182,13 +182,75 @@
 [wait time=500]
 今ならいける……。[p]
 
+*ch3_choice_convenience_counter
+[choice_start count=2]
+[choice name="choice_ch3_go_counter" text="レジに向かう" target="*ch3_go_counter"]
+[choice name="choice_ch3_wait_longer" text="もう少し様子を見る" target="*ch3_wait_longer_bad"]
+[s]
+
+*ch3_go_counter
+[cm]
 [wait time=500]
 
 ; 追加した演出意図: 実行直前だけ鼓動SEを足し、生活音から内面音へ寄せる。
 [fadeoutbgm time=3000]
 [playse storage=se/heartbeat.ogg loop=true volume=50 fadein=true time=500]
 拓海は小さく息を吸い込み、レジに向かった。[p]
+@jump target="*ch3_counter_route"
 
+*ch3_wait_longer_bad
+[cm]
+[wait time=500]
+
+……。[p]
+
+[wait time=500]
+
+五分後――。[p]
+
+「綾香」[p]
+
+店長の声が、バックヤードの方から聞こえた。[p]
+
+「さっきから、あのお客さん……何も買わずにずっといるよな」[p]
+
+「ちょっと見てきてくれるか」[p]
+
+[chara_hide_all time=300]
+[wait time=500]
+
+綾香は小さくため息をつき、ゆっくりとこちらへ歩いてくる。[p]
+
+逃げるべきか――。[p]
+
+そう思った時には、もう遅かった。[p]
+
+[auto_chara name="綾香" face="convenience"]
+「……あんた」[p]
+
+綾香の目が、拓海をまっすぐに捉える。[p]
+
+「あんた、永山でしょ。何してんの？」[p]
+
+[chara_hide_all time=300]
+[wait time=500]
+
+拓海は何も答えられなかった。[p]
+
+慎重になり過ぎた。[p]
+
+住宅街の小さなコンビニで、長時間店内をうろつく客は、[r]
+それだけで不審者だった。[p]
+
+もう二度と、同じ方法は使えない。[p]
+
+[eval exp="f.bad_end_no = 'BAD END 02'"]
+[eval exp="f.bad_end_title = '手遅れ'"]
+[eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
+[eval exp="f.bad_end_retry_target = '*ch3_choice_convenience_counter'"]
+@jump storage="badend.ks" target="*bad_end"
+
+*ch3_counter_route
 [auto_chara name="綾香" face="convenience"]
 綾香は依然として覇気のない様子で、[r]
 店内の空気は重い。[p]
