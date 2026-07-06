@@ -972,6 +972,14 @@
 
 「お母さんを、助けたい」[p]
 
+*ch3_choice_help_megumi
+[choice_start count=2]
+[choice name="choice_ch3_help_megumi" text="協力する" target="*ch3_help_megumi"]
+[choice name="choice_ch3_refuse_megumi" text="断る" target="*ch3_refuse_megumi_bad"]
+[s]
+
+*ch3_help_megumi
+[cm]
 [chara_hide_all time=300]
 拓海はその言葉を聞き、再び画面に目をやった。[p]
 
@@ -1002,6 +1010,69 @@
 心の中で膨れ上がる新たな決意が、[r]
 彼を静かに満たしていった。[p]
 
+@jump target="*ch3_help_megumi_continue"
+
+*ch3_refuse_megumi_bad
+[cm]
+[auto_chara name="拓海" face="level2_depressed"]
+「……ごめん」[p]
+
+拓海は小さく首を振った。[p]
+
+「俺には、もう無理だ」[p]
+
+「誰かを傷つけるために、この力を使うのは……もう嫌なんだ」[p]
+
+[auto_chara name="恵" face="surprise"]
+恵は少し驚いた表情を浮かべたが、すぐに小さく微笑んだ。[p]
+
+[auto_chara name="恵" face="troubled_smile"]
+「……そっか」[p]
+
+[chara_hide_all time=300]
+その笑顔は、どこか寂しそうだった。[p]
+
+[auto_chara name="恵" face="troubled_smile"]
+「ごめんね。変なお願いしちゃって」[p]
+
+[chara_hide_all time=300]
+恵はスマホをしまい、静かに席を立つ。[p]
+
+[auto_chara name="恵" face="troubled_smile"]
+「今日はありがとう」[p]
+
+[chara_hide_all time=300]
+それだけ言って、部屋を出ていった。[p]
+
+ドアが閉まる音だけが、やけに大きく響く。[p]
+
+拓海は最後まで、その背中を見送ることしかできなかった。[p]
+
+誰かを救うには、覚悟がいる。[p]
+
+その覚悟を持てなかった。[p]
+
+あの日、恵と出会った意味も。[p]
+
+この力を手に入れた意味も。[p]
+
+自ら手放してしまった。[p]
+
+[eval exp="f.bad_end_no = 'BAD END 04'"]
+[eval exp="f.bad_end_title = '見て見ぬふり'"]
+[eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
+[eval exp="f.bad_end_retry_target = '*ch3_help_megumi_retry'"]
+@jump storage="badend.ks" target="*bad_end"
+
+*ch3_help_megumi_retry
+[cm]
+[bg storage="bg_karaoke.webp" time=0]
+[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
+[auto_chara name="恵" face="serious"]
+@jump target="*ch3_choice_help_megumi"
+
+*ch3_help_megumi_continue
 ; 追加した演出意図: 重い会話の終わりに環境音だけを残し、日常へ戻る微かな救いを出す。
 [wait time=500]
 
