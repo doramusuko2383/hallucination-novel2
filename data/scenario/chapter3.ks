@@ -22,9 +22,7 @@
 [playse storage=se/traindoor.ogg volume=40]
 [playbgm storage="tension_low.ogg" loop=true volume=30 fadein=true time=1200]
 数日後の放課後、拓海は一度家に帰り、夕飯を済ませてから、[r]
-「勉強をしてくる」[p]
-
-と告げて外に出た。[p]
+「勉強をしてくる」と告げて外に出た。[p]
 
 夜の空気はひんやりと冷たく、[r]
 彼の心臓は次第に高鳴っていく。[p]
