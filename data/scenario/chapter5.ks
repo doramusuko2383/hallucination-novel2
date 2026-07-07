@@ -459,7 +459,7 @@
 [auto_chara name="恵" face="pain"]
 「そんな……」[p]
 
-恵は絶句したまま、しばらく言葉が出てこなかった。[p]
+恵は絶句したまま、しばらく固まったままだった。[p]
 [chara_hide_all time=300]
 [playse storage=se/fence_creak.ogg volume=30]
 [wait time=2000]
