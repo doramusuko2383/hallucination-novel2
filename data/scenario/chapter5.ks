@@ -473,10 +473,38 @@
 「え？」[p]
 [auto_chara name="恵" face="serious"]
 「綾香の所に、お見舞いに行こうよ」[p]
-[auto_chara name="拓海" face="level2_depressed"]
-「そうだね……」[p]
 
-拓海は少し戸惑いながらも、恵の強い意思に引っ張られるように同意する。[p]
+*ch5_choice_visit_ayaka
+[choice_start count=2]
+[choice name="choice_ch5_apologize" text="謝らなきゃ" target="*ch5_visit_apologize"]
+[choice name="choice_ch5_afraid" text="会うのが怖い……" target="*ch5_visit_afraid"]
+[s]
+
+*ch5_visit_apologize
+[cm]
+[auto_chara name="拓海" face="level2_depressed"]
+「……そうだね」[p]
+
+「ちゃんと謝らなきゃ。」[p]
+
+「あんなことをしたのに、何も言わないままじゃ前に進めない気がするんだ」[p]
+
+拓海は少し戸惑いながらも、恵の強い意思に背中を押されるように頷いた。[p]
+[jump target="*ch5_visit_ayaka_common"]
+
+*ch5_visit_afraid
+[cm]
+[auto_chara name="拓海" face="level2_depressed"]
+「……正直、会うのが怖いんだ」[p]
+
+「俺のせいで、綾香はあそこまで追い詰められた。」[p]
+
+「もし顔を見て、『帰って』って言われたら……そう思うと、足が動かなくなりそうで」[p]
+
+拓海は目を伏せ、小さく息を吐いた。[p]
+[jump target="*ch5_visit_ayaka_common"]
+
+*ch5_visit_ayaka_common
 [auto_chara name="恵" face="serious"]
 「私も一緒に行くから大丈夫」[p]
 
