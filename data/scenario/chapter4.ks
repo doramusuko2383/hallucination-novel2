@@ -698,6 +698,14 @@
 後から響子に高田の住所を尋ねてもらうという方法もあったが、それは少し不自然に思えた。[p]
 あまり詮索すれば、響子に余計な心配をかけることにもなりかねないし、親子関係に影響を与える可能性もあった。[p]
 
+*ch4_takada_tail_choice
+どうするべきだろう……。
+[choice_start count=2]
+[choice name="choice_ch4_takada_tail" text="俺が尾行する" target="*ch4_takada_tail_return"]
+[choice name="choice_ch4_takada_ask_kyoko_bad" text="響子さんに住所を聞いてもらう" target="*ch4_takada_ask_kyoko_bad"]
+[s]
+
+*ch4_takada_tail_return
 [auto_chara name="拓海" face="private_normal"]
 「俺が尾行するよ」[p]
 
@@ -811,3 +819,56 @@
 [stopse fadeout=800]
 
 @jump storage="chapter5.ks" target="*chapter5"
+
+*ch4_takada_ask_kyoko_bad
+[cm]
+[auto_chara name="拓海" face="private_normal"]
+「……いや、俺が尾行するより、後から響子さんに聞いてもらった方が確実かもしれない」[p]
+
+[auto_chara name="恵" face="private_anxiety"]
+「お母さんに？」[p]
+
+[auto_chara name="拓海" face="private_normal"]
+「うん。高田の住所をそれとなく聞ければ、一番安全だと思う」[p]
+
+[auto_chara name="恵" face="private_normal"]
+「……わかった。聞いてみる」[p]
+
+翌日――。[p]
+
+恵からのメッセージは、短かった。[p]
+
+「だめだった」[p]
+
+響子は、不思議そうな顔をしたという。[p]
+
+「どうして急に高田さんの住所なんて知りたいの？」[p]
+
+恵はうまくごまかしたつもりだった。[p]
+
+だが、その日を境に、響子は高田の話をほとんどしなくなった。[p]
+
+高田も、響子とのやり取りを変えたようだった。[p]
+
+表面上は穏やかに。[p]
+けれど、決して隙を見せないように。[p]
+
+警戒された――。[p]
+
+拓海はそう直感した。[p]
+
+住所は最後まで分からなかった。[p]
+
+接触する機会も、二度と訪れなかった。[p]
+
+一番近くにあった手掛かりは、[r]
+自分たちの判断で静かに遠ざかっていった。[p]
+
+BAD END[p]
+「警戒された標的」[p]
+
+[eval exp="f.bad_end_no = 'BAD END 05'"]
+[eval exp="f.bad_end_title = '警戒された標的'"]
+[eval exp="f.bad_end_retry_storage = 'chapter4.ks'"]
+[eval exp="f.bad_end_retry_target = '*ch4_takada_tail_choice'"]
+@jump storage="badend.ks" target="*bad_end"
