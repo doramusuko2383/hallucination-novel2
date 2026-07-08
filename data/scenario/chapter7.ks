@@ -71,11 +71,16 @@
 人目を気にしている場合ではない。[p]
 そのまま階段を駆け上がる。[p]
 
-[playse storage=se/dush.ogg volume=100]
-[wait time=2000]
-[bg storage="bg_megumi_living_night.webp" time=500]
+五階の家の玄関に着くと、拓海はドアノブに手をかけた。[p]
+
+[bg storage="black.png" time=80]
+[wait time=80]
 [playse storage=se/door_open_suddenly.ogg volume=100]
-五階の家の玄関に着くと、拓海はドアを勢いよく開けた。[p]
+[bg storage="white.png" time=0]
+[wait time=80]
+[bg storage="bg_megumi_living_night.webp" time=0]
+
+拓海はドアを勢いよく開けた。[p]
 
 幸いカギはされていなかった。[p]
 玄関からリビングを見渡すが誰もいない！[p]
