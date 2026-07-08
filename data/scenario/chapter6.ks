@@ -952,18 +952,26 @@
 [cm]
 [wait time=500]
 [chara_hide_all]
+[bg storage="bg_rooftop_day.webp" time=600]
+[auto_chara name="拓海" face="level2_normal"]
 拓海は、龍也の腕に触れた。[p]
 
 その瞬間、屋上の空気が柔らかくほどけていく。[p]
 冷たい風も、胸の痛みも、龍也の怒鳴り声も、少しずつ遠ざかっていった。[p]
 
+[chara_hide_all]
+[bg storage="bg_rooftop_day_hallucination.webp" time=800]
+[auto_chara name="龍也" face="sad"]
 龍也が見たのは、屋上だった。[p]
 
 ただし、そこにあるのは今の屋上ではない。[p]
 もっと明るく、もっと穏やかで、どこか懐かしい場所だった。[p]
 
+[auto_chara name="翔太" face="shysmile"]
 翔太が笑っている。[p]
+[auto_chara name="綾香" face="private_smile"]
 彩香がスケッチブックを抱えて、呆れたように笑っている。[p]
+[auto_chara name="龍也" face="smile"]
 龍也自身も、フェンスにもたれかかりながら、何でもない冗談に声を上げて笑っていた。[p]
 
 誰も壊れていない。[p]
@@ -996,9 +1004,15 @@
 
 翌日。[p]
 
+[chara_hide_all]
+[bg storage="bg_rooftop_day2.webp" time=800]
+[auto_chara name="拓海" face="level2_normal"]
 拓海は屋上に呼び出された。[p]
 
+[auto_chara name="龍也" face="smile"]
 扉を開けると、そこには龍也と翔太と彩香がいた。[p]
+[auto_chara name="翔太" face="normal"]
+[auto_chara name="綾香" face="normal"]
 三人とも、以前と同じように並んでいた。[p]
 
 一瞬、拓海は胸を撫で下ろした。[p]
@@ -1041,6 +1055,7 @@
 「今日も、いつものやつやろうぜ」[p]
 
 [stopbgm time=1000]
+[chara_hide_all]
 [bg storage="black.png" time=1000]
 
 [eval exp="f.bad_end_no = 'BAD END 06'"]
@@ -1053,10 +1068,14 @@
 [cm]
 [wait time=500]
 [chara_hide_all]
+[bg storage="bg_rooftop_day.webp" time=600]
+[auto_chara name="拓海" face="level2_depressed"]
 拓海は、龍也の腕に触れた。[p]
 
 その瞬間、世界から音が消えた。[p]
 
+[chara_hide_all]
+[bg storage="black.png" time=500]
 拓海の中で、何かが静かに外れた。[p]
 本当は、こんなものを見せるべきではない。[p]
 分かっていた。[p]
@@ -1106,8 +1125,12 @@
 
 [wait time=700]
 
+[chara_hide_all]
+[bg storage="bg_rooftop_day.webp" time=500]
+[auto_chara name="龍也" face="sad"]
 現実に戻った瞬間、龍也は声にならない叫びを上げて崩れ落ちた。[p]
 
+[auto_chara name="恵" face="private_scream"]
 「龍也くん！」[p]
 
 恵が駆け寄ろうとしたが、拓海は動けなかった。[p]
@@ -1130,6 +1153,8 @@
 [fadeoutbgm time=1000]
 [wait time=800]
 
+[chara_hide_all]
+[bg storage="bg_hallway_day.webp" time=800]
 その日の夕方、学校に救急車が来た。[p]
 龍也は保健室でも混乱したまま、まともに会話ができなかったらしい。[p]
 
@@ -1148,8 +1173,12 @@
 
 けれど、それで終わりではなかった。[p]
 
+[chara_hide_all]
+[bg storage="bg_classroom_day.webp" time=800]
+[auto_chara name="拓海" face="level2_depressed"]
 クラスメイトたちの視線が変わった。[p]
 教師たちの声色が変わった。[p]
+[auto_chara name="恵" face="private_anxiety"]
 恵の表情も、少しずつ遠くなっていった。[p]
 
 「永山くんは、悪くないよ」[p]
