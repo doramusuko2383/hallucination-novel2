@@ -935,15 +935,19 @@
 
 かすれた声で絞り出した。[p]
 [wait time=1000]
-[playse storage=se/heartbeat.ogg volume=45]
+
 [auto_chara name="高田" face="nastysmile"]
 「簡単な話だよ。[l]そうだな。[p]
 [font size=52]
 [delay speed="90"]
-じゃあまずは、[l]服を脱ごうか――」[p]
+じゃあまずは、[l]
+[stopbgm]
+服を脱ごうか――」[p]
 [resetdelay]
 [resetfont]
-;[playse storage=se/chair.ogg volume=20] ; 素材があれば、この直前で椅子を引くSEを追加
+[wait time=2000]
+[playse storage=se/heartbeat.ogg volume=70]
+[wait time=4000]
 
 @jump storage="chapter7.ks" target="*chapter7"
 
