@@ -969,7 +969,7 @@
 
 [auto_chara name="翔太" face="shysmile"]
 翔太が笑っている。[p]
-[auto_chara name="綾香" face="private_smile"]
+[auto_chara name="綾香" face="smile"]
 彩香がスケッチブックを抱えて、呆れたように笑っている。[p]
 [auto_chara name="龍也" face="smile"]
 龍也自身も、フェンスにもたれかかりながら、何でもない冗談に声を上げて笑っていた。[p]
@@ -986,6 +986,7 @@
 龍也の声が震えた。[p]
 
 「戻れるじゃねえか」[p]
+[chara_hide_all]
 
 幻の中で、翔太が手を振った。[p]
 彩香が「早く来なよ」と笑った。[p]
@@ -1004,7 +1005,6 @@
 
 翌日。[p]
 
-[chara_hide_all]
 [bg storage="bg_rooftop_day2.webp" time=800]
 [auto_chara name="拓海" face="level2_normal"]
 拓海は屋上に呼び出された。[p]
@@ -1014,12 +1014,12 @@
 [auto_chara name="翔太" face="normal"]
 [auto_chara name="綾香" face="normal"]
 三人とも、以前と同じように並んでいた。[p]
-
+[chara_hide_all]
 一瞬、拓海は胸を撫で下ろした。[p]
 本当に、戻れたのかもしれない。[p]
 
 だが、龍也はゆっくりと拓海に近づき、胸倉を掴んだ。[p]
-
+[auto_chara name="龍也" face="smile"]
 「昨日のあれ、すげえな」[p]
 
 龍也は笑っていた。[p]
