@@ -359,11 +359,15 @@
 [auto_chara name="龍也" face="angry"]
 「何もなくて、あんな風になるわけないだろ！」[p]
 
-[playse storage=se/punch1.ogg volume=35]
+[playse storage=se/punch1.ogg volume=38]
 [quake time=300 hmax=4 vmax=18]
 龍也が叫び、拓海の胸にパンチを浴びせる。[p]
 
 その衝撃に、拓海は息を飲んだ。[p]
+
+[wait time=500]
+
+屋上の風の音が、一瞬だけ遠のいた。[p]
 
 [auto_chara name="拓海" face="level1_pain"]
 「あの時は、押さえつけられてて、動けなかっただろ……」[p]
@@ -371,9 +375,13 @@
 [auto_chara name="龍也" face="angry"]
 「知らねえよ！」[p]
 
-[playse storage=se/punch2.ogg volume=35]
-[quake time=350 hmax=5 vmax=20]
+[playse storage=se/punch2.ogg volume=20]
+[quake time=220 hmax=2 vmax=8]
 龍也はその言葉を遮るように膝蹴りを見舞う。[p]
+
+息が詰まる。[p]
+
+[wait time=400]
 
 「翔太はおかしくなった。[l]俺たちを避けてる」[p]
 
@@ -393,10 +401,14 @@
 [auto_chara name="龍也" face="angry"]
 「お前がやった証拠もねぇけど、[l]やってねぇ証拠もねぇだろ！」[p]
 
-[playse storage=se/punch3.ogg volume=40]
-[quake time=450 hmax=6 vmax=24]
+[playse storage=se/punch3.ogg volume=22]
+[quake time=260 hmax=2 vmax=10]
 そう言うと、龍也は拳を振り上げ、[r]
 拓海の腹に深くめり込ませた。[p]
+
+声が出ない。[p]
+
+[wait time=600]
 
 拓海は痛みに耐え、[r]
 うずくまりながら思考を巡らせる。[p]
@@ -567,19 +579,23 @@
 
 その時、拓海は思い出した。[p]
 
-AIの黎明期、まだ回答の精度が低かった頃、[r]
-事実とは異なる答えをまるで正解のように返す現象があった。[p]
+AIの黎明期、回答が事実とは異なる内容を、[r]
+まるで正解のように返す現象があった。[p]
 
 それを「ハルシネーション」と呼んでいた。[p]
 
-それは医学用語の「幻覚」と同じ意味だ。[p]
-
-そして、拓海が見せる幻もまた、[r]
+幻覚――拓海が見せるものも、[r]
 彼の知識と想像に基づく“ハルシネーション”なのだ。[p]
 
-[playse storage=se/keyboard_typing.ogg volume=50]
+鈴虫の声だけが、夜の静けさに細く残っている。[p]
+
+[wait time=600]
+[playse storage=se/keyboard_typing.ogg volume=35]
 彼はパソコンのメモのタイトルに、[r]
-「ハルシネーション」と打ち込み、静かにパソコンを閉じた。[p]
+「ハルシネーション」と打ち込んだ。[p]
+
+画面の白い文字をしばらく見つめ、[r]
+静かにパソコンを閉じた。[p]
 
 [fadeoutbgm time=3000]
 [wait time=1000]
@@ -587,7 +603,7 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 *ch2_target_ayaka
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
+[playbgm storage="tension_low.ogg" loop=true volume=50 fadein=true time=1200]
 次のターゲットは綾香だ。[p]
 
 拓海は毎日、そのことばかり考えていた。[p]
@@ -960,8 +976,14 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 
 [wait time=500]
 
-だが、そこで拓海は手を止め、[r]
-画面をじっと見つめた。[p]
+このまま南口を調べればいい。[p]
+
+そう結論づけかけたところで、[r]
+拓海は手を止めた。[p]
+
+画面をじっと見つめる。[p]
+
+本当に、ここでいいのか。[p]
 
 違和感が胸にわき上がってくる。[p]
 
@@ -981,6 +1003,9 @@ AIの黎明期、まだ回答の精度が低かった頃、[r]
 [playbgm storage="suspense.ogg" loop=true volume=40 fadein=true time=1000]
 
 じゃあ、反対方向にある北口のコンビニか……。[p]
+
+一度は南口だと考えた推理を、[r]
+拓海は頭の中で組み直した。[p]
 
 拓海はさらに地図を拡大しながら、[r]
 彼女がバイトしているコンビニがその店であると仮説を立てた。[p]
