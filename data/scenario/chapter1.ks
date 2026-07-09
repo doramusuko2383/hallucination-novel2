@@ -88,6 +88,12 @@
 
 教師にもクラスメイトにも見えないところで行われるこの「日課」を、[r]誰にも相談することができない。[p]
 [wait time=1000]
+
+……[p]
+
+行くしかない。[p]
+
+[wait time=1000]
 [choice_start count=1 y=360]
 [choice name="choice_ch1_go_rooftop" text="屋上へ向かう" target="*next"]
 [s]
@@ -99,7 +105,12 @@
 [wait time=500]
 [playse storage=se/footstep_stairs.ogg volume=30]
 [wait time=3000]
-屋上までの暗い階段を上がってドアを静かに開ける。[p]
+屋上までの暗い階段を上がる。[p]
+[wait time=500]
+[bg storage="black.png" time=600]
+[wait time=500]
+[playse storage=se/wind_rooftop.ogg volume=20]
+[chapter_title number="第一章" title="覚醒"]
 [playse storage=se/roof_door.ogg volume=30]
 [wait time=500]
 *ch1_rooftop
@@ -484,7 +495,6 @@
 しばらく恐怖と混乱で動けなかった。[p]
 [wait time=1000]
 *ch1_return
-[chapter_title number="第一章" title="覚醒"]
 [playse storage=se/school_chime.mp3]
 [wait time=2000]
 
