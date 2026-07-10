@@ -33,13 +33,13 @@
 [wait time=500]
 拓海はマイクをミュートに設定して、やりとりを聞けるようにした。[p]
 [wait time=1000]
-[bg storage="bg_megumi_mansion_back.webp" time=700]
+[bg storage="ch7_hurrying_bicycle.webp" time=700]
 [playse storage=se/run.ogg volume=100]
 自転車で急げば5分程度の距離だ。[p]
 車を追い越す勢いでペダルを漕いだ。[p]
-[playse storage=se/bicycle.ogg volume=60]
-その間も、ずっと会話のやりとりを聞いていた。[p]
 
+その間も、ずっと会話のやりとりを聞いていた。[p]
+[bg storage="bg_megumi_mansion_back.webp" time=700]
 会話の内容を聞いて、陳腐なドラマみたいだな、と拓海は思った。[p]
 
 詐欺師の常套手段だ。[p]
