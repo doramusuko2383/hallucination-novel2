@@ -10,31 +10,49 @@
 [start_keyconfig]
 [chapter_title number="第七章" title="未来"]
 [font speed=50]
-
-[bg storage="bg_takumiroom_night.webp" time=800]
-[playbgm storage="chase.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/smartphone_vibrate.ogg volume=100]
-ワックスで髪をセットしているときにスマホが鳴った。[p]
-
-恵からだ。[p]
-「家に高田が来た」という簡単なメッセージが届いて、慌てて家を出る準備をした。[p]
-
-[playse storage=se/writer.ogg volume=35]
-念のため護身用の園芸バサミをバッグに入れた。[p]
-
-直後、恵から電話がかかってきた。[p]
-電話に出てみたが、キッチンでバタバタと何やら準備している物音が聞こえるだけだった。[p]
-
-だが、拓海にはそれだけで何を意図しているかがわかった。[p]
-
-恵が高田とのやり取りの様子を聞かせようと電話をかけてきたのだ。[p]
-スマホを高田に気付かれない様に仕掛けたのだろう。[p]
-
+[playse storage=se/thunder.ogg volume=100]
 [wait time=500]
-拓海はマイクをミュートに設定して、やりとりを聞けるようにした。[p]
+[bg storage="bg_takumiroom_night.webp" time=800]
+
+[playse storage=se/smartphone_vibrate.ogg volume=100]
+ワックスで髪を整えていた、その時だった。[p]
+
+スマホが震えた。[p]
+
+恵だ。[p]
+
+『家に高田が来た』[p]
+
+[wait time=1000]
+
+拓海はバッグに園芸バサミを放り込んだ。[p]
+
+[playse storage=se/smartphone_vibrate.ogg volume=100]
+
+今度は着信。[p]
+
+恵だった。[p]
+
+「……」[p]
+
+耳に届くのは［l］
+
+食器の音。[p]
+
+水道の音。[p]
+
+誰かの足音だけだった。[p]
+
+「……」[p]
+
+そういうことか。[p]
+
 [wait time=1000]
 [bg storage="ch7_hurrying_bicycle.webp" time=700]
+[wait time=500]
+[playbgm storage="chase.ogg" loop=true volume=35 fadein=true time=1000]
 [playse storage=se/run.ogg volume=100]
+間に合え――。[p]
 自転車で急げば5分程度の距離だ。[p]
 車を追い越す勢いでペダルを漕いだ。[p]
 
