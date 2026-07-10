@@ -739,38 +739,80 @@
 [s]
 
 *ch4_takada_tail_return
-[auto_chara name="拓海" face="private_normal"]
-「俺が尾行するよ」[p]
-
-拓海は決断した。恵を心配させないように出来るだけ言い切った。[p]
-
-[auto_chara name="恵" face="private_anxiety"]
-「大丈夫なの？」[p]
-
-恵の声には、不安がにじんでいる。[p]
-
-[auto_chara name="拓海" face="private_normal"]
-「上手くやるよ。それに、あいつ酔っ払ってるし」[p]
-
+拓海はスマホから聞こえる物音に耳を澄ませた。[p]
 高田の声は、先ほどよりも明らかに上機嫌になっていた。[p]
-酔いが回ってるなら、こちらに気づくことはないだろう……。[p]
-
-[auto_chara name="恵" face="private_anxiety"]
-「もう時間も遅いし、気を付けてね」[p]
+酔いが回っているなら、こちらに気づくことはないかもしれない……。[p]
 
 時計を見ると、既に9時を回っていた。[p]
 高田の家が遠かったら、終電を逃すかもしれないな……。[p]
+そんな懸念も頭をよぎったが、今はまず自然にこの家を出る必要があった。[p]
 
-そんな懸念も頭をよぎったが、拓海はそれを隠して強がる。[p]
+[chara_hide_all time=300]
+[wait time=600]
+響子の見送りの声が聞こえ、高田が玄関を出た。[p]
+
+[auto_chara name="恵" face="private_anxiety"]
+「……帰ったよ」[p]
+
+恵が部屋に戻り、小声で告げた。[p]
+拓海はイヤホンを外し、頷く。[p]
+
+[auto_chara name="拓海" face="private_normal"]
+「じゃあ、俺もそろそろ」[p]
+
+二人は部屋を出て、玄関へ向かった。[p]
+
+[bg storage="bg_megumi_living_night.webp" time=600]
+[auto_chara name="拓海" face="private_normal"]
+「今日は突然お邪魔してすみませんでした」[p]
+
+[auto_chara name="響子" face="normal"]
+「ううん。またいつでも遊びに来てね」[p]
+
+響子は何も疑っていない様子で、穏やかに微笑んでいた。[p]
+
+[auto_chara name="恵" face="private_normal"]
+「途中まで送るね」[p]
+
+恵は自然な調子で言い、拓海と一緒に玄関を出た。[p]
+
+[playse storage=se/door_close.ogg volume=30]
+玄関の扉が、背後で静かに閉まった。[p]
+
+[chara_hide_all time=300]
+[bg storage="bg_apartment_hallway_night.webp" time=700]
+[playse storage=se/hallway_ambience.ogg volume=22]
+マンションの共用廊下はひっそりとしていた。[p]
+二人は足音を抑え、エレベーターへ向かう。[p]
+
+[playse storage=se/elevator_ding.ogg volume=25]
+エレベーターの扉が開き、短い沈黙のまま一階へ降りた。[p]
+
+[bg storage="bg_mansion_night.webp" time=700]
+エントランスを抜け、人目がなくなったところで、恵がようやく口を開いた。[p]
+
+[auto_chara name="恵" face="private_anxiety"]
+「本当に尾行するの？」[p]
+
+[auto_chara name="拓海" face="private_normal"]
+「うん。今なら顔も知られてないし、酔ってる」[p]
+
+[auto_chara name="恵" face="private_anxiety"]
+「危ないと思ったら逃げてね」[p]
+
+[auto_chara name="拓海" face="private_normal"]
+「大丈夫。無理はしない」[p]
+
+[auto_chara name="恵" face="private_anxiety"]
+「……気を付けて」[p]
 
 [auto_chara name="拓海" face="private_smile"]
-「大丈夫、明日は日曜日だし」[p]
+「行ってくる」[p]
 
 笑顔を作り、軽く手を振った。[p]
 
 [chara_hide_all time=300]
 [bg storage="bg_station_night.webp" time=900]
-響子の見送りの声が聞こえ、高田が玄関を出た。[p]
 駅までは一本道。[p]
 幸い、拓海の顔は高田に割れていない。[p]
 一定の距離を保てば気づかれることはないだろう。[p]
