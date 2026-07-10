@@ -368,7 +368,9 @@
 [chara_hide_all time=300]
 [wait time=500]
 [bg storage="bg_mansion_night.webp" time=1000]
-[playse storage=se/wind_rooftop.ogg volume=30 fadein=true time=1000]
+[playse storage=se/cafe_chime.ogg volume=50]
+[wait time=2000]
+[playse storage=se/city_ambience.ogg volume=30 loop=true fadein=true time=1000]
 
 二人は会計を済ませ、店を出た。[p]
 外はすでに暗くなり、空気がひんやりしている。[p]
@@ -388,7 +390,7 @@
 皆どこか品が感じられる気がした。[p]
 
 [wait time=1000]
-[playse storage=se/wind_rooftop.ogg volume=18]
+[playse storage=se/wind_rooftop.ogg volume=30]
 じっと待っていると、夜風が冷たく感じ始めた。[p]
 
 肌寒いな……。[p]
@@ -421,9 +423,11 @@
 拓海は腕組みをしながら、次第に強くなる冷たい風を感じていた。[p]
 
 [wait time=1000]
-[playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=800]
+
 時刻はもう18時30分を回っていた。[p]
 予定よりもかなり遅れている。[p]
+[stopse fadeout=1000]
+[playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=800]
 
 どこかに寄り道でもしたのか……それとも、急に予定変更して、車で別の場所に出かけた可能性もあるな……。[p]
 そう考えると、何かがずれているような感覚が広がっていく。[p]
@@ -454,7 +458,7 @@
 拓海はその光景を見届けて、すぐに恵に連絡を取る。[p]
 
 しばらくして、息を切らしながら恵が現れた。[p]
-
+[playse storage=se/city_ambience.ogg volume=30 loop=true fadein=true time=1000]
 [auto_chara name="恵" face="private_serious"]
 「どんな男だった？」[p]
 
@@ -490,6 +494,7 @@
 
 [chara_hide_all time=300]
 [wait time=1000]
+[stopse fadeout=1000]
 [bg storage="bg_apartment_hallway_night.webp" time=800]
 [playse storage=se/elevator_ding.ogg volume=28]
 
@@ -505,7 +510,7 @@
 返事はすぐには来なかった。[p]
 
 廊下は静まり返り、遠くでエレベーターの動く低い音だけが響いている。[p]
-[wait time=700]
+[wait time=1000]
 
 もし高田が出てきたら――。[p]
 
@@ -569,6 +574,7 @@
 [chara_hide_all time=300]
 [bg storage="bg_megumi_room_night.webp" time=800]
 [playse storage=se/door_close.ogg volume=30]
+[playse storage=se/room_ambient_megumi.ogg volume=30 loop=true fadein=true time=1000]
 恵の部屋は玄関のすぐ横にあった。[p]
 広さはさほどではないが、整然と片付けられていて、家具の配置にも工夫が見られる。[p]
 カーテンが薄いピンク色でなければ、どこか男の部屋を思わせるようなシンプルさがあった。[p]
@@ -590,6 +596,7 @@
 
 拓海は小さくうなずき、恵が部屋を出て行くのを見送った。[p]
 [chara_hide_all time=300]
+[stopse fadeout=1000]
 [playse storage=se/door_close.ogg volume=24]
 扉が閉まると、部屋の中は急に静かになった。[p]
 拓海はイヤホンを耳の奥へ押し込む。[p]
@@ -597,7 +604,7 @@
 高田はリビングにいるんだろうが、ここからじゃ何も見えない……。[p]
 彼は息を殺し、イヤホンの向こうからリビングの音が届くのを待った。[p]
 
-[wait time=800]
+[wait time=1000]
 [bg storage="bg_megumi_living_night.webp" time=2000]
 イヤホンから、恵の挨拶が聞こえてきた。[p]
 [auto_chara name="恵" face="private_normal" left=0]
