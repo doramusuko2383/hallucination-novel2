@@ -7,6 +7,7 @@
 [chara_face name="恵" face="happy" storage="chara/megumi/happy.webp"]
 [chara_face name="恵" face="smile" storage="chara/megumi/happy.webp"]
 [chara_face name="恵" face="surprise" storage="chara/megumi/surprise.webp"]
+[chara_face name="恵" face="scream" storage="chara/megumi/scream.webp"]
 [chara_face name="恵" face="tease" storage="chara/megumi/tease.webp"]
 [chara_face name="恵" face="troubled_smile" storage="chara/megumi/troubled_smile.webp"]
 [chara_face name="恵" face="private_normal" storage="chara/megumi/private_normal.webp"]
