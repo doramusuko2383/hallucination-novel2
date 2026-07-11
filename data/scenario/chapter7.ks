@@ -257,6 +257,13 @@
 
 その高田は、逃げるように帰っていった。[p]
 
+恵は床にアルコールスプレーを吹きかけた。[p]
+
+[auto_chara name="恵" face="private_normal"]
+「永山君、その雑巾貸して」[p]
+
+拓海は黙って雑巾を手渡した。[p]
+
 [auto_chara name="恵" face="private_anxiety"]
 「本当にこれで良かったのかな」[p]
 
@@ -265,41 +272,33 @@
 [auto_chara name="拓海" face="private2_normal"]
 「ああ……いいんだよこれで。[r]
 あいつが約束を守る保証もどこにもなかったし」[p]
-掃除が終わって、よく手を洗いながら拓海は言った。[p]
+
+拓海は雑巾をバケツですすぐ。[p]
+
+濁った水がゆっくり揺れた。[p]
+
+恵は新しい水へ入れ替えた。[p]
+
+雑巾を固く絞り、再び床を拭き始める。[p]
+
 [auto_chara name="恵" face="private_anxiety"]
 「そうだけど……見せたんでしょ？」[p]
 
-あのとき、拓海はハサミで脅しをかけたあと、手で触れて高田に幻を見せていた。[p]
 [auto_chara name="拓海" face="private2_normal"]
 「うん。見せたよ」[p]
 [auto_chara name="恵" face="private_anxiety"]
 「大丈夫かな」[p]
 
-恵は綾香の件を思い出して気掛かりなようだ。[p]
-あんな目にあったのに、人の心配が出来るなんて……拓海は感心した。[p]
 [auto_chara name="拓海" face="private2_smile"]
-「あいつのことなら大丈夫だよ。精神的にタフそうだったし」[p]
+「大丈夫だよ。今回は違うから。」[p]
 [auto_chara name="恵" face="private_anxiety"]
-「そっか……」[p]
+「違う？」[p]
 [auto_chara name="拓海" face="private2_normal"]
-「というか」[p]
-
-拓海は続けた。[p]
 「綾香の時みたいに、精神的に追い詰めるようなことはしてない」[p]
 [auto_chara name="恵" face="private_question"]
 「そうなの？」[p]
 [auto_chara name="拓海" face="private2_smile"]
-「うん。今回は直接的に……物理的に攻撃するイメージを送っただけ」[p]
-[auto_chara name="恵" face="private_question"]
-「物理的に？」[p]
-
-恵はオウム返しする。[p]
-[auto_chara name="拓海" face="private2_normal"]
-「あー。でもまあ。精神的にも来るかなあ」[p]
-[auto_chara name="恵" face="private_question"]
-「どういうこと？」[p]
-[auto_chara name="拓海" face="private2_normal"]
-「女性は『ついてない』から気持ちはわからないかもしれないな」[p]
+「うん。もう二度と『こんなこと』が出来ない様にしただけ」[p]
 拓海は言いながら、チョキで挟むジェスチャーをした。[p]
 
 [auto_chara name="恵" face="private_confuse"]
@@ -314,14 +313,19 @@
 「本当は人を傷つけるために使いたくはなかったけど……[p]
 あのときは冷静じゃなかったのかもしれない」[p]
 [auto_chara name="恵" face="private_angry"]
-「もう、本当に刺しちゃうかと思って焦ったんだから」[p]
+「もう…本当に怖かった。」[p]
 
-恵が非難する。[p]
+「永山君まで壊れちゃったのかと思った。」[p]
+
+恵は拭き終えた雑巾を静かにバケツへ戻した。[p]
+
 [auto_chara name="拓海" face="private2_normal"]
-「それは大丈夫」[p]
+「……」[p]
+
+「あれは演技だよ。」[p]
 
 拓海は片手を上げる。[p]
-「あれ演技だよ。直接対峙することもあるだろうと思って、シミュレーションしてたから」[p]
+「直接対峙することもあるだろうと思って、シミュレーションしてたから」[p]
 [auto_chara name="恵" face="private_question"]
 「え？　ああなるって予想してたの？」[p]
 
@@ -338,8 +342,7 @@
 
 恵は言葉を失う。[p]
 [auto_chara name="拓海" face="private2_normal"]
-「あいつは響子さんに固執してたから。[p]
-菊池さんにも興味を持つんではないかと思っていたよ」[p]
+「前から嫌な予感はしてた。」[p]
 [auto_chara name="恵" face="private_surprise"]
 「そういえば前に言ってたね。あの時は……冗談だと思ってた」[p]
 [auto_chara name="拓海" face="private2_sorry"]
@@ -362,11 +365,13 @@
 [auto_chara name="拓海" face="private2_sorry"]
 「まあ……ね。一度失敗してるから上手くいくかわからなかったけど」[p]
 
-拓海は駅で高田の背中に触れた時のことを思い出した。[p]
+二人は掃除を終え、並んで洗面所で手を洗った。[p]
+
+拓海は蛇口を閉めながら言った。[p]
+
 [auto_chara name="拓海" face="private_surprise"]
 「あれ？」[p]
 
-拓海が急に変な声を上げる。[p]
 [auto_chara name="恵" face="private_question"]
 「どうかした？」[p]
 [auto_chara name="拓海" face="private2_smile"]
@@ -383,7 +388,8 @@
 [auto_chara name="恵" face="private_happy"]
 「うん、分かってるよ……守ってくれてありがとう」[p]
 
-恵が少し恥ずかしそうに言う。[p]
+恵がタオルで手を拭きながら恥ずかしそうに言う。[p]
+
 [auto_chara name="拓海" face="private2_smile"]
 何となく照れ臭くて拓海は間を埋めるように思ったことを口に出した。[p]
 「なんかお腹空いてきたな」[p]
@@ -620,21 +626,41 @@
 
 拓海は素直な気持ちでそう告げた。[p]
 [auto_chara name="龍也" face="smile"]
-「そうか」[p]
+「そうか」
 
 龍也も少し照れくさそうに笑みを浮かべた。[p]
+
+[chara_hide_all]
+
+[wait time=2000]
+
+[playse storage=se/wind_rooftop.ogg volume=20]
+
+二人とも何も言わなかった。[p]
+
+ただ、春の風だけが静かに屋上を吹き抜けていく。[p]
+
 [auto_chara name="拓海" face="level3_smile"]
-ふと、拓海の口から自然と「卒業おめでとう」という言葉がこぼれた。[p]
+
+ふと、拓海の口から自然と[p]
+「卒業おめでとう」[p]
+という言葉がこぼれた。[p]
 自分でも驚いたが、それが本心だと思えた。[p]
 [auto_chara name="龍也" face="smile"]
 「おお、ありがとうな。お前も、卒業おめでとう」[p]
 
-龍也もぎこちない笑顔を返し、少し躊躇した後に「これからよろしくな」と、手を差し出してきた。[p]
+龍也もぎこちない笑顔を返した。[p]
+
+しばらく拓海を見つめる。[p]
+
+そして、ゆっくり右手を差し出した。[p]
+
 [chara_hide_all]
-驚いたことに、龍也も同じ大学に進学することになっていたのだ。[p]
-また同級生だ。[p]
+拓海はその手を見つめる。[p]
+
+[wait time=1000]
+
 [bg storage="ch7_shakehands.webp" time=500]
-「うん、よろしく」[p]
 
 拓海も手を差し出し、二人の手が固く握られた。[p]
 あのとき、出来なかった握手。[p]
@@ -658,19 +684,23 @@
 拓海は思わず驚き、恵の方をチラリと見た。[p]
 何も知らない様子の恵は不思議そうにこちらを見返してくる。[p]
 [auto_chara name="龍也" face="smile"]
+龍也は照れくさそうに片手を上げた。[p]
 「じゃあ、またな。大学で会おうぜ」[p]
 [playse storage=se/leather_shoes.ogg volume=100]
 [wait time=2000]
 [chara_hide_all]
 龍也はそう言い残し、手を軽く振って去っていった。[p]
-その背中がだんだんと遠ざかるのを見つめながら、拓海はなんとなく、彼との新しい関係が始まるような予感を抱いた。[p]
+拓海はその背中を、静かに見送った。[p]
 
 [stopse fadeout=800]
 [fadeoutbgm time=3000]
+[bg storage="black.png" time=500]
 [bg storage="bg_family_restaurant_night.webp" time=900]
 [playbgm storage="restaurant_ambience.ogg" loop=true volume=15 fadein=true time=1000]
-「卒業おめでとう！」[p]
+
 [playse storage=se/kanpai.ogg volume=100]
+「卒業おめでとう！」[p]
+
 卒業式の夜、拓海と恵はいつものファミレスに集まり、ドリンクバーのグラスで軽く乾杯を交わした。[p]
 
 [auto_chara name="拓海" face="level3_smile"]
@@ -692,17 +722,19 @@
 [wait time=2000]
 二人とも、何度も行き交った校舎や教室、そしてクラスメイトたちとの思い出が頭に浮かび、しばらく黙っていた。[p]
 [auto_chara name="恵" face="normal"]
-「あ、そういえば……龍也くんも同じ大学に行くんだね」[p]
+「さっき龍也くん、大学で会おうって言ってたよね」[p]
+
+「同じ大学なんだ？」[p]
 
 恵が思い出したように話題を変える。[p]
 [auto_chara name="拓海" face="level3_smile"]
-「そうなんだよ。学部は違うけど、もしかしたら選択科目で同じ講義を受けることがあるかもね」[p]
+「そうなんだよ。また腐れ縁になりそうだけどね。」[p]
 [auto_chara name="恵" face="laugh"]
-「へえ、楽しそう。そういうの、ちょっと羨ましいかも」[p]
+「ふふっ。そういう関係も、悪くないね」[p]
 
 恵が微笑んだ。[p]
 [auto_chara name="拓海" face="level3_smile"]
-「恵も羨ましいよ。J大学なんて、本当に頑張ったんだなって思うよ」[p]
+「恵はJ大学なんて、本当に頑張ったんだなって思うよ」[p]
 [auto_chara name="恵" face="normal"]
 「ありがとう。必死に勉強した甲斐があったよ」[p]
 
@@ -726,8 +758,14 @@
 恵に軽く流されてしまった。[p]
 [auto_chara name="拓海" face="level3_normal"]
 「気付いてあげたい。と思ったんだよね」[p]
-[auto_chara name="恵" face="laugh"]
-「ほほう。詳しく聞かせてもらいましょう」[p]
+
+[wait time=1000]
+
+拓海は少し言葉を探すように視線を落とした。[p]
+
+[auto_chara name="恵" face="happy"]
+「……誰に？」[p]
+
 [auto_chara name="拓海" face="level3_normal"]
 「恵とか、俺みたいに辛い目にあってる生徒や、クラスで孤立してる生徒って、きっといると思うんだ。[p]
 そういう子たちに気付いて、少しでも力になれる先生になれたらなって」[p]
@@ -800,6 +838,7 @@
 恵が少し身を乗り出す。[p]
 
 [wait time=500]
+拓海は一度だけ恵の手元へ視線を落とした。[p]
 [fadeoutbgm time=3000]
 [auto_chara name="拓海" face="level3_normal"]
 「俺のあの力。強い憎しみを抱いた相手にしか使えなかったじゃん」[p]
@@ -807,6 +846,10 @@
 「そうね。高田のときに使えなかったもんね」[p]
 [auto_chara name="拓海" face="level3_normal"]
 「うん……でも、相手を強く思った時にも使えるのかなって」[p]
+
+拓海はそっと恵を見つめた。[p]
+
+恵も不思議そうに見つめ返す。[p]
 
 [chara_hide_all]
 [wait time=1000]
@@ -817,7 +860,7 @@
 [cm]
 [wait time=1000]
 [fadeoutbgm time=3000]
-そう言いながら、拓海はそっと恵の手を両手で包み込むように握った。[p]
+拓海はそっと恵の手を両手で包み込むように握った。[p]
 
 [bg storage="ch7_last1.webp" time=900]
 
