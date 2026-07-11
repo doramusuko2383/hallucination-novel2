@@ -755,11 +755,17 @@
 [auto_chara name="恵" face="serious"]
 「ちょっと！　何してるの！」[p]
 
-龍也はそんな恵の声にも全く動じずにそのまま冷たい目で見下ろしている。[p]
 [auto_chara name="龍也" face="normal"]
-「まだ終わってねぇからな」[p]
+龍也は拓海を睨みつけたまま数秒動かなかった。[p]
 
-恵が近づいてくるのが聞こえて、そう吐き捨てて、彼はようやく屋上を後にした。[p]
+拳を握り締める。[p]
+
+だが、もう殴らなかった。[p]
+
+「……まだ終わってねぇからな」[p]
+
+そう吐き捨てて、彼はようやく屋上を後にした。[p]
+
 [fadeoutbgm time=4000]
 [auto_chara name="恵" face="sad"]
 「大丈夫？」[p]
@@ -784,25 +790,41 @@
 恵が戸惑った表情で問いかける。[p]
 少し間を置いて、拓海は震える声で答えた。[p]
 [auto_chara name="拓海" face="level2_depressed"]
+
 「綾香が……自殺未遂したんだ」[p]
+
 [auto_chara name="恵" face="surprise"]
-「ええ？　本当に？」[p]
+「……本当に？」[p]
+
 [auto_chara name="拓海" face="level2_depressed"]
 「龍也が綾香の携帯に電話したら、母親が出たんだ。」[p]
 「睡眠薬を大量に飲んで、昨日から入院してるらしい」[p]
+
+二人とも言葉が出ない。[p]
+
+[playse storage=se/wind_rooftop.ogg volume=30]
+[playse storage=se/fence_creak.ogg volume=30]
+
+[wait time=1000]
+
+風だけがフェンスを鳴らしている。[p]
+
+[wait time=500]
+
 [auto_chara name="恵" face="pain"]
+[wait time=500]
 「そんな……」[p]
 
-恵は絶句したまま、しばらく固まったままだった。[p]
+恵はその場に立ち尽くした。[p]
 [chara_hide_all time=300]
-[playse storage=se/fence_creak.ogg volume=30]
+
 [wait time=2000]
-周囲は11月の薄曇りの空に包まれていた。冷たく湿った風が、屋上のフェンスを不気味な音を立てて揺らしている。[p]
-[wait time=2000]
+
+長い沈黙のあと、恵がぽつりと呟いた。[p]
+
 [auto_chara name="恵" face="serious"]
 「お見舞いに行きましょう」[p]
 
-突然、恵が声をあげた。[p]
 [auto_chara name="拓海" face="level2_surprise"]
 「え？」[p]
 [auto_chara name="恵" face="serious"]
@@ -850,6 +872,12 @@
 「ありがとう」[p]
 [auto_chara name="恵" face="serious"]
 「先に教室戻ってるね」[p]
+
+恵は笑顔を作ろうとした。[p]
+
+だが上手く笑えなかった。[p]
+
+小さく手を振り、教室へ戻っていった。[p]
 
 拓海は恵の背中を見送り、彼女の優しさに感謝しながらも、自分の中でくすぶる不安を感じ続けていた。[p]
 [chara_hide_all time=300]
