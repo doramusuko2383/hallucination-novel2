@@ -300,7 +300,7 @@
 「どういうこと？」[p]
 [auto_chara name="拓海" face="private2_normal"]
 「女性は『ついてない』から気持ちはわからないかもしれないな」[p]
-「拓海は言いながら、チョキで挟むジェスチャーをした。[p]
+拓海は言いながら、チョキで挟むジェスチャーをした。[p]
 
 [auto_chara name="恵" face="private_confuse"]
 「うわあ」[p]
