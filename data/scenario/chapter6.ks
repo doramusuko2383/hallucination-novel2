@@ -997,11 +997,10 @@
 じゃあまずは、[l]
 [stopbgm]
 服を脱ごうか――」[p]
+[playse storage=se/clock_reverb.ogg volume=70]
 [resetdelay]
 [resetfont]
-[wait time=2000]
-[playse storage=se/heartbeat.ogg volume=70]
-[wait time=4000]
+[wait time=3000]
 
 @jump storage="chapter7.ks" target="*chapter7"
 
