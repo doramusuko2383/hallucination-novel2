@@ -288,56 +288,116 @@
 「あっ」[p]
 
 恵が声を上げた。[p]
+
 「あのグレーのスーツ！」[p]
+
 [auto_chara name="拓海" face="private_normal"]
 「高田だ」[p]
 
 間違いない。[p]
 
-高田が、少し眠たそうな顔をしてゆっくりと改札に向かっているのが見えた。[p]
+高田は眠たそうな顔のまま、改札へ向かって歩いていく。[p]
+
 [auto_chara name="拓海" face="private_normal"]
 「行ってくる」[p]
-[playse storage=se/run.ogg volume=50]
-[chara_hide_all time=300]
-拓海は恵に荷物を預け、すぐさま小走りで改札に向かった。[p]
-なんとかエスカレーターで追いつくことができ、高田のすぐ後ろについた。[p]
-高田はエスカレーターを降りると、迷いなく30メートルほど進んで列の先頭に並んだ。[p]
-これが彼の日課なのだろう。拓海は、その後ろに静かに並ぶ。[p]
-[bg storage="bg_station_home.webp" time=800]
-振り返ることもなく、怪しまれていないようだ。[p]
-拓海は胸ポケットにしまってある脅迫の手紙に指を伸ばし、手袋越しに取り出す練習をした。[p]
-まだ手袋をしなくてはならないほど寒い時期ではないため、やや不自然だが仕方ない。[p]
-電車が来るまで、あと5分――。[p]
-どのタイミングで幻を見せれば、一番効果的なんだろう…… 拓海は考え続けた。[p]
-やがて、快速列車がホームに接近する轟音が響き始めた。[p]
-[playse storage=se/fast_train.ogg volume=50]
-この駅は各駅停車しか止まらない。快速列車は全速力で通過していくはずだ。[p]
-[wait time=500]
-今だ――！[p]
-[bg storage="ch5_takumi_takada.webp" time=800]
-[playse storage=se/heartbeat.ogg loop=true volume=45 fadein=true time=500]
-[wait time=500]
-拓海は自分に言い聞かせ、大きく欠伸をするフリをしながら、高田に手を伸ばした。[p]
-[wait time=500]
-手のひらがじりじりと高田の背中に近づく。[p]
-[wait time=500]
-そして、手が高田に軽く触れた。[p]
-[stopse fadeout=400]
-[wait time=1000]
-[bg storage="bg_station_home.webp" time=800]
-[auto_chara name="拓海" face="private_surprise"]
-……何も起きない？[p]
-その瞬間、拓海の胸に恐怖が広がった。[p]
-[wait time=1000]
-なんでだ？[p]
-[wait time=1000]
-[auto_chara name="高田" face="confuse"]
-高田が背中の感触に気付いて振り返ったので、拓海は一瞬で我に返った。[p]
-[auto_chara name="拓海" face="private_surprise"]
-「すみません」[p]
 
-と謝り、足早にその場を離れる。[p]
-心臓が激しく鼓動を打っている。失敗だ――。[p]
+[playse storage=se/run.ogg volume=50]
+
+[chara_hide_all time=300]
+
+拓海は荷物を恵へ預け、小走りで高田の後を追った。[p]
+
+エスカレーターで何とか追いつき、そのまま数歩後ろにつく。[p]
+
+高田は迷うことなくホームの先頭へ向かった。[p]
+
+毎朝、同じ場所に並んでいるのだろう。[p]
+
+拓海も、その後ろへ静かに立った。[p]
+
+[bg storage="bg_station_home.webp" time=800]
+
+高田は前だけを見つめている。[p]
+
+振り返る気配はない。[p]
+
+拓海は胸ポケットの脅迫状を、手袋越しに取り出せるか確かめた。[p]
+
+今日は失敗できない。[p]
+
+電車が来るまで、あと五分――。[p]
+
+遠くからレールを震わせる音が聞こえ始める。[p]
+
+[playse storage=se/fast_train.ogg volume=50]
+
+快速列車だ。[p]
+
+この駅には止まらない。[p]
+
+轟音だけを残して通過していく。[p]
+
+[bg storage="ch5_takumi_takada.webp" time=800]
+
+[playse storage=se/heartbeat.ogg loop=true volume=42 fadein=true time=600]
+
+心臓が大きく脈を打つ。[p]
+
+ドクン……。[p]
+
+あと一歩。[p]
+
+[wait time=500]
+
+拓海は大きく欠伸をするふりをしながら、ゆっくり右手を伸ばした。[p]
+
+[wait time=600]
+
+指先が、高田の背中へ近付く。[p]
+
+[wait time=700]
+
+触れる――。[p]
+
+[stopse fadeout=300]
+
+[wait time=900]
+
+……
+
+[p]
+
+[bg storage="bg_station_home.webp" time=800]
+
+[auto_chara name="拓海" face="private_surprise"]
+
+……何も起きない？[p]
+
+その瞬間、全身から血の気が引いた。[p]
+
+なんでだ……？[p]
+
+[wait time=700]
+
+[auto_chara name="高田" face="confuse"]
+
+高田が背中の違和感に気付き、ゆっくり振り返る。[p]
+
+[auto_chara name="拓海" face="private_surprise"]
+
+「すみません！」[p]
+
+拓海は頭を下げ、その場を離れた。[p]
+
+心臓だけが、まだ激しく鳴り続けている。[p]
+
+失敗した――。[p]
+
+[chara_hide_all time=300]
+
+[fadeoutbgm time=3000]
+
+
 [chara_hide_all time=300]
 [fadeoutbgm time=3000]
 [bg storage="bg_classroom_day2.webp" time=800]
