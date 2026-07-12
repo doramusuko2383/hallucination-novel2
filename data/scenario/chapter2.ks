@@ -737,7 +737,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [playbgm storage="classroom_buzzing.ogg" volume=70 fadein=true]
 [choice_start count=2]
 [choice name="choice_ch2_megumi_good" text="塾の話から切り出す" target="*ch2_megumi_approach_good"]
-[choice name="choice_ch2_megumi_bad" text="いきなり彩香のことを聞く" target="*ch2_megumi_approach_bad"]
+[choice name="choice_ch2_megumi_bad" text="いきなり綾香のことを聞く" target="*ch2_megumi_approach_bad"]
 [s]
 
 *ch2_megumi_approach_good
@@ -1045,7 +1045,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 早すぎた。[p]
 
 まだ普通に話せる関係ですらない相手に、[r]
-いきなり彩香の名前を出すべきではなかった。[p]
+いきなり綾香の名前を出すべきではなかった。[p]
 
 [auto_chara name="拓海" face="level2_normal"]
 「いや……なんでもない」[p]
@@ -1060,7 +1060,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 その後、拓海は自然に会話を続けることができなかった。[p]
 
-彩香の中学も、住んでいる地域も、バイト先の手がかりも。[r]
+綾香の中学も、住んでいる地域も、バイト先の手がかりも。[r]
 何ひとつ掴めないまま、時間だけが過ぎていった。[p]
 
 復讐の計画は、そこで止まった。[p]
