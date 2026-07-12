@@ -172,7 +172,7 @@
 
 [wait time=500]
 
-彩香は無言でバーコードを通し、[r][l]
+綾香は無言でバーコードを通し、[r][l]
 男は「どうも」とだけ言って店を出ていった。[p]
 [playse storage=se/convenience_door.ogg volume=15]
 [wait time=500]
