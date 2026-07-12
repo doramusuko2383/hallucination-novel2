@@ -657,7 +657,7 @@
 [auto_chara name="翔太" face="serious" left=180]
 「なるほど、頭いいね！その通りだ」[p]
 
-翔太が関心している。[p]
+翔太が感心している。[p]
 しばらく天を仰ぎ見て考える。[l]
 「じゃあガマンするメリットを別に用意すればいいんだよね」[p]
 [auto_chara name="龍也" face="normal" left=50]
