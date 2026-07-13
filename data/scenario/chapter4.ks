@@ -160,7 +160,7 @@
 「実はね、本人と接触できそうなの」[p]
 
 [auto_chara name="拓海" face="private_surprise"]
-「本当に？　一体どうやって？」[p]
+「本当に？一体どうやって？」[p]
 
 [auto_chara name="恵" face="private_serious"]
 「お母さんが、今週の土曜日に会社の人を家に呼ぶって言うの。」[p]
@@ -349,7 +349,7 @@
 「普通の人にはね。[l]でも、これを使う必要がある相手なら、もう人じゃない」[p]
 
 [auto_chara name="恵" face="private_laugh"]
-「凄い屁理屈。[l]……でも、ちょっとだけ安心した」[p]
+「すごい屁理屈。[l]……でも、ちょっとだけ安心した」[p]
 
 [auto_chara name="拓海" face="private_smile"]
 「役に立たないのが一番だけどね」[p]
