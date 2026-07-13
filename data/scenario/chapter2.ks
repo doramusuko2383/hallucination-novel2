@@ -221,7 +221,7 @@
 龍也は一瞬、目を細めて拓海を見た。[p]
 
 [auto_chara name="龍也" face="angry"]
-「はあ？　お前、何か言ったか？」[p]
+「はあ？お前、何か言ったか？」[p]
 
 龍也の表情が固まり、眉間にしわが寄る。[p]
 
@@ -737,7 +737,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [playbgm storage="classroom_buzzing.ogg" volume=70 fadein=true]
 [choice_start count=2]
 [choice name="choice_ch2_megumi_good" text="塾の話から切り出す" target="*ch2_megumi_approach_good"]
-[choice name="choice_ch2_megumi_bad" text="いきなり彩香のことを聞く" target="*ch2_megumi_approach_bad"]
+[choice name="choice_ch2_megumi_bad" text="いきなり綾香のことを聞く" target="*ch2_megumi_approach_bad"]
 [s]
 
 *ch2_megumi_approach_good
@@ -814,7 +814,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 「毎回テスト前に焦って徹夜で何とかしてるだけだよ」[p]
 
 [auto_chara name="恵" face="surprise"]
-「ええ！　全然そんな焦ってる感じ出さないのに」[p]
+「ええ！全然そんな焦ってる感じ出さないのに」[p]
 
 [stopse fadeout=700]
 [chara_hide_all time=300]
@@ -844,11 +844,11 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 できるだけ自然な口調を心がける。[p]
 
-「五組の上田さんと友達なの？　[l]
+「五組の上田さんと友達なの？[l]
 昨日、一緒に帰っているのを見かけたんだけど」[p]
 
 [auto_chara name="恵" face="normal"]
-「綾香？　うん、昨日はたまたま一緒に帰ったんだよ。[l]
+「綾香？うん、昨日はたまたま一緒に帰ったんだよ。[l]
 中学の時、塾が一緒だったから」[p]
 
 [auto_chara name="拓海" face="level2_normal"]
@@ -1045,7 +1045,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 早すぎた。[p]
 
 まだ普通に話せる関係ですらない相手に、[r]
-いきなり彩香の名前を出すべきではなかった。[p]
+いきなり綾香の名前を出すべきではなかった。[p]
 
 [auto_chara name="拓海" face="level2_normal"]
 「いや……なんでもない」[p]
@@ -1060,7 +1060,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 その後、拓海は自然に会話を続けることができなかった。[p]
 
-彩香の中学も、住んでいる地域も、バイト先の手がかりも。[r]
+綾香の中学も、住んでいる地域も、バイト先の手がかりも。[r]
 何ひとつ掴めないまま、時間だけが過ぎていった。[p]
 
 復讐の計画は、そこで止まった。[p]

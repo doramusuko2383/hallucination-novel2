@@ -112,7 +112,7 @@
 「菊池さん！」[p]
 [chara_hide_all]
 ;[auto_chara name="恵" face="private_help"]
-「永山くん！　助けて！」[p]
+「永山くん！助けて！」[p]
 
 恵の部屋からだ。[p]
 
@@ -138,7 +138,7 @@
 
 恵はかろうじて声を出した。[p]
 [auto_chara name="拓海" face="private2_anxiety"]
-「怪我はない？　何かされた？」[p]
+「怪我はない？何かされた？」[p]
 [auto_chara name="恵" face="private_cry"]
 「服は脱がされそうになったけど……大丈夫だった」[p]
 
@@ -313,7 +313,7 @@
 「本当は人を傷つけるために使いたくはなかったけど……[p]
 あのときは冷静じゃなかったのかもしれない」[p]
 [auto_chara name="恵" face="private_angry"]
-「もう…本当に怖かった。」[p]
+「もう……本当に怖かった。」[p]
 
 「永山君まで壊れちゃったのかと思った。」[p]
 
@@ -327,7 +327,7 @@
 拓海は片手を上げる。[p]
 「直接対峙することもあるだろうと思って、シミュレーションしてたから」[p]
 [auto_chara name="恵" face="private_question"]
-「え？　ああなるって予想してたの？」[p]
+「え？ああなるって予想してたの？」[p]
 
 恵が目を丸くする。[p]
 [auto_chara name="拓海" face="private2_normal"]

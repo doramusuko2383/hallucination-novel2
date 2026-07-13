@@ -380,7 +380,7 @@
 
 [wait time=500]
 
-すぐに物凄い勢いで地面に向かって加速する――[l]はずだった。[p]
+すぐにものすごい勢いで地面に向かって加速する――[l]はずだった。[p]
 
 [wait time=1000]
 
@@ -695,7 +695,7 @@
 [choice_start count=3]
 [choice name="choice_ch1_rooftop_run" text="出口へ走る" target="*run"]
 [choice name="choice_ch1_rooftop_fight" text="龍也に挑む" target="*fight"]
-[choice name="choice_ch1_rooftop_ayaka" text="彩香の横を抜ける" target="*ayaka"]
+[choice name="choice_ch1_rooftop_ayaka" text="綾香の横を抜ける" target="*ayaka"]
 [s]
 
 *run
@@ -747,10 +747,10 @@
 [cm]
 
 [auto_chara name="拓海" face="level1_normal" left=120]
-拓海は彩香を押しのけ、その隙に逃げようと踏み出した。[p]
+拓海は綾香を押しのけ、その隙に逃げようと踏み出した。[p]
 
 [auto_chara name="綾香" face="serious" left=300]
-しかし彩香は一歩下がっただけだった。[p]
+しかし綾香は一歩下がっただけだった。[p]
 
 「龍也」[p]
 
