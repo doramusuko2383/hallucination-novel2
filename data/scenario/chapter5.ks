@@ -234,7 +234,7 @@
 
 「お母さんは何度も断ってるのに……」[p]
 
-[auto_chara name="拓海" face="private_serious"]
+[auto_chara name="拓海" face="private_normal"]
 「もちろん、それはそうだ」[p]
 
 拓海は静かに頷いた。[p]
