@@ -22,6 +22,7 @@
 [chara_face name="恵" face="private_laugh" storage="chara/megumi/private_laugh.webp"]
 [chara_face name="恵" face="private_question" storage="chara/megumi/private_question.webp"]
 [chara_face name="恵" face="private_scared" storage="chara/megumi/private_scared.webp"]
+[chara_face name="恵" face="private_smile" storage="chara/megumi/private_happy.webp"]
 [chara_face name="恵" face="private_scream" storage="chara/megumi/private_scream.webp"]
 [chara_face name="恵" face="private_surprise" storage="chara/megumi/private_surprise.webp"]
 
