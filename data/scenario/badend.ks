@@ -73,9 +73,9 @@ $(".bad_end_title").updatePText(f.bad_end_title || "");
 })();
 [endscript]
 [wait time=300]
-[glink name="bad_end_retry,badend-choice" text="この選択肢からやり直す" target="*bad_end_retry" x="440" y="474" width="400" height="42" size="18" clickse="se/click.ogg"]
+[glink name="bad_end_retry,badend-choice" text="この選択肢からやり直す" target="*bad_end_retry" x="240" y="450" width="800" height="72" size="30" clickse="se/click.ogg"]
 [ptext layer="fix" name="bad_end_divider,badend-choice-divider" text=" " x="440" y="540" width="400" height="1" size="1" color="0xffffff" time="500"]
-[glink name="bad_end_title_return,badend-choice" text="タイトルへ戻る" target="*bad_end_to_title" x="440" y="576" width="400" height="42" size="18" clickse="se/click.ogg"]
+[glink name="bad_end_title_return,badend-choice" text="タイトルへ戻る" target="*bad_end_to_title" x="240" y="540" width="800" height="72" size="30" clickse="se/click.ogg"]
 [s]
 
 *bad_end_retry
