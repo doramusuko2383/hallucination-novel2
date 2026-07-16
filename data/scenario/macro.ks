@@ -77,10 +77,12 @@
 [eval exp="tf.choice_size = parseInt(mp.size || 20, 10)"]
 [eval exp="tf.choice_gap = parseInt(mp.gap || 80, 10)"]
 [eval exp="tf.choice_clickse = mp.clickse || 'se/click.ogg'"]
+[glink_config show_time="220" show_effect="fadeIn" show_delay="520" show_easing="ease-out" select_time="420" select_effect="hlChoiceFadeOutHold" select_easing="ease-in" reject_time="420" reject_effect="hlChoiceFadeOutHold" reject_easing="ease-in"]
 [endmacro]
 
 [macro name=choice]
 [eval exp="tf.choice_current_y = tf.choice_y + (tf.choice_index * tf.choice_gap)"]
-[glink name="%name" text="%text" target="%target" x="&tf.choice_x" y="&tf.choice_current_y" width="&tf.choice_width" height="&tf.choice_height" size="&tf.choice_size" clickse="&tf.choice_clickse"]
+[eval exp="tf.choice_show_delay = 520 + (tf.choice_index * 100)"]
+[glink name="%name" text="%text" target="%target" x="&tf.choice_x" y="&tf.choice_current_y" width="&tf.choice_width" height="&tf.choice_height" size="&tf.choice_size" clickse="&tf.choice_clickse" show_delay="&tf.choice_show_delay" select_delay="0" reject_delay="0"]
 [eval exp="tf.choice_index += 1"]
 [endmacro]

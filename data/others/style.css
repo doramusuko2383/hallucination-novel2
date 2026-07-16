@@ -1631,3 +1631,64 @@ body.badend-active .glink_button.quiet_system_button {
     48% { transform: translate3d(0.4px, -0.3px, 0); }
     52% { transform: translate3d(-0.4px, 0.2px, 0); }
 }
+
+/* =========================
+   作品専用 選択肢演出
+   - 表示前の間、順次フェード、背景だけの弱いすりガラス表現
+========================= */
+#hl-choice-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 999998;
+    pointer-events: none;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: opacity 220ms ease;
+}
+
+#hl-choice-backdrop.is-visible {
+    opacity: 1;
+}
+
+body.hl-choice-active #tyrano_base > .layer_camera,
+body.hl-choice-active #tyrano_base > .layer_base,
+body.hl-choice-active #tyrano_base > .layer_fore,
+body.hl-choice-active #tyrano_base > .layer_blend_mode,
+body.hl-choice-active #tyrano_base > video,
+body.hl-choice-active #tyrano_base > canvas {
+    filter: blur(5px);
+    transition: filter 220ms ease;
+}
+
+body.hl-choice-active .glink_button,
+body.hl-choice-active .layer_free,
+body.hl-choice-active .layer_event_click,
+body.hl-choice-active .message_outer,
+body.hl-choice-active .message_inner,
+body.hl-choice-active .button_menu {
+    filter: none !important;
+}
+
+.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close) {
+    will-change: opacity, transform;
+}
+
+@keyframes hlChoiceFadeOutHold {
+    0% {
+        opacity: 1;
+    }
+
+    52% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.hlChoiceFadeOutHold {
+    animation-name: hlChoiceFadeOutHold;
+}
