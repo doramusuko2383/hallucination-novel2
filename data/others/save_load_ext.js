@@ -411,24 +411,30 @@
         return isNaN(parsed) ? fallback : parsed;
     }
 
+    var choiceBackdropTimer = null;
+    var choiceBackdropRemovalTimer = null;
 
     function showChoiceBackdrop() {
         var base = $("#tyrano_base");
+        window.clearTimeout(choiceBackdropTimer);
+        window.clearTimeout(choiceBackdropRemovalTimer);
         $("#hl-choice-backdrop").remove();
         var backdrop = $("<div></div>").attr("id", "hl-choice-backdrop");
         base.append(backdrop);
-        window.setTimeout(function () {
+        choiceBackdropTimer = window.setTimeout(function () {
             $("body").addClass("hl-choice-active");
             backdrop.addClass("is-visible");
         }, DEFAULT_CHOICE_CONFIG.introDelay);
     }
 
     function hideChoiceBackdrop() {
+        window.clearTimeout(choiceBackdropTimer);
+        window.clearTimeout(choiceBackdropRemovalTimer);
         $("body").removeClass("hl-choice-active");
         $("#hl-choice-backdrop").removeClass("is-visible");
-        window.setTimeout(function () {
+        choiceBackdropRemovalTimer = window.setTimeout(function () {
             $("#hl-choice-backdrop").remove();
-        }, DEFAULT_CHOICE_CONFIG.fadeTime + DEFAULT_CHOICE_CONFIG.branchDelay);
+        }, DEFAULT_CHOICE_CONFIG.fadeTime);
     }
 
     function quietChoicePlayback(kag) {
@@ -507,6 +513,7 @@
                     fadeTime: DEFAULT_CHOICE_CONFIG.fadeTime
                 };
                 var glinkPm = $.extend(true, {}, pm, {
+                    name: [pm.name, "hl-story-choice"].filter(Boolean).join(","),
                     x: toChoiceInt(pm.x, state.x),
                     y: toChoiceInt(pm.y, state.y + state.index * state.gap),
                     width: toChoiceInt(pm.width, state.width),
@@ -537,14 +544,17 @@
             });
         }
 
-        $(document)
-            .off("click.hlStoryChoice")
-            .on("click.hlStoryChoice", ".glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.quiet_system_button):not(.suspense_close)", function () {
-                hideChoiceBackdrop();
-                window.setTimeout(function () {
-                    TYRANO.kag.ftag.hideNextImg();
-                }, DEFAULT_CHOICE_CONFIG.branchDelay);
-            });
+        document.removeEventListener("click", handleStoryChoiceSelection, true);
+        document.addEventListener("click", handleStoryChoiceSelection, true);
+    }
+
+    function handleStoryChoiceSelection(event) {
+        var choiceButton = $(event.target).closest(".glink_button.hl-story-choice");
+        if (!choiceButton.length) return;
+
+        // Tyrano's glink handler stops click propagation. Listen during capture so
+        // the backdrop is always cleaned up, even when the branch starts immediately.
+        hideChoiceBackdrop();
     }
 
     function installEndingTag() {
