@@ -514,7 +514,7 @@
                     size: toChoiceInt(pm.size, state.size),
                     clickse: pm.clickse || state.clickse,
                     show_time: String(state.fadeTime || DEFAULT_CHOICE_CONFIG.fadeTime),
-                    show_effect: "fadeIn",
+                    show_effect: "hlChoiceFadeInStagger",
                     show_delay: String((state.introDelay || DEFAULT_CHOICE_CONFIG.introDelay) + state.index * (state.staggerDelay || DEFAULT_CHOICE_CONFIG.staggerDelay)),
                     show_easing: "ease-out",
                     select_time: String((state.fadeTime || DEFAULT_CHOICE_CONFIG.fadeTime) + DEFAULT_CHOICE_CONFIG.branchDelay),

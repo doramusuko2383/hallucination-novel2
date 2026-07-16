@@ -77,7 +77,7 @@
 [eval exp="tf.choice_size = parseInt(mp.size || 20, 10)"]
 [eval exp="tf.choice_gap = parseInt(mp.gap || 80, 10)"]
 [eval exp="tf.choice_clickse = mp.clickse || 'se/click.ogg'"]
-[glink_config show_time="220" show_effect="fadeIn" show_delay="520" show_easing="ease-out" select_time="420" select_effect="hlChoiceFadeOutHold" select_easing="ease-in" reject_time="420" reject_effect="hlChoiceFadeOutHold" reject_easing="ease-in"]
+[glink_config show_time="220" show_effect="hlChoiceFadeInStagger" show_delay="520" show_easing="ease-out" select_time="420" select_effect="hlChoiceFadeOutHold" select_easing="ease-in" reject_time="420" reject_effect="hlChoiceFadeOutHold" reject_easing="ease-in"]
 [endmacro]
 
 [macro name=choice]
