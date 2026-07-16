@@ -396,6 +396,10 @@
         size: 20,
         gap: 80,
         clickse: "se/click.ogg",
+        introDelay: 520,
+        staggerDelay: 100,
+        fadeTime: 220,
+        branchDelay: 200,
         layouts: {
             "2": { x: 470, y: 300, width: 340 },
             "3": { x: 510, y: 250, width: 260 }
@@ -405,6 +409,32 @@
     function toChoiceInt(value, fallback) {
         var parsed = parseInt(value, 10);
         return isNaN(parsed) ? fallback : parsed;
+    }
+
+
+    function showChoiceBackdrop() {
+        var base = $("#tyrano_base");
+        $("#hl-choice-backdrop").remove();
+        var backdrop = $("<div></div>").attr("id", "hl-choice-backdrop");
+        base.append(backdrop);
+        window.setTimeout(function () {
+            $("body").addClass("hl-choice-active");
+            backdrop.addClass("is-visible");
+        }, DEFAULT_CHOICE_CONFIG.introDelay);
+    }
+
+    function hideChoiceBackdrop() {
+        $("body").removeClass("hl-choice-active");
+        $("#hl-choice-backdrop").removeClass("is-visible");
+        window.setTimeout(function () {
+            $("#hl-choice-backdrop").remove();
+        }, DEFAULT_CHOICE_CONFIG.fadeTime + DEFAULT_CHOICE_CONFIG.branchDelay);
+    }
+
+    function quietChoicePlayback(kag) {
+        if (kag.stat.is_auto) kag.setAuto(false);
+        if (kag.stat.is_skip) kag.setSkip(false);
+        kag.ftag.hideNextImg();
     }
 
     function installChoiceTags() {
@@ -427,6 +457,8 @@
             start: function (pm) {
                 var count = toChoiceInt(pm.count, 0);
                 var layout = DEFAULT_CHOICE_CONFIG.layouts[String(count)] || {};
+                quietChoicePlayback(kag);
+                showChoiceBackdrop();
                 kag.tmp.hl_choice = {
                     index: 0,
                     count: count,
@@ -436,7 +468,10 @@
                     height: toChoiceInt(pm.height, layout.height || DEFAULT_CHOICE_CONFIG.height),
                     size: toChoiceInt(pm.size, DEFAULT_CHOICE_CONFIG.size),
                     gap: toChoiceInt(pm.gap, DEFAULT_CHOICE_CONFIG.gap),
-                    clickse: pm.clickse || DEFAULT_CHOICE_CONFIG.clickse
+                    clickse: pm.clickse || DEFAULT_CHOICE_CONFIG.clickse,
+                    introDelay: DEFAULT_CHOICE_CONFIG.introDelay,
+                    staggerDelay: DEFAULT_CHOICE_CONFIG.staggerDelay,
+                    fadeTime: DEFAULT_CHOICE_CONFIG.fadeTime
                 };
                 kag.ftag.nextOrder();
             }
@@ -466,7 +501,10 @@
                     height: DEFAULT_CHOICE_CONFIG.height,
                     size: DEFAULT_CHOICE_CONFIG.size,
                     gap: DEFAULT_CHOICE_CONFIG.gap,
-                    clickse: DEFAULT_CHOICE_CONFIG.clickse
+                    clickse: DEFAULT_CHOICE_CONFIG.clickse,
+                    introDelay: DEFAULT_CHOICE_CONFIG.introDelay,
+                    staggerDelay: DEFAULT_CHOICE_CONFIG.staggerDelay,
+                    fadeTime: DEFAULT_CHOICE_CONFIG.fadeTime
                 };
                 var glinkPm = $.extend(true, {}, pm, {
                     x: toChoiceInt(pm.x, state.x),
@@ -474,7 +512,17 @@
                     width: toChoiceInt(pm.width, state.width),
                     height: toChoiceInt(pm.height, state.height),
                     size: toChoiceInt(pm.size, state.size),
-                    clickse: pm.clickse || state.clickse
+                    clickse: pm.clickse || state.clickse,
+                    show_time: String(state.fadeTime || DEFAULT_CHOICE_CONFIG.fadeTime),
+                    show_effect: "fadeIn",
+                    show_delay: String((state.introDelay || DEFAULT_CHOICE_CONFIG.introDelay) + state.index * (state.staggerDelay || DEFAULT_CHOICE_CONFIG.staggerDelay)),
+                    show_easing: "ease-out",
+                    select_time: String((state.fadeTime || DEFAULT_CHOICE_CONFIG.fadeTime) + DEFAULT_CHOICE_CONFIG.branchDelay),
+                    select_effect: "hlChoiceFadeOutHold",
+                    select_easing: "ease-in",
+                    reject_time: String((state.fadeTime || DEFAULT_CHOICE_CONFIG.fadeTime) + DEFAULT_CHOICE_CONFIG.branchDelay),
+                    reject_effect: "hlChoiceFadeOutHold",
+                    reject_easing: "ease-in"
                 });
                 state.index += 1;
                 kag.tmp.hl_choice = state;
@@ -488,6 +536,15 @@
                 kag.ftag.master_tag[tagName].kag = kag;
             });
         }
+
+        $(document)
+            .off("click.hlStoryChoice")
+            .on("click.hlStoryChoice", ".glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.quiet_system_button):not(.suspense_close)", function () {
+                hideChoiceBackdrop();
+                window.setTimeout(function () {
+                    TYRANO.kag.ftag.hideNextImg();
+                }, DEFAULT_CHOICE_CONFIG.branchDelay);
+            });
     }
 
     function installEndingTag() {
