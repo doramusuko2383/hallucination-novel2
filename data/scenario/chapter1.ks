@@ -109,7 +109,7 @@
 [wait time=500]
 [bg storage="black.png" time=600]
 [wait time=500]
-[playse storage=se/wind_rooftop.ogg volume=20]
+; 章タイトルは無音で表示し、屋上の環境音は次の屋上シーン開始時にだけ再生する。
 [chapter_title number="第一章" title="覚醒"]
 [playse storage=se/roof_door.ogg volume=30]
 [wait time=500]
