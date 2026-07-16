@@ -166,7 +166,6 @@ baseLayer.css("background-color", "#000000");
 ; [stopbgm] / [fadeoutbgm] で制御できる通常BGMとして再生する。
 [playbgm storage="nature_wind.ogg" loop=true volume=68 fadein=true time=300]
 
-[image layer=0 page=fore name="title-logo" storage="title_logo.png" folder="image" x="190" y="170" width="900"]
 [glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="440" width="240" height="30" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="16" x="520" y="490" width="240" height="30" text="CONTINUE" target="*title_continue"]
 [glink name="title-choice" color="black" size="16" x="520" y="540" width="240" height="30" text="LOAD" target="*title_load" cm="false"]
@@ -193,10 +192,10 @@ baseLayer.css("background-color", "#000000");
         );
     }
 
-    var logo = $(".title-logo").last();
     var titleLayer = $(".glink_button.title-choice").last().parent();
-    if (logo.length && titleLayer.length && !$.contains(titleLayer.get(0), logo.get(0))) {
-        logo.appendTo(titleLayer);
+    var logo = titleLayer.children(".title-logo").last();
+    if (!logo.length) {
+        logo = $("<div></div>").addClass("title-logo").attr("aria-label", "ハルシネーション").appendTo(titleLayer);
     }
     important(titleLayer, {
         "z-index": "1000000000",
@@ -214,6 +213,10 @@ baseLayer.css("background-color", "#000000");
         "width": "min(900px, 78vw)",
         "height": "auto",
         "max-width": "78vw",
+        "background-image": "url(./data/image/title_logo.png)",
+        "background-repeat": "no-repeat",
+        "background-position": "center center",
+        "background-size": "contain",
         "object-fit": "contain",
         "transform": "translate3d(calc(-50% + var(--title-logo-glitch-x, 0px)), 0, 0)",
         "transform-origin": "50% 50%",

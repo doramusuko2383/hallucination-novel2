@@ -943,6 +943,10 @@ img.se_mute_on::after { display: none !important; }
     max-width: 78vw !important;
     height: auto !important;
     aspect-ratio: 1359 / 345 !important;
+    background-image: url("../image/title_logo.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
     object-fit: contain !important;
     transform: translate3d(calc(-50% + var(--title-logo-glitch-x, 0px)), 0, 0) !important;
     transform-origin: 50% 50% !important;
