@@ -941,9 +941,9 @@ img.se_mute_on::after { display: none !important; }
     display: block !important;
     width: min(900px, 78vw) !important;
     max-width: 78vw !important;
-    height: auto !important;
+    height: calc(min(900px, 78vw) * 345 / 1359) !important;
     aspect-ratio: 1359 / 345 !important;
-    background-image: url("../image/title_logo.png") !important;
+    background-image: none !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: contain !important;
