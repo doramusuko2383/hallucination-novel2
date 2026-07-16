@@ -192,6 +192,45 @@ baseLayer.css("background-color", "#000000");
         );
     }
 
+    function applyTitleLogoBackground(logoElement) {
+        var candidates = [
+            "./data/image/title_logo.png",
+            "data/image/title_logo.png",
+            "./data/image/title_logo.PNG",
+            "data/image/title_logo.PNG",
+            "./data/image/title/title_logo.png",
+            "data/image/title/title_logo.png"
+        ];
+        var resolvedKey = "__titleLogoResolvedSrc";
+
+        function setLogoBackground(src) {
+            logoElement.get(0).style.setProperty("background-image", "url(" + src + ")", "important");
+        }
+
+        if (window[resolvedKey]) {
+            setLogoBackground(window[resolvedKey]);
+            return;
+        }
+
+        (function probe(index) {
+            if (index >= candidates.length) {
+                console.warn("title_logo.png could not be loaded from known title logo paths.");
+                return;
+            }
+
+            var candidate = candidates[index];
+            var image = new Image();
+            image.onload = function () {
+                window[resolvedKey] = candidate;
+                setLogoBackground(candidate);
+            };
+            image.onerror = function () {
+                probe(index + 1);
+            };
+            image.src = candidate;
+        })(0);
+    }
+
     var titleLayer = $(".glink_button.title-choice").last().parent();
     var logo = titleLayer.children(".title-logo").last();
     if (!logo.length) {
@@ -211,9 +250,9 @@ baseLayer.css("background-color", "#000000");
         "left": "50%",
         "top": "170px",
         "width": "min(900px, 78vw)",
-        "height": "auto",
+        "height": "calc(min(900px, 78vw) * 345 / 1359)",
         "max-width": "78vw",
-        "background-image": "url(./data/image/title_logo.png)",
+        "background-image": "none",
         "background-repeat": "no-repeat",
         "background-position": "center center",
         "background-size": "contain",
@@ -225,6 +264,7 @@ baseLayer.css("background-color", "#000000");
         "opacity": "1",
         "visibility": "visible"
     });
+    applyTitleLogoBackground(logo);
 
     var baseTextStyle = {
         "display": "flex",
