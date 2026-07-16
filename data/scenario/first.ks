@@ -211,7 +211,7 @@ baseLayer.css("background-color", "#000000");
         "left": "50%",
         "top": "170px",
         "width": "min(900px, 78vw)",
-        "height": "auto",
+        "height": "calc(min(900px, 78vw) * 345 / 1359)",
         "max-width": "78vw",
         "background-image": "url(./data/image/title_logo.png)",
         "background-repeat": "no-repeat",
@@ -270,12 +270,42 @@ baseLayer.css("background-color", "#000000");
 [iscript]
 (function setupTitleLogoGlitch() {
     var timerKey = "__titleLogoGlitchTimer";
+    var activeTimersKey = "__titleLogoGlitchActiveTimers";
     var seKey = "__titleLogoGlitchSe";
     var logo = $(".title-logo").last();
+    var patterns = [
+        [
+            { clip: "inset(12% 0 75% 0)", x: 4 },
+            { clip: "inset(44% 0 45% 0)", x: -6 },
+            { clip: "inset(70% 0 20% 0)", x: 3 }
+        ],
+        [
+            { clip: "inset(20% 0 66% 0)", x: -4 },
+            { clip: "inset(50% 0 38% 0)", x: 5 },
+            { clip: "inset(79% 0 12% 0)", x: -3 }
+        ],
+        [
+            { clip: "inset(8% 0 80% 0)", x: 3 },
+            { clip: "inset(36% 0 53% 0)", x: -5 },
+            { clip: "inset(63% 0 27% 0)", x: 4 }
+        ]
+    ];
 
     if (window[timerKey]) {
         clearTimeout(window[timerKey]);
         window[timerKey] = null;
+    }
+
+    function clearActiveTimers() {
+        (window[activeTimersKey] || []).forEach(function (timer) {
+            clearTimeout(timer);
+        });
+        window[activeTimersKey] = [];
+    }
+
+    function setActiveTimer(callback, delay) {
+        var timer = setTimeout(callback, delay);
+        window[activeTimersKey].push(timer);
     }
 
     function getDelay(isFirst) {
@@ -308,10 +338,38 @@ baseLayer.css("background-color", "#000000");
         return logo.length && $.contains(document, logo.get(0));
     }
 
+    function ensureEffectLayers() {
+        if (!isLogoAlive()) return $();
+        if (!logo.children(".title-logo-glitch-layer").length) {
+            logo.append('<div class="title-logo-glitch-layer title-logo-rgb title-logo-rgb-red"></div>');
+            logo.append('<div class="title-logo-glitch-layer title-logo-rgb title-logo-rgb-blue"></div>');
+            for (var i = 0; i < 3; i++) {
+                logo.append('<div class="title-logo-glitch-layer title-logo-slice title-logo-slice-' + i + '"></div>');
+            }
+        }
+        return logo.children(".title-logo-glitch-layer");
+    }
+
     function resetLogo() {
+        clearActiveTimers();
         if (!isLogoAlive()) return;
         logo.removeClass("title-logo-glitching");
         logo.get(0).style.setProperty("--title-logo-glitch-x", "0px");
+        logo.children(".title-logo-glitch-layer").each(function () {
+            this.style.opacity = "0";
+            this.style.transform = "translate3d(0, 0, 0)";
+            this.style.clipPath = "inset(0 0 0 0)";
+        });
+    }
+
+    function applySlices(pattern) {
+        pattern.forEach(function (slice, index) {
+            var layer = logo.children(".title-logo-slice-" + index).get(0);
+            if (!layer) return;
+            layer.style.clipPath = slice.clip;
+            layer.style.transform = "translate3d(" + slice.x + "px, 0, 0)";
+            layer.style.opacity = "0.64";
+        });
     }
 
     function runGlitchSequence() {
@@ -320,18 +378,36 @@ baseLayer.css("background-color", "#000000");
             return;
         }
 
-        var duration = 80 + Math.floor(Math.random() * 101);
+        resetLogo();
+        ensureEffectLayers();
+
+        var pattern = patterns[Math.floor(Math.random() * patterns.length)];
         var direction = Math.random() < 0.5 ? -1 : 1;
-        var distance = 2 + Math.floor(Math.random() * 5);
 
         playGlitchSe();
-        logo.get(0).style.setProperty("--title-logo-glitch-x", (direction * distance) + "px");
         logo.addClass("title-logo-glitching");
+        logo.get(0).style.setProperty("--title-logo-glitch-x", (direction * 2) + "px");
+        logo.children(".title-logo-rgb-red").css({ opacity: 0.34, transform: "translate3d(-3px, 0, 0)" });
+        logo.children(".title-logo-rgb-blue").css({ opacity: 0.3, transform: "translate3d(3px, 0, 0)" });
 
-        setTimeout(function () {
+        setActiveTimer(function () {
+            if (!isLogoAlive()) return;
+            logo.get(0).style.setProperty("--title-logo-glitch-x", (direction * -3) + "px");
+            applySlices(pattern);
+        }, 40);
+
+        setActiveTimer(function () {
+            if (!isLogoAlive()) return;
+            logo.get(0).style.setProperty("--title-logo-glitch-x", (direction * 1) + "px");
+            logo.children(".title-logo-rgb-red").css({ opacity: 0.22, transform: "translate3d(2px, 0, 0)" });
+            logo.children(".title-logo-rgb-blue").css({ opacity: 0.2, transform: "translate3d(-2px, 0, 0)" });
+            logo.children(".title-logo-slice").css("opacity", 0.28);
+        }, 90);
+
+        setActiveTimer(function () {
             resetLogo();
             if (isLogoAlive()) schedule(false);
-        }, duration);
+        }, 150);
     }
 
     function schedule(isFirst) {

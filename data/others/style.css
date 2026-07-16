@@ -229,7 +229,7 @@
     border-radius: 3px !important;
     color: rgba(232, 238, 243, 0.86) !important;
     background: rgba(0, 0, 0, 0.26) !important;
-    background-image: none !important;
+    background-image: url("../image/title_logo.png") !important;
     font-family: "GenMin", serif !important;
     font-size: 13px !important;
     letter-spacing: 0.12em !important;
@@ -941,7 +941,7 @@ img.se_mute_on::after { display: none !important; }
     display: block !important;
     width: min(900px, 78vw) !important;
     max-width: 78vw !important;
-    height: auto !important;
+    height: calc(min(900px, 78vw) * 345 / 1359) !important;
     aspect-ratio: 1359 / 345 !important;
     background-image: url("../image/title_logo.png") !important;
     background-repeat: no-repeat !important;
@@ -951,6 +951,7 @@ img.se_mute_on::after { display: none !important; }
     transform: translate3d(calc(-50% + var(--title-logo-glitch-x, 0px)), 0, 0) !important;
     transform-origin: 50% 50% !important;
     will-change: transform !important;
+    overflow: visible !important;
     pointer-events: none !important;
     opacity: 1 !important;
     visibility: visible !important;
@@ -958,6 +959,36 @@ img.se_mute_on::after { display: none !important; }
 
 .layer_free .title-logo.title-logo-glitching {
     transform: translate3d(calc(-50% + var(--title-logo-glitch-x, 0px)), 0, 0) !important;
+}
+
+.layer_free .title-logo .title-logo-glitch-layer {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    background-image: inherit !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    pointer-events: none !important;
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 24ms linear, transform 24ms steps(1, end);
+    will-change: opacity, transform, clip-path;
+}
+
+.layer_free .title-logo .title-logo-rgb-red {
+    filter: brightness(1.18) sepia(1) saturate(4) hue-rotate(308deg);
+    mix-blend-mode: screen;
+}
+
+.layer_free .title-logo .title-logo-rgb-blue {
+    filter: brightness(1.12) sepia(1) saturate(4) hue-rotate(150deg);
+    mix-blend-mode: screen;
+}
+
+.layer_free .title-logo .title-logo-slice {
+    filter: brightness(1.08) contrast(1.08);
+    mix-blend-mode: screen;
 }
 
 /* BAD END: one-shot, restrained glitch accent. */
