@@ -194,6 +194,18 @@ baseLayer.css("background-color", "#000000");
     }
 
     var logo = $(".title-logo").last();
+    var titleLayer = $(".glink_button.title-choice").last().parent();
+    if (logo.length && titleLayer.length && !$.contains(titleLayer.get(0), logo.get(0))) {
+        logo.appendTo(titleLayer);
+    }
+    important(titleLayer, {
+        "z-index": "1000000000",
+        "display": "block",
+        "opacity": "1",
+        "visibility": "visible",
+        "transform": "none"
+    });
+
     logo.removeClass("black");
     important(logo, {
         "position": "absolute",
