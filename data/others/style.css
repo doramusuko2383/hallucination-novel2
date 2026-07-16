@@ -229,7 +229,7 @@
     border-radius: 3px !important;
     color: rgba(232, 238, 243, 0.86) !important;
     background: rgba(0, 0, 0, 0.26) !important;
-    background-image: none !important;
+    background-image: url("../image/title_logo.png") !important;
     font-family: "GenMin", serif !important;
     font-size: 13px !important;
     letter-spacing: 0.12em !important;
@@ -910,7 +910,7 @@ img.se_mute_on::after { display: none !important; }
 }
 
 /* =========================
-   タイトル画面（静止画背景＋文字主体UI）
+   タイトル画面（静止画背景＋画像ロゴUI）
    ========================= */
 
 .layer_free {
@@ -918,7 +918,6 @@ img.se_mute_on::after { display: none !important; }
 }
 
 .layer_free:has(.title-logo),
-.layer_free:has(.title-subtitle),
 .layer_free:has(.title-choice) {
     z-index: 1000000000 !important;
     display: block !important;
@@ -927,8 +926,6 @@ img.se_mute_on::after { display: none !important; }
     transform: none !important;
 }
 
-.layer_free .glink_button.title-logo,
-.layer_free .glink_button.title-subtitle,
 .layer_free .glink_button.title-choice {
     display: flex !important;
     box-sizing: border-box !important;
@@ -940,27 +937,59 @@ img.se_mute_on::after { display: none !important; }
     border: 0 !important;
 }
 
-.layer_free .glink_button.title-logo {
-    isolation: isolate !important;
-    will-change: opacity, text-shadow !important;
-    white-space: nowrap !important;
+.layer_free .title-logo {
+    display: block !important;
+    width: min(900px, 78vw) !important;
+    max-width: 78vw !important;
+    height: calc(min(900px, 78vw) * 345 / 1359) !important;
+    aspect-ratio: 1359 / 345 !important;
+    background-image: url("../image/title_logo.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    object-fit: contain !important;
+    transform: translate3d(calc(-50% + var(--title-logo-glitch-x, 0px)), 0, 0) !important;
+    transform-origin: 50% 50% !important;
+    will-change: transform !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-.layer_free .glink_button.title-logo.title-logo-glitching {
-    animation: titleLogoSubtleGlitch 140ms steps(2, end) 1 !important;
+.layer_free .title-logo.title-logo-glitching {
+    transform: translate3d(calc(-50% + var(--title-logo-glitch-x, 0px)), 0, 0) !important;
 }
 
-@keyframes titleLogoSubtleGlitch {
-    0%, 100% {
-        filter: none;
-        text-shadow: 0 0 5px rgba(255,255,255,0.75), 0 0 18px rgba(204,190,255,0.45), 0 0 34px rgba(150,120,255,0.24), 0 3px 14px rgba(0,0,0,0.86);
-    }
-    48% {
-        filter: drop-shadow(1px 0 0 rgba(110, 190, 255, 0.45));
-        text-shadow: 1px 0 0 rgba(95,180,255,0.42), -1px 0 0 rgba(220,170,255,0.3), 0 0 16px rgba(210,200,255,0.32);
-    }
+.layer_free .title-logo .title-logo-glitch-layer {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    background-image: inherit !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    pointer-events: none !important;
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 24ms linear, transform 24ms steps(1, end);
+    will-change: opacity, transform, clip-path;
 }
 
+.layer_free .title-logo .title-logo-rgb-red {
+    filter: brightness(1.18) sepia(1) saturate(4) hue-rotate(308deg);
+    mix-blend-mode: screen;
+}
+
+.layer_free .title-logo .title-logo-rgb-blue {
+    filter: brightness(1.12) sepia(1) saturate(4) hue-rotate(150deg);
+    mix-blend-mode: screen;
+}
+
+.layer_free .title-logo .title-logo-slice {
+    filter: brightness(1.08) contrast(1.08);
+    mix-blend-mode: screen;
+}
 
 /* BAD END: one-shot, restrained glitch accent. */
 .badend-glitch,
@@ -1017,18 +1046,6 @@ img.se_mute_on::after { display: none !important; }
         transform: translate3d(-7px, 0, 0);
         filter: drop-shadow(-1px 0 0 rgba(255, 130, 180, 0.3));
     }
-}
-
-.layer_free .glink_button.title-subtitle::before,
-.layer_free .glink_button.title-subtitle::after {
-    content: "";
-    display: block;
-    width: 82px;
-    height: 1px;
-    margin: 0 22px;
-    background: linear-gradient(90deg, transparent, rgba(238, 242, 247, 0.78), transparent);
-    box-shadow: 0 0 8px rgba(210, 224, 255, 0.22);
-    flex: 0 0 auto;
 }
 
 .layer_free .glink_button.title-choice {

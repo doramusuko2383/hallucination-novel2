@@ -41,6 +41,11 @@
         preload.titleBg.src = "./data/bgimage/title_rooftop.webp";
     }
 
+    if (!preload.titleLogo) {
+        preload.titleLogo = new Image();
+        preload.titleLogo.src = "./data/image/title_logo.png";
+    }
+
     if (!window.__titleLogoGlitchSe) {
         window.__titleLogoGlitchSe = new Howl({
             src: [$.parseStorage("se/short_glitch.ogg", "sound")],
@@ -161,33 +166,65 @@ baseLayer.css("background-color", "#000000");
 ; [stopbgm] / [fadeoutbgm] で制御できる通常BGMとして再生する。
 [playbgm storage="nature_wind.ogg" loop=true volume=68 fadein=true time=300]
 
-[glink name="title-logo" color="black" size="76" x="330" y="168" width="620" height="96" text="ハルシネーション" target="*title_menu" cm="false"]
-[glink name="title-subtitle" color="black" size="18" x="440" y="270" width="400" height="32" text="HALLUCINATION" target="*title_menu" cm="false"]
-[glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="412" width="240" height="30" text="NEW GAME" target="*title_newgame"]
-[glink name="title-choice" color="black" size="16" x="520" y="462" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="16" x="520" y="512" width="240" height="30" text="LOAD" target="*title_load" cm="false"]
-[glink name="title-choice" color="black" size="16" x="520" y="562" width="240" height="30" text="CONFIG" target="*title_config" cm="false"]
-[glink name="title-choice" color="black" size="16" x="520" y="612" width="240" height="30" text="EXIT" target="*title_quit"]
+[glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="440" width="240" height="30" text="NEW GAME" target="*title_newgame"]
+[glink name="title-choice" color="black" size="16" x="520" y="490" width="240" height="30" text="CONTINUE" target="*title_continue"]
+[glink name="title-choice" color="black" size="16" x="520" y="540" width="240" height="30" text="LOAD" target="*title_load" cm="false"]
+[glink name="title-choice" color="black" size="16" x="520" y="590" width="240" height="30" text="CONFIG" target="*title_config" cm="false"]
+[glink name="title-choice" color="black" size="16" x="520" y="640" width="240" height="30" text="EXIT" target="*title_quit"]
 [iscript]
-(function normalizeTitleGlinkClasses() {
-    function important(button, styles) {
-        var element = button.get(0);
-        if (!element) return;
+(function normalizeTitleMenuClasses() {
+    function important(element, styles) {
+        var node = element.get(0);
+        if (!node) return;
         Object.keys(styles).forEach(function (key) {
-            element.style.setProperty(key, styles[key], "important");
+            node.style.setProperty(key, styles[key], "important");
         });
     }
 
     if (!$("#title-menu-initial-font-style").length) {
         $("head").append(
             '<style id="title-menu-initial-font-style">' +
-            '.glink_button.title-logo,.glink_button.title-subtitle,.glink_button.title-choice{' +
-            'font-family: GenMin, \'Times New Roman\', serif !important;' +
+            '.glink_button.title-choice{' +
+            "font-family: GenMin, 'Times New Roman', serif !important;" +
             'font-synthesis: none;' +
             '}' +
             '</style>'
         );
     }
+
+    var titleLayer = $(".glink_button.title-choice").last().parent();
+    var logo = titleLayer.children(".title-logo").last();
+    if (!logo.length) {
+        logo = $("<div></div>").addClass("title-logo").attr("aria-label", "ハルシネーション").appendTo(titleLayer);
+    }
+    important(titleLayer, {
+        "z-index": "1000000000",
+        "display": "block",
+        "opacity": "1",
+        "visibility": "visible",
+        "transform": "none"
+    });
+
+    logo.removeClass("black");
+    important(logo, {
+        "position": "absolute",
+        "left": "50%",
+        "top": "170px",
+        "width": "min(900px, 78vw)",
+        "height": "calc(min(900px, 78vw) * 345 / 1359)",
+        "max-width": "78vw",
+        "background-image": "url(./data/image/title_logo.png)",
+        "background-repeat": "no-repeat",
+        "background-position": "center center",
+        "background-size": "contain",
+        "object-fit": "contain",
+        "transform": "translate3d(calc(-50% + var(--title-logo-glitch-x, 0px)), 0, 0)",
+        "transform-origin": "50% 50%",
+        "z-index": "99999998",
+        "pointer-events": "none",
+        "opacity": "1",
+        "visibility": "visible"
+    });
 
     var baseTextStyle = {
         "display": "flex",
@@ -214,40 +251,11 @@ baseLayer.css("background-color", "#000000");
         }).last();
     }
 
-    function styleButton(text, classes, styles) {
-        var button = findTitleButton(text);
-        button.addClass(classes);
-        button.removeClass("black");
-        important(button, $.extend({}, baseTextStyle, styles));
-        return button;
-    }
-
-    styleButton("ハルシネーション", "title-logo", {
-        "width": "620px",
-        "height": "86px",
-        "color": "rgba(246, 249, 253, 0.96)",
-        "font-size": "60px",
-        "letter-spacing": "0.252em",
-        "line-height": "1",
-        "text-shadow": "0 0 4px rgba(255,255,255,0.45), 0 0 18px rgba(26,38,68,0.72), 0 2px 12px rgba(0,0,0,0.85)",
-        "z-index": "99999998",
-        "pointer-events": "none"
-    }).attr("data-text", "ハルシネーション");
-
-    styleButton("HALLUCINATION", "title-subtitle", {
-        "width": "400px",
-        "height": "28px",
-        "color": "rgba(238, 244, 248, 0.82)",
-        "font-size": "20px",
-        "letter-spacing": "0.62em",
-        "line-height": "1",
-        "text-shadow": "0 0 7px rgba(255,255,255,0.28), 0 0 14px rgba(0,0,0,0.62)",
-        "z-index": "99999998",
-        "pointer-events": "none"
-    });
-
     ["NEW GAME", "CONTINUE", "LOAD", "CONFIG", "EXIT"].forEach(function (text, index) {
-        styleButton(text, index === 0 ? "title-choice title-start title-primary" : "title-choice", {
+        var button = findTitleButton(text);
+        button.addClass(index === 0 ? "title-choice title-start title-primary" : "title-choice");
+        button.removeClass("black");
+        important(button, $.extend({}, baseTextStyle, {
             "color": "rgba(248, 250, 255, 0.94)",
             "font-size": "16px",
             "font-weight": "600",
@@ -255,26 +263,49 @@ baseLayer.css("background-color", "#000000");
             "text-shadow": "0 0 7px rgba(0,0,0,0.9), 0 0 14px rgba(22,32,54,0.8)",
             "z-index": "99999999",
             "pointer-events": "auto"
-        });
+        }));
     });
 })();
 [endscript]
 [iscript]
 (function setupTitleLogoGlitch() {
-    var originalTitle = "ハルシネーション";
-    var glitchTexts = [
-        "ハﾉﾚシネーション",
-        "ハルシネーショソ",
-        "ハルシネ一ション",
-        "ﾊﾙｼﾈｰｼｮﾝ"
-    ];
     var timerKey = "__titleLogoGlitchTimer";
+    var activeTimersKey = "__titleLogoGlitchActiveTimers";
     var seKey = "__titleLogoGlitchSe";
-    var logo = $(".glink_button.title-logo").last();
+    var logo = $(".title-logo").last();
+    var patterns = [
+        [
+            { clip: "inset(12% 0 75% 0)", x: 4 },
+            { clip: "inset(44% 0 45% 0)", x: -6 },
+            { clip: "inset(70% 0 20% 0)", x: 3 }
+        ],
+        [
+            { clip: "inset(20% 0 66% 0)", x: -4 },
+            { clip: "inset(50% 0 38% 0)", x: 5 },
+            { clip: "inset(79% 0 12% 0)", x: -3 }
+        ],
+        [
+            { clip: "inset(8% 0 80% 0)", x: 3 },
+            { clip: "inset(36% 0 53% 0)", x: -5 },
+            { clip: "inset(63% 0 27% 0)", x: 4 }
+        ]
+    ];
 
     if (window[timerKey]) {
         clearTimeout(window[timerKey]);
         window[timerKey] = null;
+    }
+
+    function clearActiveTimers() {
+        (window[activeTimersKey] || []).forEach(function (timer) {
+            clearTimeout(timer);
+        });
+        window[activeTimersKey] = [];
+    }
+
+    function setActiveTimer(callback, delay) {
+        var timer = setTimeout(callback, delay);
+        window[activeTimersKey].push(timer);
     }
 
     function getDelay(isFirst) {
@@ -303,31 +334,42 @@ baseLayer.css("background-color", "#000000");
         sound.play();
     }
 
-    function pickGlitchText() {
-        return glitchTexts[Math.floor(Math.random() * glitchTexts.length)];
-    }
-
     function isLogoAlive() {
         return logo.length && $.contains(document, logo.get(0));
     }
 
-    function resetLogo() {
-        if (!isLogoAlive()) return;
-        logo.text(originalTitle);
-        logo.attr("data-text", originalTitle);
-        logo.removeClass("title-logo-glitching");
+    function ensureEffectLayers() {
+        if (!isLogoAlive()) return $();
+        if (!logo.children(".title-logo-glitch-layer").length) {
+            logo.append('<div class="title-logo-glitch-layer title-logo-rgb title-logo-rgb-red"></div>');
+            logo.append('<div class="title-logo-glitch-layer title-logo-rgb title-logo-rgb-blue"></div>');
+            for (var i = 0; i < 3; i++) {
+                logo.append('<div class="title-logo-glitch-layer title-logo-slice title-logo-slice-' + i + '"></div>');
+            }
+        }
+        return logo.children(".title-logo-glitch-layer");
     }
 
-    function runGlitchBurst(activeDuration) {
+    function resetLogo() {
+        clearActiveTimers();
         if (!isLogoAlive()) return;
         logo.removeClass("title-logo-glitching");
-        logo.get(0).offsetWidth;
-        var glitchText = pickGlitchText();
-        logo.text(glitchText);
-        logo.attr("data-text", glitchText);
-        logo.addClass("title-logo-glitching");
+        logo.get(0).style.setProperty("--title-logo-glitch-x", "0px");
+        logo.children(".title-logo-glitch-layer").each(function () {
+            this.style.opacity = "0";
+            this.style.transform = "translate3d(0, 0, 0)";
+            this.style.clipPath = "inset(0 0 0 0)";
+        });
+    }
 
-        setTimeout(resetLogo, activeDuration);
+    function applySlices(pattern) {
+        pattern.forEach(function (slice, index) {
+            var layer = logo.children(".title-logo-slice-" + index).get(0);
+            if (!layer) return;
+            layer.style.clipPath = slice.clip;
+            layer.style.transform = "translate3d(" + slice.x + "px, 0, 0)";
+            layer.style.opacity = "0.64";
+        });
     }
 
     function runGlitchSequence() {
@@ -336,23 +378,36 @@ baseLayer.css("background-color", "#000000");
             return;
         }
 
-        var duration = 110 + Math.floor(Math.random() * 81);
-        var burstCount = 2;
-        var activeDuration = 34 + Math.floor(Math.random() * 17);
-        var interval = Math.floor((duration - activeDuration) / (burstCount - 1));
+        resetLogo();
+        ensureEffectLayers();
+
+        var pattern = patterns[Math.floor(Math.random() * patterns.length)];
+        var direction = Math.random() < 0.5 ? -1 : 1;
 
         playGlitchSe();
+        logo.addClass("title-logo-glitching");
+        logo.get(0).style.setProperty("--title-logo-glitch-x", (direction * 2) + "px");
+        logo.children(".title-logo-rgb-red").css({ opacity: 0.34, transform: "translate3d(-3px, 0, 0)" });
+        logo.children(".title-logo-rgb-blue").css({ opacity: 0.3, transform: "translate3d(3px, 0, 0)" });
 
-        for (var i = 0; i < burstCount; i++) {
-            setTimeout(function () {
-                runGlitchBurst(activeDuration);
-            }, interval * i);
-        }
+        setActiveTimer(function () {
+            if (!isLogoAlive()) return;
+            logo.get(0).style.setProperty("--title-logo-glitch-x", (direction * -3) + "px");
+            applySlices(pattern);
+        }, 40);
 
-        setTimeout(function () {
+        setActiveTimer(function () {
+            if (!isLogoAlive()) return;
+            logo.get(0).style.setProperty("--title-logo-glitch-x", (direction * 1) + "px");
+            logo.children(".title-logo-rgb-red").css({ opacity: 0.22, transform: "translate3d(2px, 0, 0)" });
+            logo.children(".title-logo-rgb-blue").css({ opacity: 0.2, transform: "translate3d(-2px, 0, 0)" });
+            logo.children(".title-logo-slice").css("opacity", 0.28);
+        }, 90);
+
+        setActiveTimer(function () {
             resetLogo();
             if (isLogoAlive()) schedule(false);
-        }, duration);
+        }, 150);
     }
 
     function schedule(isFirst) {
