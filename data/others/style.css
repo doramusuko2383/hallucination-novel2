@@ -1270,45 +1270,49 @@ img.se_mute_on::after { display: none !important; }
 
 /* =========================
    作品専用 選択肢UI
-   - 静かに浮かぶ濃紺のパネルとして、全ルートの選択肢を統一する
+   - 背景の上に思考が静かに浮かぶ、文字主体の選択肢
 ========================= */
-@keyframes hlChoiceFadeIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, 8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
+.hl-story-choice-group {
+    position: absolute !important;
+    z-index: 99999999 !important;
+    top: 48% !important;
+    left: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    transform: translateY(-50%);
+    pointer-events: none !important;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close),
-.glink_button.badend-choice {
+.glink_button.hl-story-choice {
     box-sizing: border-box !important;
-    position: absolute !important;
-    left: 50% !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: min(62vw, 800px, calc(100vw - 32px)) !important;
-    max-width: 800px !important;
+    width: min(680px, 72vw) !important;
+    max-width: calc(100% - 48px) !important;
     min-width: 0 !important;
-    min-height: 0 !important;
+    min-height: 62px !important;
     height: auto !important;
-    padding: 14px 36px !important;
-    overflow: hidden !important;
-    border: 1px solid rgba(255, 255, 255, 0.10) !important;
-    border-radius: 3px !important;
+    margin: 0 auto 22px !important;
+    padding: 14px 24px 12px !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
     outline: none !important;
-    color: rgba(255, 255, 255, 0.92) !important;
-    background: rgba(8, 12, 20, 0.70) !important;
-    background-image: none !important;
-    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.18) !important;
+    color: rgba(255, 255, 255, 0.90) !important;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.10) 22%, rgba(0, 0, 0, 0.18) 50%, rgba(0, 0, 0, 0.10) 78%, transparent 100%) !important;
+    background-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.10) 22%, rgba(0, 0, 0, 0.18) 50%, rgba(0, 0, 0, 0.10) 78%, transparent 100%) !important;
+    box-shadow: none !important;
     filter: none !important;
     font-family: "GenMin", "Yu Mincho", "Hiragino Mincho ProN", serif !important;
-    font-size: clamp(28px, 2.35vw, 30px) !important;
+    font-size: 28px !important;
     font-weight: 400 !important;
     line-height: 1.5 !important;
     letter-spacing: 0.03em !important;
@@ -1316,49 +1320,44 @@ img.se_mute_on::after { display: none !important; }
     text-decoration: none !important;
     white-space: normal !important;
     overflow-wrap: anywhere;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
-    transform: translate(-50%, 0);
-    transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 180ms ease !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85) !important;
+    transform: translateY(0);
+    transition: background 180ms ease, color 180ms ease, text-shadow 180ms ease, transform 180ms ease !important;
+    pointer-events: auto !important;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close)::before,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close)::after,
-.glink_button.badend-choice::before,
-.glink_button.badend-choice::after {
-    content: none !important;
+.glink_button.hl-story-choice::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    transition: width 180ms ease, left 180ms ease, background 180ms ease;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):hover,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):focus-visible,
-.glink_button.badend-choice:hover,
-.glink_button.badend-choice:focus-visible {
-    color: rgba(255, 255, 255, 0.99) !important;
-    background: rgba(20, 28, 42, 0.86) !important;
-    box-shadow: inset 3px 0 0 rgba(190, 220, 255, 0.75), 0 4px 18px rgba(0, 0, 0, 0.25) !important;
+.glink_button.hl-story-choice:hover,
+.glink_button.hl-story-choice:focus-visible {
+    color: rgba(255, 255, 255, 1) !important;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.14) 22%, rgba(0, 0, 0, 0.24) 50%, rgba(0, 0, 0, 0.14) 78%, transparent 100%) !important;
+    background-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.14) 22%, rgba(0, 0, 0, 0.24) 50%, rgba(0, 0, 0, 0.14) 78%, transparent 100%) !important;
+    box-shadow: none !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 8px rgba(170, 210, 255, 0.12) !important;
     text-decoration: none !important;
-    transform: translate(-50%, 0) translateX(2px);
+    transform: translateY(-1px);
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close):active,
-.glink_button.badend-choice:active {
-    position: absolute !important;
+.glink_button.hl-story-choice:hover::after,
+.glink_button.hl-story-choice:focus-visible::after {
+    left: 10%;
+    width: 80%;
+    background: linear-gradient(90deg, transparent, rgba(190, 220, 255, 0.75), transparent);
+}
+
+.glink_button.hl-story-choice:active {
     color: rgba(255, 255, 255, 0.92) !important;
-    transform: translate(-50%, 0) translateX(2px) scale(0.995);
-}
-
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).black,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).gray,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).white,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).orange,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).blue,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).rosy,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).green,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).pink,
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close).red {
-    border-color: rgba(255, 255, 255, 0.10) !important;
-    background: rgba(8, 12, 20, 0.70) !important;
-    background-image: none !important;
-    filter: none !important;
+    transform: translateY(0) scale(0.995);
 }
 
 /* タイトル／起動ゲートは作品内選択肢UIの対象外にする */
@@ -1526,9 +1525,13 @@ body.badend-active .glink_button.quiet_system_button {
     opacity: 0.72 !important;
 }
 
-/* BAD END choices use the same subdued panel treatment as every other in-game choice. */
+/* BAD END choices retain their scenario-specific placement without restoring a panel. */
 .glink_button.badend-choice {
     z-index: 3 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.15), transparent) !important;
+    box-shadow: none !important;
 }
 
 .badend-choice-divider {
@@ -1567,9 +1570,9 @@ body.badend-active .glink_button.quiet_system_button {
     z-index: 999998;
     pointer-events: none;
     opacity: 0;
-    background: rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     transition: opacity 220ms ease;
 }
 
@@ -1583,7 +1586,7 @@ body.hl-choice-active #tyrano_base > .layer_fore,
 body.hl-choice-active #tyrano_base > .layer_blend_mode,
 body.hl-choice-active #tyrano_base > video,
 body.hl-choice-active #tyrano_base > canvas {
-    filter: blur(5px);
+    filter: blur(3px);
     transition: filter 220ms ease;
 }
 
@@ -1596,19 +1599,19 @@ body.hl-choice-active .button_menu {
     filter: none !important;
 }
 
-.glink_button:not(.title-logo):not(.title-subtitle):not(.title-choice):not(.audio-start-button):not(.badend-choice):not(.quiet_system_button):not(.suspense_close) {
+.glink_button.hl-story-choice {
     will-change: opacity, transform;
 }
 
 @keyframes hlChoiceFadeInStagger {
     0% {
         opacity: 0;
-        transform: translate(-50%, 8px);
+        transform: translateY(8px);
     }
 
     100% {
         opacity: 1;
-        transform: translate(-50%, 0);
+        transform: translateY(0);
     }
 }
 

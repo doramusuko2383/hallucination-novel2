@@ -389,20 +389,23 @@
 
 
     var DEFAULT_CHOICE_CONFIG = {
-        x: 510,
-        y: 250,
-        width: 260,
-        height: 44,
-        size: 20,
-        gap: 80,
+        // The presentation is owned by .hl-story-choice-group. Keep these
+        // legacy parameters so existing scenario tags continue to parse, but
+        // do not use per-choice coordinates to lay out the story choices.
+        x: 0,
+        y: 0,
+        width: 680,
+        height: 0,
+        size: 28,
+        gap: 22,
         clickse: "se/click.ogg",
         introDelay: 520,
         staggerDelay: 100,
         fadeTime: 220,
         branchDelay: 200,
         layouts: {
-            "2": { x: 470, y: 300, width: 340 },
-            "3": { x: 510, y: 250, width: 260 }
+            "2": {},
+            "3": {}
         }
     };
 
@@ -465,9 +468,14 @@
                 var layout = DEFAULT_CHOICE_CONFIG.layouts[String(count)] || {};
                 quietChoicePlayback(kag);
                 showChoiceBackdrop();
+                var choiceGroup = $("<div></div>")
+                    .addClass("hl-story-choice-group")
+                    .attr("data-choice-count", count);
+                kag.layer.getFreeLayer().append(choiceGroup).show();
                 kag.tmp.hl_choice = {
                     index: 0,
                     count: count,
+                    group: choiceGroup,
                     x: toChoiceInt(pm.x, layout.x || DEFAULT_CHOICE_CONFIG.x),
                     y: toChoiceInt(pm.y, layout.y || DEFAULT_CHOICE_CONFIG.y),
                     width: toChoiceInt(pm.width, layout.width || DEFAULT_CHOICE_CONFIG.width),
@@ -534,6 +542,11 @@
                 state.index += 1;
                 kag.tmp.hl_choice = state;
                 kag.ftag.startTag("glink", glinkPm);
+                // glink creates its own absolutely-positioned node. Move that
+                // node into the shared flex group so every route (including
+                // long labels and 2--4 choices) uses one vertical layout.
+                var choiceButton = $(".glink_button.hl-story-choice").last();
+                if (state.group && choiceButton.length) state.group.append(choiceButton);
             }
         };
 
