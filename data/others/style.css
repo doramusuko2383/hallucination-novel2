@@ -1562,7 +1562,7 @@ body.badend-active .glink_button.quiet_system_button {
 
 /* =========================
    作品専用 選択肢演出
-   - 表示前の間、順次フェード、背景だけの弱いすりガラス表現
+   - 表示前の間、順次フェード、シーンだけの弱いぼかし表現
 ========================= */
 #hl-choice-backdrop {
     position: absolute;
@@ -1571,8 +1571,6 @@ body.badend-active .glink_button.quiet_system_button {
     pointer-events: none;
     opacity: 0;
     background: rgba(0, 0, 0, 0.06);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
     transition: opacity 220ms ease;
 }
 
@@ -1580,16 +1578,20 @@ body.badend-active .glink_button.quiet_system_button {
     opacity: 1;
 }
 
-body.hl-choice-active #tyrano_base > .layer_camera,
-body.hl-choice-active #tyrano_base > .layer_base,
-body.hl-choice-active #tyrano_base > .layer_fore,
+/*
+ * Tyrano puts background and character layers in #root_layer_game, while its
+ * message, free (choice), event, and menu layers live in #root_layer_system.
+ * Blur only the game root: applying a filter to a common ancestor would blur
+ * the question and all operation UI even if their own filter were reset.
+ */
+body.hl-choice-active #root_layer_game > .layer_camera,
 body.hl-choice-active #tyrano_base > .layer_blend_mode,
-body.hl-choice-active #tyrano_base > video,
-body.hl-choice-active #tyrano_base > canvas {
+body.hl-choice-active #tyrano_base > .blendlayer {
     filter: blur(3px);
     transition: filter 220ms ease;
 }
 
+/* Explicitly document the UI layers that remain sharp during a choice. */
 body.hl-choice-active .glink_button,
 body.hl-choice-active .layer_free,
 body.hl-choice-active .layer_event_click,

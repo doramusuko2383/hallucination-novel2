@@ -423,7 +423,11 @@
         window.clearTimeout(choiceBackdropRemovalTimer);
         $("#hl-choice-backdrop").remove();
         var backdrop = $("<div></div>").attr("id", "hl-choice-backdrop");
-        base.append(backdrop);
+        // Keep the dimming overlay in Tyrano's game root. The system root holds
+        // the message window, question text, choices, and operation controls,
+        // which must remain above (and outside) the scene-only effect.
+        var sceneRoot = base.find("#root_layer_game");
+        (sceneRoot.length ? sceneRoot : base).append(backdrop);
         choiceBackdropTimer = window.setTimeout(function () {
             $("body").addClass("hl-choice-active");
             backdrop.addClass("is-visible");
