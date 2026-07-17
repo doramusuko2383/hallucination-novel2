@@ -513,8 +513,6 @@ if (f.has_crossed_line === undefined) f.has_crossed_line = false;
 ;デバッグ補助（表示用スナップショット）
 if (f.debug_flags_snapshot === undefined) f.debug_flags_snapshot = "";
 if (f.save_scene_title === undefined) f.save_scene_title = "";
-; デバッグモード
-if (f.debug_mode === undefined) f.debug_mode = true;
 [endscript]
 
 ;起動直後に本編へ
@@ -537,18 +535,8 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 
 [configdelay speed="42"]
 
-[if exp="f.debug_mode==true"]
-    ; NEW GAME 後の初回のみ、立ち絵比較シーンを開く。
-    ; 一度表示した後は通常のデバッグメニューへ進む。
-    [if exp="f.character_compare_seen!=true"]
-        [eval exp="f.character_compare_seen=true"]
-        @jump storage="character_compare.ks"
-    [else]
-        @jump target="*debug_entry"
-    [endif]
-[else]
-    @jump storage="chapter1.ks" target="*chapter1"
-[endif]
+; 開発版では NEW GAME から常にチャプター選択用のデバッグメニューを開く。
+@jump target="*debug_entry"
 
 [s]
 ; =========================
@@ -573,23 +561,7 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 [glink name="debug_choice_ch6_start" text="Chapter 6" target="*dbg_ch6_start" x="660" y="254" width="250" height="38" size="19"]
 [glink name="debug_choice_ch7_start" text="Chapter 7" target="*dbg_ch7_start" x="515" y="306" width="250" height="38" size="19"]
 
-[ptext layer="fix" fix="true" name="debug_menu_tools_label" text="開発ツール" x="0" y="382" width="1280" align="center" size="16" color="0xaaaaaa"]
-[glink name="debug_choice_character_compare" text="立ち絵サイズ比較" storage="character_compare.ks" x="440" y="416" width="400" height="42" size="20"]
-[glink name="debug_choice_ch2_current_start" text="Chapter 2 現在テスト中" target="*debug_ch2" x="440" y="472" width="400" height="42" size="20"]
-[glink name="debug_choice_off" text="通常起動に戻る" target="*debug_off" x="440" y="554" width="400" height="42" size="20"]
-
 [s]
-
-*debug_ch2
-[cm]
-チャプター2：
-[glink name="debug_choice_current" text="現在テスト中" target="*dbg_ch2_current"]
-; [glink] は [s] 到達時に自動配置・表示されるため、ここで [p] を挟まない
-[s]
-
-; ===== 現在テスト用（ここだけ毎回書き換える） =====
-*dbg_ch2_current
-@jump storage="chapter2.ks" target="*ch2_debug_current"
 
 ; ===== 章冒頭ジャンプ =====
 *dbg_ch1_start
@@ -626,8 +598,3 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 
 *dbg_ch1_after_2days
 @jump storage="chapter1.ks" target="*ch1_after_2days"
-
-
-*debug_off
-[eval exp="f.debug_mode=false"]
-@jump storage="chapter1.ks" target="*chapter1"
