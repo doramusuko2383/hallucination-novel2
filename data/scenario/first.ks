@@ -538,7 +538,14 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 [configdelay speed="42"]
 
 [if exp="f.debug_mode==true"]
-    @jump target="*debug_entry"
+    ; NEW GAME 後の初回のみ、立ち絵比較シーンを開く。
+    ; 一度表示した後は通常のデバッグメニューへ進む。
+    [if exp="f.character_compare_seen!=true"]
+        [eval exp="f.character_compare_seen=true"]
+        @jump storage="character_compare.ks"
+    [else]
+        @jump target="*debug_entry"
+    [endif]
 [else]
     @jump storage="chapter1.ks" target="*chapter1"
 [endif]
@@ -550,20 +557,26 @@ if (f.debug_mode === undefined) f.debug_mode = true;
 
 *debug_entry
 [cm]
+[freeimage layer=fix]
+[hidemenubutton]
+[layopt layer=message0 visible=false]
+[bg storage="black.png" time=0 wait=false]
 
-デバッグモード：
-■チャプター選択
-[glink name="debug_choice_ch1_start" text="Chapter1 開始" target="*dbg_ch1_start"]
-[glink name="debug_choice_ch2_start" text="Chapter2 開始" target="*dbg_ch2_start"]
-[glink name="debug_choice_ch3_start" text="Chapter3 開始" target="*dbg_ch3_start"]
-[glink name="debug_choice_ch4_start" text="Chapter4 開始" target="*dbg_ch4_start"]
-[glink name="debug_choice_ch5_start" text="Chapter5 開始" target="*dbg_ch5_start"]
-[glink name="debug_choice_ch6_start" text="Chapter6 開始" target="*dbg_ch6_start"]
-[glink name="debug_choice_ch7_start" text="Chapter7 開始" target="*dbg_ch7_start"]
+[ptext layer="fix" fix="true" name="debug_menu_title" text="デバッグメニュー" x="0" y="54" width="1280" align="center" size="32" color="0xf2f2f2"]
+[ptext layer="fix" fix="true" name="debug_menu_chapter_label" text="チャプター開始" x="0" y="112" width="1280" align="center" size="16" color="0xaaaaaa"]
 
-■現在テスト中
-[glink name="debug_choice_ch2_current_start" text="Chapter2 現在テスト中" target="*debug_ch2"]
-[glink name="debug_choice_off" text="通常起動に戻る" target="*debug_off"]
+[glink name="debug_choice_ch1_start" text="Chapter 1" target="*dbg_ch1_start" x="370" y="150" width="250" height="38" size="19"]
+[glink name="debug_choice_ch2_start" text="Chapter 2" target="*dbg_ch2_start" x="660" y="150" width="250" height="38" size="19"]
+[glink name="debug_choice_ch3_start" text="Chapter 3" target="*dbg_ch3_start" x="370" y="202" width="250" height="38" size="19"]
+[glink name="debug_choice_ch4_start" text="Chapter 4" target="*dbg_ch4_start" x="660" y="202" width="250" height="38" size="19"]
+[glink name="debug_choice_ch5_start" text="Chapter 5" target="*dbg_ch5_start" x="370" y="254" width="250" height="38" size="19"]
+[glink name="debug_choice_ch6_start" text="Chapter 6" target="*dbg_ch6_start" x="660" y="254" width="250" height="38" size="19"]
+[glink name="debug_choice_ch7_start" text="Chapter 7" target="*dbg_ch7_start" x="515" y="306" width="250" height="38" size="19"]
+
+[ptext layer="fix" fix="true" name="debug_menu_tools_label" text="開発ツール" x="0" y="382" width="1280" align="center" size="16" color="0xaaaaaa"]
+[glink name="debug_choice_character_compare" text="立ち絵サイズ比較" storage="character_compare.ks" x="440" y="416" width="400" height="42" size="20"]
+[glink name="debug_choice_ch2_current_start" text="Chapter 2 現在テスト中" target="*debug_ch2" x="440" y="472" width="400" height="42" size="20"]
+[glink name="debug_choice_off" text="通常起動に戻る" target="*debug_off" x="440" y="554" width="400" height="42" size="20"]
 
 [s]
 
