@@ -545,10 +545,14 @@ if (f.save_scene_title === undefined) f.save_scene_title = "";
 
 *debug_entry
 [cm]
-[freeimage layer=fix]
 [hidemenubutton]
 [layopt layer=message0 visible=false]
 [bg storage="black.png" time=0 wait=false]
+[iscript]
+// layer=fix は #tyrano_base 自体を指すため、[freeimage layer=fix] で消すと
+// layer_free まで DOM から外れ、glink が表示・クリックできなくなる。
+$(".quiet_system_button").remove();
+[endscript]
 
 [ptext layer="fix" fix="true" name="debug_menu_title" text="デバッグメニュー" x="0" y="54" width="1280" align="center" size="32" color="0xf2f2f2"]
 [ptext layer="fix" fix="true" name="debug_menu_chapter_label" text="チャプター開始" x="0" y="112" width="1280" align="center" size="16" color="0xaaaaaa"]
