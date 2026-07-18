@@ -385,8 +385,8 @@ baseLayer.css("background-color", "#000000");
         playGlitchSe();
         logo.addClass("title-logo-glitching");
         logo.get(0).style.setProperty("--title-logo-glitch-x", (direction * 2) + "px");
-        logo.children(".title-logo-rgb-red").css({ opacity: 0.44, transform: "translate3d(-3px, 0, 0)" });
-        logo.children(".title-logo-rgb-blue").css({ opacity: 0.58, transform: "translate3d(3px, 0, 0)" });
+        logo.children(".title-logo-rgb-red").css({ opacity: 0.34, transform: "translate3d(-3px, 0, 0)" });
+        logo.children(".title-logo-rgb-blue").css({ opacity: 0.3, transform: "translate3d(3px, 0, 0)" });
 
         setActiveTimer(function () {
             if (!isLogoAlive()) return;
@@ -397,8 +397,8 @@ baseLayer.css("background-color", "#000000");
         setActiveTimer(function () {
             if (!isLogoAlive()) return;
             logo.get(0).style.setProperty("--title-logo-glitch-x", (direction * 1) + "px");
-            logo.children(".title-logo-rgb-red").css({ opacity: 0.3, transform: "translate3d(2px, 0, 0)" });
-            logo.children(".title-logo-rgb-blue").css({ opacity: 0.42, transform: "translate3d(-2px, 0, 0)" });
+            logo.children(".title-logo-rgb-red").css({ opacity: 0.22, transform: "translate3d(2px, 0, 0)" });
+            logo.children(".title-logo-rgb-blue").css({ opacity: 0.2, transform: "translate3d(-2px, 0, 0)" });
             logo.children(".title-logo-slice").css("opacity", 0.28);
         }, 90);
 
