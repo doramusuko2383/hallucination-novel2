@@ -566,26 +566,50 @@ $(".quiet_system_button").remove();
 [s]
 
 ; ===== 章冒頭ジャンプ =====
+; デバッグメニューの fix/free レイヤーを必ず破棄してから章へ移る。
+; Chapter1 は冒頭に本編選択肢があるため、デバッグ用 glink が残ると
+; その選択肢のクリック処理と競合して進行不能になる。
 *dbg_ch1_start
-@jump storage="chapter1.ks" target="*ch1_start"
+[eval exp="tf.debug_jump_storage = 'chapter1.ks'; tf.debug_jump_target = '*ch1_start'"]
+@jump target="*debug_jump_to_chapter"
 
 *dbg_ch2_start
-@jump storage="chapter2.ks" target="*ch2_start"
+[eval exp="tf.debug_jump_storage = 'chapter2.ks'; tf.debug_jump_target = '*ch2_start'"]
+@jump target="*debug_jump_to_chapter"
 
 *dbg_ch3_start
-@jump storage="chapter3.ks" target="*ch3_start"
+[eval exp="tf.debug_jump_storage = 'chapter3.ks'; tf.debug_jump_target = '*ch3_start'"]
+@jump target="*debug_jump_to_chapter"
 
 *dbg_ch4_start
-@jump storage="chapter4.ks" target="*ch4_start"
+[eval exp="tf.debug_jump_storage = 'chapter4.ks'; tf.debug_jump_target = '*ch4_start'"]
+@jump target="*debug_jump_to_chapter"
 
 *dbg_ch5_start
-@jump storage="chapter5.ks" target="*ch5_start"
+[eval exp="tf.debug_jump_storage = 'chapter5.ks'; tf.debug_jump_target = '*ch5_start'"]
+@jump target="*debug_jump_to_chapter"
 
 *dbg_ch6_start
-@jump storage="chapter6.ks" target="*ch6_start"
+[eval exp="tf.debug_jump_storage = 'chapter6.ks'; tf.debug_jump_target = '*ch6_start'"]
+@jump target="*debug_jump_to_chapter"
 
 *dbg_ch7_start
-@jump storage="chapter7.ks" target="*ch7_start"
+[eval exp="tf.debug_jump_storage = 'chapter7.ks'; tf.debug_jump_target = '*ch7_start'"]
+@jump target="*debug_jump_to_chapter"
+
+*debug_jump_to_chapter
+[cm]
+[clearfix]
+; デバッグメニューで非表示にしたメッセージレイヤーを本編用に戻す。
+; Chapter1 は章タイトル演出より前に本文が始まるため、ここで復旧しないと文字が表示されない。
+[layopt layer=message0 visible=true]
+[iscript]
+(function cleanupDebugChapterMenu() {
+    $("#hl-choice-backdrop, #new-game-opening-fade").remove();
+    $("body").removeClass("hl-choice-active");
+})();
+[endscript]
+[jump storage="&tf.debug_jump_storage" target="&tf.debug_jump_target"]
 
 
 ; ===== 個別ジャンプ =====
