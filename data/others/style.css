@@ -1379,8 +1379,8 @@ img.se_mute_on::after { display: none !important; }
     box-shadow: none !important;
     color: rgba(248, 250, 255, 0.94) !important;
     font-family: "GenMin", "Times New Roman", serif !important;
-    font-size: 16px !important;
-    font-weight: 600 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
     letter-spacing: 0.34em !important;
     text-shadow: 0 0 7px rgba(0,0,0,0.9), 0 0 14px rgba(22,32,54,0.8) !important;
 }
