@@ -8,6 +8,7 @@
 [chara_hide_all]
 [clearfix]
 [start_keyconfig]
+[showmenubutton]
 [chapter_title number="第五章" title="代償"]
 [font speed=50]
 
