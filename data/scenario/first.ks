@@ -166,11 +166,9 @@ baseLayer.css("background-color", "#000000");
 ; [stopbgm] / [fadeoutbgm] で制御できる通常BGMとして再生する。
 [playbgm storage="nature_wind.ogg" loop=true volume=68 fadein=true time=300]
 
-[glink name="title-choice title-start title-primary" color="black" size="16" x="520" y="440" width="240" height="30" text="NEW GAME" target="*title_newgame"]
-[glink name="title-choice" color="black" size="16" x="520" y="490" width="240" height="30" text="CONTINUE" target="*title_continue"]
-[glink name="title-choice" color="black" size="16" x="520" y="540" width="240" height="30" text="LOAD" target="*title_load" cm="false"]
-[glink name="title-choice" color="black" size="16" x="520" y="590" width="240" height="30" text="CONFIG" target="*title_config" cm="false"]
-[glink name="title-choice" color="black" size="16" x="520" y="640" width="240" height="30" text="EXIT" target="*title_quit"]
+[glink name="title-choice title-start title-primary" color="black" size="18" x="520" y="490" width="240" height="32" text="NEW GAME" target="*title_newgame"]
+[glink name="title-choice" color="black" size="18" x="520" y="540" width="240" height="32" text="CONTINUE" target="*title_continue"]
+[glink name="title-choice" color="black" size="18" x="520" y="590" width="240" height="32" text="LOAD" target="*title_load" cm="false"]
 [iscript]
 (function normalizeTitleMenuClasses() {
     function important(element, styles) {
@@ -251,14 +249,14 @@ baseLayer.css("background-color", "#000000");
         }).last();
     }
 
-    ["NEW GAME", "CONTINUE", "LOAD", "CONFIG", "EXIT"].forEach(function (text, index) {
+    ["NEW GAME", "CONTINUE", "LOAD"].forEach(function (text, index) {
         var button = findTitleButton(text);
         button.addClass(index === 0 ? "title-choice title-start title-primary" : "title-choice");
         button.removeClass("black");
         important(button, $.extend({}, baseTextStyle, {
             "color": "rgba(248, 250, 255, 0.94)",
-            "font-size": "16px",
-            "font-weight": "600",
+            "font-size": "18px",
+            "font-weight": "700",
             "letter-spacing": "0.34em",
             "text-shadow": "0 0 7px rgba(0,0,0,0.9), 0 0 14px rgba(22,32,54,0.8)",
             "z-index": "99999999",
