@@ -8,6 +8,7 @@
 [chara_hide_all]
 [clearfix]
 [start_keyconfig]
+[showmenubutton]
 [chapter_title number="第七章" title="未来"]
 [font speed=50]
 [playse storage=se/thunder.ogg volume=100]

@@ -13,6 +13,7 @@
 [chara_hide_all]
 [clearfix]
 [start_keyconfig]
+[showmenubutton]
 
 [chapter_title number="第二章" title="報復"]
 [font speed=50]

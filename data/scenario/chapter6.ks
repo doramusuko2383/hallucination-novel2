@@ -8,6 +8,7 @@
 [chara_hide_all]
 [clearfix]
 [start_keyconfig]
+[showmenubutton]
 [chapter_title number="第六章" title="赦し"]
 [font speed=50]
 
