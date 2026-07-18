@@ -1,4 +1,4 @@
-[chara_new name="恵" storage="chara/megumi/normal.webp" scale=0.45 top=110]
+[chara_new name="恵" storage="chara/megumi/normal.webp" scale=0.42 top=156]
 [chara_face name="恵" face="normal" storage="chara/megumi/normal.webp"]
 [chara_face name="恵" face="pain" storage="chara/megumi/pain.webp"]
 [chara_face name="恵" face="serious" storage="chara/megumi/serious.webp"]
@@ -26,7 +26,7 @@
 [chara_face name="恵" face="private_scream" storage="chara/megumi/private_scream.webp"]
 [chara_face name="恵" face="private_surprise" storage="chara/megumi/private_surprise.webp"]
 
-[chara_new name="拓海" storage="chara/takumi/level1_normal.webp" scale=0.5 top=90]
+[chara_new name="拓海" storage="chara/takumi/level1_normal.webp" scale=0.475 top=128]
 [chara_face name="拓海" face="convenience" storage="chara/takumi/convenience.png"]
 [chara_face name="拓海" face="level1_normal" storage="chara/takumi/level1_normal.webp"]
 [chara_face name="拓海" face="level1_pain" storage="chara/takumi/level1_pain.webp"]
@@ -56,14 +56,14 @@
 [chara_face name="拓海" face="private2_smile" storage="chara/takumi/private2_smile.webp"]
 [chara_face name="拓海" face="private2_sorry" storage="chara/takumi/private2_sorry.webp"]
 
-[chara_new name="龍也" storage="chara/ryuya/normal.webp" scale=0.5 top=80]
+[chara_new name="龍也" storage="chara/ryuya/normal.webp" scale=0.475 top=118]
 [chara_face name="龍也" face="normal" storage="chara/ryuya/normal.webp"]
 [chara_face name="龍也" face="smile" storage="chara/ryuya/smile.webp"]
 [chara_face name="龍也" face="angry" storage="chara/ryuya/angry.webp"]
 [chara_face name="龍也" face="sad" storage="chara/ryuya/sad.webp"]
 [chara_face name="龍也" face="apologize" storage="chara/ryuya/apologize.webp"]
 
-[chara_new name="綾香" storage="chara/ayaka/normal.webp" scale=0.45 top=105]
+[chara_new name="綾香" storage="chara/ayaka/normal.webp" scale=0.43 top=136]
 [chara_face name="綾香" face="normal" storage="chara/ayaka/normal.webp"]
 [chara_face name="綾香" face="smile" storage="chara/ayaka/smile.webp"]
 [chara_face name="綾香" face="angry" storage="chara/ayaka/angry.webp"]
@@ -77,22 +77,22 @@
 [chara_face name="綾香" face="serious" storage="chara/ayaka/serious.webp"]
 [chara_face name="綾香" face="convenience" storage="chara/ayaka/convenience.webp"]
 
-[chara_new name="綾香の母" storage="chara/ayaka_mom/normal.webp" scale=0.45 top=105]
+[chara_new name="綾香の母" storage="chara/ayaka_mom/normal.webp" scale=0.43 top=136]
 [chara_face name="綾香の母" face="normal" storage="chara/ayaka_mom/normal.webp"]
 [chara_face name="綾香の母" face="smile" storage="chara/ayaka_mom/smile.webp"]
 
-[chara_new name="翔太" storage="chara/shota/normal.webp" scale=0.5 top=85]
+[chara_new name="翔太" storage="chara/shota/normal.webp" scale=0.475 top=123]
 [chara_face name="翔太" face="normal" storage="chara/shota/normal.webp"]
 [chara_face name="翔太" face="serious" storage="chara/shota/serious.webp"]
 [chara_face name="翔太" face="nastysmile" storage="chara/shota/nastysmile.webp"]
 [chara_face name="翔太" face="shysmile" storage="chara/shota/shysmile.webp"]
 [chara_face name="翔太" face="sulk" storage="chara/shota/sulk.webp"]
 
-[chara_new name="響子" storage="chara/kyoko/normal.webp" scale=0.45 top=100]
+[chara_new name="響子" storage="chara/kyoko/normal.webp" scale=0.43 top=131]
 [chara_face name="響子" face="normal" storage="chara/kyoko/normal.webp"]
 [chara_face name="響子" face="confuse" storage="chara/kyoko/confuse.webp"]
 
-[chara_new name="高田" storage="chara/takada/normal.webp" scale=0.50 top=100]
+[chara_new name="高田" storage="chara/takada/normal.webp" scale=0.475 top=138]
 [chara_face name="高田" face="normal" storage="chara/takada/normal.webp"]
 [chara_face name="高田" face="angry" storage="chara/takada/angry.webp"]
 [chara_face name="高田" face="pale" storage="chara/takada/pale.webp"]
