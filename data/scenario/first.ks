@@ -600,6 +600,9 @@ $(".quiet_system_button").remove();
 *debug_jump_to_chapter
 [cm]
 [clearfix]
+; デバッグメニューで非表示にしたメッセージレイヤーを本編用に戻す。
+; Chapter1 は章タイトル演出より前に本文が始まるため、ここで復旧しないと文字が表示されない。
+[layopt layer=message0 visible=true]
 [iscript]
 (function cleanupDebugChapterMenu() {
     $("#hl-choice-backdrop, #new-game-opening-fade").remove();
