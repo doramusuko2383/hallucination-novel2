@@ -1527,11 +1527,64 @@ body.badend-active .glink_button.quiet_system_button {
 
 /* BAD END choices retain their scenario-specific placement without restoring a panel. */
 .glink_button.badend-choice {
-    z-index: 3 !important;
+    box-sizing: border-box !important;
+    z-index: 1000002 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 24px !important;
     border: 0 !important;
     border-radius: 0 !important;
-    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.15), transparent) !important;
+    outline: none !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.10) 22%, rgba(0, 0, 0, 0.18) 50%, rgba(0, 0, 0, 0.10) 78%, transparent 100%) !important;
+    background-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.10) 22%, rgba(0, 0, 0, 0.18) 50%, rgba(0, 0, 0, 0.10) 78%, transparent 100%) !important;
     box-shadow: none !important;
+    filter: none !important;
+    font-family: "GenMin", "Yu Mincho", "Hiragino Mincho ProN", serif !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.03em !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    white-space: normal !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85) !important;
+    transform: translateY(0);
+    transition: background 180ms ease, color 180ms ease, text-shadow 180ms ease, transform 180ms ease !important;
+}
+
+.glink_button.badend-choice::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    transition: width 180ms ease, left 180ms ease, background 180ms ease;
+}
+
+.glink_button.badend-choice:hover,
+.glink_button.badend-choice:focus-visible {
+    color: rgba(255, 255, 255, 1) !important;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.14) 22%, rgba(0, 0, 0, 0.24) 50%, rgba(0, 0, 0, 0.14) 78%, transparent 100%) !important;
+    background-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.14) 22%, rgba(0, 0, 0, 0.24) 50%, rgba(0, 0, 0, 0.14) 78%, transparent 100%) !important;
+    box-shadow: none !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 8px rgba(170, 210, 255, 0.12) !important;
+    text-decoration: none !important;
+    transform: translateY(-1px);
+}
+
+.glink_button.badend-choice:hover::after,
+.glink_button.badend-choice:focus-visible::after {
+    left: 10%;
+    width: 80%;
+    background: linear-gradient(90deg, transparent, rgba(190, 220, 255, 0.75), transparent);
+}
+
+.glink_button.badend-choice:active {
+    color: rgba(255, 255, 255, 0.92) !important;
+    transform: translateY(0) scale(0.995);
 }
 
 .badend-choice-divider {

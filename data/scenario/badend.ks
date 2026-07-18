@@ -28,18 +28,17 @@
 })();
 [endscript]
 [ptext layer="fix" name="bad_end_bg,badend-screen" text=" " x="0" y="0" width="1280" height="720" size="1" color="0xffffff" time="0"]
-[wait time=700]
-[ptext layer="fix" name="bad_end_number,badend-kicker" text="" x="0" y="262" width="1280" align="center" size="18" color="0xe9edf2" time="600"]
+[ptext layer="fix" name="bad_end_number,badend-kicker" text="" x="0" y="262" width="1280" align="center" size="18" color="0xe9edf2" time="300"]
 [iscript]
 $(".bad_end_number").updatePText(f.bad_end_no || "").addClass("badend-kicker-ready");
 [endscript]
-[wait time=200]
-[ptext layer="fix" name="bad_end_title,badend-title-glitch" text="" x="0" y="304" width="1280" align="center" size="54" color="0xf7f8fa" time="700"]
+[wait time=300]
+[ptext layer="fix" name="bad_end_title,badend-title-glitch" text="" x="0" y="304" width="1280" align="center" size="54" color="0xf7f8fa" time="500"]
 [iscript]
 $(".bad_end_title").updatePText(f.bad_end_title || "");
 [endscript]
 [ptext layer="fix" name="bad_end_light,badend-title-light" text=" " x="230" y="270" width="820" height="145" size="1" color="0xffffff" time="600"]
-[wait time=550]
+[wait time=400]
 [iscript]
 (function runBadEndGlitch() {
     var targets = $(".badend-title-glitch");
@@ -72,10 +71,9 @@ $(".bad_end_title").updatePText(f.bad_end_title || "");
     window.__badEndGlitchTimer = setInterval(pulse, 3800);
 })();
 [endscript]
-[wait time=300]
-[glink name="bad_end_retry,badend-choice" text="この選択肢からやり直す" target="*bad_end_retry" x="240" y="450" width="800" height="72" size="30" clickse="se/click.ogg"]
+[glink name="bad_end_retry,badend-choice,badend-choice--first" text="この選択肢からやり直す" target="*bad_end_retry" x="240" y="450" width="800" height="72" size="30" clickse="se/click.ogg"]
 [ptext layer="fix" name="bad_end_divider,badend-choice-divider" text=" " x="440" y="540" width="400" height="1" size="1" color="0xffffff" time="500"]
-[glink name="bad_end_title_return,badend-choice" text="タイトルへ戻る" target="*bad_end_to_title" x="240" y="540" width="800" height="72" size="30" clickse="se/click.ogg"]
+[glink name="bad_end_title_return,badend-choice,badend-choice--second" text="タイトルへ戻る" target="*bad_end_to_title" x="240" y="540" width="800" height="72" size="30" clickse="se/click.ogg"]
 [s]
 
 *bad_end_retry
