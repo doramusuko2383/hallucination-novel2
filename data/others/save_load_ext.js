@@ -198,6 +198,7 @@
     }
 
     function clearTransientVisuals() {
+        hideChoiceBackdrop(true);
         $("#chapter-title-overlay, #proyama-splash").remove();
         $(".tyrano-anim, .chara-mod-animation").stop(true, true);
         $(".layer_menu").hide().empty();
@@ -217,6 +218,7 @@
 
     function installConfigOverlay() {
         window.__hlOpenConfigOverlay = function (options) {
+            hideChoiceBackdrop(true);
             options = options || {};
             var kag = TYRANO.kag;
             var config = kag.config;
@@ -434,14 +436,48 @@
         }, DEFAULT_CHOICE_CONFIG.introDelay);
     }
 
-    function hideChoiceBackdrop() {
+    function hideChoiceBackdrop(immediate) {
         window.clearTimeout(choiceBackdropTimer);
         window.clearTimeout(choiceBackdropRemovalTimer);
         $("body").removeClass("hl-choice-active");
         $("#hl-choice-backdrop").removeClass("is-visible");
+        if (immediate) {
+            $("#hl-choice-backdrop").remove();
+            return;
+        }
         choiceBackdropRemovalTimer = window.setTimeout(function () {
             $("#hl-choice-backdrop").remove();
         }, DEFAULT_CHOICE_CONFIG.fadeTime);
+    }
+
+    function hasActiveStoryChoice() {
+        return $(".hl-story-choice-group, .glink_button.hl-story-choice").filter(function () {
+            return $(this).closest("html").length > 0 && $(this).css("display") !== "none";
+        }).length > 0;
+    }
+
+    function syncChoiceBackdropState() {
+        if (!$('body').hasClass("hl-choice-active") && !$("#hl-choice-backdrop").length) return;
+        if (hasActiveStoryChoice()) return;
+        hideChoiceBackdrop(true);
+    }
+
+    function installChoiceCleanupGuards() {
+        if (window.__hl_choice_cleanup_guards_installed) return;
+        window.__hl_choice_cleanup_guards_installed = true;
+        var syncTimer = null;
+        var scheduleSync = function () {
+            window.clearTimeout(syncTimer);
+            syncTimer = window.setTimeout(syncChoiceBackdropState, 0);
+        };
+        if (window.MutationObserver) {
+            new MutationObserver(scheduleSync).observe(document.body, { childList: true, subtree: true });
+        }
+        $(document)
+            .off("click.hlChoiceCleanupGuards touchstart.hlChoiceCleanupGuards", ".button_menu, .menu_item, .menu_back_title, .menu_save, .menu_load, .menu_close, .savesubmit, .loadsubmit, #remodal-confirm")
+            .on("click.hlChoiceCleanupGuards touchstart.hlChoiceCleanupGuards", ".button_menu, .menu_item, .menu_back_title, .menu_save, .menu_load, .menu_close, .savesubmit, .loadsubmit, #remodal-confirm", function () {
+                window.setTimeout(syncChoiceBackdropState, 0);
+            });
     }
 
     function quietChoicePlayback(kag) {
@@ -454,6 +490,7 @@
         var kag = TYRANO.kag;
         if (kag.__hl_choice_tags_installed) return;
         kag.__hl_choice_tags_installed = true;
+        installChoiceCleanupGuards();
 
         kag.tag.choice_start = {
             vital: [],
@@ -743,6 +780,46 @@
         menu.__hl_original_snapSave = menu.snapSave;
         menu.__hl_original_loadGame = menu.loadGame;
         menu.__hl_original_loadGameData = menu.loadGameData;
+        menu.__hl_original_showMenu = menu.showMenu;
+        menu.__hl_original_loadQuickSave = menu.loadQuickSave;
+        menu.__hl_original_displayLog = menu.displayLog;
+        menu.__hl_original_setQuickSave = menu.setQuickSave;
+
+        menu.showMenu = function (call_back) {
+            hideChoiceBackdrop(true);
+            return this.__hl_original_showMenu.call(this, call_back);
+        };
+
+        menu.loadQuickSave = function () {
+            resetRuntimeBeforeSceneSwitch();
+            return this.__hl_original_loadQuickSave.call(this);
+        };
+
+        menu.setQuickSave = function () {
+            hideChoiceBackdrop(true);
+            return this.__hl_original_setQuickSave.apply(this, arguments);
+        };
+
+        menu.displayLog = function () {
+            hideChoiceBackdrop(true);
+            return this.__hl_original_displayLog.apply(this, arguments);
+        };
+
+        if (TYRANO.kag.backTitle && !TYRANO.kag.__hl_original_backTitle) {
+            TYRANO.kag.__hl_original_backTitle = TYRANO.kag.backTitle;
+            TYRANO.kag.backTitle = function () {
+                hideChoiceBackdrop(true);
+                return TYRANO.kag.__hl_original_backTitle.apply(this, arguments);
+            };
+        }
+
+        if ($.confirm && !$.__hl_original_confirm) {
+            $.__hl_original_confirm = $.confirm;
+            $.confirm = function () {
+                hideChoiceBackdrop(true);
+                return $.__hl_original_confirm.apply(this, arguments);
+            };
+        }
 
         menu.getSaveData = function () {
             return normalizeSaveData(this);
@@ -791,6 +868,7 @@
 
 
         menu.loadGame = function (num) {
+            resetRuntimeBeforeSceneSwitch();
             if (String(num).indexOf("auto:") === 0) {
                 var data = getAutoSaveData(this)[parseInt(String(num).split(":")[1], 10)];
                 if (data) this.loadGameData($.extend(true, {}, data), { auto_next: "yes" });
@@ -814,6 +892,7 @@
         };
 
         menu.displaySave = function (cb, cb_close) {
+            hideChoiceBackdrop(true);
             var that = this;
             this.kag.unfocus();
             this.kag.setSkip(false);
@@ -870,6 +949,7 @@
         };
 
         menu.displayLoad = function (cb) {
+            hideChoiceBackdrop(true);
             var that = this;
             this.kag.unfocus();
             this.kag.setSkip(false);
