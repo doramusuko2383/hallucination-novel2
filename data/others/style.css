@@ -969,6 +969,7 @@ img.se_mute_on::after { display: none !important; }
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: contain !important;
+    background-color: transparent;
     pointer-events: none !important;
     opacity: 0;
     transform: translate3d(0, 0, 0);
@@ -977,17 +978,17 @@ img.se_mute_on::after { display: none !important; }
 }
 
 .layer_free .title-logo .title-logo-rgb-red {
-    filter: brightness(1.18) sepia(1) saturate(4) hue-rotate(308deg);
+    filter: brightness(1.08) sepia(1) saturate(3.2) hue-rotate(292deg) drop-shadow(-1px 0 0 rgba(255, 130, 180, 0.3));
     mix-blend-mode: screen;
 }
 
 .layer_free .title-logo .title-logo-rgb-blue {
-    filter: brightness(1.12) sepia(1) saturate(4) hue-rotate(150deg);
+    filter: brightness(1.1) sepia(1) saturate(3) hue-rotate(168deg) drop-shadow(1px 0 0 rgba(110, 190, 255, 0.42));
     mix-blend-mode: screen;
 }
 
 .layer_free .title-logo .title-logo-slice {
-    filter: brightness(1.08) contrast(1.08);
+    filter: brightness(1.08) contrast(1.08) drop-shadow(1.5px 0 0 rgba(95, 180, 255, 0.42)) drop-shadow(-1.5px 0 0 rgba(255, 130, 180, 0.3));
     mix-blend-mode: screen;
 }
 
