@@ -11,6 +11,7 @@
 [chara_hide_all]
 [clearfix]
 [start_keyconfig]
+[showmenubutton]
 [chapter_title number="第四章" title="共犯"]
 [font speed=50]
 
