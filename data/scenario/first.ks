@@ -117,6 +117,21 @@
 [iscript]
 (function setupAudioStartGate() {
     $(".button_menu").hide();
+    $("body").addClass("audio-start-preparing");
+
+    if (!$("#audio-start-preparing-style").length) {
+        $("head").append(
+            '<style id="audio-start-preparing-style">' +
+            'body.audio-start-preparing .layer_free .glink_button.audio-start-button,' +
+            'body.audio-start-preparing .audio-start-note{' +
+            'visibility:hidden!important;' +
+            'opacity:0!important;' +
+            'transition:none!important;' +
+            '}' +
+            '</style>'
+        );
+    }
+
     var baseLayer = TG.layer.getLayer("base", "fore");
     baseLayer.css("background-image", "none");
     baseLayer.css("background-color", "#000000");
@@ -143,6 +158,10 @@
         textShadow: "0 0 8px rgba(255,255,255,0.28), 0 0 14px rgba(0,0,0,0.85)",
         padding: "0"
     });
+
+    requestAnimationFrame(function () {
+        $("body").removeClass("audio-start-preparing");
+    });
 })();
 [endscript]
 [s]
@@ -153,10 +172,26 @@
 @freeimage layer=0 page=fore
 @layopt layer=message0 visible=false
 [iscript]
-$(".button_menu").hide();
-var baseLayer = TG.layer.getLayer("base", "fore");
-baseLayer.css("background-image", "none");
-baseLayer.css("background-color", "#000000");
+(function prepareTitleMenuRender() {
+    $(".button_menu").hide();
+    $("body").addClass("title-menu-preparing");
+
+    if (!$("#title-menu-preparing-style").length) {
+        $("head").append(
+            '<style id="title-menu-preparing-style">' +
+            'body.title-menu-preparing .layer_free .glink_button.title-choice{' +
+            'visibility:hidden!important;' +
+            'opacity:0!important;' +
+            'transition:none!important;' +
+            '}' +
+            '</style>'
+        );
+    }
+
+    var baseLayer = TG.layer.getLayer("base", "fore");
+    baseLayer.css("background-image", "none");
+    baseLayer.css("background-color", "#000000");
+})();
 [endscript]
 
 ; タイトル専用背景。動画は使わず、夕焼け屋上の静止画にタイトルとメニューを重ねる。
@@ -262,6 +297,10 @@ baseLayer.css("background-color", "#000000");
             "z-index": "99999999",
             "pointer-events": "auto"
         }));
+    });
+
+    requestAnimationFrame(function () {
+        $("body").removeClass("title-menu-preparing");
     });
 })();
 [endscript]
