@@ -1009,10 +1009,10 @@
 
 [wait time=500]
 
-[auto_chara name="拓海" face="level2_normal"]
+[bg storage="ch3_karaoke_determination.webp" time=900]
+
 「よし、お母さんを助けよう」[p]
 
-[chara_hide_all time=300]
 その言葉が口をついて出た瞬間、[r]
 拓海の胸の中に新たな感情が生まれた。[p]
 
