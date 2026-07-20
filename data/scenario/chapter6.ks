@@ -851,7 +851,7 @@
 [fadeoutbgm time=3000]
 [bg storage="bg_megumi_living_night.webp" time=800]
 [playbgm storage="room_noise.ogg" loop=true volume=30 fadein=true time=1000]
-[playse storage=se/interphone.ogg volume=45] ; インターホンSE素材があれば差し替え推奨
+[playse storage=se/interphone.ogg volume=45] 
 土曜日の夜、インターホンが鳴った。[p]
 約束の時間よりは大分早い。[p]
 19時に駅前で待ち合わせる予定だった。[p]
@@ -884,7 +884,7 @@
 「悪いね、気を遣わせちゃって」[p]
 
 二人で向かい合って座るには、やや大き過ぎるリビングの机に高田は座っている。[p]
-それにしても、スーツを着ていないし、荷物も持っていない。[p]
+それにしても、スーツではあるが、荷物も持っていない。[p]
 今日は何をしに来たのだろうか。[p]
 [auto_chara name="高田" face="badmood"]
 「ちょっと大事な話があるんだけど」[p]
