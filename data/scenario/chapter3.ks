@@ -485,18 +485,18 @@
 
 *ch3_karaoke
 
-[bg storage="ch3_karaoke_talk.webp" time=800]
+[bg storage="bg_karaoke.webp" time=800]
 [playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
 [playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
 
+[auto_chara name="恵" face="serious"]
 「実は、この前、綾香がバイトするコンビニに永山君が入っていくのを見かけたの」[p]
 
 駅近くのカラオケの個室に入って席に着くなり、[r]
 恵は拓海に向かって話し始めた。[p]
 
 彼女の表情は、どこかいつもとは違う緊張感が漂っている。[p]
-[bg storage="bg_karaoke.webp" time=800]
-[auto_chara name="恵" face="serious"]
+
 「私、そのすぐ近所に住んでて……[l]
 永山君、変装してたでしょ？」[p]
 
