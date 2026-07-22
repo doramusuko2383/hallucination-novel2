@@ -12,7 +12,7 @@
 [chapter_title number="第七章" title="未来"]
 [font speed=50]
 [playse storage=se/thunder.ogg volume=100]
-[wait time=500]
+[wait time=2000]
 [bg storage="bg_takumiroom_night.webp" time=800]
 
 [playse storage=se/smartphone_vibrate.ogg volume=100]
@@ -29,6 +29,7 @@
 拓海はバッグに園芸バサミを放り込んだ。[p]
 
 [playse storage=se/smartphone_vibrate.ogg volume=100]
+[wait time=1000]
 
 今度は着信。[p]
 
@@ -36,9 +37,7 @@
 
 「……」[p]
 
-耳に届くのは［l］
-
-食器の音。[p]
+耳に届くのは、食器の音。[p]
 
 水道の音。[p]
 
@@ -47,12 +46,12 @@
 「……」[p]
 
 そういうことか。[p]
-
+[playse storage=se/run.ogg volume=100]
 [wait time=1000]
 [bg storage="ch7_hurrying_bicycle.webp" time=700]
 [wait time=500]
 [playbgm storage="chase.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/run.ogg volume=100]
+
 間に合え――。[p]
 自転車で急げば5分程度の距離だ。[p]
 車を追い越す勢いでペダルを漕いだ。[p]
@@ -89,15 +88,16 @@
 
 人目を気にしている場合ではない。[p]
 そのまま階段を駆け上がる。[p]
-
+[playse storage=se/run.ogg volume=100]
+[wait time=1000]
 五階の家の玄関に着くと、拓海はドアノブに手をかけた。[p]
 
-[bg storage="black.png" time=80]
+[bg storage="black.png" time=0]
 [wait time=80]
 [playse storage=se/door_open_suddenly.ogg volume=100]
 [bg storage="white.png" time=0]
-[wait time=80]
-[bg storage="bg_megumi_living_night.webp" time=0]
+[wait time=1000]
+[bg storage="bg_megumi_living_night.webp" time=1000]
 
 拓海はドアを勢いよく開けた。[p]
 
