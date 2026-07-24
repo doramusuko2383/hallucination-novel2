@@ -835,13 +835,24 @@
 
         menu.doSave = function (num, cb) {
             var that = this;
-            return that.__hl_original_doSave.call(that, num, function (data) {
+            var save_obj = normalizeSaveData(that);
+
+            function persist(data) {
+                data.save_date = that.getDateStr();
                 decorateSnap(that, data);
-                var save_obj = normalizeSaveData(that);
                 save_obj.data[num] = data;
                 $.setStorage(that.kag.config.projectID + "_tyrano_data", save_obj, that.kag.config.configSave);
+                that.kag.trigger("storage-save");
                 if (cb) cb(data);
-            });
+            }
+
+            if (that.snap === null) {
+                return that.snapSave(that.kag.stat.current_save_str, function () {
+                    persist(that.snap);
+                });
+            }
+
+            persist(that.snap);
         };
 
         menu.doSetAutoSave = function () {
