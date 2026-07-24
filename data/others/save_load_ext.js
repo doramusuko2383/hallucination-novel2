@@ -126,6 +126,24 @@
         })[0];
     }
 
+    function hasContinuableData(menu) {
+        if (!menu) return false;
+        return !!(getLastPlayedData(menu) || latest(getAutoSaveData(menu).concat(menu.getSaveData().data)));
+    }
+
+    function showNoContinueNotice() {
+        var message = "まだ続きから再開できるデータがありません。\nNEW GAMEから物語を始めてください。";
+        if ($.inform) {
+            $.inform(message);
+            return;
+        }
+        if ($.alert) {
+            $.alert(message);
+            return;
+        }
+        if (window.console) console.info(message);
+    }
+
     function storeCurrentPositionAsLastPlayed(menu, options) {
         options = options || {};
         if (!menu || !menu.kag || !menu.snapSave) return;
@@ -1014,6 +1032,14 @@
             return this.__hl_original_loadGame.call(this, num);
         };
 
+        menu.hasContinuableData = function () {
+            return hasContinuableData(this);
+        };
+
+        window.__hlHasContinuableData = function () {
+            return !!(TYRANO && TYRANO.kag && TYRANO.kag.menu && TYRANO.kag.menu.hasContinuableData());
+        };
+
         menu.loadLatestSave = function () {
             var lastPlayed = getLastPlayedData(this);
             if (lastPlayed) {
@@ -1135,7 +1161,16 @@
                 TYRANO.kag.tag.autosave.start.call(this, pm);
             }
         };
-        TYRANO.kag.tag.continue_latest = { pm: {}, start: function () { if (TYRANO.kag.menu.loadLatestSave() === false) TYRANO.kag.ftag.nextOrder(); } };
+        TYRANO.kag.tag.continue_latest = {
+            vital: [],
+            pm: { notify: "true" },
+            start: function (pm) {
+                if (TYRANO.kag.menu.loadLatestSave() === false) {
+                    if (!pm || pm.notify !== "false") showNoContinueNotice();
+                    TYRANO.kag.ftag.nextOrder();
+                }
+            }
+        };
         if (TYRANO.kag.ftag && TYRANO.kag.ftag.master_tag) {
             ["scene_title", "autosave_scene", "continue_latest"].forEach(function (tag_name) {
                 TYRANO.kag.ftag.master_tag[tag_name] = $.extend(true, {}, TYRANO.kag.tag[tag_name]);
