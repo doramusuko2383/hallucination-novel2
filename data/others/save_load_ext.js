@@ -162,9 +162,16 @@
 
 
 
-    function showSaveBusyOverlay(message) {
+    function getSaveBusyOverlayParent() {
         var layer_menu = window.TYRANO && TYRANO.kag && TYRANO.kag.layer ? TYRANO.kag.layer.getMenuLayer() : null;
-        var $parent = layer_menu && layer_menu.length ? layer_menu : $("body");
+        if (layer_menu && layer_menu.length && layer_menu.is(":visible")) return layer_menu;
+        var $game_root = $("#tyrano_base");
+        if ($game_root.length && $game_root.is(":visible")) return $game_root;
+        return $("body");
+    }
+
+    function showSaveBusyOverlay(message) {
+        var $parent = getSaveBusyOverlayParent();
         var $overlay = $parent.find(".hl_save_busy_overlay");
         if (!$overlay.length) {
             $overlay = $('<div class="hl_save_busy_overlay" role="status" aria-live="polite"><div class="hl_save_busy_panel"><span class="hl_save_busy_spinner"></span><span class="hl_save_busy_message"></span></div></div>');
@@ -959,10 +966,19 @@
 
         menu.setQuickSave = function () {
             hideChoiceBackdrop(true);
+            var that = this;
+            var saveTitle = that.kag.stat.current_save_str;
             var $overlay = showSaveBusyOverlay("クイックセーブ中");
-            var result = this.__hl_original_setQuickSave.apply(this, arguments);
-            setTimeout(function () { hideSaveBusyOverlay($overlay); }, 450);
-            return result;
+
+            return that.snapSave(saveTitle, function () {
+                var data = that.snap;
+                data.save_date = that.getDateStr();
+                decorateSnap(that, data);
+                $.setStorage(that.kag.config.projectID + "_tyrano_quick_save", data, that.kag.config.configSave);
+                that.kag.trigger("storage-quicksave");
+                hideSaveBusyOverlay($overlay);
+                that.kag.layer.getMenuLayer().hide();
+            });
         };
 
         menu.displayLog = function () {
