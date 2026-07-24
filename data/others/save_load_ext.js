@@ -74,6 +74,10 @@
         return menu.kag.config.projectID + "_tyrano_auto_save_list";
     }
 
+    function lastPlayedStorageKey(menu) {
+        return menu.kag.config.projectID + "_tyrano_last_played";
+    }
+
     function getAutoSaveData(menu) {
         var raw = $.getStorage(autoStorageKey(menu), menu.kag.config.configSave);
         var list = raw ? JSON.parse(raw) : [];
@@ -92,6 +96,24 @@
         menu.kag.trigger("storage-autosave");
     }
 
+    function getLastPlayedData(menu) {
+        var raw = $.getStorage(lastPlayedStorageKey(menu), menu.kag.config.configSave);
+        if (!raw) return null;
+        var data = typeof raw === "string" ? JSON.parse(raw) : raw;
+        if (!data || !data.save_date) return null;
+        data.is_last_played = true;
+        return buildSaveDisplay(data);
+    }
+
+    function setLastPlayedData(menu, data) {
+        if (!data || !data.save_date) return;
+        var copy = $.extend(true, {}, data);
+        delete copy.num;
+        copy.is_last_played = true;
+        decorateSnap(menu, copy);
+        $.setStorage(lastPlayedStorageKey(menu), copy, menu.kag.config.configSave);
+    }
+
     function decorateSnap(menu, data) {
         var f = (data.stat && data.stat.f) || menu.kag.stat.f || {};
         data.scene_title = safeText(f.save_scene_title);
@@ -102,6 +124,22 @@
         return list.filter(function (item) { return item && item.save_date; }).sort(function (a, b) {
             return (b.save_date || "").localeCompare(a.save_date || "");
         })[0];
+    }
+
+    function storeCurrentPositionAsLastPlayed(menu, options) {
+        options = options || {};
+        if (!menu || !menu.kag || !menu.snapSave) return;
+        if (menu.__hl_last_played_saving) return;
+        var kag = menu.kag;
+        if (!kag.stat || kag.stat.current_scenario === "first.ks" || kag.stat.current_scenario === "title.ks" || kag.stat.current_scenario === "title_config.ks") return;
+        menu.__hl_last_played_saving = true;
+        menu.snapSave(kag.stat.current_save_str || "CONTINUE", function () {
+            var data = $.extend(true, {}, menu.snap);
+            data.save_date = menu.getDateStr();
+            setLastPlayedData(menu, data);
+            menu.__hl_last_played_saving = false;
+            if (typeof options.onComplete === "function") options.onComplete(data);
+        }, "false");
     }
 
 
@@ -211,9 +249,35 @@
     }
 
 
-
-
-
+    function installLastPlayedSnapshotEvents(menu) {
+        if (menu.__hl_last_played_events_installed) return;
+        menu.__hl_last_played_events_installed = true;
+        var snapshotTimer = null;
+        function scheduleSnapshot(delay) {
+            window.clearTimeout(snapshotTimer);
+            snapshotTimer = window.setTimeout(function () {
+                storeCurrentPositionAsLastPlayed(menu);
+            }, delay);
+        }
+        $(window)
+            .off("pagehide.hlLastPlayed beforeunload.hlLastPlayed")
+            .on("pagehide.hlLastPlayed beforeunload.hlLastPlayed", function () {
+                storeCurrentPositionAsLastPlayed(menu);
+            });
+        $(document)
+            .off("visibilitychange.hlLastPlayed")
+            .on("visibilitychange.hlLastPlayed", function () {
+                if (document.visibilityState === "hidden") storeCurrentPositionAsLastPlayed(menu);
+            });
+        if (menu.kag.ftag && !menu.kag.ftag.__hl_original_nextOrder_for_last_played) {
+            menu.kag.ftag.__hl_original_nextOrder_for_last_played = menu.kag.ftag.nextOrder;
+            menu.kag.ftag.nextOrder = function () {
+                var result = menu.kag.ftag.__hl_original_nextOrder_for_last_played.apply(this, arguments);
+                scheduleSnapshot(3000);
+                return result;
+            };
+        }
+    }
 
 
     function installConfigOverlay() {
@@ -842,6 +906,7 @@
                 decorateSnap(that, data);
                 save_obj.data[num] = data;
                 $.setStorage(that.kag.config.projectID + "_tyrano_data", save_obj, that.kag.config.configSave);
+                setLastPlayedData(that, data);
                 that.kag.trigger("storage-save");
                 if (cb) cb(data);
             }
@@ -863,6 +928,7 @@
             list.unshift($.extend(true, {}, data));
             setAutoSaveData(this, list);
             $.setStorage(this.kag.config.projectID + "_tyrano_auto_save", data, this.kag.config.configSave);
+            setLastPlayedData(this, data);
             this.kag.layer.getMenuLayer().hide();
         };
 
@@ -874,6 +940,7 @@
 
         menu.loadGameData = function (data, options) {
             resetRuntimeBeforeSceneSwitch();
+            if (data && data.save_date) setLastPlayedData(this, data);
             return this.__hl_original_loadGameData.call(this, data, options);
         };
 
@@ -889,14 +956,14 @@
         };
 
         menu.loadLatestSave = function () {
-            var auto = latest(getAutoSaveData(this));
-            if (auto) {
-                this.loadGameData($.extend(true, {}, auto), { auto_next: "yes" });
+            var lastPlayed = getLastPlayedData(this);
+            if (lastPlayed) {
+                this.loadGameData($.extend(true, {}, lastPlayed), { auto_next: "yes" });
                 return true;
             }
-            var manual = latest(this.getSaveData().data);
-            if (manual) {
-                this.loadGameData($.extend(true, {}, manual), { auto_next: "yes" });
+            var newest = latest(getAutoSaveData(this).concat(this.getSaveData().data));
+            if (newest) {
+                this.loadGameData($.extend(true, {}, newest), { auto_next: "yes" });
                 return true;
             }
             return false;
@@ -987,6 +1054,7 @@
             });
         };
 
+        installLastPlayedSnapshotEvents(menu);
         installConfigOverlay();
         installChoiceTags();
         installEndingTag();
