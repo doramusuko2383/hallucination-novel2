@@ -12,8 +12,8 @@
 ; 直前のイベントCG用表示（例: 病院シーンの width=520）に引きずられると、
 ; 以降の auto_chara が縮小されて全身表示になってしまうため、
 ; 通常の会話立ち絵はキャラごとのデフォルト幅・位置へ戻す。
-; width は chara_define.ks の scale を元画像幅に掛けて算出した値。
-[eval exp="tf.default_width_map = {'恵':430,'拓海':486,'龍也':486,'綾香':440,'綾香の母':440,'翔太':486,'響子':440,'高田':486}"]
+; width は従来の 1024 を最大サイズにして、chara_define.ks の scale 比率で算出した値。
+[eval exp="tf.default_width_map = {'恵':905,'拓海':1024,'龍也':1024,'綾香':927,'綾香の母':927,'翔太':1024,'響子':927,'高田':1024}"]
 [eval exp="tf.default_top_map = {'恵':156,'拓海':128,'龍也':118,'綾香':136,'綾香の母':136,'翔太':123,'響子':131,'高田':138}"]
 [eval exp="tf.width = (typeof mp.width !== 'undefined' && mp.width != '') ? mp.width : (typeof tf.default_width_map[tf.name] !== 'undefined' ? tf.default_width_map[tf.name] : 1024)"]
 [eval exp="tf.top = (typeof mp.top !== 'undefined' && mp.top != '') ? mp.top : (typeof tf.default_top_map[tf.name] !== 'undefined' ? tf.default_top_map[tf.name] : 0)"]
