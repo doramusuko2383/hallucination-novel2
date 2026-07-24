@@ -284,18 +284,25 @@
         }).last();
     }
 
+    var canContinue = typeof window.__hlHasContinuableData === "function" && window.__hlHasContinuableData();
+
     ["NEW GAME", "CONTINUE", "LOAD"].forEach(function (text, index) {
         var button = findTitleButton(text);
         button.addClass(index === 0 ? "title-choice title-start title-primary" : "title-choice");
         button.removeClass("black");
+        if (text === "CONTINUE" && !canContinue) {
+            button.addClass("title-choice-disabled");
+            button.attr("aria-disabled", "true");
+            button.attr("title", "セーブデータがありません");
+        }
         important(button, $.extend({}, baseTextStyle, {
-            "color": "rgba(248, 250, 255, 0.94)",
+            "color": text === "CONTINUE" && !canContinue ? "rgba(248, 250, 255, 0.34)" : "rgba(248, 250, 255, 0.94)",
             "font-size": "18px",
             "font-weight": "700",
             "letter-spacing": "0.34em",
-            "text-shadow": "0 0 7px rgba(0,0,0,0.9), 0 0 14px rgba(22,32,54,0.8)",
+            "text-shadow": text === "CONTINUE" && !canContinue ? "0 0 7px rgba(0,0,0,0.75)" : "0 0 7px rgba(0,0,0,0.9), 0 0 14px rgba(22,32,54,0.8)",
             "z-index": "99999999",
-            "pointer-events": "auto"
+            "pointer-events": text === "CONTINUE" && !canContinue ? "none" : "auto"
         }));
     });
 

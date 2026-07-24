@@ -126,6 +126,24 @@
         })[0];
     }
 
+    function hasContinuableData(menu) {
+        if (!menu) return false;
+        return !!(getLastPlayedData(menu) || latest(getAutoSaveData(menu).concat(menu.getSaveData().data)));
+    }
+
+    function showNoContinueNotice() {
+        var message = "まだ続きから再開できるデータがありません。\nNEW GAMEから物語を始めてください。";
+        if ($.inform) {
+            $.inform(message);
+            return;
+        }
+        if ($.alert) {
+            $.alert(message);
+            return;
+        }
+        if (window.console) console.info(message);
+    }
+
     function storeCurrentPositionAsLastPlayed(menu, options) {
         options = options || {};
         if (!menu || !menu.kag || !menu.snapSave) return;
@@ -1061,6 +1079,14 @@
                 return;
             }
             return this.__hl_original_loadGame.call(this, num);
+        };
+
+        menu.hasContinuableData = function () {
+            return hasContinuableData(this);
+        };
+
+        window.__hlHasContinuableData = function () {
+            return !!(TYRANO && TYRANO.kag && TYRANO.kag.menu && TYRANO.kag.menu.hasContinuableData());
         };
 
         menu.loadLatestSave = function () {
