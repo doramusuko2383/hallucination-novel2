@@ -143,6 +143,28 @@
     }
 
 
+
+    function showSaveBusyOverlay(message) {
+        var layer_menu = window.TYRANO && TYRANO.kag && TYRANO.kag.layer ? TYRANO.kag.layer.getMenuLayer() : null;
+        var $parent = layer_menu && layer_menu.length ? layer_menu : $("body");
+        var $overlay = $parent.find(".hl_save_busy_overlay");
+        if (!$overlay.length) {
+            $overlay = $('<div class="hl_save_busy_overlay" role="status" aria-live="polite"><div class="hl_save_busy_panel"><span class="hl_save_busy_spinner"></span><span class="hl_save_busy_message"></span></div></div>');
+            $parent.append($overlay);
+        }
+        $overlay.find(".hl_save_busy_message").text(message || "セーブ中");
+        $overlay.addClass("is-visible");
+        return $overlay;
+    }
+
+    function hideSaveBusyOverlay($overlay) {
+        if (!$overlay || !$overlay.length) return;
+        $overlay.removeClass("is-visible");
+        setTimeout(function () {
+            if (!$overlay.hasClass("is-visible")) $overlay.remove();
+        }, 220);
+    }
+
     function playClickSound() {
         try {
             if (window.Howl) {
@@ -562,11 +584,11 @@
 
     function installChoiceTags() {
         var kag = TYRANO.kag;
-        if (kag.__hl_choice_tags_installed) return;
-        kag.__hl_choice_tags_installed = true;
-        installChoiceCleanupGuards();
+        if (!kag.__hl_choice_tag_objects_installed) {
+            kag.__hl_choice_tag_objects_installed = true;
+            installChoiceCleanupGuards();
 
-        kag.tag.choice_start = {
+            kag.tag.choice_start = {
             vital: [],
             pm: {
                 count: "",
@@ -664,8 +686,10 @@
                 if (state.group && choiceButton.length) state.group.append(choiceButton);
             }
         };
+        }
 
-        if (kag.ftag && kag.ftag.master_tag) {
+        if (kag.ftag && kag.ftag.master_tag && !kag.__hl_choice_master_tags_installed) {
+            kag.__hl_choice_master_tags_installed = true;
             ["choice_start", "choice"].forEach(function (tagName) {
                 kag.ftag.master_tag[tagName] = $.extend(true, {}, kag.tag[tagName]);
                 kag.ftag.master_tag[tagName].kag = kag;
@@ -837,13 +861,59 @@
     }
 
 
+
+    function installScenarioTags() {
+        var kag = window.TYRANO && TYRANO.kag;
+        if (!kag) return;
+
+        if (!kag.__hl_scenario_tag_objects_installed) {
+            kag.__hl_scenario_tag_objects_installed = true;
+            kag.tag.scene_title = {
+                vital: [],
+                pm: { title: "", next: "true" },
+                start: function (pm) {
+                    kag.stat.f.save_scene_title = safeText(pm.title);
+                    if (pm.next !== "false") kag.ftag.nextOrder();
+                }
+            };
+            kag.tag.autosave_scene = {
+                vital: [],
+                pm: { title: "" },
+                start: function (pm) {
+                    if (pm.title) kag.stat.f.save_scene_title = safeText(pm.title);
+                    kag.tag.autosave.start.call(this, pm);
+                }
+            };
+            kag.tag.continue_latest = { pm: {}, start: function () {
+                if (kag.menu && kag.menu.loadLatestSave && kag.menu.loadLatestSave() === false) kag.ftag.nextOrder();
+            } };
+        }
+        if (kag.ftag && kag.ftag.master_tag && !kag.__hl_scenario_master_tags_installed) {
+            kag.__hl_scenario_master_tags_installed = true;
+            ["scene_title", "autosave_scene", "continue_latest"].forEach(function (tag_name) {
+                kag.ftag.master_tag[tag_name] = $.extend(true, {}, kag.tag[tag_name]);
+                kag.ftag.master_tag[tag_name].kag = kag;
+            });
+        }
+    }
+
     function install() {
-        if (!window.TYRANO || !TYRANO.kag || !TYRANO.kag.menu) {
+        if (!window.TYRANO || !TYRANO.kag) {
             setTimeout(install, 50);
             return;
         }
 
         installClickSoundEvents();
+        installConfigOverlay();
+        installChoiceTags();
+        installEndingTag();
+        installScenarioTags();
+
+        if (!TYRANO.kag.menu) {
+            setTimeout(install, 50);
+            return;
+        }
+
         var menu = TYRANO.kag.menu;
         if (menu.__hl_save_load_ext_installed) return;
         menu.__hl_save_load_ext_installed = true;
@@ -871,7 +941,10 @@
 
         menu.setQuickSave = function () {
             hideChoiceBackdrop(true);
-            return this.__hl_original_setQuickSave.apply(this, arguments);
+            var $overlay = showSaveBusyOverlay("クイックセーブ中");
+            var result = this.__hl_original_setQuickSave.apply(this, arguments);
+            setTimeout(function () { hideSaveBusyOverlay($overlay); }, 450);
+            return result;
         };
 
         menu.displayLog = function () {
@@ -913,6 +986,11 @@
         menu.doSave = function (num, cb) {
             var that = this;
             var save_obj = normalizeSaveData(that);
+            var j_busy_overlay = showSaveBusyOverlay("セーブ中");
+
+            function finishBusy() {
+                hideSaveBusyOverlay(j_busy_overlay);
+            }
 
             function persist(data) {
                 data.save_date = that.getDateStr();
@@ -921,6 +999,7 @@
                 $.setStorage(that.kag.config.projectID + "_tyrano_data", save_obj, that.kag.config.configSave);
                 setLastPlayedData(that, data);
                 that.kag.trigger("storage-save");
+                finishBusy();
                 if (cb) cb(data);
             }
 
@@ -1068,34 +1147,7 @@
         };
 
         installLastPlayedSnapshotEvents(menu);
-        installConfigOverlay();
-        installChoiceTags();
-        installEndingTag();
         TYRANO.kag.config.configSaveSlotNum = MANUAL_SLOT_COUNT;
-
-        TYRANO.kag.tag.scene_title = {
-            vital: [],
-            pm: { title: "", next: "true" },
-            start: function (pm) {
-                TYRANO.kag.stat.f.save_scene_title = safeText(pm.title);
-                if (pm.next !== "false") TYRANO.kag.ftag.nextOrder();
-            }
-        };
-        TYRANO.kag.tag.autosave_scene = {
-            vital: [],
-            pm: { title: "" },
-            start: function (pm) {
-                if (pm.title) TYRANO.kag.stat.f.save_scene_title = safeText(pm.title);
-                TYRANO.kag.tag.autosave.start.call(this, pm);
-            }
-        };
-        TYRANO.kag.tag.continue_latest = { pm: {}, start: function () { if (TYRANO.kag.menu.loadLatestSave() === false) TYRANO.kag.ftag.nextOrder(); } };
-        if (TYRANO.kag.ftag && TYRANO.kag.ftag.master_tag) {
-            ["scene_title", "autosave_scene", "continue_latest"].forEach(function (tag_name) {
-                TYRANO.kag.ftag.master_tag[tag_name] = $.extend(true, {}, TYRANO.kag.tag[tag_name]);
-                TYRANO.kag.ftag.master_tag[tag_name].kag = TYRANO.kag;
-            });
-        }
     }
 
     install();
