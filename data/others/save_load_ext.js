@@ -162,16 +162,6 @@
 
 
 
-    function setSaveBusy($target, busy) {
-        if (!$target || !$target.length) return;
-        $target.toggleClass("is-saving", !!busy);
-        $target.attr("aria-busy", busy ? "true" : "false");
-        $target.find(".hl_save_busy_label").remove();
-        if (busy) {
-            $target.append('<span class="hl_save_busy_label" aria-hidden="true"><span class="hl_save_busy_spinner"></span><span class="hl_save_busy_text">SAVING</span></span>');
-        }
-    }
-
     function showSaveBusyOverlay(message) {
         var layer_menu = window.TYRANO && TYRANO.kag && TYRANO.kag.layer ? TYRANO.kag.layer.getMenuLayer() : null;
         var $parent = layer_menu && layer_menu.length ? layer_menu : $("body");
@@ -1014,16 +1004,11 @@
         menu.doSave = function (num, cb) {
             var that = this;
             var save_obj = normalizeSaveData(that);
-            var layer_menu = that.kag.layer.getMenuLayer();
-            var j_busy_slot = layer_menu.find("[data-num='" + num + "']");
             var j_busy_overlay = showSaveBusyOverlay("セーブ中");
 
             function finishBusy() {
-                setSaveBusy(j_busy_slot, false);
                 hideSaveBusyOverlay(j_busy_overlay);
             }
-
-            setSaveBusy(j_busy_slot, true);
 
             function persist(data) {
                 data.save_date = that.getDateStr();

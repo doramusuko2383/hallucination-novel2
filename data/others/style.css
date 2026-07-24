@@ -1696,36 +1696,6 @@ body.hl-choice-active .button_menu {
 /* =========================
    SAVE progress indicator
 ========================= */
-.save_display_area {
-    position: relative !important;
-}
-
-.save_display_area.is-saving {
-    pointer-events: none !important;
-    border-color: rgba(166, 235, 255, 0.58) !important;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(20, 42, 58, 0.62)) !important;
-    box-shadow: 0 0 0 1px rgba(140, 225, 255, 0.16), inset 0 0 24px rgba(74, 188, 255, 0.12) !important;
-}
-
-.hl_save_busy_label {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 14px;
-    border: 1px solid rgba(175, 210, 232, 0.34);
-    border-radius: 999px;
-    background: rgba(5, 10, 16, 0.82);
-    color: rgba(244, 248, 251, 0.9);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    line-height: 1;
-    text-shadow: 0 0 10px rgba(116, 214, 255, 0.72);
-    transform: translateY(-50%);
-}
 
 .hl_save_busy_overlay {
     position: absolute;
