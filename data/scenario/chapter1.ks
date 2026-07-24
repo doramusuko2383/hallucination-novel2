@@ -556,11 +556,11 @@
 [playse storage=se/school_chime.mp3]
 [wait time=2000]
 
-「お前、なに学校休んでんだよっ！」[l]
+「お前、なに学校休んでんだよっ！」[p]
 [playse storage=se/punch3.ogg volume=50]
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
 [playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
-[wait time=500]
+[wait time=1000]
 
 三日ぶりに姿を見せた拓海を見るなり、[l]
 龍也は怒鳴り声を上げた。[p]
