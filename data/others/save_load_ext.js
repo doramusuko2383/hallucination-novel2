@@ -143,6 +143,38 @@
     }
 
 
+
+    function setSaveBusy($target, busy) {
+        if (!$target || !$target.length) return;
+        $target.toggleClass("is-saving", !!busy);
+        $target.attr("aria-busy", busy ? "true" : "false");
+        $target.find(".hl_save_busy_label").remove();
+        if (busy) {
+            $target.append('<span class="hl_save_busy_label" aria-hidden="true"><span class="hl_save_busy_spinner"></span><span class="hl_save_busy_text">SAVING</span></span>');
+        }
+    }
+
+    function showSaveBusyOverlay(message) {
+        var layer_menu = window.TYRANO && TYRANO.kag && TYRANO.kag.layer ? TYRANO.kag.layer.getMenuLayer() : null;
+        var $parent = layer_menu && layer_menu.length ? layer_menu : $("body");
+        var $overlay = $parent.find(".hl_save_busy_overlay");
+        if (!$overlay.length) {
+            $overlay = $('<div class="hl_save_busy_overlay" role="status" aria-live="polite"><div class="hl_save_busy_panel"><span class="hl_save_busy_spinner"></span><span class="hl_save_busy_message"></span></div></div>');
+            $parent.append($overlay);
+        }
+        $overlay.find(".hl_save_busy_message").text(message || "セーブ中");
+        $overlay.addClass("is-visible");
+        return $overlay;
+    }
+
+    function hideSaveBusyOverlay($overlay) {
+        if (!$overlay || !$overlay.length) return;
+        $overlay.removeClass("is-visible");
+        setTimeout(function () {
+            if (!$overlay.hasClass("is-visible")) $overlay.remove();
+        }, 220);
+    }
+
     function playClickSound() {
         try {
             if (window.Howl) {
@@ -871,7 +903,10 @@
 
         menu.setQuickSave = function () {
             hideChoiceBackdrop(true);
-            return this.__hl_original_setQuickSave.apply(this, arguments);
+            var $overlay = showSaveBusyOverlay("クイックセーブ中");
+            var result = this.__hl_original_setQuickSave.apply(this, arguments);
+            setTimeout(function () { hideSaveBusyOverlay($overlay); }, 450);
+            return result;
         };
 
         menu.displayLog = function () {
@@ -913,6 +948,16 @@
         menu.doSave = function (num, cb) {
             var that = this;
             var save_obj = normalizeSaveData(that);
+            var layer_menu = that.kag.layer.getMenuLayer();
+            var j_busy_slot = layer_menu.find("[data-num='" + num + "']");
+            var j_busy_overlay = showSaveBusyOverlay("セーブ中");
+
+            function finishBusy() {
+                setSaveBusy(j_busy_slot, false);
+                hideSaveBusyOverlay(j_busy_overlay);
+            }
+
+            setSaveBusy(j_busy_slot, true);
 
             function persist(data) {
                 data.save_date = that.getDateStr();
@@ -921,6 +966,7 @@
                 $.setStorage(that.kag.config.projectID + "_tyrano_data", save_obj, that.kag.config.configSave);
                 setLastPlayedData(that, data);
                 that.kag.trigger("storage-save");
+                finishBusy();
                 if (cb) cb(data);
             }
 
