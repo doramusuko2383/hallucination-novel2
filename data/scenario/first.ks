@@ -615,39 +615,39 @@ $(".quiet_system_button").remove();
 ; ===== 立ち絵サイズ確認（開発中のみ） =====
 ; auto_chara と同じ幅・上端位置で、各キャラの標準立ち絵を中央に表示する。
 *debug_chara_viewer
-[eval exp="tf.debug_chara_name = '恵'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 905; tf.debug_chara_top = 38"]
+[eval exp="tf.debug_chara_name = '恵'; tf.debug_chara_face = 'normal'"]
 @jump target="*debug_chara_viewer_show"
 
 *debug_chara_megumi
-[eval exp="tf.debug_chara_name = '恵'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 905; tf.debug_chara_top = 38"]
+[eval exp="tf.debug_chara_name = '恵'; tf.debug_chara_face = 'normal'"]
 @jump target="*debug_chara_viewer_show"
 
 *debug_chara_takumi
-[eval exp="tf.debug_chara_name = '拓海'; tf.debug_chara_face = 'level1_normal'; tf.debug_chara_width = 970; tf.debug_chara_top = 18"]
+[eval exp="tf.debug_chara_name = '拓海'; tf.debug_chara_face = 'level1_normal'"]
 @jump target="*debug_chara_viewer_show"
 
 *debug_chara_ryuya
-[eval exp="tf.debug_chara_name = '龍也'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 1024; tf.debug_chara_top = 0"]
+[eval exp="tf.debug_chara_name = '龍也'; tf.debug_chara_face = 'normal'"]
 @jump target="*debug_chara_viewer_show"
 
 *debug_chara_ayaka
-[eval exp="tf.debug_chara_name = '綾香'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 890; tf.debug_chara_top = 34"]
+[eval exp="tf.debug_chara_name = '綾香'; tf.debug_chara_face = 'normal'"]
 @jump target="*debug_chara_viewer_show"
 
 *debug_chara_ayaka_mom
-[eval exp="tf.debug_chara_name = '綾香の母'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 927; tf.debug_chara_top = 18"]
+[eval exp="tf.debug_chara_name = '綾香の母'; tf.debug_chara_face = 'normal'"]
 @jump target="*debug_chara_viewer_show"
 
 *debug_chara_shota
-[eval exp="tf.debug_chara_name = '翔太'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 1024; tf.debug_chara_top = 5"]
+[eval exp="tf.debug_chara_name = '翔太'; tf.debug_chara_face = 'normal'"]
 @jump target="*debug_chara_viewer_show"
 
 *debug_chara_kyoko
-[eval exp="tf.debug_chara_name = '響子'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 927; tf.debug_chara_top = 13"]
+[eval exp="tf.debug_chara_name = '響子'; tf.debug_chara_face = 'normal'"]
 @jump target="*debug_chara_viewer_show"
 
 *debug_chara_takada
-[eval exp="tf.debug_chara_name = '高田'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 1024; tf.debug_chara_top = 20"]
+[eval exp="tf.debug_chara_name = '高田'; tf.debug_chara_face = 'normal'"]
 @jump target="*debug_chara_viewer_show"
 
 *debug_chara_viewer_show
@@ -655,8 +655,8 @@ $(".quiet_system_button").remove();
 [clearfix]
 [chara_hide_all time=0 wait=true]
 [bg storage="black.png" time=0 wait=false]
-[eval exp="tf.debug_chara_left = Math.round((1280 - tf.debug_chara_width) / 2); tf.debug_chara_info = tf.debug_chara_name + '　幅 ' + tf.debug_chara_width + 'px / 上端 ' + tf.debug_chara_top + 'px'"]
-[chara_show name=&tf.debug_chara_name face=&tf.debug_chara_face left=&tf.debug_chara_left top=&tf.debug_chara_top width=&tf.debug_chara_width time=0 wait=true]
+[auto_chara name=&tf.debug_chara_name face=&tf.debug_chara_face center="true"]
+[eval exp="tf.debug_chara_info = tf.debug_chara_name + '　幅 ' + tf.width + 'px / 上端 ' + tf.top + 'px'"]
 
 [ptext layer="fix" fix="true" name="debug_chara_title" text="立ち絵サイズ確認" x="0" y="20" width="1280" align="center" size="25" color="0xffffff" edge="0x000000"]
 [ptext layer="fix" fix="true" name="debug_chara_info" text="&tf.debug_chara_info" x="0" y="54" width="1280" align="center" size="17" color="0xeeeeee" edge="0x000000"]

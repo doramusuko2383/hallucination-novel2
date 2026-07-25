@@ -18,6 +18,10 @@
 [eval exp="tf.default_top_map = {'恵':46,'拓海':26,'龍也':0,'綾香':42,'綾香の母':36,'翔太':15,'響子':30,'高田':20}"]
 [eval exp="tf.width = (typeof mp.width !== 'undefined' && mp.width != '') ? mp.width : (typeof tf.default_width_map[tf.name] !== 'undefined' ? tf.default_width_map[tf.name] : 1024)"]
 [eval exp="tf.top = (typeof mp.top !== 'undefined' && mp.top != '') ? mp.top : (typeof tf.default_top_map[tf.name] !== 'undefined' ? tf.default_top_map[tf.name] : 0)"]
+; デバッグのサイズ確認など、標準サイズのまま中央配置したい場合に使用する。
+[if exp="typeof mp.center !== 'undefined' && mp.center == 'true'"]
+[eval exp="tf.left = Math.round((1280 - tf.width) / 2)"]
+[endif]
 
 ; キャラ表示後、明示指定またはデフォルト位置へ移動する
 [if exp="tf.name != ''"]
