@@ -608,8 +608,75 @@ $(".quiet_system_button").remove();
 [glink name="debug_choice_ch5_start" text="Chapter 5" target="*dbg_ch5_start" x="370" y="254" width="250" height="38" size="19"]
 [glink name="debug_choice_ch6_start" text="Chapter 6" target="*dbg_ch6_start" x="660" y="254" width="250" height="38" size="19"]
 [glink name="debug_choice_ch7_start" text="Chapter 7" target="*dbg_ch7_start" x="515" y="306" width="250" height="38" size="19"]
+[glink name="debug_choice_chara_viewer" text="立ち絵サイズ確認" target="*debug_chara_viewer" x="515" y="374" width="250" height="42" size="19" color="0x31506f"]
 
 [s]
+
+; ===== 立ち絵サイズ確認（開発中のみ） =====
+; auto_chara と同じ幅・上端位置で、各キャラの標準立ち絵を中央に表示する。
+*debug_chara_viewer
+[eval exp="tf.debug_chara_name = '恵'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 905; tf.debug_chara_top = 38"]
+@jump target="*debug_chara_viewer_show"
+
+*debug_chara_megumi
+[eval exp="tf.debug_chara_name = '恵'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 905; tf.debug_chara_top = 38"]
+@jump target="*debug_chara_viewer_show"
+
+*debug_chara_takumi
+[eval exp="tf.debug_chara_name = '拓海'; tf.debug_chara_face = 'level1_normal'; tf.debug_chara_width = 970; tf.debug_chara_top = 18"]
+@jump target="*debug_chara_viewer_show"
+
+*debug_chara_ryuya
+[eval exp="tf.debug_chara_name = '龍也'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 1024; tf.debug_chara_top = 0"]
+@jump target="*debug_chara_viewer_show"
+
+*debug_chara_ayaka
+[eval exp="tf.debug_chara_name = '綾香'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 890; tf.debug_chara_top = 34"]
+@jump target="*debug_chara_viewer_show"
+
+*debug_chara_ayaka_mom
+[eval exp="tf.debug_chara_name = '綾香の母'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 927; tf.debug_chara_top = 18"]
+@jump target="*debug_chara_viewer_show"
+
+*debug_chara_shota
+[eval exp="tf.debug_chara_name = '翔太'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 1024; tf.debug_chara_top = 5"]
+@jump target="*debug_chara_viewer_show"
+
+*debug_chara_kyoko
+[eval exp="tf.debug_chara_name = '響子'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 927; tf.debug_chara_top = 13"]
+@jump target="*debug_chara_viewer_show"
+
+*debug_chara_takada
+[eval exp="tf.debug_chara_name = '高田'; tf.debug_chara_face = 'normal'; tf.debug_chara_width = 1024; tf.debug_chara_top = 20"]
+@jump target="*debug_chara_viewer_show"
+
+*debug_chara_viewer_show
+[cm]
+[clearfix]
+[chara_hide_all time=0 wait=true]
+[bg storage="black.png" time=0 wait=false]
+[eval exp="tf.debug_chara_left = Math.round((1280 - tf.debug_chara_width) / 2); tf.debug_chara_info = tf.debug_chara_name + '　幅 ' + tf.debug_chara_width + 'px / 上端 ' + tf.debug_chara_top + 'px'"]
+[chara_show name=&tf.debug_chara_name face=&tf.debug_chara_face left=&tf.debug_chara_left top=&tf.debug_chara_top width=&tf.debug_chara_width time=0 wait=true]
+
+[ptext layer="fix" fix="true" name="debug_chara_title" text="立ち絵サイズ確認" x="0" y="20" width="1280" align="center" size="25" color="0xffffff" edge="0x000000"]
+[ptext layer="fix" fix="true" name="debug_chara_info" text="&tf.debug_chara_info" x="0" y="54" width="1280" align="center" size="17" color="0xeeeeee" edge="0x000000"]
+
+[glink name="debug_chara_megumi" text="恵" target="*debug_chara_megumi" x="120" y="608" width="170" height="38" size="17"]
+[glink name="debug_chara_takumi" text="拓海" target="*debug_chara_takumi" x="310" y="608" width="170" height="38" size="17"]
+[glink name="debug_chara_ryuya" text="龍也" target="*debug_chara_ryuya" x="500" y="608" width="170" height="38" size="17"]
+[glink name="debug_chara_ayaka" text="綾香" target="*debug_chara_ayaka" x="690" y="608" width="170" height="38" size="17"]
+[glink name="debug_chara_ayaka_mom" text="綾香の母" target="*debug_chara_ayaka_mom" x="880" y="608" width="170" height="38" size="17"]
+[glink name="debug_chara_shota" text="翔太" target="*debug_chara_shota" x="215" y="658" width="170" height="38" size="17"]
+[glink name="debug_chara_kyoko" text="響子" target="*debug_chara_kyoko" x="405" y="658" width="170" height="38" size="17"]
+[glink name="debug_chara_takada" text="高田" target="*debug_chara_takada" x="595" y="658" width="170" height="38" size="17"]
+[glink name="debug_chara_back" text="戻る" target="*debug_chara_viewer_back" x="785" y="658" width="170" height="38" size="17" color="0x555555"]
+[s]
+
+*debug_chara_viewer_back
+[cm]
+[clearfix]
+[chara_hide_all time=0 wait=true]
+@jump target="*debug_entry"
 
 ; ===== 章冒頭ジャンプ =====
 ; デバッグメニューの fix/free レイヤーを必ず破棄してから章へ移る。
