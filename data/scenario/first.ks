@@ -49,7 +49,7 @@
     if (!window.__titleLogoGlitchSe) {
         window.__titleLogoGlitchSe = new Howl({
             src: [$.parseStorage("se/short_glitch.ogg", "sound")],
-            volume: 0.08,
+            volume: 0.2,
             preload: true
         });
     }
@@ -199,7 +199,7 @@
 ; タイトル画面の環境音はTyranoScriptのBGM管理に任せる。
 ; Howlerを直接鳴らすとLOAD/CLOSEやタイトル復帰後に残留しやすいため、
 ; [stopbgm] / [fadeoutbgm] で制御できる通常BGMとして再生する。
-[playbgm storage="nature_wind.ogg" loop=true volume=68 fadein=true time=300]
+[playbgm storage="nature_wind.ogg" loop=true volume=90 fadein=true time=300]
 
 [glink name="title-choice title-start title-primary" color="black" size="18" x="520" y="490" width="240" height="32" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="18" x="520" y="540" width="240" height="32" text="CONTINUE" target="*title_continue"]
