@@ -629,7 +629,7 @@
 [auto_chara name="高田" face="normal"]
 「知ってるよ、サッカー部が強いとこだよね。偏差値も高いし、優秀だね」[p]
 
-高田のトーンは終始穏やかだ。[p]
+彼のトーンは終始穏やかだ。[p]
 [auto_chara name="恵" face="private_serious" left=0]
 「いえいえ、必死で勉強しないと皆に付いて行けなくて大変です」[p]
 
