@@ -41,7 +41,6 @@
 拓海の心をゆっくりと押し潰していく。
 [p]
 
-[fadeoutbgm time=3000]
 [wait time=1000]
 
 高校二年になった頃から、
@@ -72,7 +71,7 @@
 逃れられない現実に、[r]
 胸が張り裂けそうだった。
 [p]
-
+[fadeoutbgm time=3000]
 [wait time=1000]
 
 [playse storage=se/school_chime.mp3 volume=100]
@@ -112,7 +111,7 @@
 [wait time=500]
 ; 章タイトルは無音で表示し、屋上の環境音は次の屋上シーン開始時にだけ再生する。
 [chapter_title number="第一章" title="覚醒"]
-[playse storage=se/roof_door.ogg volume=100]
+[playse storage=se/roof_door.ogg volume=30]
 [wait time=500]
 *ch1_rooftop
 
@@ -356,7 +355,7 @@
 屋上のふちにゆっくりと足を降ろした。[p]
 
 [wait time=500]
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=50]
 [bg storage="ch01_sc01_jumping_off.webp" time=600]
 首を下に向けると、色鮮やかに花が咲く正門前の花壇が見える。[p]
 
@@ -466,7 +465,7 @@
 ……。[p]
 
 [resetdelay]
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=50]
 [bg storage="bg_rooftop_day.webp"]
 風が聞こえた。[p]
 
