@@ -74,7 +74,7 @@
 [fadeoutbgm time=3000]
 [wait time=1000]
 
-[playse storage=se/school_chime.mp3 volume=100]
+[playse storage=se/school_chime.mp3 volume=80]
 [wait time=2000]
 
 [wait time=1000]
@@ -120,7 +120,7 @@
 ;------------------------
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
 
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=50]
 [playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 [wait time=2000]
 九月だというのに外は蒸し暑い。
@@ -393,6 +393,7 @@
 ゆっくりと落ちていくように感じる。[p]
 
 [wait time=1000]
+[playse storage=se/drone.ogg loop=true volume=50 fadein=true time=3000]
 
 これが走馬灯か。[p]
 拓海は冷静に受け止めていた。[p]
@@ -451,6 +452,7 @@
 ――そこで、[l]
 衝撃は終わった。[p]
 
+[stopse fadeout=1000]
 [wait time=1800]
 
 世界が、[l]
@@ -521,6 +523,8 @@
 
 誰とすれ違ったのか、どうやって駅まで歩いたのかも思い出せない。[p]
 
+[playse storage=se/room_noise.ogg loop=true volume=100 fadein=true time=2000]
+[wait time=1000]
 次に意識がはっきりした時には、[l]
 自宅のベッドに座り込んでいた。[p]
 
@@ -538,6 +542,7 @@
 
 鏡で顔を見た。[p]
 
+[playse storage=se/heartbeat.ogg volume=50]
 心臓の鼓動を確かめた。[p]
 
 それでも――。[p]
@@ -548,11 +553,13 @@
 
 結局、拓海は二日間学校を休んだ。[p]
 
+[stopse fadeout=1000]
+
 ようやく学校へ行こうと思えるくらいには気持ちが落ち着き、[l]
 三日ぶりに登校した、その日の昼休みだった。[p]
 [wait time=1000]
 *ch1_return
-[playse storage=se/school_chime.mp3 volume=100]
+[playse storage=se/school_chime.mp3 volume=80]
 [wait time=2000]
 
 「お前、なに学校休んでんだよっ！」[p]
@@ -769,7 +776,7 @@
 
 龍也は一瞬で拓海との距離を詰め、その腕を掴んだ。[p]
 
-[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=80 fadein=true time=1500]
 
 [jump target="*caught"]
 
@@ -800,7 +807,7 @@
 
 「何逃げようとしてんだよ……お前」[p]
 
-[playse storage="se/hold_down.ogg" volume=100]
+[playse storage="se/hold_down.ogg" volume=80]
 
 そう言って龍也は、そのまま拓海を後ろから締め技で地面に押さえつけた。[p]
 
@@ -904,6 +911,7 @@
 [wait time=1000]
 拓海は屋上での出来事のあと、あの「幻」についてずっと考えていた。[p]
 まるでわからないことばかりだったが、拓海にはなぜだか、確信を持っていることがあった。[p]
+[playse storage=se/drone.ogg loop=true volume=50 fadein=true time=3000]
 それは、あの「妙に現実味のある幻覚」は誰かによって、[l][r]「見させられている」ものだという感覚があったこと。[p]
 もっと言えば、拓海自身の力によるものではないか。[p]
 うまく言葉では言い表すことができなかったが、昂ぶった感情によって、自分自身の力で「見させられた」ものではないか。[p]
@@ -923,6 +931,7 @@
 これらのことから、拓海はあの「錯覚」は、自分の力で起こしたものではないかと考えた。[p]
 そして、これは意図して引き起こすことができるかもしれないと仮説を立てていた。[p]
 [bg storage="bg_rooftop_day_hallucination.webp" time=300]
+[stopse fadeout=1000]
 [wait time=1000]
 [font color="#CFE8FF"]
 時が止まっている。[l]
@@ -1035,6 +1044,6 @@
 拓海は自分の「異能」についての仮説を証明できたのだった。[p]
 [stopse fadeout=1000]
 [wait time=1000]
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=20]
 [wait time=3000]
 @jump storage="chapter2.ks" target="*chapter2"
