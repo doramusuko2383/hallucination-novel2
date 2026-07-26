@@ -50,7 +50,7 @@
 [wait time=1000]
 [bg storage="ch7_hurrying_bicycle.webp" time=700]
 [wait time=500]
-[playbgm storage="chase.ogg" loop=true volume=35 fadein=true time=1000]
+[playbgm storage="chase.ogg" loop=true volume=100 fadein=true time=1000]
 
 間に合え――。[p]
 自転車で急げば5分程度の距離だ。[p]
@@ -107,7 +107,7 @@
 拓海は靴を脱ぎ捨てて家に上がる。[r]
 恵はどこだ？[p]
 [fadeoutbgm time=4000]
-[playbgm storage="tension_high.ogg" loop=true volume=45 fadein=true time=600]
+[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=600]
 [wait time=500]
 [auto_chara name="拓海" face="private2_shout"]
 「菊池さん！」[p]
@@ -167,7 +167,7 @@
 
 彼はシラを切り通すつもりだ。[p]
 
-[playse storage=se/writer.ogg volume=40]
+[playse storage=se/writer.ogg volume=100]
 [auto_chara name="拓海" face="private2_angry"]
 「響子さんだけじゃなく、菊池さんにも……」[p]
 
@@ -229,7 +229,7 @@
 拓海は怒りのやり場を失っていた。[p]
 徹底的に、やらないといけない。[p]
 
-[playse storage=se/heartbeat.ogg loop=true volume=45 fadein=true time=400]
+[playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=400]
 これも計画通りだ。[r]
 拓海はハサミを持つ手を思いきり振りかぶった――。[p]
 
@@ -242,11 +242,11 @@
 
 拓海は雑巾を固く絞りながら言った。[p]
 
-[playse storage=se/dust_cloth.ogg volume=50]
-[playse storage=se/wipe.ogg volume=50]
+[playse storage=se/dust_cloth.ogg volume=100]
+[playse storage=se/wipe.ogg volume=100]
 
 [bg storage="bg_megumi_room_night.webp" time=700]
-[playse storage=se/room_noise.ogg loop=true volume=20]
+[playse storage=se/room_noise.ogg loop=true volume=100]
 [auto_chara name="恵" face="private_normal"]
 「永山君、手袋した方がいいよ」[p]
 [auto_chara name="拓海" face="private2_normal"]
@@ -414,9 +414,9 @@
 [auto_chara name="拓海" face="private2_smile"]
 「そうだね。お言葉に甘えて」[p]
 [chara_hide_all]
-[playse storage=se/cooking.ogg volume=50]
+[playse storage=se/cooking.ogg volume=100]
 [wait time=3000]
-[playse storage=se/dinner.ogg volume=50]
+[playse storage=se/dinner.ogg volume=100]
 [wait time=3000]
 いつものファミレス以外のところで一緒に食事をしたのは、初めてのことだった。[p]
 目の前では、恵が何かを話している。[p]
@@ -446,7 +446,7 @@
 
 [wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
-[playse storage=se/school_chime.mp3 volume=25]
+[playse storage=se/school_chime.mp3 volume=100]
 
 制服の左胸に付けられた白い花が少し照れくさい。[p]
 でも不思議と嫌な気持ちはしなかった。[p]
@@ -518,12 +518,12 @@
 
 [wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
-[playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true]
 卒業式が終わり、教室に戻ると、どこかそわそわした雰囲気が漂っていた。[p]
 
 最後の担任の話に耳を傾ける生徒たちからは、別れの空気が感じられる。[p]
 そんな中、スマホが震えた。[p]
-[playse storage=se/smartphone_vibrate.ogg volume=50]
+[playse storage=se/smartphone_vibrate.ogg volume=100]
 「このあと屋上に来れるか」[p]
 
 龍也からだった。[p]
@@ -553,7 +553,7 @@
 
 [fadeoutbgm time=3000]
 [bg storage="bg_rooftop_day2.webp" time=900]
-[playse storage=se/wind_rooftop.ogg loop=true volume=20]
+[playse storage=se/wind_rooftop.ogg loop=true volume=100]
 拓海は屋上へと続く階段を一歩一歩上がっていた。[p]
 「もう久しくここを登ってないな」と思いながら、ふと懐かしさが込み上げてくる。[p]
 
@@ -635,7 +635,7 @@
 
 [wait time=2000]
 
-[playse storage=se/wind_rooftop.ogg volume=20]
+[playse storage=se/wind_rooftop.ogg volume=100]
 
 二人とも何も言わなかった。[p]
 
@@ -697,7 +697,7 @@
 [fadeoutbgm time=3000]
 [bg storage="black.png" time=500]
 [bg storage="bg_family_restaurant_night.webp" time=900]
-[playbgm storage="restaurant_ambience.ogg" loop=true volume=15 fadein=true time=1000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=100 fadein=true time=1000]
 
 [playse storage=se/kanpai.ogg volume=100]
 「卒業おめでとう！」[p]
