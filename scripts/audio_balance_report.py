@@ -61,11 +61,14 @@ def resolve_audio(root: Path, usage: Usage) -> Path:
 def measure(path: Path) -> tuple[float | None, float | None]:
     result = subprocess.run(
         ["ffmpeg", "-hide_banner", "-nostats", "-i", str(path), "-af", "volumedetect", "-f", "null", "-"],
-        capture_output=True,
         text=True,
+        encoding="utf-8",
+        errors="replace",
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
         check=False,
     )
-    output = result.stderr + result.stdout
+    output = (result.stderr or "") + (result.stdout or "")
     mean = MEAN_RE.search(output)
     peak = MAX_RE.search(output)
     return (float(mean.group(1)) if mean else None, float(peak.group(1)) if peak else None)
