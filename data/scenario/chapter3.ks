@@ -226,7 +226,7 @@
 
 そう思った時には、もう遅かった。[p]
 
-[auto_chara name="綾香" face="convenience"]
+[auto_chara name="綾香" face="convenience_angry"]
 「……あんた」[p]
 
 綾香の目が、拓海をまっすぐに捉える。[p]
