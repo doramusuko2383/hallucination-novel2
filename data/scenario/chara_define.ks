@@ -76,6 +76,7 @@
 [chara_face name="綾香" face="hospital" storage="chara/ayaka/hospital.webp"]
 [chara_face name="綾香" face="serious" storage="chara/ayaka/serious.webp"]
 [chara_face name="綾香" face="convenience" storage="chara/ayaka/convenience.webp"]
+[chara_face name="綾香" face="convenience_angry" storage="chara/ayaka/convenience_angry.webp"]
 
 [chara_new name="綾香の母" storage="chara/ayaka_mom/normal.webp" scale=0.43 top=18]
 [chara_face name="綾香の母" face="normal" storage="chara/ayaka_mom/normal.webp"]
