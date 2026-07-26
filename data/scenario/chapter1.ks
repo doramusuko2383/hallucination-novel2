@@ -33,7 +33,7 @@
 [font speed=40]
 
 [bg storage="bg_classroom_day_ch1.webp" time=800]
-[playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true]
 教室の窓から見上げる空は、
 重く、禍々しく、
 [p]
@@ -104,7 +104,7 @@
 
 [bg storage="bg_rooftop_door.webp" time=600]
 [wait time=500]
-[playse storage=se/footstep_stairs.ogg volume=30]
+[playse storage=se/footstep_stairs.ogg volume=100]
 [wait time=3000]
 屋上までの暗い階段を上がる。[p]
 [wait time=500]
@@ -112,7 +112,7 @@
 [wait time=500]
 ; 章タイトルは無音で表示し、屋上の環境音は次の屋上シーン開始時にだけ再生する。
 [chapter_title number="第一章" title="覚醒"]
-[playse storage=se/roof_door.ogg volume=30]
+[playse storage=se/roof_door.ogg volume=80]
 [wait time=500]
 *ch1_rooftop
 
@@ -122,7 +122,7 @@
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
 
 [playse storage=se/wind_rooftop.ogg volume=20]
-[playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 [wait time=2000]
 九月だというのに外は蒸し暑い。
 [p]
@@ -139,7 +139,7 @@
 
 [bg storage="ch01_sc01_rooftop_wait.webp" time=600]
 
-[playse storage=se/foot.ogg volume=50]
+[playse storage=se/foot.ogg volume=100]
 
 [wait time=1000]
 「来たか」[p]
@@ -216,11 +216,11 @@
 [auto_chara name="龍也" face="normal" left=50]
 今日の「トレーニング」も一方的なものだった。[p]
 
-[playse storage=se/punch1.ogg volume=30]
+[playse storage=se/punch1.ogg volume=80]
 [wait time=500]
-[playse storage=se/punch2.ogg volume=30]
+[playse storage=se/punch2.ogg volume=80]
 [wait time=500]
-[playse storage=se/punch1.ogg volume=30]
+[playse storage=se/punch1.ogg volume=80]
 [wait time=500]
 [chara_hide_all time=300]
 打ち返すと更にやり返されることが分かってからは、[l]
