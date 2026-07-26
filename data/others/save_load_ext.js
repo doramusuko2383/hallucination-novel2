@@ -404,8 +404,8 @@
             var overlay = $('<div id="hl-config-overlay" class="hl-config-overlay"></div>');
             overlay.html(
                 '<div class="hl-config-backdrop"></div>' +
+                '<button type="button" class="hl-config-close suspense_close">× CLOSE</button>' +
                 '<section class="hl-config-panel" aria-label="CONFIG">' +
-                    '<button type="button" class="hl-config-close">× CLOSE</button>' +
                     '<h1>CONFIG</h1>' +
                     '<div class="hl-config-row" data-kind="bgm"><span>BGM VOLUME</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
                     '<div class="hl-config-row" data-kind="se"><span>SE VOLUME</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
@@ -419,11 +419,11 @@
             if (!$("#hl-config-overlay-style").length) {
                 $("head").append(
                     '<style id="hl-config-overlay-style">' +
-                    '#hl-config-overlay{position:absolute;inset:0;z-index:100000010;pointer-events:auto;font-family:GenMin,serif;color:rgba(238,244,248,.94)}' +
+                    '#hl-config-overlay{position:absolute;inset:0;z-index:2147483647;pointer-events:auto;font-family:GenMin,serif;color:rgba(238,244,248,.94)}' +
                     '#hl-config-overlay .hl-config-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78)}' +
                     '#hl-config-overlay .hl-config-panel{position:absolute;left:250px;top:96px;width:940px;min-height:520px;box-sizing:border-box;padding:36px 54px;border:1px solid rgba(220,235,245,.24);border-radius:8px;background:linear-gradient(180deg,rgba(5,8,13,.96),rgba(0,0,0,.92));box-shadow:0 24px 70px rgba(0,0,0,.55),0 0 30px rgba(120,160,190,.08)}' +
                     '#hl-config-overlay h1{margin:0 0 28px;font-size:24px;letter-spacing:.18em;font-weight:600}' +
-                    '#hl-config-overlay .hl-config-close{position:absolute;right:30px;top:24px;width:112px;height:34px;border:1px solid rgba(220,235,245,.25);border-radius:4px;background:rgba(5,10,16,.35);color:#dde6ec;font-size:12px;letter-spacing:.14em;cursor:pointer}' +
+                    '#hl-config-overlay .hl-config-close{position:absolute;right:34px;top:24px}' +
                     '#hl-config-overlay .hl-config-row{display:grid;grid-template-columns:160px 500px 96px;align-items:center;gap:34px;margin:22px 0;letter-spacing:.12em}' +
                     '#hl-config-overlay .hl-config-row span{font-size:15px}' +
                     '#hl-config-overlay .hl-config-options{display:flex;gap:8px;flex-wrap:wrap;align-items:center}' +
