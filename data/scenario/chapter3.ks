@@ -20,8 +20,8 @@
 
 ; 追加した演出意図: 夜の外気と犯行前の緊張を、夜背景・虫の音・低いBGMで抑えて立ち上げる。
 [bg storage="bg_station_night.webp" time=800]
-[playse storage=se/traindoor.ogg volume=40]
-[playbgm storage="tension_low.ogg" loop=true volume=30 fadein=true time=1200]
+[playse storage=se/traindoor.ogg volume=100]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
 数日後の放課後、拓海は一度家に帰り、夕飯を済ませてから、[r]
 「勉強をしてくる」と告げて外に出た。[p]
 
@@ -44,7 +44,7 @@
 
 [wait time=500]
 [auto_chara name="拓海" face="convenience"]
-[playse storage=se/megane_and_hat.ogg volume=80]
+[playse storage=se/megane_and_hat.ogg volume=100]
 準備してきた深めのバケットハットを被り、サングラスをかける。[p]
 
 マスクまでするのは不自然かもしれない、と一瞬思ったが、[r][l]
@@ -82,7 +82,7 @@
 
 これならバレる心配はなさそうだ。[p]
 [chara_hide_all time=300]
-[playse storage=se/convenience_door.ogg volume=25]
+[playse storage=se/convenience_door.ogg volume=100]
 [wait time=500]
 [bg storage="bg_convenience_inside_night.webp" time=800]
 拓海は店内に入り、商品棚を物色するふりをしながら、[r]
@@ -175,7 +175,7 @@
 
 綾香は無言でバーコードを通し、[r][l]
 男は「どうも」とだけ言って店を出ていった。[p]
-[playse storage=se/convenience_door.ogg volume=15]
+[playse storage=se/convenience_door.ogg volume=100]
 [wait time=500]
 自動ドアの開閉音が遠ざかる。[p]
 [wait time=500]
@@ -195,7 +195,7 @@
 
 ; 追加した演出意図: 実行直前だけ鼓動SEを足し、生活音から内面音へ寄せる。
 [fadeoutbgm time=3000]
-[playse storage=se/heartbeat.ogg loop=true volume=50 fadein=true time=500]
+[playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=500]
 拓海は小さく息を吸い込み、レジに向かった。[p]
 @jump target="*ch3_counter_route"
 
@@ -280,7 +280,7 @@
 
 [auto_chara name="綾香" face="convenience"]
 「承知しました」[p]
-[playse storage=se/in_plastic_bag.ogg volume=50]
+[playse storage=se/in_plastic_bag.ogg volume=100]
 [wait time=500]
 綾香は無機質な声で答え、商品をビニール袋に詰め始めた。[p]
 [wait time=500]
@@ -364,7 +364,7 @@
 ; 追加した演出意図: 場面転換は黒を挟み、事件後の時間経過を淡々と示す。
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="classroom_buzzing.ogg" loop=true volume=30 fadein=true time=800]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true time=800]
 10月に入り、秋の冷たい風が学校の校庭に吹き始めていた。[p]
 
 朝晩は上着が必要なくらい涼しくなり、[r][l]
@@ -462,7 +462,7 @@
 
 胸の奥に不安が広がる。[p]
 
-[playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
 [wait time=500]
 
 綾香の件？[l]
@@ -486,8 +486,8 @@
 *ch3_karaoke
 
 [bg storage="bg_karaoke.webp" time=800]
-[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=500]
 
 [auto_chara name="恵" face="serious"]
 「実は、この前、綾香がバイトするコンビニに永山君が入っていくのを見かけたの」[p]
@@ -537,7 +537,7 @@
 そしたら、綾香が私を見るなり急に泣き出して……」[r][p]
 [stopbgm]
 [stopse]
-[playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
 [auto_chara name="恵" face="pain"]
 [delay speed="90"]
 「店長にレイプされたって言ったのよ」[p]
@@ -565,8 +565,8 @@
 [wait time=1000]
 
 ; 追加した演出意図: 想定外の単語で鼓動を再投入し、音量は控えめにして焦燥だけを出す。
-[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
+[playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=500]
 その言葉に、拓海は顔が青ざめた。[p]
 
 心臓が鼓動を強め、体中に血が駆け巡る。[p]
@@ -625,9 +625,9 @@
 *ch3_megumi_truth_retry
 [cm]
 [bg storage="bg_karaoke.webp" time=0]
-[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
-[playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=500]
+[playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=500]
 [auto_chara name="恵" face="serious"]
 @jump target="*ch3_choice_megumi_truth"
 
@@ -682,10 +682,10 @@
 恵の真剣な視線に、拓海は無言で応じるしかなかった。[p]
 [wait time=1000]
 [fadeoutbgm time=3000]
-[playse storage=se/knock_door.ogg volume=75] 
+[playse storage=se/knock_door.ogg volume=100]
 [wait time=500]
-[playse storage=se/roof_door.ogg volume=75] 
-[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
+[playse storage=se/roof_door.ogg volume=100]
+[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
 その時、部屋のドアがノックされ、[r]
 店員が注文していたアイスコーヒーをテーブルに置いていった。[p]
 
@@ -905,7 +905,7 @@
 
 [auto_chara name="恵" face="sad"]
 「身体の関係を迫られてるの」[p]
-[playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
 [auto_chara name="拓海" face="level2_surprise"]
 拓海は言葉を失った。[p]
 
@@ -958,7 +958,7 @@
 
 「私が小さい頃に亡くなったの。だから、お母さん一人でずっと働いてきたんだ」[p]
 
-[playse storage=se/iced_cofee.ogg volume=75 buf=1]
+[playse storage=se/iced_cofee.ogg volume=100 buf=1]
 
 氷が、カランと小さく鳴った。[p]
 
@@ -1079,8 +1079,8 @@
 *ch3_help_megumi_retry
 [cm]
 [bg storage="bg_karaoke.webp" time=0]
-[playbgm storage="airconditioner.ogg" loop=true volume=35 fadein=true time=1000]
-[playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=500]
 [auto_chara name="恵" face="serious"]
 @jump target="*ch3_choice_help_megumi"
 

@@ -13,13 +13,13 @@
 [font speed=50]
 
 [bg storage="bg_takumiroom_morning.webp" time=800]
-[playse storage=se/teroren.ogg volume=80]
-[playbgm storage="room_noise.ogg" loop=true volume=35 fadein=true time=1000]
+[playse storage=se/teroren.ogg volume=100]
+[playbgm storage="room_noise.ogg" loop=true volume=100 fadein=true time=1000]
 
 「最低、女の敵ね」[p]
 
 昨晩のことをメッセージで知らせると、恵からすぐに返信が来た。[p]
-[playse storage="se/pon.ogg" volume=28]
+[playse storage="se/pon.ogg" volume=100]
 [wait time=180]
 「結婚して子供もいるのに、お母さんに手を出そうとするなんて、なめられたもんだわ」[p]
 続けて、メッセージが届く。[p]
@@ -32,7 +32,7 @@
 「具体的にどうするつもり？」[p]
 
 すぐに返信が届いた。[p]
-[playse storage="se/pon.ogg" volume=28]
+[playse storage="se/pon.ogg" volume=100]
 [wait time=180]
 「例えば、交通事故の夢を見せるとか？」[p]
 
@@ -44,7 +44,7 @@
 
 少しだけ間が空いた。[p]
 [wait time=700]
-[playse storage="se/pon.ogg" volume=28]
+[playse storage="se/pon.ogg" volume=100]
 [wait time=180]
 「……確かにそうだね」[p]
 「でも、お母さんを早く助けたいんだ」[p]
@@ -59,7 +59,7 @@
 既読が付いたあと、しばらく返信がなかった。[p]
 [wait time=900]
 やがて、再びメッセージが届く。[p]
-[playse storage="se/pon.ogg" volume=28]
+[playse storage="se/pon.ogg" volume=100]
 [wait time=180]
 「分かってる」[p]
 「分かってるけど……」[p]
@@ -105,7 +105,7 @@
 既読が付いた。[p]
 しばらくして、最後の返信が届く。[p]
 [wait time=1000]
-[playse storage="se/pon.ogg" volume=22]
+[playse storage="se/pon.ogg" volume=100]
 [wait time=180]
 「うん」[p]
 「ありがとう」[p]
@@ -113,7 +113,7 @@
 拓海はスマホを机に置き、深呼吸をしてからパソコンを開いた。[p]
 「ハルシネーション」と名付けたフォルダをクリックする。[p]
 計画を遂行するために必要な情報と手順を整理し、失敗につながる要素を一つずつ洗い出していく。[p]
-[playse storage=se/keyboard_typing.ogg volume=50]
+[playse storage=se/keyboard_typing.ogg volume=100]
 [wait time=2000]
 焦らず、失敗は許されない。[p]
 画面を見つめながら、拓海は冷静に次のステップを考えた。[p]
@@ -124,14 +124,14 @@
 [bg storage="black.png" time=500]
 [wait time=500]
 [bg storage="bg_station_morning2.webp" time=800]
-[playse storage=se/traindoor.ogg volume=35]
+[playse storage=se/traindoor.ogg volume=100]
 [wait time=1000]
-[playbgm storage="morning_ambient.ogg" loop=true volume=40 fadein=true time=1000]
+[playbgm storage="morning_ambient.ogg" loop=true volume=100 fadein=true time=1000]
 
 [auto_chara name="拓海" face="private_normal"]
 
 [wait time=1000]
-[playse storage=se/ringback_tone.ogg volume=35]
+[playse storage=se/ringback_tone.ogg volume=100]
 [wait time=3000]
 
 「二年一組の菊池恵の父ですが。[l]娘が体調不良のため、本日は午前中お休みします。[l]午後から登校予定です。よろしくお願いします」[p]
@@ -162,7 +162,7 @@
 
 二人は思わず笑った。[p]
 
-[playse storage="se/door_close.ogg" volume=30]
+[playse storage="se/door_close.ogg" volume=100]
 [fadeoutbgm time=500]
 
 [bg storage="black.png" time=0]
@@ -177,7 +177,7 @@
 
 [bg storage="bg_station_morning2.webp" time=600]
 
-[playbgm storage="morning_ambient.ogg" loop=true volume=40 fadein=true time=800]
+[playbgm storage="morning_ambient.ogg" loop=true volume=100 fadein=true time=800]
 
 電車を乗り継ぎ――。[p]
 
@@ -276,7 +276,7 @@
 
 恵が尋ねる。[p]
 [fadeoutbgm time=3000]
-[playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
 [auto_chara name="拓海" face="private_smile"]
 「月曜日って、飛び込み自殺が一番多いんだよ」[p]
 
@@ -302,7 +302,7 @@
 [auto_chara name="拓海" face="private_normal"]
 「行ってくる」[p]
 
-[playse storage=se/run.ogg volume=50]
+[playse storage=se/run.ogg volume=100]
 
 [chara_hide_all time=300]
 
@@ -330,7 +330,7 @@
 
 遠くからレールを震わせる音が聞こえ始める。[p]
 
-[playse storage=se/fast_train.ogg volume=50]
+[playse storage=se/fast_train.ogg volume=100]
 
 快速列車だ。[p]
 
@@ -340,7 +340,7 @@
 
 [bg storage="ch5_takumi_takada.webp" time=800]
 
-[playse storage=se/heartbeat.ogg loop=true volume=42 fadein=true time=600]
+[playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=600]
 
 心臓が大きく脈を打つ。[p]
 
@@ -402,8 +402,8 @@
 [chara_hide_all time=300]
 [fadeoutbgm time=3000]
 [bg storage="bg_classroom_day2.webp" time=800]
-[playbgm storage="classroom_buzzing.ogg" loop=true volume=30 fadein=true time=1000]
-[playse storage=se/school_chime.mp3 volume=60]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true time=1000]
+[playse storage=se/school_chime.mp3 volume=100]
 午後から制服に着替えて学校へ戻ったが、授業にはまったく集中できなかった。[p]
 
 教師の声は、ただ遠くで響く雑音のように聞こえる。[p]
@@ -495,7 +495,7 @@
 
 そう考えた瞬間、胸の奥がひどく痛んだ。[p]
 [bg storage="bg_family_restaurant_evening.webp" time=800]
-[playbgm storage="restaurant_ambience.ogg" loop=true volume=15 fadein=true time=1000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=100 fadein=true time=1000]
 
 放課後、いつものファミレスで恵と落ち合った。[p]
 拓海は思い切って、失敗の原因を正直に話した。[p]
@@ -641,7 +641,7 @@
 [fadeoutbgm time=3000]
 [bg storage="bg_takumiroom_night.webp" time=800]
 拓海は家に帰ると、何だか今日はやたらと長い一日だったと感じた。[p]
-[playse storage=se/bed.ogg volume=80]
+[playse storage=se/bed.ogg volume=100]
 [wait time=1000]
 思考を巡らす暇もなく、ベッドへ倒れ込む。[p]
 
@@ -664,22 +664,22 @@
 
 そんな不安が、頭から離れなかった。[p]
 [wait time=1000]
-[playse storage=se/smartphone_vibrate.ogg volume=35]
+[playse storage=se/smartphone_vibrate.ogg volume=100]
 その時、スマホがメッセージの着信を知らせた。[p]
 慌てて確認すると、送り主は恵ではなく龍也だった。[p]
 嫌な予感がする。[p]
 まるで楽しい動画を見ている途中に、鬱陶しい広告がカットインするような感覚だ。[p]
 [bg storage="bg_rooftop_rainyday.webp" time=800]
-[playse storage=se/wind_rooftop.ogg volume=55]
-[playbgm storage="tension_high.ogg" loop=true volume=45 fadein=true time=1000]
+[playse storage=se/wind_rooftop.ogg volume=100]
+[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1000]
 昼休み、呼び出された屋上に向かうと、龍也は屋上の真ん中で腕を組み、入口に背を向けて立っていた。[p]
-[playse storage=se/roof_door.ogg volume=50]
+[playse storage=se/roof_door.ogg volume=100]
 ドアが開く音に反応し、龍也は踵を返した。[p]
 [auto_chara name="龍也" face="angry"]
 「お前、綾香に何をしたんだ！」[p]
 
 龍也は声を荒げると同時に、いきなり拓海に殴りかかってきた。[p]
-[playse storage=se/punch3.ogg volume=50]
+[playse storage=se/punch3.ogg volume=100]
 
 拳は一直線に拓海の顔へ飛んできた。[p]
 
@@ -721,7 +721,7 @@
 
 彼の太い腕が拓海の胸ぐらをつかみ、そのまま勢いよく屋上のドアへ叩きつけた。[p]
 
-[playse storage=se/kabedon.ogg volume=50]
+[playse storage=se/kabedon.ogg volume=100]
 鈍い音が響く。[p]
 
 「ぐっ……！」[p]
@@ -739,9 +739,9 @@
 「手を……離してくれ」[p]
 
 拓海は必死に龍也の腕を引き剥がそうと、精一杯の抵抗をしながら声を絞り出した。[p]
-[playse storage=se/wind_rooftop.ogg volume=35]
+[playse storage=se/wind_rooftop.ogg volume=100]
 [wait time=3000]
-[playse storage=se/roof_door.ogg volume=80]
+[playse storage=se/roof_door.ogg volume=100]
 しばらくして、屋上のドアが勢いよく開いた。[p]
 
 「離して！」[p]
@@ -805,8 +805,8 @@
 
 二人とも言葉が出ない。[p]
 
-[playse storage=se/wind_rooftop.ogg volume=30]
-[playse storage=se/fence_creak.ogg volume=30]
+[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/fence_creak.ogg volume=100]
 
 [wait time=1000]
 
@@ -891,7 +891,7 @@
 [bg storage="black.png" time=600]
 [wait time=2000]
 
-[playbgm storage="psycho.ogg" loop=true volume=45 fadein=true time=800]
+[playbgm storage="psycho.ogg" loop=true volume=100 fadein=true time=800]
 
 気がつくと――[p]
 
@@ -929,7 +929,7 @@
 
 [bg storage="black.png" time=0]
 
-[playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=400]
+[playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=400]
 
 [wait time=500]
 

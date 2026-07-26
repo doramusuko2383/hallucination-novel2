@@ -19,8 +19,8 @@
 [font speed=50]
 
 [bg storage="bg_station_morning.webp" time=800]
-[playbgm storage="morning_city.ogg" loop=true volume=45 fadein=true time=300]
-[playse storage=se/tukutukuboushi.ogg  loop=true volume=45 fadein=true time=300]
+[playbgm storage="morning_city.ogg" loop=true volume=100 fadein=true time=300]
+[playse storage=se/tukutukuboushi.ogg  loop=true volume=100 fadein=true time=300]
 9月に入ったというのに、まだまだ暑い日が続いている。[l][r]
 シャツの中に着た下着に汗が染み込んでいく。[p]
 
@@ -33,7 +33,7 @@
 [fadeoutbgm time=3000]
 [fadeoutse time=800]
 [bg storage="bg_classroom_day.webp" time=700]
-[playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true]
 拓海の通う黒森学園高校は、県内でも中堅クラスの私立高校である。[p]
 
 中高一貫校だが、[r]
@@ -43,7 +43,7 @@
 特別進学クラスという、難関大学への入学を目指すクラスに在籍していた。[p]
 
 [wait time=500]
-[playse storage=se/black_board.ogg volume=50]
+[playse storage=se/black_board.ogg volume=100]
 英語の授業中、隣の席をちらっと見ると、[r]
 生徒がこっそり古文の問題集を開いている。[p]
 
@@ -68,7 +68,7 @@
 *ch2_hallway
 
 [bg storage="bg_hallway_day.webp" time=700]
-[playse storage=se/hallway_ambience.ogg loop=true volume=50 fadein=true]
+[playse storage=se/hallway_ambience.ogg loop=true volume=100 fadein=true]
 拓海は移動教室のために廊下を歩いている。[p]
 
 校舎は古びたコンクリートの建物で、[r]
@@ -81,7 +81,7 @@
 
 [wait time=500]
 [fadeoutse time=800]
-[playbgm storage="tension_low.ogg" loop=true volume=45 fadein=true time=1200]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
 龍也たちがまだ学校にいるのが、奇跡なんだ。[p]
 
 拓海はそう思った。[p]
@@ -155,14 +155,14 @@
 [bg storage="black.png" time=500]
 [wait time=500]
 [font speed=45]
-[playbgm storage="suspense.ogg" loop=true volume=55 fadein=true time=1500]
+[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1500]
 そんな拓海の静かな日常が一変したのは、[r]
 一年生の頃だった。[p]
 
 [wait time=500]
 
 12月の寒い冬の放課後――。[p]
-[playse storage=se/washroom.ogg volume=50]
+[playse storage=se/washroom.ogg volume=100]
 [bg storage="bg_washroom_day.webp" time=800]
 トイレに入ると、そこには二人の生徒が立っていた。[p]
 
@@ -250,7 +250,7 @@
 
 [wait time=500]
 
-[playse storage=se/hold_down.ogg volume=35]
+[playse storage=se/hold_down.ogg volume=100]
 [quake time=250 hmax=4 vmax=12]
 その瞬間、龍也が数歩近づき、拓海の胸ぐらを掴んだ。[p]
 
@@ -262,13 +262,13 @@
 
 龍也はそう言い残し、トイレを出ていった。[p]
 
-[playse storage=se/leather_shoes_walk.ogg volume=50]
+[playse storage=se/leather_shoes_walk.ogg volume=100]
 [chara_hide_all time=300]
 [wait time=500]
 
 拓海はその場から動けず、[r]
 体が凍りついたように感じた。[p]
-[playse storage=se/run.ogg volume=35]
+[playse storage=se/run.ogg volume=100]
 気がつくと、もう一人の生徒もその場を逃げ出していた。[p]
 
 目を合わせることさえ避けるように、無言で去っていった。[p]
@@ -289,7 +289,7 @@
 *ch2_after_rooftop
 
 [bg storage="bg_classroom_day2.webp" time=800]
-[playse storage=se/heartbeat.ogg loop=true volume=18]
+[playse storage=se/heartbeat.ogg loop=true volume=100]
 腕時計をつけるたびに、タバコの火傷の跡が擦れて痛む。[p]
 
 それを見ると、あの日の出来事が鮮明に蘇る。[p]
@@ -326,13 +326,13 @@
 
 [wait time=1000]
 
-[playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=1200]
+[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1200]
 だが、それはすぐに打ち砕かれた。[p]
 
 *ch2_rooftop_accusation
 
 [bg storage="bg_rooftop_day.webp" time=700]
-[playse storage=se/wind_rooftop.ogg volume=18]
+[playse storage=se/wind_rooftop.ogg volume=100]
 [wait time=500]
 
 [auto_chara name="龍也" face="angry"]
@@ -360,7 +360,7 @@
 [auto_chara name="龍也" face="angry"]
 「何もなくて、あんな風になるわけないだろ！」[p]
 
-[playse storage=se/punch1.ogg volume=38]
+[playse storage=se/punch1.ogg volume=100]
 [quake time=300 hmax=4 vmax=18]
 龍也が叫び、拓海の胸にパンチを浴びせる。[p]
 
@@ -376,7 +376,7 @@
 [auto_chara name="龍也" face="angry"]
 「知らねえよ！」[p]
 
-[playse storage=se/punch2.ogg volume=20]
+[playse storage=se/punch2.ogg volume=100]
 [quake time=220 hmax=2 vmax=8]
 龍也はその言葉を遮るように膝蹴りを見舞う。[p]
 
@@ -402,7 +402,7 @@
 [auto_chara name="龍也" face="angry"]
 「お前がやった証拠もねぇけど、[l]やってねぇ証拠もねぇだろ！」[p]
 
-[playse storage=se/punch3.ogg volume=22]
+[playse storage=se/punch3.ogg volume=100]
 [quake time=260 hmax=2 vmax=10]
 そう言うと、龍也は拳を振り上げ、[r]
 拓海の腹に深くめり込ませた。[p]
@@ -472,7 +472,7 @@
 *ch2_planning
 
 [bg storage="bg_takumiroom_night.webp" time=900]
-[playse storage=se/room_noise.ogg loop=true volume=50 fadein=true time=1200]
+[playse storage=se/room_noise.ogg loop=true volume=100 fadein=true time=1200]
 家に帰ると、拓海は静かに机に向かい、パソコンを開いた。[p]
 
 マウスを動かすと、今日殴られた場所が鈍く痛む。[p]
@@ -489,7 +489,7 @@
 自分の想像や知識である程度コントロールできることも分かっていた。[p]
 [fadeoutbgm time=3000]
 [wait time=500]
-[playbgm storage="psycho.ogg" loop=true volume=45 fadein=true time=1500]
+[playbgm storage="psycho.ogg" loop=true volume=100 fadein=true time=1500]
 
 強い憎悪と恐ろしい幻。[p]
 
@@ -567,7 +567,7 @@
 [fadeoutbgm time=4000]
 [wait time=1000]
 
-[playse storage=se/crickets.ogg volume=10]
+[playse storage=se/crickets.ogg volume=100]
 鈴虫の鳴く声が遠くから響いている。[p]
 
 [wait time=1000]
@@ -591,7 +591,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 鈴虫の声だけが、夜の静けさに細く残っている。[p]
 
 [wait time=600]
-[playse storage=se/keyboard_typing.ogg volume=35]
+[playse storage=se/keyboard_typing.ogg volume=100]
 拓海はパソコンのメモのタイトルに、[r]
 「ハルシネーション」と打ち込んだ。[p]
 
@@ -604,7 +604,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 *ch2_target_ayaka
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="tension_low.ogg" loop=true volume=50 fadein=true time=1200]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
 次のターゲットは綾香だ。[p]
 
 拓海は毎日、そのことばかり考えていた。[p]
@@ -704,7 +704,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 *ch2_megumi_conversation
 
 [bg storage="bg_classroom_day2.webp" time=800]
-[playbgm storage="classroom_buzzing.ogg" volume=70 fadein=true]
+[playbgm storage="classroom_buzzing.ogg" volume=100 fadein=true]
 早速、動き出すことに決めた翌日のことだ。[p]
 
 拓海は教室の後ろで机に座り、[r]
@@ -722,11 +722,11 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 今がチャンスだ。[p]
 
-[playse storage=se/chair.ogg volume=50]
+[playse storage=se/chair.ogg volume=100]
 [wait time=500]
 拓海は心の中でそう決意し、ゆっくりと席を立つ。[p]
 
-[playse storage=se/heartbeat.ogg loop=true volume=40]
+[playse storage=se/heartbeat.ogg loop=true volume=100]
 心臓がやけに早く脈打つのを感じながら、[r]
 静かに恵の方へと歩み寄る。[p]
 
@@ -735,7 +735,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [free layer="fix" name="bad_end_number"]
 [free layer="fix" name="bad_end_title"]
 [bg storage="bg_classroom_day2.webp" time=0]
-[playbgm storage="classroom_buzzing.ogg" volume=70 fadein=true]
+[playbgm storage="classroom_buzzing.ogg" volume=100 fadein=true]
 [choice_start count=2]
 [choice name="choice_ch2_megumi_good" text="塾の話から切り出す" target="*ch2_megumi_approach_good"]
 [choice name="choice_ch2_megumi_bad" text="いきなり綾香のことを聞く" target="*ch2_megumi_approach_bad"]
@@ -839,7 +839,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 拓海は話を聞きながら、[r]
 ついに本題に入る決意を固めた。[p]
 
-[playbgm storage="suspense.ogg" loop=true volume=35 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
 [auto_chara name="拓海" face="level2_normal"]
 「ところでさ……」[p]
 
@@ -892,8 +892,8 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 *ch2_mapping
 
 [bg storage="bg_takumiroom_night.webp" time=900]
-[playbgm storage="tension_low.ogg" loop=true volume=40 fadein=true time=1200]
-[playse storage=se/keyboard_typing.ogg volume=40]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
+[playse storage=se/keyboard_typing.ogg volume=100]
 家に帰ると、拓海は早速パソコンを開き、[r]
 桜木中学の学区を調べ始めた。[p]
 
@@ -1001,7 +1001,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 そんな場所で働くのは気が散るし、気まず過ぎる。[p]
 
 [wait time=1000]
-[playbgm storage="suspense.ogg" loop=true volume=40 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
 
 じゃあ、反対方向にある北口のコンビニか……。[p]
 

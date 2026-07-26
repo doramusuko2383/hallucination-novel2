@@ -75,7 +75,7 @@
 
 [wait time=1000]
 
-[playse storage=se/school_chime.mp3]
+[playse storage=se/school_chime.mp3 volume=100]
 [wait time=2000]
 
 [wait time=1000]
@@ -112,7 +112,7 @@
 [wait time=500]
 ; 章タイトルは無音で表示し、屋上の環境音は次の屋上シーン開始時にだけ再生する。
 [chapter_title number="第一章" title="覚醒"]
-[playse storage=se/roof_door.ogg volume=80]
+[playse storage=se/roof_door.ogg volume=100]
 [wait time=500]
 *ch1_rooftop
 
@@ -121,7 +121,7 @@
 ;------------------------
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
 
-[playse storage=se/wind_rooftop.ogg volume=20]
+[playse storage=se/wind_rooftop.ogg volume=100]
 [playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 [wait time=2000]
 九月だというのに外は蒸し暑い。
@@ -216,11 +216,11 @@
 [auto_chara name="龍也" face="normal" left=50]
 今日の「トレーニング」も一方的なものだった。[p]
 
-[playse storage=se/punch1.ogg volume=80]
+[playse storage=se/punch1.ogg volume=100]
 [wait time=500]
-[playse storage=se/punch2.ogg volume=80]
+[playse storage=se/punch2.ogg volume=100]
 [wait time=500]
-[playse storage=se/punch1.ogg volume=80]
+[playse storage=se/punch1.ogg volume=100]
 [wait time=500]
 [chara_hide_all time=300]
 打ち返すと更にやり返されることが分かってからは、[l]
@@ -249,11 +249,11 @@
 
 [wait time=500]
 
-[playse storage=se/punch2.ogg volume=30]
+[playse storage=se/punch2.ogg volume=100]
 [wait time=1000]
-[playse storage=se/punch1.ogg volume=30]
+[playse storage=se/punch1.ogg volume=100]
 [wait time=500]
-[playse storage=se/punch2.ogg volume=30]
+[playse storage=se/punch2.ogg volume=100]
 [wait time=500]
 
 人を三分間殴り続けるのも、かなり疲れるものなのだろう。[p]
@@ -265,7 +265,7 @@
 
 [auto_chara name="翔太" face="nastysmile" left=180]
 「おっと、もう三分だ。これで終わりだ……よっと！」[l][r]
-[playse storage=se/punch3.ogg volume=30]
+[playse storage=se/punch3.ogg volume=100]
 [wait time=500]
 
 最後にフェイントで一撃をかましてきた。[l]
@@ -273,7 +273,7 @@
 
 [wait time=1000]
 「くっ――」[l]
-[playse storage=se/fall_down.ogg volume=50]
+[playse storage=se/fall_down.ogg volume=100]
 拓海は体をくの字に曲げて、膝を着いた。[p]
 
 [wait time=500]
@@ -289,7 +289,7 @@
 「明日も昼休み来いよ」[l]
 
 と龍也が言って屋上から出ようとすると、[r]残りの二人もぞろぞろと従っていく。[p]
-[playse storage=se/three_walk.ogg volume=50]
+[playse storage=se/three_walk.ogg volume=100]
 [wait time=500]
 
 「グローブ……いつものとこにしまっとけ」[p]
@@ -300,11 +300,11 @@
 
 [wait time=2000]
 
-[playse storage=se/throw_globe.ogg volume=50]
+[playse storage=se/throw_globe.ogg volume=100]
 一人取り残された拓海は、グローブを乱暴に外して傍らに放った。[p]
 
 [wait time=500]
-[playse storage=se/heartbeat.ogg loop=true volume=30]
+[playse storage=se/heartbeat.ogg loop=true volume=100]
 自分がされたことに対する激しい怒りが大きく膨らんでいく。[l][r]
 そしてそれは、自分自身の無力さに対する怒りでもあった。[p]
 
@@ -349,14 +349,14 @@
 [wait time=1000]
 
 気が付くと拓海はフェンスに手をかけてよじ登っていた。[p]
-[playse storage=se/fence_creak.ogg volume=30]
+[playse storage=se/fence_creak.ogg volume=100]
 [wait time=500]
 
 そしてフェンスをまたぎ、[l]
 屋上のふちにゆっくりと足を降ろした。[p]
 
 [wait time=500]
-[playse storage=se/wind_rooftop.ogg volume=20]
+[playse storage=se/wind_rooftop.ogg volume=100]
 [bg storage="ch01_sc01_jumping_off.webp" time=600]
 首を下に向けると、色鮮やかに花が咲く正門前の花壇が見える。[p]
 
@@ -466,7 +466,7 @@
 ……。[p]
 
 [resetdelay]
-[playse storage=se/wind_rooftop.ogg volume=20]
+[playse storage=se/wind_rooftop.ogg volume=100]
 [bg storage="bg_rooftop_day.webp"]
 風が聞こえた。[p]
 
@@ -498,7 +498,7 @@
 [wait time=500]
 
 それと同時に、先ほどの飛び降りの恐怖が急に込み上げてきた。[p]
-[playse storage=se/heartbeat.ogg loop=true volume=30]
+[playse storage=se/heartbeat.ogg loop=true volume=100]
 [wait time=1000]
 
 体がガタガタと震えだす。[l]
@@ -553,13 +553,13 @@
 三日ぶりに登校した、その日の昼休みだった。[p]
 [wait time=1000]
 *ch1_return
-[playse storage=se/school_chime.mp3]
+[playse storage=se/school_chime.mp3 volume=100]
 [wait time=2000]
 
 「お前、なに学校休んでんだよっ！」[p]
-[playse storage=se/punch3.ogg volume=50]
+[playse storage=se/punch3.ogg volume=100]
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
-[playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 [wait time=1000]
 
 三日ぶりに姿を見せた拓海を見るなり、[l]
@@ -570,7 +570,7 @@
 「グローブ片付けずに帰ったろ。雨で濡れてんじゃねえかっ」[p]
 
 そう怒鳴りふくらはぎを回し蹴りしてくる。[p]
-[playse storage=se/punch3.ogg volume=50]
+[playse storage=se/punch3.ogg volume=100]
 龍也は以前サッカー部だったのだ。[l]
 そのせいだろうか、手より足が先に出るタイプだ。[p]
 [auto_chara name="翔太" face="normal" left=180]
@@ -741,7 +741,7 @@
 
 [auto_chara name="龍也" face="angry" left=50]
 
-[playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1500]
 
 「おっと」[p]
 
@@ -770,7 +770,7 @@
 
 龍也は一瞬で拓海との距離を詰め、その腕を掴んだ。[p]
 
-[playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1500]
 
 [jump target="*caught"]
 
@@ -792,7 +792,7 @@
 
 [auto_chara name="龍也" face="angry" left=50]
 
-[playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1500]
 
 [jump target="*caught"]
 
@@ -801,7 +801,7 @@
 
 「何逃げようとしてんだよ……お前」[p]
 
-[playse storage="se/hold_down.ogg" volume=40]
+[playse storage="se/hold_down.ogg" volume=100]
 
 そう言って龍也は、そのまま拓海を後ろから締め技で地面に押さえつけた。[p]
 
@@ -813,7 +813,7 @@
 「よし、じゃあ龍也はそのまま押さえてね」[p]
 
 と言って翔太は、暴れる拓海の腕を押さえ、腕時計を外した。[p]
-[playse storage=se/watch_take_off.ogg volume=150]
+[playse storage=se/watch_take_off.ogg volume=100]
 [auto_chara name="綾香" face="normal" left=300]
 「何してんのそれ」[p]
 
@@ -833,7 +833,7 @@
 
 翔太はタバコを一本新しく箱から取り出すと、[l]
 慣れた手つきで、ライターで火をつけた。[p]
-[playse storage=se/writer.ogg volume=70]
+[playse storage=se/writer.ogg volume=100]
 先端に鮮やかな火が灯る。[p]
 「よーし……それじゃあ、根性見せてくれよ。[l]
 拓海くーん」[p]
@@ -935,7 +935,7 @@
 翔太は、目の前の組み合う二人を見ている。[p]
 すると、龍也は拓海を押さえつけるのをやめて、[l]
 マネキンのようになった翔太に飛びかかった。[p]
-[playse storage=se/pushdown.ogg volume=50]
+[playse storage=se/pushdown.ogg volume=100]
 [bg storage="ch01_cg_shota_nightmare.webp" time=200]
 そのまま肩を掴み、押し倒し、[l]
 ゆっくりと馬乗りになる。[p]
@@ -1006,11 +1006,11 @@
 [resetfont]
 [wait time=500]
 [bg storage="bg_rooftop_day.webp" time=600]
-[playse storage=se/wind_rooftop.ogg volume=20]
+[playse storage=se/wind_rooftop.ogg volume=100]
 [wait time=500]
 「うわあああああああああああああああああ」[l][r]
 [quake time=1200 hmax=8 vmax=30]
-[playbgm storage="tension_low.ogg" loop=true volume=75 fadein=true time=1500]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 その瞬間、翔太が両目を押さえながら、[l]
 悲鳴にも似た絶叫を上げて、その場で転がり回った。[p]
 拓海を押さえつけていた龍也も思わず立ち上がり、近付いていく。[p]
@@ -1027,7 +1027,7 @@
 綾香もそれ以上喋ることができないでいる。[p]
 その一方で、拓海は気持ちの高揚を抑えられずにいた。[p]
 [fadeoutbgm time=3000]
-[playse storage=se/heartbeat.ogg loop=true volume=30]
+[playse storage=se/heartbeat.ogg loop=true volume=100]
 [wait time=1000]
 「一番起こって欲しくない」と一瞬想像した未来の姿。[p]
 目を焼かれるという恐れていた事態。[p]
@@ -1036,6 +1036,6 @@
 拓海は自分の「異能」についての仮説を証明できたのだった。[p]
 [stopse fadeout=1000]
 [wait time=1000]
-[playse storage=se/wind_rooftop.ogg volume=18]
+[playse storage=se/wind_rooftop.ogg volume=100]
 [wait time=3000]
 @jump storage="chapter2.ks" target="*chapter2"

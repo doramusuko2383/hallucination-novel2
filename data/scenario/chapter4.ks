@@ -16,7 +16,7 @@
 [font speed=50]
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="classroom_buzzing.ogg" loop=true volume=40 fadein=true time=1000]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true time=1000]
 あのカラオケでの出来事から、すでに三週間が過ぎようとしていた。[p]
 
 拓海は、恵と協力関係を結び、恵の助けを借りて龍也の身辺調査を進めていた。[p]
@@ -39,7 +39,7 @@
 
 「なるほど……家族がみんな優秀か」[p]
 
-[playse storage=se/pencil.ogg volume=50]
+[playse storage=se/pencil.ogg volume=100]
 [wait time=500]
 授業中、ノートにペンを走らせながらも、拓海の思考は龍也に向かっていた。[p]
 そんな家で育てば、見えないプレッシャーもあるのかもしれない。[p]
@@ -58,7 +58,7 @@
 [auto_chara name="拓海" face="level2_shysmile"]
 [wait time=500]
 拓海は再びノートに目を戻し、授業に集中しようと努めた。[p]
-[playse storage=se/smartphone_vibrate.ogg volume=35]
+[playse storage=se/smartphone_vibrate.ogg volume=100]
 [wait time=500]
 [chara_hide_all time=300]
 「今日、放課後時間ある？」[p]
@@ -72,7 +72,7 @@
 
 [fadeoutbgm time=3000]
 [bg storage="bg_family_restaurant_night.webp" time=900]
-[playbgm storage="restaurant_ambience.ogg" loop=true volume=15 fadein=true time=1000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=100 fadein=true time=1000]
 
 二人が連絡先を交換してから気づいたことだが、実はお互いの家は意外と近い場所にあった。[p]
 最寄り駅こそ違うものの、私鉄が並走している区間に位置し、[r][l]二人の自宅は1キロほどしか離れていなかった。[p]
@@ -137,7 +137,7 @@
 
 [auto_chara name="恵" face="private_serious"]
 「そうね。確かに、これからの計画も慎重に考えないとね」[p]
-[playse storage=se/iced_cofee.ogg volume=75]
+[playse storage=se/iced_cofee.ogg volume=100]
 恵は頷きながら、注文したドリンクを一口飲んだ。[p]
 
 [auto_chara name="拓海" face="private_normal"]
@@ -148,7 +148,7 @@
 
 [wait time=500]
 [fadeoutbgm time=4000]
-[playbgm storage="tension_low.ogg" loop=true volume=38 fadein=true time=1000]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1000]
 [stopse fadeout=700]
 
 [auto_chara name="恵" face="private_serious"]
@@ -292,7 +292,7 @@
 「うん、あらゆる可能性を考えて、どんな展開になっても対応できるようにしておこう」[p]
 [fadeoutbgm time=4000]
 [chara_hide_all time=300]
-[playbgm storage="restaurant_ambience.ogg" loop=true volume=15 fadein=true time=1000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=100 fadein=true time=1000]
 [bg storage="black.png" time=0 wait=false]
 [wait time=2000]
 結局、その日は夜遅くまで作戦会議が続いた。[p]
@@ -300,7 +300,7 @@
 [wait time=2000]
 [fadeoutbgm time=4000]
 [stopse fadeout=4000]
-[playse storage=se/shower.ogg volume=50]
+[playse storage=se/shower.ogg volume=100]
 帰宅後、湯船に浸かりながら、拓海は久々に心地よい疲れを感じていた。[p]
 全てが善行だとは決して思ってはいけないのだけれど、[r][l]
 誰かのためになるかもしれないことが嬉しく、[r][l]
@@ -309,11 +309,11 @@
 [fadeoutbgm time=3000]
 [stopse fadeout=800]
 
-[playse storage=se/bag_zipper.ogg volume=50]
+[playse storage=se/bag_zipper.ogg volume=100]
 土曜日の17時頃、拓海は護身用に刃渡り5センチの園芸用バサミをカバンに入れ、[r]
 いつものファミレスに向かった。[p]
 [bg storage="bg_family_restaurant_evening.webp" time=800]
-[playbgm storage="tension_low.ogg" loop=true volume=42 fadein=true time=1200]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
 今日は恵の方が先に着いていた。[p]
 恵の母親が、上司を駅まで迎えに行くのが18時だというので、まだ一時間の余裕がある。[p]
 
@@ -369,9 +369,9 @@
 [chara_hide_all time=300]
 [wait time=500]
 [bg storage="bg_mansion_night.webp" time=1000]
-[playse storage=se/cafe_chime.ogg volume=50]
+[playse storage=se/cafe_chime.ogg volume=100]
 [wait time=2000]
-[playse storage=se/city_ambience.ogg volume=30 loop=true fadein=true time=1000]
+[playse storage=se/city_ambience.ogg volume=100 loop=true fadein=true time=1000]
 
 二人は会計を済ませ、店を出た。[p]
 外はすでに暗くなり、空気がひんやりしている。[p]
@@ -391,7 +391,7 @@
 皆どこか品が感じられる気がした。[p]
 
 [wait time=1000]
-[playse storage=se/wind_rooftop.ogg volume=30]
+[playse storage=se/wind_rooftop.ogg volume=100]
 じっと待っていると、夜風が冷たく感じ始めた。[p]
 
 肌寒いな……。[p]
@@ -428,7 +428,7 @@
 時刻はもう18時30分を回っていた。[p]
 予定よりもかなり遅れている。[p]
 [stopse fadeout=1000]
-[playse storage=se/heartbeat.ogg loop=true volume=40 fadein=true time=800]
+[playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=800]
 
 どこかに寄り道でもしたのか……それとも、急に予定変更して、車で別の場所に出かけた可能性もあるな……。[p]
 そう考えると、何かがずれているような感覚が広がっていく。[p]
@@ -437,7 +437,7 @@
 [wait time=1000]
 だがその瞬間――二人の姿がエントランスに現れた。[p]
 [stopse fadeout=500]
-[playse storage=se/leather_shoes_walk.ogg volume=35]
+[playse storage=se/leather_shoes_walk.ogg volume=100]
 [wait time=1000]
 [bg storage="ch4_kyoko_takada.webp" time=1000]
 
@@ -451,7 +451,7 @@
 高田は駅前のスーパーのビニール袋を持っている。[p]
 中身は見えないが、きっと行きがけに寄り道して、お酒やつまみを買ったのだろう。[p]
 
-[playse storage=se/auto_door.ogg volume=35]
+[playse storage=se/auto_door.ogg volume=100]
 響子がエントランスのパネルにキーをかざすと、自動ドアが開き、[r]
 二人はマンションの中に消えていった。[p]
 [wait time=1000]
@@ -459,7 +459,7 @@
 拓海はその光景を見届けて、すぐに恵に連絡を取る。[p]
 
 しばらくして、息を切らしながら恵が現れた。[p]
-[playse storage=se/city_ambience.ogg volume=30 loop=true fadein=true time=1000]
+[playse storage=se/city_ambience.ogg volume=100 loop=true fadein=true time=1000]
 [auto_chara name="恵" face="private_serious"]
 「どんな男だった？」[p]
 
@@ -497,7 +497,7 @@
 [wait time=1000]
 [stopse fadeout=1000]
 [bg storage="bg_apartment_hallway_night.webp" time=800]
-[playse storage=se/elevator_ding.ogg volume=28]
+[playse storage=se/elevator_ding.ogg volume=100]
 
 十分後、二人は、静かに五階の玄関の前まで上がった。[p]
 互いに顔を見合わせ、無言のまま覚悟を確認する。[p]
@@ -505,7 +505,7 @@
 
 [auto_chara name="恵" face="private_serious"]
 恵がインターホンを押す。[p]
-[playse storage=se/interphone.ogg volume=50]
+[playse storage=se/interphone.ogg volume=100]
 [wait time=800]
 
 返事はすぐには来なかった。[p]
@@ -527,7 +527,7 @@
 「今行くわ」[p]
 
 [wait time=500]
-[playse storage=se/door_lock_open.ogg volume=50]
+[playse storage=se/door_lock_open.ogg volume=100]
 
 しばらくして、玄関のドアが静かに開いた。[p]
 [auto_chara name="響子" face="confuse"]
@@ -574,8 +574,8 @@
 
 [chara_hide_all time=300]
 [bg storage="bg_megumi_room_night.webp" time=800]
-[playse storage=se/door_close.ogg volume=30]
-[playse storage=se/room_ambient_megumi.ogg volume=30 loop=true fadein=true time=1000]
+[playse storage=se/door_close.ogg volume=100]
+[playse storage=se/room_ambient_megumi.ogg volume=100 loop=true fadein=true time=1000]
 恵の部屋は玄関のすぐ横にあった。[p]
 広さはさほどではないが、整然と片付けられていて、家具の配置にも工夫が見られる。[p]
 カーテンが薄いピンク色でなければ、どこか男の部屋を思わせるようなシンプルさがあった。[p]
@@ -598,7 +598,7 @@
 拓海は小さくうなずき、恵が部屋を出て行くのを見送った。[p]
 [chara_hide_all time=300]
 [stopse fadeout=1000]
-[playse storage=se/door_close.ogg volume=24]
+[playse storage=se/door_close.ogg volume=100]
 扉が閉まると、部屋の中は急に静かになった。[p]
 拓海はイヤホンを耳の奥へ押し込む。[p]
 聞こえるのは、自分の呼吸だけだった。[p]
@@ -665,7 +665,7 @@
 それでも食器の位置を直すふりをして、恵は何事もなかったように手を引いた。[p]
 
 急ぎ足で部屋に戻ってきた恵は、背後を気にしながら扉を閉めた。[p]
-[playse storage=se/door_close.ogg volume=30]
+[playse storage=se/door_close.ogg volume=100]
 [bg storage="bg_megumi_room_night.webp" time=800]
 扉が閉まりきってから、恵は拓海のイヤホンの片耳を受け取った。[p]
 二人は声を出さず、再びイヤホンの向こうに集中した。[p]
@@ -680,7 +680,7 @@
 響子の声は、少し遠くてかすかにしか聞こえない。[p]
 スマホを設置した位置がテーブルから遠いのだろう。[p]
 
-[playse storage=se/heartbeat.ogg loop=true volume=45 fadein=true time=700]
+[playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=700]
 
 「君によく似ている。美人な娘だね」[p]
 [auto_chara name="恵" face="private_confuse"]
@@ -723,7 +723,7 @@
 
 だが、断片的に聞こえてくる言葉から、どうやら高田はそろそろ帰る準備をしていることがわかった。[p]
 
-[playbgm storage="tension_low.ogg" loop=true volume=38 fadein=true time=1000]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1000]
 このままだと、住所が聞けないな……。[p]
 [bg storage="bg_megumi_room_night.webp" time=800]
 拓海は冷静さを取り戻し、恵に伝えた。[p]
@@ -777,16 +777,16 @@
 
 恵は自然な調子で言い、拓海と一緒に玄関を出た。[p]
 
-[playse storage=se/door_close.ogg volume=30]
+[playse storage=se/door_close.ogg volume=100]
 玄関の扉が、背後で静かに閉まった。[p]
 
 [chara_hide_all time=300]
 [bg storage="bg_apartment_hallway_night.webp" time=700]
-[playse storage=se/hallway_ambience.ogg volume=22]
+[playse storage=se/hallway_ambience.ogg volume=100]
 マンションの共用廊下はひっそりとしていた。[p]
 二人は足音を抑え、エレベーターへ向かう。[p]
 
-[playse storage=se/elevator_ding.ogg volume=25]
+[playse storage=se/elevator_ding.ogg volume=100]
 エレベーターの扉が開き、短い沈黙のまま一階へ降りた。[p]
 
 [bg storage="bg_mansion_night.webp" time=700]
@@ -818,13 +818,13 @@
 幸い、拓海の顔は高田に割れていない。[p]
 一定の距離を保てば気づかれることはないだろう。[p]
 
-[playse storage=se/train_coming.ogg volume=28]
+[playse storage=se/train_coming.ogg volume=100]
 高田が改札を抜け、上り電車のホームに並んだ。[p]
 夜も遅く、ホームにはほとんど人がいない。[p]
 
 拓海は少し離れた位置に並び、慎重に尾行を続けた。[p]
 
-[playse storage=se/smartphone_vibrate.ogg volume=30]
+[playse storage=se/smartphone_vibrate.ogg volume=100]
 「尾行、大丈夫そう？」[p]
 
 恵からメッセージが届いた。[p]
@@ -843,10 +843,10 @@
 
 [bg storage="bg_train_inside_night.webp" time=600]
 
-[playse storage=se/traindoor.ogg volume=50]
+[playse storage=se/traindoor.ogg volume=100]
 電車がホームに滑り込み、拓海は高田から離れた車両に乗った。[p]
 [wait time=1000]
-[playse storage=se/train_running.ogg volume=50]
+[playse storage=se/train_running.ogg volume=100]
 
 空いた車内で、高田は優先席に腰掛け、スマホをいじっている。[p]
 酔いのせいか、こちらに気づく様子はない。[p]
@@ -863,7 +863,7 @@
 住宅街か……家までついていけるな。[p]
 そう判断した拓海は、一定の距離を保ちながら静かに尾行を続けた。[p]
 
-[playse storage=se/wind_rooftop.ogg volume=20]
+[playse storage=se/wind_rooftop.ogg volume=100]
 何度か角を曲がられたが、幸い見失わずに済んだ。[p]
 
 駅から10分以上歩いただろうか。[p]
