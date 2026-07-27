@@ -467,7 +467,7 @@
 ……。[p]
 
 [resetdelay]
-[playse storage=se/wind_rooftop.ogg volume=50]
+[playse storage=se/wind_rooftop.ogg volume=20]
 [bg storage="bg_rooftop_day.webp"]
 風が聞こえた。[p]
 
@@ -515,7 +515,7 @@
 [wait time=1000]
 
 まるで実際に体験して来たかのようだった。[p]
-[stopse]
+[stopse fadeout=3000]
 [wait time=1000]
 [bg storage="black.png"]
 そのあとのことはよく覚えていない。[p]
@@ -524,7 +524,7 @@
 
 誰とすれ違ったのか、どうやって駅まで歩いたのかも思い出せない。[p]
 
-[playse storage=se/room_noise.ogg loop=true volume=100 fadein=true time=2000]
+[playse storage=se/room_noise.ogg loop=true volume=70 fadein=true time=2000]
 [wait time=1000]
 次に意識がはっきりした時には、[l]
 自宅のベッドに座り込んでいた。[p]
@@ -553,14 +553,13 @@
 
 結局、拓海は二日間学校を休んだ。[p]
 
-[stopse fadeout=1000]
-
 ようやく学校へ行こうと思えるくらいには気持ちが落ち着き、[l]
 三日ぶりに登校した、その日の昼休みだった。[p]
+[stopse fadeout=3000]
 [wait time=1000]
 *ch1_return
 [playse storage=se/school_chime.mp3 volume=80]
-[wait time=2000]
+[wait time=3000]
 
 「お前、なに学校休んでんだよっ！」[p]
 [playse storage=se/kabedon.ogg volume=100]
@@ -1025,17 +1024,23 @@
 その瞬間、翔太が両目を押さえながら、[l]
 悲鳴にも似た絶叫を上げて、その場で転がり回った。[p]
 拓海を押さえつけていた龍也も思わず立ち上がり、近付いていく。[p]
-「おい、どうしたんだよ！[l]どこか怪我したのか？」[p]
 
+[auto_chara name="龍也" face="anxiety" left=50]
+「おい、どうしたんだよ！[l]どこか怪我したのか？」[p]
 龍也は、不思議そうにする。[p]
+[chara_hide_all time=300]
 龍也の声を聞くなり、「ひいっ」と声を出し、[l]
 恐怖にひきつった顔で後ずさりする翔太。[p]
 よくみると、後ずさりした場所が濡れている。[l]
 翔太は失禁をしていた。[p]
 あまりの状況に声を失う龍也。[l]
+
+[auto_chara name="綾香" face="anxiety" left=300]
 「翔太――」[p]
 
 綾香もそれ以上喋ることができないでいる。[p]
+[chara_hide_all time=300]
+
 その一方で、拓海は気持ちの高揚を抑えられずにいた。[p]
 [fadeoutbgm time=3000]
 [playse storage=se/heartbeat.ogg loop=true volume=100]
@@ -1045,7 +1050,7 @@
 それが起こったのは幻覚とはいえ、[l]
 自分ではなく翔太だった。[p]
 拓海は自分の「異能」についての仮説を証明できたのだった。[p]
-[stopse fadeout=1000]
+[stopse fadeout=3000]
 [wait time=1000]
 [playse storage=se/wind_rooftop.ogg volume=20]
 [wait time=3000]
