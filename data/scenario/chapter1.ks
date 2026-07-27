@@ -354,7 +354,7 @@
 屋上のふちにゆっくりと足を降ろした。[p]
 
 [wait time=500]
-[playse storage=se/wind_rooftop.ogg volume=50]
+[playse storage=se/wind_rooftop.ogg volume=20]
 [bg storage="ch01_sc01_jumping_off.webp" time=600]
 首を下に向けると、色鮮やかに花が咲く正門前の花壇が見える。[p]
 
@@ -392,7 +392,7 @@
 ゆっくりと落ちていくように感じる。[p]
 
 [wait time=1000]
-[playse storage=se/drone.ogg loop=true volume=50 fadein=true time=3000]
+[playbgm storage="tension_low.ogg" loop=true volume=50 fadein=true time=1500]
 
 これが走馬灯か。[p]
 拓海は冷静に受け止めていた。[p]
@@ -451,6 +451,7 @@
 ――そこで、[l]
 衝撃は終わった。[p]
 
+[fadeoutbgm time=1000]
 [stopse fadeout=1000]
 [wait time=1800]
 
@@ -481,7 +482,7 @@
 隣を見ると放り投げたグローブが見える。[p]
 
 [wait time=500]
-
+[playbgm storage="tension_low.ogg" loop=true volume=50 fadein=true time=1500]
 さっきいた屋上から一歩も動いていないのだ。[p]
 
 [wait time=500]
@@ -498,6 +499,7 @@
 [wait time=500]
 
 それと同時に、先ほどの飛び降りの恐怖が急に込み上げてきた。[p]
+[fadeoutbgm time=1000]
 [playse storage=se/heartbeat.ogg loop=true volume=100]
 [wait time=1000]
 
