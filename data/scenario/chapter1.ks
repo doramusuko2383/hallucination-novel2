@@ -563,7 +563,7 @@
 [wait time=2000]
 
 「お前、なに学校休んでんだよっ！」[p]
-[playse storage=se/punch3.ogg volume=100]
+[playse storage=se/kabedon.ogg volume=100]
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
 [playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 [wait time=1000]
