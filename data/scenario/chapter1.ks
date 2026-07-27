@@ -392,7 +392,7 @@
 ゆっくりと落ちていくように感じる。[p]
 
 [wait time=1000]
-[playbgm storage="tension_low.ogg" loop=true volume=50 fadein=true time=1500]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 
 これが走馬灯か。[p]
 拓海は冷静に受け止めていた。[p]
@@ -482,7 +482,7 @@
 隣を見ると放り投げたグローブが見える。[p]
 
 [wait time=500]
-[playbgm storage="tension_low.ogg" loop=true volume=50 fadein=true time=1500]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 さっきいた屋上から一歩も動いていないのだ。[p]
 
 [wait time=500]
