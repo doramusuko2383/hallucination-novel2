@@ -71,7 +71,6 @@
 逃れられない現実に、[r]
 胸が張り裂けそうだった。
 [p]
-[fadeoutbgm time=3000]
 [wait time=1000]
 
 [playse storage=se/school_chime.mp3 volume=80]
@@ -92,7 +91,7 @@
 ……[p]
 
 行くしかない。[p]
-
+[fadeoutbgm time=3000]
 [wait time=1000]
 [choice_start count=1 y=360]
 [choice name="choice_ch1_go_rooftop" text="屋上へ向かう" target="*next"]
@@ -120,7 +119,7 @@
 ;------------------------
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
 
-[playse storage=se/wind_rooftop.ogg volume=50]
+[playse storage=se/wind_rooftop.ogg volume=30]
 [playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 [wait time=2000]
 九月だというのに外は蒸し暑い。
