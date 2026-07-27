@@ -543,7 +543,6 @@
 
 鏡で顔を見た。[p]
 
-[playse storage=se/heartbeat.ogg volume=50]
 心臓の鼓動を確かめた。[p]
 
 それでも――。[p]
@@ -777,7 +776,7 @@
 
 龍也は一瞬で拓海との距離を詰め、その腕を掴んだ。[p]
 
-[playbgm storage="tension_high.ogg" loop=true volume=80 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=30 fadein=true time=1500]
 
 [jump target="*caught"]
 
@@ -906,7 +905,7 @@
 [chara_hide_all time=300]
 [bg storage="white.png" time=80]
 [wait time=500]
-[playse storage=se/tinnitus.ogg volume=100]
+[playse storage=se/white_noise.ogg volume=100]
 [bg storage="black.png" time=300]
 [fadeoutbgm time=3000]
 その瞬間、世界から音が消えた――。[p]
