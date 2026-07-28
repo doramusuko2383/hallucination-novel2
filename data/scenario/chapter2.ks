@@ -333,7 +333,7 @@
 
 [wait time=1000]
 [fadeoutbgm time=3000]
-[playbgm storage="tension_high.ogg" loop=true volume=30 fadein=true time=1200]
+[playbgm storage="tension_high.ogg" loop=true volume=60 fadein=true time=1200]
 だが、それはすぐに打ち砕かれた。[p]
 
 *ch2_rooftop_accusation
