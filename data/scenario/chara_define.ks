@@ -62,6 +62,7 @@
 [chara_face name="龍也" face="angry" storage="chara/ryuya/angry.webp"]
 [chara_face name="龍也" face="sad" storage="chara/ryuya/sad.webp"]
 [chara_face name="龍也" face="apologize" storage="chara/ryuya/apologize.webp"]
+[chara_face name="龍也" face="impatience" storage="chara/ryuya/impatience.webp"]
 
 [chara_new name="綾香" storage="chara/ayaka/normal.webp" scale=0.43 top=18]
 [chara_face name="綾香" face="normal" storage="chara/ayaka/normal.webp"]
