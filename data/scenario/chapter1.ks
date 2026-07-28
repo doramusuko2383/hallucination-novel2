@@ -746,7 +746,7 @@
 
 [auto_chara name="龍也" face="angry" left=50]
 
-[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=30 fadein=true time=1500]
 
 「おっと」[p]
 
@@ -797,7 +797,7 @@
 
 [auto_chara name="龍也" face="angry" left=50]
 
-[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=30 fadein=true time=1500]
 
 [jump target="*caught"]
 
