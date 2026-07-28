@@ -7,6 +7,10 @@
 [eval exp="tf.name = mp.name"]
 [eval exp="tf.face = (typeof mp.face !== 'undefined' && mp.face != '') ? mp.face : 'default'"]
 [eval exp="tf.left = (typeof mp.left !== 'undefined' && mp.left != '') ? mp.left : (tf.name == '拓海' ? 0 : 300)"]
+; time を指定した箇所だけ、立ち絵のフェードイン速度を変更できる（単位: ミリ秒）。
+; wait=true を併用すると、フェードインが終わるまで次の命令を待つ。
+[eval exp="tf.show_time = (typeof mp.time !== 'undefined' && mp.time != '') ? mp.time : 300"]
+[eval exp="tf.show_wait = (typeof mp.wait !== 'undefined' && mp.wait != '') ? mp.wait : 'false'"]
 
 ; [chara_show] の width はキャラ定義側に記憶される。
 ; 直前のイベントCG用表示（例: 病院シーンの width=520）に引きずられると、
@@ -25,7 +29,7 @@
 
 ; キャラ表示後、明示指定またはデフォルト位置へ移動する
 [if exp="tf.name != ''"]
-[chara_show name=&tf.name face=&tf.face left=&tf.left top=&tf.top width=&tf.width time=300 wait=false]
+[chara_show name=&tf.name face=&tf.face left=&tf.left top=&tf.top width=&tf.width time=&tf.show_time wait=&tf.show_wait]
 [chara_move name=&tf.name left=&tf.left top=&tf.top width=&tf.width time=0 wait=false]
 [endif]
 
