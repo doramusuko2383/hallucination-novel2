@@ -19,15 +19,18 @@
 [font speed=50]
 
 [bg storage="bg_station_morning.webp" time=800]
-[playbgm storage="morning_city.ogg" loop=true volume=100 fadein=true time=300]
+[playbgm storage="morning_city.ogg" loop=true volume=80 fadein=true time=300]
 [playse storage=se/tukutukuboushi.ogg  loop=true volume=100 fadein=true time=300]
-9月に入ったというのに、まだまだ暑い日が続いている。[l][r]
-シャツの中に着た下着に汗が染み込んでいく。[p]
+9月に入ったというのに、まだまだ暑い日が続いている。[p]
+冷房の効いた電車から降りると、もわっとした空気が顔を撫でて思わず顔をしかめる。[p]
+制服のシャツが汗で身体にまとわりついてくるようだ。[p]
 
-[wait time=500]
+[wait time=1000]
 
-朝の強い日差しの中、[r]
-校舎まで人目を避けるように歩く。[p]
+改札を出ると同じ制服を着た生徒たちでごった返していた。[p]
+皆同じ方向に向かってきちんと歩いていく。[p]
+拓海は、朝の眩しい日差しの中、[r]
+校舎まで人目を避けるように進む。[p]
 
 [wait time=500]
 [fadeoutbgm time=3000]
@@ -80,8 +83,7 @@
 龍也と翔太が談笑している姿が見えた。[p]
 
 [wait time=500]
-[fadeoutse time=800]
-[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
+
 龍也たちがまだ学校にいるのが、奇跡なんだ。[p]
 
 拓海はそう思った。[p]
@@ -106,6 +108,8 @@
 
 だが、それをよく思わなかった上級生から嫌がらせをされるようになった。[p]
 
+[fadeoutse time=2000]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
 [wait time=500]
 [bg storage="ch2_tatsuya_past.webp" time=700]
 あるとき、試合中にパスを寄こさなかった先輩に殴り掛かり、[r]
@@ -137,6 +141,7 @@
 
 [wait time=500]
 [fadeoutbgm time=3000]
+[playse storage=se/hallway_ambience.ogg loop=true volume=100 fadein=true]
 [bg storage="bg_hallway_day.webp" time=700]
 黒森学園の特進クラスは、目立たない生徒が多い。[p]
 
@@ -155,6 +160,7 @@
 [bg storage="black.png" time=500]
 [wait time=500]
 [font speed=45]
+[fadeoutse time=2000]
 [playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1500]
 そんな拓海の静かな日常が一変したのは、[r]
 一年生の頃だった。[p]
@@ -297,9 +303,10 @@
 屋上での事件を境に、[r]
 三人の関係は大きく変わっていった。[p]
 
-[stopse fadeout=800]
-[wait time=500]
+[stopse fadeout=3000]
+[wait time=1000]
 
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true]
 翔太はしばらく学校に姿を見せなかった。[p]
 
 ただでさえ茶髪で目立つ生徒だ。[p]
@@ -325,14 +332,14 @@
 そんな淡い希望も抱いた。[p]
 
 [wait time=1000]
-
+[fadeoutbgm time=3000]
 [playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1200]
 だが、それはすぐに打ち砕かれた。[p]
 
 *ch2_rooftop_accusation
 
 [bg storage="bg_rooftop_day.webp" time=700]
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=30]
 [wait time=500]
 
 [auto_chara name="龍也" face="angry"]
@@ -489,7 +496,7 @@
 自分の想像や知識である程度コントロールできることも分かっていた。[p]
 [fadeoutbgm time=3000]
 [wait time=500]
-[playbgm storage="psycho.ogg" loop=true volume=100 fadein=true time=1500]
+[playbgm storage="psycho.ogg" loop=true volume=60 fadein=true time=1500]
 
 強い憎悪と恐ろしい幻。[p]
 
@@ -567,7 +574,8 @@
 [fadeoutbgm time=4000]
 [wait time=1000]
 
-[playse storage=se/crickets.ogg volume=100]
+[playse storage=se/room_noise.ogg loop=true volume=100 fadein=true time=1200 buf="0"]
+[playse storage=se/crickets.ogg volume=60 buf="1"]
 鈴虫の鳴く声が遠くから響いている。[p]
 
 [wait time=1000]
@@ -591,7 +599,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 鈴虫の声だけが、夜の静けさに細く残っている。[p]
 
 [wait time=600]
-[playse storage=se/keyboard_typing.ogg volume=100]
+[playse storage=se/keyboard_typing.ogg volume=100 buf="2"]
 拓海はパソコンのメモのタイトルに、[r]
 「ハルシネーション」と打ち込んだ。[p]
 
@@ -599,6 +607,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 静かにパソコンを閉じた。[p]
 
 [fadeoutbgm time=3000]
+[fadeoutse time=3000]
 [wait time=1000]
 
 *ch2_target_ayaka
