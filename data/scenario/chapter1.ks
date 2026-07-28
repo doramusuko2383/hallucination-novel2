@@ -1025,7 +1025,7 @@
 悲鳴にも似た絶叫を上げて、その場で転がり回った。[p]
 拓海を押さえつけていた龍也も思わず立ち上がり、近付いていく。[p]
 
-[auto_chara name="龍也" face="anxiety" left=50]
+[auto_chara name="龍也" face="impatience" left=50]
 「おい、どうしたんだよ！[l]どこか怪我したのか？」[p]
 龍也は、不思議そうにする。[p]
 [chara_hide_all time=300]
