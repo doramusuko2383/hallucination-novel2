@@ -901,9 +901,9 @@
 利き腕で拓海の腕を力強く握った。[p]
 *ch1_illusion
 [playse storage=se/tinnitus.ogg volume=100]
-[chara_hide_all time=300]
+[chara_hide_all]
 [bg storage="white.png" time=80]
-[wait time=500]
+[wait time=300]
 [playse storage=se/white_noise.ogg volume=100]
 [bg storage="black.png" time=300]
 [fadeoutbgm time=3000]
