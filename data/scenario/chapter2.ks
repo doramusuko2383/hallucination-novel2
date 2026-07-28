@@ -125,7 +125,7 @@
 
 先輩らの普段の嫌がらせの内容を告発して、[r]
 龍也を庇った生徒がいた。[p]
-[auto_chara name="翔太" face="normal" time=1000]
+[auto_chara name="翔太" face="normal" time=3000]
 それが同じサッカー部の翔太だった。[p]
 
 翔太は元々サッカー部を辞めたいなと思っていたし、[r]
