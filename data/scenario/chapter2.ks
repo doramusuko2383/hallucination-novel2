@@ -20,7 +20,7 @@
 
 [bg storage="bg_station_morning.webp" time=800]
 [playbgm storage="morning_city.ogg" loop=true volume=80 fadein=true time=300]
-[playse storage=se/tukutukuboushi.ogg  loop=true volume=100 fadein=true time=300]
+[playse storage=se/tukutukuboushi.ogg  loop=true volume=60 fadein=true time=300]
 9月に入ったというのに、まだまだ暑い日が続いている。[p]
 冷房の効いた電車から降りると、もわっとした空気が顔を撫でて思わず顔をしかめる。[p]
 制服のシャツが汗で身体にまとわりついてくるようだ。[p]
@@ -34,7 +34,7 @@
 
 [wait time=500]
 [fadeoutbgm time=3000]
-[fadeoutse time=800]
+[fadeoutse time=3000]
 [bg storage="bg_classroom_day.webp" time=700]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true]
 拓海の通う黒森学園高校は、県内でも中堅クラスの私立高校である。[p]
