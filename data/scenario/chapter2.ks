@@ -161,7 +161,7 @@
 [wait time=500]
 [font speed=45]
 [fadeoutse time=2000]
-[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1500]
+[playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=1500]
 そんな拓海の静かな日常が一変したのは、[r]
 一年生の頃だった。[p]
 
@@ -1010,7 +1010,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 そんな場所で働くのは気が散るし、気まず過ぎる。[p]
 
 [wait time=1000]
-[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=1000]
 
 じゃあ、反対方向にある北口のコンビニか……。[p]
 
