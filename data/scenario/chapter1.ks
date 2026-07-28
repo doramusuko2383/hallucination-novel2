@@ -746,7 +746,7 @@
 
 [auto_chara name="龍也" face="angry" left=50]
 
-[playbgm storage="tension_high.ogg" loop=true volume=30 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=60 fadein=true time=1500]
 
 「おっと」[p]
 
@@ -775,7 +775,7 @@
 
 龍也は一瞬で拓海との距離を詰め、その腕を掴んだ。[p]
 
-[playbgm storage="tension_high.ogg" loop=true volume=30 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=60 fadein=true time=1500]
 
 [jump target="*caught"]
 
@@ -797,7 +797,7 @@
 
 [auto_chara name="龍也" face="angry" left=50]
 
-[playbgm storage="tension_high.ogg" loop=true volume=30 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=60 fadein=true time=1500]
 
 [jump target="*caught"]
 

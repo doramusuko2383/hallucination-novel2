@@ -34,7 +34,7 @@
 
 [wait time=500]
 [fadeoutbgm time=3000]
-[fadeoutse time=3000]
+[fadeoutse time=2000]
 [bg storage="bg_classroom_day.webp" time=700]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true]
 拓海の通う黒森学園高校は、県内でも中堅クラスの私立高校である。[p]
@@ -125,7 +125,7 @@
 
 先輩らの普段の嫌がらせの内容を告発して、[r]
 龍也を庇った生徒がいた。[p]
-[auto_chara name="翔太" face="normal" time=1000]
+[auto_chara name="翔太" face="normal" time=3000]
 それが同じサッカー部の翔太だった。[p]
 
 翔太は元々サッカー部を辞めたいなと思っていたし、[r]
@@ -161,7 +161,7 @@
 [wait time=500]
 [font speed=45]
 [fadeoutse time=2000]
-[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1500]
+[playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=1500]
 そんな拓海の静かな日常が一変したのは、[r]
 一年生の頃だった。[p]
 
@@ -333,13 +333,13 @@
 
 [wait time=1000]
 [fadeoutbgm time=3000]
-[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1200]
+[playbgm storage="tension_high.ogg" loop=true volume=60 fadein=true time=1200]
 だが、それはすぐに打ち砕かれた。[p]
 
 *ch2_rooftop_accusation
 
 [bg storage="bg_rooftop_day.webp" time=700]
-[playse storage=se/wind_rooftop.ogg volume=30]
+[playse storage=se/wind_rooftop.ogg volume=20]
 [wait time=500]
 
 [auto_chara name="龍也" face="angry"]
@@ -496,7 +496,7 @@
 自分の想像や知識である程度コントロールできることも分かっていた。[p]
 [fadeoutbgm time=3000]
 [wait time=500]
-[playbgm storage="psycho.ogg" loop=true volume=60 fadein=true time=1500]
+[playbgm storage="psycho.ogg" loop=true volume=50 fadein=true time=1500]
 
 強い憎悪と恐ろしい幻。[p]
 
@@ -575,7 +575,7 @@
 [wait time=1000]
 
 [playse storage=se/room_noise.ogg loop=true volume=70 fadein=true time=1200 buf="0"]
-[playse storage=se/crickets.ogg volume=60 buf="1"]
+[playse storage=se/crickets.ogg volume=20 buf="1"]
 鈴虫の鳴く声が遠くから響いている。[p]
 
 [wait time=1000]
@@ -848,7 +848,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 拓海は話を聞きながら、[r]
 ついに本題に入る決意を固めた。[p]
 
-[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=1000]
 [auto_chara name="拓海" face="level2_normal"]
 「ところでさ……」[p]
 
@@ -1010,7 +1010,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 そんな場所で働くのは気が散るし、気まず過ぎる。[p]
 
 [wait time=1000]
-[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=1000]
 
 じゃあ、反対方向にある北口のコンビニか……。[p]
 
