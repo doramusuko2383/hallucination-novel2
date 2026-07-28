@@ -246,7 +246,7 @@
 [playse storage=se/wipe.ogg volume=100]
 
 [bg storage="bg_megumi_room_night.webp" time=700]
-[playse storage=se/room_noise.ogg loop=true volume=100]
+[playse storage=se/room_noise.ogg loop=true volume=70]
 [auto_chara name="恵" face="private_normal"]
 「永山君、手袋した方がいいよ」[p]
 [auto_chara name="拓海" face="private2_normal"]
@@ -446,7 +446,7 @@
 
 [wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
-[playse storage=se/school_chime.mp3 volume=100]
+[playse storage=se/school_chime.mp3 volume=80]
 
 制服の左胸に付けられた白い花が少し照れくさい。[p]
 でも不思議と嫌な気持ちはしなかった。[p]

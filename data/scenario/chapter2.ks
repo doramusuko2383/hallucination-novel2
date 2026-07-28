@@ -256,7 +256,7 @@
 
 [wait time=500]
 
-[playse storage=se/hold_down.ogg volume=100]
+[playse storage=se/hold_down.ogg volume=80]
 [quake time=250 hmax=4 vmax=12]
 その瞬間、龍也が数歩近づき、拓海の胸ぐらを掴んだ。[p]
 
@@ -479,7 +479,7 @@
 *ch2_planning
 
 [bg storage="bg_takumiroom_night.webp" time=900]
-[playse storage=se/room_noise.ogg loop=true volume=100 fadein=true time=1200]
+[playse storage=se/room_noise.ogg loop=true volume=70 fadein=true time=1200]
 家に帰ると、拓海は静かに机に向かい、パソコンを開いた。[p]
 
 マウスを動かすと、今日殴られた場所が鈍く痛む。[p]
@@ -574,7 +574,7 @@
 [fadeoutbgm time=4000]
 [wait time=1000]
 
-[playse storage=se/room_noise.ogg loop=true volume=100 fadein=true time=1200 buf="0"]
+[playse storage=se/room_noise.ogg loop=true volume=70 fadein=true time=1200 buf="0"]
 [playse storage=se/crickets.ogg volume=60 buf="1"]
 鈴虫の鳴く声が遠くから響いている。[p]
 
