@@ -46,7 +46,7 @@
 その日も、いつものようにスケッチブックを広げ、風に吹かれる校庭の木々を描いていた。[p]
 足音や人の話し声が一切聞こえないこの空間は、綾香にとって至福のひとときだった。[p]
 しかし、突然階段の方から男たちの声が響いてきた。[p]
-[playse storage=se/roof_door.ogg volume=100]
+[playse storage=se/roof_door.ogg volume=30]
 [wait time=2000]
 驚いて振り向くと、龍也と翔太が屋上に上がり込んできたのだ。[p]
 [bg storage="ch6_ayaka_episode.webp" time=800]

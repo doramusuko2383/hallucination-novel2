@@ -403,7 +403,7 @@
 [fadeoutbgm time=3000]
 [bg storage="bg_classroom_day2.webp" time=800]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true time=1000]
-[playse storage=se/school_chime.mp3 volume=100]
+[playse storage=se/school_chime.mp3 volume=80]
 午後から制服に着替えて学校へ戻ったが、授業にはまったく集中できなかった。[p]
 
 教師の声は、ただ遠くで響く雑音のように聞こえる。[p]
@@ -673,7 +673,7 @@
 [playse storage=se/wind_rooftop.ogg volume=100]
 [playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1000]
 昼休み、呼び出された屋上に向かうと、龍也は屋上の真ん中で腕を組み、入口に背を向けて立っていた。[p]
-[playse storage=se/roof_door.ogg volume=100]
+[playse storage=se/roof_door.ogg volume=30]
 ドアが開く音に反応し、龍也は踵を返した。[p]
 [auto_chara name="龍也" face="angry"]
 「お前、綾香に何をしたんだ！」[p]
@@ -741,7 +741,7 @@
 拓海は必死に龍也の腕を引き剥がそうと、精一杯の抵抗をしながら声を絞り出した。[p]
 [playse storage=se/wind_rooftop.ogg volume=100]
 [wait time=3000]
-[playse storage=se/roof_door.ogg volume=100]
+[playse storage=se/roof_door.ogg volume=30]
 しばらくして、屋上のドアが勢いよく開いた。[p]
 
 「離して！」[p]

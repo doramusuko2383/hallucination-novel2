@@ -684,7 +684,7 @@
 [fadeoutbgm time=3000]
 [playse storage=se/knock_door.ogg volume=100]
 [wait time=500]
-[playse storage=se/roof_door.ogg volume=100]
+[playse storage=se/roof_door.ogg volume=30]
 [playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
 その時、部屋のドアがノックされ、[r]
 店員が注文していたアイスコーヒーをテーブルに置いていった。[p]
