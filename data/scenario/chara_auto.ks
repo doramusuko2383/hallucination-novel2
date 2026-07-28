@@ -27,10 +27,11 @@
 [eval exp="tf.left = Math.round((1280 - tf.width) / 2)"]
 [endif]
 
-; キャラ表示後、明示指定またはデフォルト位置へ移動する
+; chara_show 自体に位置とサイズを渡す。
+; 直後に chara_move を実行すると、chara_move 内の stop() がフェードインを
+; 即座に完了させてしまい、time を長くしても表示速度へ反映されない。
 [if exp="tf.name != ''"]
 [chara_show name=&tf.name face=&tf.face left=&tf.left top=&tf.top width=&tf.width time=&tf.show_time wait=&tf.show_wait]
-[chara_move name=&tf.name left=&tf.left top=&tf.top width=&tf.width time=0 wait=false]
 [endif]
 
 [endmacro]
