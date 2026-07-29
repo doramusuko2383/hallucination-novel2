@@ -700,9 +700,9 @@
 イヤホンの向こうが、ふっと静かになった。[p]
 [wait time=800]
 拓海も恵も、息を止めたまま次の声を待った。[p]
-
+[delay speed="120"]
 「君が僕の言うことを聞いてくれるなら、そうしたいと思う」[p]
-
+[resetdelay]
 [chara_hide_all time=300]
 [stopse fadeout=600]
 [fadeoutbgm time=3000]
