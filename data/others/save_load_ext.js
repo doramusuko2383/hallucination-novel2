@@ -573,7 +573,11 @@
 
     function hasActiveStoryChoice() {
         return $(".hl-story-choice-group, .glink_button.hl-story-choice").filter(function () {
-            return $(this).closest("html").length > 0 && $(this).css("display") !== "none";
+            // Tyrano temporarily hides the free layer while a system menu is
+            // open. The choice is still pending in that state, so its scene
+            // treatment must be tied to the choice DOM's lifetime rather than
+            // its computed visibility.
+            return $(this).closest("html").length > 0;
         }).length > 0;
     }
 
@@ -949,15 +953,8 @@
         menu.__hl_original_snapSave = menu.snapSave;
         menu.__hl_original_loadGame = menu.loadGame;
         menu.__hl_original_loadGameData = menu.loadGameData;
-        menu.__hl_original_showMenu = menu.showMenu;
         menu.__hl_original_loadQuickSave = menu.loadQuickSave;
-        menu.__hl_original_displayLog = menu.displayLog;
         menu.__hl_original_setQuickSave = menu.setQuickSave;
-
-        menu.showMenu = function (call_back) {
-            hideChoiceBackdrop(true);
-            return this.__hl_original_showMenu.call(this, call_back);
-        };
 
         menu.loadQuickSave = function () {
             resetRuntimeBeforeSceneSwitch();
@@ -965,7 +962,6 @@
         };
 
         menu.setQuickSave = function () {
-            hideChoiceBackdrop(true);
             var that = this;
             var saveTitle = that.kag.stat.current_save_str;
             var $overlay = showSaveBusyOverlay("クイックセーブ中");
@@ -981,11 +977,6 @@
             });
         };
 
-        menu.displayLog = function () {
-            hideChoiceBackdrop(true);
-            return this.__hl_original_displayLog.apply(this, arguments);
-        };
-
         if (TYRANO.kag.backTitle && !TYRANO.kag.__hl_original_backTitle) {
             TYRANO.kag.__hl_original_backTitle = TYRANO.kag.backTitle;
             TYRANO.kag.backTitle = function () {
@@ -994,14 +985,6 @@
                     TYRANO.kag.menu.flushLastPlayedSnapshot();
                 }
                 return TYRANO.kag.__hl_original_backTitle.apply(this, arguments);
-            };
-        }
-
-        if ($.confirm && !$.__hl_original_confirm) {
-            $.__hl_original_confirm = $.confirm;
-            $.confirm = function () {
-                hideChoiceBackdrop(true);
-                return $.__hl_original_confirm.apply(this, arguments);
             };
         }
 
@@ -1104,7 +1087,6 @@
         };
 
         menu.displaySave = function (cb, cb_close) {
-            hideChoiceBackdrop(true);
             var that = this;
             this.kag.unfocus();
             this.kag.setSkip(false);
@@ -1161,7 +1143,6 @@
         };
 
         menu.displayLoad = function (cb) {
-            hideChoiceBackdrop(true);
             var that = this;
             this.kag.unfocus();
             this.kag.setSkip(false);
