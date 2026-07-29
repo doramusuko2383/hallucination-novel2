@@ -4,6 +4,7 @@
 ; - f.bad_end_title
 ; - f.bad_end_retry_storage
 ; - f.bad_end_retry_target
+; - f.bad_end_retry_bg
 
 *bad_end
 [cm]
@@ -92,6 +93,7 @@ $(".button_menu, .role_button, .quiet_system_button").show();
 [free layer="fix" name="bad_end_retry"]
 [free layer="fix" name="bad_end_title_return"]
 [stopbgm time=0 buf_all="true"]
+[bg storage=&f.bad_end_retry_bg time=0]
 [jump storage=&f.bad_end_retry_storage target=&f.bad_end_retry_target]
 
 *bad_end_to_title
