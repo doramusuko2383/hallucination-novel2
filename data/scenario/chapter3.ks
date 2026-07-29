@@ -303,29 +303,35 @@
 少しの躊躇いはあったが、[r][l]
 自分自身を守るために必要なことなのだ。[p]
 
-[wait time=500]
+[wait time=1000]
 
-やるしかない――。[p]
+やるしかない――。
 
-[wait time=500]
+[wait time=1000]
+[choice_start count=1 y=360]
+[choice name="choice_ch3_make_decision" text="力をつかう" target="*next"]
+[s]
+
+*next
+[cm]
+
+[wait time=1000]
 
 拓海は全神経を集中させた。[p]
 
-[wait time=500]
+[wait time=1000]
 
 綾香の手が袋を差し出す時、[r][l]
 拓海は意図的に綾香の手に軽く触れた。[p]
 
-; 追加した演出意図: 力の発動は無音化を主役にするため、BGM/SEを止めて黒フェードで一拍置く。
-[stopse fadeout=600]
+[stopse fadeout=1000]
 [fadeoutbgm time=3000]
-[bg storage="white.png" time=50]
-[wait time=500]
-[bg storage="black.png" time=70]
-[wait time=500]
-[bg storage="white.png" time=30]
-[wait time=500]
+[playse storage=se/tinnitus.ogg volume=100]
+[bg storage="white.png" time=80]
+[wait time=300]
+[playse storage=se/white_noise.ogg volume=100]
 [bg storage="black.png" time=300]
+[fadeoutbgm time=3000]
 
 その瞬間、世界が静まり返った。[p]
 
@@ -335,8 +341,10 @@
 
 [wait time=500]
 
-目の前の世界が無音に包まれる。[p]
+拓海は翔太に見せたときと同じ感覚を覚え、成功を確信する。[p]
 
+先ほどまでの緊張感からの解放による安堵と高揚感が駆け巡る。[p]
+[playbgm storage="ability_theme.ogg" loop=true volume=100 fadein=true time=1500]
 [bg storage="ch3_convenience_touch.webp" time=900]
 綾香は動きを止め、目を見開いたまま、[r][l]
 時間が止まったように固まっている。[p]
@@ -359,7 +367,7 @@
 [wait time=1000]
 拓海はその光景を見つめながら、[r][l]
 自分が作り出したこの幻覚の中に、確かな力を感じていた。[p]
-
+[fadeoutbgm time=3000]
 [wait time=1000]
 
 *ch3_classroom_after
