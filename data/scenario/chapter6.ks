@@ -1138,6 +1138,7 @@
 [eval exp="f.bad_end_title = '救われなかった未来'"]
 [eval exp="f.bad_end_retry_storage = 'chapter6.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch6_show_illusion_choice'"]
+[eval exp="f.bad_end_retry_bg = 'bg_rooftop_day.webp'"]
 @jump storage="badend.ks" target="*bad_end"
 
 *ch6_show_hell_bad
@@ -1261,4 +1262,5 @@
 [eval exp="f.bad_end_title = '地獄を見せた者'"]
 [eval exp="f.bad_end_retry_storage = 'chapter6.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch6_show_illusion_choice'"]
+[eval exp="f.bad_end_retry_bg = 'bg_rooftop_day.webp'"]
 @jump storage="badend.ks" target="*bad_end"

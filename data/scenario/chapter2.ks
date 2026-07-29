@@ -1085,4 +1085,5 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [eval exp="f.bad_end_title = '変えられなかった日常'"]
 [eval exp="f.bad_end_retry_storage = 'chapter2.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch2_choice_megumi_approach'"]
+[eval exp="f.bad_end_retry_bg = 'bg_classroom_day2.webp'"]
 @jump storage="badend.ks" target="*bad_end"

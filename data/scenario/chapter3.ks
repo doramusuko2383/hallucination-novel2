@@ -260,6 +260,7 @@
 [eval exp="f.bad_end_title = '手遅れ'"]
 [eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch3_choice_convenience_counter'"]
+[eval exp="f.bad_end_retry_bg = 'bg_convenience_inside_night.webp'"]
 @jump storage="badend.ks" target="*bad_end"
 
 *ch3_counter_route
@@ -676,6 +677,7 @@
 [eval exp="f.bad_end_title = '孤立'"]
 [eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch3_megumi_truth_retry'"]
+[eval exp="f.bad_end_retry_bg = 'bg_karaoke.webp'"]
 @jump storage="badend.ks" target="*bad_end"
 
 *ch3_megumi_stay_silent
@@ -1076,6 +1078,7 @@
 [eval exp="f.bad_end_title = '見て見ぬふり'"]
 [eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch3_help_megumi_retry'"]
+[eval exp="f.bad_end_retry_bg = 'bg_karaoke.webp'"]
 @jump storage="badend.ks" target="*bad_end"
 
 *ch3_help_megumi_retry

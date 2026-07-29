@@ -947,4 +947,5 @@ BAD END[p]
 [eval exp="f.bad_end_title = '警戒された標的'"]
 [eval exp="f.bad_end_retry_storage = 'chapter4.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch4_takada_tail_choice'"]
+[eval exp="f.bad_end_retry_bg = 'bg_megumi_room_night.webp'"]
 @jump storage="badend.ks" target="*bad_end"
