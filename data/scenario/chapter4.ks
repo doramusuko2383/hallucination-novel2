@@ -460,7 +460,7 @@
 
 しばらくして、息を切らしながら恵が現れた。[p]
 [playse storage=se/city_ambience.ogg volume=100 loop=true fadein=true time=1000]
-[auto_chara name="恵" face="private_serious"]
+[auto_chara name="恵" face="private_serious" time=150]
 「どんな男だった？」[p]
 
 慌てて尋ねる。[p]
@@ -530,7 +530,7 @@
 [playse storage=se/door_lock_open.ogg volume=100]
 
 しばらくして、玄関のドアが静かに開いた。[p]
-[auto_chara name="響子" face="confuse"]
+[auto_chara name="響子" face="confuse" time=500]
 「恵、どうしたの。外にいなさいって言ったでしょ」[p]
 
 響子は若干眉をひそめたが、すぐに拓海と目が合った。[p]
@@ -610,7 +610,7 @@
 イヤホンから、恵の挨拶が聞こえてきた。[p]
 [auto_chara name="恵" face="private_normal" left=0]
 「こんにちは。すみません、お邪魔してしまって。私、娘の恵と言います。いつも母がお世話になっております」[p]
-[auto_chara name="高田" face="normal"]
+[auto_chara name="高田" face="normal" time=700]
 高田の低く響く声が返ってきた。[p]
 「いや、こちらこそお休みの日にすまんね。お母さんはよく働いてくれてるよ」[p]
 

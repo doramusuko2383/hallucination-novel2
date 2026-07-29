@@ -675,7 +675,7 @@
 昼休み、呼び出された屋上に向かうと、龍也は屋上の真ん中で腕を組み、入口に背を向けて立っていた。[p]
 [playse storage=se/roof_door.ogg volume=30]
 ドアが開く音に反応し、龍也は踵を返した。[p]
-[auto_chara name="龍也" face="angry"]
+[auto_chara name="龍也" face="angry" time=150]
 「お前、綾香に何をしたんだ！」[p]
 
 龍也は声を荒げると同時に、いきなり拓海に殴りかかってきた。[p]
@@ -746,7 +746,7 @@
 
 「離して！」[p]
 [wait time=500]
-[auto_chara name="恵" face="scream"]
+[auto_chara name="恵" face="scream" time=150]
 恵の鋭い声が屋上に響く。[p]
 
 龍也だけがゆっくりと振り返る。[p]

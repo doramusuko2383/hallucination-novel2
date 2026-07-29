@@ -125,7 +125,7 @@
 
 先輩らの普段の嫌がらせの内容を告発して、[r]
 龍也を庇った生徒がいた。[p]
-[auto_chara name="翔太" face="normal" time=3000]
+[auto_chara name="翔太" face="normal" time=700]
 それが同じサッカー部の翔太だった。[p]
 
 翔太は元々サッカー部を辞めたいなと思っていたし、[r]
@@ -755,7 +755,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [auto_chara name="拓海" face="level2_smile"]
 「菊池さん、ちょっといいかな」[p]
 
-[auto_chara name="恵" face="normal"]
+[auto_chara name="恵" face="normal" time=500]
 恵は顔を上げ、明るい笑顔を浮かべた。[p]
 
 拓海は、そのほほ笑みに少し面食らった。[p]
