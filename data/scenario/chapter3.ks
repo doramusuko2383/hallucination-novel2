@@ -332,9 +332,9 @@
 [playse storage=se/white_noise.ogg volume=100]
 [bg storage="black.png" time=300]
 [fadeoutbgm time=3000]
-
-その瞬間、世界が静まり返った。[p]
-
+[delay speed="120"]
+その瞬間、[l]世界が静まり返った。[p]
+[resetdelay]
 [wait time=1000]
 
 やった……成功だ。[p]
