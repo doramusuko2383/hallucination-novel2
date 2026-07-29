@@ -235,7 +235,7 @@
 
 [chara_hide_all time=300]
 [wait time=500]
-
+[auto_chara name="拓海" face="convenience"]
 拓海は何も答えられなかった。[p]
 
 慎重になり過ぎた。[p]
@@ -244,7 +244,9 @@
 それだけで不審者だった。[p]
 
 もう二度と、同じ方法は使えない。[p]
+[chara_hide_all time=300]
 
+[bg storage="black.png" time=1000]
 その日の夜、スマホが震えた。[p]
 
 画面には、龍也からの短いメッセージが表示されていた。[p]
