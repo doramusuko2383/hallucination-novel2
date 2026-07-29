@@ -368,14 +368,15 @@
 生徒たちは皆教室に戻ったようで人の気配はない。[p]
 
 [wait time=500]
-[delay speed="60"]
+[delay speed="120"]
 拓海は、[l]まるで子供が親の胸に飛び込むような自然な動作で、[l]両足をそろえて[p]
 跳んだ――。[p]
 [bg storage="black.png" time=0 wait=false]
+[resetdelay]
 [stopse]
 [stopbgm]
 [wait time=1000]
-
+[delay speed="90"]
 ジェットコースターのような浮遊感が一瞬あり、[p]
 
 [wait time=500]
@@ -907,7 +908,9 @@
 [playse storage=se/white_noise.ogg volume=100]
 [bg storage="black.png" time=300]
 [fadeoutbgm time=3000]
-その瞬間、世界から音が消えた――。[p]
+[delay speed="120"]
+その瞬間、[l]世界から音が消えた――。[p]
+[resetdelay]
 [wait time=1000]
 拓海は屋上での出来事のあと、あの「幻」についてずっと考えていた。[p]
 まるでわからないことばかりだったが、拓海にはなぜだか、確信を持っていることがあった。[p]
