@@ -339,7 +339,6 @@
 
     function installConfigOverlay() {
         window.__hlOpenConfigOverlay = function (options) {
-            hideChoiceBackdrop(true);
             options = options || {};
             var kag = TYRANO.kag;
             var config = kag.config;
