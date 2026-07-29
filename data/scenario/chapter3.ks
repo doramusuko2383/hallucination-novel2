@@ -326,10 +326,10 @@
 
 [stopse fadeout=1000]
 [fadeoutbgm time=3000]
-[playse storage=se/tinnitus.ogg volume=100]
+[playse storage=se/tinnitus.ogg volume=100 buf="0"]
 [bg storage="white.png" time=80]
 [wait time=300]
-[playse storage=se/white_noise.ogg volume=100]
+[playse storage=se/white_noise.ogg volume=100 buf="1"]
 [bg storage="black.png" time=300]
 [fadeoutbgm time=3000]
 [delay speed="120"]
