@@ -348,7 +348,15 @@
 
 あと一歩。[p]
 
-[wait time=500]
+[wait time=1000]
+
+[choice_start count=1 y=360]
+[choice name="choice_ch5_touch_hand" text="力をつかう" target="*next"]
+[s]
+
+*next
+[cm]
+
 
 拓海は大きく欠伸をするふりをしながら、ゆっくり右手を伸ばした。[p]
 
