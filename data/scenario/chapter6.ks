@@ -16,7 +16,7 @@
 [playse storage=se/air_noise.ogg loop=true volume=100]
 
 病室は酷く殺風景で、何も書かれていない真っ白なキャンパスを彷彿とさせた。[p]
-[chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=300 wait=false]
+[chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=700 wait=false]
 [wait time=1000]
 綾香が目を開けると、天井の蛍光灯がぼんやりと目に入ってくる。[p]
 シーツは冷たく、何日経っても枕の固さがしっくりこない感じがする。[p]
@@ -95,7 +95,7 @@
 看護士に日々の入院の間のお礼を言っているのだ。[p]
 本当に「良い人」を演じるのは得意な母だと、皮肉に思う。[p]
 [playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=900]
-[auto_chara name="綾香の母" face="smile"]
+[auto_chara name="綾香の母" face="smile" time=500]
 「起きてたのね」[p]
 
 部屋に入ってきた母親が、冷たい笑顔を浮かべる。[p]
@@ -316,7 +316,7 @@
 二人でこの場に臨む覚悟を固めている。[p]
 龍也は呼び出すとすぐに現れた。[p]
 拓海は自分から連絡を入れたことがなかったので、奇妙な気分だった。[p]
-[auto_chara name="龍也" face="angry"]
+[auto_chara name="龍也" face="angry" time=150]
 [playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 「俺を呼び出すとは、いい度胸だな」[p]
 
@@ -670,7 +670,7 @@
 翔太が龍也に囁く。[p]
 拓海も、リビングの美しさに驚いていた。[p]
 綾香が気だるそうにリビングに入ってくると、場が少し緊張した。[p]
-[chara_show name="綾香" face="private_normal" time=300 wait=false]
+[chara_show name="綾香" face="private_normal" time=700 wait=false]
 しかし、綾香は恵を見るなり、微笑んだ。[p]
 [chara_show name="綾香" face="private_smile" time=300 wait=false]
 [auto_chara name="恵" face="serious"]
@@ -1188,7 +1188,7 @@
 
 [chara_hide_all]
 [bg storage="bg_rooftop_day.webp" time=500]
-[auto_chara name="龍也" face="sad"]
+[auto_chara name="龍也" face="sad" time=80]
 現実に戻った瞬間、龍也は声にならない叫びを上げて崩れ落ちた。[p]
 
 [auto_chara name="恵" face="private_scream"]

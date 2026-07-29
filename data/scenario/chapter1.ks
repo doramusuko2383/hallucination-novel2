@@ -148,7 +148,7 @@
 
 声は淡々としているが、その視線は鋭い。[p]
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
-[auto_chara name="龍也" face="normal" left=50]
+[auto_chara name="龍也" face="normal" left=50 time=700]
 「じゃあ、いつものやつやろうぜ」[p]
 
 龍也はどこから手に入れたのだろうか。ボクシンググローブを手にはめながら言った。[p]
@@ -163,12 +163,12 @@
 
 これが日常になってしまっている自分が情けない。[p]
 
-[auto_chara name="翔太" face="nastysmile" left=180]
+[auto_chara name="翔太" face="nastysmile" left=180 time=500]
 「三分で次、俺に交代してよ」[l]
 
 悪友の翔太がニヤニヤと笑いながら言う。[p]
 
-[auto_chara name="綾香" face="normal" left=300]
+[auto_chara name="綾香" face="normal" left=300 time=500]
 「やめなよ、かわいそうじゃーん」[l]
 
 仲間の綾香が、薄ら笑いを浮かべながら表面的な言葉を口にする。[p]

@@ -430,7 +430,7 @@
 
 [wait time=500]
 
-[auto_chara name="恵" face="serious"]
+[auto_chara name="恵" face="serious" time=500]
 「永山君、今日放課後少し時間ある？」[p]
 
 声に驚いて顔を上げると、[r]

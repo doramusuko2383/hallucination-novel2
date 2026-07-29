@@ -109,7 +109,7 @@
 [fadeoutbgm time=4000]
 [playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=600]
 [wait time=500]
-[auto_chara name="拓海" face="private2_shout"]
+[auto_chara name="拓海" face="private2_shout" time=150]
 「菊池さん！」[p]
 [chara_hide_all]
 ;[auto_chara name="恵" face="private_help"]
@@ -144,7 +144,7 @@
 「服は脱がされそうになったけど……大丈夫だった」[p]
 
 [wait time=500]
-[auto_chara name="拓海" face="private2_angry"]
+[auto_chara name="拓海" face="private2_angry" time=80]
 拓海は激しい怒りが湧いてきた。[p]
 「どういうことだ」[p]
 
@@ -600,7 +600,7 @@
 「ケジメ……？」[p]
 
 拓海が不思議そうに聞き返すと、龍也は視線を落とし、深く頭を下げた。[p]
-[auto_chara name="龍也" face="apologize"]
+[auto_chara name="龍也" face="apologize" time=700]
 [wait time=1000]
 「これまでお前にしてきたこと、許されるものじゃないって思ってる。[p]
 本当に、すまなかった」[p]
