@@ -1002,7 +1002,7 @@
 [bg storage="white.png" time=80]
 [wait time=500]
 [bg storage="black.png" time=300]
-[delay speed="90"]
+[delay speed="120"]
 [font size=40 color="#B8DFFF"]
 コエヲ……[p]
 [wait time=500]
