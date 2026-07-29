@@ -367,16 +367,52 @@
 [wait time=1000]
 拓海はその光景を見つめながら、[r][l]
 自分が作り出したこの幻覚の中に、確かな力を感じていた。[p]
-[fadeoutbgm time=3000]
+
 [wait time=1000]
+
+これ以上、ここにいる必要はない。[p]
+
+拓海は袋を受け取ると、[r][l]
+綾香の顔をもう一度だけ確認した。[p]
+
+彼女は目の前にいる拓海ではなく、[r]
+そこには存在しない何かを見つめたまま、動こうとしない。[p]
+
+[fadeoutbgm time=3000]
+[chara_hide_all time=300]
+[playse storage=se/convenience_door.ogg volume=60]
+[wait time=500]
+
+[bg storage="bg_convenience_store_night.webp" time=800]
+
+店を出た途端、冷たい夜風が頬を撫でた。[p]
+
+胸の鼓動は、まだ速いままだった。[p]
+
+だが、店に入る前に感じていた恐怖は、[r]
+いつの間にか別の感情へと変わっていた。[p]
+
+成功した。[p]
+
+今度は偶然ではない。[p]
+
+自分の意思で、力を使うことができた。[p]
+
+拓海は一度も振り返ることなく、[r]
+明るいコンビニの前から歩き去った。[p]
+
+[bg storage="black.png" time=800]
+[wait time=1500]
 
 *ch3_classroom_after
 
 ; 追加した演出意図: 場面転換は黒を挟み、事件後の時間経過を淡々と示す。
 
 [bg storage="bg_classroom_day.webp" time=800]
-[playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true time=800]
-10月に入り、秋の冷たい風が学校の校庭に吹き始めていた。[p]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true time=1000]
+それから数日が経ち、十月に入った。[p]
+
+秋の冷たい風が、学校の校庭に吹き始めていた。[p]
 
 朝晩は上着が必要なくらい涼しくなり、[r][l]
 教室の窓から見える木々の葉も少しずつ色づいている。[p]
@@ -392,7 +428,7 @@
 [wait time=500]
 
 龍也は相変わらず拓海を呼び出してはくるが、[r][l]
-龍也もどこか元気がないように見えた。[p]
+以前のような勢いはなく、どこか元気がないように見えた。[p]
 
 綾香のことが影響しているのかもしれない。[p]
 
@@ -435,7 +471,8 @@
 
 彼のことをもっと調べなければならない。[p]
 
-しかし、龍也と接点がある生徒など、思い当たる人物はいない。[p]
+しかし、龍也の事情を詳しく知っていそうな人物には、[r]
+誰一人として心当たりがなかった。[p]
 
 どうしたものかと、休み時間に机に肘をついて考え込んでいたその時だった。[p]
 
@@ -500,11 +537,14 @@
 [playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
 [playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=500]
 
+駅近くのカラオケの個室に入り、[r]
+二人は無言で席に着いた。[p]
+
+曲を入れる様子もなく、[r]
+恵は真剣な表情で拓海を見つめている。[p]
+
 [auto_chara name="恵" face="serious"]
 「実は、この前、綾香がバイトするコンビニに永山君が入っていくのを見かけたの」[p]
-
-駅近くのカラオケの個室に入って席に着くなり、[r]
-恵は拓海に向かって話し始めた。[p]
 
 彼女の表情には、どこかいつもとは違う緊張感が漂っている。[p]
 
