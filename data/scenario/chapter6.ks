@@ -620,7 +620,7 @@
 翔太に力のことを打ち明けて謝罪したときのことを思い出す。[p]
 [wait time=2000]
 [bg storage="bg_family_restaurant_evening.webp" time=900]
-[playse storage=se/restaurant_ambience.ogg loop=true volume=100 fadein=true time=1000]
+[playse storage=se/restaurant_ambience.ogg loop=true volume=60 fadein=true time=1000]
 [auto_chara name="翔太" face="normal"]
 「知ってたよ、お前の力だって」[p]
 
