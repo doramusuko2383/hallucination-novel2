@@ -1149,7 +1149,7 @@
 今度は不思議と心地よく響いていた。[p]
 
 [wait time=1000]
-
+[bg storage="black.png" time=1000]
 ; 章末整理: 第三章内で鳴らしたカラオケ等のループSEを次章へ持ち越さない。
 [stopse fadeout=1000]
 [wait time=1000]
