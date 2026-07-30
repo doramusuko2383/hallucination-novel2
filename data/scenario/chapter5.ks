@@ -507,7 +507,7 @@
 
 そう考えた瞬間、胸の奥がひどく痛んだ。[p]
 [bg storage="bg_family_restaurant_evening.webp" time=800]
-[playbgm storage="restaurant_ambience.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=60 fadein=true time=1000]
 
 放課後、いつものファミレスで恵と落ち合った。[p]
 拓海は思い切って、失敗の原因を正直に話した。[p]
