@@ -365,13 +365,14 @@
 拓海は心の中で呟いた。[p]
 恵と話していると、時間の過ぎるのが早く感じる。[p]
 この後に待ち構えている事態を考えて、拓海は気を引き締めた。[p]
-
+[fadeoutbgm time=2000]
 [chara_hide_all time=300]
 [wait time=500]
-[bg storage="bg_mansion_night.webp" time=1000]
 [playse storage=se/cafe_chime.ogg volume=100]
+[bg storage="black.png" time=300]
+[bg storage="bg_mansion_night.webp" time=1000]
 [wait time=2000]
-[playse storage=se/city_ambience.ogg volume=100 loop=true fadein=true time=1000]
+[playse storage=se/city_ambience.ogg volume=50 loop=true fadein=true time=1000]
 
 二人は会計を済ませ、店を出た。[p]
 外はすでに暗くなり、空気がひんやりしている。[p]
@@ -391,7 +392,7 @@
 皆どこか品が感じられる気がした。[p]
 
 [wait time=1000]
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=30]
 じっと待っていると、夜風が冷たく感じ始めた。[p]
 
 肌寒いな……。[p]
@@ -427,7 +428,7 @@
 
 時刻はもう18時30分を回っていた。[p]
 予定よりもかなり遅れている。[p]
-[stopse fadeout=1000]
+[stopse fadeout=3000]
 [playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=800]
 
 どこかに寄り道でもしたのか……それとも、急に予定変更して、車で別の場所に出かけた可能性もあるな……。[p]
@@ -436,7 +437,7 @@
 
 [wait time=1000]
 だがその瞬間――二人の姿がエントランスに現れた。[p]
-[stopse fadeout=500]
+[stopse fadeout=3000]
 [playse storage=se/leather_shoes_walk.ogg volume=100]
 [wait time=1000]
 [bg storage="ch4_kyoko_takada.webp" time=1000]
@@ -459,7 +460,7 @@
 拓海はその光景を見届けて、すぐに恵に連絡を取る。[p]
 
 しばらくして、息を切らしながら恵が現れた。[p]
-[playse storage=se/city_ambience.ogg volume=100 loop=true fadein=true time=1000]
+[playse storage=se/city_ambience.ogg volume=50 loop=true fadein=true time=1000]
 [auto_chara name="恵" face="private_serious" time=150]
 「どんな男だった？」[p]
 
