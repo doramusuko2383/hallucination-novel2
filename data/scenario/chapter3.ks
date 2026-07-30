@@ -959,7 +959,7 @@
 
 [auto_chara name="恵" face="sad"]
 「身体の関係を迫られてるの」[p]
-[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=80 fadein=true time=1000]
 [auto_chara name="拓海" face="level2_surprise"]
 拓海は言葉を失った。[p]
 
@@ -998,6 +998,7 @@
 [auto_chara name="恵" face="troubled_smile"]
 そこで恵は少し困ったように笑った。[p]
 [fadeoutbgm time=4000]
+[playbgm storage="airconditioner.ogg" loop=true volume=80 fadein=true time=1000]
 「うち、母子家庭なんだよね」[p]
 [auto_chara name="拓海" face="level2_depressed"]
 「……あ」[p]
@@ -1114,6 +1115,7 @@
 
 拓海は最後まで、その背中を見送ることしかできなかった。[p]
 
+[bg storage="black.png" time=1000]
 誰かを救うには、覚悟がいる。[p]
 
 その覚悟を持てなかった。[p]
@@ -1134,8 +1136,8 @@
 *ch3_help_megumi_retry
 [cm]
 [bg storage="bg_karaoke.webp" time=0]
-[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
-[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=80 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=60 fadein=true time=500]
 [auto_chara name="恵" face="serious"]
 @jump target="*ch3_choice_help_megumi"
 
