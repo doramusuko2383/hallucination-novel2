@@ -344,7 +344,7 @@
 拓海は翔太に見せたときと同じ感覚を覚え、成功を確信する。[p]
 
 先ほどまでの緊張感からの解放による安堵と高揚感が駆け巡る。[p]
-[playbgm storage="ability_theme.ogg" loop=true volume=100 fadein=true time=1500]
+[playbgm storage="ability_theme.ogg" loop=true volume=80 fadein=true time=1500]
 [bg storage="ch3_convenience_touch.webp" time=900]
 綾香は動きを止め、目を見開いたまま、[r][l]
 時間が止まったように固まっている。[p]
@@ -510,7 +510,7 @@
 
 胸の奥に不安が広がる。[p]
 
-[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=80 fadein=true time=1000]
 [wait time=500]
 
 綾香の件？[l]
@@ -588,7 +588,7 @@
 そしたら、綾香が私を見るなり急に泣き出して……」[r][p]
 [stopbgm]
 [stopse]
-[playbgm storage="suspense.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="suspense.ogg" loop=true volume=80 fadein=true time=1000]
 [auto_chara name="恵" face="pain"]
 [delay speed="90"]
 「店長にレイプされたって言ったのよ」[p]
@@ -616,8 +616,8 @@
 [wait time=1000]
 
 ; 追加した演出意図: 想定外の単語で鼓動を再投入し、音量は控えめにして焦燥だけを出す。
-[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
-[playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=80 fadein=true time=1000]
+[playse storage=se/heartbeat.ogg loop=true volume=60 fadein=true time=500]
 その言葉に、拓海は顔が青ざめた。[p]
 
 心臓が鼓動を強め、体中に血が駆け巡る。[p]
@@ -638,7 +638,7 @@
 監視カメラの存在を忘れていたわけではないが、[r]
 そこまで細かく確認されるとは思っていなかった。[p]
 
-映像には、自分がレジで綾香に話しかけ、[r]
+映像には、自分がレジで綾香から、[r]
 商品を買う様子が写っているはずだ。[p]
 
 [auto_chara name="恵" face="serious"]
@@ -676,8 +676,8 @@
 *ch3_megumi_truth_retry
 [cm]
 [bg storage="bg_karaoke.webp" time=0]
-[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
-[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=80 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=60 fadein=true time=500]
 [playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=500]
 [auto_chara name="恵" face="serious"]
 @jump target="*ch3_choice_megumi_truth"
@@ -710,6 +710,8 @@
 そう言い残し、部屋を出ていく。[p]
 
 拓海は引き止めることもできず、その背中を見送るしかなかった。[p]
+
+[bg storage="black.png" time=1000]
 
 あの日。[p]
 
