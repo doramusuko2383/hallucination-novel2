@@ -938,7 +938,7 @@
 [stopse fadeout=1000]
 [wait time=1000]
 [font color="#CFE8FF"]
-[playbgm storage="ability_theme.ogg" loop=true volume=100 fadein=true time=1500]
+[playbgm storage="ability_theme.ogg" loop=true volume=80 fadein=true time=1500]
 時が止まっている。[l]
 そう拓海が感じるほどのスローな感覚。[l]
 翔太は目を見開いたままその場で固まったように見える。[p]
