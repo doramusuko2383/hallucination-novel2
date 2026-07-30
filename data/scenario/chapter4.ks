@@ -711,7 +711,9 @@
 [bg storage="ch4_takumi_megumi.webp" time=2000]
 高田の言葉が耳に届いた瞬間、拓海の思考が止まった。[p]
 
+[delay speed="90"]
 これが証拠だ……。[p]
+[resetdelay]
 
 横目で恵を見ると、恵も血の気の引いた顔で固まっていた。[p]
 二人とも、しばらく何も考えられなかった。[p]
@@ -879,7 +881,10 @@
 
 [wait time=800]
 [bg storage="black.png" time=900]
-高田には家族が……子供もいるのか？[p]
+高田には家族が……[l]
+[delay speed="90"]
+子供もいるのか？[p]
+[resetdelay]
 
 拓海は一瞬、言葉を失った。[p]
 響子はこのことを知っているのだろうか？[p]

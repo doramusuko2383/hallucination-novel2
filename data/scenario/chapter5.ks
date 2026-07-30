@@ -380,7 +380,9 @@
 
 [auto_chara name="拓海" face="private_surprise"]
 
+[delay speed="110"]
 ……何も起きない？[p]
+[resetdelay]
 
 その瞬間、全身から血の気が引いた。[p]
 
@@ -485,7 +487,9 @@
 
 ……。[p]
 
-いや、本当にそれだけだったのか？[p]
+[delay speed="95"]
+いや、[l]本当にそれだけだったのか？[p]
+[resetdelay]
 
 恵に頼られて、少し嬉しかった。[p]
 
@@ -1001,7 +1005,9 @@
 
 自殺未遂にまで追い詰めることは、[p]
 
+[delay speed="100"]
 本当に、正しかったのだろうか。[p]
+[resetdelay]
 
 [wait time=1000]
 
