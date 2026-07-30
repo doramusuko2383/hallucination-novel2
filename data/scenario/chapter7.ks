@@ -603,7 +603,9 @@
 [auto_chara name="龍也" face="apologize" time=700]
 [wait time=1000]
 「これまでお前にしてきたこと、許されるものじゃないって思ってる。[p]
+[delay speed="95"]
 本当に、すまなかった」[p]
+[resetdelay]
 
 突然の謝罪に、拓海は一瞬驚いた。[p]
 龍也の頭が下がったままで、龍也の言葉が本気であることが伝わってくる。[p]
@@ -664,7 +666,9 @@
 [bg storage="ch7_shakehands.webp" time=500]
 
 拓海も手を差し出し、二人の手が固く握られた。[p]
-あのとき、できなかった握手。[p]
+[delay speed="90"]
+あのとき、[l]できなかった握手。[p]
+[resetdelay]
 今度はしっかりと、二人の間にあったわだかまりが消え去っていくようだった。[p]
 「じゃあ……お前もケジメつけないとな」[p]
 
@@ -758,7 +762,9 @@
 
 恵に軽く流されてしまった。[p]
 [auto_chara name="拓海" face="level3_normal"]
-「気付いてあげたい。と思ったんだよね」[p]
+[delay speed="90"]
+「気付いてあげたい、[l]と思ったんだよね」[p]
+[resetdelay]
 
 [wait time=1000]
 
@@ -846,7 +852,10 @@
 [auto_chara name="恵" face="normal"]
 「そうね。高田のときに使えなかったもんね」[p]
 [auto_chara name="拓海" face="level3_normal"]
-「うん……でも、相手を強く思ったときにも使えるのかなって」[p]
+「うん……でも、[l]
+[delay speed="90"]
+相手を強く思ったときにも使えるのかなって」[p]
+[resetdelay]
 
 彼はそっと恵を見つめた。[p]
 
@@ -865,7 +874,10 @@
 
 [bg storage="ch7_last1.webp" time=900]
 
-その瞬間、二人の周囲の時間がゆっくりと止まったようになる。[p]
+その瞬間、[l]
+[delay speed="110"]
+二人の周囲の時間がゆっくりと止まったようになる。[p]
+[resetdelay]
 店内のBGMが遠のいていく。[p]
 そこに拓海と恵、二人だけの静かな空間が広がっていった。[p]
 
@@ -887,6 +899,8 @@
 拓海が穏やかな笑みを浮かべ、静かにこちらを見つめている。[p]
 恵は、涙をぬぐいながら小さく微笑み返し、静かに呟いた。[p]
 [bg storage="ch7_last2.webp" time=900]
-「ありがとう……拓海」[p]
+[delay speed="100"]
+「ありがとう……[l]拓海」[p]
+[resetdelay]
 
 [jump storage="ending.ks"]

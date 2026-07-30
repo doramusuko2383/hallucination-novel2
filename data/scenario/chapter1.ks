@@ -368,11 +368,11 @@
 生徒たちは皆教室に戻ったようで人の気配はない。[p]
 
 [wait time=500]
-[delay speed="120"]
 拓海は、[l]まるで子供が親の胸に飛び込むような自然な動作で、[l]両足をそろえて[p]
+[delay speed="130"]
 跳んだ――。[p]
-[bg storage="black.png" time=0 wait=false]
 [resetdelay]
+[bg storage="black.png" time=0 wait=false]
 [stopse]
 [stopbgm]
 [wait time=1000]
@@ -457,7 +457,11 @@
 [wait time=1800]
 
 世界が、[l]
+[resetdelay]
+[delay speed="120"]
 切れた。[p]
+[resetdelay]
+[delay speed="90"]
 
 [wait time=1200]
 

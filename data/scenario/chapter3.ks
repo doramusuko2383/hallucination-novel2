@@ -305,7 +305,9 @@
 
 [wait time=1000]
 
+[delay speed="110"]
 やるしかない――。
+[resetdelay]
 
 [wait time=1000]
 [choice_start count=1 y=360]
@@ -1037,7 +1039,9 @@
 
 真っ直ぐな目だった。[p]
 
+[delay speed="90"]
 「お母さんを、助けたい」[p]
+[resetdelay]
 
 *ch3_choice_help_megumi
 [choice_start count=2]
@@ -1066,7 +1070,9 @@
 
 [bg storage="ch3_karaoke_determination.webp" time=900]
 
-「よし、お母さんを助けよう」[p]
+[delay speed="110"]
+「よし、[l]お母さんを助けよう」[p]
+[resetdelay]
 
 その言葉が口をついて出た瞬間、[r]
 拓海の胸の中に新たな感情が生まれた。[p]
