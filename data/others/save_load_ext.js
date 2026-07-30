@@ -543,6 +543,8 @@
         var base = $("#tyrano_base");
         window.clearTimeout(choiceBackdropTimer);
         window.clearTimeout(choiceBackdropRemovalTimer);
+        choiceBackdropTimer = null;
+        choiceBackdropRemovalTimer = null;
         $("#hl-choice-backdrop").remove();
         var backdrop = $("<div></div>").attr("id", "hl-choice-backdrop");
         // Keep the dimming overlay in Tyrano's game root. The system root holds
@@ -551,6 +553,7 @@
         var sceneRoot = base.find("#root_layer_game");
         (sceneRoot.length ? sceneRoot : base).append(backdrop);
         choiceBackdropTimer = window.setTimeout(function () {
+            choiceBackdropTimer = null;
             $("body").addClass("hl-choice-active");
             backdrop.addClass("is-visible");
         }, DEFAULT_CHOICE_CONFIG.introDelay);
@@ -559,6 +562,8 @@
     function hideChoiceBackdrop(immediate) {
         window.clearTimeout(choiceBackdropTimer);
         window.clearTimeout(choiceBackdropRemovalTimer);
+        choiceBackdropTimer = null;
+        choiceBackdropRemovalTimer = null;
         $("body").removeClass("hl-choice-active");
         $("#hl-choice-backdrop").removeClass("is-visible");
         if (immediate) {
@@ -566,6 +571,7 @@
             return;
         }
         choiceBackdropRemovalTimer = window.setTimeout(function () {
+            choiceBackdropRemovalTimer = null;
             $("#hl-choice-backdrop").remove();
         }, DEFAULT_CHOICE_CONFIG.fadeTime);
     }
@@ -581,8 +587,26 @@
     }
 
     function syncChoiceBackdropState() {
+        if (hasActiveStoryChoice()) {
+            var backdrop = $("#hl-choice-backdrop");
+            if (!backdrop.length) {
+                // The choice DOM is part of Tyrano's save data, but the body
+                // class that applies the scene blur is not. Recreate both
+                // after LOAD so a pending choice keeps its original staging.
+                var base = $("#tyrano_base");
+                var sceneRoot = base.find("#root_layer_game");
+                backdrop = $("<div></div>").attr("id", "hl-choice-backdrop");
+                (sceneRoot.length ? sceneRoot : base).append(backdrop);
+            }
+            // Preserve the intentional intro delay for a newly displayed
+            // choice; only restore immediately when no intro is in progress.
+            if (choiceBackdropTimer === null) {
+                $("body").addClass("hl-choice-active");
+                backdrop.addClass("is-visible");
+            }
+            return;
+        }
         if (!$('body').hasClass("hl-choice-active") && !$("#hl-choice-backdrop").length) return;
-        if (hasActiveStoryChoice()) return;
         hideChoiceBackdrop(true);
     }
 
