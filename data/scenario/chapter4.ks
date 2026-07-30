@@ -72,7 +72,7 @@
 
 [fadeoutbgm time=3000]
 [bg storage="bg_family_restaurant_night.webp" time=900]
-[playbgm storage="restaurant_ambience.ogg" loop=true volume=60 fadein=true time=1000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=30 fadein=true time=1000]
 
 二人が連絡先を交換してから気づいたことだが、実はお互いの家は意外と近い場所にあった。[p]
 最寄り駅こそ違うものの、私鉄が並走している区間に位置し、[r][l]二人の自宅は1キロほどしか離れていなかった。[p]
