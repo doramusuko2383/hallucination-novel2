@@ -701,7 +701,7 @@
 [fadeoutbgm time=3000]
 [bg storage="black.png" time=500]
 [bg storage="bg_family_restaurant_night.webp" time=900]
-[playbgm storage="restaurant_ambience.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=30 fadein=true time=1000]
 
 [playse storage=se/kanpai.ogg volume=100]
 「卒業おめでとう！」[p]
