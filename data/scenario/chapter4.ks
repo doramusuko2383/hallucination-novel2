@@ -292,7 +292,7 @@
 「うん、あらゆる可能性を考えて、どんな展開になっても対応できるようにしておこう」[p]
 [fadeoutbgm time=4000]
 [chara_hide_all time=300]
-[playbgm storage="restaurant_ambience.ogg" loop=true volume=60 fadein=true time=1000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=30 fadein=true time=1000]
 [bg storage="black.png" time=0 wait=false]
 [wait time=2000]
 結局、その日は夜遅くまで作戦会議が続いた。[p]
