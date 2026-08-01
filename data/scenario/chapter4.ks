@@ -98,7 +98,7 @@
 [auto_chara name="拓海" face="private_smile"]
 「……もう覚えられてるんだ」[p]
 
-[auto_chara name="恵" face="private_happy"]
+[auto_chara name="恵" face="private_laugh"]
 「何回も来てるしね」[p]
 
 [auto_chara name="拓海" face="private_smile"]
