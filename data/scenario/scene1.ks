@@ -472,7 +472,7 @@ AppStoreやGooglePlayに向けてアプリ化して販売することもでき�
 #あかね
 ここらで、別のキャラクターに登場してもらいましょうか[l][cm]
 やまとー[page]
-[chara_show name="yamato"]
+[chara_show name="yamato" time=300]
 
 こんな風に。簡単です。[l][r]
 キャラクターは何人でも登場させることができるから、試してみてね。[page]
