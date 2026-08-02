@@ -538,9 +538,11 @@
 
     var choiceBackdropTimer = null;
     var choiceBackdropRemovalTimer = null;
+    var choiceBackdropDismissed = false;
 
     function showChoiceBackdrop() {
         var base = $("#tyrano_base");
+        choiceBackdropDismissed = false;
         window.clearTimeout(choiceBackdropTimer);
         window.clearTimeout(choiceBackdropRemovalTimer);
         choiceBackdropTimer = null;
@@ -588,6 +590,10 @@
 
     function syncChoiceBackdropState() {
         if (hasActiveStoryChoice()) {
+            // The selected glink remains in the DOM while Tyrano runs its
+            // exit animation. MutationObserver callbacks during that window
+            // must not restore the blur that the click handler just removed.
+            if (choiceBackdropDismissed) return;
             var backdrop = $("#hl-choice-backdrop");
             if (!backdrop.length) {
                 // The choice DOM is part of Tyrano's save data, but the body
@@ -758,6 +764,7 @@
 
         // Tyrano's glink handler stops click propagation. Listen during capture so
         // the backdrop is always cleaned up, even when the branch starts immediately.
+        choiceBackdropDismissed = true;
         hideChoiceBackdrop();
     }
 
