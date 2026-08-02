@@ -346,7 +346,7 @@
 
 ドクン……。[p]
 
-あと一歩。[p]
+あと一歩。
 
 [wait time=1000]
 
@@ -434,7 +434,7 @@
 
 何か、決定的に見落としている。[p]
 
-何が違った？[p]
+何が違った？
 
 *ch5_choice_ability_failure
 [choice_start count=3 x=390 y=250 width=500]
@@ -843,7 +843,7 @@
 [auto_chara name="拓海" face="level2_surprise"]
 「え？」[p]
 [auto_chara name="恵" face="serious"]
-「綾香の所に、お見舞いに行こうよ」[p]
+「綾香の所に、お見舞いに行こうよ」
 
 *ch5_choice_visit_ayaka
 [choice_start count=2]
