@@ -90,7 +90,7 @@
 
 ……[p]
 
-行くしかない。[p]
+行くしかない。
 [fadeoutbgm time=3000]
 [wait time=1000]
 [choice_start count=1 y=360]
