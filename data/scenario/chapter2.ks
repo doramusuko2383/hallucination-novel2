@@ -742,6 +742,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [playse storage=se/heartbeat.ogg loop=true volume=100]
 心臓がやけに早く脈打つのを感じながら、[r]
 静かに恵の方へと歩み寄る。[p]
+どうやって話し掛けようか。
 
 *ch2_choice_megumi_approach
 [cm]
