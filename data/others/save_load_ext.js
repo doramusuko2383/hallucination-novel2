@@ -754,16 +754,17 @@
             });
         }
 
-        document.removeEventListener("click", handleStoryChoiceSelection, true);
-        document.addEventListener("click", handleStoryChoiceSelection, true);
+        // Tyrano emits this only after its glink handler has accepted the
+        // input (click enabled, strong stop active, and not already chosen).
+        // Listening here avoids dismissing the backdrop for rejected clicks.
+        kag.off("click-tag-glink.hlChoiceBackdrop");
+        kag.on("click-tag-glink.hlChoiceBackdrop", handleAcceptedStoryChoiceSelection);
     }
 
-    function handleStoryChoiceSelection(event) {
+    function handleAcceptedStoryChoiceSelection(event) {
         var choiceButton = $(event.target).closest(".glink_button.hl-story-choice");
         if (!choiceButton.length) return;
 
-        // Tyrano's glink handler stops click propagation. Listen during capture so
-        // the backdrop is always cleaned up, even when the branch starts immediately.
         choiceBackdropDismissed = true;
         hideChoiceBackdrop();
     }
