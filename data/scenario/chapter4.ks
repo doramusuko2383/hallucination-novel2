@@ -186,7 +186,7 @@
 [wait time=2000]
 拓海はしばらく腕を組んで考え込んだ。[p]
 
-深く息を吐いて、思いついたアイデアを口にする。[p]
+深く息を吐いて、思いついたアイデアを口にする。
 
 [choice_start count=3]
 [choice name="ch4_enter_as_friend" text="男友達として上がり込む" target="*ch4_enter_as_friend"]
