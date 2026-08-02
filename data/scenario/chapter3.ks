@@ -181,7 +181,7 @@
 [wait time=500]
 店内が静かになる。[p]
 [wait time=500]
-今ならいける……。[p]
+今ならいける……。
 
 *ch3_choice_convenience_counter
 [choice_start count=2]
@@ -667,7 +667,7 @@
 [wait time=500]
 
 [auto_chara name="恵" face="serious"]
-「永山君、何か知ってるんじゃないの？」[p]
+「永山君、何か知ってるんじゃないの？」
 
 *ch3_choice_megumi_truth
 [choice_start count=2]
@@ -1040,7 +1040,7 @@
 真っ直ぐな目だった。[p]
 
 [delay speed="90"]
-「お母さんを、助けたい」[p]
+「お母さんを、助けたい」
 [resetdelay]
 
 *ch3_choice_help_megumi
