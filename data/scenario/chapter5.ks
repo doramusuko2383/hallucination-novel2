@@ -310,13 +310,13 @@
 
 エスカレーターで何とか追いつき、そのまま数歩後ろにつく。[p]
 
+[bg storage="bg_station_home.webp" time=800]
+
 高田は迷うことなくホームの先頭へ向かった。[p]
 
 毎朝、同じ場所に並んでいるのだろう。[p]
 
 拓海も、その後ろへ静かに立った。[p]
-
-[bg storage="bg_station_home.webp" time=800]
 
 高田は前だけを見つめている。[p]
 
@@ -463,7 +463,7 @@
 
 綾香。[p]
 
-あの二人には、強い憎しみがあった。[p]
+あの二人に対しては、強い憎しみがあった。[p]
 
 やられて当然だ。[p]
 
@@ -582,7 +582,7 @@
 
 「そうだ……！」[p]
 
-「もう力を使う必要なんて、ないのかもしれない！」
+「もう力を使う必要なんて、ないのかもしれない！」[p]
 
 [auto_chara name="恵" face="serious"]
 「なるほどね……」[p]
@@ -651,6 +651,7 @@
 [chara_hide_all time=300]
 [stopse fadeout=700]
 [fadeoutbgm time=3000]
+[playbgm storage="room_noise.ogg" loop=true volume=10 fadein=true time=1000]
 [bg storage="bg_takumiroom_night.webp" time=800]
 拓海は家に帰ると、何だか今日はやたらと長い一日だったと感じた。[p]
 [playse storage=se/bed.ogg volume=100]
@@ -666,8 +667,9 @@
 [wait time=1500]
 
 そのまま眠りに落ちた。[p]
-
+[fadeoutbgm time=3000]
 [wait time=3000]
+[playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true time=1000]
 [bg storage="bg_classroom_day.webp" time=800]
 あれから何も有効な手立てが思い浮かばないまま一週間が過ぎた。[p]
 拓海は、自分が恵の力になれなかったことを、ずっと引きずっていた。[p]
@@ -682,8 +684,8 @@
 嫌な予感がする。[p]
 まるで楽しい動画を見ている途中に、鬱陶しい広告がカットインするような感覚だ。[p]
 [bg storage="bg_rooftop_rainyday.webp" time=800]
-[playse storage=se/wind_rooftop.ogg volume=100]
-[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1000]
+[playse storage=se/wind_rooftop.ogg volume=10]
+[playbgm storage="tension_high.ogg" loop=true volume=60 fadein=true time=1000]
 昼休み、呼び出された屋上に向かうと、龍也は屋上の真ん中で腕を組み、入口に背を向けて立っていた。[p]
 [playse storage=se/roof_door.ogg volume=30]
 ドアが開く音に反応し、龍也は踵を返した。[p]
@@ -751,9 +753,9 @@
 「手を……離してくれ」[p]
 
 拓海は必死に龍也の腕を引き剥がそうと、精一杯の抵抗をしながら声を絞り出した。[p]
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=10 buf="0"]
 [wait time=3000]
-[playse storage=se/roof_door.ogg volume=30]
+[playse storage=se/roof_door.ogg volume=100 buf="1"]
 しばらくして、屋上のドアが勢いよく開いた。[p]
 
 「離して！」[p]
