@@ -207,7 +207,7 @@
 [auto_chara name="拓海" face="private_normal"]
 「あ……」[p]
 「段ボールの中に俺が入って、侵入するとか」[p]
-[auto_chara name="恵" face="private_smile"]
+[auto_chara name="恵" face="private_laugh"]
 「その段ボールを誰が持ってくるのよ」[p]
 [auto_chara name="拓海" face="private_normal"]
 「……確かに」[p]
@@ -220,7 +220,7 @@
 「制服も身分証もないのに？」[p]
 [auto_chara name="拓海" face="private_normal"]
 「……点検に来ました、って言えば」[p]
-[auto_chara name="恵" face="private_smile"]
+[auto_chara name="恵" face="private_laugh"]
 「永山君、たまに真面目に変なこと言うよね」[p]
 [auto_chara name="拓海" face="private_normal"]
 「……否定できない」[p]
@@ -314,7 +314,7 @@
 [fadeoutbgm time=3000]
 [stopse fadeout=800]
 
-[playse storage=se/bag_zipper.ogg volume=100]
+[playse storage=se/bag_zipper.ogg volume=80]
 土曜日の17時頃、拓海は護身用に刃渡り5センチの園芸用バサミをカバンに入れ、[r]
 いつものファミレスに向かった。[p]
 [bg storage="bg_family_restaurant_evening.webp" time=800]
@@ -377,7 +377,7 @@
 [bg storage="black.png" time=300]
 [bg storage="bg_mansion_night.webp" time=1000]
 [wait time=2000]
-[playse storage=se/city_ambience.ogg volume=50 loop=true fadein=true time=1000]
+[playse storage=se/city_ambience.ogg volume=50 loop=true fadein=true time=1000  buf="0"]
 
 二人は会計を済ませ、店を出た。[p]
 外はすでに暗くなり、空気がひんやりしている。[p]
@@ -397,7 +397,7 @@
 皆どこか品が感じられる気がした。[p]
 
 [wait time=1000]
-[playse storage=se/wind_rooftop.ogg volume=30]
+[playse storage=se/wind_rooftop.ogg volume=20 buf="1"]
 じっと待っていると、夜風が冷たく感じ始めた。[p]
 
 肌寒いな……。[p]
@@ -501,17 +501,17 @@
 
 [chara_hide_all time=300]
 [wait time=1000]
-[stopse fadeout=1000]
+[stopse fadeout=2000]
 [bg storage="bg_apartment_hallway_night.webp" time=800]
 [playse storage=se/elevator_ding.ogg volume=100]
-
+[playse storage=se/city_ambience.ogg volume=20 loop=true fadein=true time=1000  buf="0"]
 十分後、二人は、静かに五階の玄関の前まで上がった。[p]
 互いに顔を見合わせ、無言のまま覚悟を確認する。[p]
 拓海は軽く息を吸い込み、気持ちを整えた。[p]
 
 [auto_chara name="恵" face="private_serious"]
 恵がインターホンを押す。[p]
-[playse storage=se/interphone.ogg volume=100]
+[playse storage=se/interphone.ogg volume=100 buf="1"]
 [wait time=800]
 
 返事はすぐには来なかった。[p]
@@ -533,7 +533,7 @@
 「今行くわ」[p]
 
 [wait time=500]
-[playse storage=se/door_lock_open.ogg volume=100]
+[playse storage=se/door_lock_open.ogg volume=100 buf="2"] 
 
 しばらくして、玄関のドアが静かに開いた。[p]
 [auto_chara name="響子" face="confuse" time=500]
