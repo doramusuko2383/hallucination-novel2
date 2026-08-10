@@ -795,11 +795,11 @@
 
 [chara_hide_all time=300]
 [bg storage="bg_apartment_hallway_night.webp" time=700]
-[playse storage=se/hallway_ambience.ogg volume=100]
+[playse storage=se/air_noise.ogg volume=20 loop=true fadein=true time=1000  buf="0"]
 マンションの共用廊下はひっそりとしていた。[p]
 二人は足音を抑え、エレベーターへ向かう。[p]
 
-[playse storage=se/elevator_ding.ogg volume=100]
+[playse storage=se/elevator_ding.ogg volume=100 buf="1"]
 エレベーターの扉が開き、短い沈黙のまま一階へ降りた。[p]
 
 [bg storage="bg_mansion_night.webp" time=700]
@@ -824,6 +824,7 @@
 「行ってくる」[p]
 
 笑顔を作り、軽く手を振った。[p]
+[stopse fadeout=1000]
 
 [chara_hide_all time=300]
 [bg storage="bg_station_night.webp" time=900]
@@ -831,13 +832,13 @@
 幸い、拓海の顔は高田に割れていない。[p]
 一定の距離を保てば気づかれることはないだろう。[p]
 
-[playse storage=se/train_coming.ogg volume=100]
+[playse storage=se/train_coming.ogg volume=100 buf="0"]
 高田が改札を抜け、上り電車のホームに並んだ。[p]
 夜も遅く、ホームにはほとんど人がいない。[p]
 
 拓海は少し離れた位置に並び、慎重に尾行を続けた。[p]
 
-[playse storage=se/smartphone_vibrate.ogg volume=100]
+[playse storage=se/smartphone_vibrate.ogg volume=100 buf="1"]
 「尾行、大丈夫そう？」[p]
 
 恵からメッセージが届いた。[p]
