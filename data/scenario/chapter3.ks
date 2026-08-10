@@ -404,6 +404,7 @@
 拓海は一度も振り返ることなく、[r]
 明るいコンビニの前から歩き去った。[p]
 
+[fadeoutse time=2000]
 [bg storage="black.png" time=800]
 [wait time=1500]
 
