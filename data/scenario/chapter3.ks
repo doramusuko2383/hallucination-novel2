@@ -600,7 +600,7 @@
 [chara_hide_all time=300]
 [auto_chara name="拓海" face="level2_normal"]
 「……。」[p]
-[wait time=1500]
+[wait time=1000]
 ここまでは計画通りだ……。[p]
 
 拓海は冷静さを保とうと努めた。[p]
@@ -680,8 +680,8 @@
 *ch3_megumi_truth_retry
 [cm]
 [bg storage="bg_karaoke.webp" time=0]
-[playbgm storage="airconditioner.ogg" loop=true volume=80 fadein=true time=1000]
-[playse storage=se/karaoke_sound.ogg loop=true volume=60 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=50 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
 [playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=500]
 [auto_chara name="恵" face="serious"]
 @jump target="*ch3_choice_megumi_truth"
@@ -743,13 +743,13 @@
 [playse storage=se/knock_door.ogg volume=100]
 [wait time=500]
 [playse storage=se/roof_door.ogg volume=30]
-[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="airconditioner.ogg" loop=true volume=50 fadein=true time=1000]
 その時、部屋のドアがノックされ、[r]
 店員が注文していたアイスコーヒーをテーブルに置いていった。[p]
 
 冷たいコーヒーは何だか味がしない感じがした。[p]
 
-どこかの部屋から聞こえてくる下手な歌声が、[r][l]
+どこかから聞こえる音程の外れたバラードが、[r][l]
 静かな空間に響いている。[p]
 
 [wait time=500]
@@ -1002,7 +1002,7 @@
 [auto_chara name="恵" face="troubled_smile"]
 そこで恵は少し困ったように笑った。[p]
 [fadeoutbgm time=4000]
-[playbgm storage="airconditioner.ogg" loop=true volume=80 fadein=true time=1000]
+[playbgm storage="airconditioner.ogg" loop=true volume=50 fadein=true time=1000]
 「うち、母子家庭なんだよね」[p]
 [auto_chara name="拓海" face="level2_depressed"]
 「……あ」[p]
@@ -1144,8 +1144,8 @@
 *ch3_help_megumi_retry
 [cm]
 [bg storage="bg_karaoke.webp" time=0]
-[playbgm storage="airconditioner.ogg" loop=true volume=80 fadein=true time=1000]
-[playse storage=se/karaoke_sound.ogg loop=true volume=60 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=50 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
 [auto_chara name="恵" face="serious"]
 @jump target="*ch3_choice_help_megumi"
 
