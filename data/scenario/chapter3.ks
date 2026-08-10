@@ -385,6 +385,7 @@
 [playse storage=se/convenience_door.ogg volume=60]
 [wait time=500]
 
+[playse storage=se/city_ambience.ogg volume=50 loop=true fadein=true time=1000]
 [bg storage="bg_convenience_store_night.webp" time=800]
 
 店を出た途端、冷たい夜風が頬を撫でた。[p]
