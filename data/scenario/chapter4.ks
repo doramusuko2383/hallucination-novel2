@@ -877,7 +877,7 @@
 住宅街か……家までついていけるな。[p]
 そう判断した拓海は、一定の距離を保ちながら静かに尾行を続けた。[p]
 
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=10]
 何度か角を曲がられたが、幸い見失わずに済んだ。[p]
 
 駅から10分以上歩いただろうか。[p]
