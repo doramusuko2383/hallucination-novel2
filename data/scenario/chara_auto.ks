@@ -1,7 +1,7 @@
 [macro name="auto_chara"]
 
-; 全キャラ非表示（安全のため）
-[chara_hide_all]
+; 全キャラ非表示（通常会話の切り替えを軽快にするため、300ミリ秒でフェードアウト）
+[chara_hide_all time=300]
 
 ; 発言者と表情、任意の移動先を取得
 [eval exp="tf.name = mp.name"]
