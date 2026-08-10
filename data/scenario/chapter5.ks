@@ -185,7 +185,8 @@
 高田の会社の最寄り駅までは電車で一時間弱だ。[p]
 
 この時間から張っていれば、高田を見逃すことはないはずだ。[p]
-
+[fadeoutbgm time=3000]
+[playbgm storage="restaurant_ambience.ogg" loop=true volume=10 fadein=true time=1000]
 [bg storage="bg_station_cafe.webp" time=800]
 
 駅前のカフェは、すでに営業を始めていた。[p]
