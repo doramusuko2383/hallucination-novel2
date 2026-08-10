@@ -683,7 +683,7 @@
 慌てて確認すると、送り主は恵ではなく龍也だった。[p]
 嫌な予感がする。[p]
 まるで楽しい動画を見ている途中に、鬱陶しい広告がカットインするような感覚だ。[p]
-[bg storage="bg_rooftop_rainyday.webp" time=800]
+[bg storage="bg_rooftop_day_ch1.webp" time=600]
 [playse storage=se/wind_rooftop.ogg volume=10]
 [playbgm storage="tension_high.ogg" loop=true volume=60 fadein=true time=1000]
 昼休み、呼び出された屋上に向かうと、龍也は屋上の真ん中で腕を組み、入口に背を向けて立っていた。[p]
@@ -748,7 +748,7 @@
 
 視界の端が白く霞んでいく。[p]
 
-[bg storage="bg_rooftop_rainyday.webp" time=800]
+[bg storage="bg_rooftop_day_ch1.webp" time=600]
 [auto_chara name="拓海" face="level1_pain"]
 「手を……離してくれ」[p]
 
@@ -784,6 +784,7 @@
 そう吐き捨てて、龍也はようやく屋上を後にした。[p]
 
 [fadeoutbgm time=4000]
+[playbgm storage="nature_wind.ogg" loop=true volume=30 fadein=true time=1000]
 [auto_chara name="恵" face="sad"]
 「大丈夫？」[p]
 
@@ -816,11 +817,11 @@
 [auto_chara name="拓海" face="level2_depressed"]
 「龍也が綾香の携帯に電話したら、母親が出たんだ。」[p]
 「睡眠薬を大量に飲んで、昨日から入院してるらしい」[p]
-
+[fadeoutbgm time=4000]
 二人とも言葉が出ない。[p]
 
-[playse storage=se/wind_rooftop.ogg volume=100]
-[playse storage=se/fence_creak.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=10]
+[playse storage=se/fence_creak.ogg volume=80]
 
 [wait time=1000]
 
@@ -839,6 +840,7 @@
 
 長い沈黙のあと、恵がぽつりと呟いた。[p]
 
+[playbgm storage="piano_centimental.ogg" loop=true volume=30 fadein=true time=1000]
 [auto_chara name="恵" face="serious"]
 「お見舞いに行きましょう」[p]
 
@@ -905,7 +907,7 @@
 [bg storage="black.png" time=600]
 [wait time=2000]
 
-[playbgm storage="psycho.ogg" loop=true volume=100 fadein=true time=800]
+[playbgm storage="A_beautiful_criminal_2.ogg" loop=true volume=50 fadein=true time=800]
 
 気がつくと――[p]
 
