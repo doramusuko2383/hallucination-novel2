@@ -166,11 +166,9 @@
 
 二人は思わず笑った。[p]
 
-[playse storage="se/door_close.ogg" volume=100]
+こんな大荷物になってしまったのも、着替え一式が入っているからだ。[p]
 
-[bg storage="black.png" time=0]
-
-駅のトイレで制服を脱ぎ、私服へ着替える。[p]
+さっき、駅のトイレで制服を脱ぎ、私服へ着替えたのだ。[p]
 
 靴もスニーカーに履き替えた。[p]
 
@@ -651,7 +649,7 @@
 [chara_hide_all time=300]
 [stopse fadeout=700]
 [fadeoutbgm time=3000]
-[playbgm storage="room_noise.ogg" loop=true volume=10 fadein=true time=1000]
+[playbgm storage="room_noise.ogg" loop=true volume=30 fadein=true time=1000]
 [bg storage="bg_takumiroom_night.webp" time=800]
 拓海は家に帰ると、何だか今日はやたらと長い一日だったと感じた。[p]
 [playse storage=se/bed.ogg volume=100]
@@ -684,6 +682,7 @@
 嫌な予感がする。[p]
 まるで楽しい動画を見ている途中に、鬱陶しい広告がカットインするような感覚だ。[p]
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
+[fadeoutbgm time=3000]
 [playse storage=se/wind_rooftop.ogg volume=10]
 [playbgm storage="tension_high.ogg" loop=true volume=60 fadein=true time=1000]
 昼休み、呼び出された屋上に向かうと、龍也は屋上の真ん中で腕を組み、入口に背を向けて立っていた。[p]
@@ -769,7 +768,7 @@
 
 恵は二人の間へ駆け寄る。[p]
 
-[auto_chara name="恵" face="serious"]
+[auto_chara name="恵" face="angry"]
 「ちょっと！何してるの！」[p]
 
 [auto_chara name="龍也" face="normal"]
@@ -891,17 +890,13 @@
 「ありがとう」[p]
 [auto_chara name="恵" face="serious"]
 「先に教室戻ってるね」[p]
+[chara_hide_all time=300]
 
-そして、笑顔を作ろうとした。[p]
-
-だが上手く笑えなかった。[p]
-
-小さく手を振り、教室へ戻っていった。[p]
+恵は小さく手を振り、教室へ戻っていった。[p]
 
 拓海は恵の背中を見送り、恵の優しさに感謝しながらも、自分の中でくすぶる不安を感じ続けていた。[p]
 
-[chara_hide_all time=300]
-[stopse fadeout=800]
+[stopse fadeout=2000]
 [fadeoutbgm time=3000]
 
 [bg storage="black.png" time=600]
@@ -911,7 +906,7 @@
 
 気がつくと――[p]
 
-[bg storage="ch5_takumi_nightmare.webp" time=0]
+[bg storage="ch5_takumi_nightmare.webp" time=1000]
 
 黒いスーツを着た何人もの男たちに取り囲まれていた。[p]
 
@@ -944,13 +939,14 @@
 [stopbgm fadeout=true time=1000]
 
 [bg storage="black.png" time=0]
-
+[bg storage="black.png" time=1000]
 [playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=400]
 
 [wait time=500]
 
 [bg storage="bg_takumiroom_night.webp" time=0]
 
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 目が覚めた。[p]
 
 荒い呼吸だけが、暗い部屋に響いている。[p]
