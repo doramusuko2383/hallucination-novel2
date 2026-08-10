@@ -504,7 +504,7 @@
 [stopse fadeout=2000]
 [bg storage="bg_apartment_hallway_night.webp" time=800]
 [playse storage=se/elevator_ding.ogg volume=100]
-[playse storage=se/city_ambience.ogg volume=20 loop=true fadein=true time=1000  buf="0"]
+[playse storage=se/air_noise.ogg volume=20 loop=true fadein=true time=1000  buf="0"]
 十分後、二人は、静かに五階の玄関の前まで上がった。[p]
 互いに顔を見合わせ、無言のまま覚悟を確認する。[p]
 拓海は軽く息を吸い込み、気持ちを整えた。[p]
@@ -612,6 +612,7 @@
 拓海は息を殺し、イヤホンの向こうからリビングの音が届くのを待った。[p]
 
 [wait time=1000]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 [bg storage="bg_megumi_living_night.webp" time=2000]
 イヤホンから、恵の挨拶が聞こえてきた。[p]
 [auto_chara name="恵" face="private_normal" left=0]
@@ -650,7 +651,7 @@
 それに、このままでは情報が足りない……もう少し何か引き出せないか？[p]
 [auto_chara name="恵" face="private_normal" left=0]
 「今日はゆっくりしていってください」[p]
-
+[chara_hide_all time=300]
 恵がそう言ったとき、恵の限界が近いことが分かった。[p]
 
 [bg storage="bg_megumi_room_night.webp" time=800]
@@ -909,6 +910,7 @@
 
 *ch4_takada_ask_kyoko_bad
 [cm]
+[fadeoutbgm time=3000]
 [auto_chara name="拓海" face="private_normal"]
 「……いや、俺が尾行するより、後から響子さんに聞いてもらった方が確実かもしれない」[p]
 
@@ -921,6 +923,7 @@
 [auto_chara name="恵" face="private_normal"]
 「……わかった。聞いてみる」[p]
 
+[bg storage="black.png" time=300]
 翌日――。[p]
 
 恵からのメッセージは、短かった。[p]
