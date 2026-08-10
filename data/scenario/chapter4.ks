@@ -195,15 +195,20 @@
 [s]
 
 *ch4_enter_as_friend
+[auto_chara name="拓海" face="private_normal"]
 [jump target="*ch4_enter_return"]
 
 *ch4_enter_as_delivery
-[auto_chara name="恵" face="private_normal"]
-「宅配業者って……荷物はどうするの？」[p]
 [auto_chara name="拓海" face="private_normal"]
-「空の段ボールを持っていくとか」[p]
+「宅配業者のフリをして行くのはどうかな」[p]
+[auto_chara name="恵" face="private_normal"]
+「宅配業者って……玄関で荷物渡して終わりじゃない？」[p]
+「部屋にどうやって入るの？」[p]
+[auto_chara name="拓海" face="private_normal"]
+「あ……」[p]
+「段ボールの中に俺が入って、侵入するとか」[p]
 [auto_chara name="恵" face="private_smile"]
-「それ、中身を聞かれた瞬間に終わるやつだよ」[p]
+「その段ボールを誰が持ってくるのよ」[p]
 [auto_chara name="拓海" face="private_normal"]
 「……確かに」[p]
 [jump target="*ch4_enter_return"]
@@ -218,12 +223,12 @@
 [auto_chara name="恵" face="private_smile"]
 「永山君、たまに真面目に変なこと言うよね」[p]
 [auto_chara name="拓海" face="private_normal"]
-「否定できない」[p]
+「……否定できない」[p]
 [jump target="*ch4_enter_return"]
 
 *ch4_enter_return
 「わかった、こうしよう。」[p]
-[auto_chara name="拓海" face="private_normal"]
+
 「俺が男友達として、土曜日に無理やり家に上がり込むってのはどう？」[p]
 
 [auto_chara name="恵" face="private_serious"]
