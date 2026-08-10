@@ -385,7 +385,7 @@
 [playse storage=se/convenience_door.ogg volume=60]
 [wait time=500]
 
-[playse storage=se/city_ambience.ogg volume=50 loop=true fadein=true time=1000]
+[playse storage=se/city_ambience.ogg volume=20 loop=true fadein=true time=2000]
 [bg storage="bg_convenience_store_night.webp" time=800]
 
 店を出た途端、冷たい夜風が頬を撫でた。[p]
@@ -538,8 +538,8 @@
 *ch3_karaoke
 
 [bg storage="bg_karaoke.webp" time=800]
-[playbgm storage="airconditioner.ogg" loop=true volume=100 fadein=true time=1000]
-[playse storage=se/karaoke_sound.ogg loop=true volume=100 fadein=true time=500]
+[playbgm storage="airconditioner.ogg" loop=true volume=50 fadein=true time=1000]
+[playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
 
 駅近くのカラオケの個室に入り、[r]
 二人は無言で席に着いた。[p]
@@ -600,7 +600,7 @@
 [chara_hide_all time=300]
 [auto_chara name="拓海" face="level2_normal"]
 「……。」[p]
-[wait time=2000]
+[wait time=1500]
 ここまでは計画通りだ……。[p]
 
 拓海は冷静さを保とうと努めた。[p]
@@ -620,7 +620,7 @@
 [wait time=1000]
 
 ; 追加した演出意図: 想定外の単語で鼓動を再投入し、音量は控えめにして焦燥だけを出す。
-[playbgm storage="airconditioner.ogg" loop=true volume=80 fadein=true time=1000]
+[playbgm storage="airconditioner.ogg" loop=true volume=50 fadein=true time=1000]
 [playse storage=se/heartbeat.ogg loop=true volume=60 fadein=true time=500]
 その言葉に、拓海は顔が青ざめた。[p]
 
