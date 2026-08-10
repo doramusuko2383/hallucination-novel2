@@ -501,7 +501,7 @@
 
 [chara_hide_all time=300]
 [wait time=1000]
-[stopse fadeout=2000]
+[stopse fadeout=3000]
 [bg storage="bg_apartment_hallway_night.webp" time=800]
 [playse storage=se/elevator_ding.ogg volume=100]
 [playse storage=se/air_noise.ogg volume=20 loop=true fadein=true time=1000  buf="0"]
@@ -732,7 +732,7 @@
 
 だが、断片的に聞こえてくる言葉から、どうやら高田はそろそろ帰る準備をしていることがわかった。[p]
 
-[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="tension_low.ogg" loop=true volume=80 fadein=true time=1000]
 このままだと、住所が聞けないな……。[p]
 [bg storage="bg_megumi_room_night.webp" time=800]
 拓海は冷静さを取り戻し、恵に伝えた。[p]
@@ -922,6 +922,7 @@
 
 [auto_chara name="恵" face="private_normal"]
 「……わかった。聞いてみる」[p]
+[chara_hide_all time=300]
 
 [bg storage="black.png" time=300]
 翌日――。[p]
@@ -953,9 +954,6 @@
 
 一番近くにあった手掛かりは、[r]
 自分たちの判断で静かに遠ざかっていった。[p]
-
-BAD END[p]
-「警戒された標的」[p]
 
 [eval exp="f.bad_end_no = 'BAD END 05'"]
 [eval exp="f.bad_end_title = '警戒された標的'"]
