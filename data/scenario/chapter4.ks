@@ -748,6 +748,10 @@
 [choice name="choice_ch4_takada_ask_kyoko_bad" text="響子さんに住所を聞いてもらう" target="*ch4_takada_ask_kyoko_bad"]
 [s]
 
+*ch4_takada_tail_choice_retry
+[playbgm storage="tension_low.ogg" loop=true volume=80 fadein=true time=1000]
+@jump target="*ch4_takada_tail_choice"
+
 *ch4_takada_tail_return
 拓海はスマホから聞こえる物音に耳を澄ませた。[p]
 高田の声は、先ほどよりも明らかに上機嫌になっていた。[p]
@@ -958,6 +962,6 @@
 [eval exp="f.bad_end_no = 'BAD END 05'"]
 [eval exp="f.bad_end_title = '警戒された標的'"]
 [eval exp="f.bad_end_retry_storage = 'chapter4.ks'"]
-[eval exp="f.bad_end_retry_target = '*ch4_takada_tail_choice'"]
+[eval exp="f.bad_end_retry_target = '*ch4_takada_tail_choice_retry'"]
 [eval exp="f.bad_end_retry_bg = 'bg_megumi_room_night.webp'"]
 @jump storage="badend.ks" target="*bad_end"

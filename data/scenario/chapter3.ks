@@ -189,6 +189,10 @@
 [choice name="choice_ch3_wait_longer" text="もう少し様子を見る" target="*ch3_wait_longer_bad"]
 [s]
 
+*ch3_choice_convenience_counter_retry
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
+@jump target="*ch3_choice_convenience_counter"
+
 *ch3_go_counter
 [cm]
 [wait time=500]
@@ -259,7 +263,7 @@
 [eval exp="f.bad_end_no = 'BAD END 02'"]
 [eval exp="f.bad_end_title = '手遅れ'"]
 [eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
-[eval exp="f.bad_end_retry_target = '*ch3_choice_convenience_counter'"]
+[eval exp="f.bad_end_retry_target = '*ch3_choice_convenience_counter_retry'"]
 [eval exp="f.bad_end_retry_bg = 'bg_convenience_inside_night.webp'"]
 @jump storage="badend.ks" target="*bad_end"
 

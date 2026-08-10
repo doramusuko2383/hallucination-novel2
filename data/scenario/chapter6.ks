@@ -463,6 +463,10 @@
 [choice name="choice_ch6_show_hell" text="地獄を見せる" target="*ch6_show_hell_bad"]
 [s]
 
+*ch6_show_illusion_choice_retry
+[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1500]
+@jump target="*ch6_show_illusion_choice"
+
 *ch6_show_truth
 [cm]
 [wait time=500]
@@ -1144,7 +1148,7 @@
 [eval exp="f.bad_end_no = 'BAD END 06'"]
 [eval exp="f.bad_end_title = '救われなかった未来'"]
 [eval exp="f.bad_end_retry_storage = 'chapter6.ks'"]
-[eval exp="f.bad_end_retry_target = '*ch6_show_illusion_choice'"]
+[eval exp="f.bad_end_retry_target = '*ch6_show_illusion_choice_retry'"]
 [eval exp="f.bad_end_retry_bg = 'bg_rooftop_day.webp'"]
 @jump storage="badend.ks" target="*bad_end"
 
@@ -1268,6 +1272,6 @@
 [eval exp="f.bad_end_no = 'BAD END 07'"]
 [eval exp="f.bad_end_title = '地獄を見せた者'"]
 [eval exp="f.bad_end_retry_storage = 'chapter6.ks'"]
-[eval exp="f.bad_end_retry_target = '*ch6_show_illusion_choice'"]
+[eval exp="f.bad_end_retry_target = '*ch6_show_illusion_choice_retry'"]
 [eval exp="f.bad_end_retry_bg = 'bg_rooftop_day.webp'"]
 @jump storage="badend.ks" target="*bad_end"
