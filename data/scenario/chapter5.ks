@@ -13,7 +13,7 @@
 [font speed=50]
 
 [bg storage="bg_takumiroom_morning.webp" time=800]
-[playse storage=se/teroren.ogg volume=100]
+[playse storage=se/teroren.ogg volume=80]
 [playbgm storage="room_noise.ogg" loop=true volume=100 fadein=true time=1000]
 
 「最低、女の敵ね」[p]
@@ -140,13 +140,17 @@
 
 拓海は学校へ欠席の連絡を入れた。[p]
 
-同じ頃、恵も拓海の欠席連絡をしているはずだ。[p]
+恵も少し時間をずらして拓海の欠席連絡をした。[p]
 
 [wait time=1000]
 
 月曜日の朝。[p]
 
-まだ人通りの少ない駅で、二人は落ち合った。[p]
+二人は電車を乗り継ぎ――。[p]
+
+高田が住む街へ到着した。[p]
+
+閑静な住宅街の中心に位置するこの駅は、人もまばらだ。[p]
 
 恵は大きなボストンバッグを抱えている。[p]
 
@@ -163,7 +167,6 @@
 二人は思わず笑った。[p]
 
 [playse storage="se/door_close.ogg" volume=100]
-[fadeoutbgm time=500]
 
 [bg storage="black.png" time=0]
 
@@ -177,13 +180,9 @@
 
 [bg storage="bg_station_morning2.webp" time=600]
 
-[playbgm storage="morning_ambient.ogg" loop=true volume=100 fadein=true time=800]
+いまの時刻が7時前。[p]
 
-電車を乗り継ぎ――。[p]
-
-七時前、高田が住む街へ到着した。[p]
-
-会社までは徒歩一時間弱。[p]
+高田の会社の最寄り駅までは電車で一時間弱だ。[p]
 
 この時間から張っていれば、高田を見逃すことはないはずだ。[p]
 
