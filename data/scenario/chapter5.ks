@@ -662,9 +662,9 @@
 
 恵からも、連絡は来ていなかった。[p]
 
-[wait time=1500]
+[wait time=1000]
 
-そのまま眠りに落ちた。[p]
+拓海は、そのまま眠りに落ちた。[p]
 [fadeoutbgm time=3000]
 [wait time=3000]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true time=1000]
@@ -683,10 +683,10 @@
 まるで楽しい動画を見ている途中に、鬱陶しい広告がカットインするような感覚だ。[p]
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
 [fadeoutbgm time=3000]
-[playse storage=se/wind_rooftop.ogg volume=10]
+[playse storage=se/wind_rooftop.ogg volume=10 buf="0"]
 [playbgm storage="tension_high.ogg" loop=true volume=60 fadein=true time=1000]
 昼休み、呼び出された屋上に向かうと、龍也は屋上の真ん中で腕を組み、入口に背を向けて立っていた。[p]
-[playse storage=se/roof_door.ogg volume=30]
+[playse storage=se/roof_door.ogg volume=30 buf="1"]
 ドアが開く音に反応し、龍也は踵を返した。[p]
 [auto_chara name="龍也" face="angry" time=150]
 「お前、綾香に何をしたんだ！」[p]
