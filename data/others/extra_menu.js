@@ -20,6 +20,16 @@
         "ch6_ayaka_episode.webp", "ch6_ayaka_memory.webp", "ch6_takumi_ryuya.webp",
         "ch7_battle.webp", "ch7_hurrying_bicycle.webp", "ch7_last1.webp", "ch7_last2.webp", "ch7_shakehands.webp"
     ];
+    // Add future chapters here; the menu and jump destination are generated from this list.
+    var chapters = [
+        { number: 1, title: "覚醒", thumbnail: "bg_rooftop_day_ch1.webp", storage: "chapter1.ks", target: "*ch1_start" },
+        { number: 2, title: "報復", thumbnail: "bg_convenience_store_night.webp", storage: "chapter2.ks", target: "*ch2_start" },
+        { number: 3, title: "邂逅", thumbnail: "bg_karaoke.webp", storage: "chapter3.ks", target: "*ch3_start" },
+        { number: 4, title: "共犯", thumbnail: "bg_megumi_mansion_back.webp", storage: "chapter4.ks", target: "*ch4_start" },
+        { number: 5, title: "代償", thumbnail: "bg_station_cafe.webp", storage: "chapter5.ks", target: "*ch5_start" },
+        { number: 6, title: "赦し", thumbnail: "bg_hospital_room_day.webp", storage: "chapter6.ks", target: "*ch6_start" },
+        { number: 7, title: "未来", thumbnail: "bg_classroom_graduation_evening.webp", storage: "chapter7.ks", target: "*ch7_start" }
+    ];
 
     function sf() { return TYRANO.kag.variable.sf; }
     function root() { return $("#hl-extra"); }
@@ -46,7 +56,37 @@
         var main = shell("ARCHIVE").addClass("extra-home");
         main.append(button("END LIST", "extra-menu-button").on("click", function () { clickSound(); endList(); }));
         main.append(button("CG GALLERY", "extra-menu-button").on("click", function () { clickSound(); gallery(); }));
+        // end_true is an existing system flag, so old clear data unlocks this without migration.
+        if (sf().end_true === true) {
+            main.append(button("CHAPTER SELECT", "extra-menu-button").on("click", function () { clickSound(); chapterSelect(); }));
+        }
         root().find("footer").append(button("BACK TO TITLE", "extra-back").on("click", backToTitle));
+    }
+
+    function chapterSelect() {
+        // Keep the guard here as well as on the home button so this remains a clear-only feature.
+        if (sf().end_true !== true) { home(); return; }
+        var main = shell("CHAPTER SELECT").addClass("extra-chapter-select");
+        chapters.forEach(function (chapter) {
+            var item = button("", "extra-chapter-card");
+            item.append(
+                $("<img>", { src: "./data/bgimage/" + chapter.thumbnail, alt: "" }),
+                $("<span></span>").addClass("extra-chapter-shade"),
+                $("<span></span>").addClass("extra-chapter-number").text("CHAPTER " + String(chapter.number).padStart(2, "0")),
+                $("<strong></strong>").text(chapter.title)
+            );
+            item.attr("aria-label", "Chapter " + chapter.number + " " + chapter.title);
+            item.on("click", function () { jumpToChapter(chapter); });
+            main.append(item);
+        });
+        root().find("footer").append(button("戻る / BACK", "extra-back").on("click", function () { clickSound(); home(); }));
+    }
+
+    function jumpToChapter(chapter) {
+        if (sf().end_true !== true) { home(); return; }
+        clickSound();
+        root().remove();
+        TYRANO.kag.ftag.startTag("jump", { storage: chapter.storage, target: chapter.target });
     }
 
     function endList() {
@@ -97,6 +137,7 @@
 
     window.HLExtra = {
         cgs: cgs,
+        chapters: chapters,
         open: function () {
             $("#hl-extra").remove();
             $("#tyrano_base").append("<section id='hl-extra' aria-label='EXTRA menu'></section>");
