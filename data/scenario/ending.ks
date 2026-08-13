@@ -1,4 +1,5 @@
 *start
+[eval exp="sf.end_true = true; sf.extra_unlocked = true"]
 [cm]
 [clearfix]
 [hidemenubutton]

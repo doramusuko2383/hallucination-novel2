@@ -445,6 +445,7 @@
 [stopse fadeout=3000]
 [playse storage=se/leather_shoes_walk.ogg volume=100]
 [wait time=1000]
+[cg storage="ch4_kyoko_takada.webp"]
 [bg storage="ch4_kyoko_takada.webp" time=1000]
 
 響子が先導するように歩き、その後ろを恰幅の良い男が追いかける。[p]
@@ -665,6 +666,7 @@
 そう思いながら、拓海は恵に次の動きを託すことにした。[p]
 [chara_hide_all time=300]
 
+[cg storage="ch4_smartphone.webp"]
 [bg storage="ch4_smartphone.webp" time=2000]
 恵はホットコーヒーを二つ準備しながら、扉のない食器棚に手を伸ばす瞬間、[r]
 スマホをさりげなく食器の裏に隠して設置した。[p]
@@ -715,6 +717,7 @@
 [fadeoutbgm time=3000]
 [wait time=1000]
 
+[cg storage="ch4_takumi_megumi.webp"]
 [bg storage="ch4_takumi_megumi.webp" time=2000]
 高田の言葉が耳に届いた瞬間、拓海の思考が止まった。[p]
 

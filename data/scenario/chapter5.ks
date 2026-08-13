@@ -336,6 +336,7 @@
 
 轟音だけを残して通過していく。[p]
 
+[cg storage="ch5_takumi_takada.webp"]
 [bg storage="ch5_takumi_takada.webp" time=800]
 
 [playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=600]
@@ -713,6 +714,7 @@
 
 龍也の拳が小さく震えていた。[p]
 
+[cg storage="ch5_rooftop_tatsuya_cry.webp"]
 [bg storage="ch5_rooftop_tatsuya_cry.webp" time=800]
 [wait time=500]
 彼は、泣いていた。
@@ -906,6 +908,7 @@
 
 気がつくと――[p]
 
+[cg storage="ch5_takumi_nightmare.webp"]
 [bg storage="ch5_takumi_nightmare.webp" time=1000]
 
 黒いスーツを着た何人もの男たちに取り囲まれていた。[p]
