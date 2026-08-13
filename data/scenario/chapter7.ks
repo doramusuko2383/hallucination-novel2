@@ -48,6 +48,7 @@
 そういうことか。[p]
 [playse storage=se/run.ogg volume=100]
 [wait time=1000]
+[cg storage="ch7_hurrying_bicycle.webp"]
 [bg storage="ch7_hurrying_bicycle.webp" time=700]
 [wait time=500]
 [playbgm storage="chase.ogg" loop=true volume=100 fadein=true time=1000]
@@ -117,6 +118,7 @@
 
 恵の部屋からだ。[p]
 
+[cg storage="ch7_battle.webp"]
 [bg storage="ch7_battle.webp" time=800]
 [playse storage=se/door_open_suddenly.ogg volume=100]
 玄関のすぐ隣の部屋のドアを開けた。[p]
@@ -663,6 +665,7 @@
 
 [wait time=1000]
 
+[cg storage="ch7_shakehands.webp"]
 [bg storage="ch7_shakehands.webp" time=500]
 
 拓海も手を差し出し、二人の手が固く握られた。[p]
@@ -872,6 +875,7 @@
 [fadeoutbgm time=3000]
 拓海はそっと恵の手を両手で包み込むように握った。[p]
 
+[cg storage="ch7_last1.webp"]
 [bg storage="ch7_last1.webp" time=900]
 
 その瞬間、[l]
@@ -898,6 +902,7 @@
 現実に戻ったとき、涙がこみ上げ、視界がぼやけていた。[p]
 拓海が穏やかな笑みを浮かべ、静かにこちらを見つめている。[p]
 恵は、涙をぬぐいながら小さく微笑み返し、静かに呟いた。[p]
+[cg storage="ch7_last2.webp"]
 [bg storage="ch7_last2.webp" time=900]
 [delay speed="100"]
 「ありがとう……[l]拓海」[p]

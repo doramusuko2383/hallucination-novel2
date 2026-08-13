@@ -135,6 +135,7 @@
 
 *ch1_training
 
+[cg storage="ch01_sc01_rooftop_wait.webp"]
 [bg storage="ch01_sc01_rooftop_wait.webp" time=600]
 
 [playse storage=se/foot.ogg volume=100]
@@ -355,6 +356,7 @@
 
 [wait time=500]
 [playse storage=se/wind_rooftop.ogg volume=20]
+[cg storage="ch01_sc01_jumping_off.webp"]
 [bg storage="ch01_sc01_jumping_off.webp" time=600]
 首を下に向けると、色鮮やかに花が咲く正門前の花壇が見える。[p]
 
@@ -568,6 +570,7 @@
 
 「お前、なに学校休んでんだよっ！」[p]
 [playse storage=se/kabedon.ogg volume=100]
+[cg storage="ch1_rooftop_shota_threat.webp"]
 [bg storage="ch1_rooftop_shota_threat.webp" time=200]
 [playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1500]
 [wait time=1000]
@@ -953,6 +956,7 @@
 すると、龍也は拓海を押さえつけるのをやめて、[l]
 マネキンのようになった翔太に飛びかかった。[p]
 [playse storage=se/pushdown.ogg volume=100]
+[cg storage="ch01_cg_shota_nightmare.webp"]
 [bg storage="ch01_cg_shota_nightmare.webp" time=200]
 そのまま肩を掴み、押し倒し、[l]
 ゆっくりと馬乗りになる。[p]
