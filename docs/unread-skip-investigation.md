@@ -15,9 +15,10 @@
 
 ## 原因
 
-`Config.tjs` の `autoRecordLabel` と `unReadTextSkip` は、値が false なのではなく
-先頭の `;` によって両方ともコメントアウトされていた。特に
-`autoRecordLabel` が無効な場合、ラベル記録だけでなくメッセージ表示時の
+`Config.tjs` では、このバージョンの `compileConfig` が先頭に `;` のある行だけを
+設定行として読み取る。したがって `;autoRecordLabel = true;` のように、先頭の
+`;` を保ったまま値を変更する必要がある。`autoRecordLabel` が無効な場合、
+ラベル記録だけでなくメッセージ表示時の
 `manageAlreadyRead` 自体が呼ばれない。このため、未読時に
 `unReadTextSkip = false` を確認してスキップを停止する標準処理へ到達せず、
 既読記録のない新規ゲームでもスキップが継続していた。
@@ -37,7 +38,7 @@ DEFAULT 操作によって未読スキップを有効化し、同じ値をシス
 
 ## 修正
 
-`autoRecordLabel = true` と `unReadTextSkip = false` をプロジェクト設定として明示し、
+`;autoRecordLabel = true;` と `;unReadTextSkip = false` をプロジェクト設定として明示し、
 標準の既読記録と「未読でスキップ停止」の経路を常に有効にした。また、独自 CONFIG の
 DEFAULT も未読スキップ OFF に揃えた。
 
