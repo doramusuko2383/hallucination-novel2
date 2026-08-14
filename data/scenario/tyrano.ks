@@ -82,11 +82,6 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 
 [iscript]
 	
-	if(sf.cg_view){
-    }else{
-    	sf.cg_view = {};
-    }
-	
 	if(sf.replay_view){
     }else{
     	sf.replay_view = {};
@@ -103,11 +98,6 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 		
 		mp.graphic = mp.graphic.split(',');
 		mp.tmp_graphic = mp.graphic.concat();
-		tf.is_cg_open = false;
-		if(sf.cg_view[mp.graphic[0]]){
-			tf.is_cg_open = true;
-		}
-		
         if(typeof mp.thumb !="undefined"){
             mp.tmp_graphic[0] = mp.thumb;
         }
@@ -115,24 +105,11 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 	
 	[endscript]
 	
-	;渡された値を元に、CG状態を確認していく
-	[if exp="tf.is_cg_open==true"]
-		[button graphic=&mp.tmp_graphic[0] x=&mp.x y=&mp.y width=&mp.width height=&mp.height preexp="mp.graphic" exp="tf.selected_cg_image = preexp" storage="cg.ks" target="*clickcg" folder="bgimage" ]
-	[else]
-		[button graphic=&mp.no_graphic x=&mp.x y=&mp.y width=&mp.width height=&mp.height storage="cg.ks" target="*no_image" folder="bgimage" ]
-	[endif]
+	[button graphic=&mp.tmp_graphic[0] x=&mp.x y=&mp.y width=&mp.width height=&mp.height preexp="mp.graphic" exp="tf.selected_cg_image = preexp" storage="cg.ks" target="*clickcg" folder="bgimage" ]
 [endmacro]
 
-;CGが閲覧された場合、CGモードで表示できるようにする
+; シナリオとの互換性のために残す（CGは最初からすべて閲覧可能）
 [macro name="cg" ]
-
-    [iscript]
-
-        sf.cg_view[mp.storage] = "on";
-        TG.saveSystemVariable();
-    
-    [endscript]
-
 [endmacro]
 
 
@@ -185,4 +162,3 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 
 
 [return]
-
