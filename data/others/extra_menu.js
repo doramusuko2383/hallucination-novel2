@@ -26,7 +26,7 @@
         { number: 1, title: "覚醒", thumbnail: "bg_rooftop_day_ch1.webp", storage: "chapter1.ks", target: "*ch1_start" },
         { number: 2, title: "報復", thumbnail: "bg_convenience_store_night.webp", storage: "chapter2.ks", target: "*ch2_start" },
         { number: 3, title: "邂逅", thumbnail: "bg_karaoke.webp", storage: "chapter3.ks", target: "*ch3_start" },
-        { number: 4, title: "共犯", thumbnail: "bg_megumi_mansion_back.webp", storage: "chapter4.ks", target: "*ch4_start" },
+        { number: 4, title: "共犯", thumbnail: "bg_mansion_night.webp", storage: "chapter4.ks", target: "*ch4_start" },
         { number: 5, title: "代償", thumbnail: "bg_station_cafe.webp", storage: "chapter5.ks", target: "*ch5_start" },
         { number: 6, title: "赦し", thumbnail: "bg_hospital_room_day.webp", storage: "chapter6.ks", target: "*ch6_start" },
         { number: 7, title: "未来", thumbnail: "bg_classroom_graduation_evening.webp", storage: "chapter7.ks", target: "*ch7_start" }
@@ -86,7 +86,12 @@
         if (sf().end_true !== true) { home(); return; }
         clickSound();
         root().remove();
-        TYRANO.kag.ftag.startTag("jump", { storage: chapter.storage, target: chapter.target });
+        // The title/EXTRA flow leaves message0 hidden and may retain a layout changed by
+        // the ending.  Route through a scenario label so Tyrano restores the same text
+        // window geometry used by the debug chapter jump before entering the chapter.
+        TYRANO.kag.variable.tf.extra_jump_storage = chapter.storage;
+        TYRANO.kag.variable.tf.extra_jump_target = chapter.target;
+        TYRANO.kag.ftag.startTag("jump", { storage: "extra.ks", target: "*jump_to_chapter" });
     }
 
     function endList() {
