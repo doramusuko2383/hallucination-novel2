@@ -866,7 +866,8 @@
 
 [chara_hide_all]
 [wait time=1000]
-[glink name="choice_ch7_next" text="前へ進む" target="*next"]
+[choice_start count=1]
+[choice name="choice_ch7_next" text="前へ進む" target="*next"]
 [s]
 
 *next
