@@ -12,13 +12,14 @@
         ["end_bad7", "BAD END 7　地獄を見せた者"]
     ];
     var cgs = [
-        "ch01_cg_shota_nightmare.webp", "ch01_sc01_jumping_off.webp", "ch01_sc01_rooftop_wait.webp",
-        "ch1_rooftop_shota_threat.webp", "ch2_ayaka_and_megumi.webp", "ch2_tatsuya_past.webp",
+        "ch01_sc01_rooftop_wait.webp", "ch01_sc01_jumping_off.webp", "ch1_rooftop_shota_threat.webp",
+        "ch01_cg_shota_nightmare.webp", "ch2_tatsuya_past.webp", "ch2_ayaka_and_megumi.webp",
         "ch3_convenience_touch.webp", "ch3_karaoke_determination.webp", "ch4_kyoko_takada.webp",
-        "ch4_smartphone.webp", "ch4_takumi_megumi.webp", "ch5_rooftop_tatsuya_cry.webp",
-        "ch5_takumi_nightmare.webp", "ch5_takumi_takada.webp", "ch6_5members.webp",
-        "ch6_ayaka_episode.webp", "ch6_ayaka_memory.webp", "ch6_takumi_ryuya.webp",
-        "ch7_battle.webp", "ch7_hurrying_bicycle.webp", "ch7_last1.webp", "ch7_last2.webp", "ch7_shakehands.webp"
+        "ch4_smartphone.webp", "ch4_takumi_megumi.webp", "ch5_takumi_takada.webp",
+        "ch5_rooftop_tatsuya_cry.webp", "ch5_takumi_nightmare.webp", "ch6_ayaka_episode.webp",
+        "ch6_ayaka_memory.webp", "ch6_takumi_ryuya.webp", "ch6_5members.webp",
+        "ch7_hurrying_bicycle.webp", "ch7_battle.webp", "ch7_shakehands.webp", "ch7_last1.webp",
+        "ch7_last2.webp", "ch7_ending.webp"
     ];
     // Add future chapters here; the menu and jump destination are generated from this list.
     var chapters = [
@@ -33,7 +34,6 @@
 
     function sf() { return TYRANO.kag.variable.sf; }
     function root() { return $("#hl-extra"); }
-    function save() { TYRANO.kag.saveSystemVariable(); }
     function clickSound() {
         TYRANO.kag.readyAudio();
         window.__hlExtraClick = window.__hlExtraClick || new Howl({ src: [$.parseStorage("se/click.ogg", "sound")], volume: 0.7 });
@@ -101,32 +101,23 @@
     }
 
     function gallery() {
-        var state = sf(), viewed = state.cg_view || {}, count = 0, main = shell("CG GALLERY").addClass("extra-gallery");
+        var main = shell("CG GALLERY").addClass("extra-gallery");
         cgs.forEach(function (name, index) {
-            var unlocked = !!viewed[name];
-            if (unlocked) count++;
-            var item = button("", "extra-cg " + (unlocked ? "is-unlocked" : "is-locked"));
-            item.append(unlocked ? $("<img>", { src: "./data/bgimage/" + name, alt: "CG " + (index + 1) }) : $("<span>？？？</span>"));
+            var item = button("", "extra-cg");
+            item.append($("<img>", { src: "./data/bgimage/" + name, alt: "CG " + (index + 1) }));
             item.append($("<small></small>").text("CG " + String(index + 1).padStart(2, "0")));
-            if (unlocked) item.on("click", function () { clickSound(); viewer(index); });
-            else item.attr("disabled", true);
+            item.on("click", function () { clickSound(); viewer(index); });
             main.append(item);
         });
-        root().find("footer").append(button("BACK", "extra-back").on("click", home), $("<output></output>").text(completion(count, cgs.length)));
+        root().find("footer").append(button("BACK", "extra-back").on("click", home));
     }
 
     function viewer(index) {
-        var viewed = sf().cg_view || {};
-        function available(direction) {
-            var next = index;
-            do { next = (next + direction + cgs.length) % cgs.length; } while (!viewed[cgs[next]] && next !== index);
-            return next;
-        }
         root().empty().addClass("is-viewing").append($("<img>", { src: "./data/bgimage/" + cgs[index], alt: "CG full view" }));
         root().append($("<nav></nav>")
-            .append(button("‹ PREV", "extra-view-control").on("click", function () { viewer(available(-1)); }),
+            .append(button("‹ PREV", "extra-view-control").on("click", function () { viewer((index - 1 + cgs.length) % cgs.length); }),
                 button("BACK", "extra-view-control").on("click", function () { root().removeClass("is-viewing"); gallery(); }),
-                button("NEXT ›", "extra-view-control").on("click", function () { viewer(available(1)); })));
+                button("NEXT ›", "extra-view-control").on("click", function () { viewer((index + 1) % cgs.length); })));
     }
 
     function backToTitle() {
@@ -142,12 +133,6 @@
             $("#hl-extra").remove();
             $("#tyrano_base").append("<section id='hl-extra' aria-label='EXTRA menu'></section>");
             home();
-        },
-        unlockCg: function (name) {
-            if (cgs.indexOf(name) < 0) return;
-            var state = sf();
-            state.cg_view = state.cg_view || {};
-            if (!state.cg_view[name]) { state.cg_view[name] = "on"; save(); }
         }
     };
 })();
