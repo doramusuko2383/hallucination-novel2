@@ -169,6 +169,7 @@
 *title_menu
 [cm]
 [clearfix]
+[stop_keyconfig]
 @freeimage layer=0 page=fore
 @layopt layer=message0 visible=false
 [iscript]
