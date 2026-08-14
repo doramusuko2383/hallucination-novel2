@@ -351,6 +351,7 @@
 
 先ほどまでの緊張感からの解放による安堵と高揚感が駆け巡る。[p]
 [playbgm storage="ability_theme.ogg" loop=true volume=80 fadein=true time=1500]
+[cg storage="ch3_convenience_touch.webp"]
 [bg storage="ch3_convenience_touch.webp" time=900]
 綾香は動きを止め、目を見開いたまま、[r][l]
 時間が止まったように固まっている。[p]
@@ -1074,6 +1075,7 @@
 
 [wait time=500]
 
+[cg storage="ch3_karaoke_determination.webp"]
 [bg storage="ch3_karaoke_determination.webp" time=900]
 
 [delay speed="110"]

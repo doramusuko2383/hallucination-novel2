@@ -129,6 +129,7 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
     [iscript]
 
         sf.cg_view[mp.storage] = "on";
+        TG.saveSystemVariable();
     
     [endscript]
 
@@ -184,5 +185,4 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 
 
 [return]
-
 

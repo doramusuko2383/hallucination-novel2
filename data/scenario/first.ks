@@ -204,6 +204,9 @@
 [glink name="title-choice title-start title-primary" color="black" size="18" x="520" y="490" width="240" height="32" text="NEW GAME" target="*title_newgame"]
 [glink name="title-choice" color="black" size="18" x="520" y="540" width="240" height="32" text="CONTINUE" target="*title_continue"]
 [glink name="title-choice" color="black" size="18" x="520" y="590" width="240" height="32" text="LOAD" target="*title_load" cm="false"]
+[if exp="sf.extra_unlocked === true"]
+[glink name="title-choice title-extra" color="black" size="18" x="520" y="640" width="240" height="32" text="EXTRA" target="*title_extra" cm="false"]
+[endif]
 [iscript]
 (function normalizeTitleMenuClasses() {
     function important(element, styles) {
@@ -286,7 +289,7 @@
 
     var canContinue = typeof window.__hlHasContinuableData === "function" && window.__hlHasContinuableData();
 
-    ["NEW GAME", "CONTINUE", "LOAD"].forEach(function (text, index) {
+    ["NEW GAME", "CONTINUE", "LOAD", "EXTRA"].forEach(function (text, index) {
         var button = findTitleButton(text);
         button.addClass(index === 0 ? "title-choice title-start title-primary" : "title-choice");
         button.removeClass("black");
@@ -488,6 +491,10 @@
 
 *title_config
 @jump storage="title_config.ks" target="*title_config"
+
+*title_extra
+[fadeoutbgm time=300]
+[jump storage="extra.ks" target="*start"]
 
 *title_quit
 [iscript]

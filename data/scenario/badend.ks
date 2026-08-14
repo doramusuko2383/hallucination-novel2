@@ -7,6 +7,14 @@
 ; - f.bad_end_retry_bg
 
 *bad_end
+[iscript]
+(function recordBadEnd() {
+    var match = String(f.bad_end_no || "").match(/(\d+)/);
+    if (!match) return;
+    sf["end_bad" + parseInt(match[1], 10)] = true;
+    TG.saveSystemVariable();
+})();
+[endscript]
 [cm]
 [clearfix]
 [hidemenubutton]

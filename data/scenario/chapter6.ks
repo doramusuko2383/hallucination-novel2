@@ -49,6 +49,7 @@
 [playse storage=se/roof_door.ogg volume=30]
 [wait time=2000]
 驚いて振り向くと、龍也と翔太が屋上に上がり込んできたのだ。[p]
+[cg storage="ch6_ayaka_episode.webp"]
 [bg storage="ch6_ayaka_episode.webp" time=800]
 「……やば」[p]
 
@@ -82,6 +83,7 @@
 [chara_hide_all]
 [wait time=1000]
 その言葉がなぜか綾香の心に残った。[p]
+[cg storage="ch6_ayaka_memory.webp"]
 [bg storage="ch6_ayaka_memory.webp" time=800]
 それからというもの、綾香、龍也、翔太は屋上で顔を合わせるようになった。[p]
 最初は偶然のようだったが、次第に三人は一緒に過ごすことが増えた。[p]
@@ -472,6 +474,7 @@
 [wait time=500]
 [chara_hide_all]
 拓海はゆっくりと両手を挙げ、龍也の腕を両手で包むようにして触れた。[p]
+[cg storage="ch6_takumi_ryuya.webp"]
 [bg storage="ch6_takumi_ryuya.webp" time=600]
 [chara_hide_all]
 [fadeoutbgm time=3000]
@@ -711,6 +714,7 @@
 綾香もゆっくりと顔を上げ、小さく笑みを返した。[p]
 [chara_hide_all time=300]
 [wait time=2000]
+[cg storage="ch6_5members.webp"]
 [bg storage="ch6_5members.webp" time=900]
 やがて、五人で他愛もない話を始めた。[p]
 
