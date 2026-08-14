@@ -778,7 +778,7 @@
                 var images = [
                     { storage: "ch01_sc01_rooftop_wait.webp", hold: 8500, sepia: true },
                     { storage: "ch2_ayaka_and_megumi.webp", hold: 8500, sepia: true },
-                    { storage: "ch3_karaoke_talk.webp", hold: 9500, sepia: true },
+                    { storage: "ch3_karaoke_determination.webp", hold: 9500, sepia: true },
                     { storage: "ch4_takumi_megumi.webp", hold: 9500, sepia: true },
                     { storage: "ch5_rooftop_tatsuya_cry.webp", hold: 10500, sepia: true },
                     { storage: "ch6_5members.webp", hold: 10500, sepia: true },
