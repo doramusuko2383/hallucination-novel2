@@ -338,6 +338,51 @@
 
 
     function installConfigOverlay() {
+        var fullscreenLayoutFrame = 0;
+        var fullscreenLayoutTimer = 0;
+
+        function refreshFullscreenLayout() {
+            var kag = TYRANO.kag;
+            var base = kag.tyrano && kag.tyrano.base;
+            if (!base || typeof base._fitBaseSize !== "function") return;
+
+            window.cancelAnimationFrame(fullscreenLayoutFrame);
+            window.clearTimeout(fullscreenLayoutTimer);
+            $("#tyrano_base").css("will-change", "transform");
+
+            function fitImmediately() {
+                base._fitBaseSize(kag.config.scWidth, kag.config.scHeight, 0);
+            }
+
+            // fullscreenchange直後はブラウザによってviewportの確定が1～2フレーム遅れる。
+            // 最初の描画前と次フレームで合わせ、通常のresize処理にも最終調整を任せる。
+            fullscreenLayoutFrame = window.requestAnimationFrame(function () {
+                fitImmediately();
+                fullscreenLayoutFrame = window.requestAnimationFrame(function () {
+                    $(window).trigger("resize");
+                    fitImmediately();
+                });
+            });
+            fullscreenLayoutTimer = window.setTimeout(function () {
+                fitImmediately();
+                $("#tyrano_base").css("will-change", "");
+            }, 350);
+        }
+
+        $(document)
+            .off("fullscreenchange.hlFullscreenLayout webkitfullscreenchange.hlFullscreenLayout mozfullscreenchange.hlFullscreenLayout MSFullscreenChange.hlFullscreenLayout")
+            .on("fullscreenchange.hlFullscreenLayout webkitfullscreenchange.hlFullscreenLayout mozfullscreenchange.hlFullscreenLayout MSFullscreenChange.hlFullscreenLayout", refreshFullscreenLayout);
+        $(document)
+            .off("keydown.hlFullscreenLayout")
+            .on("keydown.hlFullscreenLayout", function (event) {
+                if (event.key !== "F11") return;
+                $("#tyrano_base").css("will-change", "transform");
+                window.clearTimeout(fullscreenLayoutTimer);
+                fullscreenLayoutTimer = window.setTimeout(function () {
+                    $("#tyrano_base").css("will-change", "");
+                }, 1000);
+            });
+
         window.__hlOpenConfigOverlay = function (options) {
             options = options || {};
             var kag = TYRANO.kag;
@@ -412,7 +457,10 @@
             function setDisplayMode(fullscreen) {
                 // ティラノスクリプト標準の切替処理を利用し、各ブラウザの
                 // Fullscreen API とデスクトップ版の挙動を揃える。
-                if (fullscreen !== isFullscreen()) kag.menu.screenFull();
+                if (fullscreen !== isFullscreen()) {
+                    root.css("will-change", "transform");
+                    kag.menu.screenFull();
+                }
             }
 
             var overlay = $('<div id="hl-config-overlay" class="hl-config-overlay"></div>');
