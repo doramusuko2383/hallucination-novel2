@@ -363,6 +363,10 @@ window.__tyrano_key_config = {
         // PageUp, PageDown でバックログをスクロールできるようにします
         "PageUp"     : "scroll_up",
         "PageDown"   : "scroll_down",
+
+        // system_key_event が false でも、F11 はゲーム側のフルスクリーン切替として扱う
+        // CONFIG表示中（[stop_keyconfig]中）にも切り替えられるよう always アクションにする
+        "F11"        : "fullscreen -a",
         
         // 数字キーで数に応じた特定のボタンをフォーカスできるようにします
         "1"          : "focus_index -a index=1",
