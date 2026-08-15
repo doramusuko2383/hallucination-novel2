@@ -400,6 +400,21 @@
                 renderValues();
             }
 
+            function isFullscreen() {
+                return !!(
+                    document.fullscreenElement ||
+                    document.webkitFullscreenElement ||
+                    document.mozFullScreenElement ||
+                    document.msFullscreenElement
+                );
+            }
+
+            function setDisplayMode(fullscreen) {
+                // ティラノスクリプト標準の切替処理を利用し、各ブラウザの
+                // Fullscreen API とデスクトップ版の挙動を揃える。
+                if (fullscreen !== isFullscreen()) kag.menu.screenFull();
+            }
+
             var overlay = $('<div id="hl-config-overlay" class="hl-config-overlay"></div>');
             overlay.html(
                 '<div class="hl-config-backdrop"></div>' +
@@ -411,6 +426,7 @@
                     '<div class="hl-config-row" data-kind="text"><span>TEXT SPEED</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
                     '<div class="hl-config-row" data-kind="auto"><span>AUTO SPEED</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
                     '<div class="hl-config-row" data-kind="skip"><span>UNREAD SKIP</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
+                    '<div class="hl-config-row" data-kind="display"><span>SCREEN MODE</span><div class="hl-config-options"></div><b class="hl-config-value"></b></div>' +
                     '<div class="hl-config-actions"><button type="button" class="hl-config-default">DEFAULT</button></div>' +
                 '</section>'
             );
@@ -459,11 +475,13 @@
                 overlay.find('[data-kind="text"] .hl-config-value').text(currentText);
                 overlay.find('[data-kind="auto"] .hl-config-value').text(currentAuto);
                 overlay.find('[data-kind="skip"] .hl-config-value').text(unreadSkip ? "ON" : "OFF");
+                overlay.find('[data-kind="display"] .hl-config-value').text(isFullscreen() ? "FULLSCREEN" : "WINDOW");
                 overlay.find('[data-kind="bgm"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentBgm + '"]').addClass("is-active");
                 overlay.find('[data-kind="se"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentSe + '"]').addClass("is-active");
                 overlay.find('[data-kind="text"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentText + '"]').addClass("is-active");
                 overlay.find('[data-kind="auto"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentAuto + '"]').addClass("is-active");
                 overlay.find('[data-kind="skip"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + (unreadSkip ? 1 : 0) + '"]').addClass("is-active");
+                overlay.find('[data-kind="display"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + (isFullscreen() ? 1 : 0) + '"]').addClass("is-active");
             }
 
             function resetDefault() {
@@ -480,6 +498,10 @@
             addOptions("text", [100, 70, 50, 42, 30, 20, 10], setText);
             addOptions("auto", [5000, 4000, 3000, 2000, 1000, 500], setAuto);
             addOptions("skip", [0, 1], function (value) { setUnreadSkip(value === 1); }, function (value) { return value === 1 ? "ON" : "OFF"; });
+            addOptions("display", [0, 1], function (value) { setDisplayMode(value === 1); }, function (value) { return value === 1 ? "FULLSCREEN" : "WINDOW"; });
+            $(document)
+                .off("fullscreenchange.hlConfig webkitfullscreenchange.hlConfig mozfullscreenchange.hlConfig MSFullscreenChange.hlConfig")
+                .on("fullscreenchange.hlConfig webkitfullscreenchange.hlConfig mozfullscreenchange.hlConfig MSFullscreenChange.hlConfig", renderValues);
             overlay.find(".hl-config-default").on("click", function (event) {
                 event.stopPropagation();
                 playClick();
@@ -493,6 +515,7 @@
             overlay.find(".hl-config-close").on("click", function (event) {
                 event.stopPropagation();
                 playClick();
+                $(document).off(".hlConfig");
                 overlay.remove();
                 var onClose = typeof options.onClose === "function" ? options.onClose : window.__hlConfigOverlayOnClose;
                 window.__hlConfigOverlayOnClose = null;
