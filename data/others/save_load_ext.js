@@ -3,6 +3,50 @@
 
     var MANUAL_SLOT_COUNT = 100;
     var AUTO_SLOT_COUNT = 10;
+    var AUTO_SPEED_LABELS = {
+        5000: "SLOW",
+        4000: "20",
+        3000: "40",
+        2000: "60",
+        1000: "80",
+        500: "FAST"
+    };
+
+    function autoSpeedLabel(value) {
+        return AUTO_SPEED_LABELS[value] || String(value);
+    }
+
+    function installAutoStatusIndicator() {
+        if (window.__hl_auto_status_installed) return;
+        window.__hl_auto_status_installed = true;
+
+        var kag = TYRANO.kag;
+
+        function getIndicator() {
+            var indicator = $("#hl-auto-status");
+            if (indicator.length) return indicator;
+
+            indicator = $('<div id="hl-auto-status" class="hl-auto-status" aria-label="AUTO mode active" aria-hidden="true">AUTO</div>');
+            var menuButton = $(".button_menu").first();
+            if (menuButton.length) indicator.insertBefore(menuButton);
+            else $("#tyrano_base").append(indicator);
+            return indicator;
+        }
+
+        function syncAutoStatus() {
+            var indicator = getIndicator();
+            var shouldShow = !!kag.stat.is_auto;
+            indicator.toggleClass("is-active", shouldShow).attr("aria-hidden", shouldShow ? "false" : "true");
+        }
+
+        // setAuto() が発火する標準イベントへ直接連動する。ロード等でDOMが
+        // 復元された場合にも、補助同期で要素の再生成と実状態の反映を行う。
+        kag.on("auto-start.hlAutoStatus auto-stop.hlAutoStatus load-beforemaking.hlAutoStatus", function () {
+            window.setTimeout(syncAutoStatus, 0);
+        }, { system: true });
+        syncAutoStatus();
+        window.setInterval(syncAutoStatus, 250);
+    }
 
     function safeText(value) {
         if (value === undefined || value === null) return "";
@@ -521,7 +565,7 @@
                 overlay.find('[data-kind="bgm"] .hl-config-value').text(currentBgm + "%");
                 overlay.find('[data-kind="se"] .hl-config-value').text(currentSe + "%");
                 overlay.find('[data-kind="text"] .hl-config-value').text(currentText);
-                overlay.find('[data-kind="auto"] .hl-config-value').text(currentAuto);
+                overlay.find('[data-kind="auto"] .hl-config-value').text(autoSpeedLabel(currentAuto));
                 overlay.find('[data-kind="skip"] .hl-config-value').text(unreadSkip ? "ON" : "OFF");
                 overlay.find('[data-kind="display"] .hl-config-value').text(isFullscreen() ? "FULLSCREEN" : "WINDOW");
                 overlay.find('[data-kind="bgm"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentBgm + '"]').addClass("is-active");
@@ -544,7 +588,7 @@
             addOptions("bgm", [0, 20, 40, 60, 80, 100], setBgm, function (value) { return value === 0 ? "MUTE" : String(value); });
             addOptions("se", [0, 20, 40, 60, 80, 100], setSe, function (value) { return value === 0 ? "MUTE" : String(value); });
             addOptions("text", [100, 70, 50, 42, 30, 20, 10], setText);
-            addOptions("auto", [5000, 4000, 3000, 2000, 1000, 500], setAuto);
+            addOptions("auto", [5000, 4000, 3000, 2000, 1000, 500], setAuto, autoSpeedLabel);
             addOptions("skip", [0, 1], function (value) { setUnreadSkip(value === 1); }, function (value) { return value === 1 ? "ON" : "OFF"; });
             addOptions("display", [0, 1], function (value) { setDisplayMode(value === 1); }, function (value) { return value === 1 ? "FULLSCREEN" : "WINDOW"; });
             $(document)
@@ -1272,6 +1316,7 @@
         };
 
         installLastPlayedSnapshotEvents(menu);
+        installAutoStatusIndicator();
         TYRANO.kag.config.configSaveSlotNum = MANUAL_SLOT_COUNT;
     }
 
