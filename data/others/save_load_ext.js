@@ -20,19 +20,32 @@
         if (window.__hl_auto_status_installed) return;
         window.__hl_auto_status_installed = true;
 
-        var indicator = $('<div class="hl-auto-status" aria-live="polite" aria-label="AUTO mode active">AUTO</div>');
-        $("#tyrano_base").append(indicator);
+        var kag = TYRANO.kag;
+
+        function getIndicator() {
+            var indicator = $("#hl-auto-status");
+            if (indicator.length) return indicator;
+
+            indicator = $('<div id="hl-auto-status" class="hl-auto-status" aria-label="AUTO mode active" aria-hidden="true">AUTO</div>');
+            var menuButton = $(".button_menu").first();
+            if (menuButton.length) indicator.insertBefore(menuButton);
+            else $("#tyrano_base").append(indicator);
+            return indicator;
+        }
 
         function syncAutoStatus() {
-            var kag = window.TYRANO && TYRANO.kag;
-            var menuButton = $(".button_menu");
-            var menuVisible = $(".layer_menu").is(":visible");
-            var shouldShow = !!(kag && kag.stat.is_auto && menuButton.is(":visible") && !menuVisible);
+            var indicator = getIndicator();
+            var shouldShow = !!kag.stat.is_auto;
             indicator.toggleClass("is-active", shouldShow).attr("aria-hidden", shouldShow ? "false" : "true");
         }
 
+        // setAuto() が発火する標準イベントへ直接連動する。ロード等でDOMが
+        // 復元された場合にも、補助同期で要素の再生成と実状態の反映を行う。
+        kag.on("auto-start.hlAutoStatus auto-stop.hlAutoStatus load-beforemaking.hlAutoStatus", function () {
+            window.setTimeout(syncAutoStatus, 0);
+        }, { system: true });
         syncAutoStatus();
-        window.setInterval(syncAutoStatus, 100);
+        window.setInterval(syncAutoStatus, 250);
     }
 
     function safeText(value) {

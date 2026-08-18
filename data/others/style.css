@@ -229,7 +229,7 @@
     right: 84px;
     bottom: 18px;
     height: 32px;
-    display: flex;
+    display: none !important;
     align-items: center;
     color: rgba(235, 242, 246, 0.72);
     font-family: "GenMin", serif;
@@ -241,6 +241,7 @@
 }
 
 .hl-auto-status.is-active {
+    display: flex !important;
     opacity: 0.78;
     animation: hl-auto-status-breathe 4.8s ease-in-out infinite;
 }
