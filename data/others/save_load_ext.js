@@ -393,7 +393,7 @@
             var currentText = parseInt(config.chSpeed || 30, 10);
             var currentAuto = parseInt(config.autoSpeed || 3000, 10);
             var unreadSkip = config.unReadTextSkip === "true";
-            var DEFAULT_CONFIG = { bgm: 60, se: 60, text: 42, auto: 5000, skip: false };
+            var DEFAULT_CONFIG = { bgm: 60, se: 60, text: 42, auto: 1000, skip: false };
 
             $("#hl-config-overlay").remove();
             function playClick() {
