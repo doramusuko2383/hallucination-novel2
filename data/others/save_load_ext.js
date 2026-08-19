@@ -35,7 +35,9 @@
 
         function syncAutoStatus() {
             var indicator = getIndicator();
-            var shouldShow = !!kag.stat.is_auto;
+            var menuButton = $(".button_menu").first();
+            var controlsVisible = kag.stat.visible_menu_button == 1 && menuButton.css("display") !== "none";
+            var shouldShow = !!kag.stat.is_auto && controlsVisible;
             indicator.toggleClass("is-active", shouldShow).attr("aria-hidden", shouldShow ? "false" : "true");
         }
 
