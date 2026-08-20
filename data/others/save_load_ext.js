@@ -9,9 +9,11 @@
         4000: "20",
         3000: "40",
         2000: "60",
+        1800: "60",
         1000: "80",
         500: "FAST"
     };
+    var AUTO_SPEED_STEPS = [5000, 4000, 3000, 2000, 1000, 500];
 
     function normalizeAutoSpeed(value) {
         var parsed = parseInt(value, 10);
@@ -30,24 +32,44 @@
         window.__hl_auto_status_installed = true;
 
         var kag = TYRANO.kag;
+        var lastAnnouncedAutoState = null;
 
         function getIndicator() {
             var indicator = $("#hl-auto-status");
             if (indicator.length) return indicator;
 
-            indicator = $('<div id="hl-auto-status" class="hl-auto-status" aria-label="AUTO mode active" aria-hidden="true">AUTO</div>');
+            indicator = $('<div id="hl-auto-status" class="hl-auto-status" aria-hidden="true">AUTO</div>');
             var menuButton = $(".button_menu").first();
             if (menuButton.length) indicator.insertBefore(menuButton);
             else $("#tyrano_base").append(indicator);
             return indicator;
         }
 
+        function getLiveStatus() {
+            var liveStatus = $("#hl-auto-status-live");
+            if (liveStatus.length) return liveStatus;
+
+            liveStatus = $('<div id="hl-auto-status-live" class="hl-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>');
+            $("#tyrano_base").append(liveStatus);
+            return liveStatus;
+        }
+
         function syncAutoStatus() {
             var indicator = getIndicator();
             var menuButton = $(".button_menu").first();
-            var controlsVisible = kag.stat.visible_menu_button == 1 && menuButton.css("display") !== "none";
-            var shouldShow = !!kag.stat.is_auto && controlsVisible;
-            indicator.toggleClass("is-active", shouldShow).attr("aria-hidden", shouldShow ? "false" : "true");
+            // visible_menu_button はロード／シナリオ側の直接 show() 後に実DOMと
+            // 食い違う場合があるため、隣接するMENU自身の表示状態を正とする。
+            var controlsVisible = menuButton.length > 0 && menuButton.css("display") !== "none";
+            var isAuto = !!kag.stat.is_auto;
+            indicator.toggleClass("is-active", isAuto && controlsVisible);
+
+            if (lastAnnouncedAutoState === null) {
+                lastAnnouncedAutoState = isAuto;
+                if (isAuto) getLiveStatus().text("AUTO mode on");
+            } else if (lastAnnouncedAutoState !== isAuto) {
+                getLiveStatus().text(isAuto ? "AUTO mode on" : "AUTO mode off");
+                lastAnnouncedAutoState = isAuto;
+            }
         }
 
         // setAuto() が発火する標準イベントへ直接連動する。ロード等でDOMが
@@ -55,7 +77,10 @@
         kag.on("auto-start.hlAutoStatus auto-stop.hlAutoStatus load-beforemaking.hlAutoStatus", function () {
             window.setTimeout(syncAutoStatus, 0);
         }, { system: true });
-        syncAutoStatus();
+        // ライブ領域を空の状態で先にDOMへ載せ、次のタスクで初回状態を反映する。
+        // これにより、起動時点でAUTO中の場合も最初の通知を拾えるようにする。
+        getLiveStatus();
+        window.setTimeout(syncAutoStatus, 0);
         window.setInterval(syncAutoStatus, 250);
     }
 
