@@ -939,9 +939,8 @@
 
 だが、恵は冷たい表情のまま、目を逸らした。[p]
 
-[stopbgm fadeout=true time=1000]
+[fadeoutbgm time=1000]
 
-[bg storage="black.png" time=0]
 [bg storage="black.png" time=1000]
 [playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=400]
 
