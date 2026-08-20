@@ -8,12 +8,23 @@
         4000: "20",
         3000: "40",
         2000: "60",
+        1800: "60",
         1000: "80",
         500: "FAST"
     };
+    var AUTO_SPEED_STEPS = [5000, 4000, 3000, 2000, 1000, 500];
 
     function autoSpeedLabel(value) {
-        return AUTO_SPEED_LABELS[value] || String(value);
+        var speed = parseInt(value, 10);
+        if (!isFinite(speed)) return String(value);
+        if (AUTO_SPEED_LABELS[speed]) return AUTO_SPEED_LABELS[speed];
+
+        // 旧バージョン等で任意のミリ秒値が保存されていても、生の内部値は
+        // 表示せず、現在の6段階のうち最も近いラベルとして提示する。
+        var nearest = AUTO_SPEED_STEPS.reduce(function (current, candidate) {
+            return Math.abs(candidate - speed) < Math.abs(current - speed) ? candidate : current;
+        });
+        return AUTO_SPEED_LABELS[nearest];
     }
 
     function installAutoStatusIndicator() {
@@ -66,7 +77,10 @@
         kag.on("auto-start.hlAutoStatus auto-stop.hlAutoStatus load-beforemaking.hlAutoStatus", function () {
             window.setTimeout(syncAutoStatus, 0);
         }, { system: true });
-        syncAutoStatus();
+        // ライブ領域を空の状態で先にDOMへ載せ、次のタスクで初回状態を反映する。
+        // これにより、起動時点でAUTO中の場合も最初の通知を拾えるようにする。
+        getLiveStatus();
+        window.setTimeout(syncAutoStatus, 0);
         window.setInterval(syncAutoStatus, 250);
     }
 
