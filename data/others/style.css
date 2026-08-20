@@ -222,6 +222,52 @@
     box-shadow: 0 0 12px rgba(158, 188, 208, 0.26);
 }
 
+/* AUTO中だけMENUの左に表示する、操作を持たない控えめな状態表示 */
+.hl-auto-status {
+    position: absolute;
+    z-index: 2147483645;
+    right: 84px;
+    bottom: 18px;
+    height: 32px;
+    display: none !important;
+    align-items: center;
+    color: rgba(235, 242, 246, 0.72);
+    font-family: "GenMin", serif;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 240ms ease;
+}
+
+.hl-auto-status.is-active {
+    display: flex !important;
+    opacity: 0.78;
+    animation: hl-auto-status-breathe 4.8s ease-in-out infinite;
+}
+
+/* 状態変化を読み上げるための、画面には表示しないライブ領域 */
+.hl-visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+@keyframes hl-auto-status-breathe {
+    0%, 100% { opacity: 0.58; }
+    50% { opacity: 0.82; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hl-auto-status.is-active { animation: none; }
+}
+
 /* テキストエリア周辺のCSSテキストボタン */
 .quiet_system_button,
 .glink_button.quiet_system_button {
