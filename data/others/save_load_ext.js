@@ -23,6 +23,14 @@
         }, AUTO_SPEED_VALUES[0]);
     }
 
+    function normalizeAutoSpeed(value) {
+        var parsed = parseInt(value, 10);
+        if (isNaN(parsed)) return 3000;
+        return AUTO_SPEED_VALUES.reduce(function (nearest, candidate) {
+            return Math.abs(candidate - parsed) < Math.abs(nearest - parsed) ? candidate : nearest;
+        }, AUTO_SPEED_VALUES[0]);
+    }
+
     function autoSpeedLabel(value) {
         return AUTO_SPEED_LABELS[normalizeAutoSpeed(value)];
     }
@@ -656,7 +664,12 @@
             });
 
             root.append(overlay);
-            renderValues();
+            var normalizedAuto = normalizeAutoSpeed(currentAuto);
+            if (normalizedAuto !== currentAuto) {
+                setAuto(normalizedAuto);
+            } else {
+                renderValues();
+            }
         };
     }
 
