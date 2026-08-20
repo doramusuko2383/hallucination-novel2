@@ -36,7 +36,9 @@
         function syncAutoStatus() {
             var indicator = getIndicator();
             var menuButton = $(".button_menu").first();
-            var controlsVisible = kag.stat.visible_menu_button == 1 && menuButton.css("display") !== "none";
+            // visible_menu_button はロード／シナリオ側の直接 show() 後に実DOMと
+            // 食い違う場合があるため、隣接するMENU自身の表示状態を正とする。
+            var controlsVisible = menuButton.length > 0 && menuButton.css("display") !== "none";
             var shouldShow = !!kag.stat.is_auto && controlsVisible;
             indicator.toggleClass("is-active", shouldShow).attr("aria-hidden", shouldShow ? "false" : "true");
         }
