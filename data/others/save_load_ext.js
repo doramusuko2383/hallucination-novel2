@@ -21,16 +21,26 @@
         window.__hl_auto_status_installed = true;
 
         var kag = TYRANO.kag;
+        var lastAnnouncedAutoState = null;
 
         function getIndicator() {
             var indicator = $("#hl-auto-status");
             if (indicator.length) return indicator;
 
-            indicator = $('<div id="hl-auto-status" class="hl-auto-status" aria-label="AUTO mode active" aria-hidden="true">AUTO</div>');
+            indicator = $('<div id="hl-auto-status" class="hl-auto-status" aria-hidden="true">AUTO</div>');
             var menuButton = $(".button_menu").first();
             if (menuButton.length) indicator.insertBefore(menuButton);
             else $("#tyrano_base").append(indicator);
             return indicator;
+        }
+
+        function getLiveStatus() {
+            var liveStatus = $("#hl-auto-status-live");
+            if (liveStatus.length) return liveStatus;
+
+            liveStatus = $('<div id="hl-auto-status-live" class="hl-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>');
+            $("#tyrano_base").append(liveStatus);
+            return liveStatus;
         }
 
         function syncAutoStatus() {
@@ -39,8 +49,16 @@
             // visible_menu_button はロード／シナリオ側の直接 show() 後に実DOMと
             // 食い違う場合があるため、隣接するMENU自身の表示状態を正とする。
             var controlsVisible = menuButton.length > 0 && menuButton.css("display") !== "none";
-            var shouldShow = !!kag.stat.is_auto && controlsVisible;
-            indicator.toggleClass("is-active", shouldShow).attr("aria-hidden", shouldShow ? "false" : "true");
+            var isAuto = !!kag.stat.is_auto;
+            indicator.toggleClass("is-active", isAuto && controlsVisible);
+
+            if (lastAnnouncedAutoState === null) {
+                lastAnnouncedAutoState = isAuto;
+                if (isAuto) getLiveStatus().text("AUTO mode on");
+            } else if (lastAnnouncedAutoState !== isAuto) {
+                getLiveStatus().text(isAuto ? "AUTO mode on" : "AUTO mode off");
+                lastAnnouncedAutoState = isAuto;
+            }
         }
 
         // setAuto() が発火する標準イベントへ直接連動する。ロード等でDOMが
