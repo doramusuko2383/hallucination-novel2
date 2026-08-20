@@ -3,6 +3,7 @@
 
     var MANUAL_SLOT_COUNT = 100;
     var AUTO_SLOT_COUNT = 10;
+    var AUTO_SPEED_VALUES = [5000, 4000, 3000, 2000, 1000, 500];
     var AUTO_SPEED_LABELS = {
         5000: "SLOW",
         4000: "20",
@@ -14,17 +15,16 @@
     };
     var AUTO_SPEED_STEPS = [5000, 4000, 3000, 2000, 1000, 500];
 
-    function autoSpeedLabel(value) {
-        var speed = parseInt(value, 10);
-        if (!isFinite(speed)) return String(value);
-        if (AUTO_SPEED_LABELS[speed]) return AUTO_SPEED_LABELS[speed];
+    function normalizeAutoSpeed(value) {
+        var parsed = parseInt(value, 10);
+        if (isNaN(parsed)) return 3000;
+        return AUTO_SPEED_VALUES.reduce(function (nearest, candidate) {
+            return Math.abs(candidate - parsed) < Math.abs(nearest - parsed) ? candidate : nearest;
+        }, AUTO_SPEED_VALUES[0]);
+    }
 
-        // 旧バージョン等で任意のミリ秒値が保存されていても、生の内部値は
-        // 表示せず、現在の6段階のうち最も近いラベルとして提示する。
-        var nearest = AUTO_SPEED_STEPS.reduce(function (current, candidate) {
-            return Math.abs(candidate - speed) < Math.abs(current - speed) ? candidate : current;
-        });
-        return AUTO_SPEED_LABELS[nearest];
+    function autoSpeedLabel(value) {
+        return AUTO_SPEED_LABELS[normalizeAutoSpeed(value)];
     }
 
     function installAutoStatusIndicator() {
@@ -598,16 +598,17 @@
             }
 
             function renderValues() {
+                var normalizedAuto = normalizeAutoSpeed(currentAuto);
                 overlay.find('[data-kind="bgm"] .hl-config-value').text(currentBgm + "%");
                 overlay.find('[data-kind="se"] .hl-config-value').text(currentSe + "%");
                 overlay.find('[data-kind="text"] .hl-config-value').text(currentText);
-                overlay.find('[data-kind="auto"] .hl-config-value').text(autoSpeedLabel(currentAuto));
+                overlay.find('[data-kind="auto"] .hl-config-value').text(autoSpeedLabel(normalizedAuto));
                 overlay.find('[data-kind="skip"] .hl-config-value').text(unreadSkip ? "ON" : "OFF");
                 overlay.find('[data-kind="display"] .hl-config-value').text(isFullscreen() ? "FULLSCREEN" : "WINDOW");
                 overlay.find('[data-kind="bgm"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentBgm + '"]').addClass("is-active");
                 overlay.find('[data-kind="se"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentSe + '"]').addClass("is-active");
                 overlay.find('[data-kind="text"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentText + '"]').addClass("is-active");
-                overlay.find('[data-kind="auto"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + currentAuto + '"]').addClass("is-active");
+                overlay.find('[data-kind="auto"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + normalizedAuto + '"]').addClass("is-active");
                 overlay.find('[data-kind="skip"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + (unreadSkip ? 1 : 0) + '"]').addClass("is-active");
                 overlay.find('[data-kind="display"] .hl-config-option').toggleClass("is-active", false).filter('[data-value="' + (isFullscreen() ? 1 : 0) + '"]').addClass("is-active");
             }
@@ -624,7 +625,7 @@
             addOptions("bgm", [0, 20, 40, 60, 80, 100], setBgm, function (value) { return value === 0 ? "MUTE" : String(value); });
             addOptions("se", [0, 20, 40, 60, 80, 100], setSe, function (value) { return value === 0 ? "MUTE" : String(value); });
             addOptions("text", [100, 70, 50, 42, 30, 20, 10], setText);
-            addOptions("auto", [5000, 4000, 3000, 2000, 1000, 500], setAuto, autoSpeedLabel);
+            addOptions("auto", AUTO_SPEED_VALUES, setAuto, autoSpeedLabel);
             addOptions("skip", [0, 1], function (value) { setUnreadSkip(value === 1); }, function (value) { return value === 1 ? "ON" : "OFF"; });
             addOptions("display", [0, 1], function (value) { setDisplayMode(value === 1); }, function (value) { return value === 1 ? "FULLSCREEN" : "WINDOW"; });
             $(document)
