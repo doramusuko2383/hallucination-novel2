@@ -712,8 +712,6 @@
 
 怒りの中に、明らかな悲しみが混じっている。[p]
 
-龍也の拳が小さく震えていた。[p]
-
 [cg storage="ch5_rooftop_tatsuya_cry.webp"]
 [bg storage="ch5_rooftop_tatsuya_cry.webp" time=800]
 [wait time=500]
