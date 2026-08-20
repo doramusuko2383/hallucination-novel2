@@ -13,10 +13,10 @@
 [font speed=50]
 
 [bg storage="bg_hospital_room_day.webp" time=800]
-[playse storage=se/air_noise.ogg loop=true volume=100]
+[playse storage=se/air_noise.ogg loop=true volume=30]
 
 病室は酷く殺風景で、何も書かれていない真っ白なキャンパスを彷彿とさせた。[p]
-[chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=700 wait=false]
+[chara_show name="綾香" face="hospital" left=150 top=-20 width=470 time=700 wait=false]
 [wait time=1000]
 綾香が目を開けると、天井の蛍光灯がぼんやりと目に入ってくる。[p]
 シーツは冷たく、何日経っても枕の固さがしっくりこない感じがする。[p]
@@ -41,7 +41,7 @@
 [fadeoutbgm time=3000]
 [stopse fadeout=700]
 [bg storage="bg_rooftop_day2.webp" time=900]
-[playbgm storage="memory_light.ogg" loop=true volume=100 fadein=true time=900]
+[playbgm storage="memory_light.ogg" loop=true volume=50 fadein=true time=900]
 [playse storage=se/drawing.ogg volume=100]
 その日も、いつものようにスケッチブックを広げ、風に吹かれる校庭の木々を描いていた。[p]
 足音や人の話し声が一切聞こえないこの空間は、綾香にとって至福のひとときだった。[p]
@@ -96,7 +96,7 @@
 外面は良い母親の声が、廊下から響いて聞こえてきた。[p]
 看護士に日々の入院の間のお礼を言っているのだ。[p]
 本当に「良い人」を演じるのは得意な母だと、皮肉に思う。[p]
-[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=900]
+[playbgm storage="tension_low.ogg" loop=true volume=20 fadein=true time=900]
 [auto_chara name="綾香の母" face="smile" time=500]
 「起きてたのね」[p]
 
@@ -106,14 +106,14 @@
 
 言葉は優しいが、心からの問いかけではないことはもうわかっていた。[p]
 [chara_hide_all]
-[chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=300 wait=false]
+[chara_show name="綾香" face="hospital" left=150 top=-20 width=420 time=300 wait=false]
 「普通」[p]
 [auto_chara name="綾香の母" face="normal"]
 「普通って何よ。ちゃんと自分の状態を伝えなさい」[p]
 
 母親はため息混じりに呆れた表情を見せる。[p]
 [chara_hide_all]
-[chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=300 wait=false]
+[chara_show name="綾香" face="hospital" left=150 top=-20 width=370 time=300 wait=false]
 「別に、前と同じ。特に何も変わらない」[p]
 [chara_hide_all]
 本当は少しだけ胸が痛んだ。[p]
@@ -124,7 +124,7 @@
 それに応えるために、自分は良い子を演じようとした。[p]
 だが、もうそんな努力さえ無駄だと悟った。[p]
 [chara_hide_all]
-[chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=300 wait=false]
+[chara_show name="綾香" face="hospital" left=150 top=-20 width=320 time=300 wait=false]
 「どうせ、遅れていく一方だし、何も変わらないよ」[p]
 
 そう言ったあと、母親は不満そうに眉をひそめた。[p]
@@ -137,7 +137,7 @@
 [auto_chara name="綾香の母" face="normal"]
 「もう、変な幻覚は見てないんでしょ？」[p]
 [chara_hide_all]
-[chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=300 wait=false]
+[chara_show name="綾香" face="hospital" left=150 top=-20 width=270 time=300 wait=false]
 「……」
 [wait time=1000]
 母親の言葉に、綾香は少しだけ顔をしかめた。[p]
@@ -174,7 +174,7 @@
 
 [chara_hide_all]
 [bg storage="bg_hospital_room_day.webp" time=800]
-[chara_show name="綾香" face="hospital" left=150 top=-20 width=520 time=300 wait=false]
+[chara_show name="綾香" face="hospital" left=150 top=-20 width=220 time=300 wait=false]
 「幻覚はもう見てないよ」[p]
 
 母親に返す言葉は淡々としていた。[p]
