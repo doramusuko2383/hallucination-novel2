@@ -213,24 +213,31 @@
 
 信号が青に変わり、二人は自然に並んで歩き出した。[p]
 
+[auto_chara name="恵" face="normal"]
 「そういえば、こうやって一緒に帰るのって初めてだよね」[p]
 
 恵に言われて、拓海はこれまでのことを思い返した。[p]
 ファミレスで何度も顔を合わせ、最近では学校の外で会うことも珍しくなくなった。[p]
 それなのに、放課後に二人で並んで駅まで歩いたことは一度もない。[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「確かに。家もそんなに遠くないのに、不思議だね」[p]
 
+[auto_chara name="恵" face="normal"]
 「永山君、いつもすぐ帰っちゃうもんね」[p]
 
+[auto_chara name="拓海" face="level2_normal"]
 「菊池さんは友達と帰ってることが多いでしょ。声かけるタイミングもないし」[p]
 
 何気なく答えると、恵が少し意外そうな顔をした。[p]
 
+[auto_chara name="恵" face="surprise"]
 「ちゃんと見てるんだ」[p]
 
+[auto_chara name="拓海" face="level2_shysmile"]
 「いや、同じクラスなんだから、それくらいはわかるよ」[p]
 
+[auto_chara name="恵" face="laugh"]
 「そっか」[p]
 
 恵はどこか楽しそうに笑った。[p]
@@ -242,18 +249,24 @@
 
 同じクラスにいるのに、恵が普段何をしているのか、何が好きなのか。拓海はほとんど知らない。[p]
 
+[auto_chara name="拓海" face="level2_normal"]
 「菊池さんって、休みの日は何してるの？」[p]
 
+[auto_chara name="恵" face="surprise"]
 「え、急にどうしたの？」[p]
 
+[auto_chara name="拓海" face="level2_shysmile"]
 「いや。そういえば知らないなと思って」[p]
 
 恵は少し考えるように視線を上げた。[p]
 
+[auto_chara name="恵" face="normal"]
 「普通だよ。友達と買い物に行ったり、家で動画見たり。あとは、お母さんと出掛けることもあるかな」[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「へえ。お母さんと仲いいんだね」[p]
 
+[auto_chara name="恵" face="happy"]
 「うん。二人しかいないからね」[p]
 
 恵はそう言ってから、少しだけ表情を曇らせた。[p]
@@ -261,51 +274,71 @@
 拓海は高田のことを思い出したが、今日はその話をしたくなかった。[p]
 せっかく今までとは違う話をしているのだから、もう少しくらい、この時間を続けてもいい気がした。[p]
 
+[auto_chara name="恵" face="normal"]
 「永山君は？」[p]
 
+[auto_chara name="拓海" face="level2_surprise"]
 「俺？」[p]
 
+[auto_chara name="恵" face="tease"]
 「人に聞いておいて、自分は答えないの？」[p]
 
+[auto_chara name="拓海" face="level2_shysmile"]
 「ああ、ごめん。俺は……映画を見ることが多いかな」[p]
 
+[auto_chara name="恵" face="surprise"]
 「映画？　なんか意外」[p]
 
+[auto_chara name="拓海" face="level2_surprise"]
 「そう？」[p]
 
+[auto_chara name="恵" face="normal"]
 「うん。永山君って、あんまりそういう話しないから」[p]
 
 言われてみれば、学校で映画の話をした記憶はほとんどなかった。[p]
 そもそも自分の好きなものについて誰かに話すこと自体、最近は少なくなっていた。[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「サスペンスとか、そういうのが好きなんだ。最後に全部ひっくり返るようなやつ」[p]
 
+[auto_chara name="恵" face="happy"]
 「ああ、好きそう」[p]
 
+[auto_chara name="拓海" face="level2_surprise"]
 「なんで？」[p]
 
+[auto_chara name="恵" face="tease"]
 「なんとなく。ずっと犯人とか考えながら見てそうだもん」[p]
 
+[auto_chara name="拓海" face="level2_shysmile"]
 「まあ、それは考えるけど」[p]
 
 図星だったので、拓海は苦笑した。[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「でも、途中で犯人がわかるとちょっと嬉しくない？」[p]
 
+[auto_chara name="恵" face="normal"]
 「私は嫌だなあ。当てちゃったら最後に驚けないじゃん」[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「いや、当たった時が楽しいんだよ。ちゃんと伏線を見つけられたってことだから」[p]
 
+[auto_chara name="恵" face="tease"]
 「じゃあ永山君と一緒に映画見たくないな。途中で『こいつが犯人だと思う』とか言いそう」[p]
 
+[auto_chara name="拓海" face="level2_panic"]
 「言わないよ。さすがにそれくらいの常識はあるよ」[p]
 
 恵が声を出して笑った。[p]
 
+[auto_chara name="恵" face="laugh"]
 「よかった」[p]
 
+[auto_chara name="拓海" face="level2_panic"]
 「俺、そんなに面倒な人だと思われてた？」[p]
 
+[auto_chara name="恵" face="tease"]
 「そこまでは言ってないよ」[p]
 
 否定している割には、まだ笑っている。[p]
@@ -316,32 +349,43 @@
 
 誰かと好きな映画の話をして、くだらないことで笑う。それだけのことなのに、最近の自分には随分遠いものになっていた。[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「じゃあ、菊池さんはどんな映画見るの？」[p]
 
+[auto_chara name="恵" face="happy"]
 「私は何でも見るよ。恋愛ものも見るし、コメディも好きだし」[p]
 
+[auto_chara name="拓海" face="level2_normal"]
 「サスペンスは？」[p]
 
+[auto_chara name="恵" face="troubled_smile"]
 「見るけど、怖いやつはちょっと苦手」[p]
 
+[auto_chara name="拓海" face="level2_surprise"]
 「サスペンスとホラーは別じゃない？」[p]
 
+[auto_chara name="恵" face="tease"]
 「永山君が好きそうなのって、絶対怖いやつも入ってるでしょ」[p]
 
+[auto_chara name="拓海" face="level2_shysmile"]
 「まあ……入ってるかも」[p]
 
+[auto_chara name="恵" face="happy"]
 「ほら」[p]
 
 何故か勝ち誇ったような顔をされてしまった。[p]
 
 しばらく歩くと、駅前へ続く大通りが見えてきた。いつも一人で歩いている道なのに、今日は少し短く感じる。[p]
 
+[auto_chara name="恵" face="normal"]
 「そういえばさ」[p]
 
 今度は恵の方から話しかけてきた。[p]
 
+[auto_chara name="恵" face="normal"]
 「永山君って、大学で何を勉強したいとか、もう決めてる？」[p]
 
+[auto_chara name="拓海" face="level2_surprise"]
 「大学？」[p]
 
 突然話題が変わり、拓海は少し考えた。[p]
@@ -351,16 +395,22 @@
 
 ただ、大学に入って何をしたいのかと聞かれると、途端に答えが曖昧になる。[p]
 
+[auto_chara name="拓海" face="level2_normal"]
 「まだ、はっきりとは決めてないかな。志望校はいくつか考えてるけど、学部は迷ってる」[p]
 
+[auto_chara name="恵" face="surprise"]
 「意外。永山君なら、もう全部決めてるのかと思ってた」[p]
 
+[auto_chara name="拓海" face="level2_shysmile"]
 「そんなことないよ。菊池さんこそ、ちゃんと決めてそうだけど」[p]
 
+[auto_chara name="恵" face="normal"]
 「私も同じ。大学は何となく考えてるけど、その先は全然」[p]
 
+[auto_chara name="拓海" face="level2_normal"]
 「そっか」[p]
 
+[auto_chara name="恵" face="normal"]
 「うん」[p]
 
 少しの間、二人の足音だけが続いた。[p]
@@ -370,12 +420,15 @@
 
 けれど、その先に自分が何をしているのかは、うまく想像できなかった。[p]
 
+[auto_chara name="恵" face="normal"]
 「永山君はさ」[p]
 
 恵が少し考えながら言った。[p]
 
+[auto_chara name="恵" face="serious"]
 「将来、何になりたいとかある？」[p]
 
+[auto_chara name="拓海" face="level2_normal"]
 「……将来か」[p]
 
 拓海は思わず空を見上げた。[p]
@@ -385,24 +438,32 @@
 子供の頃なら、もっと簡単に答えられた気がする。[p]
 けれど高校生になった今は、大学の名前や偏差値ばかりが現実味を持って、その先にいる自分の姿はぼんやりと霞んでいる。[p]
 
+[auto_chara name="拓海" face="level2_normal"]
 「わからないな。考えたことはあるけど、これになりたいっていうのは、まだないかも」[p]
 
+[auto_chara name="恵" face="normal"]
 「そっか」[p]
 
+[auto_chara name="拓海" face="level2_normal"]
 「菊池さんは？」[p]
 
+[auto_chara name="恵" face="normal"]
 「私もわからない」[p]
 
 恵はあっさり答えた。[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「人に聞いておいて？」[p]
 
 拓海が笑うと、恵も笑った。[p]
 
+[auto_chara name="恵" face="laugh"]
 「だから聞いたの。みんなちゃんと決めてるのかなって、ちょっと気になって」[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「なんだ。菊池さんも同じなんだね」[p]
 
+[auto_chara name="恵" face="troubled_smile"]
 「同じだよ。私だって、そんな何でもちゃんとしてるわけじゃないから」[p]
 
 恵は笑っていたが、その言葉だけが妙に拓海の耳に残った。[p]
@@ -416,24 +477,32 @@
 
 当たり前のことなのに、今まで考えたことがなかった。[p]
 
+[auto_chara name="恵" face="normal"]
 「まあ、まだ二年生だしね」[p]
 
 恵が前を向いたまま言った。[p]
 
+[auto_chara name="恵" face="happy"]
 「これから見つければいいんじゃない？」[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「そうだね」[p]
 
 拓海も頷いた。[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「菊池さんが言うと、なんか大丈夫な気がする」[p]
 
+[auto_chara name="恵" face="surprise"]
 「何それ」[p]
 
+[auto_chara name="拓海" face="level2_shysmile"]
 「いや、褒めてるよ」[p]
 
+[auto_chara name="恵" face="tease"]
 「本当に？」[p]
 
+[auto_chara name="拓海" face="level2_smile"]
 「本当に」[p]
 
 恵は疑うように拓海を見たあと、少しだけ笑った。[p]
