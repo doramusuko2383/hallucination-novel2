@@ -365,16 +365,23 @@
 [auto_chara name="拓海" face="level2_surprise"]
 「サスペンスとホラーは別じゃない？」[p]
 
-[auto_chara name="恵" face="tease"]
-「永山君が好きそうなのって、絶対怖いやつも入ってるでしょ」[p]
+[auto_chara name="恵" face="laugh"]
+「でも永山君、普通のサスペンスじゃ物足りないとか言いそう」[p]
 
 [auto_chara name="拓海" face="level2_smile"]
-「まあ……入ってるかも」[p]
+「そんなことないよ」[p]
 
-[auto_chara name="恵" face="happy"]
+[auto_chara name="恵" face="laugh"]
+「本当に？　人がいっぱい死ぬやつとか好きそうだけど」[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+「……まあ、嫌いではないかな」[p]
+
+[auto_chara name="恵" face="tease"]
 「ほら」[p]
 
 何故か勝ち誇ったような顔をされてしまった。[p]
+[chara_hide_all]
 
 しばらく歩くと、駅前へ続く大通りが見えてきた。いつも一人で歩いている道なのに、今日は少し短く感じる。[p]
 
@@ -492,7 +499,6 @@
 
 拓海も頷いた。[p]
 
-[auto_chara name="拓海" face="level2_smile"]
 「菊池さんが言うと、なんか大丈夫な気がする」[p]
 
 [auto_chara name="恵" face="laugh"]
@@ -553,6 +559,7 @@
 「退院したらお家にお見舞いしに行けばいいのよ」[p]
 [auto_chara name="拓海" face="level2_normal"]
 「それもそうだね」[p]
+[chara_hide_all]
 
 [playse storage=se/train_coming2.ogg volume=100]
 [wait time=3000]
@@ -1357,13 +1364,12 @@
 
 [chara_hide_all]
 [bg storage="bg_rooftop_day_hallucination.webp" time=800]
-[auto_chara name="龍也" face="sad"]
 龍也が見たのは、屋上だった。[p]
 
 ただし、そこにあるのは今の屋上ではない。[p]
 もっと明るく、もっと穏やかで、どこか懐かしい場所だった。[p]
 
-[auto_chara name="翔太" face="shysmile"]
+[auto_chara name="翔太" face="normal"]
 翔太が笑っている。[p]
 [auto_chara name="綾香" face="smile"]
 綾香がスケッチブックを抱えて、呆れたように笑っている。[p]
@@ -1509,12 +1515,12 @@
 
 [chara_hide_all]
 [bg storage="bg_rooftop_day.webp" time=500]
-[auto_chara name="龍也" face="sad" time=80]
+[auto_chara name="龍也" face="hell" time=80]
 現実に戻った瞬間、龍也は声にならない叫びを上げて崩れ落ちた。[p]
 
 [auto_chara name="恵" face="pain"]
 「龍也くん！」[p]
-
+[chara_hide_all]
 恵が駆け寄ろうとしたが、拓海は動けなかった。[p]
 
 龍也は屋上の床に膝をつき、何かから逃げるように後ずさった。[p]
@@ -1557,13 +1563,14 @@
 [auto_chara name="拓海" face="level2_depressed"]
 クラスメイトたちの視線が変わった。[p]
 教師たちの声色が変わった。[p]
-[auto_chara name="恵" face="private_anxiety"]
+[auto_chara name="恵" face="sad"]
 恵の表情も、少しずつ遠くなっていった。[p]
 
 「永山くんは、悪くないよ」[p]
 
 恵はそう言ってくれた。[p]
 でも、その声には、以前のような温かさがなかった。[p]
+[chara_hide_all]
 
 拓海はようやく理解した。[p]
 
