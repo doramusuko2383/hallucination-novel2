@@ -730,6 +730,7 @@
 
 [wait time=1000]
 
+*ch4_retry_context_takada_address
 その後もスマホからは断片的な会話が続くが、二人の耳にはほとんど入ってこない。[p]
 頭の中は高田の言葉で埋め尽くされていた。[p]
 
@@ -752,8 +753,9 @@
 [s]
 
 *ch4_takada_tail_choice_retry
-[playbgm storage="tension_low.ogg" loop=true volume=80 fadein=true time=1000]
-@jump target="*ch4_takada_tail_choice"
+[stopbgm]
+[bg storage="ch4_takumi_megumi.webp" time=0]
+@jump target="*ch4_retry_context_takada_address"
 
 *ch4_takada_tail_return
 拓海はスマホから聞こえる物音に耳を澄ませた。[p]

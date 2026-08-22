@@ -159,6 +159,7 @@
 
 [wait time=500]
 
+*ch3_retry_context_convenience_timing
 10分程度待っただろうか。[p]
 店内の客も残り一人になった。[p]
 [wait time=500]
@@ -191,7 +192,7 @@
 
 *ch3_choice_convenience_counter_retry
 [playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
-@jump target="*ch3_choice_convenience_counter"
+@jump target="*ch3_retry_context_convenience_timing"
 
 *ch3_go_counter
 [cm]
@@ -620,6 +621,7 @@
 [chara_hide_all time=300]
 [wait time=1000]
 
+*ch3_retry_context_megumi_suspicion
 警察……？[p]
 
 [wait time=1000]
@@ -688,8 +690,7 @@
 [playbgm storage="airconditioner.ogg" loop=true volume=50 fadein=true time=1000]
 [playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
 [playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=500]
-[auto_chara name="恵" face="serious"]
-@jump target="*ch3_choice_megumi_truth"
+@jump target="*ch3_retry_context_megumi_suspicion"
 
 *ch3_megumi_play_dumb_bad
 [cm]
@@ -976,6 +977,7 @@
 「断ってるんだけど、ずっとしつこくて……最近は脅すみたいなことまで言われてるみたい」[p]
 
 [chara_hide_all time=300]
+*ch3_retry_context_help_megumi
 恵はスマホを取り出し、
 テーブルの上にそっと置いた。[p]
 
@@ -1150,10 +1152,9 @@
 *ch3_help_megumi_retry
 [cm]
 [bg storage="bg_karaoke.webp" time=0]
-[playbgm storage="airconditioner.ogg" loop=true volume=50 fadein=true time=1000]
 [playse storage=se/karaoke_sound.ogg loop=true volume=20 fadein=true time=500]
-[auto_chara name="恵" face="serious"]
-@jump target="*ch3_choice_help_megumi"
+[playbgm storage="suspense.ogg" loop=true volume=80 fadein=true time=1000]
+@jump target="*ch3_retry_context_help_megumi"
 
 *ch3_help_megumi_continue
 ; 追加した演出意図: 重い会話の終わりに環境音だけを残し、日常へ戻る微かな救いを出す。

@@ -716,6 +716,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [fadeoutbgm time=4000]
 [wait time=1000]
 
+*ch2_retry_context_megumi_approach
 *ch2_megumi_conversation
 
 [bg storage="bg_classroom_day2.webp" time=800]
@@ -1091,6 +1092,6 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [eval exp="f.bad_end_no = 'BAD END 01'"]
 [eval exp="f.bad_end_title = '変えられなかった日常'"]
 [eval exp="f.bad_end_retry_storage = 'chapter2.ks'"]
-[eval exp="f.bad_end_retry_target = '*ch2_choice_megumi_approach'"]
+[eval exp="f.bad_end_retry_target = '*ch2_retry_context_megumi_approach'"]
 [eval exp="f.bad_end_retry_bg = 'bg_classroom_day2.webp'"]
 @jump storage="badend.ks" target="*bad_end"
