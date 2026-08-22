@@ -232,10 +232,10 @@
 
 何気なく答えると、恵が少し意外そうな顔をした。[p]
 
-[auto_chara name="恵" face="surprise"]
+[auto_chara name="恵" face="normal"]
 「ちゃんと見てるんだ」[p]
 
-[auto_chara name="拓海" face="level2_shysmile"]
+[auto_chara name="拓海" face="level2_smile"]
 「いや、同じクラスなんだから、それくらいはわかるよ」[p]
 
 [auto_chara name="恵" face="laugh"]
@@ -244,6 +244,7 @@
 恵はどこか楽しそうに笑った。[p]
 
 何がおかしかったのかはわからなかったが、拓海もつられて少し笑った。[p]
+[chara_hide_all]
 
 考えてみれば、二人で話すようになってから、それなりに時間が経っている。[p]
 それでも、話題のほとんどは例の力のことや、高田のことだった。[p]
@@ -253,10 +254,10 @@
 [auto_chara name="拓海" face="level2_normal"]
 「菊池さんって、休みの日は何してるの？」[p]
 
-[auto_chara name="恵" face="surprise"]
+[auto_chara name="恵" face="normal"]
 「え、急にどうしたの？」[p]
 
-[auto_chara name="拓海" face="level2_shysmile"]
+[auto_chara name="拓海" face="level2_smile"]
 「いや。そういえば知らないなと思って」[p]
 
 恵は少し考えるように視線を上げた。[p]
@@ -284,10 +285,10 @@
 [auto_chara name="恵" face="tease"]
 「人に聞いておいて、自分は答えないの？」[p]
 
-[auto_chara name="拓海" face="level2_shysmile"]
+[auto_chara name="拓海" face="level2_smile"]
 「ああ、ごめん。俺は……映画を見ることが多いかな」[p]
 
-[auto_chara name="恵" face="surprise"]
+[auto_chara name="恵" face="normal"]
 「映画？　なんか意外」[p]
 
 [auto_chara name="拓海" face="level2_surprise"]
@@ -311,12 +312,11 @@
 [auto_chara name="恵" face="tease"]
 「なんとなく。ずっと犯人とか考えながら見てそうだもん」[p]
 
-[auto_chara name="拓海" face="level2_shysmile"]
+[auto_chara name="拓海" face="level2_smile"]
 「まあ、それは考えるけど」[p]
 
 図星だったので、拓海は苦笑した。[p]
 
-[auto_chara name="拓海" face="level2_smile"]
 「でも、途中で犯人がわかるとちょっと嬉しくない？」[p]
 
 [auto_chara name="恵" face="normal"]
@@ -339,7 +339,7 @@
 [auto_chara name="拓海" face="level2_panic"]
 「俺、そんなに面倒な人だと思われてた？」[p]
 
-[auto_chara name="恵" face="tease"]
+[auto_chara name="恵" face="happy"]
 「そこまでは言ってないよ」[p]
 
 否定している割には、まだ笑っている。[p]
@@ -368,7 +368,7 @@
 [auto_chara name="恵" face="tease"]
 「永山君が好きそうなのって、絶対怖いやつも入ってるでしょ」[p]
 
-[auto_chara name="拓海" face="level2_shysmile"]
+[auto_chara name="拓海" face="level2_smile"]
 「まあ……入ってるかも」[p]
 
 [auto_chara name="恵" face="happy"]
@@ -383,13 +383,13 @@
 
 今度は恵の方から話しかけてきた。[p]
 
-[auto_chara name="恵" face="normal"]
 「永山君って、大学で何を勉強したいとか、もう決めてる？」[p]
 
 [auto_chara name="拓海" face="level2_surprise"]
 「大学？」[p]
 
 突然話題が変わり、拓海は少し考えた。[p]
+[chara_hide_all]
 
 黒森学園では、二年生になると進路について聞かれる機会が一気に増える。[p]
 志望校については拓海もある程度考えていたし、成績から現実的な候補も絞り始めていた。[p]
@@ -402,7 +402,7 @@
 [auto_chara name="恵" face="surprise"]
 「意外。永山君なら、もう全部決めてるのかと思ってた」[p]
 
-[auto_chara name="拓海" face="level2_shysmile"]
+[auto_chara name="拓海" face="level2_smile"]
 「そんなことないよ。菊池さんこそ、ちゃんと決めてそうだけど」[p]
 
 [auto_chara name="恵" face="normal"]
@@ -415,6 +415,7 @@
 「うん」[p]
 
 少しの間、二人の足音だけが続いた。[p]
+[chara_hide_all]
 
 これまで拓海にとって進路とは、偏差値や模試の判定を見ながら選ぶものだった。[p]
 どの大学なら狙えるのか。どこまで成績を上げればいいのか。そういうことなら考えられる。[p]
@@ -426,13 +427,13 @@
 
 恵が少し考えながら言った。[p]
 
-[auto_chara name="恵" face="serious"]
 「将来、何になりたいとかある？」[p]
 
 [auto_chara name="拓海" face="level2_normal"]
 「……将来か」[p]
 
 拓海は思わず空を見上げた。[p]
+[chara_hide_all]
 
 すぐに答えが浮かんでくるような質問ではなかった。[p]
 
@@ -494,7 +495,7 @@
 [auto_chara name="拓海" face="level2_smile"]
 「菊池さんが言うと、なんか大丈夫な気がする」[p]
 
-[auto_chara name="恵" face="surprise"]
+[auto_chara name="恵" face="laugh"]
 「何それ」[p]
 
 [auto_chara name="拓海" face="level2_shysmile"]
@@ -507,6 +508,7 @@
 「本当に」[p]
 
 恵は疑うように拓海を見たあと、少しだけ笑った。[p]
+[chara_hide_all]
 
 話しているうちに、いつの間にか駅まで来ていた。[p]
 
@@ -514,10 +516,8 @@
 
 そんなはずはないのだが、今日は随分早く着いたように感じた。[p]
 
-
-
 [bg storage="bg_station_platform_evening.webp" time=700]
-[playse storage=se/traindoor.ogg volume=100]
+
 [playse storage=se/station_noise.ogg loop=true volume=100]
 駅のホームは黒森学園の生徒たちでごった返している。[p]
 二人は無意識のうちにホームの端まで歩き、少し離れた場所で電車を待った。[p]
@@ -613,7 +613,7 @@
 [stopse fadeout=3000]
 [wait time=2000]
 [bg storage="bg_rooftop_day.webp" time=600]
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=30]
 次の日の放課後、拓海は龍也を屋上に呼び出した。[p]
 [chara_show name="拓海" face="level2_normal" left=-100 time=300]
 恵も一緒だ。[p]
@@ -643,7 +643,10 @@
 「もったいぶらずに、さっさと喋れよ！」[p]
 
 龍也が一歩前に詰め寄る。[p]
+
+[auto_chara name="拓海" face="level2_normal"]
 「俺には……不思議な力がある。[l]人に狙った通りの幻を見させることができる」[p]
+[chara_hide_all]
 
 拓海は短く、はっきりと言った。[p]
 龍也は一瞬呆気に取られたようだったが、すぐに笑い出す。[p]
@@ -680,7 +683,7 @@
 重たい沈黙が流れた。[p]
 拓海の心臓の鼓動が耳に届くようだった。[p]
 [fadeoutbgm time=3000]
-[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1500]
+[playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=1500]
 [auto_chara name="拓海" face="level2_depressed"]
 [wait time=2000]
 「そして、綾香には……[l]バイト先の店長にレイプされる幻を見せたんだ」[p]
@@ -691,13 +694,12 @@
 「ふざけるな。そんなことができるわけないだろう！」[p]
 [auto_chara name="恵" face="serious"]
 「でも、実際に起こったの」[p]
-「私もその直後、綾香と話したわ。[l][r]
-店長にレイプされたってパニック状態だった。[l][r]
+「私もその直後、綾香と話したわ。店長にレイプされたってパニック状態だった。[l]
 警察まで来て大騒ぎになったんだよ」[p]
 
 恵が真剣な表情で龍也に伝える。[p]
 [auto_chara name="龍也" face="angry"]
-「……」
+「……」[p]
 [wait time=1000]
 龍也は顔をしかめたまま、無言で立ち尽くしていた。[p]
 話の筋が自分の記憶と合致していることに気付き、龍也は次第に冷静になっていった。[p]
@@ -1510,7 +1512,7 @@
 [auto_chara name="龍也" face="sad" time=80]
 現実に戻った瞬間、龍也は声にならない叫びを上げて崩れ落ちた。[p]
 
-[auto_chara name="恵" face="private_scream"]
+[auto_chara name="恵" face="pain"]
 「龍也くん！」[p]
 
 恵が駆け寄ろうとしたが、拓海は動けなかった。[p]
