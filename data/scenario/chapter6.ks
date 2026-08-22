@@ -723,6 +723,7 @@
 [auto_chara name="拓海" face="level2_normal"]
 「俺もまだよく分かってないところもあるんだ」[p]
 [auto_chara name="龍也" face="normal"]
+*ch6_retry_context_illusion_judgment
 「まあいい。お前はそうやって、あいつらに復讐をしたわけだろ」[p]
 [auto_chara name="拓海" face="level2_depressed"]
 「復讐……そう言われたら、そうだったのかもしれない。[l]あの時は……やり返してやるって気持ちだったよ」[p]
@@ -779,7 +780,8 @@
 
 *ch6_show_illusion_choice_retry
 [playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=1500]
-@jump target="*ch6_show_illusion_choice"
+[auto_chara name="龍也" face="normal"]
+@jump target="*ch6_retry_context_illusion_judgment"
 
 *ch6_show_truth
 [cm]
