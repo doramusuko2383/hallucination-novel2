@@ -687,8 +687,10 @@
         gap: 22,
         clickse: "se/click.ogg",
         introDelay: 520,
-        staggerDelay: 100,
-        fadeTime: 220,
+        staggerDelay: 90,
+        // 220ms only gives a choice about thirteen frames at 60Hz, which made
+        // the third item in a staggered group appear to snap into place.
+        fadeTime: 360,
         branchDelay: 200,
         layouts: {
             "2": {},
@@ -891,7 +893,7 @@
                     show_time: String(state.fadeTime || DEFAULT_CHOICE_CONFIG.fadeTime),
                     show_effect: "hlChoiceFadeInStagger",
                     show_delay: String((state.introDelay || DEFAULT_CHOICE_CONFIG.introDelay) + state.index * (state.staggerDelay || DEFAULT_CHOICE_CONFIG.staggerDelay)),
-                    show_easing: "ease-out",
+                    show_easing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
                     select_time: String((state.fadeTime || DEFAULT_CHOICE_CONFIG.fadeTime) + DEFAULT_CHOICE_CONFIG.branchDelay),
                     select_effect: "hlChoiceFadeOutHold",
                     select_easing: "ease-in",
