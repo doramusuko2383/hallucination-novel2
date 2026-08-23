@@ -938,7 +938,7 @@
 翔太とは、そのあと恵に同席をしてもらって、話をする機会があった。[p]
 翔太は前よりもずっと友好的になっているようで、まるで別人のように感じた。[p]
 翔太に力のことを打ち明けて謝罪したときのことを思い出す。[p]
-[wait time=2000]
+[wait time=1000]
 [bg storage="bg_family_restaurant_evening.webp" time=900]
 [playse storage=se/restaurant_ambience.ogg loop=true volume=30 fadein=true time=1000]
 [auto_chara name="翔太" face="normal"]
@@ -989,16 +989,16 @@
 そうした和解が、今ここにいる理由でもあった。[p]
 [stopse fadeout=1000]
 [bg storage="bg_ayaka_living_day.webp" time=900]
-[playbgm storage="daily_warm.ogg" loop=true volume=80 fadein=true time=1200]
 [auto_chara name="翔太" face="normal"]
 「ここ、すげー家だな」[p]
 
 翔太が龍也に囁く。[p]
 拓海も、リビングの美しさに驚いていた。[p]
 綾香が気だるそうにリビングに入ってくると、場が少し緊張した。[p]
-[chara_show name="綾香" face="private_normal" time=700 wait=false]
+[auto_chara name="綾香" face="private_serious" time=700 wait=false]
 しかし、綾香は恵を見るなり、微笑んだ。[p]
-[chara_show name="綾香" face="private_smile" time=300 wait=false]
+[auto_chara name="綾香" face="private_normal"]
+[wait time=1000]
 [auto_chara name="恵" face="serious"]
 「綾香！」[p]
 
@@ -1014,7 +1014,7 @@
 翔太が軽く冗談を言うと、綾香は「バカ！」と言いながらも、少しだけ笑顔を見せた。[p]
 その笑顔に、拓海は少し救われた気がした。[p]
 その時、綾香の視線が拓海に向いた。[p]
-[auto_chara name="綾香" face="private_shy"]
+[auto_chara name="綾香" face="private_serious"]
 「あんたも……来てくれたんだ……」[p]
 
 綾香の反応に、拓海は少し胸を痛めた。[p]
@@ -1069,13 +1069,14 @@
 「綾香……ちょっといいかな」[p]
 
 彼はあの日のコンビニで起きた事件の経緯を話した。[p]
-[auto_chara name="綾香" face="private_normal"]
+[auto_chara name="綾香" face="private_serious"]
 「そうか、あれはあんたが」[p]
 
 綾香は意外にも冷静だった。[p]
+[auto_chara name="綾香" face="private_stunned"]
 「よくもまあ、そんな酷いこと思いつくわね。でも……」[p]
 [auto_chara name="拓海" face="level3_surprise"]
-「……」
+「……」[p]
 [wait time=1000]
 拓海が深く頭を下げると、綾香は続けた。[p]
 [auto_chara name="綾香" face="private_shy"]
@@ -1117,7 +1118,7 @@
 
 龍也がぼそっと言った。[p]
 綾香は、龍也を見て、少しだけ恥ずかしそうに[r][l]
-[auto_chara name="綾香" face="private_shy"]
+[auto_chara name="綾香" face="private_smile"]
 「うん。行くよ、学校」[p]
 
 と答えた。[p]
