@@ -1064,7 +1064,6 @@
 すると恵が拓海に目で合図する。[p]
 拓海は小さく頷き、綾香に向き合った。[p]
 [fadeoutbgm time=3000]
-[playbgm storage="memory_light.ogg" loop=true volume=80 fadein=true time=1500]
 [auto_chara name="拓海" face="level3_normal"]
 「綾香……ちょっといいかな」[p]
 
@@ -1083,6 +1082,7 @@
 「私、そのときのこと、ほとんど覚えてないの。[l]けど、あの恐怖感だけは体に残ってる。[l]今でも、夜になるとあの夢を見るの……」[p]
 綾香の声は、かすかに震えていた。[p]
 拓海も、綾香の苦しみを感じ取っていた。[p]
+[playbgm storage="memory_light.ogg" loop=true volume=50 fadein=true time=900]
 [auto_chara name="綾香" face="private_normal"]
 「でもね、拓海がやったって聞いて、少し安心した。[l]あれが現実じゃなくて、ただの幻覚だったんだって。[l]……ありがとう、正直に話してくれて」[p]
 [auto_chara name="拓海" face="level3_surprise"]
@@ -1095,18 +1095,16 @@
 「俺もかなり酷いことをしてたしな」[p]
 
 翔太はバツの悪そうな顔をする。[p]
-[auto_chara name="拓海" face="level3_surprise"]
-「綾香、本当にごめん」[p]
 
-拓海は再度頭を下げる。[p]
-[auto_chara name="綾香" face="private_normal"]
-「もういいって、終わったことだし」[p]
 [wait time=1000]
-[fadeoutbgm time=3000]
-[playbgm storage="daily_warm.ogg" loop=true volume=80 fadein=true time=1500]
+
 [auto_chara name="拓海" face="level3_normal"]
 彼は今日もう一つ綾香に伝えたかった大切なことを、意を決して言葉にする。[p]
-「俺、学校で待ってるからさ。もう自殺なんてやめろよ」[p]
+「俺、学校で待ってるからさ」[p]
+
+少し迷ってから、続けた。[p]
+
+「……もう、あんなこと……しないでよ」[p]
 
 そして、必死で泣くのを堪えた。[p]
 [auto_chara name="綾香" face="private_shy"]
