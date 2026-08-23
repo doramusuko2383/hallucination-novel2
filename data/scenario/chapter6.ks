@@ -1175,7 +1175,7 @@
 まだやらなくてはいけないことが残ってはいるが、たまにはこんな日があってもいいのだ。[p]
 [fadeoutbgm time=3000]
 [bg storage="bg_megumi_living_night.webp" time=800]
-[playbgm storage="room_noise.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="room_noise.ogg" loop=true volume=60 fadein=true time=1000]
 [playse storage=se/interphone.ogg volume=100]
 土曜日の夜、インターホンが鳴った。[p]
 約束の時間よりは大分早い。[p]
@@ -1183,7 +1183,7 @@
 拓海が迎えに来てくれたのだろうか。[p]
 恵は小走りで玄関に向かった。[p]
 [auto_chara name="高田" face="normal"]
-「こんばんわ」[p]
+「こんばんは」[p]
 
 [auto_chara name="恵" face="private_serious" left=0]
 「……」
@@ -1198,7 +1198,7 @@
 「ちょっとこのあと友達と会う約束してて。[l]出掛けないといけないんです」[p]
 [auto_chara name="高田" face="normal"]
 「ああ。家で仕事して待つように言われてるから大丈夫だよ」[p]
-
+[chara_hide_all]
 高田は明るくそう答えた。[p]
 響子からは何も聞いていないが、こんなことがあるのだろうか。[p]
 何か仕事の大事な話がなのだろうか。[p]
@@ -1214,8 +1214,9 @@
 「悪いね、気を遣わせちゃって」[p]
 
 二人で向かい合って座るには、やや大き過ぎるリビングの机に高田は座っている。[p]
-それにしても、スーツを着ていないし、荷物も持っていない。[p]
-今日は何をしに来たのだろうか。[p]
+スーツ姿の高田は、一見すると仕事の話をしに来ただけのようにも見える。[p]
+それでも、母からは何も聞いていない。[p]
+一体、何の用なんだろう。[p]
 [auto_chara name="高田" face="serious"]
 「ちょっと大事な話があるんだけど」[p]
 [auto_chara name="恵" face="private_serious" left=0]
@@ -1288,7 +1289,7 @@
 まさか、それに当てたのかと、考え始める。[p]
 高田は恵の反応を待ってから話し始めた。[p]
 [auto_chara name="高田" face="sad"]
-「今、内部調査が進んでいてね。このままいけば、問題の発覚は時間の問題かもしれない」[p]
+「今、内部調査が進んでいてね。このままいけば、不正の発覚は時間の問題かもしれない」[p]
 彼は下唇を噛んだ。[p]
 [auto_chara name="高田" face="serious"]
 「でも、まだ手遅れじゃない」[p]
@@ -1343,7 +1344,7 @@
 [playse storage=se/clock_reverb.ogg volume=100]
 [resetdelay]
 [resetfont]
-[wait time=2500]
+[wait time=1500]
 
 @jump storage="chapter7.ks" target="*chapter7"
 
