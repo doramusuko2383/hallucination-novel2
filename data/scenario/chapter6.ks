@@ -904,13 +904,11 @@
 それから数週間後――[p]
 
 [chara_hide_all]
-[wait time=3000]
-[fadeoutbgm time=3000]
-
-[bg storage="bg_ayaka_entrance_day.webp" time=900]
-[playbgm storage="daily_warm.ogg" loop=true volume=80 fadein=true time=1200]
+[wait time=1000]
 [playse storage=se/interphone.ogg volume=100]
 [wait time=1000]
+[bg storage="bg_ayaka_entrance_day.webp" time=900]
+[playbgm storage="daily_warm.ogg" loop=true volume=80 fadein=true time=1200]
 [auto_chara name="綾香の母" face="smile"]
 「あら、いらっしゃい。随分大勢で来たのね」[p]
 
