@@ -1185,12 +1185,12 @@
 「こんばんは」[p]
 
 [auto_chara name="恵" face="private_serious" left=0]
-「……」
+「……」[p]
 彼女はその顔にギョッとした。[p]
 高田だ。[p]
 [auto_chara name="高田" face="normal"]
-「こんばんわ、恵ちゃん」[p]
-[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=700]
+「こんばんは、恵ちゃん」[p]
+[playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=2000]
 「いや、突然ごめんね。お母さんに家で待っていてくれって頼まれてさ。[l]入れてくれる？」[p]
 [auto_chara name="恵" face="private_serious" left=0]
 「そうだったんですね」[p]
@@ -1200,7 +1200,7 @@
 [chara_hide_all]
 高田は明るくそう答えた。[p]
 響子からは何も聞いていないが、こんなことがあるのだろうか。[p]
-何か仕事の大事な話がなのだろうか。[p]
+何か仕事の大事な話があるのだろうか。[p]
 [wait time=1000]
 恵は気が進まなかったが、高田をリビングに入れて待たせることにした。[p]
 そしてスマホに指を滑らせ、拓海に一言メッセージを入れた。[p]
@@ -1239,7 +1239,7 @@
 「はい」[p]
 [auto_chara name="高田" face="normal"]
 「そうか。それはいいね」[p]
-
+[chara_hide_all]
 テンポの悪い会話の後、沈黙が流れる。[p]
 ほぼ初対面の年上の男性と、どう話を盛り上げて良いか分からなかった。[p]
 [auto_chara name="高田" face="normal"]
