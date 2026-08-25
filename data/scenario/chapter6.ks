@@ -1159,7 +1159,7 @@
 
 恵は遠くを見つめた。[p]
 「相変わらずかな。元気はなさそう」[p]
-[auto_chara name="拓海" face="level3_smile"]
+[auto_chara name="拓海" face="level3_normal"]
 「そっか」[p]
 
 微妙な沈黙が流れる。[p]
@@ -1175,7 +1175,6 @@
 まだやらなくてはいけないことが残ってはいるが、たまにはこんな日があってもいいのだ。[p]
 [fadeoutbgm time=3000]
 [bg storage="bg_megumi_living_night.webp" time=800]
-[playbgm storage="room_noise.ogg" loop=true volume=60 fadein=true time=1000]
 [playse storage=se/interphone.ogg volume=100]
 土曜日の夜、インターホンが鳴った。[p]
 約束の時間よりは大分早い。[p]
