@@ -280,6 +280,12 @@
 
     function playClickSound() {
         try {
+            if (window.TYRANO && TYRANO.kag) {
+                if (TYRANO.kag.readyAudio) TYRANO.kag.readyAudio();
+                if (window.Howler && Howler.ctx && Howler.ctx.state === "suspended") {
+                    Howler.ctx.resume();
+                }
+            }
             if (window.Howl) {
                 window.__hl_menu_click_howl = window.__hl_menu_click_howl || new Howl({
                     src: [$.parseStorage("se/click.ogg", "sound")],
@@ -291,7 +297,6 @@
                 return;
             }
             if (!window.TYRANO || !TYRANO.kag) return;
-            if (TYRANO.kag.readyAudio) TYRANO.kag.readyAudio();
             if (TYRANO.kag.playSound) TYRANO.kag.playSound("se/click.ogg");
         } catch (e) {
             if (window.console) console.warn("Failed to play menu click sound", e);
@@ -299,11 +304,22 @@
     }
 
     function installClickSoundEvents() {
+        // NEW GAME already uses Tyrano's glink click SE. Registering our
+        // shared sound for it as well would play the same sound twice.
+        var clickSoundTargets = ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .glink_button.title-choice:not(.title-start), .quiet_system_button";
+        var pressEvents = window.PointerEvent
+            ? "pointerdown.hlMenuClickSe click.hlMenuClickSe"
+            : "mousedown.hlMenuClickSe touchstart.hlMenuClickSe click.hlMenuClickSe";
+
         window.__hlPlayClickSe = playClickSound;
         $(document)
-            .off("mousedown.hlMenuClickSe touchstart.hlMenuClickSe", ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .glink_button.title-choice:not(.title-start), .quiet_system_button")
-            .on("mousedown.hlMenuClickSe touchstart.hlMenuClickSe", ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .glink_button.title-choice:not(.title-start), .quiet_system_button", function (e) {
+            .off(".hlMenuClickSe", clickSoundTargets)
+            .on(pressEvents, clickSoundTargets, function (e) {
+                // Pointer/mouse/touch presses handle normal activation. A click
+                // with detail=0 is kept as the keyboard-accessible equivalent.
+                if (e.type === "click" && e.originalEvent && e.originalEvent.detail !== 0) return;
                 if (e.type === "mousedown" && e.which && e.which !== 1) return;
+                if (e.type === "pointerdown" && e.originalEvent && e.originalEvent.button !== 0) return;
                 var now = Date.now();
                 var last = $(this).data("hlClickSeAt") || 0;
                 if (now - last < 80) return;

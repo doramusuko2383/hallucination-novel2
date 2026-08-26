@@ -102,7 +102,7 @@
             main.append($("<div></div>").addClass("extra-end-row " + (unlocked ? "is-unlocked" : "is-locked"))
                 .append($("<span></span>").text(String(index + 1).padStart(2, "0")), $("<strong></strong>").text(unlocked ? ending[1] : "？？？")));
         });
-        root().find("footer").append(button("BACK", "extra-back").on("click", home), $("<output></output>").text(completion(count, endings.length)));
+        root().find("footer").append(button("BACK", "extra-back").on("click", function () { clickSound(); home(); }), $("<output></output>").text(completion(count, endings.length)));
     }
 
     function gallery() {
@@ -114,15 +114,15 @@
             item.on("click", function () { clickSound(); viewer(index); });
             main.append(item);
         });
-        root().find("footer").append(button("BACK", "extra-back").on("click", home));
+        root().find("footer").append(button("BACK", "extra-back").on("click", function () { clickSound(); home(); }));
     }
 
     function viewer(index) {
         root().empty().addClass("is-viewing").append($("<img>", { src: "./data/bgimage/" + cgs[index], alt: "CG full view" }));
         root().append($("<nav></nav>")
-            .append(button("‹ PREV", "extra-view-control").on("click", function () { viewer((index - 1 + cgs.length) % cgs.length); }),
-                button("BACK", "extra-view-control").on("click", function () { root().removeClass("is-viewing"); gallery(); }),
-                button("NEXT ›", "extra-view-control").on("click", function () { viewer((index + 1) % cgs.length); })));
+            .append(button("‹ PREV", "extra-view-control").on("click", function () { clickSound(); viewer((index - 1 + cgs.length) % cgs.length); }),
+                button("BACK", "extra-view-control").on("click", function () { clickSound(); root().removeClass("is-viewing"); gallery(); }),
+                button("NEXT ›", "extra-view-control").on("click", function () { clickSound(); viewer((index + 1) % cgs.length); })));
     }
 
     function backToTitle() {
