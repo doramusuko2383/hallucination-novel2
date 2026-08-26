@@ -51,7 +51,7 @@
 [cg storage="ch7_hurrying_bicycle.webp"]
 [bg storage="ch7_hurrying_bicycle.webp" time=700]
 [wait time=500]
-[playbgm storage="chase.ogg" loop=true volume=60 fadein=true time=1000]
+[playbgm storage="chase.ogg" loop=true volume=40 fadein=true time=1000]
 
 間に合え――。[p]
 自転車で急げば5分程度の距離だ。[p]
@@ -108,7 +108,7 @@
 拓海は靴を脱ぎ捨てて家に上がる。[r]
 恵はどこだ？[p]
 [fadeoutbgm time=4000]
-[playbgm storage="tension_high.ogg" loop=true volume=100 fadein=true time=600]
+[playbgm storage="tension_high.ogg" loop=true volume=50 fadein=true time=600]
 [wait time=500]
 [auto_chara name="拓海" face="private2_shout" time=150]
 「菊池さん！」[p]
@@ -230,7 +230,7 @@
 [auto_chara name="拓海" face="private2_normal"]
 拓海は怒りのやり場を失っていた。[p]
 徹底的に、やらないといけない。[p]
-
+[chara_hide_all]
 [playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=400]
 これも計画通りだ。[r]
 拓海はハサミを持つ手を思いきり振りかぶった――。[p]
@@ -244,11 +244,13 @@
 
 拓海は雑巾を固く絞りながら言った。[p]
 
-[playse storage=se/dust_cloth.ogg volume=100]
-[playse storage=se/wipe.ogg volume=100]
+[playse storage=se/dust_cloth.ogg volume=100 buf="0"]
+[wait time=1000]
+[playse storage=se/wipe.ogg volume=100 buf="1"]
+[wait time=1000]
 
 [bg storage="bg_megumi_room_night.webp" time=700]
-[playse storage=se/room_noise.ogg loop=true volume=70]
+[playse storage=se/room_noise.ogg loop=true volume=30]
 [auto_chara name="恵" face="private_normal"]
 「永山君、手袋した方がいいよ」[p]
 [auto_chara name="拓海" face="private2_normal"]
@@ -378,7 +380,7 @@
 [auto_chara name="恵" face="private_question"]
 「どうかした？」[p]
 [auto_chara name="拓海" face="private2_smile"]
-「そういえば……力、使えたなと思って。ほら、「他人事」じゃなかった」[p]
+「そういえば……力、使えたなと思って。ほら、『他人事』じゃなかった」[p]
 [auto_chara name="恵" face="private_laugh"]
 「それ……まだ気にしてたんだ」[p]
 
@@ -604,9 +606,9 @@
 拓海が不思議そうに聞き返すと、龍也は視線を落とし、深く頭を下げた。[p]
 [auto_chara name="龍也" face="apologize" time=700]
 [wait time=1000]
-「これまでお前にしてきたこと、許されるものじゃないって思ってる。[p]
+「これまでお前にしてきたこと、許されるものじゃないって思ってる」[p]
 [delay speed="95"]
-本当に、すまなかった」[p]
+「本当に、すまなかった」[p]
 [resetdelay]
 
 突然の謝罪に、拓海は一瞬驚いた。[p]
@@ -639,7 +641,7 @@
 
 [wait time=2000]
 
-[playse storage=se/wind_rooftop.ogg volume=100]
+[playse storage=se/wind_rooftop.ogg volume=20]
 
 二人とも何も言わなかった。[p]
 
