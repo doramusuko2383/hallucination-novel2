@@ -1164,9 +1164,145 @@
 今度は不思議と心地よく響いていた。[p]
 
 [wait time=1000]
+[chara_hide_all time=300]
+
+[wait time=500]
+
+[bg storage="bg_station_front_night.webp" time=900]
+
+[playse storage=se/city_ambience.ogg volume=50 loop=true fadein=true time=1000]
+
+[wait time=500]
+
+カラオケを出ると、外はすっかり暗くなっていた。[p]
+
+駅前の店の明かりが、夜の歩道をぼんやりと照らしている。[p]
+
+さっきまで狭い個室で重たい話をしていたせいか、[r]
+外の冷たい空気が少し心地よく感じられた。[p]
+
+[auto_chara name="恵" face="normal"]
+
+「思ったより遅くなっちゃったね」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+
+「そうだね。[l]あんなに長く話すとは思わなかった」[p]
+
+[auto_chara name="恵" face="smile"]
+
+「私も」[p]
+
+[wait time=500]
+
+恵は少しだけ笑った。[p]
+
+カラオケの中ではずっと真剣な顔をしていたので、[r]
+その表情を見ると拓海も少し肩の力が抜けた。[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+
+「でも、菊池さんって意外と大胆だよね」[p]
+
+[auto_chara name="恵" face="surprise"]
+
+「え、私？」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+
+「普通、クラスメイトにいきなり[r]
+『その不思議な力で母親を助けて』なんて頼まないでしょ」[p]
+
+[auto_chara name="恵" face="laugh"]
+
+「あはは。[l]確かにそう言われると、ちょっと変な話だね」[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+
+「しかも俺が嘘ついてる可能性だってあったのに」[p]
+
+[auto_chara name="恵" face="normal"]
+
+「うーん……でも、嘘をついてる感じはしなかったかな」[p]
+
+[auto_chara name="拓海" face="level2_surprise"]
+
+「そんなの分かるの？」[p]
+
+[auto_chara name="恵" face="smile"]
+
+「なんとなく」[p]
+
+「それに、永山君って[r]
+悪いことをして開き直れるタイプには見えなかったから」[p]
+
+[wait time=500]
+
+拓海は少しだけ返事に困った。[p]
+
+褒められたような気もするし、[r]
+そうでもないような気もする。[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+
+「それ、褒めてる？」[p]
+
+[auto_chara name="恵" face="laugh"]
+
+「一応、褒めてるつもり」[p]
+
+[wait time=500]
+
+二人で少し笑った。[p]
+
+それから駅の入口まで、ゆっくりと並んで歩いた。[p]
+
+さっきまで話していた内容を考えれば、[r]
+もっと気まずくなってもおかしくなかった。[p]
+
+けれど、不思議とそんな感じはしなかった。[p]
+
+[auto_chara name="恵" face="normal"]
+
+「じゃあ、今日はここで」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+
+「うん」[p]
+
+[auto_chara name="恵" face="smile"]
+
+「また学校でね」[p]
+
+[wait time=500]
+
+「また学校で」[p]
+
+[chara_hide name="恵" time=400]
+
+[wait time=700]
+
+恵は軽く手を振り、駅の中へ歩いていった。[p]
+
+拓海はその後ろ姿を見送りながら、[r]
+さっきの言葉を頭の中で繰り返した。[p]
+
+また学校で。[p]
+
+ただの挨拶だ。[p]
+
+それなのに、何となく耳に残った。[p]
+
+[wait time=700]
+
+拓海も少し遅れて、駅へ向かって歩き出した。[p]
+
+[chara_hide_all time=300]
+
+[stopse fadeout=800]
+
+[wait time=500]
 [bg storage="black.png" time=1000]
 ; 章末整理: 第三章内で鳴らしたカラオケ等のループSEを次章へ持ち越さない。
-[stopse fadeout=1000]
-[wait time=1000]
 
 @jump storage="chapter4.ks" target="*chapter4"
