@@ -304,7 +304,9 @@
     }
 
     function installClickSoundEvents() {
-        var clickSoundTargets = ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .glink_button.title-choice, .quiet_system_button";
+        // NEW GAME already uses Tyrano's glink click SE. Registering our
+        // shared sound for it as well would play the same sound twice.
+        var clickSoundTargets = ".button_menu, .layer_menu .suspense_menu_button, .layer_menu .suspense_close, .layer_menu .button_arrow_up, .layer_menu .button_arrow_down, .layer_menu .save_display_area, .glink_button.title-choice:not(.title-start), .quiet_system_button";
         var pressEvents = window.PointerEvent
             ? "pointerdown.hlMenuClickSe click.hlMenuClickSe"
             : "mousedown.hlMenuClickSe touchstart.hlMenuClickSe click.hlMenuClickSe";
