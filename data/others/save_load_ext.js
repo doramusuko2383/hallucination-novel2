@@ -208,15 +208,29 @@
         return buildSaveDisplay(data);
     }
 
+    function saveDateValue(item) {
+        if (!item || !item.save_date) return -Infinity;
+        var parts = String(item.save_date).match(/\d+/g);
+        if (!parts || parts.length < 3) return -Infinity;
+        return new Date(
+            Number(parts[0]),
+            Number(parts[1]) - 1,
+            Number(parts[2]),
+            Number(parts[3] || 0),
+            Number(parts[4] || 0),
+            Number(parts[5] || 0)
+        ).getTime();
+    }
+
     function latest(list) {
-        return list.filter(function (item) { return item && item.save_date; }).sort(function (a, b) {
-            return (b.save_date || "").localeCompare(a.save_date || "");
+        return list.filter(function (item) { return saveDateValue(item) > -Infinity; }).sort(function (a, b) {
+            return saveDateValue(b) - saveDateValue(a);
         })[0];
     }
 
     function hasContinuableData(menu) {
         if (!menu) return false;
-        return !!(getLastPlayedData(menu) || latest(getAutoSaveData(menu).concat(menu.getSaveData().data)));
+        return !!latest(getAutoSaveData(menu).concat(menu.getSaveData().data));
     }
 
     function showNoContinueNotice() {
@@ -1287,11 +1301,6 @@
         };
 
         menu.loadLatestSave = function () {
-            var lastPlayed = getLastPlayedData(this);
-            if (lastPlayed) {
-                this.loadGameData($.extend(true, {}, lastPlayed), { auto_next: "yes" });
-                return true;
-            }
             var newest = latest(getAutoSaveData(this).concat(this.getSaveData().data));
             if (newest) {
                 this.loadGameData($.extend(true, {}, newest), { auto_next: "yes" });
