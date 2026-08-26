@@ -354,14 +354,14 @@
 [auto_chara name="恵" face="private_question"]
 「何が？」[p]
 [auto_chara name="拓海" face="private2_sorry"]
-「高田が最初に家に来た日だよ。[p]
-響子さんは外に出てろって言ったでしょ。[p]
-だけど、俺が家にあがって高田に会うことを提案した」[p]
+「高田が最初に家に来た日だよ」[p]
+「響子さんは外に出てろって言ったでしょ」[p]
+「だけど、俺が家にあがって高田に会うことを提案した」[p]
 [auto_chara name="恵" face="private_question"]
 「うん」[p]
 [auto_chara name="拓海" face="private2_sorry"]
-「それで高田が菊池さんの存在を知ったから、今回みたいな危険な目にあったんだよ。[p]
-だから俺のせいなんだ」[p]
+「それで高田が菊池さんの存在を知ったから、今回みたいな危険な目にあったんだよ」[p]
+「だから俺のせいなんだ」[p]
 
 [auto_chara name="恵" face="private_normal"]
 「いいよ、そんなこと。結局色々上手くいったし」[p]
@@ -555,7 +555,7 @@
 
 [fadeoutbgm time=3000]
 [bg storage="bg_rooftop_day2.webp" time=900]
-[playse storage=se/wind_rooftop.ogg loop=true volume=100]
+[playse storage=se/wind_rooftop.ogg volume=20]
 拓海は屋上へと続く階段を一歩一歩上がっていた。[p]
 「もう久しくここを登ってないな」と思いながら、ふと懐かしさが込み上げてくる。[p]
 
@@ -720,7 +720,7 @@
 「そうね……もう、この制服を着ることもないんだなって思うと、不思議な感じ」[p]
 
 恵は擦れて少しくたびれたブレザーの袖を眺めながら、懐かしそうに微笑んだ。[p]
-[auto_chara name="拓海" face="level3_smile2"]
+[auto_chara name="拓海" face="level3_smile"]
 「そうだね。もう、あのクラスで一緒に授業を受けることもなくなる」[p]
 [auto_chara name="恵" face="happy"]
 「うん……そう考えると少し寂しいかもね」[p]
