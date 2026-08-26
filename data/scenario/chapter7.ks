@@ -11,11 +11,11 @@
 [showmenubutton]
 [chapter_title number="第七章" title="未来"]
 [font speed=50]
-[playse storage=se/thunder.ogg volume=100]
-[wait time=2000]
+[playse storage=se/thunder.ogg volume=100 buf="0"]
+[wait time=3000]
 [bg storage="bg_takumiroom_night.webp" time=800]
 
-[playse storage=se/smartphone_vibrate.ogg volume=100]
+[playse storage=se/smartphone_vibrate.ogg volume=100 buf="1"]
 ワックスで髪を整えていた、その時だった。[p]
 
 スマホが震えた。[p]
@@ -51,7 +51,7 @@
 [cg storage="ch7_hurrying_bicycle.webp"]
 [bg storage="ch7_hurrying_bicycle.webp" time=700]
 [wait time=500]
-[playbgm storage="chase.ogg" loop=true volume=100 fadein=true time=1000]
+[playbgm storage="chase.ogg" loop=true volume=60 fadein=true time=1000]
 
 間に合え――。[p]
 自転車で急げば5分程度の距離だ。[p]
