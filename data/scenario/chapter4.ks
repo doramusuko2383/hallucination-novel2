@@ -21,23 +21,198 @@
 
 拓海は、恵と協力関係を結び、恵の助けを借りて龍也の身辺調査を進めていた。[p]
 
-;ここ、調査パートみたいに、恵と会話形式で情報開示した方がゲームっぽいかも？
-
 恵の母親・響子の件については、高田の素性がまだ掴めていないため、[r]
 まずは龍也の問題を片づけることにしたのだった。[p]
 
-綾香の調査は、拓海一人で行っていたため、苦労が多かったが、[r]
-今回は恵のおかげで情報が驚くほどスムーズに集まり始めていた。[p]
+綾香の調査は、拓海一人で行っていたため、苦労が多かった。[p]
 
-女子のネットワークの強さには、改めて感心させられる。[p]
-恵の協力がなければ、ここまで迅速に進めることはできなかっただろう。[p]
+だが今回は違う。[p]
+
+この三週間、放課後になると二人で情報を持ち寄り、[r]
+少しずつ龍也の周辺を調べていた。[p]
 
 [wait time=500]
-集まった情報によると、龍也には三歳年上の兄がいて、黒森学園の卒業生だという。[p]
 
-兄は有名大学でサッカーを続け、父親は大手企業の役員という噂もある。[p]
+その日の放課後も、二人は教室に残っていた。[p]
 
-「なるほど……家族がみんな優秀か」[p]
+机の上には、拓海のノートと二人のスマホが並んでいる。[p]
+
+[auto_chara name="恵" face="normal"]
+「新しい情報、入ったよ」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「本当に？」[p]
+
+[auto_chara name="恵" face="normal"]
+「北川君、三歳上にお兄さんがいるみたい」[p]
+
+「黒森学園の卒業生で、サッカー部だったんだって」[p]
+
+[auto_chara name="拓海" face="level2_question"]
+「よくそんなことまで分かったね」[p]
+
+[auto_chara name="恵" face="smile"]
+「友達の友達のお姉さんが、北川君のお兄さんと同級生だったの」[p]
+
+[wait time=400]
+
+[auto_chara name="拓海" face="level2_normal"]
+「……遠いな」[p]
+
+[auto_chara name="恵" face="surprise"]
+「何が？」[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+「友達の友達のお姉さんって。[r]
+そこまで繋がるんだなと思って」[p]
+
+[auto_chara name="恵" face="laugh"]
+「あはは。女子のネットワークを甘く見ない方がいいよ」[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+「怖いな」[p]
+
+[auto_chara name="恵" face="normal"]
+「失礼ね」[p]
+
+[wait time=500]
+
+恵はスマホの画面を指でスクロールした。[p]
+
+[auto_chara name="恵" face="normal"]
+「それで、お兄さんは今もサッカー続けてるみたい。[r]
+大学も結構有名なところだって」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「なるほど……」[p]
+
+拓海はノートに情報を書き足していく。[p]
+
+[auto_chara name="恵" face="normal"]
+「あとは、お父さんが大手企業の役員って話も聞いた」[p]
+
+[auto_chara name="拓海" face="level2_surprise"]
+「父親も？」[p]
+
+[auto_chara name="恵" face="normal"]
+「これは噂だから、本当かどうかまでは分からないけどね」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「兄は有名大学でサッカー、父親は大手企業の役員か……」[p]
+
+「家族がみんな優秀なんだな」[p]
+
+[wait time=500]
+
+恵が、拓海の手元を覗き込んだ。[p]
+
+[auto_chara name="恵" face="normal"]
+「永山君、意外と字きれいだね」[p]
+
+[auto_chara name="拓海" face="level2_question"]
+「意外と？」[p]
+
+[auto_chara name="恵" face="smile"]
+「もっとこう……細かい字で、びっしり書くタイプかと思ってた」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「どんなイメージなの、それ」[p]
+
+[auto_chara name="恵" face="laugh"]
+「あはは。なんとなく」[p]
+
+拓海は自分のノートを見下ろした。[p]
+
+龍也の名前を中心に、家族、サッカー部、交友関係と、[r]
+調べた情報が項目ごとに整理されている。[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+「菊池さんの情報が多いから、整理しとかないと追いつかないんだよ」[p]
+
+[auto_chara name="恵" face="smile"]
+「ちゃんと役に立ってる？」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「かなり」[p]
+
+「一人だったら、たぶんまだ兄がいることすら分かってない」[p]
+
+[auto_chara name="恵" face="laugh"]
+「それなら良かった」[p]
+
+[wait time=600]
+
+何気ない返事だったが、恵は少し嬉しそうだった。[p]
+
+拓海も、誰かと一緒にこんなことをするのは不思議な感覚だった。[p]
+
+最初はただ、必要な情報を集めるための協力関係だった。[p]
+
+けれどこの三週間、何度も話しているうちに、[r]
+恵と二人でいることにもすっかり慣れてきていた。[p]
+
+[wait time=500]
+
+[auto_chara name="恵" face="normal"]
+「そういえば永山君、最近ちょっと変わったよね」[p]
+
+[auto_chara name="拓海" face="level2_question"]
+「俺？」[p]
+
+[auto_chara name="恵" face="normal"]
+「うん。[l]前よりクラスの人と喋るようになった」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「そうかな」[p]
+
+[auto_chara name="恵" face="smile"]
+「そうだよ。[l]前は話しかけたら迷惑なのかなって思うくらい、いつも一人だったし」[p]
+
+[wait time=500]
+
+拓海は少し返事に困った。[p]
+
+一人でいることには慣れていた。[p]
+
+けれど最近は、以前ほどそれが当たり前ではなくなっている気もする。[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+「菊池さんが喋らせすぎなんじゃない？」[p]
+
+[auto_chara name="恵" face="laugh"]
+「人のせいにしないでよ」[p]
+
+二人で小さく笑った。[p]
+
+[wait time=600]
+
+[auto_chara name="恵" face="normal"]
+「でも……北川君のこと、少し見えてきた気がするね」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「うん」[p]
+
+拓海はノートに書かれた「兄」「父親」という文字を見つめた。[p]
+
+優秀な兄と父親。[p]
+
+かつては自分もサッカー部で活躍していた龍也。[p]
+
+その二つを並べると、何かが繋がりそうな気がした。[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「もう少し考えてみるよ。[r]
+ここに何か、龍也を理解する手掛かりがある気がする」[p]
+
+[auto_chara name="恵" face="normal"]
+「うん。[l]また何か分かったら連絡するね」[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+「ありがとう」[p]
+
+[chara_hide_all time=300]
+
+[wait time=700]
 
 [playse storage=se/pencil.ogg volume=100]
 [wait time=500]
