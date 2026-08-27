@@ -646,10 +646,112 @@
 
 恵も少し落ち着いた表情で頷いた。[p]
 二人は今後の活動方針について少し話し合い、ファミレスを後にした。[p]
-結局、今日は何一つ前に進めなかった。[p]
+
 [chara_hide_all time=300]
-[stopse fadeout=700]
-[fadeoutbgm time=3000]
+
+[wait time=500]
+
+[bg storage="bg_station_front_night.webp" time=900]
+[playse storage=se/city_ambience.ogg volume=50 loop=true fadein=true time=1000]
+
+[wait time=1000]
+
+店を出ると、冷たい夜風が頬を撫でた。[p]
+
+二人は駅へ向かって、並んで歩き始めた。[p]
+
+ファミレスを出てからも、拓海の頭には高田のことが引っ掛かっていた。[p]
+
+[auto_chara name="恵" face="normal"]
+「今日はありがとう」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「いや……何もできてないけど」[p]
+
+[auto_chara name="恵" face="normal"]
+「そんなことないよ。[l]朝からずっと付き合ってくれたじゃない」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「学校まで休ませちゃったし」[p]
+
+[auto_chara name="恵" face="smile"]
+「それは私も同罪でしょ」[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+「確かに」[p]
+
+[wait time=500]
+
+二人で少し笑った。[p]
+
+ほんの少しだけ、拓海の気持ちが軽くなった。[p]
+
+[auto_chara name="恵" face="normal"]
+「だから、そんなに気にしなくていいよ」[p]
+
+[auto_chara name="拓海" face="level2_question"]
+「え？」[p]
+
+[auto_chara name="恵" face="normal"]
+「今日のこと。[l]ずっと気にしてるでしょ？」[p]
+
+[wait time=500]
+
+図星だった。[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「……まあね」[p]
+
+[auto_chara name="恵" face="smile"]
+「永山君が謝ることじゃないよ。[l]二人で考えたことなんだから」[p]
+
+[auto_chara name="拓海" face="level2_normal"]
+「うん」[p]
+
+[wait time=500]
+
+恵の言葉に嘘はないように思えた。[p]
+
+それでも、胸の奥に引っ掛かったものが完全に消えたわけではなかった。[p]
+
+自分から力を取ったら、何が残るんだろう。[p]
+
+そんな考えが、ふと頭をよぎった。[p]
+
+[wait time=500]
+
+[auto_chara name="恵" face="normal"]
+「じゃあ、また明日ね」[p]
+
+[auto_chara name="拓海" face="level2_smile"]
+「うん。また明日」[p]
+
+[chara_hide name="恵" time=300]
+
+[wait time=1000]
+
+恵は軽く手を振ると、駅の中へ歩いていった。[p]
+
+拓海はその姿が見えなくなるまで、しばらくその場に立っていた。[p]
+
+[wait time=500]
+
+前にここで別れた時とは、少しだけ違う。[p]
+
+あの頃よりも、恵との距離はずっと近くなっている。[p]
+
+だからこそ、その関係が崩れることを考えると、妙に落ち着かなかった。[p]
+
+拓海は小さく息を吐き、家路についた。[p]
+
+[chara_hide_all time=300]
+
+[stopse fadeout=800]
+
+[wait time=500]
+
+結局、今日は何一つ前に進めなかった。[p]
+
 [playbgm storage="room_noise.ogg" loop=true volume=30 fadein=true time=1000]
 [bg storage="bg_takumiroom_night.webp" time=800]
 拓海は家に帰ると、何だか今日はやたらと長い一日だったと感じた。[p]
@@ -670,12 +772,62 @@
 [wait time=3000]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true time=1000]
 [bg storage="bg_classroom_day.webp" time=800]
-あれから何も有効な手立てが思い浮かばないまま一週間が過ぎた。[p]
-拓海は、自分が恵の力になれなかったことを、ずっと引きずっていた。[p]
+あれから何も有効な手立てが思い浮かばないまま、数日が過ぎた。[p]
 
-このまま、少しずつ距離が離れてしまうんじゃないか。[p]
+授業中も、休み時間も、拓海は何度となく高田のことを考えた。[p]
 
-そんな不安が、頭から離れなかった。[p]
+別の方法はないか。[p]
+
+力を使わずに、響子を助ける方法はないか。[p]
+
+考えても、答えは出なかった。[p]
+
+[wait time=500]
+
+恵とは学校で毎日顔を合わせていた。[p]
+
+廊下ですれ違えば普通に話すし、目が合えばいつものように笑ってくれる。[p]
+
+何も変わっていない。[p]
+
+それなのに、拓海の方が以前のように自然に話せなくなっていた。[p]
+
+[wait time=500]
+
+ある日の休み時間、恵が友人たちと楽しそうに話している姿が目に入った。[p]
+
+拓海は何となくその様子を眺めていた。[p]
+
+声をかけようと思えば、いつでもかけられる。[p]
+
+以前なら、調査のことで話す理由があった。[p]
+
+だが今は、その理由がない。[p]
+
+[wait time=500]
+
+もし、このまま高田の件で何もできなかったら。[p]
+
+恵と二人で話すことも、ファミレスに行くことも、なくなるのだろうか。[p]
+
+そこまで考えて、拓海は自分でも少し驚いた。[p]
+
+いつの間に、そんなことを気にするようになったんだろう。[p]
+
+[wait time=500]
+
+結局その日は、恵に声をかけることなく放課後を迎えた。[p]
+
+そして、何も有効な手立てが思い浮かばないまま、一週間が過ぎた。[p]
+
+拓海は、恵から「役に立たない奴」というレッテルを貼られるのを、密かに恐れていた。[p]
+
+恵はきっと言葉や態度には出さないだろう。[p]
+
+それでも、その失望が二人の距離を広げてしまうのではないか――そんな不安が頭をよぎる。[p]
+
+拓海は、自分が思っている以上に、恵との関係を大事にしていることに気づき始めていた。[p]
+
 [wait time=1000]
 [playse storage=se/smartphone_vibrate.ogg volume=100]
 その時、スマホがメッセージの着信を知らせた。[p]
