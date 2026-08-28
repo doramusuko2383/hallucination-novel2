@@ -261,7 +261,7 @@
 拓海は、その一文を見た瞬間、[r]
 すべてが終わったのだと理解した。[p]
 
-[eval exp="f.bad_end_no = 'BAD END 02'"]
+[eval exp="f.bad_end_no = 'BAD END 03'"]
 [eval exp="f.bad_end_title = '手遅れ'"]
 [eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch3_choice_convenience_counter_retry'"]
@@ -733,7 +733,7 @@
 
 何も変わらない毎日だけが続いていく。[p]
 
-[eval exp="f.bad_end_no = 'BAD END 03'"]
+[eval exp="f.bad_end_no = 'BAD END 04'"]
 [eval exp="f.bad_end_title = '孤立'"]
 [eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch3_megumi_truth_retry'"]
@@ -1142,7 +1142,7 @@
 
 自ら手放してしまった。[p]
 
-[eval exp="f.bad_end_no = 'BAD END 04'"]
+[eval exp="f.bad_end_no = 'BAD END 05'"]
 [eval exp="f.bad_end_title = '見て見ぬふり'"]
 [eval exp="f.bad_end_retry_storage = 'chapter3.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch3_help_megumi_retry'"]

@@ -342,7 +342,6 @@
 拓海と龍也は、関わり合うことのない他人なのだから。[p]
 
 [wait time=1000]
-[fadeoutbgm time=2000]
 
 そうだ。[p]
 
@@ -374,7 +373,7 @@
 [bg storage="black.png" time=300]
 [wait time=300]
 
-[eval exp="f.bad_end_no = 'BAD END 08'"]
+[eval exp="f.bad_end_no = 'BAD END 01'"]
 [eval exp="f.bad_end_title = '僕は縺薙％'"]
 [eval exp="f.bad_end_retry_storage = 'chapter2.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch2_tatsuya_toilet_choice_retry'"]
@@ -1207,7 +1206,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 変わらない日常が続いていく――[p]
 
 *ch2_megumi_approach_continue
-[eval exp="f.bad_end_no = 'BAD END 01'"]
+[eval exp="f.bad_end_no = 'BAD END 02'"]
 [eval exp="f.bad_end_title = '変えられなかった日常'"]
 [eval exp="f.bad_end_retry_storage = 'chapter2.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch2_retry_context_megumi_approach'"]
