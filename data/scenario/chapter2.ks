@@ -230,6 +230,23 @@
 
 そう思うと、抑えきれない怒りがこみ上げてきた。[p]
 
+[jump target="*ch2_tatsuya_toilet_choice"]
+
+*ch2_tatsuya_toilet_choice_retry
+[cm]
+[chara_hide_all time=0]
+[bg storage="bg_washroom_day.webp" time=0]
+[playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=300]
+
+*ch2_tatsuya_toilet_choice
+[choice_start count=2]
+[choice name="choice_ch2_call_tatsuya" text="龍也に声をかける" target="*ch2_call_tatsuya"]
+[choice name="choice_ch2_ignore_tatsuya" text="見なかったことにする" target="*ch2_ignore_tatsuya"]
+[s]
+
+*ch2_call_tatsuya
+[cm]
+
 そして、気がつくと、[r]
 自分でも驚くほど静かに言葉が出ていた。[p]
 
@@ -307,6 +324,61 @@
 
 [fadeoutbgm time=4000]
 [wait time=1000]
+
+[jump target="*ch2_after_rooftop"]
+
+*ch2_ignore_tatsuya
+[cm]
+[chara_hide_all time=300]
+拓海は何も言わず、その場をあとにした。[p]
+
+自分には関係のないことだ。[r]
+わざわざ面倒事に首を突っ込む必要なんてない。[p]
+
+それからも、龍也が拓海に絡んでくることはなかった。[p]
+
+当然だ。[p]
+
+拓海と龍也は、関わり合うことのない他人なのだから。[p]
+
+[wait time=1000]
+
+そうだ。[p]
+
+[wait time=700]
+
+あの日、何も起きなかった。[p]
+
+僕は何もしなかった。[p]
+
+[wait time=1200]
+
+……。[p]
+
+[wait time=1500]
+
+じゃあ、今の僕はなんだ？[p]
+
+[wait time=350]
+[playse storage=se/short_glitch.ogg volume=80]
+[quake time=180 hmax=12 vmax=5]
+[playse storage=se/white_noise.ogg volume=65]
+[bg storage="white.png" time=60]
+[quake time=260 hmax=5 vmax=16]
+[bg storage="bg_washroom_day.webp" time=80]
+[playse storage=se/short_glitch.ogg volume=100]
+[quake time=180 hmax=18 vmax=8]
+[fadeoutbgm time=250]
+[fadeoutse time=250]
+[bg storage="black.png" time=300]
+[wait time=300]
+
+[eval exp="f.bad_end_no = 'BAD END 08'"]
+[eval exp="f.bad_end_title = '僕は縺薙％'"]
+[eval exp="f.bad_end_retry_storage = 'chapter2.ks'"]
+[eval exp="f.bad_end_retry_target = '*ch2_tatsuya_toilet_choice_retry'"]
+[eval exp="f.bad_end_retry_bg = 'bg_washroom_day.webp'"]
+@jump storage="badend.ks" target="*bad_end"
 
 *ch2_after_rooftop
 
