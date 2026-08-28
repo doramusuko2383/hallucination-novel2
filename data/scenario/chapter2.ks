@@ -229,15 +229,13 @@
 
 この生徒は、今後もずっとお金を奪われ続けるのだろう――[p]
 
-そう思うと、抑えきれない怒りがこみ上げてきた。
+そう思うと、抑えきれない怒りがこみ上げてきた。[p]
 
 [jump target="*ch2_tatsuya_toilet_choice"]
 
 [cm]
 [chara_hide_all time=0]
-[bg storage="bg_washroom_day.webp" time=0]
-[playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=300]
-
+どうする？
 *ch2_tatsuya_toilet_choice
 [choice_start count=2]
 [choice name="choice_ch2_call_tatsuya" text="龍也に声をかける" target="*ch2_call_tatsuya"]
