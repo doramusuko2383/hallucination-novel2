@@ -1139,7 +1139,7 @@
 一番近くにあった手掛かりは、[r]
 自分たちの判断で静かに遠ざかっていった。[p]
 
-[eval exp="f.bad_end_no = 'BAD END 05'"]
+[eval exp="f.bad_end_no = 'BAD END 06'"]
 [eval exp="f.bad_end_title = '警戒された標的'"]
 [eval exp="f.bad_end_retry_storage = 'chapter4.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch4_takada_tail_choice_retry'"]
