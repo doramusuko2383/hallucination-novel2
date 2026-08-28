@@ -226,7 +226,7 @@
 .hl-auto-status {
     position: absolute;
     z-index: 2147483645;
-    right: 84px;
+    right: 22px;
     bottom: 18px;
     height: 32px;
     display: none !important;
@@ -238,6 +238,10 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 240ms ease;
+}
+
+.hl-auto-status.is-menu-visible {
+    right: 84px;
 }
 
 .hl-auto-status.is-active {
