@@ -374,7 +374,7 @@
 [wait time=300]
 
 [eval exp="f.bad_end_no = 'BAD END 01'"]
-[eval exp="f.bad_end_title = '僕は縺薙％'"]
+[eval exp="f.bad_end_title = '俺は縺薙％'"]
 [eval exp="f.bad_end_retry_storage = 'chapter2.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch2_tatsuya_toilet_choice_retry'"]
 [eval exp="f.bad_end_retry_bg = 'bg_washroom_day.webp'"]

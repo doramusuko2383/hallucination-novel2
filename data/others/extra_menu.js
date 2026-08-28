@@ -3,7 +3,7 @@
 
     var endings = [
         ["end_true", "TRUE END"],
-        ["end_bad1", "BAD END 1　僕は縺薙％"],
+        ["end_bad1", "BAD END 1　俺は縺薙％"],
         ["end_bad2", "BAD END 2　変えられなかった日常"],
         ["end_bad3", "BAD END 3　手遅れ"],
         ["end_bad4", "BAD END 4　孤立"],
