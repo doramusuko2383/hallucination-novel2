@@ -183,6 +183,7 @@
 
 [wait time=500]
 
+*ch2_tatsuya_toilet_choice_retry
 12月の寒い冬の放課後――。[p]
 [playse storage=se/washroom.ogg volume=100]
 [bg storage="bg_washroom_day.webp" time=800]
@@ -228,11 +229,10 @@
 
 この生徒は、今後もずっとお金を奪われ続けるのだろう――[p]
 
-そう思うと、抑えきれない怒りがこみ上げてきた。[p]
+そう思うと、抑えきれない怒りがこみ上げてきた。
 
 [jump target="*ch2_tatsuya_toilet_choice"]
 
-*ch2_tatsuya_toilet_choice_retry
 [cm]
 [chara_hide_all time=0]
 [bg storage="bg_washroom_day.webp" time=0]
@@ -342,6 +342,7 @@
 拓海と龍也は、関わり合うことのない他人なのだから。[p]
 
 [wait time=1000]
+[fadeoutbgm time=1000]
 
 そうだ。[p]
 
@@ -349,7 +350,7 @@
 
 あの日、何も起きなかった。[p]
 
-僕は何もしなかった。[p]
+俺は何もしなかった。[p]
 
 [wait time=1200]
 
@@ -357,8 +358,12 @@
 
 [wait time=1500]
 
-じゃあ、今の僕はなんだ？[p]
+あれ？[p]
 
+[delay speed="130"]
+じゃあ、[p]
+今の僕はなんだ？[p]
+[resetdelay]
 [wait time=350]
 [playse storage=se/short_glitch.ogg volume=80]
 [quake time=180 hmax=12 vmax=5]
