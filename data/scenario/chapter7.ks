@@ -443,23 +443,32 @@
 
 [wait time=500]
 
-恵「寒っ……」[p]
+[auto_chara name="恵" face="pain"]
+「寒っ……」[p]
 
-拓海「今日、昨日より寒くない？」[p]
+[auto_chara name="拓海" face="level3_question"]
+「今日、昨日より寒くない？」[p]
 
-恵「絶対寒い。もう一枚着てくればよかった」[p]
+[auto_chara name="恵" face="pain"]
+「絶対寒い。もう一枚着てくればよかった」[p]
 
-拓海「朝の天気予報で、今年一番の寒さって言ってたよ」[p]
+[auto_chara name="拓海" face="level3_normal"]
+「朝の天気予報で、今年一番の寒さって言ってたよ」[p]
 
-恵「そういう大事なことは先に教えてよ」[p]
+[auto_chara name="恵" face="angry"]
+「そういう大事なことは先に教えてよ」[p]
 
-拓海「俺のせいなの？」[p]
+[auto_chara name="拓海" face="level3_surprise"]
+「俺のせいなの？」[p]
 
-恵「永山君が教えてくれてたら、もう一枚着てきたのに」[p]
+[auto_chara name="恵" face="angry"]
+「永山君が教えてくれてたら、もう一枚着てきたのに」[p]
 
-拓海「昨日のうちに天気予報見なよ」[p]
+[auto_chara name="拓海" face="level3_normal"]
+「昨日のうちに天気予報見なよ」[p]
 
-恵「正論は禁止です」[p]
+[auto_chara name="恵" face="tease"]
+「正論は禁止です」[p]
 
 恵はそう言って、マフラーに顔を埋めた。[p]
 
@@ -467,9 +476,11 @@
 
 少し歩いたところで、恵が通り沿いのコンビニを指差した。[p]
 
-恵「何か温かいの買っていかない？」[p]
+[auto_chara name="恵" face="normal"]
+「何か温かいの買っていかない？」[p]
 
-拓海「いいね」[p]
+[auto_chara name="拓海" face="level3_smile"]
+「いいね」[p]
 
 二人で店に入り、それぞれ温かい飲み物を買った。[p]
 
@@ -477,23 +488,32 @@
 
 店を出た恵は、買ったばかりのココアを両手で包んだ。[p]
 
-恵「あったかい……」[p]
+[auto_chara name="恵" face="happy"]
+「あったかい……」[p]
 
-拓海「ココアなんだ」[p]
+[auto_chara name="拓海" face="level3_wonder"]
+「ココアなんだ」[p]
 
-恵「何、その反応」[p]
+[auto_chara name="恵" face="surprise"]
+「何、その反応」[p]
 
-拓海「菊池さん、コーヒー飲んでるイメージだったから」[p]
+[auto_chara name="拓海" face="level3_normal"]
+「菊池さん、コーヒー飲んでるイメージだったから」[p]
 
-恵「苦いの嫌い」[p]
+[auto_chara name="恵" face="serious"]
+「苦いの嫌い」[p]
 
-拓海「ファミレスで飲んでなかった？」[p]
+[auto_chara name="拓海" face="level3_question"]
+「ファミレスで飲んでなかった？」[p]
 
-恵「あれは砂糖入れてるから」[p]
+[auto_chara name="恵" face="normal"]
+「あれは砂糖入れてるから」[p]
 
-拓海「それ、コーヒー飲めるって言わなくない？」[p]
+[auto_chara name="拓海" face="level3_smile2"]
+「それ、コーヒー飲めるって言わなくない？」[p]
 
-恵「飲めてるからいいの」[p]
+[auto_chara name="恵" face="tease"]
+「飲めてるからいいの」[p]
 
 [wait time=500]
 
@@ -501,35 +521,50 @@
 
 [wait time=500]
 
-恵「そういえば、お母さんなんだけど」[p]
+[auto_chara name="恵" face="normal"]
+「そういえば、お母さんなんだけど」[p]
 
-拓海「うん」[p]
+[auto_chara name="拓海" face="level3_normal"]
+「うん」[p]
 
-恵「最近、すごく元気なんだ」[p]
+[auto_chara name="恵" face="happy"]
+「最近、すごく元気なんだ」[p]
 
-拓海「そっか」[p]
+[auto_chara name="拓海" face="level3_smile"]
+「そっか」[p]
 
-恵「昨日なんて、帰ってきてからずっと会社の愚痴言ってた」[p]
+[auto_chara name="恵" face="laugh"]
+「昨日なんて、帰ってきてからずっと会社の愚痴言ってた」[p]
 
-拓海「……それ、元気なの？」[p]
+[auto_chara name="拓海" face="level3_question"]
+「……それ、元気なの？」[p]
 
-恵「あはは。元気なの。前は何聞いても『大丈夫』しか言わなかったから」[p]
+[auto_chara name="恵" face="laugh"]
+「あはは。元気なの。前は何聞いても『大丈夫』しか言わなかったから」[p]
 
-拓海「なるほど」[p]
+[auto_chara name="拓海" face="level3_normal"]
+「なるほど」[p]
 
-恵「この前なんて夕飯のおかずが多すぎてさ。張り切りすぎなんだよね」[p]
+[auto_chara name="恵" face="happy"]
+「この前なんて夕飯のおかずが多すぎてさ。張り切りすぎなんだよね」[p]
 
-拓海「いいじゃん。食べきれないなら俺が手伝うよ」[p]
+[auto_chara name="拓海" face="level3_smile"]
+「いいじゃん。食べきれないなら俺が手伝うよ」[p]
 
-恵「なんで永山君が食べるのよ」[p]
+[auto_chara name="恵" face="surprise"]
+「なんで永山君が食べるのよ」[p]
 
-拓海「ダメ？」[p]
+[auto_chara name="拓海" face="level3_question"]
+「ダメ？」[p]
 
-恵「……お母さんは喜ぶと思うけど」[p]
+[auto_chara name="恵" face="troubled_smile"]
+「……お母さんは喜ぶと思うけど」[p]
 
-拓海「じゃあ問題ないね」[p]
+[auto_chara name="拓海" face="level3_smile2"]
+「じゃあ問題ないね」[p]
 
-恵「問題あるでしょ」[p]
+[auto_chara name="恵" face="tease"]
+「問題あるでしょ」[p]
 
 [wait time=500]
 
@@ -543,23 +578,32 @@
 
 [wait time=500]
 
-恵「あ、そうだ。明日体育あるよ」[p]
+[auto_chara name="恵" face="normal"]
+「あ、そうだ。明日体育あるよ」[p]
 
-拓海「この寒さで？」[p]
+[auto_chara name="拓海" face="level3_surprise"]
+「この寒さで？」[p]
 
-恵「持久走」[p]
+[auto_chara name="恵" face="serious"]
+「持久走」[p]
 
-拓海「休もうかな」[p]
+[auto_chara name="拓海" face="level3_wonder"]
+「休もうかな」[p]
 
-恵「ダメでしょ」[p]
+[auto_chara name="恵" face="angry"]
+「ダメでしょ」[p]
 
-拓海「菊池さんも嫌でしょ？」[p]
+[auto_chara name="拓海" face="level3_question"]
+「菊池さんも嫌でしょ？」[p]
 
-恵「嫌だけど休みはしません」[p]
+[auto_chara name="恵" face="serious"]
+「嫌だけど休みはしません」[p]
 
-拓海「真面目だなあ」[p]
+[auto_chara name="拓海" face="level3_smile2"]
+「真面目だなあ」[p]
 
-恵「永山君が不真面目なの」[p]
+[auto_chara name="恵" face="tease"]
+「永山君が不真面目なの」[p]
 
 [wait time=500]
 
@@ -573,11 +617,14 @@
 
 [wait time=500]
 
-恵「じゃあ、また明日」[p]
+[auto_chara name="恵" face="happy"]
+「じゃあ、また明日」[p]
 
-拓海「うん。また明日」[p]
+[auto_chara name="拓海" face="level3_smile"]
+「うん。また明日」[p]
 
 恵は軽く手を振り、改札へ向かっていった。[p]
+[chara_hide_all]
 
 拓海はその背中を少しだけ見送ってから、自分も歩き出す。[p]
 
