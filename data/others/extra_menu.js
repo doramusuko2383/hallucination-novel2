@@ -9,7 +9,8 @@
         ["end_bad4", "BAD END 4　見て見ぬふり"],
         ["end_bad5", "BAD END 5　警戒された標的"],
         ["end_bad6", "BAD END 6　救われなかった未来"],
-        ["end_bad7", "BAD END 7　地獄を見せた者"]
+        ["end_bad7", "BAD END 7　地獄を見せた者"],
+        ["end_bad8", "BAD END 8　僕は縺薙％"]
     ];
     var cgs = [
         "ch01_sc01_rooftop_wait.webp", "ch01_sc01_jumping_off.webp", "ch1_rooftop_shota_threat.webp",
