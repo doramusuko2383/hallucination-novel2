@@ -69,7 +69,10 @@
             // 食い違う場合があるため、隣接するMENU自身の表示状態を正とする。
             var controlsVisible = menuButton.length > 0 && menuButton.css("display") !== "none";
             var isAuto = !!kag.stat.is_auto;
-            indicator.toggleClass("is-active", isAuto && controlsVisible);
+            // MENUが一時的に非表示でもAUTOの実行状態は変わらない。状態表示まで
+            // 隠してしまわず、右下へ寄せて常に現在のAUTO状態を知らせる。
+            indicator.toggleClass("is-menu-visible", controlsVisible);
+            indicator.toggleClass("is-active", isAuto);
 
             if (lastAnnouncedAutoState === null) {
                 lastAnnouncedAutoState = isAuto;
