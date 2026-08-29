@@ -833,9 +833,9 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 *ch2_choice_megumi_approach
 [cm]
-どうやって話し掛けようか。
 [free layer="fix" name="bad_end_number"]
 [free layer="fix" name="bad_end_title"]
+どうやって話し掛けようか。
 [choice_start count=2]
 [choice name="choice_ch2_megumi_good" text="塾の話から切り出す" target="*ch2_megumi_approach_good"]
 [choice name="choice_ch2_megumi_bad" text="いきなり綾香のことを聞く" target="*ch2_megumi_approach_bad"]
