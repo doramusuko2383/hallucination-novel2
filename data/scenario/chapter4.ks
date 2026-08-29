@@ -48,7 +48,7 @@
 
 「黒森学園の卒業生で、サッカー部だったんだって」[p]
 
-[auto_chara name="拓海" face="level2_question"]
+[auto_chara name="拓海" face="level2_normal"]
 「よくそんなことまで分かったね」[p]
 
 [auto_chara name="恵" face="smile"]
