@@ -177,13 +177,13 @@
 [wait time=500]
 [font speed=45]
 [fadeoutse time=2000]
+*ch2_tatsuya_toilet_choice_retry
 [playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=1500]
 そんな拓海の静かな日常が一変したのは、[r]
 一年生の頃だった。[p]
 
 [wait time=500]
 
-*ch2_tatsuya_toilet_choice_retry
 12月の寒い冬の放課後――。[p]
 [playse storage=se/washroom.ogg volume=100]
 [bg storage="bg_washroom_day.webp" time=800]
