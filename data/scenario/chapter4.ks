@@ -109,7 +109,7 @@
 [auto_chara name="恵" face="normal"]
 「永山君、意外と字きれいだね」[p]
 
-[auto_chara name="拓海" face="level2_question"]
+[auto_chara name="拓海" face="level2_surprise"]
 「意外と？」[p]
 
 [auto_chara name="恵" face="smile"]
@@ -156,7 +156,7 @@
 [auto_chara name="恵" face="normal"]
 「そういえば永山君、最近ちょっと変わったよね」[p]
 
-[auto_chara name="拓海" face="level2_question"]
+[auto_chara name="拓海" face="level2_surprise"]
 「俺？」[p]
 
 [auto_chara name="恵" face="normal"]
