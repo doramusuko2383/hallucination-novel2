@@ -358,7 +358,7 @@
 
 [wait time=600]
 
-指先が、高田の背中へ近付く。[p]
+指先が、高田の背中へ近づく。[p]
 
 [wait time=700]
 
@@ -388,7 +388,7 @@
 
 [auto_chara name="高田" face="confuse"]
 
-高田が背中の違和感に気付き、ゆっくり振り返る。[p]
+高田が背中の違和感に気づき、ゆっくり振り返る。[p]
 
 [auto_chara name="拓海" face="private_surprise"]
 
@@ -436,7 +436,7 @@
 [choice_start count=3 x=390 y=250 width=500]
 [choice name="choice_ch5_ability_hate" text="高田への憎しみが足りなかった" target="*ch5_ability_failure_common"]
 [choice name="choice_ch5_ability_gone" text="能力そのものが消えた" target="*ch5_ability_failure_common"]
-[choice name="choice_ch5_ability_condition" text="まだ気付いていない条件がある" target="*ch5_ability_failure_common"]
+[choice name="choice_ch5_ability_condition" text="まだ気づいていない条件がある" target="*ch5_ability_failure_common"]
 [s]
 
 *ch5_ability_failure_common
@@ -935,7 +935,7 @@
 [auto_chara name="恵" face="sad"]
 「大丈夫？」[p]
 
-恵は近付いてしゃがみこんだ。[p]
+恵は近づいてしゃがみこんだ。[p]
 [auto_chara name="拓海" face="level2_depressed"]
 「ありがとう、心配して来てくれたんだ」[p]
 
@@ -1121,7 +1121,7 @@
 
 自分が見せた残酷な幻想は、[p]
 
-綾香の心を、取り返しのつかないほど傷付けてしまった。[p]
+綾香の心を、取り返しのつかないほど傷つけてしまった。[p]
 
 そして、その先に何が起きるのかも考えず、力を使ってしまったことを深く後悔した。[p]
 
@@ -1131,7 +1131,7 @@
 
 もう一つの声が、心の奥で囁く。[p]
 
-「自分だって、傷付けられてきたじゃないか」[p]
+「自分だって、傷つけられてきたじゃないか」[p]
 
 この考えが、頭から離れない。[p]
 

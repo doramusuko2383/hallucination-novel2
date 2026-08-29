@@ -114,7 +114,7 @@
 「菊池さん！」[p]
 [chara_hide_all]
 ;[auto_chara name="恵" face="private_help"]
-「永山くん！助けて！」[p]
+「永山君！助けて！」[p]
 
 恵の部屋からだ。[p]
 
@@ -206,7 +206,7 @@
 「おっと、動くな」[p]
 
 高田が動こうとしたので、スプレーを顔に向ける。[p]
-「これは、クマ除けのスプレーだ」[p]
+「これは、クマ撃退用スプレーだ」[p]
 「人に使うものじゃないから、どうなるか保証できない」[p]
 
 [auto_chara name="高田" face="anxious"]
@@ -403,7 +403,7 @@
 [auto_chara name="恵" face="private_normal"]
 「ほんとだね。でも今から出掛けるとちょっと遅いよね」[p]
 
-時計の針は二十時を過ぎたところだった。[p]
+時計の針は20時を過ぎたところだった。[p]
 [auto_chara name="拓海" face="private2_smile"]
 「そうだね」[p]
 [auto_chara name="恵" face="private_normal"]
@@ -982,7 +982,7 @@
 恵に軽く流されてしまった。[p]
 [auto_chara name="拓海" face="level3_normal"]
 [delay speed="90"]
-「気付いてあげたい、[l]と思ったんだよね」[p]
+「気づいてあげたい、[l]と思ったんだよね」[p]
 [resetdelay]
 
 [wait time=1000]
@@ -994,7 +994,7 @@
 
 [auto_chara name="拓海" face="level3_normal"]
 「恵とか、俺みたいに辛い目にあってる生徒や、クラスで孤立してる生徒って、きっといると思うんだ。[p]
-そういう子たちに気付いて、少しでも力になれる先生になれたらなって」[p]
+そういう子たちに気づいて、少しでも力になれる先生になれたらなって」[p]
 [auto_chara name="恵" face="happy"]
 「そっか……拓海なら、本当にいい先生になれると思う」[p]
 
