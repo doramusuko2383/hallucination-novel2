@@ -360,7 +360,7 @@
 
 [delay speed="130"]
 じゃあ、[p]
-今の僕はなんだ？[p]
+今の俺はなんだ？[p]
 [resetdelay]
 [wait time=350]
 [playse storage=se/short_glitch.ogg volume=80]
