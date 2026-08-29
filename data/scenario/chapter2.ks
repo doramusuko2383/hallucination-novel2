@@ -233,10 +233,10 @@
 
 [jump target="*ch2_tatsuya_toilet_choice"]
 
+*ch2_tatsuya_toilet_choice
 [cm]
 [chara_hide_all time=0]
 どうする？
-*ch2_tatsuya_toilet_choice
 [choice_start count=2]
 [choice name="choice_ch2_call_tatsuya" text="龍也に声をかける" target="*ch2_call_tatsuya"]
 [choice name="choice_ch2_ignore_tatsuya" text="見なかったことにする" target="*ch2_ignore_tatsuya"]
