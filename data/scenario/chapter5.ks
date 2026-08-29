@@ -686,7 +686,7 @@
 [auto_chara name="恵" face="normal"]
 「だから、そんなに気にしなくていいよ」[p]
 
-[auto_chara name="拓海" face="level2_question"]
+[auto_chara name="拓海" face="level2_surprise"]
 「え？」[p]
 
 [auto_chara name="恵" face="normal"]
