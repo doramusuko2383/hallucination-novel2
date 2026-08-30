@@ -32,6 +32,7 @@
 [playbgm storage="badend.ogg" loop=false volume=55 fadein=true time=400]
 [iscript]
 (function prepareBadEndUi() {
+    TYRANO.kag.setAuto(false);
     $("body").addClass("badend-active");
     $(".button_menu, .role_button, .quiet_system_button").hide();
 })();

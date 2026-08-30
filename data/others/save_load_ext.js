@@ -70,10 +70,12 @@
             // 食い違う場合があるため、隣接するMENU自身の表示状態を正とする。
             var controlsVisible = menuButton.length > 0 && menuButton.css("display") !== "none";
             var isAuto = !!kag.stat.is_auto;
+            var isFullscreenSequence = $("body").hasClass("badend-active") || $("#hl-ending").length > 0;
             // MENUが一時的に非表示でもAUTOの実行状態は変わらない。状態表示まで
-            // 隠してしまわず、右下へ寄せて常に現在のAUTO状態を知らせる。
+            // 隠してしまわず、右下へ寄せて現在のAUTO状態を知らせる。ただし、
+            // 操作UIを意図的に消す全画面演出には状態表示を重ねない。
             indicator.toggleClass("is-menu-visible", controlsVisible);
-            indicator.toggleClass("is-active", isAuto);
+            indicator.toggleClass("is-active", isAuto && !isFullscreenSequence);
 
             if (lastAnnouncedAutoState === null) {
                 lastAnnouncedAutoState = isAuto;
@@ -1097,6 +1099,7 @@
 
                 kag.setSkip(false);
                 kag.stat.is_skip = false;
+                kag.setAuto(false);
                 $(document).trigger("mouseup");
                 $(".button_menu").hide();
                 kag.layer.hideMessageLayers();
