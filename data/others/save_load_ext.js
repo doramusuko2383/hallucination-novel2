@@ -47,9 +47,9 @@
             if (indicator.length) return indicator;
 
             indicator = $('<div id="hl-auto-status" class="hl-auto-status" aria-hidden="true">AUTO</div>');
-            var menuButton = $(".button_menu").first();
-            if (menuButton.length) indicator.insertBefore(menuButton);
-            else $("#tyrano_base").append(indicator);
+            // シナリオ切替やロード時にはゲームレイヤーの子要素が破棄されるため、
+            // 状態表示はレイヤー外のbody直下に置いて確実に残す。
+            $(document.body).append(indicator);
             return indicator;
         }
 
@@ -58,7 +58,7 @@
             if (liveStatus.length) return liveStatus;
 
             liveStatus = $('<div id="hl-auto-status-live" class="hl-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>');
-            $("#tyrano_base").append(liveStatus);
+            $(document.body).append(liveStatus);
             return liveStatus;
         }
 
@@ -69,7 +69,10 @@
             // 食い違う場合があるため、隣接するMENU自身の表示状態を正とする。
             var controlsVisible = menuButton.length > 0 && menuButton.css("display") !== "none";
             var isAuto = !!kag.stat.is_auto;
-            indicator.toggleClass("is-active", isAuto && controlsVisible);
+            // MENUが一時的に非表示でもAUTOの実行状態は変わらない。状態表示まで
+            // 隠してしまわず、右下へ寄せて常に現在のAUTO状態を知らせる。
+            indicator.toggleClass("is-menu-visible", controlsVisible);
+            indicator.toggleClass("is-active", isAuto);
 
             if (lastAnnouncedAutoState === null) {
                 lastAnnouncedAutoState = isAuto;
@@ -82,9 +85,12 @@
 
         // setAuto() が発火する標準イベントへ直接連動する。ロード等でDOMが
         // 復元された場合にも、補助同期で要素の再生成と実状態の反映を行う。
-        kag.on("auto-start.hlAutoStatus auto-stop.hlAutoStatus load-beforemaking.hlAutoStatus", function () {
-            window.setTimeout(syncAutoStatus, 0);
-        }, { system: true });
+        ["auto-start", "auto-stop", "load-beforemaking"].forEach(function (eventName) {
+            kag.on(eventName, function () {
+                // setAuto() はイベント通知の直後に is_auto を更新する。
+                window.setTimeout(syncAutoStatus, 0);
+            }, { system: true });
+        });
         // ライブ領域を空の状態で先にDOMへ載せ、次のタスクで初回状態を反映する。
         // これにより、起動時点でAUTO中の場合も最初の通知を拾えるようにする。
         getLiveStatus();
@@ -1160,6 +1166,9 @@
             return;
         }
 
+        // セーブ／ロード機能の初期化完了を待たずに状態表示を設置する。
+        // 後続の拡張処理で例外が起きてもAUTO表示だけは動作させる。
+        installAutoStatusIndicator();
         installClickSoundEvents();
         installConfigOverlay();
         installChoiceTags();
@@ -1393,7 +1402,6 @@
         };
 
         installLastPlayedSnapshotEvents(menu);
-        installAutoStatusIndicator();
         TYRANO.kag.config.configSaveSlotNum = MANUAL_SLOT_COUNT;
     }
 
