@@ -369,6 +369,7 @@
 でも、自分の中には何かがまだ燻っている気がしてならなかった。[p]
 [chara_hide_all]
 [bg storage="black.png" time=2000]
+[wait time=500]
 [fadeoutbgm time=4000]
 [bg storage="bg_school_gate_evening.webp" time=800]
 [playbgm storage="likeadate.ogg" loop=true volume=80 fadein=true time=4000]
@@ -803,9 +804,9 @@
 
 拓海は少し息を整えながら話し出した。[p]
 [chara_hide_all]
-[bg storage="black.png" time=700]
+[bg storage="black.png" time=2000]
 [stopse fadeout=3000]
-[wait time=2000]
+[wait time=500]
 [bg storage="bg_rooftop_day.webp" time=600]
 [playse storage=se/wind_rooftop.ogg volume=30]
 次の日の放課後、拓海は龍也を屋上に呼び出した。[p]
@@ -1083,7 +1084,8 @@
 「きっと、あいつなら」[p]
 [wait time=1000]
 [chara_hide_all]
-[bg storage="black.png" time=1000]
+[bg storage="black.png" time=2000]
+[wait time=700]
 
 それから数週間後――[p]
 
@@ -1578,7 +1580,8 @@
 と答えた。[p]
 [chara_hide_all time=300]
 [fadeoutbgm time=3000]
-[wait time=2000]
+[bg storage="black.png" time=2000]
+[wait time=500]
 [bg storage="bg_street_winter_morning.webp" time=900]
 [playbgm storage="winter_morning.ogg" loop=true volume=100 fadein=true time=1200]
 12月になった。[p]
@@ -1631,6 +1634,8 @@
 [chara_hide_all]
 まだやらなくてはいけないことが残ってはいるが、たまにはこんな日があってもいいのだ。[p]
 [fadeoutbgm time=3000]
+[bg storage="black.png" time=2000]
+[wait time=500]
 [bg storage="bg_megumi_living_night.webp" time=800]
 [playse storage=se/interphone.ogg volume=100]
 土曜日の夜、インターホンが鳴った。[p]
@@ -1862,6 +1867,8 @@
 [fadeoutbgm time=1000]
 [wait time=800]
 
+[bg storage="black.png" time=1500]
+[wait time=500]
 翌日。[p]
 
 [bg storage="bg_rooftop_day2.webp" time=800]

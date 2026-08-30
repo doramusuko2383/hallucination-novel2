@@ -429,7 +429,8 @@
 
 [wait time=1000]
 
-[bg storage="black.png" time=700]
+[bg storage="black.png" time=2000]
+[wait time=500]
 
 高田の一件から、数日が過ぎた。[p]
 
@@ -648,7 +649,8 @@
 
 それが、今の拓海にはたまらなく心地よかった。[p]
 
-[bg storage="black.png" time=700]
+[bg storage="black.png" time=2000]
+[wait time=1000]
 
 拓海は、自分の「超能力」に振り回された三か月間から解放されたが、新しい試練が待っていた。[p]
 受験勉強である。[p]
@@ -918,7 +920,8 @@
 
 [stopse fadeout=800]
 [fadeoutbgm time=3000]
-[bg storage="black.png" time=500]
+[bg storage="black.png" time=1500]
+[wait time=500]
 [bg storage="bg_family_restaurant_night.webp" time=900]
 [playbgm storage="restaurant_ambience.ogg" loop=true volume=30 fadein=true time=1000]
 

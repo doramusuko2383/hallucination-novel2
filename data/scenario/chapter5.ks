@@ -766,7 +766,8 @@
 
 拓海は、そのまま眠りに落ちた。[p]
 [fadeoutbgm time=3000]
-[wait time=3000]
+[bg storage="black.png" time=2000]
+[wait time=500]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=50 fadein=true time=1000]
 [bg storage="bg_classroom_day.webp" time=800]
 あれから何も有効な手立てが思い浮かばないまま、数日が過ぎた。[p]

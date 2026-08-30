@@ -15,6 +15,8 @@
 [chapter_title number="第四章" title="共犯"]
 [font speed=50]
 
+[bg storage="black.png" time=2000]
+[wait time=500]
 [bg storage="bg_classroom_day.webp" time=800]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true time=1000]
 あのカラオケでの出来事から、すでに三週間が過ぎようとしていた。[p]
@@ -246,6 +248,8 @@
 「了解」[p]
 
 [fadeoutbgm time=3000]
+[bg storage="black.png" time=1000]
+[wait time=300]
 [bg storage="bg_family_restaurant_night.webp" time=900]
 [playbgm storage="restaurant_ambience.ogg" loop=true volume=30 fadein=true time=1000]
 
@@ -472,8 +476,8 @@
 [fadeoutbgm time=4000]
 [chara_hide_all time=300]
 [playbgm storage="restaurant_ambience.ogg" loop=true volume=30 fadein=true time=1000]
-[bg storage="black.png" time=0 wait=false]
-[wait time=2000]
+[bg storage="black.png" time=2000]
+[wait time=500]
 結局、その日は夜遅くまで作戦会議が続いた。[p]
 店員がラストオーダーを告げに来なければ、もっと長引いていただろう。[p]
 [wait time=2000]
@@ -1103,7 +1107,8 @@
 「……わかった。聞いてみる」[p]
 [chara_hide_all time=300]
 
-[bg storage="black.png" time=300]
+[bg storage="black.png" time=2000]
+[wait time=500]
 翌日――。[p]
 
 恵からのメッセージは、短かった。[p]
