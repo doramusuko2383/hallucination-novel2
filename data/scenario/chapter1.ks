@@ -309,12 +309,12 @@
 
 [wait time=1000]
 
-次第にその怒りは形を変え、自分に刃を向けていく。[p]
+だが、ぶつける相手はもうここにいない。[p]
 
 [wait time=1000]
 
-絶望の気持ちが怒りを生むのか、怒りが絶望に変わるのか、[l]
-もはや区別がつかない。[p]
+三人の足音が消えると、風と自分の心音だけが残った。[p]
+行き場を失った怒りが、今度は自分へ刃を向ける。[p]
 
 [wait time=1000]
 
@@ -358,6 +358,7 @@
 [playse storage=se/wind_rooftop.ogg volume=20]
 [cg storage="ch01_sc01_jumping_off.webp"]
 [bg storage="ch01_sc01_jumping_off.webp" time=600]
+靴底の半分ほどしかない足場を、風が制服ごと揺さぶる。[p]
 視線を下へ向けると、色鮮やかに花が咲く正門前の花壇が見える。[p]
 
 [wait time=500]
@@ -505,7 +506,7 @@
 
 [wait time=500]
 
-それと同時に、先ほどの飛び降りの恐怖が急に込み上げてきた。[p]
+無傷の脚へ目を落とした瞬間、砕けた感触だけが鮮明に蘇った。[p]
 [fadeoutbgm time=1000]
 [playse storage=se/heartbeat.ogg loop=true volume=100]
 [wait time=1000]
@@ -1049,7 +1050,7 @@
 綾香も、それ以上は言葉が出なかった。[p]
 [chara_hide_all time=300]
 
-その一方で、拓海は気持ちの高揚を抑えられずにいた。[p]
+その一方で、拓海の胸は激しく高鳴っていた。[p]
 [fadeoutbgm time=3000]
 [playse storage=se/heartbeat.ogg loop=true volume=100]
 [wait time=1000]
@@ -1057,6 +1058,7 @@
 目を焼かれる――最も恐れていた事態。[p]
 それが起こったのは幻とはいえ、[l]
 自分ではなく翔太だった。[p]
+怯える翔太を前にしても、胸を満たしたのは罪悪感より成功の実感だった。[p]
 拓海は自分の「異能」についての仮説が正しいという確信を得たのだった。[p]
 [stopse fadeout=3000]
 [wait time=1000]
