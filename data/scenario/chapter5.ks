@@ -743,7 +743,7 @@
 
 [chara_hide_all time=300]
 
-[stopse fadeout=800]
+[stopse fadeout=2000]
 
 [wait time=500]
 
