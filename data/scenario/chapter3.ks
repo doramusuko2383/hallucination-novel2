@@ -19,6 +19,8 @@
 *ch3_convenience_store
 
 ; 追加した演出意図: 夜の外気と犯行前の緊張を、夜背景・虫の音・低いBGMで抑えて立ち上げる。
+[bg storage="black.png" time=2000]
+[wait time=500]
 [bg storage="bg_station_night.webp" time=800]
 [playse storage=se/traindoor.ogg volume=100]
 [playbgm storage="tension_low.ogg" loop=true volume=100 fadein=true time=1200]
@@ -411,8 +413,8 @@
 明るいコンビニの前から歩き去った。[p]
 
 [fadeoutse time=2000]
-[bg storage="black.png" time=800]
-[wait time=1500]
+[bg storage="black.png" time=2000]
+[wait time=500]
 
 *ch3_classroom_after
 
@@ -539,7 +541,8 @@
 不安は完全に拭い去れなかった。[p]
 
 [fadeoutbgm time=4000]
-[wait time=3000]
+[bg storage="black.png" time=1000]
+[wait time=300]
 
 *ch3_karaoke
 
