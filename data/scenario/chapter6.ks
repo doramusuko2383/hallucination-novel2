@@ -767,7 +767,7 @@
 恵は言葉を選ぶように慎重に問いかけた。[p]
 [wait time=2000]
 [auto_chara name="拓海" face="level2_panic"]
-[playse storage=se/station_noise.ogg loop=true volume=100]
+[playse storage=se/station_noise.ogg loop=true volume=60]
 「そんなわけないだろ！」[p]
 
 拓海は思わず声が大きくなってしまい、周りを気にして少し声を落とす。[p]
@@ -806,7 +806,7 @@
 [chara_hide_all]
 [bg storage="black.png" time=2000]
 [stopse fadeout=3000]
-[wait time=500]
+[wait time=1000]
 [bg storage="bg_rooftop_day.webp" time=600]
 [playse storage=se/wind_rooftop.ogg volume=30]
 次の日の放課後、拓海は龍也を屋上に呼び出した。[p]
@@ -1954,8 +1954,10 @@
 その瞬間、[l]世界から音が消えた。[p]
 拓海の中で、[l]何かが静かに外れた。[p]
 [resetdelay]
+[chara_hide_all]
 [wait time=1000]
 
+[playbgm storage="ability_theme.ogg" loop=true volume=80 fadein=true time=1500]
 本当は、こんなものを見せるべきではない。[p]
 
 それでも、拓海は止めなかった。[p]
