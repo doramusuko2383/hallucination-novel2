@@ -1187,6 +1187,7 @@
 [auto_chara name="綾香" face="private_serious" time=700 wait=false]
 しかし、綾香は恵を見るなり、微笑んだ。[p]
 [auto_chara name="綾香" face="private_normal"]
+「……あ」[p]
 [wait time=1000]
 [auto_chara name="恵" face="serious"]
 「綾香！」[p]
