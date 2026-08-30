@@ -869,6 +869,7 @@
 「君によく似ている。美人な娘だね」[p]
 [auto_chara name="恵" face="private_confuse"]
 その瞬間、恵が顔をしかめた。[p]
+こんな相手に褒められたくなんかない……。[p]
 恵の指がイヤホンにかかり、今にも外しそうになる。[p]
 
 [auto_chara name="拓海" face="private_surprise"]
