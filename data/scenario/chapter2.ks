@@ -173,10 +173,11 @@
 
 *ch2_flashback_toilet
 
-[bg storage="black.png" time=500]
+[bg storage="black.png" time=1500]
 [wait time=500]
 [font speed=45]
 [fadeoutse time=2000]
+*ch2_tatsuya_toilet_choice_retry
 [playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=1500]
 そんな拓海の静かな日常が一変したのは、[r]
 一年生の頃だった。[p]
@@ -232,13 +233,10 @@
 
 [jump target="*ch2_tatsuya_toilet_choice"]
 
-*ch2_tatsuya_toilet_choice_retry
+*ch2_tatsuya_toilet_choice
 [cm]
 [chara_hide_all time=0]
-[bg storage="bg_washroom_day.webp" time=0]
-[playbgm storage="suspense.ogg" loop=true volume=60 fadein=true time=300]
-
-*ch2_tatsuya_toilet_choice
+どうする？
 [choice_start count=2]
 [choice name="choice_ch2_call_tatsuya" text="龍也に声をかける" target="*ch2_call_tatsuya"]
 [choice name="choice_ch2_ignore_tatsuya" text="見なかったことにする" target="*ch2_ignore_tatsuya"]
@@ -342,7 +340,7 @@
 拓海と龍也は、関わり合うことのない他人なのだから。[p]
 
 [wait time=1000]
-[fadeoutbgm time=2000]
+[fadeoutbgm time=1000]
 
 そうだ。[p]
 
@@ -350,7 +348,7 @@
 
 あの日、何も起きなかった。[p]
 
-僕は何もしなかった。[p]
+俺は何もしなかった。[p]
 
 [wait time=1200]
 
@@ -358,8 +356,12 @@
 
 [wait time=1500]
 
-じゃあ、今の僕はなんだ？[p]
+あれ？[p]
 
+[delay speed="130"]
+じゃあ、[p]
+今の俺はなんだ？[p]
+[resetdelay]
 [wait time=350]
 [playse storage=se/short_glitch.ogg volume=80]
 [quake time=180 hmax=12 vmax=5]
@@ -374,8 +376,8 @@
 [bg storage="black.png" time=300]
 [wait time=300]
 
-[eval exp="f.bad_end_no = 'BAD END 08'"]
-[eval exp="f.bad_end_title = '僕は縺薙％'"]
+[eval exp="f.bad_end_no = 'BAD END 01'"]
+[eval exp="f.bad_end_title = '俺は縺薙％'"]
 [eval exp="f.bad_end_retry_storage = 'chapter2.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch2_tatsuya_toilet_choice_retry'"]
 [eval exp="f.bad_end_retry_bg = 'bg_washroom_day.webp'"]
@@ -432,15 +434,14 @@
 
 いつもの昼下がりの屋上。[p]
 
-龍也が拓海の胸倉を掴み、怒りを露わにする。[p]
+龍也の指が、拓海の制服の襟に食い込む。[p]
 
-その目には、激しい感情が宿っていた。[p]
+噛みしめた奥歯が、かすかに鳴った。[p]
 
 [auto_chara name="綾香" face="angry"]
 「翔太、屋上に来なくなったじゃない！」[p]
 
-綾香が後ろから声を上げる。[r]
-彼女の声には苛立ちが含まれていた。[p]
+綾香が眉を吊り上げ、後ろから詰め寄る。[p]
 
 [auto_chara name="拓海" face="level1_pain"]
 「何度も言ってるけど、俺は何もしてない」[p]
@@ -587,7 +588,7 @@
 
 恐怖で壊れたような翔太の顔を思い出す。[p]
 
-「人を傷つけることができる」と理解した瞬間の恐怖と興奮が、[r]
+自分の力で人の心を壊せると悟った瞬間の恐怖と興奮が、[r]
 今も心の中に渦巻いている。[p]
 
 そして、この力には一つの大きな利点があった。[p]
@@ -605,8 +606,8 @@
 心のどこかでその考えに寒気がした。[p]
 
 [chara_hide_all time=300]
-証拠が残らないとはいえ、誰かが見ている場所では、[r]
-何かをやったことがすぐにバレるだろう。[p]
+能力の痕跡は残らなくても、誰かが見ている場所で使えば、[r]
+自分が何かをしたと疑われるだろう。[p]
 
 相手の行動パターンをじっくりと観察し、[r]
 誰にも見られない状況を作らなければならない。[p]
@@ -614,7 +615,7 @@
 さらに、どのような幻覚を見せるかも重要な課題だ。[p]
 
 現実味がなさすぎると、[r]
-ただの夢だと思われてしまうかもしれない。[p]
+ただの夢として片づけられる恐れがある。[p]
 
 ある程度、リアルでなければならない――[p]
 
@@ -626,7 +627,7 @@
 拓海は自嘲気味に笑う。[p]
 
 [chara_hide_all time=300]
-問題なのは、既に龍也と綾香の二人は、[r]
+問題なのは、すでに龍也と綾香の二人は、[r]
 翔太が突然おかしくなった理由に疑問を抱いていることだ。[p]
 
 拷問やリンチで問い詰められたら、[r]
@@ -719,7 +720,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 ある日、綾香の情報を整理しているとき、ふと思い出した。[p]
 
-綾香がコンビニでアルバイトをしているということを。[p]
+綾香がコンビニで働いているということを。[p]
 
 翔太のタバコは、綾香がバイト先で工面していたのだった。[p]
 
@@ -728,13 +729,13 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 拓海は手を握りしめた。[p]
 
-バイト先がわかれば、待ち伏せができる。[p]
+店の場所がわかれば、待ち伏せができる。[p]
 
-学校の誰にも見つからないように、[r]
-完璧なタイミングで動けるかもしれない。[p]
+学校の人間の目を避け、[r]
+狙ったタイミングで動けるはずだ。[p]
 
 だが、それにはまず、[r]
-綾香のシフトやバイト先を探り出す必要があった。[p]
+綾香のシフトや勤務先を探り出す必要があった。[p]
 
 [chara_hide_all time=300]
 しかし、ここで手詰まりになった。[p]
@@ -769,16 +770,16 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 拓海は一人でいることには慣れていたが、[r]
 こういう時ばかりは孤立が痛かった。[p]
 
-友達がいれば、[r]
-噂話から綾香のことを簡単に引き出せただろう。[p]
+クラスの噂話に加わるだけで、[r]
+綾香のことも簡単に聞き出せただろう。[p]
 
 だが、今は自分の力だけで何とかするしかない。[p]
 
 [wait time=500]
 
 [bg storage="bg_hallway_day.webp" time=700]
-そんな中、ある日、放課後ふと目に入った光景が、[r]
-拓海の胸を騒がせた。[p]
+そんな中、ある日の放課後、[r]
+拓海は廊下の先に見えた二人の姿に足を止めた。[p]
 [cg storage="ch2_ayaka_and_megumi.webp"]
 [bg storage="ch2_ayaka_and_megumi.webp" time=700]
 綾香が、同じクラスの菊池恵と一緒に帰っている姿を見かけたのだ。[p]
@@ -787,15 +788,16 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 しめた、と拓海は思った。[p]
 
-恵なら、自然な流れで綾香のバイト先について聞き出せるかもしれない。[p]
+恵なら、綾香が働く店についてさりげなく聞き出せそうだ。[p]
 
 [wait time=500]
-[bg storage="black.png" time=500]
+[bg storage="black.png" time=2000]
+[wait time=500]
 これだ……これで計画が動き出す。[p]
 
 拓海は、無意識に頬を緩めた。[p]
 
-今度こそ、次の一手が見つかったのだ。[p]
+ようやく、手詰まりだった計画に糸口が見えた。[p]
 
 [fadeoutbgm time=4000]
 [wait time=1000]
@@ -829,14 +831,12 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [playse storage=se/heartbeat.ogg loop=true volume=100]
 心臓がやけに早く脈打つのを感じながら、[r]
 静かに恵の方へと歩み寄る。[p]
-どうやって話し掛けようか。
 
 *ch2_choice_megumi_approach
 [cm]
 [free layer="fix" name="bad_end_number"]
 [free layer="fix" name="bad_end_title"]
-[bg storage="bg_classroom_day2.webp" time=0]
-[playbgm storage="classroom_buzzing.ogg" volume=100 fadein=true]
+どうやって話し掛けようか。
 [choice_start count=2]
 [choice name="choice_ch2_megumi_good" text="塾の話から切り出す" target="*ch2_megumi_approach_good"]
 [choice name="choice_ch2_megumi_bad" text="いきなり綾香のことを聞く" target="*ch2_megumi_approach_bad"]
@@ -890,15 +890,15 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 拓海は少し驚いた表情を見せ、軽く後ろにのけぞった。[p]
 
-わざとらしくないリアクションを心がけながら、[r]
-次の一手を考える。[p]
+わざとらしく見えないよう頷きながら、[r]
+本題を切り出す機会をうかがう。[p]
 [auto_chara name="拓海" face="level2_smile"]
 「最近、勉強に集中できなくて、[l]そろそろ塾でも行こうかなって思ってたんだ」[p]
 
 前半部分だけは本当だ。[p]
 
 [auto_chara name="恵" face="normal"]
-「永山くんは塾も行かずに、[l]あの成績をキープしてるなんて、すごいよ」[p]
+「永山君は塾も行かずに、[l]あの成績をキープしてるなんて、すごいよ」[p]
 
 恵は感心したように言う。[p]
 
@@ -925,7 +925,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 恵が楽しそうに笑った。[p]
 
 [auto_chara name="恵" face="normal"]
-「でも、ちょっと意外かも。[l]永山くんって、何でも一人で淡々とやってるイメージだったから」[p]
+「でも、ちょっと意外かも。[l]永山君って、何でも一人で淡々とやってるイメージだったから」[p]
 
 [auto_chara name="拓海" face="level2_normal"]
 「そんな風に見えてたんだ」[p]
@@ -944,7 +944,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 「まあ、塾に行こうとしてる時点で、そろそろ一人じゃ限界なのかもね」[p]
 
 [auto_chara name="恵" face="laugh"]
-「あはは、そういうことにしておこうか」[p]
+「ふふ、塾に行くのは悪いことじゃないからね？」[p]
 
 [stopse fadeout=700]
 [chara_hide_all time=300]
@@ -961,7 +961,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 どんな塾に通ってるのかなって思って」[p]
 
 [auto_chara name="恵" face="laugh"]
-「あはは、そんな風に言われるとちょっと照れちゃうな」[p]
+「ええ～、そんな風に言われるとちょっと照れちゃうな」[p]
 
 恵は照れくさそうに笑い、塾の名前を教えてくれた。[p]
 
@@ -970,7 +970,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 [chara_hide_all time=300]
 [wait time=500]
-
+[fadeoutbgm time=4000]
 拓海は話を聞きながら、[r]
 ついに本題に入る決意を固めた。[p]
 
@@ -990,8 +990,8 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 [auto_chara name="拓海" face="level2_normal"]
 「そうなんだ。[l]顔見知りだから、ちょっと気になってさ」[p]
 
-拓海は、何でもない会話を装いながら、[r]
-慎重に言葉を選んでいた。[p]
+拓海は逸る気持ちを抑え、[r]
+慎重に言葉を選んだ。[p]
 
 「あれ、菊池さんって上田さんと同じ中学じゃなかったんだ？」[p]
 
@@ -1009,16 +1009,16 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 バイト先は聞けなかったが、手掛かりは手に入れた。[p]
 
 拓海は微かに口角を上げながら、[r]
-自然な流れで会話を終わらせる方法を探した。[p]
+塾の話へ戻して会話を切り上げる機会を探した。[p]
 
-これ以上長引かせると、何か怪しまれるかもしれない。[p]
+これ以上欲張れば、きっと怪しまれる。[p]
 
 [auto_chara name="拓海" face="level2_smile"]
 「そっか、ありがと。[l]塾のこと、参考にしてみるよ」[p]
 
 [chara_hide_all time=300]
 [fadeoutbgm time=4000]
-拓海は静かに席に戻り、机に戻った後も冷静を装っていた。[p]
+拓海は逸る気持ちを隠し、何食わぬ顔で自分の席へ戻った。[p]
 
 しかし、その内心では計画が大きく一歩前進した感覚があった。[p]
 
@@ -1090,11 +1090,11 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 
 その方が自然な気がした。[p]
 
-部屋の静けさが、拓海の集中力を研ぎ澄ませる。[p]
+推理が形を取るにつれ、意識が画面の地図へ吸い込まれていく。[p]
 
 [wait time=500]
 
-画面を見つめながら、[r]
+北口周辺の地図を目で追ううちに、[r]
 頭の中で点と点が一本の線になっていく。[p]
 
 @jump target="*ch2_store_common_route"
@@ -1108,7 +1108,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 通勤時間を考えれば、[r]
 この店が一番有力に思える。[p]
 
-部屋の静けさが、拓海の集中力を研ぎ澄ませる。[p]
+近さというわかりやすい根拠が、拓海の判断を後押しする。[p]
 
 [wait time=500]
 
@@ -1207,7 +1207,7 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 変わらない日常が続いていく――[p]
 
 *ch2_megumi_approach_continue
-[eval exp="f.bad_end_no = 'BAD END 01'"]
+[eval exp="f.bad_end_no = 'BAD END 02'"]
 [eval exp="f.bad_end_title = '変えられなかった日常'"]
 [eval exp="f.bad_end_retry_storage = 'chapter2.ks'"]
 [eval exp="f.bad_end_retry_target = '*ch2_retry_context_megumi_approach'"]
