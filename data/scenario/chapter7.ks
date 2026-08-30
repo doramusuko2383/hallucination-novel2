@@ -662,25 +662,108 @@
 二人とも学業に専念することを約束して、残りの高校生活を励まし合って頑張った。[p]
 大学進学という新しい目標もできたのだ。[p]
 
-放課後、恵と図書室で勉強をすることも増えた。[p]
+[wait time=1000]
 
-問題集を解いて、分からないところを教え合って、閉館時間になれば一緒に駅まで歩く。[p]
+[playse storage=se/pencil.ogg volume=100]
+[wait time=500]
 
-廊下ですれ違った龍也と翔太が、くだらない話をしながら笑っていることもあった。[p]
+放課後の自習室は静かだった。[p]
 
-彩香がスケッチブックを抱えて、美術室へ向かう姿を見かけることもあった。[p]
+周りから聞こえてくるのは、ペンを走らせる音と、時折ページをめくる音くらいだ。[p]
 
-拓海は、それをただ眺めていた。[p]
+拓海も参考書に目を落とし、黙々と問題を解いていた。[p]
 
-誰かを追いかける必要もない。[r]
-誰かについて調べる必要もない。[r]
-あの力を使う必要もない。[p]
+同じ自習室には恵もいる。[p]
+ただし、席は離れている。[p]
 
-何も起こらない。[p]
+一緒に勉強すると気が散るから、と決めたのは二人だった。[p]
 
-そんな日々が、いつの間にか当たり前になっていた。[p]
+[wait time=500]
 
+さすがに集中力が切れてきた。[p]
+
+拓海は一度ペンを置き、休憩することにした。[p]
+
+[chara_hide_all time=300]
+[bg storage="bg_hallway_day.webp" time=800]
+
+廊下の自動販売機に小銭を入れ、ボタンを押す。[p]
+
+ガコン、と缶コーヒーが落ちてきた。[p]
+
+それを取り出したところで、向こうから見覚えのある姿が歩いてきた。[p]
+
+[auto_chara name="綾香" face="normal"]
+「あ、永山」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「綾香。今帰り？」[p]
+
+[auto_chara name="綾香" face="normal"]
+「うん。永山はまだ勉強？」[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「まあね」[p]
+
+[auto_chara name="綾香" face="normal"]
+「そっか。頑張ってね」[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「そっちもな」[p]
+
+綾香は軽く手を振り、そのまま廊下を歩いていった。[p]
+
+[chara_hide_all time=300]
+
+拓海は缶コーヒーのプルタブを開けた。[p]
+
+「永山君？」[p]
+
+振り返ると、自習室から出てきた恵が立っていた。[p]
+
+[auto_chara name="恵" face="normal"]
+「休憩？」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「うん。さすがに疲れた」[p]
+
+[auto_chara name="恵" face="tease"]
+「まだまだだね」[p]
+
+[auto_chara name="拓海" face="level3_question"]
+「菊池さんは？」[p]
+
+[auto_chara name="恵" face="troubled_smile"]
+「私も休憩」[p]
+
+[auto_chara name="拓海" face="level3_smile2"]
+「人のこと言えないじゃん」[p]
+
+[auto_chara name="恵" face="tease"]
+「私は計画的な休憩です」[p]
+
+「はいはい」[p]
+
+[wait time=500]
+
+ほんの少し話しただけで、二人はまた自習室へ戻った。[p]
+
+恵は拓海から少し離れた、いつもの席へ向かう。[p]
+
+拓海も自分の席に戻り、再び参考書を開いた。[p]
+
+[playse storage=se/pencil.ogg volume=100]
+[wait time=700]
+
+そんな日々を繰り返しているうちに、季節は過ぎていった。[p]
+
+[wait time=1500]
 [bg storage="black.png" time=2000]
+[wait time=700]
+
+[bg storage="bg_classroom_graduation_evening.webp" time=1000]
+[playse storage=se/school_chime.mp3 volume=80]
+
 
 [wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
