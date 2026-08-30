@@ -988,6 +988,8 @@
 [resetdelay]
 [bg storage="black.png" time=400]
 [wait time=1000]
+[playbgm storage="nature_wind.ogg" loop=true volume=100 fadein=true time=1500]
+
 空気が一瞬で重くなり、周囲の音が遠のいていく。[p]
 龍也の視界がぐにゃりと歪み、意識が拓海の記憶の中へ沈んでいく。[p]
 気が付くと、龍也は拓海の視点で屋上に立っていた。[p]
@@ -1024,10 +1026,11 @@
 
 体が地面に叩きつけられる衝撃をゆっくり感じ、ただ恐怖だけが心を埋め尽くしていく。[p]
 [bg storage="bg_rooftop_day.webp" time=800]
-;[playbgm storage="after_shock.ogg" loop=true volume=35 fadein=true time=1000]
+[playbgm storage="memory_light.ogg" loop=true volume=50 fadein=true time=2000]
 現実に戻ったとき、龍也は地面に膝をつき、震えていた。[p]
 [auto_chara name="龍也" face="sad"]
 顔には涙が流れている。[p]
+
 そんな龍也の姿を見て、拓海は気づいた。[p]
 この力は、他人を痛めつけるためだけではなく、他人の痛みを想像するきっかけを与えるためにも使えるのかもしれない、と。[p]
 座り込む龍也に向かって、拓海はゆっくりと話し始めた。[p]
@@ -1082,6 +1085,7 @@
 [wait time=1000]
 
 「きっと、あいつなら」[p]
+[fadeoutbgm time=4000]
 [wait time=1000]
 [chara_hide_all]
 [bg storage="black.png" time=2000]
@@ -1940,7 +1944,7 @@
 [bg storage="bg_rooftop_day.webp" time=600]
 [auto_chara name="拓海" face="level2_depressed"]
 拓海は、龍也の腕に触れた。[p]
-
+[chara_hide_all]
 
 
 [stopse fadeout=1000]
