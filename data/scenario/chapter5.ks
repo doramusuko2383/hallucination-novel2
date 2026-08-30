@@ -400,13 +400,13 @@
 
 失敗した――。[p]
 
-[chara_hide_all time=300]
-
-[fadeoutbgm time=3000]
-
 
 [chara_hide_all time=300]
 [fadeoutbgm time=3000]
+
+[bg storage="black.png" time=2000]
+[wait time=500]
+
 [bg storage="bg_classroom_day2.webp" time=800]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true time=1000]
 [playse storage=se/school_chime.mp3 volume=80]
