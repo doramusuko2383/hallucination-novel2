@@ -1933,11 +1933,21 @@
 [auto_chara name="拓海" face="level2_depressed"]
 拓海は、龍也の腕に触れた。[p]
 
-その瞬間、世界から音が消えた。[p]
 
-[chara_hide_all]
-[bg storage="black.png" time=500]
-拓海の中で、何かが静かに外れた。[p]
+
+[stopse fadeout=1000]
+[fadeoutbgm time=3000]
+[playse storage=se/tinnitus.ogg volume=100 buf="0"]
+[bg storage="white.png" time=80]
+[wait time=300]
+[playse storage=se/white_noise.ogg volume=100 buf="1"]
+[bg storage="black.png" time=300]
+[fadeoutbgm time=3000]
+[delay speed="120"]
+その瞬間、[l]世界から音が消えた。[p]
+拓海の中で、[l]何かが静かに外れた。[p]
+[resetdelay]
+[wait time=1000]
 
 本当は、こんなものを見せるべきではない。[p]
 
@@ -1996,7 +2006,7 @@
 
 それなのに、自分が取り返しのつかないことをしたのだと分かった。[p]
 
-[fadeoutbgm time=1000]
+[fadeoutbgm time=3000]
 [wait time=800]
 
 [chara_hide_all]
