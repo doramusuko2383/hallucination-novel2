@@ -47,9 +47,10 @@
             if (indicator.length) return indicator;
 
             indicator = $('<div id="hl-auto-status" class="hl-auto-status" aria-hidden="true">AUTO</div>');
-            // シナリオ切替やロード時にはゲームレイヤーの子要素が破棄されるため、
-            // 状態表示はレイヤー外のbody直下に置いて確実に残す。
-            $(document.body).append(indicator);
+            // MENUと同じゲーム座標系へ置き、画面拡縮やレターボックス時にも
+            // 位置・文字サイズ・間隔が揃うようにする。ロード等で破棄された場合は
+            // 定期同期によりここで再生成される。
+            $("#tyrano_base").append(indicator);
             return indicator;
         }
 

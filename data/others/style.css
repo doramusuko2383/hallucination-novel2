@@ -224,8 +224,8 @@
 
 /* AUTO中だけMENUの左に表示する、操作を持たない控えめな状態表示 */
 .hl-auto-status {
-    position: fixed;
-    z-index: 2147483647;
+    position: absolute;
+    z-index: 2147483645;
     right: 22px;
     bottom: 18px;
     height: 32px;
