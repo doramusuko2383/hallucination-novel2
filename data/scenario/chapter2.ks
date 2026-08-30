@@ -173,7 +173,7 @@
 
 *ch2_flashback_toilet
 
-[bg storage="black.png" time=500]
+[bg storage="black.png" time=1500]
 [wait time=500]
 [font speed=45]
 [fadeoutse time=2000]
@@ -791,7 +791,8 @@ AIの黎明期、回答が事実とは異なる内容を、[r]
 恵なら、綾香が働く店についてさりげなく聞き出せそうだ。[p]
 
 [wait time=500]
-[bg storage="black.png" time=500]
+[bg storage="black.png" time=2000]
+[wait time=500]
 これだ……これで計画が動き出す。[p]
 
 拓海は、無意識に頬を緩めた。[p]
