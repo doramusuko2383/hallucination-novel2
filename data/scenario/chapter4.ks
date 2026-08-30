@@ -839,8 +839,7 @@
 
 [cg storage="ch4_smartphone.webp"]
 [bg storage="ch4_smartphone.webp" time=2000]
-恵は自分と拓海の分のホットコーヒーを準備しながら、扉のない食器棚に手を伸ばす瞬間、[r]
-スマホをさりげなく食器の裏に隠して設置した。[p]
+恵は自分と拓海の分のホットコーヒーを準備しながら、扉のない食器棚に手を伸ばす瞬間、スマホをさりげなく食器の裏に隠して設置した。[p]
 背中に視線が刺さっている気がして、指先の動きがわずかにぎこちなくなる。[p]
 それでも食器の位置を直すふりをして、恵は何事もなかったように手を引いた。[p]
 
@@ -949,9 +948,9 @@
 
 [auto_chara name="拓海" face="private_normal"]
 「じゃあ、俺もそろそろ」[p]
-
+[chara_hide_all time=300]
 二人は部屋を出て、リビングへ向かった。[p]
-
+[wait time=1000]
 [bg storage="bg_megumi_living_night.webp" time=600]
 [auto_chara name="拓海" face="private_normal"]
 「今日は突然お邪魔してすみませんでした」[p]
@@ -985,7 +984,7 @@
 「本当に尾行するの？」[p]
 
 [auto_chara name="拓海" face="private_normal"]
-「うん。今なら顔も知られてないし、酔ってる」[p]
+「うん。今なら顔も知られてないし。やつは酔ってる」[p]
 
 [auto_chara name="恵" face="private_anxiety"]
 「危ないと思ったら逃げてね」[p]
