@@ -232,11 +232,21 @@
 徹底的に、やらないといけない。[p]
 [chara_hide_all]
 [playse storage=se/heartbeat.ogg loop=true volume=100 fadein=true time=400]
-これも計画通りだ。[r]
-拓海はハサミを持つ手を思いきり振りかぶった――。[p]
+これも計画通りだ。[p]
 
-[stopse fadeout=500]
-[fadeoutbgm time=3000]
+[wait time=800]
+
+拓海はハサミを握る手に力を込めた。[p]
+[wait time=700]
+
+そして――[p]
+
+[wait time=1000]
+[stopse]
+[stopbgm]
+拓海は、その手を思いきり振りかぶった。[p]
+
+[wait time=500]
 [bg storage="black.png" time=400]
 [wait time=3000]
 
