@@ -11,9 +11,13 @@
 [showmenubutton]
 [chapter_title number="第七章" title="未来"]
 [font speed=50]
+; chapter_title が再表示したメッセージ枠を、雷鳴後の背景が出るまで隠しておく。
+; ここで隠さないと、章タイトル直後の黒画面にメッセージ枠だけが一瞬描画される。
+[layopt layer=message0 visible=false]
 [playse storage=se/thunder.ogg volume=100 buf="0"]
 [wait time=3000]
 [bg storage="bg_takumiroom_night.webp" time=800]
+[layopt layer=message0 visible=true]
 
 [playse storage=se/smartphone_vibrate.ogg volume=100 buf="1"]
 ワックスで髪を整えていた、その時だった。[p]
