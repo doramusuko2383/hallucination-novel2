@@ -1817,6 +1817,7 @@
 [playse storage=se/clock_reverb.ogg volume=100]
 [resetdelay]
 [resetfont]
+[chara_hide_all]
 [wait time=1500]
 
 @jump storage="chapter7.ks" target="*chapter7"
