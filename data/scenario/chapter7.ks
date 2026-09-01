@@ -432,6 +432,7 @@
 [auto_chara name="拓海" face="private2_smile"]
 「そうだね。お言葉に甘えて」[p]
 [chara_hide_all]
+[bg storage="bg_megumi_living_night.webp" time=2000]
 [playse storage=se/cooking.ogg volume=100]
 [wait time=3000]
 [playse storage=se/dinner.ogg volume=100]
@@ -441,9 +442,9 @@
 その内容はほとんど頭に入ってこなかった。[p]
 食器の触れ合う音と温かい湯気が、先ほどまでの緊張を少しずつ遠ざけていく。[p]
 
-[wait time=1000]
+[wait time=500]
 
-[bg storage="black.png" time=2000]
+[bg storage="black.png" time=3000]
 [wait time=500]
 
 高田の一件から、数日が過ぎた。[p]
