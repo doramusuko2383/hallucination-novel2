@@ -268,8 +268,7 @@
 [auto_chara name="恵" face="private_normal"]
 「永山君、手袋した方がいいよ」[p]
 [auto_chara name="拓海" face="private2_normal"]
-「いいって、すぐ終わるから。[r][l]
-汚さないようにやるし」[p]
+「いいって、すぐ終わるから。[l]汚さないようにやるし」[p]
 
 二人はフローリングを掃除している。[p]
 失禁した高田の後片付けをしているのだ。[p]
@@ -394,7 +393,8 @@
 [auto_chara name="恵" face="private_question"]
 「どうかした？」[p]
 [auto_chara name="拓海" face="private2_smile"]
-「そういえば……力、使えたなと思って。ほら、『他人事』じゃなかった」[p]
+「そういえば……力、使えたなと思って。」[p]
+「ほら、『他人事』じゃなかった」[p]
 [auto_chara name="恵" face="private_laugh"]
 「それ……まだ気にしてたんだ」[p]
 
@@ -438,12 +438,33 @@
 [playse storage=se/dinner.ogg volume=100]
 [wait time=3000]
 いつものファミレス以外のところで一緒に食事をしたのは、初めてのことだった。[p]
+
 目の前では、恵が何かを話している。[p]
 その内容はほとんど頭に入ってこなかった。[p]
-食器の触れ合う音と温かい湯気が、先ほどまでの緊張を少しずつ遠ざけていく。[p]
+
+食器の触れ合う音。[p]
+時折聞こえる恵の笑い声。[p]
+湯気の立つ料理を口に運ぶたび、張り詰めていた身体から少しずつ力が抜けていく。[p]
+
+さっきまでのことが、ずいぶん遠くに感じられた。[p]
 
 [wait time=500]
 
+ふと顔を上げると、恵と目が合った。[p]
+
+[auto_chara name="恵" face="private_normal"]
+「どうしたの？」[p]
+
+[auto_chara name="拓海" face="private2_smile"]
+「いや、何でもない」[p]
+
+拓海はもう一口、料理を口に運んだ。[p]
+
+[wait time=500]
+
+ただ二人で食事をしている。[p]
+それだけのことが、今は妙にありがたかった。[p]
+[fadeoutse time=2000]
 [bg storage="black.png" time=3000]
 [wait time=500]
 
@@ -478,7 +499,7 @@
 
 [auto_chara name="拓海" face="level3_smile"]
 「いいね」[p]
-
+[chara_hide_all]
 二人で店に入り、それぞれ温かい飲み物を買った。[p]
 
 [wait time=500]
@@ -488,6 +509,7 @@
 
 [auto_chara name="恵" face="happy"]
 「あったかい……」[p]
+[chara_hide_all]
 
 二人は再び駅へ向かって歩き始めた。[p]
 道沿いの店にはリースや小さなツリーが飾られ、少し先の街路樹にもイルミネーションが取り付けられている。[p]
@@ -497,7 +519,8 @@
 「もうすぐクリスマスだね」[p]
 
 [auto_chara name="拓海" face="level3_normal"]
-「もうそんな時期か。今年はサンタさん来るかな」[p]
+「もうそんな時期か。」[p]
+「今年はサンタさん来るかな」[p]
 
 真面目な顔で言ったせいか、恵が吹き出した。[p]
 
@@ -524,16 +547,15 @@
 
 思い出したのか、恵は少し恥ずかしそうに笑った。[p]
 
-[auto_chara name="恵" face="troubled_smile"]
 「あれは恥ずかしかったなあ」[p]
 
 [auto_chara name="拓海" face="level3_smile"]
 「なんか菊池さんらしい話だね」[p]
 
-[auto_chara name="恵" face="surprise"]
+[auto_chara name="恵" face="troubled_smile"]
 「何それ。どういう意味？」[p]
 
-[auto_chara name="拓海" face="level3_smile2"]
+[auto_chara name="拓海" face="level3_smile"]
 「ピュアでいいなあと思って」[p]
 
 [auto_chara name="恵" face="tease"]
@@ -596,7 +618,7 @@
 
 一瞬、恵の足が止まりかけた。[p]
 
-[auto_chara name="恵" face="laugh"]
+[auto_chara name="恵" face="happy"]
 「ちょっと。お父さん、なんで自分の名前書いちゃったのよ」[p]
 
 恵は手を叩いて笑っている。[p]
@@ -608,12 +630,12 @@
 [auto_chara name="恵" face="laugh"]
 「そこまで綺麗に書いたのに、最後だけ適当すぎるでしょ」[p]
 
-[auto_chara name="拓海" face="level3_smile2"]
+[auto_chara name="拓海" face="level3_smile"]
 「隣に読める人がいるとは思わなかったんじゃない？」[p]
 
 [auto_chara name="恵" face="laugh"]
 「お父さんも惜しかったね」[p]
-
+[chara_hide_all]
 確かに、もう少しだった。[p]
 あの日、隣の家に持っていかなければ、もう一年くらいは信じていたかもしれない。[p]
 
@@ -779,7 +801,7 @@
 
 [auto_chara name="恵" face="troubled_smile"]
 「去年なんて、次の日も同じもの食べてたから」[p]
-
+[chara_hide_all]
 それなら確かに、一人増えたところで問題はなさそうだった。[p]
 
 [wait time=500]
@@ -814,7 +836,7 @@
 
 [auto_chara name="恵" face="happy"]
 「そうだね」[p]
-
+[chara_hide_all]
 そう言って、恵はまたココアを口にした。[p]
 もうだいぶ冷めているのか、今度は長めに飲んでいる。[p]
 
@@ -911,7 +933,7 @@
 一度試してみて、二人とも話してしまうことが分かったからだ。[p]
 
 そんな日々を繰り返しているうちに、季節は過ぎていった。[p]
-
+[fadeoutbgm time=3000]
 [wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
 [playse storage=se/school_chime.mp3 volume=80]
