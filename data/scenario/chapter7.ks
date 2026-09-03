@@ -451,8 +451,8 @@
 
 放課後、拓海は恵と並んで駅へ向かっていた。[p]
 
-[bg storage="bg_school_gate_evening.webp" time=700]
 [playbgm storage="likeadate.ogg" loop=true volume=80 fadein=true time=1000]
+[bg storage="bg_school_gate_evening.webp" time=700]
 
 冬の低い日差しが、通学路を斜めに照らしている。[p]
 風が吹くたび、制服の隙間から冷たい空気が入り込んできた。[p]
@@ -462,33 +462,14 @@
 [auto_chara name="恵" face="pain"]
 「寒っ……」[p]
 
-[auto_chara name="拓海" face="level3_question"]
-「今日、昨日より寒くない？」[p]
-
-[auto_chara name="恵" face="pain"]
-「絶対寒い。もう一枚着てくればよかった」[p]
+恵はそう呟くと、マフラーに顔を埋めるようにして肩をすくめた。[p]
+朝よりも風が強くなっている。日が傾いてから、さらに気温が下がった気がした。[p]
 
 [auto_chara name="拓海" face="level3_normal"]
 「朝の天気予報で、今年一番の寒さって言ってたよ」[p]
 
-[auto_chara name="恵" face="angry"]
-「そういう大事なことは先に教えてよ」[p]
-
-[auto_chara name="拓海" face="level3_surprise"]
-「俺のせいなの？」[p]
-
-[auto_chara name="恵" face="angry"]
-「永山君が教えてくれてたら、もう一枚着てきたのに」[p]
-
-[auto_chara name="拓海" face="level3_normal"]
-「昨日のうちに天気予報見なよ」[p]
-
-[auto_chara name="恵" face="tease"]
-「正論は禁止です」[p]
-
-恵はそう言って、マフラーに顔を埋めた。[p]
-
-[wait time=500]
+[auto_chara name="恵" face="pain"]
+「もうそんな時期かあ」[p]
 
 少し歩いたところで、恵が通り沿いのコンビニを指差した。[p]
 
@@ -502,52 +483,210 @@
 
 [wait time=500]
 
-店を出た恵は、買ったばかりのココアを両手で包んだ。[p]
+店を出ると、恵は買ったばかりのココアを両手で包んだ。[p]
+温かいカップに指先を押しつけながら、ほっとしたように息を吐く。[p]
 
 [auto_chara name="恵" face="happy"]
 「あったかい……」[p]
 
-[auto_chara name="拓海" face="level3_wonder"]
-「ココアなんだ」[p]
-
-[auto_chara name="恵" face="surprise"]
-「何、その反応」[p]
-
-[auto_chara name="拓海" face="level3_normal"]
-「菊池さん、コーヒー飲んでるイメージだったから」[p]
-
-[auto_chara name="恵" face="serious"]
-「苦いの嫌い」[p]
-
-[auto_chara name="拓海" face="level3_question"]
-「ファミレスで飲んでなかった？」[p]
+二人は再び駅へ向かって歩き始めた。[p]
+道沿いの店にはリースや小さなツリーが飾られ、少し先の街路樹にもイルミネーションが取り付けられている。[p]
+まだ空が明るいため灯りは点いていないが、街はすっかり年末の装いになっていた。[p]
 
 [auto_chara name="恵" face="normal"]
-「あれは砂糖入れてるから」[p]
-
-[auto_chara name="拓海" face="level3_smile2"]
-「それ、コーヒー飲めるって言わなくない？」[p]
-
-[auto_chara name="恵" face="tease"]
-「飲めてるからいいの」[p]
-
-[wait time=500]
-
-そんなくだらない話をしながら、二人は再び駅へ向かって歩き始めた。[p]
-
-[wait time=500]
-
-[auto_chara name="恵" face="normal"]
-「そういえば、お母さんなんだけど」[p]
+「もうすぐクリスマスだね」[p]
 
 [auto_chara name="拓海" face="level3_normal"]
-「うん」[p]
+「もうそんな時期か。今年はサンタさん来るかな」[p]
 
-[auto_chara name="恵" face="happy"]
-「最近、すごく元気なんだ」[p]
+真面目な顔で言ったせいか、恵が吹き出した。[p]
+
+[auto_chara name="恵" face="laugh"]
+「急に面白いこと言わないでよ」[p]
 
 [auto_chara name="拓海" face="level3_smile"]
-「そっか」[p]
+「いや、本当に来るかもしれないよ」[p]
+
+もちろん、そんなことは思っていない。[p]
+ただ、サンタという言葉で、昔のことを一つ思い出した。[p]
+
+[auto_chara name="拓海" face="level3_question"]
+「ところで菊池さんって、いつまでサンタクロース信じてた？」[p]
+
+[auto_chara name="恵" face="normal"]
+「私？　結構遅かったよ。小学校の高学年くらいまで」[p]
+
+[auto_chara name="拓海" face="level3_surprise"]
+「へえ、結構信じてたんだ」[p]
+
+[auto_chara name="恵" face="troubled_smile"]
+「そうなの。周りの子に話したら、まだ信じてるのって驚かれて。それで初めて、もしかして私だけなのかなって」[p]
+
+思い出したのか、恵は少し恥ずかしそうに笑った。[p]
+
+[auto_chara name="恵" face="troubled_smile"]
+「あれは恥ずかしかったなあ」[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「なんか菊池さんらしい話だね」[p]
+
+[auto_chara name="恵" face="surprise"]
+「何それ。どういう意味？」[p]
+
+[auto_chara name="拓海" face="level3_smile2"]
+「ピュアでいいなあと思って」[p]
+
+[auto_chara name="恵" face="tease"]
+「……一応、お礼は言っとくわね」[p]
+
+褒めたつもりなのだが、微妙な反応だった。[p]
+
+[wait time=500]
+
+[auto_chara name="拓海" face="level3_normal"]
+「俺は小学一年生のときに、サンタがいるのか確かめようとしたことがあってさ」[p]
+
+[auto_chara name="恵" face="surprise"]
+「一年生で？」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「クリスマスの日に、サンタにサインをお願いしたんだよ。プレゼントと一緒に置いておいてくださいって」[p]
+
+[auto_chara name="恵" face="laugh"]
+「何その永山君らしいエピソード」[p]
+
+さっきと同じことを言い返された。[p]
+恵はすっかり興味を引かれたらしく、ココアを持ったままこちらを見ている。[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「そしたら次の日、本当に書いてあったんだよ。すごく綺麗な筆記体で」[p]
+
+小学一年生の拓海には、それが何と書いてあるのかまでは読めなかった。[p]
+ただ、自分には絶対に書けない文字だった。それだけで十分だった。[p]
+
+[auto_chara name="拓海" face="level3_smile2"]
+「本当にサンタが来たんだと思って、めちゃくちゃ喜んだ」[p]
+
+[auto_chara name="恵" face="happy"]
+「ええ、素敵な話じゃん」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「俺もそう思ってたんだけどね」[p]
+
+[auto_chara name="恵" face="surprise"]
+「……けど？」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「隣の家に中学生のお兄ちゃんが住んでてさ。何て書いてあるのか気になったから、そのサイン持って見せに行ったんだよ」[p]
+
+[auto_chara name="恵" face="troubled_smile"]
+「わざわざ？」[p]
+
+[auto_chara name="拓海" face="level3_question"]
+「だって気になるじゃん」[p]
+
+[auto_chara name="恵" face="laugh"]
+「そういうところは昔から変わらないんだね」[p]
+
+否定はできなかった。[p]
+分からないものをそのままにしておくのが、昔からあまり得意ではなかったらしい。[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「それで読んでもらったら、『これ、拓海のお父さんの名前じゃない？』って」[p]
+
+一瞬、恵の足が止まりかけた。[p]
+
+[auto_chara name="恵" face="laugh"]
+「ちょっと。お父さん、なんで自分の名前書いちゃったのよ」[p]
+
+恵は手を叩いて笑っている。[p]
+そこまで笑われるとは思っていなかった。[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「俺が英語読めないと思ったんだろうね」[p]
+
+[auto_chara name="恵" face="laugh"]
+「そこまで綺麗に書いたのに、最後だけ適当すぎるでしょ」[p]
+
+[auto_chara name="拓海" face="level3_smile2"]
+「隣に読める人がいるとは思わなかったんじゃない？」[p]
+
+[auto_chara name="恵" face="laugh"]
+「お父さんも惜しかったね」[p]
+
+確かに、もう少しだった。[p]
+あの日、隣の家に持っていかなければ、もう一年くらいは信じていたかもしれない。[p]
+
+[wait time=500]
+
+笑いが収まった恵が、ココアを一口飲んだ。[p]
+
+[auto_chara name="恵" face="normal"]
+「でも、ショックじゃなかった？」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「ショックだったよ。サンタいないんだって」[p]
+
+あのときのことは、今でも意外なほどよく覚えている。[p]
+正体を知ってしまった寂しさと、綺麗な筆記体で書かれたサイン。[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「でも、その字を父親が書いたんだって分かったら、それはそれで嬉しかったんだよね」[p]
+
+[auto_chara name="恵" face="normal"]
+「嬉しかった？」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「うん。俺のために、わざわざあんな綺麗な字で書いてくれたんだなって」[p]
+
+サンタはいなかった。[p]
+けれど、自分を喜ばせようとしてくれた人はちゃんといた。[p]
+子供のころには、そこまでうまく言葉にできなかったと思う。[p]
+
+恵は少しだけ目を細めた。[p]
+
+[auto_chara name="恵" face="happy"]
+「いい思い出だね」[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「うん」[p]
+
+しばらくして、拓海はふと思った。[p]
+
+[auto_chara name="拓海" face="level3_smile2"]
+「まあ、サンタのサインだから嘘は書いてないよね」[p]
+
+[auto_chara name="恵" face="surprise"]
+「え？」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「その年のサンタ、父親だったんだから」[p]
+
+恵は一瞬ぽかんとして、それからまた笑った。[p]
+
+[auto_chara name="恵" face="laugh"]
+「せっかくいい話だったのに」[p]
+
+[auto_chara name="拓海" face="level3_question"]
+「いい話のままでしょ？」[p]
+
+[auto_chara name="恵" face="laugh"]
+「まあ、永山君らしくていいんじゃない？」[p]
+
+結局また、それを言われた。[p]
+
+[wait time=500]
+
+少し歩いたところで、恵が思い出したように口を開いた。[p]
+
+[auto_chara name="恵" face="happy"]
+「そういえば、お母さんなんだけど。最近、すごく元気なんだ」[p]
+
+その言葉に、拓海は少し安心した。[p]
+以前の恵から母親の話を聞くときは、いつもどこか身構えていた気がする。[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「そっか。よかった」[p]
 
 [auto_chara name="恵" face="laugh"]
 「昨日なんて、帰ってきてからずっと会社の愚痴言ってた」[p]
@@ -555,230 +694,223 @@
 [auto_chara name="拓海" face="level3_question"]
 「……それ、元気なの？」[p]
 
-[auto_chara name="恵" face="laugh"]
-「あはは。元気なの。前は何聞いても『大丈夫』しか言わなかったから」[p]
+[auto_chara name="恵" face="happy"]
+「元気なの。前は何を聞いても『大丈夫』しか言わなかったから」[p]
+
+言われて、ようやく意味が分かった。[p]
+不満を口にできるということは、それだけ誰かに聞いてもらう余裕が戻ったということなのかもしれない。[p]
 
 [auto_chara name="拓海" face="level3_normal"]
-「なるほど」[p]
+「じゃあ、いい愚痴なんだ」[p]
+
+[auto_chara name="恵" face="laugh"]
+「そう。聞いてる方は大変だけどね」[p]
+
+そう言いながらも、恵は嬉しそうだった。[p]
+
+[auto_chara name="恵" face="normal"]
+「それでね。今年は久しぶりにちゃんとクリスマスやろうって言ってて」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「家で？」[p]
 
 [auto_chara name="恵" face="happy"]
-「この前なんて夕飯のおかずが多すぎてさ。張り切りすぎなんだよね」[p]
+「うん。ケーキ買って、料理も作って。昔は毎年やってたんだけどね」[p]
+
+恵は懐かしそうに言った。[p]
+母親が元気になったという話が、さっきよりも少し実感を伴って聞こえた。[p]
 
 [auto_chara name="拓海" face="level3_smile"]
-「いいじゃん。食べきれないなら俺が手伝うよ」[p]
-
-[auto_chara name="恵" face="surprise"]
-「なんで永山君が食べるのよ」[p]
-
-[auto_chara name="拓海" face="level3_question"]
-「ダメ？」[p]
+「いいじゃん。久しぶりなら楽しみだね」[p]
 
 [auto_chara name="恵" face="troubled_smile"]
-「……お母さんは喜ぶと思うけど」[p]
+「ただ、お母さん張り切ると料理作りすぎるんだよね。二人しかいないのに」[p]
 
-[auto_chara name="拓海" face="level3_smile2"]
-「じゃあ問題ないね」[p]
+[auto_chara name="拓海" face="level3_smile"]
+「余ったら俺が食べるよ」[p]
 
-[auto_chara name="恵" face="tease"]
-「問題あるでしょ」[p]
+口にしてから、拓海は少し笑った。[p]
+もちろん、他人の家のクリスマス料理をどうやって食べるのかまでは考えていない。[p]
+
+恵は何か言いかけて、それから少し考えるように拓海を見た。[p]
+
+[auto_chara name="恵" face="normal"]
+「……じゃあ、来る？」[p]
+
+[auto_chara name="拓海" face="level3_surprise"]
+「え？」[p]
+
+[auto_chara name="恵" face="troubled_smile"]
+「クリスマス。うちに来る？」[p]
+
+思っていなかった誘いに、拓海は一瞬返事に迷った。[p]
+さっきまで昔のサンタクロースの話をしていただけなのに、いつの間にか今年のクリスマスの話になっている。[p]
+
+[auto_chara name="恵" face="normal"]
+「どうせ二人だし、一人増えてもそんなに変わらないから。お母さんも、その方が張り切りがいあると思うし」[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「俺が行っても大丈夫なの？」[p]
+
+[auto_chara name="恵" face="happy"]
+「大丈夫だよ。永山君のこと知ってるし」[p]
+
+そういえば、恵の家には以前にも何度か上がっている。[p]
+今さら自分が行ったところで、驚かれることもないだろう。[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「じゃあ、お邪魔しようかな」[p]
+
+[auto_chara name="恵" face="happy"]
+「うん。じゃあ、お母さんに聞いてみるね」[p]
+
+まだ決まったわけでもないのに、恵は少し嬉しそうだった。[p]
+
+[auto_chara name="拓海" face="level3_normal"]
+「でも俺が増えたら、今度は料理足りなくならない？」[p]
+
+恵は一瞬考えてから、首を横に振った。[p]
+
+[auto_chara name="恵" face="laugh"]
+「それは絶対大丈夫」[p]
+
+[auto_chara name="拓海" face="level3_question"]
+「そんなに作るの？」[p]
+
+[auto_chara name="恵" face="troubled_smile"]
+「去年なんて、次の日も同じもの食べてたから」[p]
+
+それなら確かに、一人増えたところで問題はなさそうだった。[p]
 
 [wait time=500]
 
-恵が笑う。[p]
-
-その顔を見て、拓海も笑った。[p]
-
 高田の名前は出なかった。[p]
-
 もう、出す必要もないのかもしれない。[p]
+
+以前は恵の母親の話をするだけで、自然とそこへ行き着いていた。[p]
+今は会社の愚痴を言うようになったとか、クリスマスに料理を作りすぎそうだとか、そんな話をしている。[p]
+
+それだけで、母親が少しずつ元の生活を取り戻していることが分かった。[p]
 
 [wait time=500]
 
 [auto_chara name="恵" face="normal"]
-「あ、そうだ。明日体育あるよ」[p]
-
-[auto_chara name="拓海" face="level3_surprise"]
-「この寒さで？」[p]
-
-[auto_chara name="恵" face="serious"]
-「持久走」[p]
-
-[auto_chara name="拓海" face="level3_wonder"]
-「休もうかな」[p]
-
-[auto_chara name="恵" face="angry"]
-「ダメでしょ」[p]
+「永山君、何か食べたいものある？」[p]
 
 [auto_chara name="拓海" face="level3_question"]
-「菊池さんも嫌でしょ？」[p]
+「もう俺が行く前提になってない？」[p]
 
-[auto_chara name="恵" face="serious"]
-「嫌だけど休みはしません」[p]
+[auto_chara name="恵" face="surprise"]
+「あ」[p]
 
-[auto_chara name="拓海" face="level3_smile2"]
-「真面目だなあ」[p]
+恵はそこで初めて気づいたようだった。[p]
+まだ母親に聞いてみると言っただけで、何も決まってはいない。[p]
 
-[auto_chara name="恵" face="tease"]
-「永山君が不真面目なの」[p]
+[auto_chara name="恵" face="troubled_smile"]
+「……まあ、お母さんならたぶん大丈夫だと思う」[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「じゃあ、決まってから考えるよ」[p]
+
+[auto_chara name="恵" face="happy"]
+「そうだね」[p]
+
+そう言って、恵はまたココアを口にした。[p]
+もうだいぶ冷めているのか、今度は長めに飲んでいる。[p]
+
+拓海も自分の缶を傾けた。[p]
+こちらはいつの間にか空になっていた。[p]
 
 [wait time=500]
 
-事件のことでもない。[p]
-能力のことでもない。[p]
-誰かをどうするかという相談でもない。[p]
+駅が見えてきた。[p]
+話しながら歩いていると、いつもより早く着いたような気がする。[p]
 
-寒いとか、体育が嫌だとか、ココアが甘いとか。[p]
+少し前まで、クリスマスなんて自分にはあまり関係のない行事だった。[p]
+街が飾られて、テレビが騒がしくなって、気づけば終わっている。[p]
+今年も、たぶんそうなると思っていた。[p]
 
-そんな話をしているうちに、いつの間にか駅まで来ていた。[p]
+けれど、どうやら今年は少し違うらしい。[p]
 
 [wait time=500]
+
+[auto_chara name="恵" face="happy"]
+「じゃあ、お母さんに聞いたら連絡するね」[p]
+
+[auto_chara name="拓海" face="level3_smile"]
+「うん」[p]
 
 [auto_chara name="恵" face="happy"]
 「じゃあ、また明日」[p]
 
 [auto_chara name="拓海" face="level3_smile"]
-「うん。また明日」[p]
+「また明日」[p]
 
 恵は軽く手を振り、改札へ向かっていった。[p]
+
 [chara_hide_all]
 
 拓海はその背中を少しだけ見送ってから、自分も歩き出す。[p]
 
 [wait time=500]
 
+今年のクリスマスは、菊池さんの家で過ごすことになるかもしれない。[p]
+
+ほんの少し前までなら、想像もしなかったことだ。[p]
+
+事件のことでもない。[p]
+能力のことでもない。[p]
+誰かをどうするかという相談でもない。[p]
+
+昔のサンタクロースの話をして、笑って、今年のクリスマスの予定を話す。[p]
+そんな時間が、いつの間にか自分の日常になっていた。[p]
+
+[wait time=500]
+
 「また明日」[p]
 
-そんな言葉を交わして別れることも、いつの間にか当たり前になっていた。[p]
+そんな言葉を交わして別れることも、もう珍しいことではない。[p]
 
 少し前までなら、こんな毎日を退屈だと思っていたかもしれない。[p]
-
 けれど今は違う。[p]
 
-何も起きない。[p]
+明日も学校へ行く。[p]
+その次の日も、そのまた次の日も。[p]
+そうしているうちにクリスマスが来て、冬休みが来て、今年が終わる。[p]
 
-明日も学校へ行って、くだらない話をして、また家に帰る。[p]
-
-そんな日が明日も来る。[p]
+何かが起きなくても、時間はちゃんと先へ進んでいく。[p]
 
 [wait time=1000]
 
 それが、今の拓海にはたまらなく心地よかった。[p]
 
-[bg storage="black.png" time=2000]
+[bg storage="black.png" time=3000]
 [wait time=1000]
 
 拓海は、自分の「超能力」に振り回された三か月間から解放されたが、新しい試練が待っていた。[p]
 受験勉強である。[p]
 
-正直に言って、勉強に集中できなかったし、成績も落ちていた。[p]
-上位の成績をキープしていた恵とは対照的に、だ。[p]
+正直に言って、この三か月は勉強どころではなかった。[p]
+机に向かっても集中できない日が続き、成績も以前より落ちている。[p]
 
-黒森学園は進学校だ。[p]
-二人とも学業に専念することを約束して、残りの高校生活を励まし合って頑張った。[p]
-大学進学という新しい目標もできたのだ。[p]
+対して、恵は相変わらず上位を維持していた。[p]
+そのことを言うと、「私だって結構大変なんだから」と怒られた。[p]
 
 [wait time=1000]
 
-[playse storage=se/pencil.ogg volume=100]
-[wait time=500]
+十二月は、あっという間に過ぎていった。[p]
 
-放課後の自習室は静かだった。[p]
+クリスマスには恵の家に招かれ、本当に食べきれないほどの料理が並んだ。[p]
+恵が言っていたことは、少しも大げさではなかったらしい。[p]
 
-周りから聞こえてくるのは、ペンを走らせる音と、時折ページをめくる音くらいだ。[p]
+年が明けると、学校の空気も変わった。[p]
+休み時間に参考書を開く生徒が増え、放課後の自習室はいつも席が埋まっていた。[p]
 
-拓海も参考書に目を落とし、黙々と問題を解いていた。[p]
-
-同じ自習室には恵もいる。[p]
-ただし、席は離れている。[p]
-
-一緒に勉強すると気が散るから、と決めたのは二人だった。[p]
-
-[wait time=500]
-
-さすがに集中力が切れてきた。[p]
-
-拓海は一度ペンを置き、休憩することにした。[p]
-
-[chara_hide_all time=300]
-[bg storage="bg_hallway_day.webp" time=800]
-
-廊下の自動販売機に小銭を入れ、ボタンを押す。[p]
-
-ガコン、と缶コーヒーが落ちてきた。[p]
-
-それを取り出したところで、向こうから見覚えのある姿が歩いてきた。[p]
-
-[auto_chara name="綾香" face="normal"]
-「あ、永山」[p]
-
-[auto_chara name="拓海" face="level3_normal"]
-「綾香。今帰り？」[p]
-
-[auto_chara name="綾香" face="normal"]
-「うん。永山はまだ勉強？」[p]
-
-[auto_chara name="拓海" face="level3_smile"]
-「まあね」[p]
-
-[auto_chara name="綾香" face="normal"]
-「そっか。頑張ってね」[p]
-
-[auto_chara name="拓海" face="level3_smile"]
-「そっちもな」[p]
-
-綾香は軽く手を振り、そのまま廊下を歩いていった。[p]
-
-[chara_hide_all time=300]
-
-拓海は缶コーヒーのプルタブを開けた。[p]
-
-「永山君？」[p]
-
-振り返ると、自習室から出てきた恵が立っていた。[p]
-
-[auto_chara name="恵" face="normal"]
-「休憩？」[p]
-
-[auto_chara name="拓海" face="level3_normal"]
-「うん。さすがに疲れた」[p]
-
-[auto_chara name="恵" face="tease"]
-「まだまだだね」[p]
-
-[auto_chara name="拓海" face="level3_question"]
-「菊池さんは？」[p]
-
-[auto_chara name="恵" face="troubled_smile"]
-「私も休憩」[p]
-
-[auto_chara name="拓海" face="level3_smile2"]
-「人のこと言えないじゃん」[p]
-
-[auto_chara name="恵" face="tease"]
-「私は計画的な休憩です」[p]
-
-「はいはい」[p]
-
-[wait time=500]
-
-ほんの少し話しただけで、二人はまた自習室へ戻った。[p]
-
-恵は拓海から少し離れた、いつもの席へ向かう。[p]
-
-拓海も自分の席に戻り、再び参考書を開いた。[p]
-
-[playse storage=se/pencil.ogg volume=100]
-[wait time=700]
+拓海も遅れを取り戻すように勉強した。[p]
+恵とは互いに励まし合ったが、一緒に勉強することはほとんどなかった。[p]
+一度試してみて、二人とも話してしまうことが分かったからだ。[p]
 
 そんな日々を繰り返しているうちに、季節は過ぎていった。[p]
-
-[wait time=1500]
-[bg storage="black.png" time=2000]
-[wait time=700]
-
-[bg storage="bg_classroom_graduation_evening.webp" time=1000]
-[playse storage=se/school_chime.mp3 volume=80]
-
 
 [wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
@@ -1023,7 +1155,7 @@
 「お前らの関係性だよ」[p]
 
 龍也はニヤリと笑った。[p]
-[auto_chara name="拓海" face="level3_wonder"]
+[auto_chara name="拓海" face="level3_surprise"]
 「ええ！」[p]
 
 拓海は思わず驚き、恵の方をチラリと見た。[p]
