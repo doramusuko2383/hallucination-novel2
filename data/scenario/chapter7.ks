@@ -938,7 +938,7 @@
 [wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
 [playse storage=se/school_chime.mp3 volume=80]
-
+[playbgm storage="graduate.ogg" loop=true volume=10 fadein=true time=1000]
 制服の左胸に白い花を付けているのが、少し照れくさい。[p]
 でも不思議と嫌な気持ちはしなかった。[p]
 
@@ -1015,6 +1015,8 @@
 卒業式が終わり、教室に戻ると、どこかそわそわした雰囲気が漂っていた。[p]
 
 最後の担任の話に耳を傾ける生徒たちからは、別れの空気が感じられる。[p]
+[fadeoutbgm time=3000]
+[wait time=1000]
 そんな中、スマホが震えた。[p]
 [playse storage=se/smartphone_vibrate.ogg volume=100]
 「このあと屋上に来れるか」[p]
