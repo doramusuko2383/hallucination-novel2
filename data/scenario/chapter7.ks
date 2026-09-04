@@ -457,7 +457,7 @@
 
 [auto_chara name="拓海" face="private2_smile"]
 「いや、何でもない」[p]
-
+[chara_hide_all]
 拓海はもう一口、料理を口に運んだ。[p]
 
 [wait time=500]
@@ -509,6 +509,7 @@
 
 [auto_chara name="恵" face="happy"]
 「あったかい……」[p]
+[wait time=500]
 [chara_hide_all]
 
 二人は再び駅へ向かって歩き始めた。[p]
