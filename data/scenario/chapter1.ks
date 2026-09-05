@@ -800,7 +800,7 @@
 [wait time=500]
 拓海はこの賭けをやめさせることに失敗した。[l]
 むしろ状況を悪化させたようだった。[p]
-どうしようもない。このままじゃ、本当に焼かれる――。
+どうしようもない。このままじゃ、本当に焼かれる――。[p]
 
 扉までは数歩。[l][r]
 フェンス際には人一人が抜けられる隙間がある。[l][r]
@@ -808,6 +808,7 @@
 
 拓海は三人の足の向きと、開いた空間を必死に見比べた。[p]
 
+どうするべきか――。
 [choice_start count=3]
 [choice name="choice_ch1_rooftop_run" text="出口へ走る" target="*run"]
 [choice name="choice_ch1_rooftop_fight" text="龍也に挑む" target="*fight"]
