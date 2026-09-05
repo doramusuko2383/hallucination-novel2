@@ -1177,7 +1177,7 @@
 「お前がそんな冗談を言えるなんてな」[p]
 [auto_chara name="拓海" face="level3_smile2"]
 「謝ってくれて、嬉しいよ」[p]
-
+[playbgm storage="shakehands.ogg" loop=true volume=50 fadein=true time=1000]
 胸の奥に残っていた固いものが、ようやくほどけていく気がした。[p]
 [auto_chara name="龍也" face="smile"]
 「そうか」
