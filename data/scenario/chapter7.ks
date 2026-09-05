@@ -938,7 +938,7 @@
 [wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
 [playse storage=se/school_chime.mp3 volume=80]
-[playbgm storage="graduate.ogg" loop=true volume=10 fadein=true time=1000]
+[playbgm storage="graduate.ogg" loop=true volume=50 fadein=true time=1000]
 制服の左胸に白い花を付けているのが、少し照れくさい。[p]
 でも不思議と嫌な気持ちはしなかった。[p]
 
@@ -1008,14 +1008,14 @@
 
 それでも、ひねくれるほど嫌な思い出ばかりだったわけでもない。[p]
 色んなことがあった――そう思うと、自然と胸が温かくなるのを感じた。[p]
-
+[fadeoutbgm time=3000]
 [wait time=2000]
 [bg storage="bg_classroom_graduation_evening.webp" time=1000]
 [playbgm storage="classroom_buzzing.ogg" loop=true volume=100 fadein=true]
 卒業式が終わり、教室に戻ると、どこかそわそわした雰囲気が漂っていた。[p]
 
 最後の担任の話に耳を傾ける生徒たちからは、別れの空気が感じられる。[p]
-[fadeoutbgm time=3000]
+
 [wait time=1000]
 そんな中、スマホが震えた。[p]
 [playse storage=se/smartphone_vibrate.ogg volume=100]
@@ -1112,7 +1112,9 @@
 [auto_chara name="拓海" face="level3_smile"]
 「なんだ、そんなこと。いいよ、もう気にしてないから」[p]
 [auto_chara name="龍也" face="smile"]
-「ありがとう……お前、本当に雰囲気変わったよな」[p]
+「ありがとうな」[p]
+[wait time=1000]
+「……お前、本当に雰囲気変わったよな」[p]
 
 龍也が拓海をじっと見つめ、ぽつりと言う。[p]
 [auto_chara name="拓海" face="level3_smile"]
