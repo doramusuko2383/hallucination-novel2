@@ -541,9 +541,6 @@ window.close();
 [wait time=2000]
 @freeimage layer=0 page=fore
 [bg storage="black.png" time=0 wait=false]
-[iscript]
-$("#new-game-opening-fade").remove();
-[endscript]
 
 ;導入で使用する隠しパラメータの初期化（UI表示なし）
 [iscript]

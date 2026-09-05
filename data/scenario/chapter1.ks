@@ -11,7 +11,11 @@
 [showmenubutton]
 
 ; [bg] は time 省略時に3秒フェード待ちになるため、黒背景は即時切替にする
-[bg storage="black.png" time=0 wait=false]
+[bg storage="black.png" time=0 wait=true]
+[iscript]
+// NEW GAME の暗転を、第1章の黒背景が準備できるまで保持する。
+$("#new-game-opening-fade").stop(true, true).remove();
+[endscript]
 
 [font speed=80]
 「こんな奴、飛び降りて死んでしまえばいい」
