@@ -149,6 +149,8 @@ $("#new-game-opening-fade").stop(true, true).remove();
 
 三人の中でも一番背の高い、リーダー格の龍也が拓海を見て言う。[p]
 
+声は淡々としているが、その視線は鋭い。[p]
+
 名前を呼ばれたわけでもないのに、拓海の足はそこで止まった。[p]
 
 返事をすれば声が震える。[l][r]
@@ -159,7 +161,6 @@ $("#new-game-opening-fade").stop(true, true).remove();
 
 [wait time=500]
 
-声は淡々としているが、その視線は鋭い。[p]
 [bg storage="bg_rooftop_day_ch1.webp" time=600]
 [auto_chara name="龍也" face="normal" left=50 time=700]
 「じゃあ、いつものやつやろうぜ」[p]
