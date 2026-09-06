@@ -1,17 +1,18 @@
 ; 日本語体験版専用の終了画面。
-; 表示文言と将来のSteam導線設定は、このファイル冒頭へ集約する。
+; 表示文言とSteam導線設定は、このファイル冒頭へ集約する。
 *start
 [iscript]
 tf.demo_ending_text = {
-    heading: "体験版はここまでです",
-    message: "プレイしていただき、ありがとうございました。",
-    product: "続きは製品版でお楽しみください。",
+    title: "HALLUCINATION",
+    demo: "DEMO",
+    thanks: "体験版をプレイしていただき、ありがとうございました。",
+    message: "物語は、ここから動き始める。",
+    release: "2026年10月27日 発売予定",
+    wishlist: "Steamでウィッシュリストに追加",
     back_to_title: "タイトルへ戻る",
-    quit_game: "ゲームを終了",
-    wishlist: "ウィッシュリストに追加"
+    quit_game: "ゲームを終了"
 };
-// 正式なSteamストアURL決定後、この値と専用ボタンの処理を追加する。
-tf.demo_steam_url = "";
+tf.demo_steam_url = "https://store.steampowered.com/app/5045390/";
 sf.demo_completed = true;
 TG.saveSystemVariable();
 TYRANO.kag.setAuto(false);
@@ -20,6 +21,7 @@ TYRANO.kag.stat.is_skip = false;
 $("body").addClass("demo-ending-active");
 $(".button_menu, .role_button, .quiet_system_button").hide();
 [endscript]
+[wait time="1000"]
 [cm]
 [clearfix]
 [stop_keyconfig]
@@ -28,21 +30,49 @@ $(".button_menu, .role_button, .quiet_system_button").hide();
 [stopbgm time="500" buf_all="true"]
 [stopse time="500" buf_all="true"]
 [chara_hide_all time="0"]
-[bg storage="black.png" time="700" wait="true"]
+[bg storage="title_rooftop.webp" time="700" wait="true"]
+[layermode name="demo_ending_shade" color="0x050a12" opacity="185" mode="normal" time="500" wait="true"]
 
-[ptext layer="fix" name="demo_ending_kicker" text="DEMO" x="0" y="172" width="1280" align="center" size="16" color="0x8ec5e6" time="400"]
-[ptext layer="fix" name="demo_ending_heading" text="&tf.demo_ending_text.heading" x="0" y="224" width="1280" align="center" size="42" color="0xf7f8fa" time="500"]
-[ptext layer="fix" name="demo_ending_message" text="&tf.demo_ending_text.message" x="0" y="310" width="1280" align="center" size="20" color="0xd8dce2" time="400"]
-[ptext layer="fix" name="demo_ending_product" text="&tf.demo_ending_text.product" x="0" y="350" width="1280" align="center" size="20" color="0xd8dce2" time="400"]
-[glink name="demo_ending_back" text="&tf.demo_ending_text.back_to_title" target="*back_to_title" x="340" y="470" width="280" height="54" size="18" color="black" clickse="se/click.ogg"]
-[glink name="demo_ending_quit" text="&tf.demo_ending_text.quit_game" target="*quit_game" x="660" y="470" width="280" height="54" size="18" color="black" clickse="se/click.ogg"]
+[ptext layer="fix" name="demo_ending_title" text="&tf.demo_ending_text.title" x="0" y="84" width="1280" align="center" size="13" color="0xe6edf3" time="400"]
+[ptext layer="fix" name="demo_ending_demo" text="&tf.demo_ending_text.demo" x="0" y="116" width="1280" align="center" size="27" color="0x9dcce8" time="400"]
+[ptext layer="fix" name="demo_ending_thanks" text="&tf.demo_ending_text.thanks" x="0" y="213" width="1280" align="center" size="22" color="0xf7f8fa" time="500"]
+[ptext layer="fix" name="demo_ending_message" text="&tf.demo_ending_text.message" x="0" y="270" width="1280" align="center" size="17" color="0xdde5eb" time="400"]
+[ptext layer="fix" name="demo_ending_release" text="&tf.demo_ending_text.release" x="0" y="330" width="1280" align="center" size="15" color="0xc9d3da" time="400"]
+[iscript]
+// glinkは押下時に同じレイヤーの全glinkを消去するため、画面を維持する外部リンクは独立したa要素にする。
+var demoSteamLink = $("<a></a>")
+    .addClass("demo_ending_wishlist")
+    .attr({
+        href: tf.demo_steam_url,
+        target: "_blank",
+        rel: "noopener noreferrer"
+    })
+    .text(tf.demo_ending_text.wishlist)
+    .css({
+        position: "absolute",
+        left: "410px",
+        top: "401px",
+        width: "460px",
+        height: "58px",
+        zIndex: 99999999,
+        fontSize: "18px",
+        cursor: "pointer"
+    })
+    .on("mousedown click", function (event) {
+        event.stopPropagation();
+    });
+TG.layer.getFreeLayer().append(demoSteamLink).show();
+[endscript]
+[glink name="demo_ending_back" text="&tf.demo_ending_text.back_to_title" target="*back_to_title" x="520" y="493" width="240" height="38" size="14" color="black" clickse="se/click.ogg"]
+[glink name="demo_ending_quit" text="&tf.demo_ending_text.quit_game" target="*quit_game" x="550" y="555" width="180" height="30" size="12" color="black" clickse="se/click.ogg"]
 [s]
 
 *back_to_title
 [iscript]
 $("body").removeClass("demo-ending-active");
-$(".demo_ending_kicker, .demo_ending_heading, .demo_ending_message, .demo_ending_product, .demo_ending_back, .demo_ending_quit").remove();
+$(".demo_ending_title, .demo_ending_demo, .demo_ending_thanks, .demo_ending_message, .demo_ending_release, .demo_ending_wishlist, .demo_ending_back, .demo_ending_quit").remove();
 [endscript]
+[free_layermode name="demo_ending_shade" time="250" wait="true"]
 [jump storage="first.ks" target="*title_menu"]
 
 *quit_game
