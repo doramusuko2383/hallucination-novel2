@@ -263,6 +263,108 @@
     border: 0 !important;
 }
 
+/* =========================
+   日本語体験版 終了画面
+========================= */
+body.demo-ending-active .demo_ending_title,
+body.demo-ending-active .demo_ending_demo,
+body.demo-ending-active .demo_ending_thanks,
+body.demo-ending-active .demo_ending_message,
+body.demo-ending-active .demo_ending_release {
+    box-sizing: border-box;
+    font-family: "GenMin", "Yu Mincho", "Hiragino Mincho ProN", serif !important;
+    font-weight: 400;
+    line-height: 1.65;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.96), 0 0 24px rgba(0, 0, 0, 0.58);
+    white-space: nowrap;
+}
+
+body.demo-ending-active .demo_ending_title {
+    font-family: "GenMin", "Times New Roman", serif !important;
+    letter-spacing: 0.46em;
+    opacity: 0.76;
+}
+
+body.demo-ending-active .demo_ending_demo {
+    font-family: "GenMin", "Times New Roman", serif !important;
+    font-weight: 600;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+}
+
+body.demo-ending-active .demo_ending_thanks {
+    letter-spacing: 0.08em;
+}
+
+body.demo-ending-active .demo_ending_message {
+    letter-spacing: 0.16em;
+}
+
+body.demo-ending-active .demo_ending_release {
+    letter-spacing: 0.12em;
+    opacity: 0.9;
+}
+
+body.demo-ending-active .glink_button.demo_ending_wishlist,
+body.demo-ending-active .glink_button.demo_ending_back,
+body.demo-ending-active .glink_button.demo_ending_quit {
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    background-image: none !important;
+    font-family: "GenMin", "Yu Mincho", "Hiragino Mincho ProN", serif !important;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8) !important;
+    transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, opacity 180ms ease !important;
+}
+
+body.demo-ending-active .glink_button.demo_ending_wishlist {
+    border: 1px solid rgba(190, 224, 244, 0.82) !important;
+    border-radius: 2px !important;
+    background: rgba(83, 139, 173, 0.62) !important;
+    color: #f8fbfd !important;
+    box-shadow: 0 0 24px rgba(102, 174, 216, 0.18) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.09em !important;
+}
+
+body.demo-ending-active .glink_button.demo_ending_wishlist:hover,
+body.demo-ending-active .glink_button.demo_ending_wishlist:focus-visible {
+    border-color: rgba(231, 246, 255, 0.98) !important;
+    background: rgba(100, 164, 202, 0.78) !important;
+    box-shadow: 0 0 30px rgba(124, 195, 235, 0.28) !important;
+}
+
+body.demo-ending-active .glink_button.demo_ending_back {
+    border: 1px solid rgba(222, 234, 241, 0.46) !important;
+    border-radius: 2px !important;
+    background: rgba(5, 10, 18, 0.34) !important;
+    color: rgba(244, 248, 250, 0.9) !important;
+    box-shadow: none !important;
+    letter-spacing: 0.14em !important;
+}
+
+body.demo-ending-active .glink_button.demo_ending_back:hover,
+body.demo-ending-active .glink_button.demo_ending_back:focus-visible {
+    border-color: rgba(235, 244, 249, 0.78) !important;
+    background: rgba(55, 73, 88, 0.42) !important;
+}
+
+body.demo-ending-active .glink_button.demo_ending_quit {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: rgba(222, 230, 235, 0.62) !important;
+    box-shadow: none !important;
+    letter-spacing: 0.12em !important;
+}
+
+body.demo-ending-active .glink_button.demo_ending_quit:hover,
+body.demo-ending-active .glink_button.demo_ending_quit:focus-visible {
+    color: rgba(248, 250, 252, 0.92) !important;
+}
+
 @keyframes hl-auto-status-breathe {
     0%, 100% { opacity: 0.58; }
     50% { opacity: 0.82; }
