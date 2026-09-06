@@ -508,10 +508,6 @@
 *title_config
 @jump storage="title_config.ks" target="*title_config"
 
-*title_extra
-[fadeoutbgm time=300]
-[jump storage="extra.ks" target="*start"]
-
 *title_quit
 [iscript]
 window.close();
