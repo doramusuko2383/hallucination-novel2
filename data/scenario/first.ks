@@ -271,9 +271,9 @@
         "z-index": "99999999",
         "color": "rgba(248, 250, 255, 0.82)",
         "font-family": "GenMin, 'Times New Roman', serif",
-        "font-size": "14px",
+        "font-size": "28px",
         "font-weight": "600",
-        "letter-spacing": "0.42em",
+        "letter-spacing": "0.5em",
         "text-shadow": "0 0 8px rgba(0, 0, 0, 0.9)",
         "pointer-events": "none"
     });
