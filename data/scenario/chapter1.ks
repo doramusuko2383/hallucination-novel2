@@ -1167,4 +1167,4 @@ $("#new-game-opening-fade").stop(true, true).remove();
 [wait time=1000]
 [playse storage=se/wind_rooftop.ogg volume=20]
 [wait time=3000]
-@jump storage="chapter2.ks" target="*chapter2"
+@jump storage="demo_ending.ks" target="*start"
