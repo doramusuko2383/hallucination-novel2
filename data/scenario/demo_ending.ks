@@ -28,7 +28,6 @@ $(".button_menu, .role_button, .quiet_system_button").hide();
 [hidemenubutton]
 [layopt layer="message0" visible="false"]
 [stopbgm time="500" buf_all="true"]
-[stopse time="500" buf_all="true"]
 [chara_hide_all time="0"]
 [bg storage="title_rooftop.webp" time="700" wait="true"]
 [layermode name="demo_ending_shade" color="0x050a12" opacity="185" mode="normal" time="500" wait="true"]
