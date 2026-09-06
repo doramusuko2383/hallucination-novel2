@@ -78,4 +78,5 @@ $(".demo_ending_title, .demo_ending_demo, .demo_ending_thanks, .demo_ending_mess
 [iscript]
 window.close();
 [endscript]
-[s]
+; ブラウザではスクリプトで開かれていないタブを閉じられないため、閉じられなければ安全にタイトルへ戻す。
+[jump target="*back_to_title"]
