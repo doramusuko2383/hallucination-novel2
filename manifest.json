@@ -1,6 +1,6 @@
 {
-  "name": "ハルシネーション",
-  "short_name": "ハルシネーション",
+  "name": "ハルシネーション 体験版",
+  "short_name": "ハルシネーション 体験版",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#000000",
