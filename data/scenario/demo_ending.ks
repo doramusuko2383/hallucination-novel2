@@ -21,6 +21,7 @@ TYRANO.kag.stat.is_skip = false;
 $("body").addClass("demo-ending-active");
 $(".button_menu, .role_button, .quiet_system_button").hide();
 [endscript]
+[wait time="1000"]
 [cm]
 [clearfix]
 [stop_keyconfig]
@@ -37,16 +38,33 @@ $(".button_menu, .role_button, .quiet_system_button").hide();
 [ptext layer="fix" name="demo_ending_thanks" text="&tf.demo_ending_text.thanks" x="0" y="213" width="1280" align="center" size="22" color="0xf7f8fa" time="500"]
 [ptext layer="fix" name="demo_ending_message" text="&tf.demo_ending_text.message" x="0" y="270" width="1280" align="center" size="17" color="0xdde5eb" time="400"]
 [ptext layer="fix" name="demo_ending_release" text="&tf.demo_ending_text.release" x="0" y="330" width="1280" align="center" size="15" color="0xc9d3da" time="400"]
-[glink name="demo_ending_wishlist" text="&tf.demo_ending_text.wishlist" target="*open_steam" x="410" y="401" width="460" height="58" size="18" color="black" clickse="se/click.ogg"]
+[iscript]
+// glinkは押下時に同じレイヤーの全glinkを消去するため、画面を維持する外部リンクは独立したa要素にする。
+var demoSteamLink = $("<a></a>")
+    .addClass("demo_ending_wishlist")
+    .attr({
+        href: tf.demo_steam_url,
+        target: "_blank",
+        rel: "noopener noreferrer"
+    })
+    .text(tf.demo_ending_text.wishlist)
+    .css({
+        position: "absolute",
+        left: "410px",
+        top: "401px",
+        width: "460px",
+        height: "58px",
+        zIndex: 99999999,
+        fontSize: "18px",
+        cursor: "pointer"
+    })
+    .on("mousedown click", function (event) {
+        event.stopPropagation();
+    });
+TG.layer.getFreeLayer().append(demoSteamLink).show();
+[endscript]
 [glink name="demo_ending_back" text="&tf.demo_ending_text.back_to_title" target="*back_to_title" x="520" y="493" width="240" height="38" size="14" color="black" clickse="se/click.ogg"]
 [glink name="demo_ending_quit" text="&tf.demo_ending_text.quit_game" target="*quit_game" x="550" y="555" width="180" height="30" size="12" color="black" clickse="se/click.ogg"]
-[s]
-
-*open_steam
-[iscript]
-var demoSteamWindow = window.open(tf.demo_steam_url, "_blank", "noopener,noreferrer");
-if (demoSteamWindow) demoSteamWindow.opener = null;
-[endscript]
 [s]
 
 *back_to_title
